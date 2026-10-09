@@ -4,6 +4,17 @@
 
 **当前尚未获得 S1M2 专有程序的可信明文，也未取得完整 RAM 转储。** 容器提取、外层校验、协议解析和参考结构测试各自有明确的证据边界。
 
+## 贡献者研究分支
+
+点击以下链接可直接查看各贡献者提交的内容：
+
+| 分支 | 研究主题 |
+| :--- | :--- |
+| [williamwu1234](https://github.com/Siegfried82/lumix-s1m2-research/tree/contributors/williamwu1234) | **DC-S5 / LUMIX Sync**：相机 HTTP 控制协议、固件更新传输、UPD 容器分析与解密尝试记录；含研究总览、文件索引及接口资料压缩包。 |
+| [reveriel](https://github.com/Siegfried82/lumix-s1m2-research/tree/contributors/reveriel) | **S1M2 ROM BACKUP 与 LUMIX Flow**：S1M2 V1.4 服务菜单及 EEPROM 导出实测报告；LUMIX Flow v1.6.0 的 TLS 信任体系与 HTTP API 分析。 |
+
+分支保留贡献者原提交；研究结论及其证据边界请结合各 PR 下的审核意见阅读。
+
 ## 阅读入口
 
 - [已验证结论](docs/FINDINGS.md)
