@@ -1,0 +1,52 @@
+[
+  {
+    "purpose" : "unchanged_settings_baseline",
+    "read_count" : 4,
+    "event" : "started",
+    "time_utc" : "2026-10-08T18:23:10Z"
+  },
+  {
+    "event" : "device_found",
+    "model" : "DC-S1M2",
+    "time_utc" : "2026-10-08T18:23:10Z"
+  },
+  {
+    "event" : "session_opened",
+    "time_utc" : "2026-10-08T18:23:10Z"
+  },
+  {
+    "opcode" : "0x1005",
+    "params" : [
+      65536
+    ],
+    "data_bytes" : 0,
+    "ok" : 0,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:23:10Z",
+    "transport_ok" : true,
+    "response_code" : "0x2008",
+    "error" : "",
+    "name" : "storage_info_10000",
+    "index" : 0
+  },
+  {
+    "opcode" : "0x1005",
+    "params" : [
+      131072
+    ],
+    "data_bytes" : 0,
+    "ok" : 0,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:23:10Z",
+    "transport_ok" : true,
+    "response_code" : "0x2008",
+    "error" : "",
+    "name" : "storage_info_20000",
+    "index" : 1
+  },
+  {
+    "event" : "session_closed",
+    "error" : "",
+    "time_utc" : "2026-10-08T18:23:10Z"
+  }
+]

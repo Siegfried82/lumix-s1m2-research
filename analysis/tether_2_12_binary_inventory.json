@@ -1,0 +1,32 @@
+{
+  "version": "2.12",
+  "build": "2.12.0.5",
+  "binaries": {
+    "app": {
+      "path": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/MacOS/LUMIX Tether",
+      "size": 23973680,
+      "sha256": "a20693256aeae33c93722cadb2e0ceaa760a98a48d9ebbfd2f697d3ad6420c3a",
+      "architectures": "x86_64 arm64",
+      "executed": false,
+      "firmware_symbols": [
+        "                 U __Z27LMX_func_api_FirmwareUpdateP26_tag_lmx_struct_fwup_paramPcPj",
+        "0000000100052a34 T __ZN11lumixtether13DeviceAdapter26firmware_update_get_resultEv",
+        "0000000100052a0c T __ZN11lumixtether13DeviceAdapter30firmware_update_get_data_frameEv",
+        "0000000100072638 T __ZN11lumixtether13DeviceAdapter31adp_LMX_func_api_FirmwareUpdateEv",
+        "0000000100052a1c T __ZN11lumixtether13DeviceAdapter31firmware_update_finish_progressEv",
+        "0000000100072408 T __ZN11lumixtether13DeviceAdapter37adp_LMX_func_api_FirmwareUpdate_startE7QStringS1_b"
+      ]
+    },
+    "ptp": {
+      "path": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/Frameworks/libLmxptpif.dylib",
+      "size": 6870784,
+      "sha256": "b767e5680676eefdc05d02a4772c4120a45916e246169b79393356499c07ec97",
+      "architectures": "x86_64 arm64",
+      "executed": false,
+      "firmware_symbols": [
+        "0000000000045e50 T __Z27LMX_func_api_FirmwareUpdateP26_tag_lmx_struct_fwup_paramPcPj",
+        "000000000004602c T __Z30LMX_func_api_FirmwareUpdate_ThPcPhjjhhPj"
+      ]
+    }
+  }
+}

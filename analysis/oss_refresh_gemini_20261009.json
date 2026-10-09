@@ -1,0 +1,76 @@
+{
+  "audit_date": "2026-10-09",
+  "official_index_url": "https://ospo.panasonic.com/oss/dsc/index.html",
+  "inspected_pages": [
+    {
+      "page": "DC-S1M2ES.html",
+      "url": "https://ospo.panasonic.com/oss/dsc/DC-S1M2ES.html",
+      "model_title": "DC-S1M2ES, DC-S1M2",
+      "package_count": 46,
+      "internal_board_identifier": "MC8241",
+      "core_packages": {
+        "u_boot": {
+          "name": "u-boot.tar.gz",
+          "url": "https://ospo.panasonic.com/oss/source/dsc/DC-S1M2ES/u-boot.tar.gz",
+          "size": 18796312,
+          "sha256": "f3d7fb6e3e609751d3d62d076fde898c39a969d22deb4ede4819ee4d982c4fae",
+          "last_modified": "Tue, 10 Feb 2026 02:23:07 GMT"
+        },
+        "linux": {
+          "name": "linux-4.19.124.tar.gz",
+          "url": "https://ospo.panasonic.com/oss/source/dsc/DC-S1M2ES/linux-4.19.124.tar.gz",
+          "size": 165766380,
+          "sha256": "2067822653621ff9f3e1acdad99d7777812d0dc1036007921014da18fc9c6fce",
+          "last_modified": "Tue, 10 Feb 2026 02:23:07 GMT"
+        }
+      }
+    },
+    {
+      "page": "DC-S1M2NT.html",
+      "url": "https://ospo.panasonic.com/oss/dsc/DC-S1M2NT.html",
+      "model_title": "DC-S1M2NT",
+      "package_count": 53,
+      "internal_board_identifier": "MC8266",
+      "core_packages": {
+        "u_boot": {
+          "name": "u-boot.tar.gz",
+          "url": "https://ospo.panasonic.com/oss/source/dsc/DC-S1M2NT/u-boot.tar.gz",
+          "size": 18795242,
+          "sha256": "cc0503973d20df6e75e0c912b40e1e248f6002ba031003def8660fd36d683367",
+          "last_modified": "Thu, 16 Jul 2026 08:37:35 GMT"
+        },
+        "linux": {
+          "name": "linux-4.19.124.tar.gz",
+          "url": "https://ospo.panasonic.com/oss/source/dsc/DC-S1M2NT/linux-4.19.124.tar.gz",
+          "size": 165765706,
+          "sha256": "b219c9402eff8a7826a47371652d06d0810781e6bde4d1c415ae0a54456b5bb6",
+          "last_modified": "Thu, 16 Jul 2026 08:37:40 GMT"
+        }
+      },
+      "packages_exclusive_to_nt": [
+        "alsa-lib-1.2.9.tar.gz",
+        "avahi-0.8.tar.bz2",
+        "libdaemon-0.14.tar.bz2",
+        "librtmp-2.3.tar.gz",
+        "librtmp-2.3.tar.zip",
+        "libsamplerate.tar.bz2",
+        "libsrt-1.5.4.tar.gz",
+        "libxml2-2.9.7.tar.bz2"
+      ]
+    }
+  ],
+  "cross_comparison": {
+    "binary_header_id": "MC8243",
+    "es_board_id": "MC8241",
+    "nt_board_id": "MC8266",
+    "s9_s1rm2_board_id": "MC8259",
+    "mc8243_in_public_oss": false,
+    "loader_updater_source_presence": {
+      "u_boot_cmd_found": [
+        "unzip 0x400200000 0x403700000; booti 0x403700000 - 0x401290000"
+      ],
+      "updater_handler_in_oss": false,
+      "carrier_analysis": "U-Boot is an uncompressed-kernel launcher; UPD container unpacking/decrypting logic is not distributed in GPL tarballs."
+    }
+  }
+}

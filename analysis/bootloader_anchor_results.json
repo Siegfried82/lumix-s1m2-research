@@ -1,0 +1,927 @@
+{
+  "experiment_title": "Bootloader & Device Tree Source Anchor Offline Search",
+  "date": "2026-10-08",
+  "methodology": {
+    "technique": "Exact byte pattern matching (Raw and XOR 0xFF)",
+    "safety": "Offline static analysis; no camera connection; no binary execution; no key guessing or brute force",
+    "anchor_count": 12,
+    "targets_count": 79
+  },
+  "anchors_tested": [
+    {
+      "id": "bootcmd_autoboot",
+      "description": "CONFIG_BOOTCOMMAND unzip & booti command string",
+      "source": "u-boot/configs/pvc04v_MC8241_defconfig:43 & pvc04v_MC501_defconfig:43",
+      "length_bytes": 62,
+      "hex_raw": "756e7a69702030783430303230303030302030783430333730303030303b20626f6f7469203078343033373030303030202d203078343031323930303030",
+      "hex_xor_ff": "8a9185968fdfcf87cbcfcfcdcfcfcfcfcfdfcf87cbcfccc8cfcfcfcfcfc4df9d90908b96dfcf87cbcfccc8cfcfcfcfcfdfd2dfcf87cbcfcecdc6cfcfcfcf"
+    },
+    {
+      "id": "compatible_mc8241_1st",
+      "description": "Panasonic PVC04V MC8241 1st stepping compatible string",
+      "source": "u-boot/arch/arm/dts/pvc04v-MC8241.dtsi:13",
+      "length_bytes": 27,
+      "hex_raw": "736f63696f6e6578742c7076633034762d4d43383234312d315354",
+      "hex_xor_ff": "8c909c9690919a878bd38f899ccfcb89d2b2bcc7cdcbced2ceacab"
+    },
+    {
+      "id": "compatible_mc501_1st",
+      "description": "Leica PVC04V MC501 1st stepping compatible string",
+      "source": "leica_sl3_selected/u-boot/arch/arm/dts/pvc04v-MC501.dtsi:13",
+      "length_bytes": 26,
+      "hex_raw": "736f63696f6e6578742c7076633034762d4d433530312d315354",
+      "hex_xor_ff": "8c909c9690919a878bd38f899ccfcb89d2b2bccacfced2ceacab"
+    },
+    {
+      "id": "compatible_sc2006a",
+      "description": "Socionext Milbeaut SC2006A common platform compatible string",
+      "source": "u-boot/arch/arm/dts/pvc04v-MC8241.dtsi:13 & drivers/serial/serial_milbeaut.c:113",
+      "length_bytes": 26,
+      "hex_raw": "736f63696f6e6578742c6d696c62656175742d73633230303661",
+      "hex_xor_ff": "8c909c9690919a878bd39296939d9a9e8a8bd28c9ccdcfcfc99e"
+    },
+    {
+      "id": "model_mc8241",
+      "description": "Panasonic PVC04V MC8241 model banner",
+      "source": "u-boot/arch/arm/dts/pvc04v-MC8241.dtsi:14 & pvc04v-MC8241.dts:16",
+      "length_bytes": 23,
+      "hex_raw": "536f63696f6e65787420707663303476204d4338323431",
+      "hex_xor_ff": "ac909c9690919a878bdf8f899ccfcb89dfb2bcc7cdcbce"
+    },
+    {
+      "id": "model_mc501",
+      "description": "Leica PVC04V MC501 model banner",
+      "source": "leica_sl3_selected/u-boot/arch/arm/dts/pvc04v-MC501.dtsi:14 & pvc04v-MC501.dts:16",
+      "length_bytes": 22,
+      "hex_raw": "536f63696f6e65787420707663303476204d43353031",
+      "hex_xor_ff": "ac909c9690919a878bdf8f899ccfcb89dfb2bccacfce"
+    },
+    {
+      "id": "fmt_mem_size_base_fail",
+      "description": "fdtdec_setup_mem_size_base() failure format string",
+      "source": "u-boot/arch/arm/mach-milbeaut/milbeaut.c:72",
+      "length_bytes": 39,
+      "hex_raw": "6664746465635f73657475705f6d656d5f73697a655f62617365282920686173206661696c6564",
+      "hex_xor_ff": "999b8b9b9a9ca08c9a8b8a8fa0929a92a08c96859aa09d9e8c9ad7d6df979e8cdf999e96939a9b"
+    },
+    {
+      "id": "fmt_banksize_fail",
+      "description": "fdtdec_setup_memory_banksize() failure format string",
+      "source": "u-boot/arch/arm/mach-milbeaut/milbeaut.c:90",
+      "length_bytes": 41,
+      "hex_raw": "6664746465635f73657475705f6d656d6f72795f62616e6b73697a65282920686173206661696c6564",
+      "hex_xor_ff": "999b8b9b9a9ca08c9a8b8a8fa0929a92908d86a09d9e91948c96859ad7d6df979e8cdf999e96939a9b"
+    },
+    {
+      "id": "driver_sdhci_compatible",
+      "description": "Milbeaut SDHCI driver compatible match string",
+      "source": "u-boot/drivers/mmc/milbeaut-sdhci.c:302",
+      "length_bytes": 24,
+      "hex_raw": "736f63696f6e6578742c6d696c62656175742d7364686369",
+      "hex_xor_ff": "8c909c9690919a878bd39296939d9a9e8a8bd28c9b979c96"
+    },
+    {
+      "id": "driver_uart_compatible",
+      "description": "Milbeaut UART driver compatible match string",
+      "source": "u-boot/drivers/serial/serial_milbeaut.c:156",
+      "length_bytes": 23,
+      "hex_raw": "736f63696f6e6578742c6d696c62656175742d75617274",
+      "hex_xor_ff": "8c909c9690919a878bd39296939d9a9e8a8bd28a9e8d8b"
+    },
+    {
+      "id": "legacy_boot_cmd",
+      "description": "sc2006a-evb distro legacy boot command",
+      "source": "u-boot/include/configs/sc2006a-evb.h:31",
+      "length_bytes": 50,
+      "hex_raw": "6c6567616379626f6f743d6661746c6f6164206d6d63203020246b65726e656c5f616464725f72204b45524e454c2e42494e",
+      "hex_xor_ff": "939a989e9c869d90908bc2999e8b93909e9bdf92929cdfcfdfdb949a8d919a93a09e9b9b8da08ddfb4baadb1bab3d1bdb6b1"
+    },
+    {
+      "id": "fdt_compat_pair_mc8241",
+      "description": "FDT compatible multi-string layout for MC8241",
+      "source": "u-boot/arch/arm/dts/pvc04v-MC8241.dtsi:13 (FDT binary layout)",
+      "length_bytes": 66,
+      "hex_raw": "636f6d70617469626c6500736f63696f6e6578742c7076633034762d4d43383234312d31535400736f63696f6e6578742c6d696c62656175742d7363323030366100",
+      "hex_xor_ff": "9c90928f9e8b969d939aff8c909c9690919a878bd38f899ccfcb89d2b2bcc7cdcbced2ceacabff8c909c9690919a878bd39296939d9a9e8a8bd28c9ccdcfcfc99eff"
+    }
+  ],
+  "anchor_search_summary": {
+    "total_files_scanned": 79,
+    "total_anchor_hits": 0,
+    "detailed_results": [
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "00_boot.bin",
+        "file_size": 0,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "01_loader1.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "02_loader2.bin",
+        "file_size": 0,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "03_loader3.bin",
+        "file_size": 0,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "04_storage.bin",
+        "file_size": 0,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "05_program.bin",
+        "file_size": 46923776,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "06_compress_pr.bin",
+        "file_size": 16777216,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "07_postboot1_r.bin",
+        "file_size": 6946816,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "08_postboot2_r.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "09_postboot3_r.bin",
+        "file_size": 8257536,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "10_postboot4_r.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "11_postboot5_r.bin",
+        "file_size": 1835008,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "12_postboot1_r.bin",
+        "file_size": 1966080,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "13_postboot3_r.bin",
+        "file_size": 3670016,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "14_postboot5_r.bin",
+        "file_size": 1835008,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "15_eep_ow_a.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "16_eep_ow_b.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "17_eep_adj.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "18_eep_fix.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "19_eep_act_a.bin",
+        "file_size": 512,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "20_eep_act_b.bin",
+        "file_size": 512,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "21_eep_exp_a.bin",
+        "file_size": 12288,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "22_eep_exp_b.bin",
+        "file_size": 12288,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "23_history.bin",
+        "file_size": 262144,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "24_lens_hist.bin",
+        "file_size": 393216,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "25_osdover.bin",
+        "file_size": 17301504,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "26_osddata.bin",
+        "file_size": 20316160,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "27_wifi_info.bin",
+        "file_size": 262144,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "28_menu_save.bin",
+        "file_size": 524288,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "29_kizu_data.bin",
+        "file_size": 524288,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "30_vkizu_data.bin",
+        "file_size": 9437184,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "31_usbcharge.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "32_hm_c_ddr.bin",
+        "file_size": 3145728,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "33_hm_d_ddr.bin",
+        "file_size": 1048576,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "34_hr_c_prog.bin",
+        "file_size": 65536,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "35_hr_d_prog.bin",
+        "file_size": 524288,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "36_hr_c_ddr.bin",
+        "file_size": 524288,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "37_pzm_data.bin",
+        "file_size": 65536,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "38_xtk.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "39_lut_data.bin",
+        "file_size": 8781824,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "40_dsp_kizu_c.bin",
+        "file_size": 65536,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "41_dsp_kizu_d.bin",
+        "file_size": 65536,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "42_dsp_eisldc_.bin",
+        "file_size": 65536,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "43_dsp_eisldc_.bin",
+        "file_size": 65536,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "44_dsp_fstack_.bin",
+        "file_size": 65536,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "45_dsp_fstack_.bin",
+        "file_size": 65536,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "46_fstack_c_ex.bin",
+        "file_size": 524288,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "47_raw_kizu_c.bin",
+        "file_size": 65536,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "48_raw_kizu_d.bin",
+        "file_size": 65536,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "49_dsh_adj.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "50_hm_d_nw_1st.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "51_hm_d_nw_2nd.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "52_hm_d_nw_3rd.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "53_hm_d_nw_4th.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "54_hm_d_nw_5th.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "55_hm_d_nw_6th.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "56_hm_d_nw_7th.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "57_hm_d_nw_8th.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "58_hm_d_nw_9th.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "59_hm_d_reid.bin",
+        "file_size": 3145728,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "60_ai_awb_data.bin",
+        "file_size": 1835008,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "extracted_component",
+        "filename": "61_mbr_dummy_d.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "01_loader1.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "08_postboot2_r.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "10_postboot4_r.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "38_hr_c_prog.bin",
+        "file_size": 65536,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "39_hr_d_prog.bin",
+        "file_size": 524288,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "50_hm_d_nw_1st.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "51_hm_d_nw_2nd.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "52_hm_d_nw_3rd.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "53_hm_d_nw_4th.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "54_hm_d_nw_5th.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "55_hm_d_nw_6th.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "56_hm_d_nw_7th.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "57_hm_d_nw_8th.bin",
+        "file_size": 1441792,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "58_hm_d_reid.bin",
+        "file_size": 3145728,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "extracted_component",
+        "filename": "60_mbr_dummy_d.bin",
+        "file_size": 131072,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "SL3",
+        "type": "container_header",
+        "filename": "SL3__420.first8192.bin",
+        "file_size": 8192,
+        "hits_count": 0,
+        "hits": []
+      },
+      {
+        "system": "S1M2",
+        "type": "container_header",
+        "filename": "S1m2_V14.bin (first 8192 bytes)",
+        "file_size": 8192,
+        "hits_count": 0,
+        "hits": []
+      }
+    ]
+  },
+  "control_probes_validation": {
+    "description": "Probes to verify scanner sensitivity and confirm positive control detection in container headers",
+    "hits": [
+      {
+        "system": "S1M2",
+        "target": "S1m2_V14.bin (header)",
+        "probe_id": "ctrl_mc8243",
+        "transformation": "raw",
+        "offset": 12
+      },
+      {
+        "system": "S1M2",
+        "target": "S1m2_V14.bin (header)",
+        "probe_id": "ctrl_upd_magic",
+        "transformation": "raw",
+        "offset": 0
+      },
+      {
+        "system": "SL3",
+        "target": "SL3__420.first8192.bin",
+        "probe_id": "ctrl_mc7231",
+        "transformation": "xor_ff",
+        "offset": 12
+      },
+      {
+        "system": "SL3",
+        "target": "SL3__420.first8192.bin",
+        "probe_id": "ctrl_upd_magic",
+        "transformation": "xor_ff",
+        "offset": 0
+      }
+    ]
+  },
+  "low_entropy_components_analysis": {
+    "description": "Inspection of flags=2 and low-entropy components to determine if plaintext code or tables exist",
+    "components": [
+      {
+        "index": 24,
+        "name": "lens_hist",
+        "filename": "24_lens_hist.bin",
+        "flags": 2,
+        "size": 393216,
+        "is_encrypted_flag": false,
+        "manifest_entropy": -0.0,
+        "unique_byte_count": 1,
+        "is_uniform": true,
+        "uniform_byte_hex": "0x00",
+        "manifest_sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+        "actual_sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+        "sha256_match": true
+      },
+      {
+        "index": 27,
+        "name": "wifi_info",
+        "filename": "27_wifi_info.bin",
+        "flags": 2,
+        "size": 262144,
+        "is_encrypted_flag": false,
+        "manifest_entropy": -0.0,
+        "unique_byte_count": 1,
+        "is_uniform": true,
+        "uniform_byte_hex": "0x00",
+        "manifest_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "actual_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "sha256_match": true
+      },
+      {
+        "index": 28,
+        "name": "menu_save",
+        "filename": "28_menu_save.bin",
+        "flags": 2,
+        "size": 524288,
+        "is_encrypted_flag": false,
+        "manifest_entropy": -0.0,
+        "unique_byte_count": 1,
+        "is_uniform": true,
+        "uniform_byte_hex": "0xff",
+        "manifest_sha256": "043e238a765f7cfbc62596a50e53c8ffb6b188a99357b0ebede251725d67589f",
+        "actual_sha256": "043e238a765f7cfbc62596a50e53c8ffb6b188a99357b0ebede251725d67589f",
+        "sha256_match": true
+      },
+      {
+        "index": 29,
+        "name": "kizu_data",
+        "filename": "29_kizu_data.bin",
+        "flags": 2,
+        "size": 524288,
+        "is_encrypted_flag": false,
+        "manifest_entropy": -0.0,
+        "unique_byte_count": 1,
+        "is_uniform": true,
+        "uniform_byte_hex": "0x00",
+        "manifest_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "actual_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "sha256_match": true
+      },
+      {
+        "index": 30,
+        "name": "vkizu_data",
+        "filename": "30_vkizu_data.bin",
+        "flags": 2,
+        "size": 9437184,
+        "is_encrypted_flag": false,
+        "manifest_entropy": -0.0,
+        "unique_byte_count": 1,
+        "is_uniform": true,
+        "uniform_byte_hex": "0x00",
+        "manifest_sha256": "d2ee4703cd9698945ca7b9fe1689ea3095597eac1a0afd8dba00cac7894fdc43",
+        "actual_sha256": "d2ee4703cd9698945ca7b9fe1689ea3095597eac1a0afd8dba00cac7894fdc43",
+        "sha256_match": true
+      },
+      {
+        "index": 38,
+        "name": "xtk",
+        "filename": "38_xtk.bin",
+        "flags": 2,
+        "size": 131072,
+        "is_encrypted_flag": false,
+        "manifest_entropy": -0.0,
+        "unique_byte_count": 1,
+        "is_uniform": true,
+        "uniform_byte_hex": "0x00",
+        "manifest_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "actual_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "sha256_match": true
+      },
+      {
+        "index": 39,
+        "name": "lut_data",
+        "filename": "39_lut_data.bin",
+        "flags": 2,
+        "size": 8781824,
+        "is_encrypted_flag": false,
+        "manifest_entropy": -0.0,
+        "unique_byte_count": 1,
+        "is_uniform": true,
+        "uniform_byte_hex": "0x00",
+        "manifest_sha256": "6217bc4155fa384f23c6e11e7823877d36d13419e7941b5bcd25ed8e9d4644ee",
+        "actual_sha256": "6217bc4155fa384f23c6e11e7823877d36d13419e7941b5bcd25ed8e9d4644ee",
+        "sha256_match": true
+      },
+      {
+        "index": 49,
+        "name": "dsh_adj",
+        "filename": "49_dsh_adj.bin",
+        "flags": 2,
+        "size": 131072,
+        "is_encrypted_flag": false,
+        "manifest_entropy": -0.0,
+        "unique_byte_count": 1,
+        "is_uniform": true,
+        "uniform_byte_hex": "0x00",
+        "manifest_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "actual_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "sha256_match": true
+      },
+      {
+        "index": 61,
+        "name": "mbr_dummy_d",
+        "filename": "61_mbr_dummy_d.bin",
+        "flags": 2,
+        "size": 131072,
+        "is_encrypted_flag": false,
+        "manifest_entropy": -0.0,
+        "unique_byte_count": 1,
+        "is_uniform": true,
+        "uniform_byte_hex": "0xff",
+        "manifest_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "actual_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "sha256_match": true
+      }
+    ]
+  },
+  "falsification_conclusions": {
+    "anchors_hit_count": 0,
+    "hypothesis_1_loader1_is_plaintext_uboot": "FALSIFIED (No U-Boot code, bootcmd, or DTB strings found in loader1 or any component in raw)",
+    "hypothesis_2_components_are_simple_xor_ff": "FALSIFIED (XOR 0xFF yields zero matches across all encrypted components, despite decoding SL3 container header)",
+    "hypothesis_3_flags_2_components_contain_boot_tables": "FALSIFIED (All flags=2 non-empty components are uniform 0x00 or 0xFF filler buffers)",
+    "hypothesis_4_open_source_configs_directly_anchor_firmware": "FALSIFIED (Public U-Boot MC8241/MC501 source code is not exposed in decrypted form in the UPD container)",
+    "code_anchor_established": false
+  }
+}

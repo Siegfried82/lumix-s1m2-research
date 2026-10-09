@@ -1,0 +1,418 @@
+[
+  {
+    "name": "current_02000110",
+    "opcode": 37890,
+    "params": [
+      33554704
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 13544,
+      "symbol": "__Z36Lmx_lib_ptpif_LmxExt_Get_Strobe_InfoP35_tag_lmx_struct_recinfo_strobe_infojPc",
+      "category": "Get_Strobe_Info"
+    }
+  },
+  {
+    "name": "current_02000120",
+    "opcode": 37890,
+    "params": [
+      33554720
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 16120,
+      "symbol": "__Z39Lmx_lib_ptpif_LmxExt_Get_AFMF_Cfg2_InfoP36_tag_lmx_struct_recinfo_af_cfg2_infojPc",
+      "category": "Get_AFMF_Cfg2_Info"
+    }
+  },
+  {
+    "name": "current_020001c0",
+    "opcode": 37890,
+    "params": [
+      33554880
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 18966,
+      "symbol": "__Z34Lmx_lib_ptpif_LmxExt_Get_4K6K_InfoP25_tag_LMX_STRUCT_4K6K_INFOjPc",
+      "category": "Get_4K6K_Info"
+    }
+  },
+  {
+    "name": "current_02000030",
+    "opcode": 37890,
+    "params": [
+      33554480
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 23967,
+      "symbol": "__Z32Lmx_lib_ptpif_LmxExt_Get_SS_InfoP23_tag_LMX_STRUCT_SS_INFOjPc",
+      "category": "Get_SS_Info"
+    }
+  },
+  {
+    "name": "current_020000e0",
+    "opcode": 37890,
+    "params": [
+      33554656
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 24890,
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_RecDisp_Cfg_InfoP37_tag_lmx_struct_recinfo_rec_disp_infojPcPj",
+      "category": "Get_RecDisp_Cfg_Info"
+    }
+  },
+  {
+    "name": "current_020000e1",
+    "opcode": 37890,
+    "params": [
+      33554657
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 25486,
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_RecDisp_Cfg_InfoP37_tag_lmx_struct_recinfo_rec_disp_infojPcPj",
+      "category": "Get_RecDisp_Cfg_Info"
+    }
+  },
+  {
+    "name": "current_020000e2",
+    "opcode": 37890,
+    "params": [
+      33554658
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 25532,
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_RecDisp_Cfg_InfoP37_tag_lmx_struct_recinfo_rec_disp_infojPcPj",
+      "category": "Get_RecDisp_Cfg_Info"
+    }
+  },
+  {
+    "name": "current_020000e3",
+    "opcode": 37890,
+    "params": [
+      33554659
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 25578,
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_RecDisp_Cfg_InfoP37_tag_lmx_struct_recinfo_rec_disp_infojPcPj",
+      "category": "Get_RecDisp_Cfg_Info"
+    }
+  },
+  {
+    "name": "current_020000e4",
+    "opcode": 37890,
+    "params": [
+      33554660
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 25624,
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_RecDisp_Cfg_InfoP37_tag_lmx_struct_recinfo_rec_disp_infojPcPj",
+      "category": "Get_RecDisp_Cfg_Info"
+    }
+  },
+  {
+    "name": "current_020000e5",
+    "opcode": 37890,
+    "params": [
+      33554661
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 25670,
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_RecDisp_Cfg_InfoP37_tag_lmx_struct_recinfo_rec_disp_infojPcPj",
+      "category": "Get_RecDisp_Cfg_Info"
+    }
+  },
+  {
+    "name": "current_020000e7",
+    "opcode": 37890,
+    "params": [
+      33554663
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 26390,
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_RecDisp_Cfg_InfoP37_tag_lmx_struct_recinfo_rec_disp_infojPcPj",
+      "category": "Get_RecDisp_Cfg_Info"
+    }
+  },
+  {
+    "name": "current_020000e8",
+    "opcode": 37890,
+    "params": [
+      33554664
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 26439,
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_RecDisp_Cfg_InfoP37_tag_lmx_struct_recinfo_rec_disp_infojPcPj",
+      "category": "Get_RecDisp_Cfg_Info"
+    }
+  },
+  {
+    "name": "current_020000e9",
+    "opcode": 37890,
+    "params": [
+      33554665
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 26488,
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_RecDisp_Cfg_InfoP37_tag_lmx_struct_recinfo_rec_disp_infojPcPj",
+      "category": "Get_RecDisp_Cfg_Info"
+    }
+  },
+  {
+    "name": "current_020000ea",
+    "opcode": 37890,
+    "params": [
+      33554666
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 26537,
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_RecDisp_Cfg_InfoP37_tag_lmx_struct_recinfo_rec_disp_infojPcPj",
+      "category": "Get_RecDisp_Cfg_Info"
+    }
+  },
+  {
+    "name": "current_020000eb",
+    "opcode": 37890,
+    "params": [
+      33554667
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 26586,
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_RecDisp_Cfg_InfoP37_tag_lmx_struct_recinfo_rec_disp_infojPcPj",
+      "category": "Get_RecDisp_Cfg_Info"
+    }
+  },
+  {
+    "name": "current_020000ec",
+    "opcode": 37890,
+    "params": [
+      33554668
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 26635,
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_RecDisp_Cfg_InfoP37_tag_lmx_struct_recinfo_rec_disp_infojPcPj",
+      "category": "Get_RecDisp_Cfg_Info"
+    }
+  },
+  {
+    "name": "current_02000060",
+    "opcode": 37890,
+    "params": [
+      33554528
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 29191,
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_Get_Exposure_InfoP29_tag_LMX_STRUCT_EXPOSURE_INFOjPc",
+      "category": "Get_Exposure_Info"
+    }
+  },
+  {
+    "name": "current_02000141",
+    "opcode": 37890,
+    "params": [
+      33554753
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 29944,
+      "symbol": "__Z42Lmx_lib_ptpif_LmxExt_Get_BurstBracket_InfoP42_tag_lmx_struct_recinfo_burst_bracket_infojPc",
+      "category": "Get_BurstBracket_Info"
+    }
+  },
+  {
+    "name": "current_02000080",
+    "opcode": 37890,
+    "params": [
+      33554560
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 30949,
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_GetCameraModeInfoP40_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_INFOjPc",
+      "category": "GetCameraModeInfo"
+    }
+  },
+  {
+    "name": "current_02000086",
+    "opcode": 37890,
+    "params": [
+      33554566
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 31662,
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_GetCameraModeInfoP40_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_INFOjPc",
+      "category": "GetCameraModeInfo"
+    }
+  },
+  {
+    "name": "current_02000087",
+    "opcode": 37890,
+    "params": [
+      33554567
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 31700,
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_GetCameraModeInfoP40_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_INFOjPc",
+      "category": "GetCameraModeInfo"
+    }
+  },
+  {
+    "name": "current_02000088",
+    "opcode": 37890,
+    "params": [
+      33554568
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 31738,
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_GetCameraModeInfoP40_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_INFOjPc",
+      "category": "GetCameraModeInfo"
+    }
+  },
+  {
+    "name": "current_020001a1",
+    "opcode": 37890,
+    "params": [
+      33554849
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 38455,
+      "symbol": "__Z39Lmx_lib_ptpif_LmxExt_Get_SelfTimer_InfoP38_tag_LMX_STRUCT_RECINFO_SELFTIMER_INFOjPc",
+      "category": "Get_SelfTimer_Info"
+    }
+  },
+  {
+    "name": "current_02000170",
+    "opcode": 37890,
+    "params": [
+      33554800
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 38993,
+      "symbol": "__Z44Lmx_lib_ptpif_LmxExt_Get_RecPreview_Cfg_InfoP40_tag_lmx_struct_recinfo_rec_preview_infojPc",
+      "category": "Get_RecPreview_Cfg_Info"
+    }
+  },
+  {
+    "name": "current_02000040",
+    "opcode": 37890,
+    "params": [
+      33554496
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 40102,
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_Get_Aperture_InfoP29_tag_LMX_STRUCT_APERTURE_INFOjPc",
+      "category": "Get_Aperture_Info"
+    }
+  },
+  {
+    "name": "current_02000070",
+    "opcode": 37890,
+    "params": [
+      33554544
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 45438,
+      "symbol": "__Z36Lmx_lib_ptpif_LmxExt_Get_AF_Cfg_InfoP30_tag_LMX_STRUCT_AF_CONFIG_INFOjPcPj",
+      "category": "Get_AF_Cfg_Info"
+    }
+  },
+  {
+    "name": "current_020000c0",
+    "opcode": 37890,
+    "params": [
+      33554624
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 47550,
+      "symbol": "__Z36Lmx_lib_ptpif_LmxExt_GetIntervalInfoP36_tag_LMX_STRUCT_INTERVAL_CONFIG_INFOjPc",
+      "category": "GetIntervalInfo"
+    }
+  },
+  {
+    "name": "current_02000050",
+    "opcode": 37890,
+    "params": [
+      33554512
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 48803,
+      "symbol": "__Z32Lmx_lib_ptpif_LmxExt_Get_WB_InfoP23_tag_LMX_STRUCT_WB_INFOjPc",
+      "category": "Get_WB_Info"
+    }
+  },
+  {
+    "name": "current_020000b0",
+    "opcode": 37890,
+    "params": [
+      33554608
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 50059,
+      "symbol": "__Z33Lmx_lib_ptpif_LmxExt_Get_Rec_InfoP37_tag_LMX_STRUCT_RECINFO_METERING_INFOjPc",
+      "category": "Get_Rec_Info"
+    }
+  },
+  {
+    "name": "current_02000020",
+    "opcode": 37890,
+    "params": [
+      33554464
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 52826,
+      "symbol": "__Z33Lmx_lib_ptpif_LmxExt_Get_ISO_InfoP24_tag_LMX_STRUCT_ISO_INFOjPc",
+      "category": "Get_ISO_Info"
+    }
+  },
+  {
+    "name": "current_020001b0",
+    "opcode": 37890,
+    "params": [
+      33554864
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 63510,
+      "symbol": "__Z37Lmx_lib_ptpif_LmxExt_Get_Strobe2_InfoP36_tag_LMX_STRUCT_RECINFO_STROBE2_INFOjPc",
+      "category": "Get_Strobe2_Info"
+    }
+  },
+  {
+    "name": "current_020000a0",
+    "opcode": 37890,
+    "params": [
+      33554592
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 66701,
+      "symbol": "__Z33Lmx_lib_ptpif_LmxExt_GetImageInfoP34_tag_LMX_STRUCT_RECINFO_IMAGE_INFOjPc",
+      "category": "GetImageInfo"
+    }
+  }
+]

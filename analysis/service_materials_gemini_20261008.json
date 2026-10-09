@@ -1,0 +1,107 @@
+{
+  "task": "Panasonic DC-S1M2 Service Materials and Adjustment Software Retrieval",
+  "timestamp": "2026-10-08T22:07:00+03:00",
+  "target_model": "Panasonic DC-S1M2 (LUMIX S1 II)",
+  "reference_models": [
+    "DC-S1P (LUMIX S1)",
+    "DC-S5M2 (LUMIX S5 II)",
+    "DC-G9M2 (LUMIX G9 II)",
+    "DMC-TS2 / DMC-FT2"
+  ],
+  "downloaded_files": [
+    {
+      "file_path": "analysis/sources/service_research_20261008/Panasonic_DMC_TS2_service_ifixit.pdf",
+      "model": "DMC-TS2 / DMC-FT2",
+      "order_no": "DSC1002022CE",
+      "source_url": "https://www.ifixit.com",
+      "category": "型号不符",
+      "evidence_verified": "第12/34/36/46/50/52页载明维护调整软件确切名称为 DIAS (DSC Integrated Assist Software)，确认分发渠道为 TSN system / TSN Website (Support Information from NWBG/VDBG-AVC)。"
+    }
+  ],
+  "sources_classified": {
+    "可取得": [
+      {
+        "name": "iFixit DMC-TS2 Service Manual 镜像 (参考验证用)",
+        "url": "https://www.ifixit.com",
+        "file_name": "Panasonic_DMC_TS2_service_ifixit.pdf",
+        "description": "原厂维修手册公开镜像，用于确认原厂软件名称与分发渠道规范。",
+        "order_no": "DSC1002022CE",
+        "category": "型号不符"
+      },
+      {
+        "name": "Panasonic 官方说明书支持中心 (Operating Instructions)",
+        "url": "https://help.na.panasonic.com/",
+        "description": "",
+        "category": "型号不符"
+      }
+    ],
+    "需账号": [
+      {
+        "name": "remont-aud.net DC-S1M2 Service Manual 目录项",
+        "url": "https://remont-aud.net/load/drugaja_apparatura/dc_s1m2_service_manual/147-1-0-97303",
+        "claimed_size": "12.22MB",
+        "uploader": "Silnica",
+        "upload_date": "2025-07-04",
+        "note": "标注 'Схемы нет' (无原理图)。下载受限：必须注册账号并强制通过无线电电子学知识测试，无法免登录直接抓取。",
+        "boundary_result": "被登录及测试门槛拦截，按规则不注册、不绕过。"
+      },
+      {
+        "name": "Panasonic TSN 官方入口 (Technical Service Navigation)",
+        "url": "https://www.e-service.css.panasonic.co.jp/cshome/login",
+        "description": "松下官方技术服务系统，供授权维修站获取原厂 Service Manual 及调整软件 (DIAS / 专用调整包)。",
+        "boundary_result": "需官方签约服务商企业账号认证，无公开匿名访问途径。"
+      },
+      {
+        "name": "ManualsLib DC-S1P Service Manual",
+        "url": "https://www.manualslib.com/download/2331010/Panasonic-Dc-S1p.html",
+        "order_no": "DSC1903002CE",
+        "description": "初代 S1 维修手册。包含安全规范、拆解与 Initial Settings，但调整软件仅统称为 'Adjustment software' 且下载受 Cloudflare 验证码拦截。",
+        "boundary_result": "被反爬质询拦截 (HTTP 403 / Cloudflare Challenge)。"
+      },
+      {
+        "name": "Panasonic Global LUMIX Repair Tool V2.3",
+        "url": "https://av.jpn.support.panasonic.com/support/global/cs/soft/lumix_repair_tool/",
+        "file_name": "LUMIX Repair Tool V2_3.zip",
+        "description": "",
+        "boundary_result": "功能不符且需设备序列号验证。"
+      }
+    ],
+    "付费": [
+      {
+        "name": "eManualOnline / ServiceManuals.net 等商业手册库",
+        "urls": [
+          "https://www.emanualonline.com",
+          "https://servicemanuals.net"
+        ],
+        "description": "仅收录老款机型维修手册，无合法公开的 S1M2/S5M2 原厂维修手册或调整软件销售渠道。"
+      }
+    ],
+    "型号不符": [
+      {
+        "model": "DMC-TS2 / DMC-FT2",
+        "order_no": "DSC1002022CE",
+        "software_name": "DIAS (DSC Integrated Assist Software)",
+        "distribution_channel": "TSN Website (Support Information from NWBG/VDBG-AVC)",
+        "note": "三防便携卡片机，非全画幅无反，仅作为松下原厂工具命名与渠道证据参考。"
+      },
+      {
+        "model": "DC-S1P",
+        "order_no": "DSC1903002CE",
+        "software_name": "Adjustment software",
+        "distribution_channel": "TSN Website",
+        "note": "初代 S1 全画幅机型，未指明独立软件品牌，禁止假定与 S1M2 同款兼容。"
+      },
+      {
+        "model": "DC-G9M2",
+        "order_no": "DSC2310016RE",
+        "software_name": "Adjustment software / TSN",
+        "distribution_channel": "TSN Website",
+        "note": "2023年末 M4/3 旗舰机型，文档受限。"
+      }
+    ]
+  },
+  "retrieval_boundary_conclusion": {
+    "s1m2_service_manual": "无免登录、免测试、无验证码的合法第一手公开下载源；第三方唯一线索 remont-aud 存在注册与测试门槛，无法合规取得。",
+    "adjustment_software": "松下对无反机身硬件校准程序实行中心化闭环分发，统一通过 TSN 内部系统下发，无独立面向公众的安装包命名或合法公开镜像；历史机型工具确认为 DIAS，但现代机型均封闭在专用维修网络内。"
+  }
+}

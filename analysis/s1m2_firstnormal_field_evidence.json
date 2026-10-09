@@ -1,0 +1,320 @@
+{
+  "metadata": {
+    "title": "LUMIX DC-S1M2 'Save 1st Normal Picture' Subtag 0x030f Evidence & Firmware Correlation",
+    "generation_date": "2026-10-08",
+    "target_camera": "Panasonic LUMIX DC-S1M2",
+    "investigation_mode": "Strictly read-only offline analysis; no physical camera connection; no firmware mutation; no unknown binary execution",
+    "prohibitions_and_boundary_definitions": {
+      "candidate_nature": "Serialized configuration backup record in PTP payload (.DAT/.CAM), strictly NOT a hardware MMIO register",
+      "data_nature": "Menu state integer flag, strictly NOT raw sensor Bayer stream or all-input RAW buffer",
+      "protocol_tag_nature": "Internal serialization sub-record ID (0x030f), strictly NOT identical to PTP property codes (e.g. 0x0200xxxx / 0x94xx)"
+    }
+  },
+  "verified_samples": {
+    "01_baseline": {
+      "directory": "analysis/baseline_20261008_01",
+      "description": "Baseline state (High-Res OFF, Fan initial, Save 1st Normal default)",
+      "files": {
+        "config_1.DAT": {
+          "size": 9197409,
+          "sha256": "4b5ceac46447814b7e8d7894d03da24da6e9dfefb0d39e8d479e00045e7f1f92",
+          "trailer_checksum_hex": "0xe5",
+          "full_sum_mod_256": 0
+        },
+        "config_2.DAT": {
+          "size": 9197409,
+          "sha256": "4b5ceac46447814b7e8d7894d03da24da6e9dfefb0d39e8d479e00045e7f1f92",
+          "trailer_checksum_hex": "0xe5",
+          "full_sum_mod_256": 0
+        }
+      },
+      "subtag_030f_values": [
+        1,
+        1,
+        1
+      ],
+      "fan_045d_values": [
+        1,
+        1,
+        1
+      ],
+      "group_z_0291_values": [
+        1,
+        1,
+        1
+      ]
+    },
+    "02_highres_on": {
+      "directory": "analysis/highres_20261008_02",
+      "description": "Sample A1: High-Res ON, Save 1st Normal ON, Fan initial",
+      "files": {
+        "config_1.DAT": {
+          "size": 9197409,
+          "sha256": "ca848c6889b222a2d7e0039aee945e9afe522cda0997e8053b1a3537820304e2",
+          "trailer_checksum_hex": "0xe5",
+          "full_sum_mod_256": 0
+        },
+        "config_2.DAT": {
+          "size": 9197409,
+          "sha256": "ca848c6889b222a2d7e0039aee945e9afe522cda0997e8053b1a3537820304e2",
+          "trailer_checksum_hex": "0xe5",
+          "full_sum_mod_256": 0
+        }
+      },
+      "subtag_030f_values": [
+        1,
+        1,
+        1
+      ],
+      "fan_045d_values": [
+        1,
+        1,
+        1
+      ],
+      "group_z_0291_values": [
+        1,
+        1,
+        1
+      ]
+    },
+    "03_highres_off": {
+      "directory": "analysis/highres_firstnormal_off_20261008_03",
+      "description": "Sample B: High-Res ON, Save 1st Normal OFF, Fan turned ON (dual variable)",
+      "files": {
+        "config_1.DAT": {
+          "size": 9197409,
+          "sha256": "3bac47236253971c597980af339d7de5489e89a77d62a672639284a754fa7025",
+          "trailer_checksum_hex": "0xd9",
+          "full_sum_mod_256": 0
+        },
+        "config_2.DAT": {
+          "size": 9197409,
+          "sha256": "3bac47236253971c597980af339d7de5489e89a77d62a672639284a754fa7025",
+          "trailer_checksum_hex": "0xd9",
+          "full_sum_mod_256": 0
+        }
+      },
+      "subtag_030f_values": [
+        2,
+        2,
+        2
+      ],
+      "fan_045d_values": [
+        4,
+        4,
+        4
+      ],
+      "group_z_0291_values": [
+        1,
+        1,
+        1
+      ]
+    },
+    "04_highres_on_fan": {
+      "directory": "analysis/highres_firstnormal_on_fan_20261008_04",
+      "description": "Sample A2: High-Res ON, Save 1st Normal ON, Fan ON (accidental Group Z shift)",
+      "files": {
+        "config_1.DAT": {
+          "size": 9197409,
+          "sha256": "7ce284f173a793bf22d3852fc42f652c9268134570c39cde1379d33e13a38aba",
+          "trailer_checksum_hex": "0xd9",
+          "full_sum_mod_256": 0
+        },
+        "config_2.DAT": {
+          "size": 9197409,
+          "sha256": "7ce284f173a793bf22d3852fc42f652c9268134570c39cde1379d33e13a38aba",
+          "trailer_checksum_hex": "0xd9",
+          "full_sum_mod_256": 0
+        }
+      },
+      "subtag_030f_values": [
+        1,
+        1,
+        1
+      ],
+      "fan_045d_values": [
+        4,
+        4,
+        4
+      ],
+      "group_z_0291_values": [
+        2,
+        2,
+        2
+      ]
+    },
+    "05_highres_off_fan": {
+      "directory": "analysis/highres_firstnormal_off_fan_20261008_05",
+      "description": "Sample B2: High-Res ON, Save 1st Normal OFF, Fan fixed ON (clean single-variable reversal)",
+      "files": {
+        "config_1.DAT": {
+          "size": 9197409,
+          "sha256": "fe2cec28a5c105f590718034583af998d61f9ee8cc045169629539915705b11f",
+          "trailer_checksum_hex": "0xd6",
+          "full_sum_mod_256": 0
+        },
+        "config_2.DAT": {
+          "size": 9197409,
+          "sha256": "fe2cec28a5c105f590718034583af998d61f9ee8cc045169629539915705b11f",
+          "trailer_checksum_hex": "0xd6",
+          "full_sum_mod_256": 0
+        }
+      },
+      "subtag_030f_values": [
+        2,
+        2,
+        2
+      ],
+      "fan_045d_values": [
+        4,
+        4,
+        4
+      ],
+      "group_z_0291_values": [
+        2,
+        2,
+        2
+      ]
+    }
+  },
+  "micro_record_structure_evidence": {
+    "top_level_container": {
+      "tag_hex": "0x0004",
+      "offset_hex": "0x0102cc",
+      "declared_length_bytes": 327684,
+      "format_type": "large",
+      "w1_reserved": "0x0000",
+      "subtype_field_hex": "0x00610045"
+    },
+    "subtag_030f_triple": {
+      "subtag_id_hex": "0x030f",
+      "subtag_id_dec": 783,
+      "slot_count": 3,
+      "record_stride_bytes": 28,
+      "header_definition": {
+        "bytes_0_1": "uint16_le subtag_id (0x030f)",
+        "bytes_2_3": "uint16_le slot_index (0, 1, 2)",
+        "bytes_4_7": "uint32_le record_length (28 / 0x0000001c)",
+        "bytes_8_11": "uint32_le flags_subtype (0x00010000)",
+        "bytes_12_27": "16 bytes payload"
+      },
+      "slot_details": [
+        {
+          "slot": 0,
+          "record_start_hex": "0x017be8",
+          "value_offset_hex": "0x017bf4",
+          "payload_structure": "Byte 0 = candidate value (1=ON, 2=OFF); Bytes 1..14 = 0x01; Byte 15 = 0x00"
+        },
+        {
+          "slot": 1,
+          "record_start_hex": "0x017c04",
+          "value_offset_hex": "0x017c10",
+          "payload_structure": "Byte 0 = candidate value (1=ON, 2=OFF); Bytes 1..14 = 0x01; Byte 15 = 0x00"
+        },
+        {
+          "slot": 2,
+          "record_start_hex": "0x017c20",
+          "value_offset_hex": "0x017c2c",
+          "payload_structure": "Byte 0 = candidate value (1=ON, 2=OFF); Bytes 1..14 = 0x01; Byte 15 = 0x00"
+        }
+      ],
+      "adjacent_boundaries": {
+        "preceding_subtag": {
+          "offset_hex": "0x017bcc",
+          "tag_hex": "0x030e",
+          "slot": 2,
+          "length": 28,
+          "flags_hex": "0x00010000",
+          "closure_offset_hex": "0x017be8"
+        },
+        "succeeding_subtag": {
+          "offset_hex": "0x017c3c",
+          "tag_hex": "0x0310",
+          "slot": 0,
+          "length": 28,
+          "flags_hex": "0x00010000",
+          "start_offset_hex": "0x017c3c"
+        }
+      }
+    }
+  },
+  "single_variable_proof_04_to_05": {
+    "total_file_bytes": 9197409,
+    "total_byte_differences": 4,
+    "diff_details": [
+      {
+        "offset_hex": "0x017bf4",
+        "description": "Subtag 0x030f [Slot 0] value byte",
+        "value_before_04": 1,
+        "value_after_05": 2,
+        "delta": 1
+      },
+      {
+        "offset_hex": "0x017c10",
+        "description": "Subtag 0x030f [Slot 1] value byte",
+        "value_before_04": 1,
+        "value_after_05": 2,
+        "delta": 1
+      },
+      {
+        "offset_hex": "0x017c2c",
+        "description": "Subtag 0x030f [Slot 2] value byte",
+        "value_before_04": 1,
+        "value_after_05": 2,
+        "delta": 1
+      },
+      {
+        "offset_hex": "0x8c5760",
+        "description": "Trailer 8-bit two's complement checksum",
+        "value_before_04": 217,
+        "value_after_05": 214,
+        "delta": -3
+      }
+    ],
+    "invariants_confirmed": {
+      "fan_group_045d": "Strictly unchanged ([4, 4, 4] -> [4, 4, 4])",
+      "accidental_group_0291": "Strictly unchanged ([2, 2, 2] -> [2, 2, 2])",
+      "ptp_drivemode_tag_02000081": "Strictly unchanged (0x000a / 10 = HRS mode)",
+      "trailer_checksum_arithmetic": "(+1 + 1 + 1) + (-3) = 0 mod 256"
+    }
+  },
+  "firmware_and_source_correlation_search": {
+    "targets_inspected": [
+      {
+        "source": "LUMIX Tether 2.12 (libLmxptpif.dylib & LUMIX Tether app)",
+        "scope": "Full arm64 disassembly (476k lines ptp, 286k lines app)",
+        "findings": "Zero occurrences of Subtag 0x030f as a configuration descriptor. Tether treats .DAT files as opaque byte streams transferred via PTP 0x9422/0x9423 without parsing. Remote Menu (0x9416) is a virtual touch coordinate relay (0..999) with zero camera menu item schema."
+      },
+      {
+        "source": "Panasonic GPL Linux Kernel & U-Boot (linux-4.19.124 & u-boot)",
+        "scope": "All platform drivers, DTS/DTSI, arch/arm64, drivers/pvc",
+        "findings": "Contains hardware SoC drivers for Milbeaut SC2006A / PVC04V (UART, SDHCI, mass storage, PSCI EL3). Zero camera UI, settings serialization, or ISP high-res routines exist in open-source components."
+      },
+      {
+        "source": "Leica SL3 OSS (20260612_LeicaSL3_OSS.zip)",
+        "scope": "Leica DC1231/MC501 kernel and u-boot trees",
+        "findings": "Identical Milbeaut SC2006A platform base; identical absence of userland or proprietary settings deserializers."
+      },
+      {
+        "source": "Encrypted S1M2 Firmware Package (S1m2_V14.bin)",
+        "scope": "62 components, including loader1, program, hr_c_prog, hr_d_prog",
+        "findings": "All functional execution binaries have flags=3, entropy > 7.997, and failed 100% of bootloader anchor pattern probes. No plaintext deserializer executable is exposed."
+      }
+    ]
+  },
+  "evidence_chain_break_analysis": {
+    "break_point": "Interface boundary between host PTP opaque buffer transport and in-camera proprietary RTOS deserialization routines",
+    "host_side_reach": "Host PC can dump (0x9423) and inject (0x9422) the 9.2 MB .DAT blob, and can verify the 8-bit checksum, but has no semantic interpreter for sub-records.",
+    "camera_side_block": "In-camera deserialization, state validation, and high-res computation logic reside inside encrypted firmware partitions (program, hr_c_prog) executed in ARM TrustZone / RTOS domain.",
+    "unsupported_inferences": [
+      "Inferring that Subtag 0x030f corresponds to PTP property tag 0x0200030f (INVALID: PTP property space is separate)",
+      "Inferring that Subtag 0x030f is a memory-mapped hardware register (INVALID: it is a serialized TLV struct in a backup file)",
+      "Inferring that enabling Save 1st Normal Picture exports all 8/16 input RAWs (INVALID: official manual states it exports only 1 normal shot)"
+    ]
+  },
+  "immediately_verifiable_next_steps": [
+    "Run analysis/read_s1m2_known_setting.py on all current and future sample dumps to maintain automated regression verification.",
+    "Systematically map the surrounding subtag range (0x0308 to 0x0320) within Record 0x0004 across existing dumps to document structural field lengths, slot counts, and flags.",
+    "Formally maintain the strict offline, read-only boundary without attempting camera injection or firmware tampering until an authenticated or verified execution path is discovered."
+  ]
+}

@@ -1,0 +1,409 @@
+{
+  "audit_metadata": {
+    "task": "LUMIX Lab APK USB/PTP机身程序及内存读取入口离线静态核查",
+    "timestamp": "2026-10-08T23:12:00+03:00",
+    "auditor": "Gemini-3.8-Flash",
+    "target_apk": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/com.panasonic.jp.lumixlab.apk",
+    "target_apk_sha256": "6ba873110d201675a905f7dac39bcda3291674e7440a484d6d5bd1a78447115f",
+    "sources_root": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources",
+    "jadx_tool": "analysis/tools/jadx-1.5.6/bin/jadx",
+    "jadx_full_errors": 42,
+    "executed_vendor_binary": false,
+    "connected_hardware": false,
+    "network_access": false,
+    "precondition_statements": [
+      "APKPure镜像来源未经松下官方独立背书/身份未独立核验",
+      "jadx全量反编译存在42处错误，代码不能作为完美源码",
+      "机身固件程序未解码，目标内存读取/程序读取功能全未实现",
+      "通用封包机制不能证明机身支持任意子命令",
+      "文件对象偏移(File Object Offset)与物理RAM地址存在本质区别，不能作为RAM读取凭据"
+    ]
+  },
+  "audit_conclusion": {
+    "camera_program_read_entry_found": false,
+    "camera_ram_dump_entry_found": false,
+    "physical_address_length_read_found": false,
+    "arbitrary_ptp_subcommand_passthrough_found": false,
+    "total_enum_opcodes": 111,
+    "constructed_opcodes_count": 31,
+    "constructed_read_opcodes_count": 14,
+    "unconstructed_enum_only_count": 80
+  },
+  "constructed_read_commands": [
+    {
+      "opcode_hex": "0x1001",
+      "opcode_dec": 4097,
+      "enum_name": "GetDeviceInfo",
+      "parameters": [],
+      "data_direction": "In (Camera -> App)",
+      "callers": [
+        "p172p6/m.java::c"
+      ],
+      "semantics": "标准PTP设备信息查询（厂商、机型、支持的操作集与属性集）",
+      "is_physical_ram_read": false
+    },
+    {
+      "opcode_hex": "0x9107",
+      "opcode_dec": -28409,
+      "enum_name": "LumixGetCapabilityInfoSize",
+      "parameters": [
+        {
+          "name": "tagCategory",
+          "type": "uint32",
+          "description": "功能配置分类ID（如photo style/ISO能力集分类）"
+        },
+        {
+          "name": "subTag",
+          "type": "uint32",
+          "description": "可选子分类ID"
+        }
+      ],
+      "data_direction": "In (Camera -> App)",
+      "callers": [
+        "A6/r.java::v",
+        "p041d6/c.java"
+      ],
+      "semantics": "查询特定配置分类的XML/TLV能力描述集数据大小",
+      "is_physical_ram_read": false
+    },
+    {
+      "opcode_hex": "0x9108",
+      "opcode_dec": -28408,
+      "enum_name": "LumixGetCapabilityInfo",
+      "parameters": [
+        {
+          "name": "tagCategory",
+          "type": "uint32",
+          "description": "功能配置分类ID"
+        },
+        {
+          "name": "subTag",
+          "type": "uint32",
+          "description": "可选子分类ID"
+        },
+        {
+          "name": "indexOrFlag",
+          "type": "uint32",
+          "description": "固定值1"
+        }
+      ],
+      "data_direction": "In (Camera -> App)",
+      "callers": [
+        "A6/r.java::u",
+        "p041d6/c.java"
+      ],
+      "semantics": "获取机身功能配置能力集XML/TLV数据结构",
+      "is_physical_ram_read": false
+    },
+    {
+      "opcode_hex": "0x9402",
+      "opcode_dec": -27646,
+      "enum_name": "LumixGetRecInfo",
+      "parameters": [
+        {
+          "name": "propertyId",
+          "type": "uint32",
+          "description": "摄影/录制参数属性ID（如s.All, q.PhotoStyleDisplaySetting）"
+        }
+      ],
+      "data_direction": "In (Camera -> App)",
+      "callers": [
+        "A6/r.java::c0",
+        "A6/r.java::Q",
+        "A6/r.java::S",
+        "A6/r.java::V",
+        "A6/r.java::d0",
+        "com/panasonic/jp/lumixlab/controller/activity/RemotePhotostyleActivity.java"
+      ],
+      "semantics": "获取机身拍摄参数配置值",
+      "is_physical_ram_read": false
+    },
+    {
+      "opcode_hex": "0x940A",
+      "opcode_dec": -27638,
+      "enum_name": "LumixGetSetupInfo",
+      "parameters": [
+        {
+          "name": "setupId",
+          "type": "uint32",
+          "description": "系统设置属性ID（如w.LocationInformationSetting）"
+        }
+      ],
+      "data_direction": "In (Camera -> App)",
+      "callers": [
+        "A6/r.java::C"
+      ],
+      "semantics": "获取机身系统环境设置项",
+      "is_physical_ram_read": false
+    },
+    {
+      "opcode_hex": "0x9414",
+      "opcode_dec": -27628,
+      "enum_name": "LumixGetParamInfo",
+      "parameters": [
+        {
+          "name": "paramId",
+          "type": "uint32",
+          "description": "参数代码（如CardStatus, TransferCount, RecommendImageQualityList, GetLutInfo）"
+        }
+      ],
+      "data_direction": "In (Camera -> App)",
+      "callers": [
+        "A6/r.java::c",
+        "A6/r.java::d",
+        "A6/r.java::B",
+        "A6/r.java::M",
+        "A6/r.java::P",
+        "A6/r.java::l0",
+        "K5/C0657v0.java"
+      ],
+      "semantics": "获取机身状态、存储卡就绪状态及通信控制参数",
+      "is_physical_ram_read": false
+    },
+    {
+      "opcode_hex": "0x9706",
+      "opcode_dec": -26874,
+      "enum_name": "LumixGetLiveViewData",
+      "parameters": [],
+      "data_direction": "In (Camera -> App)",
+      "callers": [
+        "K5/C0657v0.java"
+      ],
+      "semantics": "读取实时取景视频流JPEG单帧画面",
+      "is_physical_ram_read": false
+    },
+    {
+      "opcode_hex": "0x9912",
+      "opcode_dec": -26350,
+      "enum_name": "LumixGalleryGetListCount",
+      "parameters": [
+        {
+          "name": "sdSlot",
+          "type": "uint32",
+          "description": "存储卡槽ID"
+        },
+        {
+          "name": "folderId",
+          "type": "uint32",
+          "description": "媒体文件夹ID"
+        },
+        {
+          "name": "mode",
+          "type": "uint32",
+          "description": "过滤模式"
+        }
+      ],
+      "data_direction": "In (Camera -> App)",
+      "callers": [
+        "A6/r.java::q"
+      ],
+      "semantics": "查询SD卡媒体文件总数",
+      "is_physical_ram_read": false
+    },
+    {
+      "opcode_hex": "0x9913",
+      "opcode_dec": -26349,
+      "enum_name": "LumixGalleryGetInfoList",
+      "parameters": [
+        {
+          "name": "startIndex",
+          "type": "uint32",
+          "description": "起始条目索引"
+        },
+        {
+          "name": "count",
+          "type": "uint32",
+          "description": "请求数量"
+        },
+        {
+          "name": "sdSlot",
+          "type": "uint32",
+          "description": "卡槽ID"
+        },
+        {
+          "name": "folderId",
+          "type": "uint32",
+          "description": "文件夹ID"
+        },
+        {
+          "name": "filter",
+          "type": "uint32",
+          "description": "过滤条件"
+        }
+      ],
+      "data_direction": "In (Camera -> App)",
+      "callers": [
+        "A6/r.java::p"
+      ],
+      "semantics": "分页读取SD卡媒体元数据对象列表",
+      "is_physical_ram_read": false
+    },
+    {
+      "opcode_hex": "0x9914",
+      "opcode_dec": -26348,
+      "enum_name": "LumixGalleryGetBurstInfoList",
+      "parameters": [
+        {
+          "name": "burstId",
+          "type": "uint32",
+          "description": "连拍组编号"
+        },
+        {
+          "name": "startIndex",
+          "type": "uint32",
+          "description": "起始索引"
+        },
+        {
+          "name": "count",
+          "type": "uint32",
+          "description": "请求数量"
+        }
+      ],
+      "data_direction": "In (Camera -> App)",
+      "callers": [
+        "A6/r.java::o"
+      ],
+      "semantics": "读取连拍组文件元数据",
+      "is_physical_ram_read": false
+    },
+    {
+      "opcode_hex": "0x9915",
+      "opcode_dec": -26347,
+      "enum_name": "LumixGalleryGetThumbnail",
+      "parameters": [
+        {
+          "name": "objectId",
+          "type": "uint32",
+          "description": "媒体对象编号"
+        },
+        {
+          "name": "sdSlot",
+          "type": "uint32",
+          "description": "卡槽ID"
+        },
+        {
+          "name": "format",
+          "type": "uint32",
+          "description": "缩略图格式"
+        }
+      ],
+      "data_direction": "In (Camera -> App)",
+      "callers": [
+        "A6/r.java::s"
+      ],
+      "semantics": "获取媒体对象JPEG缩略图数据",
+      "is_physical_ram_read": false
+    },
+    {
+      "opcode_hex": "0x9917",
+      "opcode_dec": -26345,
+      "enum_name": "LumixGalleryGetObjectData",
+      "parameters": [
+        {
+          "name": "offsetLow",
+          "type": "uint32",
+          "description": "文件对象内低32位偏移"
+        },
+        {
+          "name": "offsetHigh",
+          "type": "uint32",
+          "description": "文件对象内高32位偏移"
+        },
+        {
+          "name": "chunkLength",
+          "type": "uint32",
+          "description": "请求分片字节长度"
+        }
+      ],
+      "data_direction": "In (Camera -> App)",
+      "callers": [
+        "com/panasonic/jp/lumixlab/service/LlcService.java::l",
+        "p249w6/a.java",
+        "p172p6/k.java"
+      ],
+      "semantics": "拉取由0x9916打开的SD卡媒体文件内容分片并写入临时缓存文件",
+      "is_physical_ram_read": false,
+      "distinction_note": "所传offset为相对于文件起始点的64位文件内位移，数据源为存储卡文件对象，绝非机身物理内存(RAM)地址"
+    },
+    {
+      "opcode_hex": "0x9921",
+      "opcode_dec": -26335,
+      "enum_name": "LumixLutGetFileData",
+      "parameters": [
+        {
+          "name": "subcode",
+          "type": "uint32",
+          "description": "p183q6.o.GetLUTFile代码"
+        },
+        {
+          "name": "slotId",
+          "type": "uint8",
+          "description": "LUT存储卡槽/预设槽位索引"
+        }
+      ],
+      "data_direction": "In (Camera -> App)",
+      "callers": [
+        "A6/r.java::L"
+      ],
+      "semantics": "读取机身保存的LUT滤镜文件配置",
+      "is_physical_ram_read": false
+    },
+    {
+      "opcode_hex": "0x9931",
+      "opcode_dec": -26319,
+      "enum_name": "LumixSelectTransferGetInfoList",
+      "parameters": [
+        {
+          "name": "queryMode",
+          "type": "uint32",
+          "description": "查询模式"
+        },
+        {
+          "name": "slotId",
+          "type": "uint32",
+          "description": "卡槽ID"
+        }
+      ],
+      "data_direction": "In (Camera -> App)",
+      "callers": [
+        "A6/r.java::f0"
+      ],
+      "semantics": "获取机身选择传输队列列表",
+      "is_physical_ram_read": false
+    }
+  ],
+  "unconstructed_candidate_opcodes": [
+    {
+      "opcode_hex": "0x101B",
+      "enum_name": "GetPartialObject",
+      "status": "Enum-only (无任何构造与调用逻辑，纯标准枚举遗留)"
+    },
+    {
+      "opcode_hex": "0x9112",
+      "enum_name": "LumixGetPartialObject",
+      "status": "Enum-only (无任何构造与调用逻辑)"
+    },
+    {
+      "opcode_hex": "0x9421",
+      "enum_name": "LumixExportConfigFile",
+      "status": "Enum-only (无任何构造与调用逻辑)"
+    },
+    {
+      "opcode_hex": "0x9605",
+      "enum_name": "LumixGetFromEventInfo",
+      "status": "Enum-only (无任何构造与调用逻辑)"
+    }
+  ],
+  "container_mechanism_audit": {
+    "class": "p216t6.a",
+    "base_class": "p205s6.AbstractC2207j",
+    "fields": [
+      "f28154b: 容器总长度 (uint32, 12 + payload_len)",
+      "f28155c: 容器类型 (uint16, Command=1/Data=2/Response=3/Event=4)",
+      "f28156d: 操作代码 (uint16, 强类型受限于枚举 p183q6.A)",
+      "f28157e: 事务序号 (uint32)",
+      "f27770a: 参数与有效载荷缓冲区 (ByteBuffer, Little Endian)"
+    ],
+    "arbitrary_passthrough_evaluation": "封包构造仅针对特定enum封装固定格式字节流，未提供向机身下发任意物理内存读取命令的抽象机制"
+  }
+}

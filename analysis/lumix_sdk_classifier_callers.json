@@ -1,0 +1,657 @@
+{
+  "dll_executed": false,
+  "calls": [
+    {
+      "call_rva": "0x2c97",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0x2c5b",
+        "instruction": "mov ecx, 0x9402"
+      },
+      "context": [
+        "2c63 mov rbx, r8",
+        "2c66 mov qword ptr [rbp - 0x21], rax",
+        "2c6a mov r13d, r15d",
+        "2c6d mov word ptr [rbp - 0xd], ax",
+        "2c71 mov byte ptr [rbp - 0xb], al",
+        "2c74 mov eax, 0xffff9402",
+        "2c79 mov word ptr [rbp - 0x31], ax",
+        "2c7d mov dword ptr [rbp - 0x35], r15d",
+        "2c81 mov dword ptr [rbp - 0x39], r15d",
+        "2c85 mov qword ptr [rbp - 0x2f], r15",
+        "2c89 mov dword ptr [rbp - 0x13], 1",
+        "2c90 mov dword ptr [rbp - 0x27], 0x2000070",
+        "2c97 call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0x368d",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0x3650",
+        "instruction": "mov ecx, 0x9402"
+      },
+      "context": [
+        "365c mov dword ptr [rbp - 1], eax",
+        "365f mov qword ptr [rbp - 0x11], rax",
+        "3663 mov word ptr [rbp + 3], ax",
+        "3667 mov byte ptr [rbp + 5], al",
+        "366a mov eax, 0xffff9402",
+        "366f mov dword ptr [rbp - 0x17], edx",
+        "3672 lea rdx, [rbp - 0x29]",
+        "3676 mov word ptr [rbp - 0x21], ax",
+        "367a mov dword ptr [rbp - 0x25], r13d",
+        "367e mov dword ptr [rbp - 0x29], r13d",
+        "3682 mov qword ptr [rbp - 0x1f], r13",
+        "3686 mov dword ptr [rbp - 3], 1",
+        "368d call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0x488e",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0x4851",
+        "instruction": "mov ecx, 0x9402"
+      },
+      "context": [
+        "485d mov dword ptr [rbp - 1], eax",
+        "4860 mov qword ptr [rbp - 0x11], rax",
+        "4864 mov word ptr [rbp + 3], ax",
+        "4868 mov byte ptr [rbp + 5], al",
+        "486b mov eax, 0xffff9402",
+        "4870 mov dword ptr [rbp - 0x17], edx",
+        "4873 lea rdx, [rbp - 0x29]",
+        "4877 mov word ptr [rbp - 0x21], ax",
+        "487b mov dword ptr [rbp - 0x25], r13d",
+        "487f mov dword ptr [rbp - 0x29], r13d",
+        "4883 mov qword ptr [rbp - 0x1f], r13",
+        "4887 mov dword ptr [rbp - 3], 1",
+        "488e call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0x4c1d",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0x4c03",
+        "instruction": "mov ecx, 0x9102"
+      },
+      "context": [
+        "4bee mov edi, esi",
+        "4bf0 mov qword ptr [rbp - 0x19], rax",
+        "4bf4 mov word ptr [rbp - 5], ax",
+        "4bf8 mov byte ptr [rbp - 3], al",
+        "4bfb mov eax, 0xffff9102",
+        "4c00 mov dword ptr [rbp - 0x1f], ecx",
+        "4c03 mov ecx, 0x9102",
+        "4c08 mov word ptr [rbp - 0x29], ax",
+        "4c0c mov dword ptr [rbp - 0x35], esi",
+        "4c0f mov dword ptr [rbp - 0x39], esi",
+        "4c12 mov qword ptr [rbp - 0x27], rsi",
+        "4c16 mov dword ptr [rbp - 0xb], 1",
+        "4c1d call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0x4e8d",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0x4e5e",
+        "instruction": "mov ecx, 0x9103"
+      },
+      "context": [
+        "4e63 mov qword ptr [rbp + 7], rax",
+        "4e67 mov edi, ebx",
+        "4e69 mov dword ptr [rbp + 0xf], eax",
+        "4e6c mov qword ptr [rbp - 1], rax",
+        "4e70 mov word ptr [rbp + 0x13], ax",
+        "4e74 mov byte ptr [rbp + 0x15], al",
+        "4e77 mov eax, 0xffff9103",
+        "4e7c mov word ptr [rbp - 0x11], ax",
+        "4e80 mov dword ptr [rbp - 0x15], ebx",
+        "4e83 mov dword ptr [rbp - 0x19], ebx",
+        "4e86 mov qword ptr [rbp - 0xf], rbx",
+        "4e8a mov dword ptr [rbp + 0xd], ebx",
+        "4e8d call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0x649d",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0x6460",
+        "instruction": "mov ecx, 0x9402"
+      },
+      "context": [
+        "646c mov dword ptr [rbp - 1], eax",
+        "646f mov qword ptr [rbp - 0x11], rax",
+        "6473 mov word ptr [rbp + 3], ax",
+        "6477 mov byte ptr [rbp + 5], al",
+        "647a mov eax, 0xffff9402",
+        "647f mov dword ptr [rbp - 0x17], edx",
+        "6482 lea rdx, [rbp - 0x29]",
+        "6486 mov word ptr [rbp - 0x21], ax",
+        "648a mov dword ptr [rbp - 0x25], r13d",
+        "648e mov dword ptr [rbp - 0x29], r13d",
+        "6492 mov qword ptr [rbp - 0x1f], r13",
+        "6496 mov dword ptr [rbp - 3], 1",
+        "649d call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0x6e1c",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0x6dea",
+        "instruction": "mov ecx, 0x9402"
+      },
+      "context": [
+        "6dea mov ecx, 0x9402",
+        "6def mov qword ptr [rbp - 0x19], rax",
+        "6df3 mov qword ptr [rbp - 9], rax",
+        "6df7 mov dword ptr [rbp - 1], eax",
+        "6dfa mov qword ptr [rbp - 0x11], rax",
+        "6dfe mov word ptr [rbp + 3], ax",
+        "6e02 mov byte ptr [rbp + 5], al",
+        "6e05 mov eax, 0xffff9402",
+        "6e0a mov word ptr [rbp - 0x21], ax",
+        "6e0e mov qword ptr [rbp - 0x1f], r13",
+        "6e12 mov dword ptr [rbp - 3], 1",
+        "6e19 mov dword ptr [rbp - 0x17], ebx",
+        "6e1c call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0x732e",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0x72f1",
+        "instruction": "mov ecx, 0x9414"
+      },
+      "context": [
+        "72fd mov dword ptr [rbp - 1], eax",
+        "7300 mov qword ptr [rbp - 0x11], rax",
+        "7304 mov word ptr [rbp + 3], ax",
+        "7308 mov byte ptr [rbp + 5], al",
+        "730b mov eax, 0xffff9414",
+        "7310 mov dword ptr [rbp - 0x17], edx",
+        "7313 lea rdx, [rbp - 0x29]",
+        "7317 mov word ptr [rbp - 0x21], ax",
+        "731b mov dword ptr [rbp - 0x25], r13d",
+        "731f mov dword ptr [rbp - 0x29], r13d",
+        "7323 mov qword ptr [rbp - 0x1f], r13",
+        "7327 mov dword ptr [rbp - 3], 1",
+        "732e call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0x8553",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0x851a",
+        "instruction": "mov ecx, 0x9408"
+      },
+      "context": [
+        "851f mov dword ptr [rbp - 1], eax",
+        "8522 mov r14d, r13d",
+        "8525 mov qword ptr [rbp - 0x11], rax",
+        "8529 mov word ptr [rbp + 3], ax",
+        "852d mov byte ptr [rbp + 5], al",
+        "8530 mov eax, 0xffff9408",
+        "8535 mov word ptr [rbp - 0x21], ax",
+        "8539 mov dword ptr [rbp - 0x25], r13d",
+        "853d mov dword ptr [rbp - 0x29], r13d",
+        "8541 mov qword ptr [rbp - 0x1f], r13",
+        "8545 mov dword ptr [rbp - 3], 1",
+        "854c mov dword ptr [rbp - 0x17], 0x6000010",
+        "8553 call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0x8ffb",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0x8fc5",
+        "instruction": "mov ecx, 0x9416"
+      },
+      "context": [
+        "8fca mov qword ptr [rbp + 7], rax",
+        "8fce mov qword ptr [rbp + 0x17], rax",
+        "8fd2 mov dword ptr [rbp + 0x1f], eax",
+        "8fd5 mov qword ptr [rbp + 0xf], rax",
+        "8fd9 mov word ptr [rbp + 0x23], ax",
+        "8fdd mov byte ptr [rbp + 0x25], al",
+        "8fe0 mov eax, 0xffff9416",
+        "8fe5 mov dword ptr [rbp + 9], edx",
+        "8fe8 lea rdx, [rbp - 0x29]",
+        "8fec mov word ptr [rbp - 1], ax",
+        "8ff0 mov qword ptr [rbp + 1], r13",
+        "8ff4 mov dword ptr [rbp + 0x1d], 1",
+        "8ffb call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0x95ac",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0x957d",
+        "instruction": "mov ecx, 0x940b"
+      },
+      "context": [
+        "957d mov ecx, 0x940b",
+        "9582 mov qword ptr [rbp - 0x11], rax",
+        "9586 mov ebx, edi",
+        "9588 mov word ptr [rbp + 3], ax",
+        "958c mov byte ptr [rbp + 5], al",
+        "958f mov eax, 0xffff940b",
+        "9594 mov word ptr [rbp - 0x21], ax",
+        "9598 mov dword ptr [rbp - 0x25], edi",
+        "959b mov dword ptr [rbp - 0x29], edi",
+        "959e mov qword ptr [rbp - 0x1f], rdi",
+        "95a2 mov dword ptr [rbp - 3], 1",
+        "95a9 mov dword ptr [rbp - 0x17], edi",
+        "95ac call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0x9751",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0x9718",
+        "instruction": "mov ecx, 0x940a"
+      },
+      "context": [
+        "971d mov dword ptr [rbp - 1], eax",
+        "9720 mov esi, r13d",
+        "9723 mov qword ptr [rbp - 0x11], rax",
+        "9727 mov word ptr [rbp + 3], ax",
+        "972b mov byte ptr [rbp + 5], al",
+        "972e mov eax, 0xffff940a",
+        "9733 mov word ptr [rbp - 0x21], ax",
+        "9737 mov dword ptr [rbp - 0x25], r13d",
+        "973b mov dword ptr [rbp - 0x29], r13d",
+        "973f mov qword ptr [rbp - 0x1f], r13",
+        "9743 mov dword ptr [rbp - 3], 1",
+        "974a mov dword ptr [rbp - 0x17], 0x8000090",
+        "9751 call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xa08d",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xa05b",
+        "instruction": "mov ecx, 0x9402"
+      },
+      "context": [
+        "a05b mov ecx, 0x9402",
+        "a060 mov qword ptr [rbp - 0x19], rax",
+        "a064 mov qword ptr [rbp - 9], rax",
+        "a068 mov dword ptr [rbp - 1], eax",
+        "a06b mov qword ptr [rbp - 0x11], rax",
+        "a06f mov word ptr [rbp + 3], ax",
+        "a073 mov byte ptr [rbp + 5], al",
+        "a076 mov eax, 0xffff9402",
+        "a07b mov word ptr [rbp - 0x21], ax",
+        "a07f mov qword ptr [rbp - 0x1f], r13",
+        "a083 mov dword ptr [rbp - 3], 1",
+        "a08a mov dword ptr [rbp - 0x17], ebx",
+        "a08d call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xa7da",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xa7c3",
+        "instruction": "mov ecx, 0x9107"
+      },
+      "context": [
+        "a7a8 mov qword ptr [rbp - 0x29], rcx",
+        "a7ac mov qword ptr [rbp - 0x21], rcx",
+        "a7b0 mov dword ptr [rbp - 0x19], ecx",
+        "a7b3 mov word ptr [rbp - 0x15], cx",
+        "a7b7 mov byte ptr [rbp - 0x13], cl",
+        "a7ba mov ecx, 0xffff9107",
+        "a7bf mov word ptr [rbp - 0x39], cx",
+        "a7c3 mov ecx, 0x9107",
+        "a7c8 mov qword ptr [rbp - 0x37], r14",
+        "a7cc mov dword ptr [rbp - 0x1b], 3",
+        "a7d3 mov dword ptr [rbp - 0x2f], eax",
+        "a7d6 mov qword ptr [rbp - 0x2b], r14",
+        "a7da call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xaa0c",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xa9f4",
+        "instruction": "mov ecx, 0x9108"
+      },
+      "context": [
+        "a9da mov qword ptr [rbp - 0x21], rax",
+        "a9de mov qword ptr [rbp - 0x19], rax",
+        "a9e2 mov dword ptr [rbp - 0x11], eax",
+        "a9e5 mov word ptr [rbp - 0xd], ax",
+        "a9e9 mov byte ptr [rbp - 0xb], al",
+        "a9ec mov eax, 0xffff9108",
+        "a9f1 mov dword ptr [rbp - 0x27], ecx",
+        "a9f4 mov ecx, 0x9108",
+        "a9f9 mov word ptr [rbp - 0x31], ax",
+        "a9fd mov qword ptr [rbp - 0x2f], rsi",
+        "aa01 mov dword ptr [rbp - 0x13], 3",
+        "aa08 mov qword ptr [rbp - 0x23], rsi",
+        "aa0c call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xad42",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xad09",
+        "instruction": "mov ecx, 0x9414"
+      },
+      "context": [
+        "ad0e mov dword ptr [rbp - 1], eax",
+        "ad11 mov ebx, r13d",
+        "ad14 mov qword ptr [rbp - 0x11], rax",
+        "ad18 mov word ptr [rbp + 3], ax",
+        "ad1c mov byte ptr [rbp + 5], al",
+        "ad1f mov eax, 0xffff9414",
+        "ad24 mov word ptr [rbp - 0x21], ax",
+        "ad28 mov dword ptr [rbp - 0x25], r13d",
+        "ad2c mov dword ptr [rbp - 0x29], r13d",
+        "ad30 mov qword ptr [rbp - 0x1f], r13",
+        "ad34 mov dword ptr [rbp - 3], 1",
+        "ad3b mov dword ptr [rbp - 0x17], 0x2000055",
+        "ad42 call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xbbe2",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xbba9",
+        "instruction": "mov ecx, 0x9402"
+      },
+      "context": [
+        "bbae mov dword ptr [rbp - 1], eax",
+        "bbb1 mov r12d, r13d",
+        "bbb4 mov qword ptr [rbp - 0x11], rax",
+        "bbb8 mov word ptr [rbp + 3], ax",
+        "bbbc mov byte ptr [rbp + 5], al",
+        "bbbf mov eax, 0xffff9402",
+        "bbc4 mov word ptr [rbp - 0x21], ax",
+        "bbc8 mov dword ptr [rbp - 0x25], r13d",
+        "bbcc mov dword ptr [rbp - 0x29], r13d",
+        "bbd0 mov qword ptr [rbp - 0x1f], r13",
+        "bbd4 mov dword ptr [rbp - 3], 1",
+        "bbdb mov dword ptr [rbp - 0x17], 0x2000050",
+        "bbe2 call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xc51a",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xc504",
+        "instruction": "mov ecx, 0x9110"
+      },
+      "context": [
+        "c4e1 mov qword ptr [rsp + 0x60], rax",
+        "c4e6 mov dword ptr [rsp + 0x68], eax",
+        "c4ea mov qword ptr [rsp + 0x58], rax",
+        "c4ef mov word ptr [rsp + 0x6c], ax",
+        "c4f4 mov byte ptr [rsp + 0x6e], al",
+        "c4f8 mov eax, 0xffff9110",
+        "c4fd mov word ptr [rsp + 0x48], ax",
+        "c502 mov eax, dword ptr [rcx]",
+        "c504 mov ecx, 0x9110",
+        "c509 mov qword ptr [rsp + 0x4a], rbx",
+        "c50e mov dword ptr [rsp + 0x66], 1",
+        "c516 mov dword ptr [rsp + 0x52], eax",
+        "c51a call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xc8cc",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xc8aa",
+        "instruction": "mov ecx, 0x9112"
+      },
+      "context": [
+        "c89b mov byte ptr [rbp + 5], al",
+        "c89e mov eax, 0xffff9112",
+        "c8a3 shr r8, 0x20",
+        "c8a7 mov dword ptr [rbp - 0x17], ecx",
+        "c8aa mov ecx, 0x9112",
+        "c8af mov dword ptr [rbp - 0xf], r8d",
+        "c8b3 mov dword ptr [rbp - 0x25], edi",
+        "c8b6 mov dword ptr [rbp - 0x29], edi",
+        "c8b9 mov word ptr [rbp - 0x21], ax",
+        "c8bd mov qword ptr [rbp - 0x1f], rdi",
+        "c8c1 mov dword ptr [rbp - 3], 4",
+        "c8c8 mov dword ptr [rbp - 0xb], r9d",
+        "c8cc call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xca5f",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xca43",
+        "instruction": "mov ecx, 0x9113"
+      },
+      "context": [
+        "ca2d mov dword ptr [rbp + 0x1f], eax",
+        "ca30 mov qword ptr [rbp + 0xf], rax",
+        "ca34 mov word ptr [rbp + 0x23], ax",
+        "ca38 mov byte ptr [rbp + 0x25], al",
+        "ca3b mov eax, 0xffff9113",
+        "ca40 mov dword ptr [rbp + 9], ecx",
+        "ca43 mov ecx, 0x9113",
+        "ca48 mov word ptr [rbp - 1], ax",
+        "ca4c mov dword ptr [rbp - 5], r14d",
+        "ca50 mov dword ptr [rbp - 9], r14d",
+        "ca54 mov qword ptr [rbp + 1], r14",
+        "ca58 mov dword ptr [rbp + 0x1d], 1",
+        "ca5f call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xccdd",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xccaf",
+        "instruction": "mov ecx, 0x1009"
+      },
+      "context": [
+        "ccaf mov ecx, 0x1009",
+        "ccb4 mov qword ptr [rbp - 0x21], rax",
+        "ccb8 mov ebx, edi",
+        "ccba mov word ptr [rbp - 0xd], ax",
+        "ccbe mov byte ptr [rbp - 0xb], al",
+        "ccc1 mov eax, dword ptr [r12]",
+        "ccc5 mov dword ptr [rbp - 0x27], eax",
+        "ccc8 mov dword ptr [rbp - 0x35], edi",
+        "cccb mov dword ptr [rbp - 0x39], edi",
+        "ccce mov word ptr [rbp - 0x31], cx",
+        "ccd2 mov qword ptr [rbp - 0x2f], rdi",
+        "ccd6 mov dword ptr [rbp - 0x13], 1",
+        "ccdd call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xcea1",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xce82",
+        "instruction": "mov ecx, eax"
+      },
+      "context": [
+        "ce73 mov word ptr [rbp + 3], ax",
+        "ce77 mov byte ptr [rbp + 5], al",
+        "ce7a mov eax, 0x101b",
+        "ce7f mov dword ptr [rbp - 0x17], ecx",
+        "ce82 mov ecx, eax",
+        "ce84 mov dword ptr [rbp - 0x25], edi",
+        "ce87 mov dword ptr [rbp - 0x29], edi",
+        "ce8a mov word ptr [rbp - 0x21], ax",
+        "ce8e mov qword ptr [rbp - 0x1f], rdi",
+        "ce92 mov dword ptr [rbp - 3], 3",
+        "ce99 mov dword ptr [rbp - 0x13], r8d",
+        "ce9d mov dword ptr [rbp - 0xf], r9d",
+        "cea1 call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xd054",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xd022",
+        "instruction": "mov ecx, 0x9403"
+      },
+      "context": [
+        "d022 mov ecx, 0x9403",
+        "d027 mov qword ptr [rbp - 0x19], rax",
+        "d02b mov qword ptr [rbp - 9], rax",
+        "d02f mov dword ptr [rbp - 1], eax",
+        "d032 mov qword ptr [rbp - 0x11], rax",
+        "d036 mov word ptr [rbp + 3], ax",
+        "d03a mov byte ptr [rbp + 5], al",
+        "d03d mov eax, 0xffff9403",
+        "d042 mov word ptr [rbp - 0x21], ax",
+        "d046 mov qword ptr [rbp - 0x1f], r12",
+        "d04a mov dword ptr [rbp - 3], 1",
+        "d051 mov dword ptr [rbp - 0x17], ebx",
+        "d054 call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xd212",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xd1df",
+        "instruction": "mov ecx, 0x9409"
+      },
+      "context": [
+        "d1df mov ecx, 0x9409",
+        "d1e4 mov qword ptr [rbp - 0x11], rax",
+        "d1e8 mov ebx, r12d",
+        "d1eb mov word ptr [rbp + 3], ax",
+        "d1ef mov byte ptr [rbp + 5], al",
+        "d1f2 mov eax, 0xffff9409",
+        "d1f7 mov word ptr [rbp - 0x21], ax",
+        "d1fb mov dword ptr [rbp - 0x25], r12d",
+        "d1ff mov dword ptr [rbp - 0x29], r12d",
+        "d203 mov qword ptr [rbp - 0x1f], r12",
+        "d207 mov dword ptr [rbp - 3], 1",
+        "d20e mov dword ptr [rbp - 0x17], r8d",
+        "d212 call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xd3d5",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xd39f",
+        "instruction": "mov ecx, 0x9415"
+      },
+      "context": [
+        "d39f mov ecx, 0x9415",
+        "d3a4 mov qword ptr [rbp - 0x11], rax",
+        "d3a8 mov ebx, r12d",
+        "d3ab mov word ptr [rbp + 3], ax",
+        "d3af mov byte ptr [rbp + 5], al",
+        "d3b2 mov eax, 0xffff9415",
+        "d3b7 mov word ptr [rbp - 0x21], ax",
+        "d3bb mov dword ptr [rbp - 0x25], r12d",
+        "d3bf mov dword ptr [rbp - 0x29], r12d",
+        "d3c3 mov qword ptr [rbp - 0x1f], r12",
+        "d3c7 mov dword ptr [rbp - 3], 1",
+        "d3ce mov dword ptr [rbp - 0x17], 0xd800011",
+        "d3d5 call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xd5ae",
+      "nearest_ecx_assignment_since_last_call": null,
+      "context": [
+        "d583 test cx, cx",
+        "d586 je 0x18000d5a6",
+        "d588 cmp bx, cx",
+        "d58b jae 0x18000d5a6",
+        "d58d mov r8d, ecx",
+        "d590 add rdx, 8",
+        "d594 shl r8, 2",
+        "d598 lea rcx, [rbp - 0x13]",
+        "d59c call 0x18001ccf8",
+        "d5a1 movzx r8d, word ptr [rbp - 0x21]",
+        "d5a6 lea rdx, [rbp - 0x29]",
+        "d5aa movzx ecx, r8w",
+        "d5ae call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xd7f7",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xd7ce",
+        "instruction": "mov ecx, 0x9706"
+      },
+      "context": [
+        "d7c1 mov qword ptr [rbp - 0x70], rdx",
+        "d7c5 lea rdx, [rsp + 0x44]",
+        "d7ca mov qword ptr [rbp - 0x78], rcx",
+        "d7ce mov ecx, 0x9706",
+        "d7d3 mov word ptr [rbp - 0x48], ax",
+        "d7d7 mov qword ptr [rsp + 0x48], r9",
+        "d7dc mov qword ptr [rsp + 0x70], r8",
+        "d7e1 mov dword ptr [rsp + 0x40], r12d",
+        "d7e6 mov dword ptr [rsp + 0x44], r12d",
+        "d7eb mov qword ptr [rbp - 0x46], r12",
+        "d7ef mov dword ptr [rbp - 0x2a], r12d",
+        "d7f3 mov dword ptr [rbp - 0x3e], r12d",
+        "d7f7 call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xdcbc",
+      "nearest_ecx_assignment_since_last_call": {
+        "rva": "0xdc8d",
+        "instruction": "mov ecx, 0x9403"
+      },
+      "context": [
+        "dc8d mov ecx, 0x9403",
+        "dc92 mov qword ptr [rbp - 0x11], rax",
+        "dc96 mov ebx, edi",
+        "dc98 mov word ptr [rbp + 3], ax",
+        "dc9c mov byte ptr [rbp + 5], al",
+        "dc9f mov eax, 0xffff9403",
+        "dca4 mov word ptr [rbp - 0x21], ax",
+        "dca8 mov dword ptr [rbp - 0x25], edi",
+        "dcab mov dword ptr [rbp - 0x29], edi",
+        "dcae mov qword ptr [rbp - 0x1f], rdi",
+        "dcb2 mov dword ptr [rbp - 3], 1",
+        "dcb9 mov dword ptr [rbp - 0x17], edi",
+        "dcbc call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xde71",
+      "nearest_ecx_assignment_since_last_call": null,
+      "context": [
+        "de44 mov dword ptr [rbp - 0x15], edi",
+        "de47 mov dword ptr [rbp - 0x19], edi",
+        "de4a mov word ptr [rbp - 0x11], cx",
+        "de4e mov qword ptr [rbp - 0xf], rdi",
+        "de52 cmp di, r8w",
+        "de56 jae 0x18000de6d",
+        "de58 add rdx, 8",
+        "de5c shl r8, 2",
+        "de60 lea rcx, [rbp - 3]",
+        "de64 call 0x18001ccf8",
+        "de69 movzx ecx, word ptr [rbp - 0x11]",
+        "de6d lea rdx, [rbp - 0x19]",
+        "de71 call 0x18000c280"
+      ]
+    },
+    {
+      "call_rva": "0xe031",
+      "nearest_ecx_assignment_since_last_call": null,
+      "context": [
+        "e004 mov dword ptr [rbp - 0x15], edi",
+        "e007 mov dword ptr [rbp - 0x19], edi",
+        "e00a mov word ptr [rbp - 0x11], cx",
+        "e00e mov qword ptr [rbp - 0xf], rdi",
+        "e012 cmp di, r8w",
+        "e016 jae 0x18000e02d",
+        "e018 add rdx, 8",
+        "e01c shl r8, 2",
+        "e020 lea rcx, [rbp - 3]",
+        "e024 call 0x18001ccf8",
+        "e029 movzx ecx, word ptr [rbp - 0x11]",
+        "e02d lea rdx, [rbp - 0x19]",
+        "e031 call 0x18000c280"
+      ]
+    }
+  ],
+  "limits": "Linear decode and local backward window, not complete control/data flow; absent assignment is unresolved, not proof of absent call."
+}

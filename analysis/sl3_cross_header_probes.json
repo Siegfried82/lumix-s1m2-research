@@ -1,0 +1,43 @@
+{
+  "hypothesis": "Fixed-key CBC of raw all-FF candidates; AES and inverse-AES primitives.",
+  "key_sources": "SL3 and S1M2 header/directory literals at all byte offsets; XOR FF variants; field MD5/SHA256.",
+  "s1m2_pool": "Only novel SL3 candidates, excluding already tested S1M2 header candidates.",
+  "sl3_pool": "Union of both products header candidates.",
+  "iv_guessed": false,
+  "device_access_performed": false,
+  "results": [
+    {
+      "product": "S1M2",
+      "component": "postboot2_r",
+      "input_sha256": "c965df4a17b25f35e1ce6544e4a75cb4c0fc60d6e112493ccd30fd5a7b1f7f39",
+      "candidate_keys": 26186,
+      "primitive_trials": 52372,
+      "matches": []
+    },
+    {
+      "product": "S1M2",
+      "component": "postboot4_r",
+      "input_sha256": "7e906a40f15d4f7a51db7cece8bf7928f98def136d68a81a35c2cee7e28ef235",
+      "candidate_keys": 26186,
+      "primitive_trials": 52372,
+      "matches": []
+    },
+    {
+      "product": "SL3",
+      "component": "postboot2_r",
+      "input_sha256": "39b57e7131d59af8c4a5309543db0c419c98c6f369823f18ee5c1f185d5454f2",
+      "candidate_keys": 59276,
+      "primitive_trials": 118552,
+      "matches": []
+    },
+    {
+      "product": "SL3",
+      "component": "postboot4_r",
+      "input_sha256": "66dcb1fb78446d9f2cae82558f3efe57cb47ee2ef379941b1a8ce7181896ff49",
+      "candidate_keys": 59276,
+      "primitive_trials": 118552,
+      "matches": []
+    }
+  ],
+  "limits": "All-FF decoded contents remain a hash-based hypothesis. Negative results exclude only the tested fixed keys and CBC constructions, not AES, private key derivation, changing keys, compression or other encoding."
+}

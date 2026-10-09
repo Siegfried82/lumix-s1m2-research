@@ -1,0 +1,67 @@
+[
+  {
+    "purpose" : "allowlisted_read_inventory",
+    "read_count" : 3,
+    "event" : "started",
+    "time_utc" : "2026-10-08T18:27:11Z"
+  },
+  {
+    "event" : "device_found",
+    "model" : "DC-S1M2",
+    "time_utc" : "2026-10-08T18:27:11Z"
+  },
+  {
+    "event" : "session_opened",
+    "time_utc" : "2026-10-08T18:27:11Z"
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554902
+    ],
+    "data_bytes" : 24,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:27:11Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020001d6",
+    "index" : 0
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554904
+    ],
+    "data_bytes" : 0,
+    "ok" : 0,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:27:11Z",
+    "transport_ok" : true,
+    "response_code" : "0x2002",
+    "error" : "",
+    "name" : "current_020001d8",
+    "index" : 1
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554896
+    ],
+    "data_bytes" : 459,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:27:11Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020001d0",
+    "index" : 2
+  },
+  {
+    "event" : "session_closed",
+    "error" : "",
+    "time_utc" : "2026-10-08T18:27:11Z"
+  }
+]

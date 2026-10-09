@@ -1,0 +1,308 @@
+{
+  "normalization": "Compare ARM64 maintenance functions without executing vendor software.\n\nLocal branch destinations become instruction indices, symbol-stub addresses\nbecome their annotated symbols. Literal loads retain their annotation; only\nrelocation operands are replaced. Unresolved differences remain visible.\n",
+  "sources": [
+    {
+      "file": "<REPLAY_WORKSPACE>/analysis/tether_aw_ptp_arm64_disassembly.txt",
+      "sha256": "dc06089140d81dedaa089781803d265fa78eafd709453daf2f746f870b035eab"
+    },
+    {
+      "file": "<REPLAY_WORKSPACE>/analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "sha256": "f0beab04bef63508de6492cf263f62199548bda97911ab5852b371474537af1d"
+    }
+  ],
+  "results": [
+    {
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_Mnt_Ctrl_LiveViewjP24_tag_LMX_STRUCT_MNT_CTRLPc",
+      "aw_line": 55925,
+      "standard_line": 60517,
+      "aw_instructions": 96,
+      "standard_instructions": 96,
+      "normalized_equal": true,
+      "differences": []
+    },
+    {
+      "symbol": "__Z39Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamDataPhPjPcS0_",
+      "aw_line": 56022,
+      "standard_line": 60614,
+      "aw_instructions": 117,
+      "standard_instructions": 117,
+      "normalized_equal": true,
+      "differences": []
+    },
+    {
+      "symbol": "__Z40Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamData2PhPjP38_tag_LMX_STRUCT_LIVEVIEW_INFO_HISTGRAMS0_P37_tag_LMX_STRUCT_LIVEVIEW_INFO_POSTURES0_P35_tag_LMX_STRUCT_LIVEVIEW_INFO_LEVELS0_PcS0_",
+      "aw_line": 56170,
+      "standard_line": 60762,
+      "aw_instructions": 294,
+      "standard_instructions": 294,
+      "normalized_equal": false,
+      "differences": [
+        {
+          "instruction": 16,
+          "aw": "nop",
+          "standard": "adrp\tx8, RELOC_PAGE"
+        },
+        {
+          "instruction": 17,
+          "aw": "ldr\tx8, RELOC_OFFSET ; literal pool symbol address: ___stack_chk_guard",
+          "standard": "ldr\tx8, [x8, RELOC_OFFSET] ; literal pool symbol address: ___stack_chk_guard"
+        },
+        {
+          "instruction": 108,
+          "aw": "adr\tx19, #261260",
+          "standard": "adrp\tx19, 404 ; 0x1d0000"
+        },
+        {
+          "instruction": 109,
+          "aw": "nop",
+          "standard": "add\tx19, x19, #0x930"
+        },
+        {
+          "instruction": 238,
+          "aw": "nop",
+          "standard": "adrp\tx9, RELOC_PAGE"
+        },
+        {
+          "instruction": 239,
+          "aw": "ldr\tx9, RELOC_OFFSET ; literal pool symbol address: ___stack_chk_guard",
+          "standard": "ldr\tx9, [x9, RELOC_OFFSET] ; literal pool symbol address: ___stack_chk_guard"
+        }
+      ]
+    },
+    {
+      "symbol": "__Z44Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamFrameDataPhPjPcS0_",
+      "aw_line": 56465,
+      "standard_line": 61057,
+      "aw_instructions": 117,
+      "standard_instructions": 117,
+      "normalized_equal": true,
+      "differences": []
+    },
+    {
+      "symbol": "__Z31Lmx_lib_ptpif_LmxExt_SetMntInfoPhjPc",
+      "aw_line": 57653,
+      "standard_line": 62245,
+      "aw_instructions": 90,
+      "standard_instructions": 90,
+      "normalized_equal": true,
+      "differences": []
+    },
+    {
+      "symbol": "__Z28LMX_func_api_Mnt_Set_UsbModejPcPj",
+      "aw_line": 61066,
+      "standard_line": 66164,
+      "aw_instructions": 38,
+      "standard_instructions": 38,
+      "normalized_equal": false,
+      "differences": [
+        {
+          "instruction": 10,
+          "aw": "adr\tx21, #284729 ; literal pool for: \"LMX_func_api_Mnt_Set_UsbMode\"",
+          "standard": "adrp\tx21, RELOC_PAGE"
+        },
+        {
+          "instruction": 11,
+          "aw": "nop",
+          "standard": "add\tx21, x21, RELOC_OFFSET ; literal pool for: \"LMX_func_api_Mnt_Set_UsbMode\""
+        },
+        {
+          "instruction": 13,
+          "aw": "adr\tx0, #248989 ; literal pool for: \"Enter %s \\015\\n\"",
+          "standard": "adrp\tx0, RELOC_PAGE"
+        },
+        {
+          "instruction": 14,
+          "aw": "nop",
+          "standard": "add\tx0, x0, RELOC_OFFSET ; literal pool for: \"Enter %s \\015\\n\""
+        },
+        {
+          "instruction": 16,
+          "aw": "nop",
+          "standard": "adrp\tx8, 398 ; 0x1d0000"
+        },
+        {
+          "instruction": 17,
+          "aw": "ldr\td0, 0x78bb8",
+          "standard": "ldr\td0, [x8, #0x9a0]"
+        },
+        {
+          "instruction": 29,
+          "aw": "adr\tx0, #250921 ; literal pool for: \"Exit %s bRet:%d \\015\\n\"",
+          "standard": "adrp\tx0, RELOC_PAGE"
+        },
+        {
+          "instruction": 30,
+          "aw": "nop",
+          "standard": "add\tx0, x0, RELOC_OFFSET ; literal pool for: \"Exit %s bRet:%d \\015\\n\""
+        }
+      ]
+    },
+    {
+      "symbol": "__Z23LMX_func_api_SetMntInfoP28_tag_LMX_STRUCT_MNT_SET_INFOjPc",
+      "aw_line": 61105,
+      "standard_line": 66203,
+      "aw_instructions": 48,
+      "standard_instructions": 48,
+      "normalized_equal": true,
+      "differences": []
+    },
+    {
+      "symbol": "__Z30LMX_func_api_Mnt_Ctrl_LiveViewP24_tag_LMX_STRUCT_MNT_CTRLPcPj",
+      "aw_line": 68278,
+      "standard_line": 73647,
+      "aw_instructions": 39,
+      "standard_instructions": 39,
+      "normalized_equal": false,
+      "differences": [
+        {
+          "instruction": 11,
+          "aw": "adr\tx22, #262155 ; literal pool for: \"LMX_func_api_Mnt_Ctrl_LiveView\"",
+          "standard": "adrp\tx22, RELOC_PAGE"
+        },
+        {
+          "instruction": 12,
+          "aw": "nop",
+          "standard": "add\tx22, x22, RELOC_OFFSET ; literal pool for: \"LMX_func_api_Mnt_Ctrl_LiveView\""
+        },
+        {
+          "instruction": 14,
+          "aw": "adr\tx0, #220653 ; literal pool for: \"Enter %s \\015\\n\"",
+          "standard": "adrp\tx0, RELOC_PAGE"
+        },
+        {
+          "instruction": 15,
+          "aw": "nop",
+          "standard": "add\tx0, x0, RELOC_OFFSET ; literal pool for: \"Enter %s \\015\\n\""
+        },
+        {
+          "instruction": 30,
+          "aw": "adr\tx0, #222585 ; literal pool for: \"Exit %s bRet:%d \\015\\n\"",
+          "standard": "adrp\tx0, RELOC_PAGE"
+        },
+        {
+          "instruction": 31,
+          "aw": "nop",
+          "standard": "add\tx0, x0, RELOC_OFFSET ; literal pool for: \"Exit %s bRet:%d \\015\\n\""
+        }
+      ]
+    },
+    {
+      "symbol": "__Z34LMX_func_api_Mnt_Get_LiveView_dataPhPjPcS0_",
+      "aw_line": 68318,
+      "standard_line": 73687,
+      "aw_instructions": 48,
+      "standard_instructions": 48,
+      "normalized_equal": false,
+      "differences": [
+        {
+          "instruction": 13,
+          "aw": "adr\tx23, #262022 ; literal pool for: \"LMX_func_api_Mnt_Get_LiveView_data\"",
+          "standard": "adrp\tx23, RELOC_PAGE"
+        },
+        {
+          "instruction": 14,
+          "aw": "nop",
+          "standard": "add\tx23, x23, RELOC_OFFSET ; literal pool for: \"LMX_func_api_Mnt_Get_LiveView_data\""
+        },
+        {
+          "instruction": 16,
+          "aw": "adr\tx0, #220489 ; literal pool for: \"Enter %s \\015\\n\"",
+          "standard": "adrp\tx0, RELOC_PAGE"
+        },
+        {
+          "instruction": 17,
+          "aw": "nop",
+          "standard": "add\tx0, x0, RELOC_OFFSET ; literal pool for: \"Enter %s \\015\\n\""
+        },
+        {
+          "instruction": 27,
+          "aw": "adr\tx8, #262020 ; literal pool for: \"LiveView Other Error!! \\015\\n\"",
+          "standard": "adrp\tx8, RELOC_PAGE"
+        },
+        {
+          "instruction": 28,
+          "aw": "nop",
+          "standard": "add\tx8, x8, RELOC_OFFSET ; literal pool for: \"LiveView Other Error!! \\015\\n\""
+        },
+        {
+          "instruction": 30,
+          "aw": "adr\tx10, #261989 ; literal pool for: \"LiveView BUSY!! \\015\\n\"",
+          "standard": "adrp\tx10, RELOC_PAGE"
+        },
+        {
+          "instruction": 31,
+          "aw": "nop",
+          "standard": "add\tx10, x10, RELOC_OFFSET ; literal pool for: \"LiveView BUSY!! \\015\\n\""
+        },
+        {
+          "instruction": 38,
+          "aw": "adr\tx0, #222397 ; literal pool for: \"Exit %s bRet:%d \\015\\n\"",
+          "standard": "adrp\tx0, RELOC_PAGE"
+        },
+        {
+          "instruction": 39,
+          "aw": "nop",
+          "standard": "add\tx0, x0, RELOC_OFFSET ; literal pool for: \"Exit %s bRet:%d \\015\\n\""
+        }
+      ]
+    },
+    {
+      "symbol": "__Z36LMX_func_api_Mnt_GetInfo_Get_VersionPjS_PcS_",
+      "aw_line": 69771,
+      "standard_line": 75144,
+      "aw_instructions": 57,
+      "standard_instructions": 57,
+      "normalized_equal": false,
+      "differences": [
+        {
+          "instruction": 18,
+          "aw": "adr\tx0, #257382 ; literal pool for: \"Enter LMX_func_api_Mnt_GetInfo_Get_Version\\015\\n\"",
+          "standard": "adrp\tx0, RELOC_PAGE"
+        },
+        {
+          "instruction": 19,
+          "aw": "nop",
+          "standard": "add\tx0, x0, RELOC_OFFSET ; literal pool for: \"Enter LMX_func_api_Mnt_GetInfo_Get_Version\\015\\n\""
+        },
+        {
+          "instruction": 40,
+          "aw": "adr\tx0, #257339 ; literal pool for: \"Exit LMX_func_api_Mnt_GetInfo_Get_Version\\015\\n\"",
+          "standard": "adrp\tx0, RELOC_PAGE"
+        },
+        {
+          "instruction": 41,
+          "aw": "nop",
+          "standard": "add\tx0, x0, RELOC_OFFSET ; literal pool for: \"Exit LMX_func_api_Mnt_GetInfo_Get_Version\\015\\n\""
+        },
+        {
+          "instruction": 47,
+          "aw": "adr\tx0, #257355 ; literal pool for: \"Exit ERROR LMX_func_api_Mnt_GetInfo_Get_Version\\015\\n\"",
+          "standard": "adrp\tx0, RELOC_PAGE"
+        },
+        {
+          "instruction": 48,
+          "aw": "nop",
+          "standard": "add\tx0, x0, RELOC_OFFSET ; literal pool for: \"Exit ERROR LMX_func_api_Mnt_GetInfo_Get_Version\\015\\n\""
+        }
+      ]
+    },
+    {
+      "symbol": "__Z32Lmx_lib_ptpif_LmxExt_Mnt_GetInfojP33_tag_LMX_STRUCT_MNT_GET_INFO_CTRLPjjS1_Pc",
+      "aw_line": 69829,
+      "standard_line": 75202,
+      "aw_instructions": 133,
+      "standard_instructions": 133,
+      "normalized_equal": true,
+      "differences": []
+    },
+    {
+      "symbol": "__Z36LMX_func_api_Mnt_GetInfo_Get_UsbModePjPcS_",
+      "aw_line": 69963,
+      "standard_line": 75336,
+      "aw_instructions": 39,
+      "standard_instructions": 39,
+      "normalized_equal": true,
+      "differences": []
+    }
+  ]
+}

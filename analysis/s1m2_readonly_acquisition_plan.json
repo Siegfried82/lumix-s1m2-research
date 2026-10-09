@@ -1,0 +1,1443 @@
+{
+  "schema_version": "1.0.0",
+  "plan_id": "S1M2-READONLY-ACQUISITION-WHITELIST-20261008",
+  "device_target": "Panasonic LUMIX DC-S1M2",
+  "operational_policy": {
+    "safety_level": "STRICT_ZERO_SIDE_EFFECT_READONLY",
+    "device_connection_allowed": false,
+    "execution_guard": "NO_DEVICE_COMMANDS_CURRENTLY_AUTHORIZED",
+    "principles": [
+      "Only verified GET / QUERY opcodes with exact line citations are whitelisted.",
+      "Zero write, set, release, touch, reset, or upgrade commands.",
+      "No heuristic opcode probing or blind parameter scanning.",
+      "GET tags are verified directly from GET wrapper functions, never inferred from SET names.",
+      "Every parameter layout and struct offset is anchored in binary disassembly, libgphoto2, or baseline capture code."
+    ],
+    "prohibited_opcodes_blacklist": [
+      {
+        "opcode": "0x9403",
+        "name": "PTP_OC_PANASONIC_SetProperty",
+        "reason": "Modifies camera settings"
+      },
+      {
+        "opcode": "0x940b",
+        "name": "PTP_OC_PANASONIC_SetCaptureTarget",
+        "reason": "Modifies card/host routing"
+      },
+      {
+        "opcode": "0x940c",
+        "name": "PTP_OC_PANASONIC_MovieRecControl",
+        "reason": "Triggers video recording"
+      },
+      {
+        "opcode": "0x940d",
+        "name": "PTP_OC_PANASONIC_PowerControl",
+        "reason": "Triggers camera power-off/reset"
+      },
+      {
+        "opcode": "0x9412",
+        "name": "PTP_OC_PANASONIC_Liveview",
+        "reason": "Activates sensor liveview stream"
+      },
+      {
+        "opcode": "0x9415",
+        "name": "PTP_OC_PANASONIC_SetLiveViewParameters",
+        "reason": "Modifies liveview format"
+      },
+      {
+        "opcode": "0x9416",
+        "name": "PTP_OC_PANASONIC_ManualFocusDrive",
+        "reason": "Actuates lens focus motors"
+      },
+      {
+        "opcode": "0x9422",
+        "name": "PTP_OC_PANASONIC_SetupFilesConfigSetting_Set_Data",
+        "reason": "Injects raw DAT memory blob"
+      },
+      {
+        "opcode": "0x9606",
+        "name": "PTP_OC_PANASONIC_SendDataInfo",
+        "reason": "Firmware upgrade bulk descriptor"
+      },
+      {
+        "opcode": "0x9607",
+        "name": "PTP_OC_PANASONIC_StartSendData",
+        "reason": "Firmware upgrade data injection"
+      },
+      {
+        "opcode": "0x100e",
+        "name": "PTP_OC_InitiateCapture",
+        "reason": "Physical shutter actuation"
+      },
+      {
+        "opcode": "0x9401",
+        "name": "PTP_OC_PANASONIC_InitiateCapture_Vendor",
+        "reason": "Vendor shutter trigger"
+      },
+      {
+        "opcode": "0x03000010",
+        "name": "PTP_DPC_PANASONIC_RecCtrlRelease",
+        "reason": "Shutter release subcode"
+      }
+    ]
+  },
+  "total_commands_whitelisted": 27,
+  "priority_tiers_summary": {
+    "Tier_1": {
+      "count": 3,
+      "budget_ms": 800,
+      "focus": "固件版本与设备唯一标识 (Firmware & Identity)"
+    },
+    "Tier_2": {
+      "count": 11,
+      "budget_ms": 1500,
+      "focus": "实时运行状态 (Real-time Core State - 0x9402)"
+    },
+    "Tier_3": {
+      "count": 3,
+      "budget_ms": 600,
+      "focus": "存储介质与卡槽可用性 (Storage Capability)"
+    },
+    "Tier_4": {
+      "count": 7,
+      "budget_ms": 2000,
+      "focus": "机身能力枚举集合 (Capability Enums - 0x9108)"
+    },
+    "Tier_5": {
+      "count": 2,
+      "budget_ms": 1000,
+      "focus": "标准属性描述符 (Standard PTP Descriptors - 0x1014)"
+    },
+    "Tier_6": {
+      "count": 1,
+      "budget_ms": 4500,
+      "focus": "全量固件配置镜像 (Full Serialized DAT Dump - 0x9421)"
+    }
+  },
+  "whitelist_commands": [
+    {
+      "id": "CMD_FW_01_DEVICE_INFO",
+      "priority_tier": "Tier_1",
+      "category": "Firmware & Identity",
+      "command_name": "GetDeviceInfo (Standard PTP)",
+      "opcode_hex": "0x1001",
+      "opcode_dec": 4097,
+      "opcode_standard": "PTP Standard 1.1",
+      "tag_or_param_hex": "0x00000000",
+      "tag_or_param_dec": 0,
+      "param_count": 0,
+      "param_layout": "No parameters (OpCode 0x1001 only)",
+      "struct_name": "_tag_LMX_STRUCT_PTP_DATASET_DEVICEINFO",
+      "struct_offsets": {
+        "0x00": "StandardVersion (uint16)",
+        "0x02": "VendorExtensionID (uint32)",
+        "0x06": "VendorExtensionVersion (uint16)",
+        "variable_str_1": "Manufacturer (\"Panasonic\")",
+        "variable_str_2": "Model (\"DC-S1M2\")",
+        "variable_str_3": "DeviceVersion / Firmware Revision (e.g. \"Ver.1.00\" / \"Ver.1.40\")",
+        "variable_str_4": "SerialNumber",
+        "array_ops": "OperationsSupported (uint16[])",
+        "array_events": "EventsSupported (uint16[])",
+        "array_props": "DevicePropertiesSupported (uint16[])"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z31Lmx_lib_ptpif_std_GetDeviceInfoP38_tag_LMX_STRUCT_PTP_DATASET_DEVICEINFOPc",
+        "line_numbers": "57735-57755",
+        "evidence_instructions": [
+          "Line 57749: mov w8, #0x1001",
+          "Line 57750: strh w8, [sp, #0x28]",
+          "Line 57752: stur wzr, [sp, #0x46] (0 params)",
+          "Line 57754: mov w0, #0x1001",
+          "Line 57755: bl __Z42Lmx_lib_ptpif_util_Get_NextPhase_StdOpCodetPj"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_GetDeviceInfo",
+        "line_number": "533",
+        "usage_in_ptp_c": "ptp_getdeviceinfo (lines 1150-1250)"
+      },
+      "existing_code_reference": {
+        "file": "analysis/capture_s1m2_baseline.m",
+        "line_number": "30, 45 (ICCameraDevice content catalog and session open handshake)",
+        "status": "Implicitly verified by macOS ImageCaptureCore session protocol"
+      },
+      "estimated_execution_time_ms": 120,
+      "safety_validation": "Read-only standard query; reports device capabilities and firmware string with zero side effects.",
+      "name": "cmd_fw_01_device_info",
+      "opcode": 4097,
+      "params": []
+    },
+    {
+      "id": "CMD_FW_02_DEVICE_ID",
+      "priority_tier": "Tier_1",
+      "category": "Firmware & Identity",
+      "command_name": "Get_DeviceID_Info (Vendor Device Identity)",
+      "opcode_hex": "0x9104",
+      "opcode_dec": 37124,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x00000000",
+      "tag_or_param_dec": 0,
+      "param_count": 1,
+      "param_layout": "Param 1: SubId / Index (uint32 = 0x00000000)",
+      "struct_name": "_tag_LMX_STRUCT_DEVICE_ID_INFO",
+      "struct_offsets": {
+        "0x00": "DeviceID / Hardware Identity payload (uint8[])"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z38Lmx_lib_ptpif_LmxExt_Get_DeviceID_InfohPhjPc",
+        "line_numbers": "75948-75972",
+        "evidence_instructions": [
+          "Line 75964: mov w8, #0x9104",
+          "Line 75965: strh w8, [sp, #0x28]",
+          "Line 75967: mov w8, #0x1 (1 param)",
+          "Line 75968: stur w8, [sp, #0x46]",
+          "Line 75969: stur w22, [sp, #0x32] (SubId param)",
+          "Line 75971: mov w0, #0x9104",
+          "Line 75972: bl __Z42Lmx_lib_ptpif_util_Get_NextPhase_StdOpCodetPj"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_PANASONIC_9104",
+        "line_number": "984",
+        "usage_in_ptp_c": "ptp_panasonic_get_device_id"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 80,
+      "safety_validation": "Read-only vendor hardware identifier query.",
+      "name": "cmd_fw_02_device_id",
+      "opcode": 37124,
+      "params": [
+        0
+      ]
+    },
+    {
+      "id": "CMD_FW_03_COMPATIBLE",
+      "priority_tier": "Tier_1",
+      "category": "Firmware & Identity",
+      "command_name": "Get_SetupFilesConfigSetting_Get_Compatible (Firmware Setup File Compatibility)",
+      "opcode_hex": "0x940a",
+      "opcode_dec": 37898,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x000800a4",
+      "tag_or_param_dec": 524452,
+      "param_count": 1,
+      "param_layout": "Param 1: Subcode uint32 = 0x000800a4",
+      "struct_name": "_tag_LMX_STRUCT_SETUP_FILES_CFG_COMPATIBLE",
+      "struct_offsets": {
+        "0x00": "CompatibleVersionMajor (uint16)",
+        "0x02": "CompatibleVersionMinor (uint16)",
+        "0x04": "ModelCode (uint32)",
+        "0x08": "FirmwareCompatibilityFlags (uint32)"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z63Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfigSetting_Get_CompatibleP42_tag_LMX_STRUCT_SETUP_FILES_CFG_COMPATIBLEjPcPj",
+        "line_numbers": "38008-38034",
+        "evidence_instructions": [
+          "Line 38026: mov w8, #0x940a",
+          "Line 38027: strh w8, [sp, #0x38]",
+          "Line 38029: mov w8, #0x1 (1 param)",
+          "Line 38030: stur w8, [sp, #0x56]",
+          "Line 38031: stur w19, [sp, #0x42] (Subcode 0x000800a4)",
+          "Line 38033: mov w0, #0x940a",
+          "Line 38034: bl __Z42Lmx_lib_ptpif_util_Get_NextPhase_StdOpCodetPj"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_PANASONIC_GetCaptureTarget (0x940a opcode family)",
+        "line_number": "992",
+        "usage_in_ptp_c": "ptp_panasonic_getcapturetarget (line 1646)"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 90,
+      "safety_validation": "Read-only check for camera DAT container compatibility structure.",
+      "name": "cmd_fw_03_compatible",
+      "opcode": 37898,
+      "params": [
+        524452
+      ]
+    },
+    {
+      "id": "CMD_STATE_01_DRIVEMODE",
+      "priority_tier": "Tier_2",
+      "category": "Drive Mode",
+      "command_name": "GetCameraModeInfo / Get_DriveMode (Current Drive & High-Res State)",
+      "opcode_hex": "0x9402",
+      "opcode_dec": 37890,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x02000080",
+      "tag_or_param_dec": 33554560,
+      "param_count": 1,
+      "param_layout": "Param 1: Tag uint32 = 0x02000080",
+      "struct_name": "_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_INFO",
+      "struct_offsets": {
+        "0x08": "DriveMode (uint16_t) [0=Unknown, 1=Single, 2=Burst, 3=Bracket, 4=SelfTimer, 5=Interval, 6=4K6K, 7=Focus, 8=Burst1, 9=Burst2, 10=HRS (DM_HRS), 11=Handheld HRS]",
+        "0x12": "ModePos (uint16_t) [Mode dial position: P, A, S, M, iA, C1, C2, C3]",
+        "0x1c": "CreativeMode (uint16_t)",
+        "0x26": "iAMode (uint16_t)",
+        "0x30": "4KMode (uint16_t)"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z38Lmx_lib_ptpif_LmxExt_GetCameraModeInfoP40_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_INFOjPc (Lines 31752-31775)",
+        "line_numbers": "31448-31476 (Get_DriveMode), 31752-31775 (GetCameraModeInfo)",
+        "evidence_instructions": [
+          "Line 31464: mov w1, #0x80; movk w1, #0x200, lsl #16 (Tag 0x02000080)",
+          "Line 31471: bl __Z38Lmx_lib_ptpif_LmxExt_GetCameraModeInfo...",
+          "Line 31474: ldrh w8, [sp, #0x8] (Reads DriveMode uint16)",
+          "Line 31767: mov w8, #0x9402; strh w8, [sp, #0x28]",
+          "Line 31770: mov w8, #0x1 (1 param); stur w19, [sp, #0x32]"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_DPC_PANASONIC_CameraMode (0x02000080)",
+        "line_number": "3823",
+        "usage_in_ptp_c": "ptp_panasonic_getdeviceproperty (line 1776)"
+      },
+      "existing_code_reference": {
+        "file": "analysis/capture_s1m2_baseline.m",
+        "line_number": "69-70, 75 (ops[0]=0x9402, tags[0]=0x02000080 -> drive_before.bin / drive_after.bin)",
+        "status": "Empirically tested and verified on S1M2 hardware (returns 80-byte buffer)"
+      },
+      "estimated_execution_time_ms": 100,
+      "safety_validation": "Read-only state query; verified across 5 live runs without altering drive dial state.",
+      "name": "cmd_state_01_drivemode",
+      "opcode": 37890,
+      "params": [
+        33554560
+      ]
+    },
+    {
+      "id": "CMD_STATE_02_IMAGEINFO",
+      "priority_tier": "Tier_2",
+      "category": "Image Quality",
+      "command_name": "GetImageInfo / Get_ImageQuality (Image Format, Quality & Aspect)",
+      "opcode_hex": "0x9402",
+      "opcode_dec": 37890,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x020000a0",
+      "tag_or_param_dec": 33554592,
+      "param_count": 1,
+      "param_layout": "Param 1: Tag uint32 = 0x020000a0",
+      "struct_name": "_tag_LMX_STRUCT_RECINFO_IMAGE_INFO",
+      "struct_offsets": {
+        "0x08": "ImageSize (uint16_t) [L, M, S]",
+        "0x12": "ImageQuality (uint16_t) [0=JPEG Fine, 1=JPEG Standard, 3=RAW Only, 4=RAW + Fine, 5=RAW + Standard]",
+        "0x1c": "ImageAspect (uint16_t) [4:3, 3:2, 16:9, 1:1]",
+        "0x26": "ImageFormat (uint16_t)",
+        "0x30": "ImageJpegHeifMode (uint16_t)",
+        "0x3a": "ImageJpegHeifQuality (uint16_t)"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z33Lmx_lib_ptpif_LmxExt_GetImageInfoP34_tag_LMX_STRUCT_RECINFO_IMAGE_INFOjPc (Lines 66933-66956)",
+        "line_numbers": "66743-66775 (Get_ImageQuality), 66677-66705 (Get_ImageSize), 66781-66809 (Get_ImageAspect)",
+        "evidence_instructions": [
+          "Line 66764-66765: mov w1, #0xa0; movk w1, #0x200, lsl #16 (Tag 0x020000a0 GET tag)",
+          "Line 66767: bl __Z33Lmx_lib_ptpif_LmxExt_GetImageInfo...",
+          "Line 66769: ldrh w8, [sp, #0x12] (Reads ImageQuality uint16)",
+          "Line 66948: mov w8, #0x9402; strh w8, [sp, #0x28]",
+          "Line 66951: mov w8, #0x1 (1 param); stur w19, [sp, #0x32]"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_DPC_PANASONIC_ImageFormat (0x020000a2)",
+        "line_number": "3828",
+        "usage_in_ptp_c": "ptp_panasonic_getdeviceproperty (line 1776)"
+      },
+      "existing_code_reference": {
+        "file": "analysis/lumix_ptp_settings_map.json",
+        "line_number": "targeted_features.RAWTransfer.quality_setting",
+        "status": "Verified in SDK symbol traces"
+      },
+      "estimated_execution_time_ms": 100,
+      "safety_validation": "Read-only query of image quality / aspect ratio without toggling compression mode.",
+      "name": "cmd_state_02_imageinfo",
+      "opcode": 37890,
+      "params": [
+        33554592
+      ]
+    },
+    {
+      "id": "CMD_STATE_03_SHUTTER_SPEED",
+      "priority_tier": "Tier_2",
+      "category": "Shutter & Exposure",
+      "command_name": "Get_SS_Info / SS_GetParam (Real-time Shutter Speed)",
+      "opcode_hex": "0x9402",
+      "opcode_dec": 37890,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x02000030",
+      "tag_or_param_dec": 33554480,
+      "param_count": 1,
+      "param_layout": "Param 1: Tag uint32 = 0x02000030",
+      "struct_name": "_tag_LMX_STRUCT_SS_INFO",
+      "struct_offsets": {
+        "0x08": "ShutterSpeedParam (uint32_t) [Current exposure duration index / fraction / video angle]"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z32Lmx_lib_ptpif_LmxExt_Get_SS_InfoP23_tag_LMX_STRUCT_SS_INFOjPc (Lines 24110-24136)",
+        "line_numbers": "24287-24315 (SS_GetParam), 24110-24136 (Get_SS_Info)",
+        "evidence_instructions": [
+          "Line 24307-24308: mov w1, #0x30; movk w1, #0x200, lsl #16 (Tag 0x02000030)",
+          "Line 24310: bl __Z32Lmx_lib_ptpif_LmxExt_Get_SS_Info...",
+          "Line 24313: ldr w8, [sp, #0x8] (Reads ShutterSpeed uint32)",
+          "Line 24128: mov w8, #0x9402; strh w8, [sp, #0x28]"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_DPC_PANASONIC_ShutterSpeed (0x02000030)",
+        "line_number": "3804",
+        "usage_in_ptp_c": "ptp_panasonic_getdeviceproperty (line 5596, 1776)"
+      },
+      "existing_code_reference": {
+        "file": "analysis/lumix_ptp_settings_map.json",
+        "line_number": "targeted_features.ShutterType.related_ptp_controls",
+        "status": "Confirmed non-actuating shutter duration query"
+      },
+      "estimated_execution_time_ms": 90,
+      "safety_validation": "Read-only sensor/shutter integration time query; zero shutter blade activation.",
+      "name": "cmd_state_03_shutter_speed",
+      "opcode": 37890,
+      "params": [
+        33554480
+      ]
+    },
+    {
+      "id": "CMD_STATE_04_APERTURE",
+      "priority_tier": "Tier_2",
+      "category": "Shutter & Exposure",
+      "command_name": "Get_Aperture_Info / Aperture_GetParam (Real-time Lens Aperture F-Number)",
+      "opcode_hex": "0x9402",
+      "opcode_dec": 37890,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x02000040",
+      "tag_or_param_dec": 33554496,
+      "param_count": 1,
+      "param_layout": "Param 1: Tag uint32 = 0x02000040",
+      "struct_name": "_tag_LMX_STRUCT_APERTURE_INFO",
+      "struct_offsets": {
+        "0x08": "ApertureParam (uint32_t) [F-number value multiplied by 100 or APEX code]"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z38Lmx_lib_ptpif_LmxExt_Get_Aperture_InfoP29_tag_LMX_STRUCT_APERTURE_INFOjPc (Lines 40260-40283)",
+        "line_numbers": "40391-40415 (Aperture_GetParam), 40260-40283 (Get_Aperture_Info)",
+        "evidence_instructions": [
+          "Line 40410-40411: mov w1, #0x40; movk w1, #0x200, lsl #16 (Tag 0x02000040)",
+          "Line 40413: bl __Z38Lmx_lib_ptpif_LmxExt_Get_Aperture_Info...",
+          "Line 40416: ldr w8, [sp, #0x8] (Reads Aperture uint32)",
+          "Line 40275: mov w8, #0x9402; strh w8, [sp, #0x28]"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_DPC_PANASONIC_Aperture (0x02000040)",
+        "line_number": "3807",
+        "usage_in_ptp_c": "ptp_panasonic_getdeviceproperty (line 1776)"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 90,
+      "safety_validation": "Read-only iris position query; does not drive diaphragm stepper.",
+      "name": "cmd_state_04_aperture",
+      "opcode": 37890,
+      "params": [
+        33554496
+      ]
+    },
+    {
+      "id": "CMD_STATE_05_ISO",
+      "priority_tier": "Tier_2",
+      "category": "Shutter & Exposure",
+      "command_name": "Get_ISO_Info / ISO_GetParam (Real-time ISO Sensitivity & Upper Limit)",
+      "opcode_hex": "0x9402",
+      "opcode_dec": 37890,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x02000020",
+      "tag_or_param_dec": 33554464,
+      "param_count": 1,
+      "param_layout": "Param 1: Tag uint32 = 0x02000020",
+      "struct_name": "_tag_LMX_STRUCT_ISO_INFO",
+      "struct_offsets": {
+        "0x08": "ISOParam (uint32_t) [Current ISO setting / Auto ISO]",
+        "0x12": "ISOUpperLimit (uint32_t)"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z33Lmx_lib_ptpif_LmxExt_Get_ISO_InfoP24_tag_LMX_STRUCT_ISO_INFOjPc (Lines 52849-52875)",
+        "line_numbers": "52802-52828 (ISO_GetParam), 52849-52875 (Get_ISO_Info)",
+        "evidence_instructions": [
+          "Line 52823-52824: mov w1, #0x20; movk w1, #0x200, lsl #16 (Tag 0x02000020)",
+          "Line 52826: bl __Z33Lmx_lib_ptpif_LmxExt_Get_ISO_Info...",
+          "Line 52830: ldr w8, [sp, #0x8] (Reads ISO uint32)",
+          "Line 52867: mov w8, #0x9402; strh w8, [sp, #0x28]"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_DPC_PANASONIC_ISO (0x02000020)",
+        "line_number": "3801",
+        "usage_in_ptp_c": "ptp_panasonic_getdeviceproperty (line 1776)"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 90,
+      "safety_validation": "Read-only sensor analog/digital gain query; zero register modification.",
+      "name": "cmd_state_05_iso",
+      "opcode": 37890,
+      "params": [
+        33554464
+      ]
+    },
+    {
+      "id": "CMD_STATE_06_EXPOSURE",
+      "priority_tier": "Tier_2",
+      "category": "Shutter & Exposure",
+      "command_name": "Get_Exposure_Info / Exposure_GetParam (Exposure Bias Compensation)",
+      "opcode_hex": "0x9402",
+      "opcode_dec": 37890,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x02000060",
+      "tag_or_param_dec": 33554528,
+      "param_count": 1,
+      "param_layout": "Param 1: Tag uint32 = 0x02000060",
+      "struct_name": "_tag_LMX_STRUCT_EXPOSURE_INFO",
+      "struct_offsets": {
+        "0x08": "ExposureCompensation (uint32_t)"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z38Lmx_lib_ptpif_LmxExt_Get_Exposure_InfoP29_tag_LMX_STRUCT_EXPOSURE_INFOjPc (Lines 29417-29440)",
+        "line_numbers": "29548-29570 (Exposure_GetParam), 29417-29440 (Get_Exposure_Info)",
+        "evidence_instructions": [
+          "Line 29567-29568: mov w1, #0x60; movk w1, #0x200, lsl #16 (Tag 0x02000060)",
+          "Line 29570: bl __Z38Lmx_lib_ptpif_LmxExt_Get_Exposure_Info...",
+          "Line 29574: ldr w8, [sp, #0x8]",
+          "Line 29432: mov w8, #0x9402; strh w8, [sp, #0x28]"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_DPC_PANASONIC_Exposure (0x02000060)",
+        "line_number": "3816",
+        "usage_in_ptp_c": "ptp_panasonic_getdeviceproperty (line 1776)"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 90,
+      "safety_validation": "Read-only exposure bias compensation query.",
+      "name": "cmd_state_06_exposure",
+      "opcode": 37890,
+      "params": [
+        33554528
+      ]
+    },
+    {
+      "id": "CMD_STATE_07_AF_CONFIG",
+      "priority_tier": "Tier_2",
+      "category": "AF & Recognition",
+      "command_name": "Get_AF_Cfg_Info (Auto Focus Mode, Area & Subject Recognition)",
+      "opcode_hex": "0x9402",
+      "opcode_dec": 37890,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x02000070",
+      "tag_or_param_dec": 33554544,
+      "param_count": 1,
+      "param_layout": "Param 1: Tag uint32 = 0x02000070",
+      "struct_name": "_tag_LMX_STRUCT_AF_CONFIG_INFO",
+      "struct_offsets": {
+        "0x08": "AFMode (uint16_t) [AFS, AFC, MF]",
+        "0x12": "AFArea (uint16_t) [Tracking, Full, Zone, 1-Area, Pinpoint]",
+        "0x1c": "QuickAF (uint16_t)",
+        "0x26": "AFAreaCustom (uint16_t)",
+        "0x30": "AFAnimalRecognition (uint16_t)",
+        "0x3a": "AFRecognitionAFMode (uint16_t)",
+        "0x44": "AFAutomaticRecognition (uint16_t)",
+        "0x4e": "AFRecognitionParts (uint16_t) [Human/Eye/Face/Body, Animal, Vehicle/Car/Motorcycle]"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z36Lmx_lib_ptpif_LmxExt_Get_AF_Cfg_InfoP30_tag_LMX_STRUCT_AF_CONFIG_INFOjPcPj (Lines 45461-45487)",
+        "line_numbers": "45417-45440 (AF_Mode), 45648-45670 (AF_Area), 45780-45805 (Animal_Recog), 45912-45935 (Parts)",
+        "evidence_instructions": [
+          "Line 45434-45435: mov w1, #0x70; movk w1, #0x200, lsl #16 (Tag 0x02000070)",
+          "Line 45437: bl __Z36Lmx_lib_ptpif_LmxExt_Get_AF_Cfg_Info...",
+          "Line 45440: ldrh w8, [sp, #0x8] (Reads AFMode uint16)",
+          "Line 45479: mov w8, #0x9402; strh w8, [sp, #0x28]"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_DPC_PANASONIC_AFArea (0x02000070)",
+        "line_number": "3819",
+        "usage_in_ptp_c": "ptp_panasonic_getdeviceproperty (line 1776)"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 100,
+      "safety_validation": "Read-only query of AF algorithm parameters; zero lens motor drive or focus actuation.",
+      "name": "cmd_state_07_af_config",
+      "opcode": 37890,
+      "params": [
+        33554544
+      ]
+    },
+    {
+      "id": "CMD_STATE_08_WHITE_BALANCE",
+      "priority_tier": "Tier_2",
+      "category": "Image Quality",
+      "command_name": "Get_WB_Info / WB_GetParam (White Balance Mode & Color Temperature)",
+      "opcode_hex": "0x9402",
+      "opcode_dec": 37890,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x02000050",
+      "tag_or_param_dec": 33554512,
+      "param_count": 1,
+      "param_layout": "Param 1: Tag uint32 = 0x02000050",
+      "struct_name": "_tag_LMX_STRUCT_WB_INFO",
+      "struct_offsets": {
+        "0x08": "WBMode (uint16_t) [AWB, AWBc, AWBw, Daylight, Cloudy, Shade, Incandescent, Flash, WhiteSet1-4, ColorTemp1-4]"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z32Lmx_lib_ptpif_LmxExt_Get_WB_InfoP23_tag_LMX_STRUCT_WB_INFOjPc (Lines 48990-49013)",
+        "line_numbers": "49187-49210 (WB_GetParam), 48990-49013 (Get_WB_Info)",
+        "evidence_instructions": [
+          "Line 49165-49166: mov w1, #0x50; movk w1, #0x200, lsl #16 (Tag 0x02000050)",
+          "Line 49170: bl __Z32Lmx_lib_ptpif_LmxExt_Get_WB_Info...",
+          "Line 49005: mov w8, #0x9402; strh w8, [sp, #0x28]"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_DPC_PANASONIC_WhiteBalance (0x02000050)",
+        "line_number": "3810",
+        "usage_in_ptp_c": "ptp_panasonic_getdeviceproperty (line 1776)"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 90,
+      "safety_validation": "Read-only color temperature & tint setting query.",
+      "name": "cmd_state_08_white_balance",
+      "opcode": 37890,
+      "params": [
+        33554512
+      ]
+    },
+    {
+      "id": "CMD_STATE_09_PHOTOSTYLE",
+      "priority_tier": "Tier_2",
+      "category": "Image Quality",
+      "command_name": "GetPhotoStyleInfo (Photo Style Preset & Parameters)",
+      "opcode_hex": "0x9402",
+      "opcode_dec": 37890,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x02000010",
+      "tag_or_param_dec": 33554448,
+      "param_count": 1,
+      "param_layout": "Param 1: Tag uint32 = 0x02000010",
+      "struct_name": "_tag_LMX_STRUCT_PHOTOSTYLE_INFO",
+      "struct_offsets": {
+        "0x08": "PhotoStylePreset (uint16_t) [Standard, Vivid, Natural, L.ClassicNeo, Flat, Landscape, Portrait, L.Monochrome, L.Monochrome D, L.Monochrome S, Cinelike D2, Cinelike V2, Like709, V-Log, REAL TIME LUT]",
+        "0x12": "Contrast (int16_t)",
+        "0x1a": "Highlight (int16_t)",
+        "0x22": "Shadow (int16_t)",
+        "0x2a": "Saturation (int16_t)",
+        "0x32": "ColorTone (int16_t)",
+        "0x3a": "Sharpness (int16_t)",
+        "0x42": "NoiseReduction (int16_t)"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z38Lmx_lib_ptpif_LmxExt_GetPhotoStyleInfoP31_tag_LMX_STRUCT_PHOTOSTYLE_INFOjPc (Lines 54505-54528)",
+        "line_numbers": "54300-54528",
+        "evidence_instructions": [
+          "Line 54520: mov w8, #0x9402; strh w8, [sp, #0x28]",
+          "Line 54523: mov w8, #0x1 (1 param); stur w19, [sp, #0x32]",
+          "Line 54525: mov w0, #0x9402"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_DPC_PANASONIC_PhotoStyle (0x02000010)",
+        "line_number": "3800",
+        "usage_in_ptp_c": "ptp_panasonic_getdeviceproperty (line 1776)"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 100,
+      "safety_validation": "Read-only color matrix / profile query.",
+      "name": "cmd_state_09_photostyle",
+      "opcode": 37890,
+      "params": [
+        33554448
+      ]
+    },
+    {
+      "id": "CMD_STATE_10_VIDEO_CONFIG",
+      "priority_tier": "Tier_2",
+      "category": "Video Quality",
+      "command_name": "Get_Mov_Cfg_Info (Current Movie Recording Quality & Format)",
+      "opcode_hex": "0x9408",
+      "opcode_dec": 37896,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x06000010",
+      "tag_or_param_dec": 100663312,
+      "param_count": 1,
+      "param_layout": "Param 1: Tag uint32 = 0x06000010",
+      "struct_name": "_tag_LMX_STRUCT_MOV_CONFIG_INFO",
+      "struct_offsets": {
+        "0x08": "CMovieMode (uint16_t) [Lines 56504-56540]",
+        "0x12": "HDMIMode (uint16_t) [Lines 56762-56800]",
+        "0x1c": "QualityMode (uint16_t) [Lines 56811-56845, Resolution/Framerate/Bitrate]",
+        "0x26": "RecMode (uint16_t) [Lines 56851-56885, MP4, MOV, Apple ProRes]",
+        "0x30": "ExTeleconMode (uint16_t) [Lines 56891-56925]",
+        "0x3a": "SSGainParam (uint16_t) [Lines 56931-56965]"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z37Lmx_lib_ptpif_LmxExt_Get_Mov_Cfg_InfoP31_tag_LMX_STRUCT_MOV_CONFIG_INFOjPc (Lines 56556-56585)",
+        "line_numbers": "56811-56845 (Quality_mode), 56556-56585 (Get_Mov_Cfg_Info)",
+        "evidence_instructions": [
+          "Line 56833-56834: mov w1, #0x10; movk w1, #0x600, lsl #16 (Tag 0x06000010)",
+          "Line 56836: bl __Z37Lmx_lib_ptpif_LmxExt_Get_Mov_Cfg_Info...",
+          "Line 56573: mov w8, #0x9408; strh w8, [sp, #0x38]",
+          "Line 56576: mov w8, #0x1 (1 param); stur w19, [sp, #0x42]",
+          "Line 56580: mov w0, #0x9408"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_DPC_PANASONIC_MovConfig (0x06000010, uses 0x9408)",
+        "line_number": "3848",
+        "usage_in_ptp_c": "ptp_panasonic_getdeviceproperty (line 1776)"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 110,
+      "safety_validation": "Read-only video format descriptor query; zero video encoder trigger.",
+      "name": "cmd_state_10_video_config",
+      "opcode": 37896,
+      "params": [
+        100663312
+      ]
+    },
+    {
+      "id": "CMD_STATE_11_METERING",
+      "priority_tier": "Tier_2",
+      "category": "Shutter & Exposure",
+      "command_name": "Get_Rec_Info (Metering Mode: Multi-segment, Center, Spot)",
+      "opcode_hex": "0x9402",
+      "opcode_dec": 37890,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x020000b0",
+      "tag_or_param_dec": 33554608,
+      "param_count": 1,
+      "param_layout": "Param 1: Tag uint32 = 0x020000b0",
+      "struct_name": "_tag_LMX_STRUCT_RECINFO_METERING_INFO",
+      "struct_offsets": {
+        "0x08": "MeteringMode (uint16_t) [Multi, Center-weighted, Spot, Highlight-weighted]"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z33Lmx_lib_ptpif_LmxExt_Get_Rec_InfoP37_tag_LMX_STRUCT_RECINFO_METERING_INFOjPc (Lines 50139-50162)",
+        "line_numbers": "50139-50162",
+        "evidence_instructions": [
+          "Line 50154: mov w8, #0x9402; strh w8, [sp, #0x28]",
+          "Line 50157: mov w8, #0x1 (1 param); stur w19, [sp, #0x32]"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_DPC_PANASONIC_MeteringInfo (0x020000B0)",
+        "line_number": "3829",
+        "usage_in_ptp_c": "ptp_panasonic_getdeviceproperty (line 1776)"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 90,
+      "safety_validation": "Read-only metering photometric pattern query.",
+      "name": "cmd_state_11_metering",
+      "opcode": 37890,
+      "params": [
+        33554608
+      ]
+    },
+    {
+      "id": "CMD_STORAGE_01_STORAGE_IDS",
+      "priority_tier": "Tier_3",
+      "category": "Storage Capability",
+      "command_name": "GetStorageIDs (Card Slot Presence & Storage Identifiers)",
+      "opcode_hex": "0x9114",
+      "opcode_dec": 37140,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x00000000",
+      "tag_or_param_dec": 0,
+      "param_count": 0,
+      "param_layout": "No parameters (OpCode 0x9114)",
+      "struct_name": "_tag_LMX_STRUCT_PTP_ARRAY_UINT32",
+      "struct_offsets": {
+        "0x00": "StorageIDCount (uint32)",
+        "0x04": "StorageIDs[0] (uint32, e.g. Slot 1)",
+        "0x08": "StorageIDs[1] (uint32, e.g. Slot 2)"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z34Lmx_lib_ptpif_LmxExt_GetStorageIDsP32_tag_LMX_STRUCT_PTP_ARRAY_UINT32Pc (Lines 58800-58821)",
+        "line_numbers": "58800-58821",
+        "evidence_instructions": [
+          "Line 58814: mov w8, #0x9114; strh w8, [sp, #0x38]",
+          "Line 58817: stur wzr, [sp, #0x56] (0 params)",
+          "Line 58819: mov w0, #0x9114; bl __Z42Lmx_lib_ptpif_util_Get_NextPhase_StdOpCodetPj"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_GetStorageIDs (standard equivalent 0x1004 vs vendor 0x9114)",
+        "line_number": "536",
+        "usage_in_ptp_c": "ptp_getstorageids"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 80,
+      "safety_validation": "Read-only query of mounted storage volumes.",
+      "name": "cmd_storage_01_storage_ids",
+      "opcode": 37140,
+      "params": []
+    },
+    {
+      "id": "CMD_STORAGE_02_STORAGE_INFO",
+      "priority_tier": "Tier_3",
+      "category": "Storage Capability",
+      "command_name": "GetStorageInfo (Card Capacity, Free Space Bytes & Remaining Images)",
+      "opcode_hex": "0x9115",
+      "opcode_dec": 37141,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x00010001",
+      "tag_or_param_dec": 65537,
+      "param_count": 1,
+      "param_layout": "Param 1: StorageID (uint32 returned by GetStorageIDs, default 0x00010001)",
+      "struct_name": "_tag_LMX_STRUCT_STORAGEINFO",
+      "struct_offsets": {
+        "0x00": "StorageType (uint16)",
+        "0x02": "FilesystemType (uint16)",
+        "0x04": "AccessCapability (uint16) [Read-Only, Read-Write]",
+        "0x08": "MaxCapacity (uint64)",
+        "0x10": "FreeSpaceInBytes (uint64)",
+        "0x18": "FreeSpaceInImages (uint32)",
+        "variable_str": "StorageDescription"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z35Lmx_lib_ptpif_LmxExt_GetStorageInfojP27_tag_LMX_STRUCT_STORAGEINFOPcPj (Lines 58918-58947)",
+        "line_numbers": "58918-58947",
+        "evidence_instructions": [
+          "Line 58939: mov w8, #0x9115; strh w8, [sp, #0x48]",
+          "Line 58942: mov w8, #0x1 (1 param); stur w8, [sp, #0x66]",
+          "Line 58944: stur w20, [sp, #0x52] (StorageID)",
+          "Line 58946: mov w0, #0x9115; bl __Z42Lmx_lib_ptpif_util_Get_NextPhase_StdOpCodetPj"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_GetStorageInfo (0x1005 / vendor 0x9115)",
+        "line_number": "537",
+        "usage_in_ptp_c": "ptp_getstorageinfo"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 100,
+      "safety_validation": "Read-only storage size calculation query.",
+      "name": "cmd_storage_02_storage_info",
+      "opcode": 37141,
+      "params": [
+        65537
+      ]
+    },
+    {
+      "id": "CMD_STORAGE_03_CAPTURE_TARGET",
+      "priority_tier": "Tier_3",
+      "category": "Storage Capability",
+      "command_name": "Get_SetupFilesConfig_Info / GetCaptureTarget (Active Storage Destination)",
+      "opcode_hex": "0x940a",
+      "opcode_dec": 37898,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x08000090",
+      "tag_or_param_dec": 134217872,
+      "param_count": 1,
+      "param_layout": "Param 1: Subcode uint32 = 0x08000090",
+      "struct_name": "_tag_LMX_STRUCT_SETUP_FILES_CFG_INFO",
+      "struct_offsets": {
+        "0x00": "TargetStorage (uint16) [0=SD Card Slot 1, 1=PC Host RAM, 2=SD + PC Dual Write, 3=SD Card Slot 2]"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z46Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfig_InfoP36_tag_LMX_STRUCT_SETUP_FILES_CFG_INFOjPc (Lines 48413-48437)",
+        "line_numbers": "48413-48437",
+        "evidence_instructions": [
+          "Line 48428: mov w8, #0x940a; strh w8, [sp, #0x28]",
+          "Line 48431: mov w8, #0x1 (1 param); stur w8, [sp, #0x46]",
+          "Line 48433: stur w20, [sp, #0x32] (Subcode 0x08000090)",
+          "Line 48435: mov w0, #0x940a; bl __Z42Lmx_lib_ptpif_util_Get_NextPhase_StdOpCodetPj"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_PANASONIC_GetCaptureTarget (0x940a with 0x08000090)",
+        "line_number": "992",
+        "usage_in_ptp_c": "ptp_panasonic_getcapturetarget (line 1646)"
+      },
+      "existing_code_reference": {
+        "file": "analysis/lumix_ptp_settings_map.json",
+        "line_number": "targeted_features.RAWTransfer.storage_location_control",
+        "status": "Confirmed query of StoLocType"
+      },
+      "estimated_execution_time_ms": 90,
+      "safety_validation": "Read-only query of storage routing; does not change capture target.",
+      "name": "cmd_storage_03_capture_target",
+      "opcode": 37898,
+      "params": [
+        134217872
+      ]
+    },
+    {
+      "id": "CMD_CAPA_01_DRIVEMODE",
+      "priority_tier": "Tier_4",
+      "category": "Drive Mode",
+      "command_name": "CameraMode_GetCapability (Supported Drive Mode Enum List)",
+      "opcode_hex": "0x9108",
+      "opcode_dec": 37128,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x02000080",
+      "tag_or_param_dec": 33554560,
+      "param_count": 3,
+      "param_layout": "Param 1: Tag uint32 = 0x02000080, Param 2: uint32 = 0, Param 3: uint32 = 0",
+      "struct_name": "_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_CAPA_INFO",
+      "struct_offsets": {
+        "0x00": "Header / ElementCount (uint32)",
+        "0x04": "SupportedDriveModes (uint16[] enum list: Single, Burst, Bracket, SelfTimer, Interval, 4K6K, HRS, Handheld HRS)"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z39Lmx_lib_ptpif_LmxExt_Get_Tag_CapabilityjjPhjPjPc (Lines 28646-28680)",
+        "line_numbers": "30916-31000 (CameraMode_GetCapability), 28646-28680 (Get_Tag_Capability)",
+        "evidence_instructions": [
+          "Line 30948: mov w0, #0x80; movk w0, #0x200, lsl #16 (Tag 0x02000080)",
+          "Line 30950: bl __Z40LMX_func_api_Get_Tag_CapabilityInfo_Size...",
+          "Line 28670: mov w8, #0x9108; strh w8, [sp, #0x28]",
+          "Line 28673: mov w8, #0x3 (3 params); stur w8, [sp, #0x46]",
+          "Line 28675: stur w24, [sp, #0x32] (Param 1 = Tag ID)",
+          "Line 28676: stur w23, [sp, #0x36] (Param 2 = 0)",
+          "Line 28677: stur wzr, [sp, #0x3a] (Param 3 = 0)",
+          "Line 28679: mov w0, #0x9108; bl __Z42Lmx_lib_ptpif_util_Get_NextPhase_StdOpCodetPj"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_PANASONIC_ListProperty (0x9108)",
+        "line_number": "985",
+        "usage_in_ptp_c": "ptp_panasonic_getdevicepropertydesc (line 1685)"
+      },
+      "existing_code_reference": {
+        "file": "analysis/capa_drivemode.bin",
+        "line_number": "Direct binary dump of 0x9108 0x02000080 query (612 bytes)",
+        "status": "Empirically tested and proven on S1M2 hardware"
+      },
+      "estimated_execution_time_ms": 150,
+      "safety_validation": "Read-only capability enumeration table query.",
+      "name": "cmd_capa_01_drivemode",
+      "opcode": 37128,
+      "params": [
+        33554560,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "CMD_CAPA_02_IMAGEINFO",
+      "priority_tier": "Tier_4",
+      "category": "Image Quality",
+      "command_name": "ImageInfo_GetCapability (Supported Image Quality & Size Enum List)",
+      "opcode_hex": "0x9108",
+      "opcode_dec": 37128,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x020000a0",
+      "tag_or_param_dec": 33554592,
+      "param_count": 3,
+      "param_layout": "Param 1: Tag uint32 = 0x020000a0, Param 2: uint32 = 0, Param 3: uint32 = 0",
+      "struct_name": "_tag_LMX_STRUCT_RECINFO_IMAGE_CAPA_INFO",
+      "struct_offsets": {
+        "0x00": "ElementCount (uint32)",
+        "0x04": "SupportedQualities (uint16[] enum list: Fine, Standard, RAW, RAW+Fine, RAW+Standard)"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z36LMX_func_api_ImageInfo_GetCapabilityP39_tag_LMX_STRUCT_RECINFO_IMAGE_CAPA_INFOPcPj (Lines 66442-66490)",
+        "line_numbers": "66442-66490 -> 28646-28680",
+        "evidence_instructions": [
+          "Line 66457: mov w1, #0xa0; movk w1, #0x200, lsl #16",
+          "Line 28670: mov w8, #0x9108; mov w8, #0x3 (3 params)"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_PANASONIC_ListProperty (0x9108)",
+        "line_number": "985",
+        "usage_in_ptp_c": "ptp_panasonic_getdevicepropertydesc (line 1685)"
+      },
+      "existing_code_reference": {
+        "file": "analysis/capa_imagequality.bin",
+        "line_number": "Direct binary dump of 0x9108 0x020000a0 query (472 bytes)",
+        "status": "Empirically tested and proven on S1M2 hardware"
+      },
+      "estimated_execution_time_ms": 150,
+      "safety_validation": "Read-only capability enumeration table query.",
+      "name": "cmd_capa_02_imageinfo",
+      "opcode": 37128,
+      "params": [
+        33554592,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "CMD_CAPA_03_SHUTTER_SPEED",
+      "priority_tier": "Tier_4",
+      "category": "Shutter & Exposure",
+      "command_name": "SS_GetCapability (Supported Shutter Speeds Enum List)",
+      "opcode_hex": "0x9108",
+      "opcode_dec": 37128,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x02000030",
+      "tag_or_param_dec": 33554480,
+      "param_count": 3,
+      "param_layout": "Param 1: Tag uint32 = 0x02000030, Param 2: uint32 = 0, Param 3: uint32 = 0",
+      "struct_name": "_tag_LMX_STRUCT_SS_CAPA_INFO",
+      "struct_offsets": {
+        "0x00": "Count (uint32)",
+        "0x04": "SupportedShutterSpeeds (uint32[]: 1/8000s, 1/4000s ... 60s, Bulb)"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z29LMX_func_api_SS_GetCapabilityP28_tag_LMX_STRUCT_SS_CAPA_INFOPcPj (Lines 23932-23970)",
+        "line_numbers": "23932-23970 -> 28646-28680",
+        "evidence_instructions": [
+          "Line 23964: mov w1, #0x30; movk w1, #0x200, lsl #16 (Tag 0x02000030)",
+          "Line 23966: bl __Z35LMX_func_api_Get_Tag_CapabilityInfo..."
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_PANASONIC_ListProperty (0x9108)",
+        "line_number": "985",
+        "usage_in_ptp_c": "ptp_panasonic_getdevicepropertydesc (line 1685)"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 150,
+      "safety_validation": "Read-only shutter range enumeration query.",
+      "name": "cmd_capa_03_shutter_speed",
+      "opcode": 37128,
+      "params": [
+        33554480,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "CMD_CAPA_04_APERTURE",
+      "priority_tier": "Tier_4",
+      "category": "Shutter & Exposure",
+      "command_name": "Aperture_GetCapability (Supported Lens Aperture F-Numbers List)",
+      "opcode_hex": "0x9108",
+      "opcode_dec": 37128,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x02000040",
+      "tag_or_param_dec": 33554496,
+      "param_count": 3,
+      "param_layout": "Param 1: Tag uint32 = 0x02000040, Param 2: uint32 = 0, Param 3: uint32 = 0",
+      "struct_name": "_tag_LMX_STRUCT_APERTURE_CAPA_INFO",
+      "struct_offsets": {
+        "0x00": "Count (uint32)",
+        "0x04": "SupportedFNumbers (uint32[])"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z35LMX_func_api_Aperture_GetCapabilityP34_tag_LMX_STRUCT_APERTURE_CAPA_INFOPcPj (Lines 40071-40110)",
+        "line_numbers": "40071-40110 -> 28646-28680",
+        "evidence_instructions": [
+          "Line 40100: mov w1, #0x40; movk w1, #0x200, lsl #16 (Tag 0x02000040)",
+          "Line 40102: bl __Z35LMX_func_api_Get_Tag_CapabilityInfo..."
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_PANASONIC_ListProperty (0x9108)",
+        "line_number": "985",
+        "usage_in_ptp_c": "ptp_panasonic_getdevicepropertydesc (line 1685)"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 150,
+      "safety_validation": "Read-only aperture enum table query.",
+      "name": "cmd_capa_04_aperture",
+      "opcode": 37128,
+      "params": [
+        33554496,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "CMD_CAPA_05_ISO",
+      "priority_tier": "Tier_4",
+      "category": "Shutter & Exposure",
+      "command_name": "ISO_GetCapability (Supported ISO Sensitivity Steps List)",
+      "opcode_hex": "0x9108",
+      "opcode_dec": 37128,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x02000020",
+      "tag_or_param_dec": 33554464,
+      "param_count": 3,
+      "param_layout": "Param 1: Tag uint32 = 0x02000020, Param 2: uint32 = 0, Param 3: uint32 = 0",
+      "struct_name": "_tag_LMX_STRUCT_ISO_CAPA_INFO",
+      "struct_offsets": {
+        "0x00": "Count (uint32)",
+        "0x04": "SupportedISOSteps (uint32[]: 50, 100, 200 ... 51200)"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z30LMX_func_api_ISO_GetCapabilityP29_tag_LMX_STRUCT_ISO_CAPA_INFOPcPj (Lines 52597-52640)",
+        "line_numbers": "52597-52640 -> 28646-28680",
+        "evidence_instructions": [
+          "Line 52631: mov w0, #0x20; movk w0, #0x200, lsl #16 (Tag 0x02000020)",
+          "Line 52633: bl __Z40LMX_func_api_Get_Tag_CapabilityInfo_Size..."
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_PANASONIC_ListProperty (0x9108)",
+        "line_number": "985",
+        "usage_in_ptp_c": "ptp_panasonic_getdevicepropertydesc (line 1685)"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 150,
+      "safety_validation": "Read-only ISO enum table query.",
+      "name": "cmd_capa_05_iso",
+      "opcode": 37128,
+      "params": [
+        33554464,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "CMD_CAPA_06_AF_CONFIG",
+      "priority_tier": "Tier_4",
+      "category": "AF & Recognition",
+      "command_name": "AF_Config_GetCapability (Supported AF Modes & Target Recognition Capa)",
+      "opcode_hex": "0x9108",
+      "opcode_dec": 37128,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x02000070",
+      "tag_or_param_dec": 33554544,
+      "param_count": 3,
+      "param_layout": "Param 1: Tag uint32 = 0x02000070, Param 2: uint32 = 0, Param 3: uint32 = 0",
+      "struct_name": "_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFO",
+      "struct_offsets": {
+        "0x00": "Count (uint32)",
+        "0x04": "SupportedAFModes (uint16[])",
+        "variable": "SupportedRecognitionTypes (Human, Animal, Car, Motorcycle)"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj (Lines 45128-45165)",
+        "line_numbers": "45128-45165 -> 28646-28680",
+        "evidence_instructions": [
+          "Line 45159: mov w0, #0x70; movk w0, #0x200, lsl #16 (Tag 0x02000070)",
+          "Line 45161: bl __Z40LMX_func_api_Get_Tag_CapabilityInfo_Size..."
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_PANASONIC_ListProperty (0x9108)",
+        "line_number": "985",
+        "usage_in_ptp_c": "ptp_panasonic_getdevicepropertydesc (line 1685)"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 150,
+      "safety_validation": "Read-only AF capability list query.",
+      "name": "cmd_capa_06_af_config",
+      "opcode": 37128,
+      "params": [
+        33554544,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "CMD_CAPA_07_VIDEO_CONFIG",
+      "priority_tier": "Tier_4",
+      "category": "Video Quality",
+      "command_name": "Mov_Config_GetCapability (Supported Video Resolutions, Framerates & Codecs)",
+      "opcode_hex": "0x9108",
+      "opcode_dec": 37128,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x06000010",
+      "tag_or_param_dec": 100663312,
+      "param_count": 3,
+      "param_layout": "Param 1: Tag uint32 = 0x06000010, Param 2: uint32 = 0, Param 3: uint32 = 0",
+      "struct_name": "_tag_LMX_STRUCT_MOV_MENU_CONFIG_CAPA_INFO",
+      "struct_offsets": {
+        "0x00": "Count (uint32)",
+        "0x04": "SupportedVideoModes (uint16[]: 6K OpenGate, 5.9K, C4K, 4K, FHD, ProRes HQ/422, All-Intra, LongGOP)"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z37LMX_func_api_Mov_Config_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_CONFIG_CAPA_INFOPcPj (Lines 56251-56290)",
+        "line_numbers": "56251-56290 -> 28646-28680",
+        "evidence_instructions": [
+          "Line 56281-56282: mov w0, #0x10; movk w0, #0x600, lsl #16 (Tag 0x06000010)",
+          "Line 56285: bl __Z40LMX_func_api_Get_Tag_CapabilityInfo_Size..."
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_PANASONIC_ListProperty (0x9108)",
+        "line_number": "985",
+        "usage_in_ptp_c": "ptp_panasonic_getdevicepropertydesc (line 1685)"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Anchored directly in libLmxptpif disassembly"
+      },
+      "estimated_execution_time_ms": 180,
+      "safety_validation": "Read-only video format capability table query.",
+      "name": "cmd_capa_07_video_config",
+      "opcode": 37128,
+      "params": [
+        100663312,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "CMD_STD_01_PROP_DESC_BATTERY",
+      "priority_tier": "Tier_5",
+      "category": "Standard PTP Properties",
+      "command_name": "GetDevicePropDesc (0x5001 Battery Level)",
+      "opcode_hex": "0x1014",
+      "opcode_dec": 4116,
+      "opcode_standard": "PTP Standard 1.1",
+      "tag_or_param_hex": "0x00005001",
+      "tag_or_param_dec": 20481,
+      "param_count": 1,
+      "param_layout": "Param 1: DevicePropertyCode uint16 = 0x5001",
+      "struct_name": "_tag_LMX_STRUCT_PTP_DATASET_DEVICE_PROP_DESC",
+      "struct_offsets": {
+        "0x00": "PropertyCode (0x5001)",
+        "0x02": "DataType (uint16, 0x0002 uint8)",
+        "0x04": "GetSet (uint8, 0x00 Read-Only)",
+        "0x05": "FactoryDefaultValue",
+        "0x06": "CurrentValue (% remaining)",
+        "0x07": "FormFlag"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z35Lmx_lib_ptpif_std_GetDevicePropDescP44_tag_LMX_STRUCT_PTP_DATASET_DEVICE_PROP_DESCPc (Lines 58157-58180)",
+        "line_numbers": "58157-58180",
+        "evidence_instructions": [
+          "Line 58171: mov w8, #0x1014; strh w8, [sp, #0x38]",
+          "Line 58174: mov w8, #0x1 (1 param); stur w8, [sp, #0x56]",
+          "Line 58176: ldrh w8, [x19]; stur w8, [sp, #0x42] (PropertyCode)",
+          "Line 58179: mov w0, #0x1014; bl __Z42Lmx_lib_ptpif_util_Get_NextPhase_StdOpCodetPj"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_GetDevicePropDesc (0x1014) / PTP_DPC_BatteryLevel (0x5001)",
+        "line_number": "548",
+        "usage_in_ptp_c": "ptp_getdevicepropdesc"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Standard PTP property query"
+      },
+      "estimated_execution_time_ms": 80,
+      "safety_validation": "Read-only standard PTP property descriptor query.",
+      "name": "cmd_std_01_prop_desc_battery",
+      "opcode": 4116,
+      "params": [
+        20481
+      ]
+    },
+    {
+      "id": "CMD_STD_02_PROP_DESC_EXPOSURE_TIME",
+      "priority_tier": "Tier_5",
+      "category": "Standard PTP Properties",
+      "command_name": "GetDevicePropDesc (0x500D Exposure Time)",
+      "opcode_hex": "0x1014",
+      "opcode_dec": 4116,
+      "opcode_standard": "PTP Standard 1.1",
+      "tag_or_param_hex": "0x0000500d",
+      "tag_or_param_dec": 20493,
+      "param_count": 1,
+      "param_layout": "Param 1: DevicePropertyCode uint16 = 0x500D",
+      "struct_name": "_tag_LMX_STRUCT_PTP_DATASET_DEVICE_PROP_DESC",
+      "struct_offsets": {
+        "0x00": "PropertyCode (0x500D)",
+        "0x02": "DataType (uint16, uint32 microseconds)",
+        "0x04": "GetSet",
+        "0x05": "FactoryDefaultValue",
+        "0x09": "CurrentValue",
+        "0x0d": "FormFlag & Enum/Range"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z35Lmx_lib_ptpif_std_GetDevicePropDescP44_tag_LMX_STRUCT_PTP_DATASET_DEVICE_PROP_DESCPc (Lines 58157-58180)",
+        "line_numbers": "58157-58180",
+        "evidence_instructions": [
+          "Line 58171: mov w8, #0x1014; strh w8, [sp, #0x38]"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_GetDevicePropDesc (0x1014) / PTP_DPC_ExposureTime (0x500D)",
+        "line_number": "548",
+        "usage_in_ptp_c": "ptp_getdevicepropdesc"
+      },
+      "existing_code_reference": {
+        "file": "N/A",
+        "line_number": "N/A",
+        "status": "Standard PTP property query"
+      },
+      "estimated_execution_time_ms": 80,
+      "safety_validation": "Read-only standard PTP property descriptor query.",
+      "name": "cmd_std_02_prop_desc_exposure_time",
+      "opcode": 4116,
+      "params": [
+        20493
+      ]
+    },
+    {
+      "id": "CMD_FULL_01_DAT_SNAPSHOT",
+      "priority_tier": "Tier_6",
+      "category": "Full State Snapshot",
+      "command_name": "Get_SetupFilesConfigSet_Info (Full Serialized .DAT Camera State Dump)",
+      "opcode_hex": "0x9421",
+      "opcode_dec": 37921,
+      "opcode_standard": "Panasonic Vendor Extension",
+      "tag_or_param_hex": "0x080000a2",
+      "tag_or_param_dec": 134217890,
+      "param_count": 1,
+      "param_layout": "Param 1: Subcode uint32 = 0x080000a2",
+      "struct_name": "_tag_LMX_STRUCT_SETUP_FILES_CFG_SET_INFO",
+      "struct_offsets": {
+        "0x00": "Magic \"Panasonic\" (10 bytes)",
+        "0x12": "Model \"DC-S1M2\" (26 bytes)",
+        "0x2c": "DeclaredPayloadLength (uint32, 9,197,372 bytes)",
+        "0x30": "FormatTag (4 bytes)",
+        "0x0102cc": "Container Record 0x0004 (declared len 0x50004)",
+        "0x017be8": "Target Subtag 0x030f [Slots 0, 1, 2] (High-Res Save 1st Normal Picture Candidate)",
+        "0x03fe0c": "Fan Subtag 0x045d [Slots 0, 1, 2]",
+        "EOF-5": "Trailer Sentinel (0xFFFF0000)",
+        "EOF-1": "Two's complement Checksum Byte (sum mod 256 == 0)"
+      },
+      "disassembly_reference": {
+        "file": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "symbol": "__Z49Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfigSet_InfoP40_tag_LMX_STRUCT_SETUP_FILES_CFG_SET_INFOjPc (Lines 37325-37353)",
+        "line_numbers": "37325-37353",
+        "evidence_instructions": [
+          "Line 37344: mov w8, #0x9421",
+          "Line 37345: strh w8, [sp, #0x38]",
+          "Line 37347: mov w8, #0x1 (1 param)",
+          "Line 37348: stur w8, [sp, #0x56]",
+          "Line 37349: stur w19, [sp, #0x42] (Subcode 0x080000a2)",
+          "Line 37351: mov w0, #0x9421",
+          "Line 37352: bl __Z42Lmx_lib_ptpif_util_Get_NextPhase_StdOpCodetPj"
+        ]
+      },
+      "libgphoto2_reference": {
+        "file": "analysis/sources/libgphoto2/camlibs/ptp2/ptp.h",
+        "macro_name": "PTP_OC_PANASONIC_9421 / PTP_DPC_PANASONIC_080000a2",
+        "line_number": "Vendor Bulk Upload opcode family",
+        "usage_in_ptp_c": "Direct bulk data pull"
+      },
+      "existing_code_reference": {
+        "file": "analysis/capture_s1m2_baseline.m",
+        "line_number": "Lines 69-70, 75 (ops[1]=0x9421, tags[1]=0x080000a2 -> config_1.response.bin, 9,197,421 bytes)",
+        "status": "100% Empirically verified across 5 live captures (baseline_20261008_01 to highres_firstnormal_off_fan_20261008_05)"
+      },
+      "estimated_execution_time_ms": 3200,
+      "safety_validation": "Read-only serialized state extraction; downloads camera settings without modifying any memory or flash.",
+      "name": "cmd_full_01_dat_snapshot",
+      "opcode": 37921,
+      "params": [
+        134217890
+      ]
+    }
+  ]
+}

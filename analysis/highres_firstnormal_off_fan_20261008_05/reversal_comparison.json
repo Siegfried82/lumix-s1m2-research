@@ -1,0 +1,123 @@
+{
+  "sequence": [
+    "highres_20261008_02",
+    "highres_firstnormal_off_20261008_03",
+    "highres_firstnormal_on_fan_20261008_04",
+    "highres_firstnormal_off_fan_20261008_05"
+  ],
+  "on04_to_off05": [
+    {
+      "offset": 97268,
+      "hex": "0x17bf4",
+      "before": 1,
+      "after": 2
+    },
+    {
+      "offset": 97296,
+      "hex": "0x17c10",
+      "before": 1,
+      "after": 2
+    },
+    {
+      "offset": 97324,
+      "hex": "0x17c2c",
+      "before": 1,
+      "after": 2
+    },
+    {
+      "offset": 9197408,
+      "hex": "0x8c5760",
+      "before": 217,
+      "after": 214
+    }
+  ],
+  "off03_to_off05": [
+    {
+      "offset": 60360,
+      "hex": "0xebc8",
+      "before": 1,
+      "after": 2
+    },
+    {
+      "offset": 60388,
+      "hex": "0xebe4",
+      "before": 1,
+      "after": 2
+    },
+    {
+      "offset": 60416,
+      "hex": "0xec00",
+      "before": 1,
+      "after": 2
+    },
+    {
+      "offset": 9197408,
+      "hex": "0x8c5760",
+      "before": 217,
+      "after": 214
+    }
+  ],
+  "candidate_traces": {
+    "0xebc8": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "0xebe4": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "0xec00": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "0x17bf4": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "0x17c10": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "0x17c2c": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "0x3fe18": [
+      1,
+      4,
+      4,
+      4
+    ],
+    "0x3fe34": [
+      1,
+      4,
+      4,
+      4
+    ],
+    "0x3fe50": [
+      1,
+      4,
+      4,
+      4
+    ],
+    "0x8c5760": [
+      229,
+      217,
+      217,
+      214
+    ]
+  },
+  "drive_value": 10
+}

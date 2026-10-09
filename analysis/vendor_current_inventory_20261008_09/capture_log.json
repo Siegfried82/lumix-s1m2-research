@@ -1,0 +1,502 @@
+[
+  {
+    "purpose" : "allowlisted_read_inventory",
+    "read_count" : 32,
+    "event" : "started",
+    "time_utc" : "2026-10-08T18:26:03Z"
+  },
+  {
+    "event" : "device_found",
+    "model" : "DC-S1M2",
+    "time_utc" : "2026-10-08T18:26:03Z"
+  },
+  {
+    "event" : "session_opened",
+    "time_utc" : "2026-10-08T18:26:03Z"
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554704
+    ],
+    "data_bytes" : 110,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:03Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_02000110",
+    "index" : 0
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554720
+    ],
+    "data_bytes" : 80,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:03Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_02000120",
+    "index" : 1
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554880
+    ],
+    "data_bytes" : 20,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:03Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020001c0",
+    "index" : 2
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554480
+    ],
+    "data_bytes" : 38,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:03Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_02000030",
+    "index" : 3
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554656
+    ],
+    "data_bytes" : 912,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:03Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000e0",
+    "index" : 4
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554657
+    ],
+    "data_bytes" : 10,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:03Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000e1",
+    "index" : 5
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554658
+    ],
+    "data_bytes" : 12,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:03Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000e2",
+    "index" : 6
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554659
+    ],
+    "data_bytes" : 10,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000e3",
+    "index" : 7
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554660
+    ],
+    "data_bytes" : 12,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000e4",
+    "index" : 8
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554661
+    ],
+    "data_bytes" : 10,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000e5",
+    "index" : 9
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554663
+    ],
+    "data_bytes" : 10,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000e7",
+    "index" : 10
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554664
+    ],
+    "data_bytes" : 10,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000e8",
+    "index" : 11
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554665
+    ],
+    "data_bytes" : 10,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000e9",
+    "index" : 12
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554666
+    ],
+    "data_bytes" : 10,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000ea",
+    "index" : 13
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554667
+    ],
+    "data_bytes" : 10,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000eb",
+    "index" : 14
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554668
+    ],
+    "data_bytes" : 10,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000ec",
+    "index" : 15
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554528
+    ],
+    "data_bytes" : 22,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_02000060",
+    "index" : 16
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554753
+    ],
+    "data_bytes" : 10,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_02000141",
+    "index" : 17
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554560
+    ],
+    "data_bytes" : 80,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_02000080",
+    "index" : 18
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554566
+    ],
+    "data_bytes" : 10,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_02000086",
+    "index" : 19
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554567
+    ],
+    "data_bytes" : 10,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_02000087",
+    "index" : 20
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554568
+    ],
+    "data_bytes" : 10,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_02000088",
+    "index" : 21
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554849
+    ],
+    "data_bytes" : 10,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020001a1",
+    "index" : 22
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554800
+    ],
+    "data_bytes" : 30,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_02000170",
+    "index" : 23
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554496
+    ],
+    "data_bytes" : 22,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_02000040",
+    "index" : 24
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554544
+    ],
+    "data_bytes" : 110,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_02000070",
+    "index" : 25
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554624
+    ],
+    "data_bytes" : 48,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000c0",
+    "index" : 26
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554512
+    ],
+    "data_bytes" : 50,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_02000050",
+    "index" : 27
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554608
+    ],
+    "data_bytes" : 40,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000b0",
+    "index" : 28
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554464
+    ],
+    "data_bytes" : 34,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_02000020",
+    "index" : 29
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554864
+    ],
+    "data_bytes" : 150,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020001b0",
+    "index" : 30
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554592
+    ],
+    "data_bytes" : 60,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "current_020000a0",
+    "index" : 31
+  },
+  {
+    "event" : "session_closed",
+    "error" : "",
+    "time_utc" : "2026-10-08T18:26:04Z"
+  }
+]

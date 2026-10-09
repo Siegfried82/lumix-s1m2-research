@@ -1,0 +1,38 @@
+{
+  "total_byte_diffs": 10,
+  "diff_offsets_sample": [
+    8256,
+    8284,
+    8312,
+    8340,
+    8368,
+    8396,
+    52836,
+    52880,
+    52924,
+    9197408
+  ],
+  "changed_records_count": 1,
+  "changed_records": [
+    {
+      "offset": 276,
+      "tag_hex": "0x001c",
+      "type": "large",
+      "declared_len": 65536,
+      "diff_bytes_count": 9,
+      "diff_details": [
+        "offset +0x1f2c: 0x05 ('.') -> 0x04 ('.')",
+        "offset +0x1f48: 0x05 ('.') -> 0x04 ('.')",
+        "offset +0x1f64: 0x05 ('.') -> 0x04 ('.')",
+        "offset +0x1f80: 0x02 ('.') -> 0x03 ('.')",
+        "offset +0x1f9c: 0x02 ('.') -> 0x03 ('.')",
+        "offset +0x1fb8: 0x02 ('.') -> 0x03 ('.')",
+        "offset +0xcd50: 0xab ('.') -> 0x56 ('V')",
+        "offset +0xcd7c: 0xab ('.') -> 0x56 ('V')",
+        "offset +0xcda8: 0xab ('.') -> 0x56 ('V')"
+      ],
+      "raw_single_hex": "1c0000000000010003020202020202020202020202020200050000001c000000",
+      "raw_highres_hex": "1c0000000000010003020202020202020202020202020200050000001c000000"
+    }
+  ]
+}

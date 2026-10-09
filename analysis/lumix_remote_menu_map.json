@@ -1,0 +1,165 @@
+{
+  "protocol": "Panasonic Lumix Remote Menu Operation Protocol",
+  "client_version": "LUMIX Tether 2.12.0.5",
+  "target_camera": "DC-S1M2 / DC-S1RM2 / DC-S5M2X / DC-BS1H",
+  "audit_date": "2026-10-08",
+  "menu_protocol_nature": {
+    "type": "Virtual Touchscreen Coordinate Relay (LiveView Overlay)",
+    "is_structured_parameter_read_write": false,
+    "is_discrete_button_key_emulation": false,
+    "has_client_side_menu_tree": false,
+    "has_client_side_menu_item_ids": false,
+    "has_client_side_string_table": false,
+    "summary": "远程菜单并非结构化参数树或离散物理按键仿真，而是上位机在LiveView视频流上方覆盖1000x1000归一化透明触控层。机身固件在CamStatus_Menu_Displayed状态下将机内菜单OS直接渲染至视频流，上位机仅将鼠标点击事件归一化为(x, y)像素坐标并通过PTP 0x9416下发至机身触控数字化仪。"
+  },
+  "coordinate_system": {
+    "normalized_space": "1000 x 1000",
+    "x_range": [
+      0,
+      999
+    ],
+    "y_range": [
+      0,
+      999
+    ],
+    "validation_assembly": "cmp w1, #0x3e7; b.hi (DeviceAdapter::adp_LMX_func_api_Rec_Ctrl_Menu_Touch_Down_MenuEii L147686-L147689)",
+    "qml_formula": "x_conv = parseInt((mouse.x * 1000) / lvMenuDsp.width); y_conv = parseInt((mouse.y * 1000) / lvMenuDsp.height)"
+  },
+  "ptp_command_interfaces": [
+    {
+      "name": "LMX_func_api_Rec_Ctrl_Menu",
+      "opcode": "0x9416",
+      "library": "libLmxptpif.dylib",
+      "disassembly_lines": "tether_2_12_ptp_arm64_disassembly.txt:68173-68212",
+      "dispatch_table_va": "0x230198",
+      "param_struct": "_tag_LMX_STRUCT_REC_CTRL",
+      "struct_layout": {
+        "+0x00": "uint32_t tag (subcommand identifier)",
+        "+0x04": "uint16_t param_count (number of uint32 words in params)",
+        "+0x06": "uint16_t padding",
+        "+0x08": "uint32_t params[param_count] (stored as uint32 in memory, serialized according to dispatch table)"
+      },
+      "sub_commands": [
+        {
+          "tag": "0x09000021",
+          "tag_hex": "0x09000021",
+          "name": "Start_Menu",
+          "payload_length_bytes": 0,
+          "handler_va": "0x00044230",
+          "handler_symbol": "__ZL28Lmx_lib_ptpif_LmxExt_TBD_NOPPhP24_tag_LMX_STRUCT_REC_CTRL",
+          "device_adapter_method": "adp_LMX_func_api_Rec_Ctrl_Menu_Start_Menu",
+          "app_disassembly_lines": "tether_2_12_app_arm64_disassembly.txt:147396-147500",
+          "qt_metacall_index_line": "tether_2_12_app_arm64_disassembly.txt:260207",
+          "qml_caller": "LTLiveViewControlItem.qml:889",
+          "description": "通知机身进入远程菜单模式，机身将渲染菜单图层叠加到LiveView图像并进入CamStatus_Menu_Displayed状态"
+        },
+        {
+          "tag": "0x09000022",
+          "tag_hex": "0x09000022",
+          "name": "End_Menu",
+          "payload_length_bytes": 0,
+          "handler_va": "0x00044230",
+          "handler_symbol": "__ZL28Lmx_lib_ptpif_LmxExt_TBD_NOPPhP24_tag_LMX_STRUCT_REC_CTRL",
+          "device_adapter_method": "adp_LMX_func_api_Rec_Ctrl_Menu_End_Menu",
+          "app_disassembly_lines": "tether_2_12_app_arm64_disassembly.txt:147544-147648",
+          "qt_metacall_index_lines": [
+            "tether_2_12_app_arm64_disassembly.txt:254059",
+            "tether_2_12_app_arm64_disassembly.txt:259050"
+          ],
+          "qml_callers": [
+            "LTLiveViewControlItem.qml:903",
+            "LTLiveViewWindow.qml:3259",
+            "LTLiveViewWindow.qml:4200"
+          ],
+          "description": "通知机身退出菜单模式，恢复常规取景拍摄LiveView"
+        },
+        {
+          "tag": "0x09000023",
+          "tag_hex": "0x09000023",
+          "name": "Touch_Down_Menu",
+          "payload_length_bytes": 4,
+          "handler_va": "0x00044204",
+          "handler_symbol": "__ZL43Lmx_lib_ptpif_LmxExt_TBD_PACK_UINT16_PARAMSPhP24_tag_LMX_STRUCT_REC_CTRL",
+          "serialization": "读取结构体offset+8与+12处的posX、posY(uint32)，按两个uint16_t小端打包至PTP输出载荷(4字节: uint16_t posX, uint16_t posY)",
+          "device_adapter_method": "adp_LMX_func_api_Rec_Ctrl_Menu_Touch_Down_Menu",
+          "app_disassembly_lines": "tether_2_12_app_arm64_disassembly.txt:147678-147792",
+          "qt_metacall_index_line": "tether_2_12_app_arm64_disassembly.txt:262639",
+          "qml_caller": "LTLiveViewWindow.qml:3970",
+          "description": "机身菜单屏幕模拟按下事件，参数为归一化坐标[0..999]"
+        },
+        {
+          "tag": "0x09000024",
+          "tag_hex": "0x09000024",
+          "name": "Touch_Up_Menu",
+          "payload_length_bytes": 4,
+          "handler_va": "0x00044204",
+          "handler_symbol": "__ZL43Lmx_lib_ptpif_LmxExt_TBD_PACK_UINT16_PARAMSPhP24_tag_LMX_STRUCT_REC_CTRL",
+          "serialization": "读取posX、posY并小端打包为4字节uint16_t对",
+          "device_adapter_method": "adp_LMX_func_api_Rec_Ctrl_Menu_Touch_Up_Menu",
+          "app_disassembly_lines": "tether_2_12_app_arm64_disassembly.txt:147836-147950",
+          "qt_metacall_index_line": "tether_2_12_app_arm64_disassembly.txt:259034",
+          "qml_caller": "LTLiveViewWindow.qml:3971",
+          "description": "机身菜单屏幕模拟抬起事件，参数为归一化坐标[0..999]，通常与Touch_Down_Menu成对瞬时调用触发点击"
+        }
+      ]
+    },
+    {
+      "name": "LMX_func_api_Setup_Ctrl_MenuSave",
+      "opcode": "0x9406",
+      "library": "libLmxptpif.dylib",
+      "disassembly_lines": "tether_2_12_ptp_arm64_disassembly.txt:48025-48063",
+      "tag": "0x09000011",
+      "payload_length_bytes": 0,
+      "device_adapter_caller": "DeviceAdapter::adp_LMX_func_api_Power_SavingInfo_Set_Tether_Connect_Mode (tether_2_12_app_arm64_disassembly.txt:43433)",
+      "description": "设置控制指令组(0x9406)的MenuSave标签，其语义为机身配置存储区提交(Flash Commit)，用于将省电Tether连接模式写入机内非易失存储，不负责菜单UI交互"
+    }
+  ],
+  "camera_state_and_notification": {
+    "notification_tag": "0x09000010",
+    "callback_registration_lines": "tether_2_12_app_arm64_disassembly.txt:217079-217082",
+    "callback_handler_lines": "tether_2_12_app_arm64_disassembly.txt:217322-217500",
+    "target_status_enum": "CamStatus_Menu_Displayed",
+    "enum_string_offset": "0x9db7d7",
+    "qml_binding": "LTLiveViewWindow.qml:3961 (lvMenuDsp.visible = (deviceAdapter.cameraStatus == LT.Utilities.CamStatus_Menu_Displayed))"
+  },
+  "capability_flags": {
+    "property_name": "recCtrlMenuEnable",
+    "getter": "DeviceAdapter::recCtrlMenuEnable (tether_2_12_app_arm64_disassembly.txt:155371)",
+    "setter": "DeviceAdapter::setRecCtrlMenuEnable (tether_2_12_app_arm64_disassembly.txt:41595)",
+    "signal": "DeviceAdapter::recCtrlMenuEnableChanged (tether_2_12_app_arm64_disassembly.txt:273597)",
+    "struct_offset": "offset +0xac in camera_info_struct ([sp, #0x1fc] in setCameraInfoOfSelectedCamera L36197-L36225)",
+    "official_support_matrix": "sources/lumixtether_supported_functions.html: S1M2/S1M2ES/S1RM2/S5M2X/BS1H = OK; S1/S1R/S1H/S5/S5M2/GH5/GH5S/G9 = NG"
+  },
+  "target_features_mapping_evaluation": {
+    "pixel_shift_mechanical_shutter": {
+      "exposed_in_remote_menu_client": false,
+      "reason": "上位机不包含菜单项ID或文本字典，菜单界面由机身端渲染至视频流",
+      "executable_path": ""
+    },
+    "save_1st_normal_picture": {
+      "exposed_in_remote_menu_client": false,
+      "reason": "上位机零数据字典，无直接PTP Property标签",
+      "executable_path": "机内触控坐标宏点击，或.DAT记录流二进制比对"
+    },
+    "in_camera_hdr": {
+      "exposed_in_remote_menu_client": false,
+      "reason": "无独立PTP Property标签，客户端仅作为触控中继",
+      "executable_path": "机内触控坐标宏点击，或.DAT记录流二进制比对"
+    }
+  },
+  "offline_verification_bridge_and_missing_assets": {
+    "verifiable_bridge": {
+      "status": "VERIFIED_OFFLINE",
+      "components": [
+        "PTP OpCode 0x9416完整报文格式与四类子标签(0x09000021-0x09000024)",
+        "0..999归一化触控坐标转换公式与边界检查(cmp w1, #0x3e7)",
+        "libLmxptpif分发跳转表(0x230198)与小端打包函数(__ZL43Lmx_lib_ptpif_LmxExt_TBD_PACK_UINT16_PARAMS)",
+        "CamStatus_Menu_Displayed状态字互锁与透明矩形lvMenuDsp渲染逻辑"
+      ]
+    },
+    "missing_assets": {
+      "asset_1": "S1M2在CamStatus_Menu_Displayed模式下的LiveView参考帧截屏与UI元素像素Bounding Box坐标字典(用于构造无屏幕点击宏)",
+      "asset_2": ""
+    }
+  }
+}

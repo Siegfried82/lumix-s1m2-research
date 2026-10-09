@@ -1,0 +1,70 @@
+[
+  {
+    "purpose" : "unchanged_settings_baseline",
+    "read_count" : 4,
+    "event" : "started",
+    "time_utc" : "2026-10-08T17:47:25Z"
+  },
+  {
+    "event" : "device_found",
+    "model" : "DC-S1M2",
+    "time_utc" : "2026-10-08T17:47:26Z"
+  },
+  {
+    "event" : "session_opened",
+    "time_utc" : "2026-10-08T17:47:26Z"
+  },
+  {
+    "opcode" : "0x9402",
+    "data_bytes" : 80,
+    "ok" : true,
+    "event" : "read_response",
+    "response_bytes" : 12,
+    "time_utc" : "2026-10-08T17:47:26Z",
+    "tag" : "0x02000080",
+    "response_code" : "0x2001",
+    "error" : "",
+    "index" : 0
+  },
+  {
+    "opcode" : "0x9421",
+    "data_bytes" : 9197421,
+    "ok" : true,
+    "event" : "read_response",
+    "response_bytes" : 12,
+    "time_utc" : "2026-10-08T17:47:31Z",
+    "tag" : "0x080000a2",
+    "response_code" : "0x2001",
+    "error" : "",
+    "index" : 1
+  },
+  {
+    "opcode" : "0x9421",
+    "data_bytes" : 9197421,
+    "ok" : true,
+    "event" : "read_response",
+    "response_bytes" : 12,
+    "time_utc" : "2026-10-08T17:47:36Z",
+    "tag" : "0x080000a2",
+    "response_code" : "0x2001",
+    "error" : "",
+    "index" : 2
+  },
+  {
+    "opcode" : "0x9402",
+    "data_bytes" : 80,
+    "ok" : true,
+    "event" : "read_response",
+    "response_bytes" : 12,
+    "time_utc" : "2026-10-08T17:47:36Z",
+    "tag" : "0x02000080",
+    "response_code" : "0x2001",
+    "error" : "",
+    "index" : 3
+  },
+  {
+    "event" : "session_closed",
+    "error" : "",
+    "time_utc" : "2026-10-08T17:47:36Z"
+  }
+]

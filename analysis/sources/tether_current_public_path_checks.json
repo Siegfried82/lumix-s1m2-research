@@ -1,0 +1,16 @@
+{
+  "note": "Two unauthenticated public URL checks derived from official filename and acquired package path. No serial, credentials, form spoofing or device access.",
+  "checks": [
+    {
+      "url": "https://eww.pavc.panasonic.co.jp/dscoi/lumixtether/LUMIXTether_v2_12.pkg",
+      "status": 200,
+      "final_url": "https://eww.pavc.panasonic.co.jp/dscoi/lumixtether/LUMIXTether_v2_12.pkg",
+      "size": "74731216",
+      "type": "application/vnd.apple.installer+xml"
+    },
+    {
+      "url": "https://eww.pavc.panasonic.co.jp/dscoi/lumixtether/aw/LUMIXTether_v2_12.pkg",
+      "status": 404
+    }
+  ]
+}

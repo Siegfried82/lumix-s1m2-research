@@ -1,0 +1,2427 @@
+{
+  "created_utc": "2026-10-08",
+  "device": "DC-S1M2",
+  "reported_firmware": "1.4",
+  "serial_included_in_public_summary": false,
+  "read_only_policy": "No settings writes, capture triggers, firmware update or memory probes sent; sessions opened and closed for reading.",
+  "all_sessions_closed_without_error": true,
+  "configuration_before_after_identical": true,
+  "responses": [
+    {
+      "directory": "device_inventory_20261008_06",
+      "opcode": "0x1001",
+      "data_bytes": 233,
+      "ok": true,
+      "event": "device_info_response",
+      "time_utc": "2026-10-08T18:20:40Z",
+      "response_code": "0x2001",
+      "error": ""
+    },
+    {
+      "directory": "device_inventory_20261008_06",
+      "opcode": "0x9402",
+      "data_bytes": 80,
+      "ok": true,
+      "event": "read_response",
+      "response_bytes": 12,
+      "time_utc": "2026-10-08T18:20:40Z",
+      "tag": "0x02000080",
+      "response_code": "0x2001",
+      "error": "",
+      "index": 0
+    },
+    {
+      "directory": "device_inventory_20261008_06",
+      "opcode": "0x9421",
+      "data_bytes": 9197421,
+      "ok": true,
+      "event": "read_response",
+      "response_bytes": 12,
+      "time_utc": "2026-10-08T18:20:46Z",
+      "tag": "0x080000a2",
+      "response_code": "0x2001",
+      "error": "",
+      "index": 1
+    },
+    {
+      "directory": "device_inventory_20261008_06",
+      "opcode": "0x9421",
+      "data_bytes": 9197421,
+      "ok": true,
+      "event": "read_response",
+      "response_bytes": 12,
+      "time_utc": "2026-10-08T18:20:51Z",
+      "tag": "0x080000a2",
+      "response_code": "0x2001",
+      "error": "",
+      "index": 2
+    },
+    {
+      "directory": "device_inventory_20261008_06",
+      "opcode": "0x9402",
+      "data_bytes": 80,
+      "ok": true,
+      "event": "read_response",
+      "response_bytes": 12,
+      "time_utc": "2026-10-08T18:20:51Z",
+      "tag": "0x02000080",
+      "response_code": "0x2001",
+      "error": "",
+      "index": 3
+    },
+    {
+      "directory": "standard_inventory_20261008_07",
+      "opcode": "0x1004",
+      "params": [],
+      "data_bytes": 12,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:22:46Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "storage_ids",
+      "index": 0
+    },
+    {
+      "directory": "standard_inventory_20261008_07",
+      "opcode": "0x1014",
+      "params": [
+        20481
+      ],
+      "data_bytes": 11,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:22:46Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "battery_description",
+      "index": 1
+    },
+    {
+      "directory": "standard_inventory_20261008_07",
+      "opcode": "0x1015",
+      "params": [
+        20481
+      ],
+      "data_bytes": 1,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:22:46Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "battery_value",
+      "index": 2
+    },
+    {
+      "directory": "storage_inventory_20261008_08",
+      "opcode": "0x1005",
+      "params": [
+        65536
+      ],
+      "data_bytes": 0,
+      "ok": 0,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:23:10Z",
+      "transport_ok": true,
+      "response_code": "0x2008",
+      "error": "",
+      "name": "storage_info_10000",
+      "index": 0
+    },
+    {
+      "directory": "storage_inventory_20261008_08",
+      "opcode": "0x1005",
+      "params": [
+        131072
+      ],
+      "data_bytes": 0,
+      "ok": 0,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:23:10Z",
+      "transport_ok": true,
+      "response_code": "0x2008",
+      "error": "",
+      "name": "storage_info_20000",
+      "index": 1
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554704
+      ],
+      "data_bytes": 110,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:03Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000110",
+      "index": 0
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554720
+      ],
+      "data_bytes": 80,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:03Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000120",
+      "index": 1
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554880
+      ],
+      "data_bytes": 20,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:03Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020001c0",
+      "index": 2
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554480
+      ],
+      "data_bytes": 38,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:03Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000030",
+      "index": 3
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554656
+      ],
+      "data_bytes": 912,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:03Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000e0",
+      "index": 4
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554657
+      ],
+      "data_bytes": 10,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:03Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000e1",
+      "index": 5
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554658
+      ],
+      "data_bytes": 12,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:03Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000e2",
+      "index": 6
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554659
+      ],
+      "data_bytes": 10,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000e3",
+      "index": 7
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554660
+      ],
+      "data_bytes": 12,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000e4",
+      "index": 8
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554661
+      ],
+      "data_bytes": 10,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000e5",
+      "index": 9
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554663
+      ],
+      "data_bytes": 10,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000e7",
+      "index": 10
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554664
+      ],
+      "data_bytes": 10,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000e8",
+      "index": 11
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554665
+      ],
+      "data_bytes": 10,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000e9",
+      "index": 12
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554666
+      ],
+      "data_bytes": 10,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000ea",
+      "index": 13
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554667
+      ],
+      "data_bytes": 10,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000eb",
+      "index": 14
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554668
+      ],
+      "data_bytes": 10,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000ec",
+      "index": 15
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554528
+      ],
+      "data_bytes": 22,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000060",
+      "index": 16
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554753
+      ],
+      "data_bytes": 10,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000141",
+      "index": 17
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554560
+      ],
+      "data_bytes": 80,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000080",
+      "index": 18
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554566
+      ],
+      "data_bytes": 10,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000086",
+      "index": 19
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554567
+      ],
+      "data_bytes": 10,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000087",
+      "index": 20
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554568
+      ],
+      "data_bytes": 10,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000088",
+      "index": 21
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554849
+      ],
+      "data_bytes": 10,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020001a1",
+      "index": 22
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554800
+      ],
+      "data_bytes": 30,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000170",
+      "index": 23
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554496
+      ],
+      "data_bytes": 22,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000040",
+      "index": 24
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554544
+      ],
+      "data_bytes": 110,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000070",
+      "index": 25
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554624
+      ],
+      "data_bytes": 48,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000c0",
+      "index": 26
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554512
+      ],
+      "data_bytes": 50,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000050",
+      "index": 27
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554608
+      ],
+      "data_bytes": 40,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000b0",
+      "index": 28
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554464
+      ],
+      "data_bytes": 34,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000020",
+      "index": 29
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554864
+      ],
+      "data_bytes": 150,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020001b0",
+      "index": 30
+    },
+    {
+      "directory": "vendor_current_inventory_20261008_09",
+      "opcode": "0x9402",
+      "params": [
+        33554592
+      ],
+      "data_bytes": 60,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:04Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020000a0",
+      "index": 31
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554704,
+        0,
+        0
+      ],
+      "data_bytes": 818,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_02000110",
+      "index": 0
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554720,
+        0,
+        0
+      ],
+      "data_bytes": 524,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_02000120",
+      "index": 1
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        134217808,
+        0,
+        0
+      ],
+      "data_bytes": 28,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_08000050",
+      "index": 2
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        302055584,
+        0,
+        0
+      ],
+      "data_bytes": 232,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_120100a0",
+      "index": 3
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554880,
+        0,
+        0
+      ],
+      "data_bytes": 160,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_020001c0",
+      "index": 4
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554896,
+        0,
+        0
+      ],
+      "data_bytes": 1664,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_020001d0",
+      "index": 5
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554480,
+        0,
+        0
+      ],
+      "data_bytes": 506,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_02000030",
+      "index": 6
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554656,
+        0,
+        0
+      ],
+      "data_bytes": 1086,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_020000e0",
+      "index": 7
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554928,
+        0,
+        0
+      ],
+      "data_bytes": 556,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_020001f0",
+      "index": 8
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554528,
+        0,
+        0
+      ],
+      "data_bytes": 316,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_02000060",
+      "index": 9
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554752,
+        0,
+        0
+      ],
+      "data_bytes": 110,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_02000140",
+      "index": 10
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        100663344,
+        0,
+        0
+      ],
+      "data_bytes": 498,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_06000030",
+      "index": 11
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554560,
+        0,
+        0
+      ],
+      "data_bytes": 612,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_02000080",
+      "index": 12
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554848,
+        0,
+        0
+      ],
+      "data_bytes": 186,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_020001a0",
+      "index": 13
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554800,
+        0,
+        0
+      ],
+      "data_bytes": 250,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_02000170",
+      "index": 14
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        302055488,
+        0,
+        0
+      ],
+      "data_bytes": 0,
+      "ok": 0,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2006",
+      "error": "",
+      "name": "capability_12010040",
+      "index": 15
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554496,
+        0,
+        0
+      ],
+      "data_bytes": 364,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_02000040",
+      "index": 16
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554544,
+        0,
+        0
+      ],
+      "data_bytes": 680,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_02000070",
+      "index": 17
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        134217872,
+        0,
+        0
+      ],
+      "data_bytes": 100,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_08000090",
+      "index": 18
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554512,
+        0,
+        0
+      ],
+      "data_bytes": 390,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_02000050",
+      "index": 19
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554608,
+        0,
+        0
+      ],
+      "data_bytes": 236,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_020000b0",
+      "index": 20
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554464,
+        0,
+        0
+      ],
+      "data_bytes": 522,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_02000020",
+      "index": 21
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554448,
+        0,
+        0
+      ],
+      "data_bytes": 1336,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_02000010",
+      "index": 22
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        100663312,
+        0,
+        0
+      ],
+      "data_bytes": 924,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_06000010",
+      "index": 23
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554864,
+        0,
+        0
+      ],
+      "data_bytes": 1018,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_020001b0",
+      "index": 24
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        33554592,
+        0,
+        0
+      ],
+      "data_bytes": 460,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_020000a0",
+      "index": 25
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        50331777,
+        0,
+        0
+      ],
+      "data_bytes": 0,
+      "ok": 0,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2006",
+      "error": "",
+      "name": "capability_03000081",
+      "index": 26
+    },
+    {
+      "directory": "vendor_capability_inventory_20261008_10",
+      "opcode": "0x9108",
+      "params": [
+        134217840,
+        0,
+        0
+      ],
+      "data_bytes": 28,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:26:35Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "capability_08000070",
+      "index": 27
+    },
+    {
+      "directory": "vendor_extra_inventory_20261008_11",
+      "opcode": "0x9402",
+      "params": [
+        33554902
+      ],
+      "data_bytes": 24,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:27:11Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020001d6",
+      "index": 0
+    },
+    {
+      "directory": "vendor_extra_inventory_20261008_11",
+      "opcode": "0x9402",
+      "params": [
+        33554904
+      ],
+      "data_bytes": 0,
+      "ok": 0,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:27:11Z",
+      "transport_ok": true,
+      "response_code": "0x2002",
+      "error": "",
+      "name": "current_020001d8",
+      "index": 1
+    },
+    {
+      "directory": "vendor_extra_inventory_20261008_11",
+      "opcode": "0x9402",
+      "params": [
+        33554896
+      ],
+      "data_bytes": 459,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:27:11Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_020001d0",
+      "index": 2
+    },
+    {
+      "directory": "video_status_inventory_20261008_12",
+      "opcode": "0x9414",
+      "params": [
+        364904464
+      ],
+      "data_bytes": 154,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:28:30Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "get_9414_15c00010",
+      "index": 0
+    },
+    {
+      "directory": "video_status_inventory_20261008_12",
+      "opcode": "0x9414",
+      "params": [
+        301989920
+      ],
+      "data_bytes": 74,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:28:30Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "get_9414_12000020",
+      "index": 1
+    },
+    {
+      "directory": "video_status_inventory_20261008_12",
+      "opcode": "0x9408",
+      "params": [
+        100663321
+      ],
+      "data_bytes": 22,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:28:30Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "get_9408_06000019",
+      "index": 2
+    },
+    {
+      "directory": "video_status_inventory_20261008_12",
+      "opcode": "0x9414",
+      "params": [
+        310378768
+      ],
+      "data_bytes": 0,
+      "ok": 0,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:28:30Z",
+      "transport_ok": true,
+      "response_code": "0x2002",
+      "error": "",
+      "name": "get_9414_12800110",
+      "index": 3
+    },
+    {
+      "directory": "video_status_inventory_20261008_12",
+      "opcode": "0x9408",
+      "params": [
+        100663344
+      ],
+      "data_bytes": 62,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:28:30Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "get_9408_06000030",
+      "index": 4
+    },
+    {
+      "directory": "video_status_inventory_20261008_12",
+      "opcode": "0x9414",
+      "params": [
+        301990000
+      ],
+      "data_bytes": 28,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:28:30Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "get_9414_12000070",
+      "index": 5
+    },
+    {
+      "directory": "video_status_inventory_20261008_12",
+      "opcode": "0x9414",
+      "params": [
+        301989904
+      ],
+      "data_bytes": 190,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:28:30Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "get_9414_12000010",
+      "index": 6
+    },
+    {
+      "directory": "video_status_inventory_20261008_12",
+      "opcode": "0x9414",
+      "params": [
+        301989908
+      ],
+      "data_bytes": 12,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:28:30Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "get_9414_12000014",
+      "index": 7
+    },
+    {
+      "directory": "video_status_inventory_20261008_12",
+      "opcode": "0x9414",
+      "params": [
+        301989909
+      ],
+      "data_bytes": 14,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:28:30Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "get_9414_12000015",
+      "index": 8
+    },
+    {
+      "directory": "video_status_inventory_20261008_12",
+      "opcode": "0x9414",
+      "params": [
+        301989910
+      ],
+      "data_bytes": 66,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:28:30Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "get_9414_12000016",
+      "index": 9
+    },
+    {
+      "directory": "video_status_inventory_20261008_12",
+      "opcode": "0x9414",
+      "params": [
+        301989911
+      ],
+      "data_bytes": 14,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:28:30Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "get_9414_12000017",
+      "index": 10
+    },
+    {
+      "directory": "video_status_inventory_20261008_12",
+      "opcode": "0x9408",
+      "params": [
+        100663312
+      ],
+      "data_bytes": 2852,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:28:30Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "get_9408_06000010",
+      "index": 11
+    },
+    {
+      "directory": "video_status_inventory_20261008_12",
+      "opcode": "0x9414",
+      "params": [
+        369098768
+      ],
+      "data_bytes": 16,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:28:30Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "get_9414_16000010",
+      "index": 12
+    },
+    {
+      "directory": "video_status_inventory_20261008_12",
+      "opcode": "0x9402",
+      "params": [
+        33554448
+      ],
+      "data_bytes": 152,
+      "ok": 1,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:28:30Z",
+      "transport_ok": true,
+      "response_code": "0x2001",
+      "error": "",
+      "name": "current_02000010",
+      "index": 13
+    },
+    {
+      "directory": "inventory_final_baseline_20261008_13",
+      "opcode": "0x9402",
+      "data_bytes": 80,
+      "ok": true,
+      "event": "read_response",
+      "response_bytes": 12,
+      "time_utc": "2026-10-08T18:28:52Z",
+      "tag": "0x02000080",
+      "response_code": "0x2001",
+      "error": "",
+      "index": 0
+    },
+    {
+      "directory": "inventory_final_baseline_20261008_13",
+      "opcode": "0x9421",
+      "data_bytes": 9197421,
+      "ok": true,
+      "event": "read_response",
+      "response_bytes": 12,
+      "time_utc": "2026-10-08T18:28:57Z",
+      "tag": "0x080000a2",
+      "response_code": "0x2001",
+      "error": "",
+      "index": 1
+    },
+    {
+      "directory": "inventory_final_baseline_20261008_13",
+      "opcode": "0x9421",
+      "data_bytes": 9197421,
+      "ok": true,
+      "event": "read_response",
+      "response_bytes": 12,
+      "time_utc": "2026-10-08T18:29:03Z",
+      "tag": "0x080000a2",
+      "response_code": "0x2001",
+      "error": "",
+      "index": 2
+    },
+    {
+      "directory": "inventory_final_baseline_20261008_13",
+      "opcode": "0x9402",
+      "data_bytes": 80,
+      "ok": true,
+      "event": "read_response",
+      "response_bytes": 12,
+      "time_utc": "2026-10-08T18:29:03Z",
+      "tag": "0x02000080",
+      "response_code": "0x2001",
+      "error": "",
+      "index": 3
+    },
+    {
+      "directory": "vendor_storage_ids_20261008_14",
+      "opcode": "0x9114",
+      "params": [],
+      "data_bytes": 0,
+      "ok": 0,
+      "event": "plan_read_response",
+      "time_utc": "2026-10-08T18:29:24Z",
+      "transport_ok": true,
+      "response_code": "0x2005",
+      "error": "",
+      "name": "vendor_storage_ids",
+      "index": 0
+    }
+  ],
+  "files": [
+    {
+      "path": "analysis/device_inventory_20261008_06/capture_log.json",
+      "bytes": 1702,
+      "sha256": "fb901e812f82df23070edc5f7b588d35250555bd464d65167886c819f6006d99"
+    },
+    {
+      "path": "analysis/device_inventory_20261008_06/config_1.DAT",
+      "bytes": 9197409,
+      "sha256": "caf0fc191ce18bd5f0dc276647595f8d778e370afb8cdafb187f8ba7a80e10f7"
+    },
+    {
+      "path": "analysis/device_inventory_20261008_06/config_1.response.bin",
+      "bytes": 9197421,
+      "sha256": "4b98e8edb5f459060ef1e65921a4cbbf256d38410ca5af23cc67c524ff7f6142"
+    },
+    {
+      "path": "analysis/device_inventory_20261008_06/config_2.DAT",
+      "bytes": 9197409,
+      "sha256": "caf0fc191ce18bd5f0dc276647595f8d778e370afb8cdafb187f8ba7a80e10f7"
+    },
+    {
+      "path": "analysis/device_inventory_20261008_06/config_2.response.bin",
+      "bytes": 9197421,
+      "sha256": "4b98e8edb5f459060ef1e65921a4cbbf256d38410ca5af23cc67c524ff7f6142"
+    },
+    {
+      "path": "analysis/device_inventory_20261008_06/device_info.bin",
+      "bytes": 233,
+      "sha256": "cc0f241da43de42c381922af17e3babf10470f319027c3d04a797a31d6d16901"
+    },
+    {
+      "path": "analysis/device_inventory_20261008_06/device_info.json",
+      "bytes": 1013,
+      "sha256": "0d308fb41be7fc2b5a7ffcd0db1fc5847234c11a958c48d2f8f408ecb9305a3f"
+    },
+    {
+      "path": "analysis/device_inventory_20261008_06/drive_after.bin",
+      "bytes": 80,
+      "sha256": "23de01d394dd4723443ccef9e22c226855ae8a593925af476619266385df12b1"
+    },
+    {
+      "path": "analysis/device_inventory_20261008_06/drive_before.bin",
+      "bytes": 80,
+      "sha256": "23de01d394dd4723443ccef9e22c226855ae8a593925af476619266385df12b1"
+    },
+    {
+      "path": "analysis/device_inventory_20261008_06/verification.json",
+      "bytes": 924,
+      "sha256": "09e1179feeb5e6f0ac57f1320bfecc263b420a1ea89f4d26f9f1feaea9c01ed0"
+    },
+    {
+      "path": "analysis/standard_inventory_20261008_07/battery_description.bin",
+      "bytes": 11,
+      "sha256": "391f5cfd707687aaa6ea1f2a2651e063247233e61efa3d0b8859a9b2dae87298"
+    },
+    {
+      "path": "analysis/standard_inventory_20261008_07/battery_description.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "7fdee02fbbe6a3fe0062c591d4598fb83f4ef83f20b8221e014ee82a146defdf"
+    },
+    {
+      "path": "analysis/standard_inventory_20261008_07/battery_value.bin",
+      "bytes": 1,
+      "sha256": "dabd3aff769f07eb2965401eb029974ebba3407afd02b26ddb564ea5f8efae72"
+    },
+    {
+      "path": "analysis/standard_inventory_20261008_07/battery_value.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "177904f7d36bebd451b43dd8639ac9b3c1dfd6dcbe25b64986438624681eb831"
+    },
+    {
+      "path": "analysis/standard_inventory_20261008_07/capture_log.json",
+      "bytes": 1342,
+      "sha256": "22b171b9c4345617a42b368465655c4ae4d7ae875b394013eb286e5ae429133b"
+    },
+    {
+      "path": "analysis/standard_inventory_20261008_07/storage_ids.bin",
+      "bytes": 12,
+      "sha256": "836fc1a2dd673a052cd51dc8add5b61f29820e4c1b8f04a9f1f3e18923cbdf7b"
+    },
+    {
+      "path": "analysis/standard_inventory_20261008_07/storage_ids.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "a560296fa525ad60d523850b0083ef040c9a13bb8cc02f84b690ffd8b633d1be"
+    },
+    {
+      "path": "analysis/storage_inventory_20261008_08/capture_log.json",
+      "bytes": 1052,
+      "sha256": "d0becf15d3016a711c3c3be27e8dcb123fda405fa54d4d5933c2b499e1ee2cab"
+    },
+    {
+      "path": "analysis/storage_inventory_20261008_08/storage_info_10000.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "69b2e449f661e353c7a534da9758df1ac39779b3529786415bd7d849fd1caeef"
+    },
+    {
+      "path": "analysis/storage_inventory_20261008_08/storage_info_20000.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "c91e5bd729cebca46ef65c4079049f3c889c0f85538a20ee2d2c4705b2782705"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/capture_log.json",
+      "bytes": 10471,
+      "sha256": "8266b0ad2bb9ff74417804e6e4f592161a95fd2bb405d27ea04ad0dbf0443a64"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000020.bin",
+      "bytes": 34,
+      "sha256": "6664db829dbb008af0a19ceae3fc4fc0f37b211bca16dd17ddc359503349a86a"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000020.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "7af2e590e272194629905c36b97473c4239118be310411d4ce8007342879d264"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000030.bin",
+      "bytes": 38,
+      "sha256": "ba1b3e754c5b943d2c5f4ed72c6680f66110ecbb95a689b6d7015ac9fe952ba3"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000030.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "d193b7278ebbc1d8a8d518a2664066c5d2d05345033463c8580e11b199e926b5"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000040.bin",
+      "bytes": 22,
+      "sha256": "f778819fc2cb3a066754870c0fba6387d29f0475a9958c175e6f75625fe8d0d9"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000040.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "10a100196c211799eb1810b3dfe26a96792b5ae07fe21e1ea4806c8253a5fc30"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000050.bin",
+      "bytes": 50,
+      "sha256": "578038653d05ef53ff2c15ff161f0c8c160c1dbdf551586d204692de2ba312a1"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000050.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "f26c0162fe313bdc58fb3731c9abe310160f9a20a85a40bbe055c021b824fbf9"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000060.bin",
+      "bytes": 22,
+      "sha256": "634f0bdb967da67becd2a9351e8c5eb618407ccc12d93533b8ea288194cf493e"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000060.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "7cc5df473eecf47e2c59539e88043a885c9cca861d028e4d71e1d4ee999a1f43"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000070.bin",
+      "bytes": 110,
+      "sha256": "1884f11317ac37e31502a7b90703647e5d13850d1ad57c6b9a16d2ddc2eebdc5"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000070.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "47e5d4441aa84d56492ee68a6c9c1b6de4cbc1a383007af3062760af3fa78416"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000080.bin",
+      "bytes": 80,
+      "sha256": "23de01d394dd4723443ccef9e22c226855ae8a593925af476619266385df12b1"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000080.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "164fb70cc1c5d0a1a961f8f792d38c377fdfc2700c0ca963ac54f77ad1f0ed32"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000086.bin",
+      "bytes": 10,
+      "sha256": "f4bfa997144cc47a72555fca3adf6688007af7da3f49e97d532795a70d9da5b0"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000086.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "e182129a6038048a6346443d36a082fa0714bd9c5fed1d7991909039daac8094"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000087.bin",
+      "bytes": 10,
+      "sha256": "e6f583a09ed79a62db67ab5611d13b4f511934d5e742ae6c54bfba2c377224fa"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000087.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "e00b00d08457f426e071f3eb5d61e6c9e4c5587da521298a5faad76495f05637"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000088.bin",
+      "bytes": 10,
+      "sha256": "64894917657bda7065eb87cfdf39be68e7cfc630c43d78dbe88b5273fd1b795b"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000088.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "19c4c5140e6a79f93981577f021ba89421300292c715350f960582c73db35644"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000a0.bin",
+      "bytes": 60,
+      "sha256": "fbaa4e36af26067d3299d9828cd0346392d03a57b024541ac0fb31598fd28ca1"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000a0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "1706e4ec4c59fd5c9fdb3225658227506c45fc2d38ff41e6e5325d277ee78d59"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000b0.bin",
+      "bytes": 40,
+      "sha256": "865922b6ded7a27157d29f3b6c768c20d28ecf5df4202688e695d314a0682b8b"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000b0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "26dd18f50ecfcdeef7e8d9a7c3a4f50cf3d4d3dbc74effd8e184f271e3d93bc0"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000c0.bin",
+      "bytes": 48,
+      "sha256": "7be221a5f765632ea3e38a9cfb04672fd101e4bf2ec72875efd322d26d71457a"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000c0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "f76405525001c568dd8ed496b2df9bd7caefbfb9d86aa8a2142e24764c7dd278"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e0.bin",
+      "bytes": 912,
+      "sha256": "113fd6b60875cb46350dcc9135cb41b41fca422cfd1a5617e6cff778c1744497"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "f89a61debcd3d63fb8d1a9f436dd3d8dbdc3f034c0e5fdce0bdad07e28a61b5f"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e1.bin",
+      "bytes": 10,
+      "sha256": "542805d734e1557ec4b295cca1b09a8554897f7e67b885ec6e00e5087ba36cb8"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e1.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "cbf1891fb5cedf147de813a0590bf8c5c907e46ffcc1f9ef91dd6019832dd36f"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e2.bin",
+      "bytes": 12,
+      "sha256": "8fe3c5b3a0848a489e1dbaa06fcbf243da4643c6c2e20a12cd9471cc1693d490"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e2.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "1073002a6f26a651130aff6137efe3d457af744c7fb3822a8aaa078c53175295"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e3.bin",
+      "bytes": 10,
+      "sha256": "c24ee0e02846ea5118e33ce8e631b1c7bdd2136e2b63fef57a9ca0bbfb6adeb5"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e3.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "9c40bd5100688367b9f5a748e42ec5c2d6a1a4bb3d9e7fab7b84fe8bb22ac117"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e4.bin",
+      "bytes": 12,
+      "sha256": "5a81d0e790f230a3cfd911bae70b1c5e9548f7bae0a5d68d2f5aa8ff0ae41504"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e4.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "0ff56b1539baa1cab051b86e85f3f9a4cab37bbc53dee3d092ecf69d59c57da8"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e5.bin",
+      "bytes": 10,
+      "sha256": "6f2fcebf712d98408d05b6f9bb4768553d7c3b4f4021021cd7203d222cd4bb44"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e5.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "b2a041a640fa5bbe89a1a39493576346e3df384ed962c5fa3ff853275a75250c"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e7.bin",
+      "bytes": 10,
+      "sha256": "8df051b9860d28bb0b55eac3ef3e544e3e5e88c420405f8781391b0aa402c2a3"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e7.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "6c37688a56ee4239fbd724fb16d0558a0c8daa32c40c8c923ca3b58abd0261c0"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e8.bin",
+      "bytes": 10,
+      "sha256": "8394f090eb9e01f2fc5aeef748368cae2ccf9dc951a9ed4d1921376709e49009"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e8.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "c75c32c02d958ae2df768bcf613b721d1f4ba84832bb41f93a40fe1bd73dfe61"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e9.bin",
+      "bytes": 10,
+      "sha256": "e28ffe531b512b69ba3318a15a1dc6d49b1e465b15d909da175995b182cbb04b"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000e9.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "792f09213a5ef4937f10155472ec70509300fafb9abdd4c9a831592c9314a3b7"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000ea.bin",
+      "bytes": 10,
+      "sha256": "6df676f7aaf170ec349510fa9299a98a764fd4b52423feac7ed9719c4ab4b057"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000ea.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "c96f6575b3102e3e720dcb94600da08794f70956c67fce2a06ad98deea8328c9"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000eb.bin",
+      "bytes": 10,
+      "sha256": "8f859c46735cbd80b1e45133fe919fc817c590aa6bd8a73dc0c422bc37a58397"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000eb.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "82e453c12ef0abd0610a7b7f85b2084ebadaa04f7abd40dd59467d6a266c2dde"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000ec.bin",
+      "bytes": 10,
+      "sha256": "f52dc285b2648c1da523cc35261001638dca5418b25c84e1b4310e648850da86"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020000ec.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "c46cb1be1f622852a33ffd9c033b39633ead59f8e68c3af03250c7e5db27b910"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000110.bin",
+      "bytes": 110,
+      "sha256": "e31d7002c23a4dbf35b567d223c04753bf38854edabfabfd552ac79f06727851"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000110.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "a560296fa525ad60d523850b0083ef040c9a13bb8cc02f84b690ffd8b633d1be"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000120.bin",
+      "bytes": 80,
+      "sha256": "d5bf9a5330a20f719d7cc5fefb51a17e44cf5475e9697a45d538d555d79d8340"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000120.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "7fdee02fbbe6a3fe0062c591d4598fb83f4ef83f20b8221e014ee82a146defdf"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000141.bin",
+      "bytes": 10,
+      "sha256": "89fde4b43573ac99e94ff49e6b6eade8594aa2bc4a8b04a7e4a8d51f604541fd"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000141.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "5305d7cb7d563f7d83a1b5b5189a93d1d41e58a0e83e9c22ae023db6ca7cfc87"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000170.bin",
+      "bytes": 30,
+      "sha256": "07ba8cb5345e0dd9c71213db619ff190d4df8c04e6dcccc8f2f72934c4e32179"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_02000170.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "9f6de7eb5eb8c903f3b7505b1438615ac9598ca41ff633c9b9d7ae240a3324af"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020001a1.bin",
+      "bytes": 10,
+      "sha256": "16ad9043a99771eeb105279ec660f2023bae6fbf4fe22e880caa07e02996e0d7"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020001a1.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "2ed4163e439f20e5ee980acd933920401b892844b3feb318dafbb1d388b15d5d"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020001b0.bin",
+      "bytes": 150,
+      "sha256": "9b2e92f32dea133752555f4923edacc9c2126be542e8a4c0a763a9bdfcc35b8a"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020001b0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "5a0e278b10b006ad26e011dbc646db9c98ca8ba445fb665bc91c3fcda1896353"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020001c0.bin",
+      "bytes": 20,
+      "sha256": "a677803b4248aad85b3dbbb66126cb59fdbe3580d93dff18c850c7b4d9afb8d0"
+    },
+    {
+      "path": "analysis/vendor_current_inventory_20261008_09/current_020001c0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "177904f7d36bebd451b43dd8639ac9b3c1dfd6dcbe25b64986438624681eb831"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000010.bin",
+      "bytes": 1336,
+      "sha256": "bb6bd5f0b448090a9d40d969baa3d611706c4a826c9e564f85aa180bc4214e14"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000010.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "2ed4163e439f20e5ee980acd933920401b892844b3feb318dafbb1d388b15d5d"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000020.bin",
+      "bytes": 522,
+      "sha256": "3c63d8e100d9b8e4fdd3f6787ff2f6b896bdfc3927b7669a1bf42a9abdbfc5e1"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000020.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "19c4c5140e6a79f93981577f021ba89421300292c715350f960582c73db35644"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000030.bin",
+      "bytes": 506,
+      "sha256": "a533760e685d6e9b60236b3af062a7c82448bca92e544e69a9427c6b8f09f93d"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000030.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "1073002a6f26a651130aff6137efe3d457af744c7fb3822a8aaa078c53175295"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000040.bin",
+      "bytes": 364,
+      "sha256": "60bf2b6f14c737cb7361e035a10a13825ee78fbd84415095e335d7d235bcb714"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000040.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "7cc5df473eecf47e2c59539e88043a885c9cca861d028e4d71e1d4ee999a1f43"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000050.bin",
+      "bytes": 390,
+      "sha256": "9f87162dfc4591c2af678c40e28a5e04da860a757feb204e402fe03fc3be17cf"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000050.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "e182129a6038048a6346443d36a082fa0714bd9c5fed1d7991909039daac8094"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000060.bin",
+      "bytes": 316,
+      "sha256": "b2e25628ba8e989e9a8003df562cd3282f57b31ab9fa43216dff779554aae8af"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000060.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "b2a041a640fa5bbe89a1a39493576346e3df384ed962c5fa3ff853275a75250c"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000070.bin",
+      "bytes": 680,
+      "sha256": "3df186d44ce01f4da76de16d731affbaffa9d57486509a03be1616033d0e9b0e"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000070.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "5305d7cb7d563f7d83a1b5b5189a93d1d41e58a0e83e9c22ae023db6ca7cfc87"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000080.bin",
+      "bytes": 612,
+      "sha256": "9872a02d37feefbd8c9926fb28b4b1b70ec7425362ccd69b7d9011b4190f256c"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000080.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "792f09213a5ef4937f10155472ec70509300fafb9abdd4c9a831592c9314a3b7"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020000a0.bin",
+      "bytes": 460,
+      "sha256": "a0a6ad355a6c48c25ccc1fc2985d0965797ad8b831cdf471941b114189949014"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020000a0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "47e5d4441aa84d56492ee68a6c9c1b6de4cbc1a383007af3062760af3fa78416"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020000b0.bin",
+      "bytes": 236,
+      "sha256": "e5401e69effca451595a906a5f9a25567542faa446f6636198d6a1e617f7ba44"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020000b0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "e00b00d08457f426e071f3eb5d61e6c9e4c5587da521298a5faad76495f05637"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020000e0.bin",
+      "bytes": 1086,
+      "sha256": "309b2414304901e57d35a8754cdb2ff80b3bc14b4d7e1bcd75d5dfc3a758308e"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020000e0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "9c40bd5100688367b9f5a748e42ec5c2d6a1a4bb3d9e7fab7b84fe8bb22ac117"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000110.bin",
+      "bytes": 818,
+      "sha256": "4e11208bdeb12656f94a105f129b0647c077d30ff258a6e5671f69480d38f56f"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000110.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "a560296fa525ad60d523850b0083ef040c9a13bb8cc02f84b690ffd8b633d1be"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000120.bin",
+      "bytes": 524,
+      "sha256": "d6c852d45d0813c6eaa61413dcb12739b1849f47ea3d35e4604b7b140c7106c8"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000120.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "7fdee02fbbe6a3fe0062c591d4598fb83f4ef83f20b8221e014ee82a146defdf"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000140.bin",
+      "bytes": 110,
+      "sha256": "c01c5a60cf0db97ac2bdb541ef86132483a1269801e4a3551fbc69a6bd994665"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000140.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "6c37688a56ee4239fbd724fb16d0558a0c8daa32c40c8c923ca3b58abd0261c0"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000170.bin",
+      "bytes": 250,
+      "sha256": "9d353395578ea2af57e777bf97534c0631cbcb715da61b2897c64eafddaed325"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_02000170.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "82e453c12ef0abd0610a7b7f85b2084ebadaa04f7abd40dd59467d6a266c2dde"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020001a0.bin",
+      "bytes": 186,
+      "sha256": "02b713b575f88b80b1f3003613e18b9eb0c31a79b3f1d405966b8a5eab77aadc"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020001a0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "c96f6575b3102e3e720dcb94600da08794f70956c67fce2a06ad98deea8328c9"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020001b0.bin",
+      "bytes": 1018,
+      "sha256": "0c983b79e269a43f4135e09b5c1f612e5d4e13f44ee232aca2bd5f852b8c1543"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020001b0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "10a100196c211799eb1810b3dfe26a96792b5ae07fe21e1ea4806c8253a5fc30"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020001c0.bin",
+      "bytes": 160,
+      "sha256": "53c382885ea508546ecf9291ae10e59df288255d1d9632ec10811a0be9f63e49"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020001c0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "f89a61debcd3d63fb8d1a9f436dd3d8dbdc3f034c0e5fdce0bdad07e28a61b5f"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020001d0.bin",
+      "bytes": 1664,
+      "sha256": "432e0d15e030a27eaa331848890b507803a9c9ffe0dedbee70cc868912c8cebd"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020001d0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "cbf1891fb5cedf147de813a0590bf8c5c907e46ffcc1f9ef91dd6019832dd36f"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020001f0.bin",
+      "bytes": 556,
+      "sha256": "1a3a5751cc69440c2e3edd3ecf069278f093769f6c64b6d3c0d31b4f92cbe1f5"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_020001f0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "0ff56b1539baa1cab051b86e85f3f9a4cab37bbc53dee3d092ecf69d59c57da8"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_03000081.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "549ccbee89e5616e100ea485ebd97a69609930580bed98e285abb3daa447bc28"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_06000010.bin",
+      "bytes": 924,
+      "sha256": "39beb1e6512ce3d1f46fff6e69a9b9b22b93833e31c9a329c14e6a5d0a911d48"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_06000010.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "9f6de7eb5eb8c903f3b7505b1438615ac9598ca41ff633c9b9d7ae240a3324af"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_06000030.bin",
+      "bytes": 498,
+      "sha256": "5fcc338c9beeca8c8a701296c35a163e15b24da6f373a79f905b473a80b5a971"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_06000030.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "c75c32c02d958ae2df768bcf613b721d1f4ba84832bb41f93a40fe1bd73dfe61"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_08000050.bin",
+      "bytes": 28,
+      "sha256": "1aef4d97307decf1218e1940bc3ccbd788f1e6e1995c864043a197ce002ad3a1"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_08000050.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "177904f7d36bebd451b43dd8639ac9b3c1dfd6dcbe25b64986438624681eb831"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_08000070.bin",
+      "bytes": 28,
+      "sha256": "9688bbebf36f705179614944f40f89666bdc4340ca49468f2fe507fc9be75011"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_08000070.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "f26c0162fe313bdc58fb3731c9abe310160f9a20a85a40bbe055c021b824fbf9"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_08000090.bin",
+      "bytes": 100,
+      "sha256": "28087bdcce065d14a1c3690ef68094a7a1ea30d84e67f87c308be8b9669bd4bf"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_08000090.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "164fb70cc1c5d0a1a961f8f792d38c377fdfc2700c0ca963ac54f77ad1f0ed32"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_12010040.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "55b422c38c568374e06b96ef3b5ee1a4a8e4b95849b6d90ca0a9d226bc31cc0a"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_120100a0.bin",
+      "bytes": 232,
+      "sha256": "d987593cc8c286c641f57434f895462bc55e7e57917c1e248ec2f45147aac7d7"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_120100a0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "d193b7278ebbc1d8a8d518a2664066c5d2d05345033463c8580e11b199e926b5"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capture_log.json",
+      "bytes": 9832,
+      "sha256": "8df4b21aee6e2d629f383c2faacddf6e954b644d5ee865124e824947faccd5e4"
+    },
+    {
+      "path": "analysis/vendor_extra_inventory_20261008_11/capture_log.json",
+      "bytes": 1367,
+      "sha256": "41588905eeb04a754d93ba78df05a3b88abfcf5eb13d61310c1afe8826286822"
+    },
+    {
+      "path": "analysis/vendor_extra_inventory_20261008_11/current_020001d0.bin",
+      "bytes": 459,
+      "sha256": "5426a24c4287c56bd41a318d216eca46abfc5523a069971669d753777ad99289"
+    },
+    {
+      "path": "analysis/vendor_extra_inventory_20261008_11/current_020001d0.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "177904f7d36bebd451b43dd8639ac9b3c1dfd6dcbe25b64986438624681eb831"
+    },
+    {
+      "path": "analysis/vendor_extra_inventory_20261008_11/current_020001d6.bin",
+      "bytes": 24,
+      "sha256": "14e94cc3c9a235c22e2165d88397e1c4acd9e6f96b279e3ac2080264faf548c8"
+    },
+    {
+      "path": "analysis/vendor_extra_inventory_20261008_11/current_020001d6.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "a560296fa525ad60d523850b0083ef040c9a13bb8cc02f84b690ffd8b633d1be"
+    },
+    {
+      "path": "analysis/vendor_extra_inventory_20261008_11/current_020001d8.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "0969706b3caa57c86e230845d742d92a7875427958c645e84b1f29f97e70c5b7"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/capture_log.json",
+      "bytes": 4845,
+      "sha256": "e936d713a56264516d528e284f4efc8ff6a48498c874ed092b1de4df30691fe1"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/current_02000010.bin",
+      "bytes": 152,
+      "sha256": "90fff3d5fb424ecf0a68c605669feaf98c328edab907c1ee4b177a0f99a67012"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/current_02000010.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "c96f6575b3102e3e720dcb94600da08794f70956c67fce2a06ad98deea8328c9"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9408_06000010.bin",
+      "bytes": 2852,
+      "sha256": "7cb0309bd8238b5bfcfb0960af00764cdba81d098d5160faf488a8ba454cceea"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9408_06000010.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "c75c32c02d958ae2df768bcf613b721d1f4ba84832bb41f93a40fe1bd73dfe61"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9408_06000019.bin",
+      "bytes": 22,
+      "sha256": "5123f788db9ec7fb6dfae18f4421539056b6b30a3b48fd394d675d25a0695c97"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9408_06000019.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "177904f7d36bebd451b43dd8639ac9b3c1dfd6dcbe25b64986438624681eb831"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9408_06000030.bin",
+      "bytes": 62,
+      "sha256": "037d73a4013c77c29bd1d8c852d88296b9c50562905bfd1f366f0ee6aad88f1d"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9408_06000030.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "f89a61debcd3d63fb8d1a9f436dd3d8dbdc3f034c0e5fdce0bdad07e28a61b5f"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12000010.bin",
+      "bytes": 190,
+      "sha256": "398f73cdde6036aea47988bbd73a0346d60f60b7b2396792e5976ca733a4b3f7"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12000010.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "1073002a6f26a651130aff6137efe3d457af744c7fb3822a8aaa078c53175295"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12000014.bin",
+      "bytes": 12,
+      "sha256": "98500592c9f310191e40da5a0115330069914eeda5cd028cc4c594e344848f8f"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12000014.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "9c40bd5100688367b9f5a748e42ec5c2d6a1a4bb3d9e7fab7b84fe8bb22ac117"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12000015.bin",
+      "bytes": 14,
+      "sha256": "becea8f487cda4b89369a4e12bd5c4a31e9da640c5514f9c2f7a9910a7e151f9"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12000015.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "0ff56b1539baa1cab051b86e85f3f9a4cab37bbc53dee3d092ecf69d59c57da8"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12000016.bin",
+      "bytes": 66,
+      "sha256": "bec49149c9bae3f0b8765159e3a5fba1da5598517d694e0736e3a3d39f8c56c1"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12000016.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "b2a041a640fa5bbe89a1a39493576346e3df384ed962c5fa3ff853275a75250c"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12000017.bin",
+      "bytes": 14,
+      "sha256": "47d0c716d477ec4790664fd9ab52f72de75daf45c4503588d6bf59ad159f7427"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12000017.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "6c37688a56ee4239fbd724fb16d0558a0c8daa32c40c8c923ca3b58abd0261c0"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12000020.bin",
+      "bytes": 74,
+      "sha256": "84403d3e312fd2f3a36ed88f7a406b845e45cc6cb3f6b364ef221af4b9a5a168"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12000020.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "7fdee02fbbe6a3fe0062c591d4598fb83f4ef83f20b8221e014ee82a146defdf"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12000070.bin",
+      "bytes": 28,
+      "sha256": "0c2e674695b92808bc3b0d06cd537a3ceec653dd345b6a7122aaa0d9bbe163e1"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12000070.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "cbf1891fb5cedf147de813a0590bf8c5c907e46ffcc1f9ef91dd6019832dd36f"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_12800110.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "ec9315524ca219d67652ed54e8abb22a8684631205aaa26dea06ee3ab819063a"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_15c00010.bin",
+      "bytes": 154,
+      "sha256": "7cd4bb5d593e6efd7e7742c0ab61957b6fe30bba68c2e49ac95aba7b39af64d0"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_15c00010.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "a560296fa525ad60d523850b0083ef040c9a13bb8cc02f84b690ffd8b633d1be"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_16000010.bin",
+      "bytes": 16,
+      "sha256": "8829db96e6cd9f93cbd640888269f03c113132d7629879be025820464dff0f05"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9414_16000010.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "792f09213a5ef4937f10155472ec70509300fafb9abdd4c9a831592c9314a3b7"
+    },
+    {
+      "path": "analysis/inventory_final_baseline_20261008_13/capture_log.json",
+      "bytes": 1499,
+      "sha256": "1f0c14a6a0a419c90d5055041d446d1d4941252408ea8326fcb08b6fc357338b"
+    },
+    {
+      "path": "analysis/inventory_final_baseline_20261008_13/config_1.DAT",
+      "bytes": 9197409,
+      "sha256": "caf0fc191ce18bd5f0dc276647595f8d778e370afb8cdafb187f8ba7a80e10f7"
+    },
+    {
+      "path": "analysis/inventory_final_baseline_20261008_13/config_1.response.bin",
+      "bytes": 9197421,
+      "sha256": "4b98e8edb5f459060ef1e65921a4cbbf256d38410ca5af23cc67c524ff7f6142"
+    },
+    {
+      "path": "analysis/inventory_final_baseline_20261008_13/config_2.DAT",
+      "bytes": 9197409,
+      "sha256": "caf0fc191ce18bd5f0dc276647595f8d778e370afb8cdafb187f8ba7a80e10f7"
+    },
+    {
+      "path": "analysis/inventory_final_baseline_20261008_13/config_2.response.bin",
+      "bytes": 9197421,
+      "sha256": "4b98e8edb5f459060ef1e65921a4cbbf256d38410ca5af23cc67c524ff7f6142"
+    },
+    {
+      "path": "analysis/inventory_final_baseline_20261008_13/drive_after.bin",
+      "bytes": 80,
+      "sha256": "23de01d394dd4723443ccef9e22c226855ae8a593925af476619266385df12b1"
+    },
+    {
+      "path": "analysis/inventory_final_baseline_20261008_13/drive_before.bin",
+      "bytes": 80,
+      "sha256": "23de01d394dd4723443ccef9e22c226855ae8a593925af476619266385df12b1"
+    },
+    {
+      "path": "analysis/inventory_final_baseline_20261008_13/verification.json",
+      "bytes": 924,
+      "sha256": "09e1179feeb5e6f0ac57f1320bfecc263b420a1ea89f4d26f9f1feaea9c01ed0"
+    },
+    {
+      "path": "analysis/vendor_storage_ids_20261008_14/capture_log.json",
+      "bytes": 728,
+      "sha256": "2907b44626fc227b129dc9bab890a79c4258bd1455908d8cf7f98079144d6f8a"
+    },
+    {
+      "path": "analysis/vendor_storage_ids_20261008_14/vendor_storage_ids.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "72946ffc6fad1c37596844d71d2ea61db70179cd982362f9876d066f3c23a46a"
+    }
+  ]
+}

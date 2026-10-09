@@ -1,0 +1,69 @@
+{
+  "scope": "public sources; read-only; no device operations or downloaded executables run",
+  "sources": [
+    {
+      "model": "DC-S1M2",
+      "kind": "service_manual_listing",
+      "url": "https://remont-aud.net/load/drugaja_apparatura/dc_s1m2_service_manual/147-1-0-97303",
+      "status": "registration_and_electronics_test_required",
+      "downloaded": false,
+      "claimed_size": "12.22MB",
+      "claimed_uploaded": "2025-07-04",
+      "content_authenticated": false
+    },
+    {
+      "model": "DC-S1 (2019), not S1M2",
+      "kind": "service_manual_public_view",
+      "url": "https://www.manualslib.com/manual/2331010/Panasonic-Dc-S1p.html",
+      "order_number": "DSC1903002CE",
+      "pages": 66,
+      "status": "web_view_verified; pdf_download_not_obtained",
+      "evidence_pages": [
+        37,
+        60,
+        61
+      ],
+      "finding": "Separate adjustment software and included Adjustment Manual; no verified exact software name or RAM dump capability"
+    },
+    {
+      "model": "DMC-TS2 / DMC-FT2 (2010), not S1M2",
+      "kind": "service_manual_mirror",
+      "url": "https://documents.cdn.ifixit.com/MIlhIODaZYbLJy3W.pdf",
+      "status": "downloaded_and_verified",
+      "local_path": "<LOCAL_WORKSPACE>/analysis/sources/service_research_20261008/Panasonic_DMC_TS2_service_ifixit.pdf",
+      "size": 5022960,
+      "sha256": "1aad094b06ef6ab8d446abde48e4b0199ec77e57aec1ecd7c4e1c9d0562a0e22",
+      "pages": 66,
+      "order_number": "DSC1002022CE",
+      "evidence_pages": [
+        11,
+        34,
+        36,
+        46,
+        49,
+        51
+      ],
+      "finding": "DIAS = DSC Integrated Assist Software; maintenance/adjustment software distributed via TSN; no S1M2 compatibility or RAM dump proof"
+    },
+    {
+      "kind": "official_TSN_portal",
+      "url": "https://www.e-service.css.panasonic.co.jp/cshome/",
+      "redirect": "https://www.e-service.css.panasonic.co.jp/cshome/login",
+      "status": "user_id_and_password_required"
+    },
+    {
+      "kind": "third_party_software_metadata",
+      "url": "https://dsc-integrated-assist-software.software.informer.com/",
+      "status": "no_download_available",
+      "claimed_executable": "DIAS.exe",
+      "claimed_version": "3.10",
+      "s1m2_compatibility": "unknown"
+    },
+    {
+      "kind": "official_old_service_pdf",
+      "model": "DMC-TS20",
+      "url": "https://www.csportal.panasonic-la.com/descargaspla/PLA/DIGITALES/CAMARAS/COMPACTA/DMC-TS20PU/DOCUMENTO/MANUAL%20DE%20SERVICIO/DMC-TS20.pdf",
+      "status": "http_403; not_downloaded"
+    }
+  ]
+}

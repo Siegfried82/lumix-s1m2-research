@@ -1,0 +1,41 @@
+{
+  "files": [
+    {
+      "name": "loader1",
+      "size": 131072,
+      "sha256": "22d9b2dbd1270fb95e75553833073c629f0492279661d4650391034b4e445837",
+      "byte_entropy": 7.998580552099585,
+      "directory_hash_matches": false,
+      "signature_hits": {
+        "ELF": [],
+        "gzip": [],
+        "xz": []
+      }
+    },
+    {
+      "name": "hr_c_prog",
+      "size": 65536,
+      "sha256": "dc54d467e40fd99578d42c60c9ad9134c2745ed713ff29c1926f4b16ee78e317",
+      "byte_entropy": 7.9970541895958025,
+      "directory_hash_matches": false,
+      "signature_hits": {
+        "ELF": [],
+        "gzip": [],
+        "xz": []
+      }
+    },
+    {
+      "name": "hr_d_prog",
+      "size": 524288,
+      "sha256": "551da1dddb93fead88825155e5c6c9e29b976acef05a273b8a0b575c90f45d44",
+      "byte_entropy": 7.9996787885163,
+      "directory_hash_matches": false,
+      "signature_hits": {
+        "ELF": [],
+        "gzip": [],
+        "xz": []
+      }
+    }
+  ],
+  "limits": "Entropy and incidental signatures do not identify cipher, architecture, compression, or prove absence of executable code. No trustworthy decoding obtained."
+}

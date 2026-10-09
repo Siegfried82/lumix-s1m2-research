@@ -1,0 +1,5 @@
+[
+  {"name":"storage_ids","opcode":4100,"params":[],"evidence":"PTP GetStorageIDs 0x1004, advertised by GetDeviceInfo"},
+  {"name":"battery_description","opcode":4116,"params":[20481],"evidence":"PTP GetDevicePropDesc 0x1014; property 0x5001 advertised by GetDeviceInfo"},
+  {"name":"battery_value","opcode":4117,"params":[20481],"evidence":"PTP GetDevicePropValue 0x1015; property 0x5001 advertised by GetDeviceInfo"}
+]

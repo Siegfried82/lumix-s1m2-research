@@ -1,0 +1,601 @@
+{
+  "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+  "scope": "Direct opcode constants followed by packet halfword store; indirect/dynamic construction not covered",
+  "entries": [
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z36Lmx_lib_ptpif_LmxExt_Get_Strobe_InfoP35_tag_lmx_struct_recinfo_strobe_infojPc",
+      "function_start_line": 13837,
+      "opcode_line": 13852,
+      "instruction": "000000000000fcd8\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9110",
+      "symbol": "__Z36Lmx_lib_ptpif_LmxExt_GetObjectInfoExP41_tag_LMX_STRUCT_PTP_DATASET_OBJECTINFO_EXPcPj",
+      "function_start_line": 15462,
+      "opcode_line": 15485,
+      "instruction": "00000000000115f4\tmov\tw8, #0x9110"
+    },
+    {
+      "opcode": "0x9112",
+      "symbol": "__Z39Lmx_lib_ptpif_LmxExt_GetPartialObjectExjPhmjPc",
+      "function_start_line": 15777,
+      "opcode_line": 15793,
+      "instruction": "0000000000011ac0\tmov\tw8, #0x9112"
+    },
+    {
+      "opcode": "0x9113",
+      "symbol": "__Z39Lmx_lib_ptpif_LmxExt_SkipObjectTransferjPc",
+      "function_start_line": 15868,
+      "opcode_line": 15881,
+      "instruction": "0000000000011c1c\tmov\tw8, #0x9113"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z39Lmx_lib_ptpif_LmxExt_Get_AFMF_Cfg2_InfoP36_tag_lmx_struct_recinfo_af_cfg2_infojPc",
+      "function_start_line": 16345,
+      "opcode_line": 16360,
+      "instruction": "0000000000012384\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x940a",
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_PowerSaving_InfoP33_tag_LMX_STRUCT_POWER_SAVING_INFOjPc",
+      "function_start_line": 17769,
+      "opcode_line": 17784,
+      "instruction": "000000000001396c\tmov\tw8, #0x940a"
+    },
+    {
+      "opcode": "0x9414",
+      "symbol": "__ZL33Lmx_lib_ptpif_LmxExt_LensZoomInfoP34_tag_LMX_STRUCT_LENS_ZOOM_SET_INFOjPc",
+      "function_start_line": 18261,
+      "opcode_line": 18276,
+      "instruction": "0000000000014104\tmov\tw8, #0x9414"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z34Lmx_lib_ptpif_LmxExt_Get_4K6K_InfoP25_tag_LMX_STRUCT_4K6K_INFOjPc",
+      "function_start_line": 18988,
+      "opcode_line": 19003,
+      "instruction": "0000000000014c34\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_Get_AF_Frame_InfoP29_tag_LMX_STRUCT_AF_FRAME_INFOjPc",
+      "function_start_line": 19785,
+      "opcode_line": 19802,
+      "instruction": "0000000000015898\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z50Lmx_lib_ptpif_LmxExt_Get_AF_Frame_Small_Frame_InfoP36_tag_LMX_STRUCT_AF_FRAME_SMALL_FRAMEPc",
+      "function_start_line": 20454,
+      "opcode_line": 20471,
+      "instruction": "00000000000162f0\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z57Lmx_lib_ptpif_LmxExt_Get_AF_Frame_OnePoint_Face_Size_InfoP43_tag_LMX_STRUCT_AF_FRAME_ONEPOINT_FACE_SIZEPc",
+      "function_start_line": 20615,
+      "opcode_line": 20631,
+      "instruction": "0000000000016568\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z32Lmx_lib_ptpif_LmxExt_Get_SS_InfoP23_tag_LMX_STRUCT_SS_INFOjPc",
+      "function_start_line": 24110,
+      "opcode_line": 24128,
+      "instruction": "0000000000019b38\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9414",
+      "symbol": "__Z24LMX_func_api_GetUSBSpeedPtPcPj",
+      "function_start_line": 24711,
+      "opcode_line": 24739,
+      "instruction": "000000000001a4a0\tmov\tw8, #0x9414"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_RecDisp_Cfg_InfoP37_tag_lmx_struct_recinfo_rec_disp_infojPcPj",
+      "function_start_line": 25238,
+      "opcode_line": 25256,
+      "instruction": "000000000001acac\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z39LMX_func_api_PhotoStyle2_Get_ColorNoisePjPcS_",
+      "function_start_line": 27729,
+      "opcode_line": 27744,
+      "instruction": "000000000001d2e8\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9107",
+      "symbol": "__Z43Lmx_lib_ptpif_LmxExt_Get_Tag_CapabilitySizejjPhjPjPc",
+      "function_start_line": 28498,
+      "opcode_line": 28522,
+      "instruction": "000000000001dee4\tmov\tw8, #0x9107"
+    },
+    {
+      "opcode": "0x9108",
+      "symbol": "__Z39Lmx_lib_ptpif_LmxExt_Get_Tag_CapabilityjjPhjPjPc",
+      "function_start_line": 28646,
+      "opcode_line": 28670,
+      "instruction": "000000000001e12c\tmov\tw8, #0x9108"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_Get_Exposure_InfoP29_tag_LMX_STRUCT_EXPOSURE_INFOjPc",
+      "function_start_line": 29417,
+      "opcode_line": 29432,
+      "instruction": "000000000001ecf4\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z42Lmx_lib_ptpif_LmxExt_Get_BurstBracket_InfoP42_tag_lmx_struct_recinfo_burst_bracket_infojPc",
+      "function_start_line": 29969,
+      "opcode_line": 29984,
+      "instruction": "000000000001f578\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9408",
+      "symbol": "__Z40Lmx_lib_ptpif_LmxExt_Get_Mov_Filter_InfoP31_tag_LMX_STRUCT_MOV_FILTER_INFOjPc",
+      "function_start_line": 30395,
+      "opcode_line": 30410,
+      "instruction": "000000000001fc14\tmov\tw8, #0x9408"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_GetCameraModeInfoP40_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_INFOjPc",
+      "function_start_line": 31752,
+      "opcode_line": 31767,
+      "instruction": "0000000000021104\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9414",
+      "symbol": "__ZL33Lmx_lib_ptpif_LmxExt_GetSetupInfoP39_tag_LMX_STRUCT_SETUP_INFO_NOTIFICATIONjPc",
+      "function_start_line": 32940,
+      "opcode_line": 32956,
+      "instruction": "0000000000022348\tmov\tw8, #0x9414"
+    },
+    {
+      "opcode": "0x9414",
+      "symbol": "__Z42Lmx_lib_ptpif_LmxExt_Get_Lv_Composite_InfoP39_tag_LMX_STRUCT_LIVEVIEW_COMPOSITE_INFOjPc",
+      "function_start_line": 33168,
+      "opcode_line": 33183,
+      "instruction": "00000000000226cc\tmov\tw8, #0x9414"
+    },
+    {
+      "opcode": "0x9414",
+      "symbol": "__Z42Lmx_lib_ptpif_LmxExt_Get_LiveView_Str_InfoP33_tag_LMX_STRUCT_LIVEVIEW_STR_INFOjPc",
+      "function_start_line": 34083,
+      "opcode_line": 34099,
+      "instruction": "00000000000234bc\tmov\tw8, #0x9414"
+    },
+    {
+      "opcode": "0x9414",
+      "symbol": "__ZL31Lmx_lib_ptpif_LmxExt_GetRecInfoP24_tag_LMX_STRUCT_REC_INFOjPc",
+      "function_start_line": 35084,
+      "opcode_line": 35101,
+      "instruction": "000000000002441c\tmov\tw8, #0x9414"
+    },
+    {
+      "opcode": "0x9421",
+      "symbol": "__Z49Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfigSet_InfoP40_tag_LMX_STRUCT_SETUP_FILES_CFG_SET_INFOjPc",
+      "function_start_line": 37325,
+      "opcode_line": 37344,
+      "instruction": "00000000000265b8\tmov\tw8, #0x9421"
+    },
+    {
+      "opcode": "0x9422",
+      "symbol": "__Z47Lmx_lib_ptpif_LmxExt_SetSetupFilesConfigSetInfojPhjPc",
+      "function_start_line": 37694,
+      "opcode_line": 37720,
+      "instruction": "0000000000026b84\tmov\tw0, #0x9422"
+    },
+    {
+      "opcode": "0x9423",
+      "symbol": "__Z47Lmx_lib_ptpif_LmxExt_SetSetupFilesConfigSetInfojPhjPc",
+      "function_start_line": 37694,
+      "opcode_line": 37722,
+      "instruction": "0000000000026b8c\tmov\tw0, #0x9423"
+    },
+    {
+      "opcode": "0x940a",
+      "symbol": "__Z64Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfigSetting_Get_MaxRecvBuffP45_tag_LMX_STRUCT_SETUP_FILES_CFG_MAX_RECV_BUFFjPcPj",
+      "function_start_line": 37839,
+      "opcode_line": 37857,
+      "instruction": "0000000000026da0\tmov\tw8, #0x940a"
+    },
+    {
+      "opcode": "0x940a",
+      "symbol": "__Z63Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfigSetting_Get_CompatibleP42_tag_LMX_STRUCT_SETUP_FILES_CFG_COMPATIBLEjPcPj",
+      "function_start_line": 38008,
+      "opcode_line": 38026,
+      "instruction": "000000000002703c\tmov\tw8, #0x940a"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z39Lmx_lib_ptpif_LmxExt_Get_SelfTimer_InfoP38_tag_LMX_STRUCT_RECINFO_SELFTIMER_INFOjPc",
+      "function_start_line": 38480,
+      "opcode_line": 38495,
+      "instruction": "0000000000027764\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z44Lmx_lib_ptpif_LmxExt_Get_RecPreview_Cfg_InfoP40_tag_lmx_struct_recinfo_rec_preview_infojPc",
+      "function_start_line": 39016,
+      "opcode_line": 39031,
+      "instruction": "0000000000027fac\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9414",
+      "symbol": "__Z24LMX_func_api_GetEventTagPjjPcS_",
+      "function_start_line": 39452,
+      "opcode_line": 39478,
+      "instruction": "0000000000028690\tmov\tw8, #0x9414"
+    },
+    {
+      "opcode": "0x9414",
+      "symbol": "__ZL29Lmx_lib_ptpif_LmxExt_LensInfoP25_tag_LMX_STRUCT_LENS_INFOjPc",
+      "function_start_line": 39771,
+      "opcode_line": 39786,
+      "instruction": "0000000000028b54\tmov\tw8, #0x9414"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_Get_Aperture_InfoP29_tag_LMX_STRUCT_APERTURE_INFOjPc",
+      "function_start_line": 40260,
+      "opcode_line": 40275,
+      "instruction": "00000000000292e4\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z36Lmx_lib_ptpif_LmxExt_Get_AF_Cfg_InfoP30_tag_LMX_STRUCT_AF_CONFIG_INFOjPcPj",
+      "function_start_line": 45461,
+      "opcode_line": 45479,
+      "instruction": "000000000002e1ec\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9414",
+      "symbol": "__ZL31Lmx_lib_ptpif_LmxExt_GetRecInfoP27_tag_LMX_STRUCT_EXP_IN_SHOTjPc",
+      "function_start_line": 46756,
+      "opcode_line": 46772,
+      "instruction": "000000000002f5c0\tmov\tw8, #0x9414"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z36Lmx_lib_ptpif_LmxExt_GetIntervalInfoP36_tag_LMX_STRUCT_INTERVAL_CONFIG_INFOjPc",
+      "function_start_line": 47693,
+      "opcode_line": 47708,
+      "instruction": "000000000003042c\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x940a",
+      "symbol": "__Z46Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfig_InfoP36_tag_LMX_STRUCT_SETUP_FILES_CFG_INFOjPc",
+      "function_start_line": 48413,
+      "opcode_line": 48428,
+      "instruction": "0000000000030f30\tmov\tw8, #0x940a"
+    },
+    {
+      "opcode": "0x940b",
+      "symbol": "__Z44Lmx_lib_ptpif_LmxExt_SetSetupFilesConfigInfoPhjPc",
+      "function_start_line": 48595,
+      "opcode_line": 48609,
+      "instruction": "00000000000311f8\tmov\tw8, #0x940b"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z32Lmx_lib_ptpif_LmxExt_Get_WB_InfoP23_tag_LMX_STRUCT_WB_INFOjPc",
+      "function_start_line": 48990,
+      "opcode_line": 49005,
+      "instruction": "0000000000031818\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9414",
+      "symbol": "__Z30LMX_func_api_WB_Get_ADJ_AB_SepPjPcS_",
+      "function_start_line": 49375,
+      "opcode_line": 49400,
+      "instruction": "0000000000031e2c\tmov\tw8, #0x9414"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z33Lmx_lib_ptpif_LmxExt_Get_Rec_InfoP37_tag_LMX_STRUCT_RECINFO_METERING_INFOjPc",
+      "function_start_line": 50139,
+      "opcode_line": 50154,
+      "instruction": "00000000000329cc\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z33Lmx_lib_ptpif_LmxExt_Get_ISO_InfoP24_tag_LMX_STRUCT_ISO_INFOjPc",
+      "function_start_line": 52849,
+      "opcode_line": 52867,
+      "instruction": "0000000000035350\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_GetPhotoStyleInfoP31_tag_LMX_STRUCT_PHOTOSTYLE_INFOjPc",
+      "function_start_line": 54505,
+      "opcode_line": 54520,
+      "instruction": "0000000000036cc8\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9408",
+      "symbol": "__Z37Lmx_lib_ptpif_LmxExt_Get_Mov_Cfg_InfoP31_tag_LMX_STRUCT_MOV_CONFIG_INFOjPc",
+      "function_start_line": 56556,
+      "opcode_line": 56573,
+      "instruction": "0000000000038c28\tmov\tw8, #0x9408"
+    },
+    {
+      "opcode": "0x9408",
+      "symbol": "__Z56Lmx_lib_ptpif_LmxExt_Get_Mov_Quality_Detail_Display_InfoP47_tag_LMX_STRUCT_MOV_QUALITY_DETAIL_DISPLAY_INFOPc",
+      "function_start_line": 57431,
+      "opcode_line": 57448,
+      "instruction": "000000000003999c\tmov\tw8, #0x9408"
+    },
+    {
+      "opcode": "0x9114",
+      "symbol": "__Z34Lmx_lib_ptpif_LmxExt_GetStorageIDsP32_tag_LMX_STRUCT_PTP_ARRAY_UINT32Pc",
+      "function_start_line": 58800,
+      "opcode_line": 58814,
+      "instruction": "000000000003aebc\tmov\tw8, #0x9114"
+    },
+    {
+      "opcode": "0x9115",
+      "symbol": "__Z35Lmx_lib_ptpif_LmxExt_GetStorageInfojP27_tag_LMX_STRUCT_STORAGEINFOPcPj",
+      "function_start_line": 58918,
+      "opcode_line": 58939,
+      "instruction": "000000000003b0ac\tmov\tw8, #0x9115"
+    },
+    {
+      "opcode": "0x9403",
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_SetPhotoStyleInfoPhjPc",
+      "function_start_line": 59706,
+      "opcode_line": 59720,
+      "instruction": "000000000003bccc\tmov\tw8, #0x9403"
+    },
+    {
+      "opcode": "0x9403",
+      "symbol": "__Z31Lmx_lib_ptpif_LmxExt_SetRecInfoPhjjPc",
+      "function_start_line": 59797,
+      "opcode_line": 59815,
+      "instruction": "000000000003be44\tmov\tw8, #0x9403"
+    },
+    {
+      "opcode": "0x9409",
+      "symbol": "__Z31Lmx_lib_ptpif_LmxExt_SetMovInfoPhjjPc",
+      "function_start_line": 59898,
+      "opcode_line": 59913,
+      "instruction": "000000000003bfc8\tmov\tw8, #0x9409"
+    },
+    {
+      "opcode": "0x9409",
+      "symbol": "__Z33Lmx_lib_ptpif_LmxExt_SetMovFilterPhjjPc",
+      "function_start_line": 59993,
+      "opcode_line": 60008,
+      "instruction": "000000000003c140\tmov\tw8, #0x9409"
+    },
+    {
+      "opcode": "0x9415",
+      "symbol": "__Z34Lmx_lib_ptpif_LmxExt_SetLvTransImgPhjjPc",
+      "function_start_line": 60088,
+      "opcode_line": 60103,
+      "instruction": "000000000003c2b8\tmov\tw8, #0x9415"
+    },
+    {
+      "opcode": "0x9706",
+      "symbol": "__Z39Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamDataPhPjPcS0_",
+      "function_start_line": 60614,
+      "opcode_line": 60631,
+      "instruction": "000000000003cae4\tmov\tw8, #0x9706"
+    },
+    {
+      "opcode": "0x9706",
+      "symbol": "__Z40Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamData2PhPjP38_tag_LMX_STRUCT_LIVEVIEW_INFO_HISTGRAMS0_P37_tag_LMX_STRUCT_LIVEVIEW_INFO_POSTURES0_P35_tag_LMX_STRUCT_LIVEVIEW_INFO_LEVELS0_PcS0_",
+      "function_start_line": 60762,
+      "opcode_line": 60787,
+      "instruction": "000000000003cd4c\tmov\tw8, #0x9706"
+    },
+    {
+      "opcode": "0x9707",
+      "symbol": "__Z44Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamFrameDataPhPjPcS0_",
+      "function_start_line": 61057,
+      "opcode_line": 61074,
+      "instruction": "000000000003d1c4\tmov\tw8, #0x9707"
+    },
+    {
+      "opcode": "0x9403",
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_SetCameraModeInfoPhjPc",
+      "function_start_line": 61175,
+      "opcode_line": 61189,
+      "instruction": "000000000003d38c\tmov\tw8, #0x9403"
+    },
+    {
+      "opcode": "0x9403",
+      "symbol": "__Z33Lmx_lib_ptpif_LmxExt_SetImageInfoPhjPc",
+      "function_start_line": 61266,
+      "opcode_line": 61280,
+      "instruction": "000000000003d4f4\tmov\tw8, #0x9403"
+    },
+    {
+      "opcode": "0x9403",
+      "symbol": "__Z36Lmx_lib_ptpif_LmxExt_SetMeteringInfoPhjPc",
+      "function_start_line": 61357,
+      "opcode_line": 61371,
+      "instruction": "000000000003d65c\tmov\tw8, #0x9403"
+    },
+    {
+      "opcode": "0x940b",
+      "symbol": "__Z39Lmx_lib_ptpif_LmxExt_SetSetupConfigInfoPhjPc",
+      "function_start_line": 61972,
+      "opcode_line": 61986,
+      "instruction": "000000000003dfe0\tmov\tw8, #0x940b"
+    },
+    {
+      "opcode": "0x940b",
+      "symbol": "__Z35Lmx_lib_ptpif_LmxExt_SetPowerSavingPhjPc",
+      "function_start_line": 62063,
+      "opcode_line": 62077,
+      "instruction": "000000000003e148\tmov\tw8, #0x940b"
+    },
+    {
+      "opcode": "0x940b",
+      "symbol": "__Z35Lmx_lib_ptpif_LmxExt_SetBodySettingPhjPc",
+      "function_start_line": 62154,
+      "opcode_line": 62168,
+      "instruction": "000000000003e2b0\tmov\tw8, #0x940b"
+    },
+    {
+      "opcode": "0x9704",
+      "symbol": "__Z31Lmx_lib_ptpif_LmxExt_SetMntInfoPhjPc",
+      "function_start_line": 62245,
+      "opcode_line": 62259,
+      "instruction": "000000000003e418\tmov\tw8, #0x9704"
+    },
+    {
+      "opcode": "0x9403",
+      "symbol": "__Z36Lmx_lib_ptpif_LmxExt_SetIntervalInfoPhjPc",
+      "function_start_line": 62336,
+      "opcode_line": 62350,
+      "instruction": "000000000003e580\tmov\tw8, #0x9403"
+    },
+    {
+      "opcode": "0x9411",
+      "symbol": "__Z37Lmx_lib_ptpif_LmxExt_SetGps_Data_InfoPhjPc",
+      "function_start_line": 62427,
+      "opcode_line": 62441,
+      "instruction": "000000000003e6e8\tmov\tw8, #0x9411"
+    },
+    {
+      "opcode": "0x9116",
+      "symbol": "__Z43Lmx_lib_ptpif_LmxExt_SetEventTypeFromCamerajPhjPc",
+      "function_start_line": 62801,
+      "opcode_line": 62816,
+      "instruction": "000000000003ecb4\tmov\tw8, #0x9116"
+    },
+    {
+      "opcode": "0x9117",
+      "symbol": "__Z34Lmx_lib_ptpif_LmxExt_StartObjectRWjPcPj",
+      "function_start_line": 62896,
+      "opcode_line": 62909,
+      "instruction": "000000000003ee24\tmov\tw8, #0x9117"
+    },
+    {
+      "opcode": "0x9118",
+      "symbol": "__Z32Lmx_lib_ptpif_LmxExt_EndObjectRWjPcPj",
+      "function_start_line": 62985,
+      "opcode_line": 62998,
+      "instruction": "000000000003ef84\tmov\tw8, #0x9118"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z37Lmx_lib_ptpif_LmxExt_Get_Strobe2_InfoP36_tag_LMX_STRUCT_RECINFO_STROBE2_INFOjPc",
+      "function_start_line": 63545,
+      "opcode_line": 63560,
+      "instruction": "000000000003f840\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9401",
+      "symbol": "__Z30Lmx_lib_ptpif_LmxExt_GetAFInfoP23_tag_LMX_STRUCT_AF_INFOjPc",
+      "function_start_line": 64386,
+      "opcode_line": 64403,
+      "instruction": "000000000004052c\tmov\tw8, #0x9401"
+    },
+    {
+      "opcode": "0x9414",
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_GetRecMonitorInfoP28_tag_LMX_STRUCT_BATTERY_INFOjPc",
+      "function_start_line": 66301,
+      "opcode_line": 66317,
+      "instruction": "000000000004226c\tmov\tw8, #0x9414"
+    },
+    {
+      "opcode": "0x9402",
+      "symbol": "__Z33Lmx_lib_ptpif_LmxExt_GetImageInfoP34_tag_LMX_STRUCT_RECINFO_IMAGE_INFOjPc",
+      "function_start_line": 66933,
+      "opcode_line": 66948,
+      "instruction": "0000000000042c20\tmov\tw8, #0x9402"
+    },
+    {
+      "opcode": "0x9603",
+      "symbol": "__Z32Lmx_lib_ptpif_LmxExt_ChgEvntTypejjPc",
+      "function_start_line": 69224,
+      "opcode_line": 69239,
+      "instruction": "0000000000044f3c\tmov\tw8, #0x9603"
+    },
+    {
+      "opcode": "0x9605",
+      "symbol": "__Z35Lmx_lib_ptpif_LmxExt_Get_Event_InfoP36_tag_LMX_STRUCT_EVENT_INFO_FROM_INFOjhPc",
+      "function_start_line": 71292,
+      "opcode_line": 71316,
+      "instruction": "0000000000046f08\tmov\tw8, #0x9605"
+    },
+    {
+      "opcode": "0x9606",
+      "symbol": "__Z35Lmx_lib_ptpif_LmxExt_Send_Data_InfoPhjPc",
+      "function_start_line": 71479,
+      "opcode_line": 71501,
+      "instruction": "00000000000471e8\tmov\tw8, #0x9606"
+    },
+    {
+      "opcode": "0x9607",
+      "symbol": "__Z30Lmx_lib_ptpif_LmxExt_Send_DataPhjPc",
+      "function_start_line": 71610,
+      "opcode_line": 71632,
+      "instruction": "00000000000473f0\tmov\tw8, #0x9607"
+    },
+    {
+      "opcode": "0x9414",
+      "symbol": "__ZL39Lmx_lib_ptpif_LmxExt_Get4k6kcuttingInfoP33_tag_LMX_STRUCT_4K6K_CUTTING_INFOjPc",
+      "function_start_line": 71851,
+      "opcode_line": 71867,
+      "instruction": "0000000000047788\tmov\tw8, #0x9414"
+    },
+    {
+      "opcode": "0x940a",
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_SetupConfig_InfoP30_tag_LMX_STRUCT_SETUP_CFG_INFOjPc",
+      "function_start_line": 72818,
+      "opcode_line": 72838,
+      "instruction": "0000000000048680\tmov\tw8, #0x940a"
+    },
+    {
+      "opcode": "0x940a",
+      "symbol": "__Z41Lmx_lib_ptpif_LmxExt_Get_BodySetting_InfoP33_tag_LMX_STRUCT_BODY_SETTING_INFOjPc",
+      "function_start_line": 74769,
+      "opcode_line": 74785,
+      "instruction": "000000000004a46c\tmov\tw8, #0x940a"
+    },
+    {
+      "opcode": "0x9417",
+      "symbol": "__Z35Lmx_lib_ptpif_LmxExt_GetNetworkInfoP24_tag_LMX_STRUCT_NET_INFOjPc",
+      "function_start_line": 75435,
+      "opcode_line": 75450,
+      "instruction": "000000000004aeac\tmov\tw8, #0x9417"
+    },
+    {
+      "opcode": "0x9102",
+      "symbol": "__Z32Lmx_lib_ptpif_LmxExt_OpenSessionjPjPcS_",
+      "function_start_line": 75614,
+      "opcode_line": 75630,
+      "instruction": "000000000004b174\tmov\tw8, #0x9102"
+    },
+    {
+      "opcode": "0x9102",
+      "symbol": "__Z32Lmx_lib_ptpif_LmxExt_OpenSessionjPjPcS_",
+      "function_start_line": 75614,
+      "opcode_line": 75697,
+      "instruction": "000000000004b280\tmov\tw8, #0x9102"
+    },
+    {
+      "opcode": "0x9103",
+      "symbol": "__Z33Lmx_lib_ptpif_LmxExt_CloseSessionPc",
+      "function_start_line": 75783,
+      "opcode_line": 75795,
+      "instruction": "000000000004b400\tmov\tw8, #0x9103"
+    },
+    {
+      "opcode": "0x9104",
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_Get_DeviceID_InfohPhjPc",
+      "function_start_line": 75948,
+      "opcode_line": 75964,
+      "instruction": "000000000004b69c\tmov\tw8, #0x9104"
+    }
+  ]
+}

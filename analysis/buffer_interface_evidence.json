@@ -1,0 +1,353 @@
+{
+  "kind": "static_source_evidence_only",
+  "device_access_performed": false,
+  "files": [
+    {
+      "archive_member": "linux-4.19.124/include/linux/scullp.h",
+      "sha256": "98895e3e42effefe3200f4e7e6a0f476b0b13d338f1a969467be20e6e9a372aa",
+      "selected_copy_matches": null,
+      "lines": [
+        {
+          "line": 28,
+          "text": "//#define SCULLP_MAJOR\t\t124\t/* dynamic major by default */\t"
+        },
+        {
+          "line": 29,
+          "text": "#define SCULLP_MAJOR\t\t231\t/* dynamic major by default */\t"
+        },
+        {
+          "line": 30,
+          "text": "#define DMABUF_NUM \t\t\tCONFIG_BUFFER_NUM /* XXX */"
+        },
+        {
+          "line": 31,
+          "text": "#define DMABUF_SIZE_ORDER   CONFIG_BUFFER_SIZE_ORDER\t/* = 10 power of 2 --> 1024 pages (4MB) XXX */"
+        },
+        {
+          "line": 41,
+          "text": "#if defined(CONFIG_BUFFER_DM) /* XXX */"
+        },
+        {
+          "line": 43,
+          "text": "#else /* ! CONFIG_BUFFER_DM */ /* XXX */"
+        },
+        {
+          "line": 45,
+          "text": "#endif /* CONFIG_BUFFER_DM */ /* XXX */"
+        },
+        {
+          "line": 55,
+          "text": "#define IOC_SCULLP_GETBUFLIST 100"
+        },
+        {
+          "line": 56,
+          "text": "#define IOC_SCULLP_GETPHYADDR 101"
+        },
+        {
+          "line": 57,
+          "text": "#define IOC_SCULLP_BUFCPYPTOV 102"
+        },
+        {
+          "line": 58,
+          "text": "#define IOC_SCULLP_BUFCPYVTOP 103"
+        }
+      ]
+    },
+    {
+      "archive_member": "linux-4.19.124/drivers/pvc/buffer/main.c",
+      "sha256": "ee5d531276ca5d02a967315185ed00ed2b9efd15766f364825ead6c3cedcb512",
+      "selected_copy_matches": true,
+      "lines": [
+        {
+          "line": 36,
+          "text": "#include <linux/scullp.h>"
+        },
+        {
+          "line": 61,
+          "text": "#if defined(CONFIG_BUFFER_DM) /* XXX */"
+        },
+        {
+          "line": 78,
+          "text": "#endif /* CONFIG_BUFFER_DM */ /* XXX */"
+        },
+        {
+          "line": 138,
+          "text": "    if(copy_to_user (buf, dev->dmabuf[chunk_num] + buf_off, count)){"
+        },
+        {
+          "line": 139,
+          "text": "        printk(\"scullp : scullp_read : copy_to_user failed (Read)\\n\");"
+        },
+        {
+          "line": 176,
+          "text": "    if(copy_from_user (dev->dmabuf[chunk_num] + buf_off, buf, count)){"
+        },
+        {
+          "line": 177,
+          "text": "        printk(\"scullp : copy_from_user failed (Write)\\n\");"
+        },
+        {
+          "line": 195,
+          "text": "#if ! defined(CONFIG_BUFFER_DM) /* XXX */"
+        },
+        {
+          "line": 197,
+          "text": "#endif /* ! CONFIG_BUFFER_DM */ /* XXX */"
+        },
+        {
+          "line": 202,
+          "text": "    case IOC_SCULLP_GETBUFLIST:"
+        },
+        {
+          "line": 207,
+          "text": "        if(copy_from_user (&bl, (void *)arg, 4)){"
+        },
+        {
+          "line": 208,
+          "text": "            printk(\"scullp : scullp_ioctl : copy_from_user error\\n\");"
+        },
+        {
+          "line": 212,
+          "text": "#if defined(CONFIG_BUFFER_DM) /* XXX */"
+        },
+        {
+          "line": 224,
+          "text": "#else /* ! CONFIG_BUFFER_DM */"
+        },
+        {
+          "line": 230,
+          "text": "#endif /* CONFIG_BUFFER_DM */"
+        },
+        {
+          "line": 239,
+          "text": "        if(copy_to_user ((void *)arg, &bl, sizeof(bl))){"
+        },
+        {
+          "line": 240,
+          "text": "            printk(\"scullp : scullp_ioctl : copy_to_user %ld error\\n\", sizeof(bl));"
+        },
+        {
+          "line": 245,
+          "text": "    case IOC_SCULLP_GETPHYADDR:"
+        },
+        {
+          "line": 250,
+          "text": "    if(copy_from_user (&bl, (void *)arg, sizeof(bl))){"
+        },
+        {
+          "line": 251,
+          "text": "        printk(\"scullp : scullp_ioctl : copy_from_user error\\n\");"
+        },
+        {
+          "line": 255,
+          "text": "        if(copy_to_user ((void *)arg, &bl, sizeof(bl))){"
+        },
+        {
+          "line": 256,
+          "text": "            printk(\"scullp : scullp_ioctl : copy_to_user %ld error\\n\", sizeof(bl));"
+        },
+        {
+          "line": 261,
+          "text": "    case IOC_SCULLP_BUFCPYPTOV:"
+        },
+        {
+          "line": 266,
+          "text": "    if(copy_from_user (&bl, (void *)arg, sizeof(bl))){"
+        },
+        {
+          "line": 267,
+          "text": "        printk(\"scullp : scullp_ioctl : copy_from_user error\\n\");"
+        },
+        {
+          "line": 270,
+          "text": "\tvaddr = ioremap((unsigned long)bl.buf_list[0].buf_phyaddr,bl.buf_list[0].buf_offset);"
+        },
+        {
+          "line": 271,
+          "text": "   \tmemcpy(bl.buf_list[0].buf_kaddr,vaddr,bl.buf_list[0].buf_offset);"
+        },
+        {
+          "line": 274,
+          "text": "    case IOC_SCULLP_BUFCPYVTOP:"
+        },
+        {
+          "line": 279,
+          "text": "    if(copy_from_user (&bl, (void *)arg, sizeof(bl))){"
+        },
+        {
+          "line": 280,
+          "text": "        printk(\"scullp : scullp_ioctl : copy_from_user error\\n\");"
+        },
+        {
+          "line": 283,
+          "text": "\tvaddr = ioremap((unsigned long)bl.buf_list[0].buf_phyaddr,bl.buf_list[0].buf_offset);"
+        },
+        {
+          "line": 284,
+          "text": "\tmemcpy(vaddr,bl.buf_list[0].buf_kaddr,bl.buf_list[0].buf_offset);"
+        },
+        {
+          "line": 343,
+          "text": "#if ! defined(CONFIG_BUFFER_DM) /* XXX */"
+        },
+        {
+          "line": 345,
+          "text": "#endif /* ! CONFIG_BUFFER_DM */ /* XXX */"
+        },
+        {
+          "line": 354,
+          "text": "\t\tresult = register_chrdev_region( dev_num, 1, \"scullp\" );"
+        },
+        {
+          "line": 356,
+          "text": "\t\t\tprintk(\"scullp : scullp_init : register_chrdev_region() error\\n\");"
+        },
+        {
+          "line": 361,
+          "text": "\t\tresult = alloc_chrdev_region(&dev_num, 0, 1, \"scullp\");"
+        },
+        {
+          "line": 363,
+          "text": "\t\t\tprintk(\"alloc_chrdev_region() failed(%d)\", result);"
+        },
+        {
+          "line": 375,
+          "text": "\t\tunregister_chrdev_region( dev_num, 1 );"
+        },
+        {
+          "line": 379,
+          "text": "#if defined(CONFIG_BUFFER_DM) /* XXX */"
+        },
+        {
+          "line": 382,
+          "text": "\t\tunregister_chrdev_region( dev_num, 1 );"
+        },
+        {
+          "line": 394,
+          "text": "\tscullp_dev.dmabuf[0] = phys_to_virt((unsigned long)buf0_bus_addr);"
+        },
+        {
+          "line": 395,
+          "text": "    scullp_dev.dmabuf[1] = phys_to_virt((unsigned long)buf1_bus_addr);"
+        },
+        {
+          "line": 396,
+          "text": "\tscullp_dev.dmabuf[2] = phys_to_virt((unsigned long)buf2_bus_addr);"
+        },
+        {
+          "line": 400,
+          "text": "\t\t\tphys_to_virt((unsigned long)buf0_bus_addr), phys_to_virt((unsigned long)buf1_bus_addr), phys_to_virt((unsigned long)buf2_bus_addr));"
+        },
+        {
+          "line": 404,
+          "text": "#else /* ! CONFIG_BUFFER_DM */ /* XXX */"
+        },
+        {
+          "line": 411,
+          "text": "\t\tscullp_dev.dmabuf[lpc] = (void *)__get_free_pages(GFP_KERNEL, DMABUF_SIZE_ORDER);"
+        },
+        {
+          "line": 436,
+          "text": "\tunregister_chrdev_region( dev_num, 1 );"
+        },
+        {
+          "line": 440,
+          "text": "#endif /* CONFIG_BUFFER_DM */ /* XXX */"
+        },
+        {
+          "line": 446,
+          "text": "#if ! defined(CONFIG_BUFFER_DM) /* XXX */"
+        },
+        {
+          "line": 448,
+          "text": "#endif /* ! CONFIG_BUFFER_DM */ /* XXX */"
+        },
+        {
+          "line": 450,
+          "text": "\tunregister_chrdev_region( dev_num, 1 );"
+        },
+        {
+          "line": 452,
+          "text": "#if defined(CONFIG_BUFFER_DM) /* XXX */"
+        },
+        {
+          "line": 455,
+          "text": "#else /* ! CONFIG_BUFFER_DM */ /* XXX */"
+        },
+        {
+          "line": 462,
+          "text": "#endif /* CONFIG_BUFFER_DM */ /* XXX */"
+        }
+      ]
+    },
+    {
+      "archive_member": "linux-4.19.124/drivers/pvc/buffer/Kconfig",
+      "sha256": "396b25a1ca4726d8f6ed4238f768c4095323bbec013b210e65d08156c43dcc3a",
+      "selected_copy_matches": true,
+      "lines": [
+        {
+          "line": 17,
+          "text": "config PVC_USB_BUFFER"
+        },
+        {
+          "line": 19,
+          "text": "    default n"
+        },
+        {
+          "line": 24,
+          "text": "config BUFFER_DM"
+        },
+        {
+          "line": 26,
+          "text": "    default n"
+        },
+        {
+          "line": 32,
+          "text": "config BUFFER_SIZE_ORDER"
+        },
+        {
+          "line": 34,
+          "text": "    default 7"
+        },
+        {
+          "line": 39,
+          "text": "config BUFFER_NUM"
+        },
+        {
+          "line": 41,
+          "text": "    default 1"
+        }
+      ]
+    },
+    {
+      "archive_member": "linux-4.19.124/arch/arm64/configs/pvc04v_MC8241_defconfig",
+      "sha256": "757efee7162ca853d1970dc5d988accc6a0c07a2ef362ca6fc14408b3a9cc0c2",
+      "selected_copy_matches": true,
+      "lines": [
+        {
+          "line": 2,
+          "text": "# pvc04v_MC8241_1ST_defconfig - kernel default config for MC8241_1ST"
+        },
+        {
+          "line": 283,
+          "text": "CONFIG_PVC_USB_BUFFER=m"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    "The driver includes include/linux/scullp.h, not its local drivers/pvc/buffer/scullp.h.",
+    "The included header defines buffer count via CONFIG_BUFFER_NUM, and ioctls 100 through 103.",
+    "Physical-to-virtual copying uses caller-supplied physical address, kernel destination and length.",
+    "The inspected ioctl function has no explicit capable() call; VFS/device permissions are separate.",
+    "The MC8241 defconfig sets PVC_USB_BUFFER=m, but does not explicitly set BUFFER_NUM or BUFFER_SIZE_ORDER.",
+    "Kconfig defaults are count 1 and order 7; size also depends on final PAGE_SIZE and build configuration."
+  ],
+  "missing_for_s1m2_use": [
+    "Verified S1M2 build and presence/loading of this module.",
+    "Verified device-node permissions, ABI and buffers in the actual runtime.",
+    "An authorized way to execute userland code inside the camera.",
+    "Verified target addresses and buffer validity/lifetime."
+  ],
+  "conclusion": "An internal physical-memory copying implementation is present in the supplied vendor source archive. This is not proof of camera access, a remote PTP operation, or an available S1M2 memory-dump route."
+}

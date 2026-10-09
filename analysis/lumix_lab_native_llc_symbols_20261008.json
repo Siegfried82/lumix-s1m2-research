@@ -1,0 +1,1186 @@
+{
+  "apk_sha256": "4e1a4fcbb9321bacfce69b6719146b5f8b249d5d9dded72044d23b99903fcdb4",
+  "entry": "lib/arm64-v8a/libllc.so",
+  "sha256": "7433d705215bb92e7a87b9005277127e5851c7a4638ca8f6a3db17d2a00927df",
+  "executed": false,
+  "symbols": [
+    {
+      "name": "__cxa_finalize",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__cxa_atexit",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__register_atfork",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_context_alloc",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_context_read_from_file",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_context_get_primary_image_handle",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_decode_image",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_handle_release",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_context_free",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_get_width",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_get_height",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_get_plane_readonly",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "_Znwm",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "memset",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "memcpy",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_release",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "_ZdlPv",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__stack_chk_fail",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_handle_get_luma_bits_per_pixel",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__cxa_allocate_exception",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "_ZTISt12length_error",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "_ZNSt12length_errorD1Ev",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__cxa_throw",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__cxa_free_exception",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "_ZNSt11logic_errorC2EPKc",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "_ZTVSt12length_error",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "memmove",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__gxx_personality_v0",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__vsprintf_chk",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "malloc",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__vsnprintf_chk",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__strlen_chk",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "strcpy",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "fopen",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "fwrite",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "fprintf",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "fclose",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "fseek",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "fread",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__fread_chk",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "ftell",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "free",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__memcpy_chk",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "strcasecmp",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "memcmp",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "perror",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "strstr",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__strncpy_chk",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "atoi",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "rewind",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "stderr",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "AndroidBitmap_getInfo",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "AndroidBitmap_lockPixels",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "AndroidBitmap_unlockPixels",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__android_log_print",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "calloc",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "puts",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_check_filetype",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_context_read_from_memory_without_copy",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_decoding_options_alloc",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_handle_has_alpha_channel",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_handle_is_premultiplied_alpha",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_decoding_options_free",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "cube_merge_files",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_context_read_from_memory",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_context_get_number_of_top_level_images",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_context_get_list_of_top_level_image_IDs",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_context_get_image_handle",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_handle_get_width",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_handle_get_height",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_handle_get_number_of_metadata_blocks",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_handle_get_list_of_metadata_block_IDs",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_handle_get_metadata_size",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_handle_get_metadata",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_handle_get_metadata_type",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "strcmp",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_image_handle_get_metadata_content_type",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "NV12Scale",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "MergeUVPlane",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "ABGRToNV12",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "_Znam",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "I420ToARGB",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "_ZdaPv",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "ldexpf",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__sF",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "fflush",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "abort",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "pthread_rwlock_wrlock",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "pthread_rwlock_unlock",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "dl_iterate_phdr",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "pthread_rwlock_rdlock",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "__errno",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "syscall",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "getRW2ExifInfo",
+      "defined": true,
+      "value": "0xc7b0",
+      "size": 1428
+    },
+    {
+      "name": "readImgRating",
+      "defined": true,
+      "value": "0xfddc",
+      "size": 588
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_readHeifRating",
+      "defined": true,
+      "value": "0x1630c",
+      "size": 1144
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_util_Heif_Heif_decodeToRgb48ByteArray",
+      "defined": true,
+      "value": "0x16b5c",
+      "size": 392
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_yuv420ToArgb",
+      "defined": true,
+      "value": "0x1700c",
+      "size": 892
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_nativeHalfFloatRGBAToP010",
+      "defined": true,
+      "value": "0x17900",
+      "size": 1004
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_nativeRGB10ToHalfFloat",
+      "defined": true,
+      "value": "0x17d50",
+      "size": 608
+    },
+    {
+      "name": "_ZN12HeifResolver14resolveToRgb48EPKcR10ImageRGB48",
+      "defined": true,
+      "value": "0xb088",
+      "size": 568
+    },
+    {
+      "name": "getRW2SubImage",
+      "defined": true,
+      "value": "0xcd44",
+      "size": 540
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_isHiresJpegFile",
+      "defined": true,
+      "value": "0x168cc",
+      "size": 164
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_nativeImageConvert",
+      "defined": true,
+      "value": "0x16970",
+      "size": 492
+    },
+    {
+      "name": "be32toh",
+      "defined": true,
+      "value": "0xb528",
+      "size": 8
+    },
+    {
+      "name": "gcd_u32",
+      "defined": true,
+      "value": "0xb538",
+      "size": 32
+    },
+    {
+      "name": "getSoftVersion",
+      "defined": true,
+      "value": "0xb728",
+      "size": 92
+    },
+    {
+      "name": "getMP4ExifInfo",
+      "defined": true,
+      "value": "0xc034",
+      "size": 1916
+    },
+    {
+      "name": "find_bytes",
+      "defined": true,
+      "value": "0xfd70",
+      "size": 108
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getRW2SubImage",
+      "defined": true,
+      "value": "0x11cd0",
+      "size": 212
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getJpegExifLutInfo",
+      "defined": true,
+      "value": "0x13504",
+      "size": 2452
+    },
+    {
+      "name": "be64toh",
+      "defined": true,
+      "value": "0xb530",
+      "size": 8
+    },
+    {
+      "name": "get_af_detection_mode_string",
+      "defined": true,
+      "value": "0xb6f8",
+      "size": 48
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getExifData",
+      "defined": true,
+      "value": "0x127ec",
+      "size": 780
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_nativeRGBAToNV12",
+      "defined": true,
+      "value": "0x16f70",
+      "size": 156
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_nativeRGB10ToP010",
+      "defined": true,
+      "value": "0x17fb0",
+      "size": 496
+    },
+    {
+      "name": "writeImgRating",
+      "defined": true,
+      "value": "0x10028",
+      "size": 708
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getMP4ExifInfo",
+      "defined": true,
+      "value": "0x13f58",
+      "size": 4668
+    },
+    {
+      "name": "readHeifRatingReleaseResources",
+      "defined": true,
+      "value": "0x162bc",
+      "size": 80
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getExifInfo",
+      "defined": true,
+      "value": "0x11700",
+      "size": 1488
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_isHiresFile",
+      "defined": true,
+      "value": "0x16828",
+      "size": 164
+    },
+    {
+      "name": "simplify_fraction_u32",
+      "defined": true,
+      "value": "0xb56c",
+      "size": 68
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_convertToCube",
+      "defined": true,
+      "value": "0x11560",
+      "size": 416
+    },
+    {
+      "name": "toRgbaReleaseResources",
+      "defined": true,
+      "value": "0x11da4",
+      "size": 112
+    },
+    {
+      "name": "_ZNSt6__ndk16vectorIhNS_9allocatorIhEEE18__assign_with_sizeB8ne190000IPhS5_EEvT_T0_l",
+      "defined": true,
+      "value": "0xb408",
+      "size": 288
+    },
+    {
+      "name": "readVideoRating",
+      "defined": true,
+      "value": "0x104ec",
+      "size": 780
+    },
+    {
+      "name": "isPanasonicRawFile",
+      "defined": true,
+      "value": "0x107f8",
+      "size": 1180
+    },
+    {
+      "name": "getInfoReleaseResources",
+      "defined": true,
+      "value": "0x12430",
+      "size": 68
+    },
+    {
+      "name": "getLensVersion",
+      "defined": true,
+      "value": "0xb828",
+      "size": 212
+    },
+    {
+      "name": "getRW2Info",
+      "defined": true,
+      "value": "0xf048",
+      "size": 3368
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_mergeCubeFiles",
+      "defined": true,
+      "value": "0x122ac",
+      "size": 240
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_writeVideoRatingJni",
+      "defined": true,
+      "value": "0x160c8",
+      "size": 168
+    },
+    {
+      "name": "getPhotostyleInfo",
+      "defined": true,
+      "value": "0xcf60",
+      "size": 1772
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getRW2Info",
+      "defined": true,
+      "value": "0x15194",
+      "size": 3728
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_readImgRatingJni",
+      "defined": true,
+      "value": "0x16170",
+      "size": 164
+    },
+    {
+      "name": "_ZN12HeifResolver15getBitsPerPixelEPKc",
+      "defined": true,
+      "value": "0xb2c0",
+      "size": 180
+    },
+    {
+      "name": "parseRational",
+      "defined": true,
+      "value": "0xb6a8",
+      "size": 8
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_writeImgRatingJni",
+      "defined": true,
+      "value": "0x16214",
+      "size": 168
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_yuvImageYUV2YUV",
+      "defined": true,
+      "value": "0x17388",
+      "size": 1400
+    },
+    {
+      "name": "_Z11floatToHalff",
+      "defined": true,
+      "value": "0x17cec",
+      "size": 100
+    },
+    {
+      "name": "createCubeFile",
+      "defined": true,
+      "value": "0xb8fc",
+      "size": 492
+    },
+    {
+      "name": "writeVideoRating",
+      "defined": true,
+      "value": "0x103cc",
+      "size": 288
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_toRgba",
+      "defined": true,
+      "value": "0x11e14",
+      "size": 1176
+    },
+    {
+      "name": "isHiresJpegFile",
+      "defined": true,
+      "value": "0x11074",
+      "size": 1044
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_isHeic",
+      "defined": true,
+      "value": "0x1239c",
+      "size": 148
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getPhotostyleInfo",
+      "defined": true,
+      "value": "0x12af8",
+      "size": 2572
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_isPanasonicRawFile",
+      "defined": true,
+      "value": "0x16784",
+      "size": 164
+    },
+    {
+      "name": "format_special_fraction",
+      "defined": true,
+      "value": "0xb654",
+      "size": 84
+    },
+    {
+      "name": "convert_afdetection_offset",
+      "defined": true,
+      "value": "0xb6e8",
+      "size": 16
+    },
+    {
+      "name": "getExifLutInfo",
+      "defined": true,
+      "value": "0xd64c",
+      "size": 2944
+    },
+    {
+      "name": "isHiresFile",
+      "defined": true,
+      "value": "0x10c94",
+      "size": 992
+    },
+    {
+      "name": "is_unvalid_string",
+      "defined": true,
+      "value": "0xb558",
+      "size": 20
+    },
+    {
+      "name": "get_af_mode_string",
+      "defined": true,
+      "value": "0xb6bc",
+      "size": 44
+    },
+    {
+      "name": "getExifInfo",
+      "defined": true,
+      "value": "0xbae8",
+      "size": 1356
+    },
+    {
+      "name": "getMP4Info",
+      "defined": true,
+      "value": "0xe1cc",
+      "size": 3708
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getInfo",
+      "defined": true,
+      "value": "0x12474",
+      "size": 808
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_util_Heif_Heif_getBitsPerPixel",
+      "defined": true,
+      "value": "0x16ce4",
+      "size": 100
+    },
+    {
+      "name": "convert_afmode_offset",
+      "defined": true,
+      "value": "0xb6b0",
+      "size": 12
+    },
+    {
+      "name": "findMetadataPosition",
+      "defined": true,
+      "value": "0x102ec",
+      "size": 224
+    },
+    {
+      "name": "getExifDataReleaseResources",
+      "defined": true,
+      "value": "0x1279c",
+      "size": 80
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_readVideoRatingJni",
+      "defined": true,
+      "value": "0x16024",
+      "size": 164
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_nativeScaleAndSplit",
+      "defined": true,
+      "value": "0x16d48",
+      "size": 208
+    },
+    {
+      "name": "_Z67Java_com_panasonic_jp_lumixlab_LlcApplication_splitYuvArrayToYAndUvP7_JNIEnvP8_jobjectP11_jbyteArrayS4_S4_ii",
+      "defined": true,
+      "value": "0x16e18",
+      "size": 344
+    }
+  ],
+  "keyword_matches": [
+    {
+      "name": "heif_context_read_from_memory_without_copy",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "heif_context_read_from_memory",
+      "defined": false,
+      "value": "0x0",
+      "size": 0
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_readHeifRating",
+      "defined": true,
+      "value": "0x1630c",
+      "size": 1144
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_util_Heif_Heif_decodeToRgb48ByteArray",
+      "defined": true,
+      "value": "0x16b5c",
+      "size": 392
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_yuv420ToArgb",
+      "defined": true,
+      "value": "0x1700c",
+      "size": 892
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_nativeHalfFloatRGBAToP010",
+      "defined": true,
+      "value": "0x17900",
+      "size": 1004
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_nativeRGB10ToHalfFloat",
+      "defined": true,
+      "value": "0x17d50",
+      "size": 608
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_isHiresJpegFile",
+      "defined": true,
+      "value": "0x168cc",
+      "size": 164
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_nativeImageConvert",
+      "defined": true,
+      "value": "0x16970",
+      "size": 492
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getRW2SubImage",
+      "defined": true,
+      "value": "0x11cd0",
+      "size": 212
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getJpegExifLutInfo",
+      "defined": true,
+      "value": "0x13504",
+      "size": 2452
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getExifData",
+      "defined": true,
+      "value": "0x127ec",
+      "size": 780
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_nativeRGBAToNV12",
+      "defined": true,
+      "value": "0x16f70",
+      "size": 156
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_nativeRGB10ToP010",
+      "defined": true,
+      "value": "0x17fb0",
+      "size": 496
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getMP4ExifInfo",
+      "defined": true,
+      "value": "0x13f58",
+      "size": 4668
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getExifInfo",
+      "defined": true,
+      "value": "0x11700",
+      "size": 1488
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_isHiresFile",
+      "defined": true,
+      "value": "0x16828",
+      "size": 164
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_convertToCube",
+      "defined": true,
+      "value": "0x11560",
+      "size": 416
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_mergeCubeFiles",
+      "defined": true,
+      "value": "0x122ac",
+      "size": 240
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_writeVideoRatingJni",
+      "defined": true,
+      "value": "0x160c8",
+      "size": 168
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getRW2Info",
+      "defined": true,
+      "value": "0x15194",
+      "size": 3728
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_readImgRatingJni",
+      "defined": true,
+      "value": "0x16170",
+      "size": 164
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_writeImgRatingJni",
+      "defined": true,
+      "value": "0x16214",
+      "size": 168
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_yuvImageYUV2YUV",
+      "defined": true,
+      "value": "0x17388",
+      "size": 1400
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_toRgba",
+      "defined": true,
+      "value": "0x11e14",
+      "size": 1176
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_isHeic",
+      "defined": true,
+      "value": "0x1239c",
+      "size": 148
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getPhotostyleInfo",
+      "defined": true,
+      "value": "0x12af8",
+      "size": 2572
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_isPanasonicRawFile",
+      "defined": true,
+      "value": "0x16784",
+      "size": 164
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_getInfo",
+      "defined": true,
+      "value": "0x12474",
+      "size": 808
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_util_Heif_Heif_getBitsPerPixel",
+      "defined": true,
+      "value": "0x16ce4",
+      "size": 100
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_readVideoRatingJni",
+      "defined": true,
+      "value": "0x16024",
+      "size": 164
+    },
+    {
+      "name": "Java_com_panasonic_jp_lumixlab_LlcApplication_nativeScaleAndSplit",
+      "defined": true,
+      "value": "0x16d48",
+      "size": 208
+    },
+    {
+      "name": "_Z67Java_com_panasonic_jp_lumixlab_LlcApplication_splitYuvArrayToYAndUvP7_JNIEnvP8_jobjectP11_jbyteArrayS4_S4_ii",
+      "defined": true,
+      "value": "0x16e18",
+      "size": 344
+    }
+  ]
+}

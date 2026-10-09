@@ -1,0 +1,12 @@
+{
+  "input_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+  "keys_count": 1100,
+  "trials": 11000,
+  "components_tested": [
+    8,
+    10
+  ],
+  "matches": [],
+  "hypothesis": "AES with literal aligned header keys or trivial public model strings; directory trailing 16 bytes as IV",
+  "limitations": "Negative result excludes only this finite candidate set and these mode/IV assumptions. It does not exclude AES, transformed keys, other IVs, other ciphers, compression, or private encoding."
+}

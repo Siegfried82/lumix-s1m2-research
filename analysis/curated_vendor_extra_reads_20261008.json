@@ -1,0 +1,38 @@
+[
+  {
+    "name": "current_020001d6",
+    "opcode": 37890,
+    "params": [
+      33554902
+    ],
+    "evidence": {
+      "symbol": "__Z50Lmx_lib_ptpif_LmxExt_Get_AF_Frame_Small_Frame_InfoP36_tag_LMX_STRUCT_AF_FRAME_SMALL_FRAMEPc:",
+      "constant_line": 20465,
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt"
+    }
+  },
+  {
+    "name": "current_020001d8",
+    "opcode": 37890,
+    "params": [
+      33554904
+    ],
+    "evidence": {
+      "symbol": "__Z57Lmx_lib_ptpif_LmxExt_Get_AF_Frame_OnePoint_Face_Size_InfoP43_tag_LMX_STRUCT_AF_FRAME_ONEPOINT_FACE_SIZEPc:",
+      "constant_line": 20625,
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt"
+    }
+  },
+  {
+    "name": "current_020001d0",
+    "opcode": 37890,
+    "params": [
+      33554896
+    ],
+    "evidence": {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "call_line": 19406,
+      "symbol": "__Z38Lmx_lib_ptpif_LmxExt_Get_AF_Frame_InfoP29_tag_LMX_STRUCT_AF_FRAME_INFOjPc"
+    }
+  }
+]

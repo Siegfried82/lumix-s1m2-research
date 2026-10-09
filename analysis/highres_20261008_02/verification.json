@@ -1,0 +1,29 @@
+{
+  "samples": [
+    {
+      "name": "config_1.DAT",
+      "bytes": 9197409,
+      "sha256": "ca848c6889b222a2d7e0039aee945e9afe522cda0997e8053b1a3537820304e2",
+      "validated": true
+    },
+    {
+      "name": "config_2.DAT",
+      "bytes": 9197409,
+      "sha256": "ca848c6889b222a2d7e0039aee945e9afe522cda0997e8053b1a3537820304e2",
+      "validated": true
+    }
+  ],
+  "same_size": true,
+  "identical_configurations": true,
+  "changed_bytes": 0,
+  "changed_offsets": [],
+  "drive_responses_identical": true,
+  "drive_response_bytes": [
+    80,
+    80
+  ],
+  "successful_read_count": 4,
+  "session_closed_without_error": true,
+  "acquisition_note": "No setting changes sent. Use capture_log.json to assess acquisition; process exit alone does not establish data validity.",
+  "interpretation_limit": "Configuration payloads, not arbitrary memory or executable firmware. Byte identity does not validate field semantics."
+}

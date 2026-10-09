@@ -1,0 +1,98 @@
+{
+  "acquisition_timestamp": "2026-10-08T22:52:38+03:00",
+  "app_metadata": {
+    "app_name": "Panasonic LUMIX Lab",
+    "package_name": "com.panasonic.jp.lumixlab",
+    "version_name": "3.1.0",
+    "version_code": 22,
+    "min_sdk_version": 30,
+    "target_sdk_version": 35
+  },
+  "official_sources_investigated": [
+    {
+      "source": "Panasonic Global Support",
+      "url": "https://av.jpn.support.panasonic.com/support/global/cs/soft/lumix_lab/cn/index.html",
+      "status": "No direct APK hosting; directs to Google Play Store"
+    },
+    {
+      "source": "Panasonic China Consumer Portal",
+      "url": "https://consumer.panasonic.cn/product/learn-more/cameras-camcorders/lumix-lab.html",
+      "status": "No direct APK hosting; QR codes and links direct to Google Play Store"
+    },
+    {
+      "source": "Mainland China App Stores (Huawei/Xiaomi/Tencent)",
+      "status": "Not published or indexed"
+    }
+  ],
+  "acquisition_channel": {
+    "source_type": "third_party_mirror",
+    "verified_official": false,
+    "source_note": "第三方镜像获取，未由松下官方直接分发，身份与供应链严格标记为未核验",
+    "request_url": "https://d.apkpure.net/b/APK/com.panasonic.jp.lumixlab?version=latest",
+    "redirect_chain": [
+      {
+        "status": 302,
+        "from": "https://d.apkpure.net/b/APK/com.panasonic.jp.lumixlab?version=latest",
+        "to": "https://data.winudf.com/XAPK/Y29tLnBhbmFzb25pYy5qcC5sdW1peGxhYl8yMl9lYzllZDBkMw?_p=Y29tLnBhbmFzb25pYy5qcC5sdW1peGxhYg%3D%3D&filename=Panasonic+LUMIX+Lab_3.1.0_APKPure.xapk&full_size=235867498&is_hot=false&k=664ffd7ed4266491f9a812674f7c8c1d6aca96fd&package_name=com.panasonic.jp.lumixlab&source=web&token=1791489021-1ba5e2fa4a-0-0d8d6b143a0e26fa838e0ace968cc279"
+      }
+    ],
+    "cdn_host": "data.winudf.com (tencent-cos)"
+  },
+  "downloaded_files": {
+    "bundle_xapk": {
+      "path": "analysis/sources/lumix_lab_android/Panasonic_LUMIX_Lab_3.1.0_APKPure.xapk",
+      "size_bytes": 235867498,
+      "sha256": "06e00657ee592870f1de106de0762637a05ee6a7cf91c916b7273305381ae477"
+    },
+    "components": [
+      {
+        "filename": "com.panasonic.jp.lumixlab.apk",
+        "type": "base_apk",
+        "size_bytes": 189845077,
+        "sha256": "6ba873110d201675a905f7dac39bcda3291674e7440a484d6d5bd1a78447115f",
+        "signature": {
+          "scheme": ["v2", "v3"],
+          "issuer": "C=US, ST=California, L=Mountain View, O=Google Inc., OU=Android, CN=Android",
+          "subject": "C=US, ST=California, L=Mountain View, O=Google Inc., OU=Android, CN=Android",
+          "cert_sha256_fingerprint": "6E:8E:62:B2:20:67:59:C0:21:BF:31:6F:ED:A8:BF:D8:14:00:7F:46:AB:A8:F1:FD:50:97:AA:40:C9:01:7E:03",
+          "signing_source": "Google Play App Signing (Play分发重签名)"
+        }
+      },
+      {
+        "filename": "config.arm64_v8a.apk",
+        "type": "split_apk_native_lib",
+        "size_bytes": 42944168,
+        "sha256": "4e1a4fcbb9321bacfce69b6719146b5f8b249d5d9dded72044d23b99903fcdb4",
+        "signature": {
+          "scheme": ["v2", "v3"],
+          "cert_sha256_fingerprint": "6E:8E:62:B2:20:67:59:C0:21:BF:31:6F:ED:A8:BF:D8:14:00:7F:46:AB:A8:F1:FD:50:97:AA:40:C9:01:7E:03"
+        }
+      },
+      {
+        "filename": "config.en.apk",
+        "type": "split_apk_locale",
+        "size_bytes": 78233,
+        "sha256": "6288e4ea41dce76389814d191eb39afed7a5171d8f80116612c0f23fe98e6ca5"
+      },
+      {
+        "filename": "config.mdpi.apk",
+        "type": "split_apk_density",
+        "size_bytes": 2997638,
+        "sha256": "c9ef5805000fb77ef3a97e9f5bc3ce730fc77f7db7fe19cb56c9dc1b8fccefbe"
+      },
+      {
+        "filename": "manifest.json",
+        "type": "bundle_manifest",
+        "size_bytes": 1612,
+        "sha256": "6bb02dd40d9a530493aca8f7ba50e212cd9944e997fd3c8cde23bfcf51789438"
+      }
+    ]
+  },
+  "safety_and_constraints_compliance": {
+    "apk_installed": false,
+    "binary_executed": false,
+    "camera_connected": false,
+    "registration_or_payment": false,
+    "other_files_modified": false
+  }
+}

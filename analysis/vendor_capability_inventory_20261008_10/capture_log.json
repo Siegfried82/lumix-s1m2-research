@@ -1,0 +1,498 @@
+[
+  {
+    "purpose" : "allowlisted_read_inventory",
+    "read_count" : 28,
+    "event" : "started",
+    "time_utc" : "2026-10-08T18:26:35Z"
+  },
+  {
+    "event" : "device_found",
+    "model" : "DC-S1M2",
+    "time_utc" : "2026-10-08T18:26:35Z"
+  },
+  {
+    "event" : "session_opened",
+    "time_utc" : "2026-10-08T18:26:35Z"
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554704,
+      0,
+      0
+    ],
+    "data_bytes" : 818,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_02000110",
+    "index" : 0
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554720,
+      0,
+      0
+    ],
+    "data_bytes" : 524,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_02000120",
+    "index" : 1
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      134217808,
+      0,
+      0
+    ],
+    "data_bytes" : 28,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_08000050",
+    "index" : 2
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      302055584,
+      0,
+      0
+    ],
+    "data_bytes" : 232,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_120100a0",
+    "index" : 3
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554880,
+      0,
+      0
+    ],
+    "data_bytes" : 160,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_020001c0",
+    "index" : 4
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554896,
+      0,
+      0
+    ],
+    "data_bytes" : 1664,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_020001d0",
+    "index" : 5
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554480,
+      0,
+      0
+    ],
+    "data_bytes" : 506,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_02000030",
+    "index" : 6
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554656,
+      0,
+      0
+    ],
+    "data_bytes" : 1086,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_020000e0",
+    "index" : 7
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554928,
+      0,
+      0
+    ],
+    "data_bytes" : 556,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_020001f0",
+    "index" : 8
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554528,
+      0,
+      0
+    ],
+    "data_bytes" : 316,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_02000060",
+    "index" : 9
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554752,
+      0,
+      0
+    ],
+    "data_bytes" : 110,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_02000140",
+    "index" : 10
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      100663344,
+      0,
+      0
+    ],
+    "data_bytes" : 498,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_06000030",
+    "index" : 11
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554560,
+      0,
+      0
+    ],
+    "data_bytes" : 612,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_02000080",
+    "index" : 12
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554848,
+      0,
+      0
+    ],
+    "data_bytes" : 186,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_020001a0",
+    "index" : 13
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554800,
+      0,
+      0
+    ],
+    "data_bytes" : 250,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_02000170",
+    "index" : 14
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      302055488,
+      0,
+      0
+    ],
+    "data_bytes" : 0,
+    "ok" : 0,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2006",
+    "error" : "",
+    "name" : "capability_12010040",
+    "index" : 15
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554496,
+      0,
+      0
+    ],
+    "data_bytes" : 364,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_02000040",
+    "index" : 16
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554544,
+      0,
+      0
+    ],
+    "data_bytes" : 680,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_02000070",
+    "index" : 17
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      134217872,
+      0,
+      0
+    ],
+    "data_bytes" : 100,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_08000090",
+    "index" : 18
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554512,
+      0,
+      0
+    ],
+    "data_bytes" : 390,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_02000050",
+    "index" : 19
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554608,
+      0,
+      0
+    ],
+    "data_bytes" : 236,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_020000b0",
+    "index" : 20
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554464,
+      0,
+      0
+    ],
+    "data_bytes" : 522,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_02000020",
+    "index" : 21
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554448,
+      0,
+      0
+    ],
+    "data_bytes" : 1336,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_02000010",
+    "index" : 22
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      100663312,
+      0,
+      0
+    ],
+    "data_bytes" : 924,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_06000010",
+    "index" : 23
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554864,
+      0,
+      0
+    ],
+    "data_bytes" : 1018,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_020001b0",
+    "index" : 24
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      33554592,
+      0,
+      0
+    ],
+    "data_bytes" : 460,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_020000a0",
+    "index" : 25
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      50331777,
+      0,
+      0
+    ],
+    "data_bytes" : 0,
+    "ok" : 0,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2006",
+    "error" : "",
+    "name" : "capability_03000081",
+    "index" : 26
+  },
+  {
+    "opcode" : "0x9108",
+    "params" : [
+      134217840,
+      0,
+      0
+    ],
+    "data_bytes" : 28,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:26:35Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "capability_08000070",
+    "index" : 27
+  },
+  {
+    "event" : "session_closed",
+    "error" : "",
+    "time_utc" : "2026-10-08T18:26:35Z"
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "purpose" : "unchanged_settings_baseline",
+    "read_count" : 4,
+    "event" : "started",
+    "time_utc" : "2026-10-08T18:22:46Z"
+  },
+  {
+    "event" : "device_found",
+    "model" : "DC-S1M2",
+    "time_utc" : "2026-10-08T18:22:46Z"
+  },
+  {
+    "event" : "session_opened",
+    "time_utc" : "2026-10-08T18:22:46Z"
+  },
+  {
+    "opcode" : "0x1004",
+    "params" : [
+
+    ],
+    "data_bytes" : 12,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:22:46Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "storage_ids",
+    "index" : 0
+  },
+  {
+    "opcode" : "0x1014",
+    "params" : [
+      20481
+    ],
+    "data_bytes" : 11,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:22:46Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "battery_description",
+    "index" : 1
+  },
+  {
+    "opcode" : "0x1015",
+    "params" : [
+      20481
+    ],
+    "data_bytes" : 1,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:22:46Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "battery_value",
+    "index" : 2
+  },
+  {
+    "event" : "session_closed",
+    "error" : "",
+    "time_utc" : "2026-10-08T18:22:46Z"
+  }
+]

@@ -1,0 +1,1330 @@
+{
+  "source_url": "https://github.com/totoantibes/LumixCSWrapper",
+  "commit": "1baeefcad54373557ac8614c67787ff4d9a19cfc",
+  "filename": "analysis/sources/LumixCSWrapper/Lmxptpif.dll",
+  "size": 206848,
+  "sha256": "c812ce399c1e060e72c88c17b33893698276208e4e967874e2a091d5f0da3235",
+  "pe_timestamp_field": 1599185465,
+  "dll_executed": false,
+  "machine": "x86-64",
+  "image_base": "0x180000000",
+  "export_count": 85,
+  "exports": [
+    {
+      "name": "LMX_func_api_AF_Config_Get_AF_Area_Param",
+      "ordinal": 502,
+      "rva": 10144,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_AF_Config_Get_AF_Mode_Param",
+      "ordinal": 501,
+      "rva": 10000,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_AF_Config_Get_Capability",
+      "ordinal": 500,
+      "rva": 9088,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_AF_Config_Get_Quick_AF_Param",
+      "ordinal": 505,
+      "rva": 10288,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_AF_Config_Set_AF_Area_Param",
+      "ordinal": 504,
+      "rva": 10720,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_AF_Config_Set_AF_Mode_Param",
+      "ordinal": 503,
+      "rva": 10432,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_AF_Config_Set_Quick_AF_Param",
+      "ordinal": 506,
+      "rva": 11008,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Aperture_Get_Capability",
+      "ordinal": 450,
+      "rva": 12048,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Aperture_Get_Param",
+      "ordinal": 451,
+      "rva": 12960,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Aperture_Get_RangeLimit",
+      "ordinal": 452,
+      "rva": 13120,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Aperture_Set_Param",
+      "ordinal": 453,
+      "rva": 13328,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Aperture_Set_RangeLimit",
+      "ordinal": 454,
+      "rva": 13584,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_CameraMode_Get_Capability",
+      "ordinal": 1000,
+      "rva": 14448,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_CameraMode_Get_CreativeMode",
+      "ordinal": 1003,
+      "rva": 17408,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_CameraMode_Get_DriveMode",
+      "ordinal": 1001,
+      "rva": 17120,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_CameraMode_Get_Mode_Pos",
+      "ordinal": 1002,
+      "rva": 17264,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_CameraMode_Get_iA_Mode",
+      "ordinal": 1004,
+      "rva": 17552,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_CameraMode_Set_CreatvieMode",
+      "ordinal": 1007,
+      "rva": 17936,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_CameraMode_Set_DriveMode",
+      "ordinal": 1005,
+      "rva": 17744,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_CameraMode_Set_Mode_Pos",
+      "ordinal": 1006,
+      "rva": 17840,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_CameraMode_Set_iA_Mode",
+      "ordinal": 1008,
+      "rva": 18032,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Close_Device",
+      "ordinal": 113,
+      "rva": 4224,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Close_Session",
+      "ordinal": 5501,
+      "rva": 19296,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Ctrl_LiveView_Start",
+      "ordinal": 3000,
+      "rva": 30080,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Ctrl_LiveView_Stop",
+      "ordinal": 3001,
+      "rva": 30304,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Delete_CallBackInfo",
+      "ordinal": 51,
+      "rva": 20784,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Exposure_Get_Capability",
+      "ordinal": 550,
+      "rva": 23344,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Exposure_Get_Param",
+      "ordinal": 551,
+      "rva": 24768,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Exposure_Get_RangeLimit",
+      "ordinal": 552,
+      "rva": 24928,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Exposure_Set_Param",
+      "ordinal": 553,
+      "rva": 25120,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Exposure_Set_RangeLimit",
+      "ordinal": 554,
+      "rva": 25376,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Get_LiveView_data",
+      "ordinal": 3002,
+      "rva": 30528,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Get_Object",
+      "ordinal": 901,
+      "rva": 35120,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Get_Object_DataSize",
+      "ordinal": 903,
+      "rva": 35776,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Get_Object_FileName",
+      "ordinal": 908,
+      "rva": 36048,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Get_Object_FormatType",
+      "ordinal": 902,
+      "rva": 35376,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Get_Partial_Object",
+      "ordinal": 911,
+      "rva": 35328,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Get_Partial_ObjectEx",
+      "ordinal": 912,
+      "rva": 52112,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Get_PnPDeviceInfo",
+      "ordinal": 114,
+      "rva": 5312,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_ISO_Get_Capability",
+      "ordinal": 300,
+      "rva": 26352,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_ISO_Get_Param",
+      "ordinal": 302,
+      "rva": 27248,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_ISO_Get_UpperLimit",
+      "ordinal": 303,
+      "rva": 27408,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_ISO_Set_Param",
+      "ordinal": 301,
+      "rva": 27568,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_ISO_Set_UpperLimit",
+      "ordinal": 304,
+      "rva": 27808,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Init",
+      "ordinal": 100,
+      "rva": 4096,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_LiveView_Str_Get_Recom_Img",
+      "ordinal": 7902,
+      "rva": 29120,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_LiveView_Str_Get_Trans_Img",
+      "ordinal": 7900,
+      "rva": 28720,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_LiveView_Str_Set_Trans_Img",
+      "ordinal": 7901,
+      "rva": 28896,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Mov_Config_Get_C_Movie_mode_Param",
+      "ordinal": 601,
+      "rva": 32368,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Mov_Config_Get_Capability",
+      "ordinal": 600,
+      "rva": 31296,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Mov_Config_Get_HDMI_mode_Param",
+      "ordinal": 602,
+      "rva": 32576,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Mov_Config_Get_Quality_mode_Param",
+      "ordinal": 605,
+      "rva": 32768,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Mov_Config_Get_Rec_mode_Param",
+      "ordinal": 606,
+      "rva": 32928,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Mov_Config_Set_C_Movie_mode_Param",
+      "ordinal": 603,
+      "rva": 33088,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Mov_Config_Set_HDMI_mode_Param",
+      "ordinal": 604,
+      "rva": 33344,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Mov_Config_Set_Quality_mode_Param",
+      "ordinal": 607,
+      "rva": 33600,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Mov_Config_Set_Rec_mode_Param",
+      "ordinal": 608,
+      "rva": 33808,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_MoveRec_Ctrl_Start",
+      "ordinal": 1200,
+      "rva": 30960,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_MoveRec_Ctrl_Stop",
+      "ordinal": 1201,
+      "rva": 31120,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Open_Session",
+      "ordinal": 5500,
+      "rva": 19120,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Rec_Ctrl_AF_AE",
+      "ordinal": 651,
+      "rva": 37472,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Rec_Ctrl_Lens",
+      "ordinal": 659,
+      "rva": 37808,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Rec_Ctrl_Release",
+      "ordinal": 650,
+      "rva": 37328,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Rec_Ctrl_Zoom",
+      "ordinal": 655,
+      "rva": 37680,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Reg_NotifyCallback",
+      "ordinal": 50,
+      "rva": 20912,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_SS_Get_Capability",
+      "ordinal": 350,
+      "rva": 39152,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_SS_Get_Param",
+      "ordinal": 352,
+      "rva": 40112,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_SS_Get_RangeLimit",
+      "ordinal": 353,
+      "rva": 40288,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_SS_Set_Param",
+      "ordinal": 351,
+      "rva": 40496,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_SS_Set_RangeLimit",
+      "ordinal": 354,
+      "rva": 40736,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Select_PnPDevice",
+      "ordinal": 115,
+      "rva": 6800,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_SetupFilesConfig_Get_Target",
+      "ordinal": 6501,
+      "rva": 37936,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_SetupFilesConfig_Set_Target",
+      "ordinal": 6502,
+      "rva": 38016,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_Skip_Object_Transfer",
+      "ordinal": 913,
+      "rva": 52192,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_WB_Get_ADJ_AB",
+      "ordinal": 412,
+      "rva": 46096,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_WB_Get_ADJ_AB_Sep",
+      "ordinal": 414,
+      "rva": 46448,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_WB_Get_ADJ_GM",
+      "ordinal": 413,
+      "rva": 46272,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_WB_Get_Capability",
+      "ordinal": 400,
+      "rva": 44752,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_WB_Get_KSet",
+      "ordinal": 411,
+      "rva": 45920,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_WB_Get_Param",
+      "ordinal": 410,
+      "rva": 45744,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_WB_Set_ADJ_AB",
+      "ordinal": 403,
+      "rva": 47152,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_WB_Set_ADJ_AB_Sep",
+      "ordinal": 415,
+      "rva": 47696,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_WB_Set_ADJ_GM",
+      "ordinal": 404,
+      "rva": 47424,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_WB_Set_KSet",
+      "ordinal": 402,
+      "rva": 46880,
+      "forwarder": null
+    },
+    {
+      "name": "LMX_func_api_WB_Set_Param",
+      "ordinal": 401,
+      "rva": 46608,
+      "forwarder": null
+    }
+  ],
+  "imports": [
+    {
+      "dll": "KERNEL32.dll",
+      "symbols": [
+        "Sleep",
+        "TerminateThread",
+        "CloseHandle",
+        "CreateThread",
+        "SleepEx",
+        "GetTickCount",
+        "GlobalAlloc",
+        "GlobalFree",
+        "GlobalLock",
+        "GlobalUnlock",
+        "WriteFile",
+        "lstrlenA",
+        "CreateFileA",
+        "lstrcpyA",
+        "lstrcatA",
+        "GetExitCodeThread",
+        "GetModuleFileNameA",
+        "OutputDebugStringA",
+        "SetFilePointer",
+        "ExitThread",
+        "ReleaseMutex",
+        "GetLocalTime",
+        "GetLastError",
+        "GetCurrentThreadId",
+        "IsDebuggerPresent",
+        "InitializeSListHead",
+        "GetSystemTimeAsFileTime",
+        "GetCurrentProcessId",
+        "QueryPerformanceCounter",
+        "IsProcessorFeaturePresent",
+        "TerminateProcess",
+        "GetCurrentProcess",
+        "SetUnhandledExceptionFilter",
+        "UnhandledExceptionFilter",
+        "RtlVirtualUnwind",
+        "RtlLookupFunctionEntry",
+        "RtlCaptureContext",
+        "WaitForSingleObject",
+        "CreateMutexA"
+      ]
+    },
+    {
+      "dll": "USER32.dll",
+      "symbols": [
+        "TranslateMessage",
+        "PeekMessageA",
+        "PostQuitMessage",
+        "wvsprintfA",
+        "DispatchMessageA",
+        "wsprintfA"
+      ]
+    },
+    {
+      "dll": "ole32.dll",
+      "symbols": [
+        "CoCreateInstance",
+        "CoTaskMemAlloc",
+        "CoUninitialize",
+        "CoInitializeEx",
+        "CoTaskMemFree",
+        "PropVariantClear",
+        "StringFromCLSID"
+      ]
+    },
+    {
+      "dll": "MSVCP140.dll",
+      "symbols": [
+        "?_Xbad_alloc@std@@YAXXZ",
+        "?_Xout_of_range@std@@YAXPEBD@Z",
+        "?_Xlength_error@std@@YAXPEBD@Z"
+      ]
+    },
+    {
+      "dll": "WS2_32.dll",
+      "symbols": [
+        "WSACleanup",
+        "__WSAFDIsSet",
+        "bind",
+        "closesocket",
+        "select",
+        "WSAStartup",
+        "inet_addr",
+        "getsockname",
+        "send",
+        "socket",
+        "ntohs",
+        "connect",
+        "inet_ntoa",
+        "WSAGetLastError",
+        "recvfrom",
+        "setsockopt",
+        "sendto",
+        "htons",
+        "recv",
+        "htonl",
+        "inet_ntop"
+      ]
+    },
+    {
+      "dll": "RPCRT4.dll",
+      "symbols": [
+        "UuidCreate"
+      ]
+    },
+    {
+      "dll": "IPHLPAPI.DLL",
+      "symbols": [
+        "GetIpAddrTable"
+      ]
+    },
+    {
+      "dll": "VCRUNTIME140.dll",
+      "symbols": [
+        "memset",
+        "_CxxThrowException",
+        "__std_exception_copy",
+        "__C_specific_handler",
+        "strchr",
+        "strstr",
+        "memmove",
+        "wcsstr",
+        "memcpy",
+        "__CxxFrameHandler3",
+        "__std_exception_destroy",
+        "__std_type_info_destroy_list"
+      ]
+    },
+    {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "symbols": [
+        "__stdio_common_vsprintf"
+      ]
+    },
+    {
+      "dll": "api-ms-win-crt-convert-l1-1-0.dll",
+      "symbols": [
+        "atoi",
+        "strtol",
+        "mbstowcs"
+      ]
+    },
+    {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "symbols": [
+        "realloc",
+        "free",
+        "_callnewh",
+        "malloc"
+      ]
+    },
+    {
+      "dll": "api-ms-win-crt-filesystem-l1-1-0.dll",
+      "symbols": [
+        "_splitpath_s"
+      ]
+    },
+    {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "symbols": [
+        "_invalid_parameter_noinfo_noreturn",
+        "_initterm",
+        "_initterm_e",
+        "_seh_filter_dll",
+        "_configure_narrow_argv",
+        "_initialize_narrow_environment",
+        "_initialize_onexit_table",
+        "_register_onexit_function",
+        "_execute_onexit_table",
+        "_crt_atexit",
+        "_cexit"
+      ]
+    },
+    {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "symbols": [
+        "strspn",
+        "_strdup",
+        "isspace",
+        "strncmp",
+        "strncpy",
+        "strcspn",
+        "isalpha",
+        "strcmp"
+      ]
+    }
+  ],
+  "exception_functions_scanned": 520,
+  "candidate_instruction_hits": [
+    {
+      "value_hex": "0x9402",
+      "label": "get property control",
+      "function_rva": "0x2c20",
+      "function_end_rva": "0x2cb5",
+      "export_at_function_start": null,
+      "instruction_rva": "0x2c5b",
+      "file_offset": 8283,
+      "context": [
+        {
+          "rva": "0x2c45",
+          "bytes": "488d55c7",
+          "instruction": "lea rdx, [rbp - 0x39]"
+        },
+        {
+          "rva": "0x2c49",
+          "bytes": "488945cf",
+          "instruction": "mov qword ptr [rbp - 0x31], rax"
+        },
+        {
+          "rva": "0x2c4d",
+          "bytes": "4533ff",
+          "instruction": "xor r15d, r15d"
+        },
+        {
+          "rva": "0x2c50",
+          "bytes": "488945d7",
+          "instruction": "mov qword ptr [rbp - 0x29], rax"
+        },
+        {
+          "rva": "0x2c54",
+          "bytes": "4c8be1",
+          "instruction": "mov r12, rcx"
+        },
+        {
+          "rva": "0x2c57",
+          "bytes": "488945e7",
+          "instruction": "mov qword ptr [rbp - 0x19], rax"
+        },
+        {
+          "rva": "0x2c5b",
+          "bytes": "b902940000",
+          "instruction": "mov ecx, 0x9402"
+        },
+        {
+          "rva": "0x2c60",
+          "bytes": "8945ef",
+          "instruction": "mov dword ptr [rbp - 0x11], eax"
+        },
+        {
+          "rva": "0x2c63",
+          "bytes": "498bd8",
+          "instruction": "mov rbx, r8"
+        },
+        {
+          "rva": "0x2c66",
+          "bytes": "488945df",
+          "instruction": "mov qword ptr [rbp - 0x21], rax"
+        },
+        {
+          "rva": "0x2c6a",
+          "bytes": "458bef",
+          "instruction": "mov r13d, r15d"
+        },
+        {
+          "rva": "0x2c6d",
+          "bytes": "668945f3",
+          "instruction": "mov word ptr [rbp - 0xd], ax"
+        },
+        {
+          "rva": "0x2c71",
+          "bytes": "8845f5",
+          "instruction": "mov byte ptr [rbp - 0xb], al"
+        }
+      ]
+    },
+    {
+      "value_hex": "0x9402",
+      "label": "get property control",
+      "function_rva": "0x3620",
+      "function_end_rva": "0x369d",
+      "export_at_function_start": null,
+      "instruction_rva": "0x3650",
+      "file_offset": 10832,
+      "context": [
+        {
+          "rva": "0x363c",
+          "bytes": "48894527",
+          "instruction": "mov qword ptr [rbp + 0x27], rax"
+        },
+        {
+          "rva": "0x3640",
+          "bytes": "33c0",
+          "instruction": "xor eax, eax"
+        },
+        {
+          "rva": "0x3642",
+          "bytes": "4533ed",
+          "instruction": "xor r13d, r13d"
+        },
+        {
+          "rva": "0x3645",
+          "bytes": "488945df",
+          "instruction": "mov qword ptr [rbp - 0x21], rax"
+        },
+        {
+          "rva": "0x3649",
+          "bytes": "488bf9",
+          "instruction": "mov rdi, rcx"
+        },
+        {
+          "rva": "0x364c",
+          "bytes": "488945e7",
+          "instruction": "mov qword ptr [rbp - 0x19], rax"
+        },
+        {
+          "rva": "0x3650",
+          "bytes": "b902940000",
+          "instruction": "mov ecx, 0x9402"
+        },
+        {
+          "rva": "0x3655",
+          "bytes": "488945f7",
+          "instruction": "mov qword ptr [rbp - 9], rax"
+        },
+        {
+          "rva": "0x3659",
+          "bytes": "418bf5",
+          "instruction": "mov esi, r13d"
+        },
+        {
+          "rva": "0x365c",
+          "bytes": "8945ff",
+          "instruction": "mov dword ptr [rbp - 1], eax"
+        },
+        {
+          "rva": "0x365f",
+          "bytes": "488945ef",
+          "instruction": "mov qword ptr [rbp - 0x11], rax"
+        },
+        {
+          "rva": "0x3663",
+          "bytes": "66894503",
+          "instruction": "mov word ptr [rbp + 3], ax"
+        },
+        {
+          "rva": "0x3667",
+          "bytes": "884505",
+          "instruction": "mov byte ptr [rbp + 5], al"
+        }
+      ]
+    },
+    {
+      "value_hex": "0x9402",
+      "label": "get property control",
+      "function_rva": "0x4820",
+      "function_end_rva": "0x489e",
+      "export_at_function_start": null,
+      "instruction_rva": "0x4851",
+      "file_offset": 15441,
+      "context": [
+        {
+          "rva": "0x483d",
+          "bytes": "48894527",
+          "instruction": "mov qword ptr [rbp + 0x27], rax"
+        },
+        {
+          "rva": "0x4841",
+          "bytes": "33c0",
+          "instruction": "xor eax, eax"
+        },
+        {
+          "rva": "0x4843",
+          "bytes": "4533ed",
+          "instruction": "xor r13d, r13d"
+        },
+        {
+          "rva": "0x4846",
+          "bytes": "488945df",
+          "instruction": "mov qword ptr [rbp - 0x21], rax"
+        },
+        {
+          "rva": "0x484a",
+          "bytes": "4c8bf9",
+          "instruction": "mov r15, rcx"
+        },
+        {
+          "rva": "0x484d",
+          "bytes": "488945e7",
+          "instruction": "mov qword ptr [rbp - 0x19], rax"
+        },
+        {
+          "rva": "0x4851",
+          "bytes": "b902940000",
+          "instruction": "mov ecx, 0x9402"
+        },
+        {
+          "rva": "0x4856",
+          "bytes": "488945f7",
+          "instruction": "mov qword ptr [rbp - 9], rax"
+        },
+        {
+          "rva": "0x485a",
+          "bytes": "418bf5",
+          "instruction": "mov esi, r13d"
+        },
+        {
+          "rva": "0x485d",
+          "bytes": "8945ff",
+          "instruction": "mov dword ptr [rbp - 1], eax"
+        },
+        {
+          "rva": "0x4860",
+          "bytes": "488945ef",
+          "instruction": "mov qword ptr [rbp - 0x11], rax"
+        },
+        {
+          "rva": "0x4864",
+          "bytes": "66894503",
+          "instruction": "mov word ptr [rbp + 3], ax"
+        },
+        {
+          "rva": "0x4868",
+          "bytes": "884505",
+          "instruction": "mov byte ptr [rbp + 5], al"
+        }
+      ]
+    },
+    {
+      "value_hex": "0x9402",
+      "label": "get property control",
+      "function_rva": "0x6430",
+      "function_end_rva": "0x64ad",
+      "export_at_function_start": null,
+      "instruction_rva": "0x6460",
+      "file_offset": 22624,
+      "context": [
+        {
+          "rva": "0x644c",
+          "bytes": "48894527",
+          "instruction": "mov qword ptr [rbp + 0x27], rax"
+        },
+        {
+          "rva": "0x6450",
+          "bytes": "33c0",
+          "instruction": "xor eax, eax"
+        },
+        {
+          "rva": "0x6452",
+          "bytes": "4533ed",
+          "instruction": "xor r13d, r13d"
+        },
+        {
+          "rva": "0x6455",
+          "bytes": "488945df",
+          "instruction": "mov qword ptr [rbp - 0x21], rax"
+        },
+        {
+          "rva": "0x6459",
+          "bytes": "488bf9",
+          "instruction": "mov rdi, rcx"
+        },
+        {
+          "rva": "0x645c",
+          "bytes": "488945e7",
+          "instruction": "mov qword ptr [rbp - 0x19], rax"
+        },
+        {
+          "rva": "0x6460",
+          "bytes": "b902940000",
+          "instruction": "mov ecx, 0x9402"
+        },
+        {
+          "rva": "0x6465",
+          "bytes": "488945f7",
+          "instruction": "mov qword ptr [rbp - 9], rax"
+        },
+        {
+          "rva": "0x6469",
+          "bytes": "418bf5",
+          "instruction": "mov esi, r13d"
+        },
+        {
+          "rva": "0x646c",
+          "bytes": "8945ff",
+          "instruction": "mov dword ptr [rbp - 1], eax"
+        },
+        {
+          "rva": "0x646f",
+          "bytes": "488945ef",
+          "instruction": "mov qword ptr [rbp - 0x11], rax"
+        },
+        {
+          "rva": "0x6473",
+          "bytes": "66894503",
+          "instruction": "mov word ptr [rbp + 3], ax"
+        },
+        {
+          "rva": "0x6477",
+          "bytes": "884505",
+          "instruction": "mov byte ptr [rbp + 5], al"
+        }
+      ]
+    },
+    {
+      "value_hex": "0x9402",
+      "label": "get property control",
+      "function_rva": "0x6da0",
+      "function_end_rva": "0x6e3b",
+      "export_at_function_start": null,
+      "instruction_rva": "0x6dea",
+      "file_offset": 25066,
+      "context": [
+        {
+          "rva": "0x6dd6",
+          "bytes": "418bf5",
+          "instruction": "mov esi, r13d"
+        },
+        {
+          "rva": "0x6dd9",
+          "bytes": "8bda",
+          "instruction": "mov ebx, edx"
+        },
+        {
+          "rva": "0x6ddb",
+          "bytes": "e8a0500000",
+          "instruction": "call 0x18000be80"
+        },
+        {
+          "rva": "0x6de0",
+          "bytes": "33c0",
+          "instruction": "xor eax, eax"
+        },
+        {
+          "rva": "0x6de2",
+          "bytes": "488d55d7",
+          "instruction": "lea rdx, [rbp - 0x29]"
+        },
+        {
+          "rva": "0x6de6",
+          "bytes": "488945df",
+          "instruction": "mov qword ptr [rbp - 0x21], rax"
+        },
+        {
+          "rva": "0x6dea",
+          "bytes": "b902940000",
+          "instruction": "mov ecx, 0x9402"
+        },
+        {
+          "rva": "0x6def",
+          "bytes": "488945e7",
+          "instruction": "mov qword ptr [rbp - 0x19], rax"
+        },
+        {
+          "rva": "0x6df3",
+          "bytes": "488945f7",
+          "instruction": "mov qword ptr [rbp - 9], rax"
+        },
+        {
+          "rva": "0x6df7",
+          "bytes": "8945ff",
+          "instruction": "mov dword ptr [rbp - 1], eax"
+        },
+        {
+          "rva": "0x6dfa",
+          "bytes": "488945ef",
+          "instruction": "mov qword ptr [rbp - 0x11], rax"
+        },
+        {
+          "rva": "0x6dfe",
+          "bytes": "66894503",
+          "instruction": "mov word ptr [rbp + 3], ax"
+        },
+        {
+          "rva": "0x6e02",
+          "bytes": "884505",
+          "instruction": "mov byte ptr [rbp + 5], al"
+        }
+      ]
+    },
+    {
+      "value_hex": "0x9402",
+      "label": "get property control",
+      "function_rva": "0xa010",
+      "function_end_rva": "0xa0ac",
+      "export_at_function_start": null,
+      "instruction_rva": "0xa05b",
+      "file_offset": 37979,
+      "context": [
+        {
+          "rva": "0xa047",
+          "bytes": "458be5",
+          "instruction": "mov r12d, r13d"
+        },
+        {
+          "rva": "0xa04a",
+          "bytes": "8bda",
+          "instruction": "mov ebx, edx"
+        },
+        {
+          "rva": "0xa04c",
+          "bytes": "e82f1e0000",
+          "instruction": "call 0x18000be80"
+        },
+        {
+          "rva": "0xa051",
+          "bytes": "33c0",
+          "instruction": "xor eax, eax"
+        },
+        {
+          "rva": "0xa053",
+          "bytes": "488d55d7",
+          "instruction": "lea rdx, [rbp - 0x29]"
+        },
+        {
+          "rva": "0xa057",
+          "bytes": "488945df",
+          "instruction": "mov qword ptr [rbp - 0x21], rax"
+        },
+        {
+          "rva": "0xa05b",
+          "bytes": "b902940000",
+          "instruction": "mov ecx, 0x9402"
+        },
+        {
+          "rva": "0xa060",
+          "bytes": "488945e7",
+          "instruction": "mov qword ptr [rbp - 0x19], rax"
+        },
+        {
+          "rva": "0xa064",
+          "bytes": "488945f7",
+          "instruction": "mov qword ptr [rbp - 9], rax"
+        },
+        {
+          "rva": "0xa068",
+          "bytes": "8945ff",
+          "instruction": "mov dword ptr [rbp - 1], eax"
+        },
+        {
+          "rva": "0xa06b",
+          "bytes": "488945ef",
+          "instruction": "mov qword ptr [rbp - 0x11], rax"
+        },
+        {
+          "rva": "0xa06f",
+          "bytes": "66894503",
+          "instruction": "mov word ptr [rbp + 3], ax"
+        },
+        {
+          "rva": "0xa073",
+          "bytes": "884505",
+          "instruction": "mov byte ptr [rbp + 5], al"
+        }
+      ]
+    },
+    {
+      "value_hex": "0x9108",
+      "label": "list property control",
+      "function_rva": "0xa980",
+      "function_end_rva": "0xaa1f",
+      "export_at_function_start": null,
+      "instruction_rva": "0xa9f4",
+      "file_offset": 40436,
+      "context": [
+        {
+          "rva": "0xa9de",
+          "bytes": "488945e7",
+          "instruction": "mov qword ptr [rbp - 0x19], rax"
+        },
+        {
+          "rva": "0xa9e2",
+          "bytes": "8945ef",
+          "instruction": "mov dword ptr [rbp - 0x11], eax"
+        },
+        {
+          "rva": "0xa9e5",
+          "bytes": "668945f3",
+          "instruction": "mov word ptr [rbp - 0xd], ax"
+        },
+        {
+          "rva": "0xa9e9",
+          "bytes": "8845f5",
+          "instruction": "mov byte ptr [rbp - 0xb], al"
+        },
+        {
+          "rva": "0xa9ec",
+          "bytes": "b80891ffff",
+          "instruction": "mov eax, 0xffff9108"
+        },
+        {
+          "rva": "0xa9f1",
+          "bytes": "894dd9",
+          "instruction": "mov dword ptr [rbp - 0x27], ecx"
+        },
+        {
+          "rva": "0xa9f4",
+          "bytes": "b908910000",
+          "instruction": "mov ecx, 0x9108"
+        },
+        {
+          "rva": "0xa9f9",
+          "bytes": "668945cf",
+          "instruction": "mov word ptr [rbp - 0x31], ax"
+        },
+        {
+          "rva": "0xa9fd",
+          "bytes": "488975d1",
+          "instruction": "mov qword ptr [rbp - 0x2f], rsi"
+        },
+        {
+          "rva": "0xaa01",
+          "bytes": "c745ed03000000",
+          "instruction": "mov dword ptr [rbp - 0x13], 3"
+        },
+        {
+          "rva": "0xaa08",
+          "bytes": "488975dd",
+          "instruction": "mov qword ptr [rbp - 0x23], rsi"
+        },
+        {
+          "rva": "0xaa0c",
+          "bytes": "e86f180000",
+          "instruction": "call 0x18000c280"
+        },
+        {
+          "rva": "0xaa11",
+          "bytes": "84c0",
+          "instruction": "test al, al"
+        }
+      ]
+    },
+    {
+      "value_hex": "0x9402",
+      "label": "get property control",
+      "function_rva": "0xbb70",
+      "function_end_rva": "0xbbf2",
+      "export_at_function_start": null,
+      "instruction_rva": "0xbba9",
+      "file_offset": 44969,
+      "context": [
+        {
+          "rva": "0xbb93",
+          "bytes": "488d55d7",
+          "instruction": "lea rdx, [rbp - 0x29]"
+        },
+        {
+          "rva": "0xbb97",
+          "bytes": "488945df",
+          "instruction": "mov qword ptr [rbp - 0x21], rax"
+        },
+        {
+          "rva": "0xbb9b",
+          "bytes": "4533ed",
+          "instruction": "xor r13d, r13d"
+        },
+        {
+          "rva": "0xbb9e",
+          "bytes": "488945e7",
+          "instruction": "mov qword ptr [rbp - 0x19], rax"
+        },
+        {
+          "rva": "0xbba2",
+          "bytes": "488bf9",
+          "instruction": "mov rdi, rcx"
+        },
+        {
+          "rva": "0xbba5",
+          "bytes": "488945f7",
+          "instruction": "mov qword ptr [rbp - 9], rax"
+        },
+        {
+          "rva": "0xbba9",
+          "bytes": "b902940000",
+          "instruction": "mov ecx, 0x9402"
+        },
+        {
+          "rva": "0xbbae",
+          "bytes": "8945ff",
+          "instruction": "mov dword ptr [rbp - 1], eax"
+        },
+        {
+          "rva": "0xbbb1",
+          "bytes": "458be5",
+          "instruction": "mov r12d, r13d"
+        },
+        {
+          "rva": "0xbbb4",
+          "bytes": "488945ef",
+          "instruction": "mov qword ptr [rbp - 0x11], rax"
+        },
+        {
+          "rva": "0xbbb8",
+          "bytes": "66894503",
+          "instruction": "mov word ptr [rbp + 3], ax"
+        },
+        {
+          "rva": "0xbbbc",
+          "bytes": "884505",
+          "instruction": "mov byte ptr [rbp + 5], al"
+        },
+        {
+          "rva": "0xbbbf",
+          "bytes": "b80294ffff",
+          "instruction": "mov eax, 0xffff9402"
+        }
+      ]
+    }
+  ],
+  "tools": {
+    "pefile": "2024.8.26",
+    "capstone": "5.0.7"
+  },
+  "limits": "Third-party repository binary, not verified against an official SDK package. PE metadata may be stale. Immediate values require call/data-flow confirmation; no S1M2 compatibility or arbitrary camera memory access is established."
+}

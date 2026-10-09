@@ -1,0 +1,37 @@
+[
+  {
+    "purpose" : "allowlisted_read_inventory",
+    "read_count" : 1,
+    "event" : "started",
+    "time_utc" : "2026-10-08T18:29:24Z"
+  },
+  {
+    "event" : "device_found",
+    "model" : "DC-S1M2",
+    "time_utc" : "2026-10-08T18:29:24Z"
+  },
+  {
+    "event" : "session_opened",
+    "time_utc" : "2026-10-08T18:29:24Z"
+  },
+  {
+    "opcode" : "0x9114",
+    "params" : [
+
+    ],
+    "data_bytes" : 0,
+    "ok" : 0,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-08T18:29:24Z",
+    "transport_ok" : true,
+    "response_code" : "0x2005",
+    "error" : "",
+    "name" : "vendor_storage_ids",
+    "index" : 0
+  },
+  {
+    "event" : "session_closed",
+    "error" : "",
+    "time_utc" : "2026-10-08T18:29:24Z"
+  }
+]

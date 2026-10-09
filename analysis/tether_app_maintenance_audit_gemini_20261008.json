@@ -1,0 +1,189 @@
+{
+  "audit_metadata": {
+    "audit_date": "2026-10-08",
+    "analyzer": "Gemini 3.8 Flash (High)",
+    "execution_constraints": "offline_static_only, no_camera_connection, no_binary_execution, no_vendor_registration",
+    "target_files": {
+      "app_disassembly": {
+        "path": "analysis/tether_2_12_app_arm64_disassembly.txt",
+        "sha256": "ccdf024ece6c12440fb79b85174fe1e0c0ddbffa81302867a5e37313b8fd293e",
+        "lines": 305009
+      },
+      "ptp_disassembly": {
+        "path": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+        "sha256": "f0beab04bef63508de6492cf263f62199548bda97911ab5852b371474537af1d",
+        "lines": 476647
+      },
+      "prior_check_report": {
+        "path": "analysis/S1M2_RAM读取入口_核查结果_20261008.md",
+        "sha256": "195520717134877c80a31f942e2df87f7b57c88420b0f82fd0402bcaaa69da08"
+      },
+      "binary_inventory": {
+        "path": "analysis/tether_2_12_binary_inventory.json",
+        "sha256": "7b478039f321896acf97ec51f7d14af6d10e95d6260d598f9c01d292561bc838"
+      }
+    }
+  },
+  "dynamic_loading_audit": {
+    "searched_symbols": [
+      "dlsym",
+      "dlopen",
+      "CFBundleGetFunctionPointerForName",
+      "NSLookupSymbol",
+      "QLibrary"
+    ],
+    "matches_in_app": 0,
+    "conclusion": "LUMIX Tether 应用层不存在动态符号解析加载行为，所有与 libLmxptpif.dylib 的通信均通过 Mach-O 静态符号存根（symbol stub）绑定。"
+  },
+  "libLmxptpif_mnt_exports_inventory": [
+    {
+      "symbol": "__Z36LMX_func_api_Mnt_GetInfo_Get_UsbModePjPcS_",
+      "demangled": "LMX_func_api_Mnt_GetInfo_Get_UsbMode(unsigned int*, char*, unsigned int*)",
+      "imported_by_app": true,
+      "app_stub_address": "0x10012f194"
+    },
+    {
+      "symbol": "__Z30LMX_func_api_Mnt_Ctrl_LiveViewP24_tag_LMX_STRUCT_MNT_CTRLPcPj",
+      "demangled": "LMX_func_api_Mnt_Ctrl_LiveView(tag_LMX_STRUCT_MNT_CTRL*, char*, unsigned int*)",
+      "imported_by_app": true,
+      "app_stub_address": "0x10012ede0"
+    },
+    {
+      "symbol": "__Z36LMX_func_api_Mnt_GetInfo_Get_VersionPjS_PcS_",
+      "demangled": "LMX_func_api_Mnt_GetInfo_Get_Version(unsigned int*, unsigned int*, char*, unsigned int*)",
+      "imported_by_app": false,
+      "app_stub_address": null
+    },
+    {
+      "symbol": "__Z28LMX_func_api_Mnt_Set_UsbModejPcPj",
+      "demangled": "LMX_func_api_Mnt_Set_UsbMode(unsigned int, char*, unsigned int*)",
+      "imported_by_app": false,
+      "app_stub_address": null
+    },
+    {
+      "symbol": "__Z23LMX_func_api_SetMntInfoP28_tag_LMX_STRUCT_MNT_SET_INFOjPc",
+      "demangled": "LMX_func_api_SetMntInfo(tag_LMX_STRUCT_MNT_SET_INFO*, unsigned int, char*)",
+      "imported_by_app": false,
+      "app_stub_address": null
+    },
+    {
+      "symbol": "__Z34LMX_func_api_Mnt_Get_LiveView_dataPhPjPcS0_",
+      "demangled": "LMX_func_api_Mnt_Get_LiveView_data(unsigned char*, unsigned int*, char*, char*)",
+      "imported_by_app": false,
+      "app_stub_address": null
+    }
+  ],
+  "app_maintenance_callers": [
+    {
+      "target_function": "LMX_func_api_Mnt_GetInfo_Get_UsbMode",
+      "app_wrapper": {
+        "symbol": "__ZN11lumixtether13DeviceAdapter40adp_LMX_func_api_Mnt_GetInfo_Get_UsbModeE7QStringPNS_9Utilities7UsbModeE",
+        "demangled": "lumixtether::DeviceAdapter::adp_LMX_func_api_Mnt_GetInfo_Get_UsbMode(QString, lumixtether::Utilities::UsbMode*)",
+        "lines": "154383-154487",
+        "parameter_construction": {
+          "mutex_lock": "154401 行调用 dev_mutex_lock",
+          "input_dev_id": "154414 行调用 QString::toLocal8Bit_helper 转换为局部 8-bit C 字符串",
+          "stack_buffer": "154425 行分配栈变量 sub x0, x29, #0x24 作为 uint32 输出接收缓冲",
+          "error_code_arg": "154426 行 mov x2, #0x0 (NULL)",
+          "stub_call": "154427 行 bl 0x10012f194 (__Z36LMX_func_api_Mnt_GetInfo_Get_UsbModePjPcS_)",
+          "mutex_unlock": "154448 行调用 dev_mutex_unlock"
+        },
+        "return_handling": {
+          "success_check": "154459 行 cmp w22, #0x1",
+          "value_validation": "154462 行 cmp w21, #0x3 (合法范围 0..3)",
+          "output_pointer_branch": "154465 行写入 *outMode (若调用方传入非空指针)",
+          "cache_update_and_signals": "154475-154481 行更新 DeviceAdapter 成员变量 +0x476f0，触发 usbModeChanged(UsbMode) 与 usbModeChanged(uint) 信号",
+          "function_return": "154482 行 mov w0, #0x1 (成功)；154467 行 mov w0, #0x0 (失败)"
+        }
+      },
+      "actual_callers": [
+        {
+          "caller_function": "lumixtether::DeviceAdapter::qt_metacall(QMetaObject::Call, int, void**)",
+          "call_site_line": 256460,
+          "call_site_address": "0x100100530",
+          "overload": "1-parameter: QString",
+          "input_source": "Qt/QML 元方法调用参数 a[1] (QString devId)，参数 outMode 固定传 NULL (156459 行 mov x2, #0x0)",
+          "return_usage": "156474 行将布尔返回值写入 *a[0]"
+        },
+        {
+          "caller_function": "lumixtether::DeviceAdapter::qt_metacall(QMetaObject::Call, int, void**)",
+          "call_site_line": 258072,
+          "call_site_address": "0x100101e60",
+          "overload": "2-parameter: QString, UsbMode*",
+          "input_source": "a[1] (QString devId) 与 a[2] (UsbMode* outMode，158069 行 ldr x2, [x8])",
+          "return_usage": "158086 行将布尔返回值写入 *a[0]"
+        }
+      ],
+      "semantics_and_purpose": "查询相机当前物理 USB 链路模式：0=NotDefined/Unknown, 1=Full-Speed(12M), 2=High-Speed(480M), 3=SuperSpeed(5G)。用于 UI 连接界面 (RTScr_Conn_Conn_UsbMode) 提示链路速率。底层经 libLmxptpif 发送 PTP 操作码 0x9703，子命令固定 0x80030002，无内存地址/长度字段。"
+    },
+    {
+      "target_function": "LMX_func_api_Mnt_Ctrl_LiveView",
+      "app_wrapper": {
+        "start_wrapper": {
+          "symbol": "__ZN11lumixtether13DeviceAdapter40adp_LMX_func_api_Mnt_Ctrl_LiveView_StartEv",
+          "lines": "95867-95971",
+          "subcommand": "0x800500f0 (95880 行: mov w8, #0xf0; movk w8, #0x8005, lsl #16)",
+          "stub_call": "95925 行 bl 0x10012ede0",
+          "caller": "DeviceAdapter::qt_metacall (253761 行)"
+        },
+        "stop_wrapper": {
+          "symbol": "__ZN11lumixtether13DeviceAdapter39adp_LMX_func_api_Mnt_Ctrl_LiveView_StopEv",
+          "lines": "96015-96080",
+          "subcommand": "0x800500f1 (96028 行: mov w8, #0xf1; movk w8, #0x8005, lsl #16)",
+          "stub_call": "96073 行 bl 0x10012ede0",
+          "caller": "DeviceAdapter::qt_metacall (256226 行)"
+        }
+      },
+      "semantics_and_purpose": "控制取景预览数据流开启/停止。底层在 ptp 反汇编 73666 行发送 PTP 操作码 0x9705。"
+    }
+  ],
+  "uncalled_maintenance_interfaces": [
+    {
+      "symbol": "LMX_func_api_Mnt_GetInfo_Get_Version",
+      "definition_line_ptp": 75144,
+      "subcommand": "0x80030001 (75172 行)",
+      "ptp_opcode": "0x9703 (75178 行)",
+      "search_scope_app": "tether_2_12_app_arm64_disassembly.txt 全文 (1-305009 行)",
+      "search_scope_ptp": "tether_2_12_ptp_arm64_disassembly.txt 全文 (1-476647 行)",
+      "app_calls": 0,
+      "ptp_internal_calls": 0,
+      "app_alternative_path": "应用层使用标准 PTP 0x1001 获取设备/固件版本：adp_LMX_func_api_GetDeviceInfo_VersionInfo (42212 行) -> LMX_func_api_GetDeviceInfo_VersionInfo (ptp 21878 行) -> Lmx_lib_ptpif_std_GetDeviceInfo。"
+    },
+    {
+      "symbol": "Lmx_lib_ptpif_LmxExt_Mnt_GetInfo",
+      "definition_line_ptp": 75202,
+      "ptp_opcode": "0x9703",
+      "nature": "libLmxptpif.dylib 内部通用封包函数，未对外导出",
+      "ptp_internal_callers": [
+        "LMX_func_api_Mnt_GetInfo_Get_Version (75180 行，子命令 0x80030001)",
+        "LMX_func_api_Mnt_GetInfo_Get_UsbMode (75362 行，子命令 0x80030002)"
+      ],
+      "app_calls": 0
+    },
+    {
+      "symbol": "LMX_func_api_SetMntInfo / LMX_func_api_Mnt_Set_UsbMode",
+      "definition_line_ptp": "66164 (Set_UsbMode), 66203 (SetMntInfo)",
+      "subcommand": "0x80040001 (66188 行)",
+      "ptp_opcode": "0x9704 (62259 行)",
+      "app_calls": 0
+    }
+  ],
+  "facts_inferences_unknowns": {
+    "facts": [
+      "LUMIX Tether 2.12 应用层二进制未导入 dlsym/dlopen/CFBundle 等动态加载函数，全部外部调用均静态绑定。",
+      "在 libLmxptpif.dylib 导出的 6 个 Mnt_ 接口中，应用层仅导入并调用了 Mnt_GetInfo_Get_UsbMode 与 Mnt_Ctrl_LiveView。",
+      "Mnt_GetInfo_Get_UsbMode 在应用层仅在 DeviceAdapter::qt_metacall 中存在两个调用点 (256460 行与 258072 行)，输入为相机 ID，返回 0-3 USB 物理协商速率枚举，底层封包为固定子命令 0x80030002，无地址或长度参数。",
+      "Mnt_GetInfo_Get_Version 在应用层未导入、未调用；在 libLmxptpif 内部亦无任何内部调用者。应用层版本查询由标准 PTP 0x1001 (GetDeviceInfo) 完成。",
+      "Lmx_lib_ptpif_LmxExt_Mnt_GetInfo (0x9703 通用封包器) 在库内仅见 2 处固定子命令调用，应用层无直调。"
+    ],
+    "inferences": [
+      "libLmxptpif.dylib 属于通用相机通信基础库，保留了未被 Tether 2.12 应用层消费的维护/诊断 API 导出 (如 Get_Version、Set_UsbMode)。",
+      "0x9703 与 0x9704 具备通用维护子命令结构，机身固件端极可能存在更多未在 Tether 中启用的诊断子命令分支。"
+    ],
+    "unknowns": [
+      "机身端 0x9703 / 0x9704 命令处理器具体支持哪些未在 Tether 中实现的维护子命令。",
+      "是否存在专门的原厂工程维护软件 (Service Tool) 调用了未在 Tether 启用的 Mnt 导出函数。"
+    ]
+  },
+  "next_safe_offline_validation": "离线对已有的 S1M2 固件解码数据及 analysis/ 下固件更新工具 (tether_aw) 的 arm64 反汇编进行静态交叉检索，搜索常量 0x9703、0x9704、0x9705 及 0x80030001、0x80030002，验证机身固件端分发器对应的子命令跳转表及是否有内存转储或读写分支。"
+}

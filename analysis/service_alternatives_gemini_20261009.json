@@ -1,0 +1,132 @@
+{
+  "retrieval_date": "2026-10-09",
+  "scope": "public_sources_without_login",
+  "constraints": {
+    "no_registration": true,
+    "no_payment": true,
+    "no_email": true,
+    "no_device_operation": true,
+    "no_executable_run": true,
+    "no_permission_bypass": true
+  },
+  "targets": [
+    {
+      "model": "DC-S1M2",
+      "target_kind": "service_manual",
+      "sources_checked": [
+        {
+          "platform": "remont-aud.net",
+          "url": "https://remont-aud.net/load/drugaja_apparatura/dc_s1m2_service_manual/147-1-0-97303",
+          "status": "account_review_pending_and_electronics_test_required",
+          "downloaded": false,
+          "body_pages_obtained": null,
+          "note": "第三方目录标注 12.22MB、无电路图；按规则不依赖账号审核、不绕过权限，未取得正文"
+        },
+        {
+          "platform": "Elektrotanya",
+          "query": "DC-S1M2",
+          "status": "not_indexed",
+          "downloaded": false,
+          "body_pages_obtained": null,
+          "note": "仅有无关仪器与旧卡片机条目"
+        },
+        {
+          "platform": "Archive.org",
+          "query": "DC-S1M2",
+          "status": "not_indexed",
+          "downloaded": false,
+          "body_pages_obtained": null
+        },
+        {
+          "platform": "iFixit",
+          "query": "DC-S1M2",
+          "status": "not_indexed",
+          "downloaded": false,
+          "body_pages_obtained": null
+        },
+        {
+          "platform": "ManualsLib",
+          "query": "DC-S1M2",
+          "status": "access_restricted_http_403",
+          "downloaded": false,
+          "body_pages_obtained": null,
+          "note": "反爬质询拦截，未发现同型号维修手册免登录下载"
+        }
+      ],
+      "overall_status": "not_obtained"
+    },
+    {
+      "model": "DC-S1M2ES",
+      "target_kind": "service_manual_or_adjustment_materials",
+      "sources_checked": [
+        {
+          "platform": "Panasonic Europe Technical Data Storage (Azure Blob)",
+          "url": "https://tda.panasonic-europe-service.com/docs/.../tsn3/data/ALL/DCS1M2ESE/OI/1023522/dvqp3359za.pdf",
+          "status": "user_operating_instructions_only",
+          "downloaded": false,
+          "body_pages_obtained": null,
+          "note": "1038页完整使用说明书（OI），非维修手册（SM）"
+        }
+      ],
+      "overall_status": "not_obtained"
+    },
+    {
+      "model": "DC-S1RM2",
+      "target_kind": "service_manual_or_adjustment_materials",
+      "sources_checked": [
+        {
+          "platform": "Panasonic Official Support & Public Engines",
+          "status": "operating_instructions_only",
+          "downloaded": false,
+          "body_pages_obtained": null,
+          "note": ""
+        }
+      ],
+      "overall_status": "not_obtained"
+    },
+    {
+      "model": "DC-GH7",
+      "target_kind": "service_manual_or_adjustment_materials",
+      "sources_checked": [
+        {
+          "platform": "Panasonic Official Support & Technical Repositories",
+          "status": "operating_instructions_only",
+          "downloaded": false,
+          "body_pages_obtained": null,
+          "note": "公开仅见操作指南与说明书，无原厂维修手册公开正文"
+        }
+      ],
+      "overall_status": "not_obtained"
+    },
+    {
+      "model": "DC-G9M2",
+      "target_kind": "service_manual_or_adjustment_materials",
+      "sources_checked": [
+        {
+          "platform": "ManualsLib",
+          "status": "access_restricted_http_403",
+          "downloaded": false,
+          "body_pages_obtained": null,
+          "note": "受 Cloudflare 拦截，此前所传 DSC2310016RE 编号未取得原件支持"
+        },
+        {
+          "platform": "Elektrotanya",
+          "query": "DC-G9M2 / G9M2",
+          "status": "not_indexed",
+          "downloaded": false,
+          "body_pages_obtained": null,
+          "note": "仅收录初代 DC-G9（DSC1801001CE），无 G9M2 维修手册"
+        }
+      ],
+      "overall_status": "not_obtained"
+    }
+  ],
+  "contemporary_software_evidence": {
+    "software_name": null,
+    "software_order_no": null,
+    "official_entry_portal": "https://www.e-service.css.panasonic.co.jp/cshome/login (TSN登录页，需要账号密码，无匿名公开下载)",
+    "verified_pages": [],
+    "finding": "本轮检索未取得 S1M2、S1RM2、S1M2ES、GH7、G9M2 任一机型的原厂维修手册正文，无法从正文提取当代调整软件确切名称与编号；旧机型 DIAS 证据不能证明适用于 S1M2"
+  },
+  "new_downloaded_files": []
+}

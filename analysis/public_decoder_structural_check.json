@@ -1,0 +1,53 @@
+{
+  "upstream_url": "https://github.com/theubusu/pana_dvd_crypto",
+  "commit": "bf2650e81034e937e34095c376519ebc3f04e5cd",
+  "source_sha256": {
+    "src/crypto.rs": "6ff73aa7cf637ea2ecdb749ae7208492f521afededb8c2c3890336b6324ed50e",
+    "src/main.rs": "4802832a308a27369f750dcffd61a355d55fcb43739fafafb9c156a6b67c25a7",
+    "Cargo.toml": "16265cf889c53a62bedc03a41c0ab638dd09297fd1de3d33d1a0a52e25a67b2a",
+    "Cargo.lock": "d092e97cfbf82807cbed36d1116f13323c6f6265655482249c4829991e181e21"
+  },
+  "upstream_code_executed": false,
+  "firmware_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+  "source_observation": {
+    "key_bytes": 8,
+    "block_bytes": 8,
+    "mode": "same key schedule for every independent block; no IV in decrypt_data_inplace",
+    "key_provided_by_caller": true,
+    "camera_model_or_successful_s1m2_sample_in_repository": false
+  },
+  "reference_index": 61,
+  "reference_fill_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+  "candidate_checks": [
+    {
+      "index": 8,
+      "name": "postboot2_r",
+      "size": 131072,
+      "raw_sha256": "c965df4a17b25f35e1ce6544e4a75cb4c0fc60d6e112493ccd30fd5a7b1f7f39",
+      "directory_hash_matches_ff_reference": true,
+      "block_size": 8,
+      "block_count": 16384,
+      "distinct_blocks": 16384,
+      "largest_block_multiplicity": 1,
+      "direct_fixed_key_independent_blocks_consistent_with_ff": false
+    },
+    {
+      "index": 10,
+      "name": "postboot4_r",
+      "size": 131072,
+      "raw_sha256": "7e906a40f15d4f7a51db7cece8bf7928f98def136d68a81a35c2cee7e28ef235",
+      "directory_hash_matches_ff_reference": true,
+      "block_size": 8,
+      "block_count": 16384,
+      "distinct_blocks": 16384,
+      "largest_block_multiplicity": 1,
+      "direct_fixed_key_independent_blocks_consistent_with_ff": false
+    }
+  ],
+  "conclusion": "Direct application of this fixed-key independent-block transformation cannot produce an all-FF buffer from either candidate ciphertext.",
+  "limits": [
+    "All-FF plaintext for components 8 and 10 remains a hypothesis based on equal directory hashes.",
+    "No exclusion of this primitive inside chaining, preprocessing, variable-key or other constructions.",
+    "No S1M2 algorithm, key, decoded executable, or device execution entry has been established."
+  ]
+}

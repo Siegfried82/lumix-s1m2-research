@@ -1,0 +1,109 @@
+--- linux-4.19.124/drivers/net/usb/ax88179_178a.c
++++ linux-4.19.124/drivers/net/usb/ax88179_178a.c
+@@ -15,6 +15,10 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, see <http://www.gnu.org/licenses/>.
++ * 
++ * based on drivers/net/usb/ax88179_178a.c which had the following copyrights:
++ *	(C) Copyright Panasonic Corporation 2026
++ *
+  */
+ 
+ #include <linux/module.h>
+@@ -1644,7 +1648,7 @@
+ 	.link_reset = ax88179_link_reset,
+ 	.reset = ax88179_reset,
+ 	.stop = ax88179_stop,
+-	.flags = FLAG_ETHER | FLAG_FRAMING_AX,
++	.flags = FLAG_ETHER | FLAG_FRAMING_AX | FLAG_SEND_ZLP,
+ 	.rx_fixup = ax88179_rx_fixup,
+ 	.tx_fixup = ax88179_tx_fixup,
+ };
+--- linux-4.19.124/drivers/usb/dwc3/gadget.h
++++ linux-4.19.124/drivers/usb/dwc3/gadget.h
+@@ -4,10 +4,11 @@
+  *
+  * Copyright (C) 2010-2011 Texas Instruments Incorporated - http://www.ti.com
+  *
++ * Copyright (c) 2025 Panasonic Corporation
++ * 2025-3-24 Modified
++ *
+  * Authors: Felipe Balbi <[REDACTED_EMAIL]>,
+  *	    Sebastian Andrzej Siewior <[REDACTED_EMAIL]>
+- *
+- * Copyright (c) 2025 Panasonic Corporation
+  */
+ 
+ #ifndef __DRIVERS_USB_DWC3_GADGET_H
+--- linux-4.19.124/drivers/usb/gadget/function/uvc_queue.c
++++ linux-4.19.124/drivers/usb/gadget/function/uvc_queue.c
+@@ -5,7 +5,8 @@
+  *	Copyright (C) 2005-2010
+  *	    Laurent Pinchart ([REDACTED_EMAIL])
+  *
+- * Copyright (c) 2025 Panasonic Corporation
++ *	Copyright (c) 2025 Panasonic Corporation
++ *	2025-3-24 Modified
+  */
+ 
+ #include <linux/atomic.h>
+--- linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241-gpio.h
++++ linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8266-gpio.h
+@@ -1,5 +1,5 @@
+ /*
+- * pvc04v-MC8241-gpio.h - gpio define for MC8241-2ND
++ * pvc04v-MC8266-gpio.h - gpio define for MC8266-2ND
+  *
+  * Copyright (c) 2020 Panasonic Corporation
+  * 2020-07-16 Modified
+--- linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241-rtos.h
++++ linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8266-rtos.h
+@@ -1,6 +1,6 @@
+ // SPDX-License-Identifier: GPL-2.0
+ /*
+- * pvc04v-MC8241-rtos.h - rtos for MC8241
++ * pvc04v-MC8266-rtos.h - rtos for MC8266
+  *
+  * Copyright (c) 2020 Panasonic Corporation
+  * 2020-07-16 Modified
+--- linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241.dts
++++ linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8266.dts
+@@ -13,13 +13,13 @@
+  * GNU General Public License for more details.
+  */
+ /dts-v1/;
+-#include "pvc04v-MC8241.dtsi"
+-#include "pvc04v-MC8241-rtos.h"
+-#include "pvc04v-MC8241-gpio.h"
++#include "pvc04v-MC8266.dtsi"
++#include "pvc04v-MC8266-rtos.h"
++#include "pvc04v-MC8266-gpio.h"
+ 
+ / {
+-	model = "Socionext pvc04v MC8241";
+-	compatible = "socionext,pvc04v-MC8241-2ND", "socionext,sc2006";
++	model = "Socionext pvc04v MC8266";
++	compatible = "socionext,pvc04v-MC8266-2ND", "socionext,sc2006";
+ 
+ 	aliases {
+ 		serial0 = &uart1;
+--- linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241.dtsi
++++ linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8266.dtsi
+@@ -1,6 +1,6 @@
+ // SPDX-License-Identifier: GPL-2.0
+ /*
+- * pvc04v-MC8241.dtsi - include file for MC8241 dts
++ * pvc04v-MC8266.dtsi - include file for MC8266 dts
+  *
+  * Copyright (c) 2020 Panasonic Corporation
+  * 2020-07-16 Modified
+--- linux-4.19.124/arch/arm64/configs/pvc04v_MC8241_defconfig
++++ linux-4.19.124/arch/arm64/configs/pvc04v_MC8266_defconfig
+@@ -1,5 +1,5 @@
+ #
+-# pvc04v_MC8241_1ST_defconfig - kernel default config for MC8241_1ST
++# pvc04v_MC8266_1ST_defconfig - kernel default config for MC8266_1ST
+ #
+ # Copyright (c) 2020 Panasonic Corporation
+ # 2020-07-16 Modified

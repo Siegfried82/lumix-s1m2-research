@@ -1,0 +1,2208 @@
+{
+  "file_count": 66156,
+  "keyword_hits": [
+    {
+      "file": "linux-4.19.124/drivers/gpu/drm/panel/panel-panasonic-vvx10f034n00.c",
+      "hits": [
+        {
+          "line": 210,
+          "text": "\t{ .compatible = \"panasonic,vvx10f034n00\", },"
+        },
+        {
+          "line": 316,
+          "text": "\t\t.name = \"panel-panasonic-vvx10f034n00\","
+        },
+        {
+          "line": 326,
+          "text": "MODULE_DESCRIPTION(\"Panasonic VVX10F034N00 Novatek NT1397-based WUXGA (1920x1200) video mode panel driver\");"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/gpu/drm/panel/Makefile",
+      "hits": [
+        {
+          "line": 11,
+          "text": "obj-$(CONFIG_DRM_PANEL_PANASONIC_VVX10F034N00) += panel-panasonic-vvx10f034n00.o"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/gpu/drm/panel/Kconfig",
+      "hits": [
+        {
+          "line": 102,
+          "text": "config DRM_PANEL_PANASONIC_VVX10F034N00"
+        },
+        {
+          "line": 103,
+          "text": "\ttristate \"Panasonic VVX10F034N00 1920x1200 video mode panel\""
+        },
+        {
+          "line": 108,
+          "text": "\t  Say Y here if you want to enable support for Panasonic VVX10F034N00"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/gpu/drm/panel/panel-simple.c",
+      "hits": [
+        {
+          "line": 2764,
+          "text": "static const struct drm_display_mode panasonic_vvx10f004b00_mode = {"
+        },
+        {
+          "line": 2777,
+          "text": "static const struct panel_desc_dsi panasonic_vvx10f004b00 = {"
+        },
+        {
+          "line": 2779,
+          "text": "\t\t.modes = &panasonic_vvx10f004b00_mode,"
+        },
+        {
+          "line": 2807,
+          "text": "\t\t.compatible = \"panasonic,vvx10f004b00\","
+        },
+        {
+          "line": 2808,
+          "text": "\t\t.data = &panasonic_vvx10f004b00"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/pvc/Makefile",
+      "hits": [
+        {
+          "line": 4,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/pvc/Kconfig",
+      "hits": [
+        {
+          "line": 3,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        },
+        {
+          "line": 15,
+          "text": "menu \"Panasonic PVC Proprientary Modules\""
+        },
+        {
+          "line": 115,
+          "text": "## 2013/12/16, added by Panasonic --->"
+        },
+        {
+          "line": 149,
+          "text": "## <--- 2013/12/16, added by Panasonic"
+        },
+        {
+          "line": 152,
+          "text": "# ## 2010/6/3, Added by Panasonic ==>"
+        },
+        {
+          "line": 164,
+          "text": "# ## <== 2010/6/3, Added by Panasonic"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/pvc/buffer/scullpp.h",
+      "hits": [
+        {
+          "line": 7,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/pvc/buffer/scullp.h",
+      "hits": [
+        {
+          "line": 7,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/pvc/buffer/main.c",
+      "hits": [
+        {
+          "line": 7,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/pvc/buffer/Makefile",
+      "hits": [
+        {
+          "line": 4,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/pvc/buffer/Kconfig",
+      "hits": [
+        {
+          "line": 4,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/input/serio/i8042-x86ia64io.h",
+      "hits": [
+        {
+          "line": 320,
+          "text": "\t\t/* Panasonic CF-29 */"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/input/mouse/lifebook.c",
+      "hits": [
+        {
+          "line": 92,
+          "text": "\t\t/* Panasonic CF-18 */"
+        },
+        {
+          "line": 99,
+          "text": "\t\t/* Panasonic CF-28 */"
+        },
+        {
+          "line": 107,
+          "text": "\t\t/* Panasonic CF-29 */"
+        },
+        {
+          "line": 115,
+          "text": "\t\t/* Panasonic CF-72 */"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/platform/x86/Makefile",
+      "hits": [
+        {
+          "line": 41,
+          "text": "obj-$(CONFIG_PANASONIC_LAPTOP)\t+= panasonic-laptop.o"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/platform/x86/Kconfig",
+      "hits": [
+        {
+          "line": 361,
+          "text": "config PANASONIC_LAPTOP"
+        },
+        {
+          "line": 362,
+          "text": "\ttristate \"Panasonic Laptop Extras\""
+        },
+        {
+          "line": 368,
+          "text": "\t  on Panasonic Let's Note laptops."
+        },
+        {
+          "line": 370,
+          "text": "\t  If you have a Panasonic Let's note laptop (such as the R1(N variant),"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/platform/x86/panasonic-laptop.c",
+      "hits": [
+        {
+          "line": 2,
+          "text": " *  Panasonic HotKey and LCD brightness control driver"
+        },
+        {
+          "line": 29,
+          "text": " *\t\t\tdrivers/misc/panasonic-laptop.c"
+        },
+        {
+          "line": 53,
+          "text": " *\t\t\t\t  Thanks to FreeBSD crew (acpi_panasonic.c)"
+        },
+        {
+          "line": 139,
+          "text": "MODULE_DESCRIPTION(\"ACPI HotKey driver for Panasonic Let's Note laptops\");"
+        },
+        {
+          "line": 152,
+          "text": "#define ACPI_PCC_DRIVER_NAME\t\"Panasonic Laptop Support\""
+        },
+        {
+          "line": 156,
+          "text": "#define ACPI_PCC_INPUT_PHYS\t\"panasonic/hkey0\""
+        },
+        {
+          "line": 206,
+          "text": "static const struct key_entry panasonic_keymap[] = {"
+        },
+        {
+          "line": 508,
+          "text": "\terror = sparse_keymap_setup(input_dev, panasonic_keymap, NULL);"
+        },
+        {
+          "line": 604,
+          "text": "\tpcc->backlight = backlight_device_register(\"panasonic\", NULL, pcc,"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/dm/dmdrv.c",
+      "hits": [
+        {
+          "line": 4,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        },
+        {
+          "line": 47,
+          "text": "MODULE_AUTHOR(\"Panasonic\");"
+        },
+        {
+          "line": 48,
+          "text": "MODULE_LICENSE(\"Panasonic\");"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/dm/Makefile",
+      "hits": [
+        {
+          "line": 4,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/dm/Kconfig",
+      "hits": [
+        {
+          "line": 3,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/mmc/host/Kconfig",
+      "hits": [
+        {
+          "line": 4,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/mmc/host/sdhci.c",
+      "hits": [
+        {
+          "line": 6,
+          "text": " *  Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/mmc/host/sdhci-milbeaut.c",
+      "hits": [
+        {
+          "line": 8,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        },
+        {
+          "line": 10,
+          "text": " * Copyright (c) 2021 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/mmc/core/sdio.c",
+      "hits": [
+        {
+          "line": 6,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/acpi/sleep.c",
+      "hits": [
+        {
+          "line": 198,
+          "text": "\t.ident = \"Panasonic CF51-2L\","
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/pinctrl/pinctrl-milbeaut.c",
+      "hits": [
+        {
+          "line": 3,
+          "text": " * Copyright (C) 2020 Panasonic Corporation"
+        },
+        {
+          "line": 25,
+          "text": "#define SUPPORT_DSC 1  //Panasonic Modify"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/i2c/video-i2c.c",
+      "hits": [
+        {
+          "line": 8,
+          "text": " * - Panasonic AMG88xx Grid-Eye Sensors"
+        },
+        {
+          "line": 627,
+          "text": "\t{ .compatible = \"panasonic,amg88xx\", .data = &video_i2c_chip[AMG88XX] },"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/i2c/Kconfig",
+      "hits": [
+        {
+          "line": 168,
+          "text": "\ttristate \"Panasonic VP27's internal MPX\""
+        },
+        {
+          "line": 171,
+          "text": "\t  Support for the internal MPX of the Panasonic VP27s tuner."
+        },
+        {
+          "line": 1066,
+          "text": "\t   * Panasonic AMG88xx Grid-Eye Sensors"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/common/tveeprom.c",
+      "hits": [
+        {
+          "line": 188,
+          "text": "\t{ TUNER_ABSENT,\t\t\t\"Panasonic ENV57H12D5\"},"
+        },
+        {
+          "line": 224,
+          "text": "\t{ TUNER_ABSENT,\t\t\t\"Panasonic ENGF75_01GF\"},"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/pci/ivtv/ivtv-cards.c",
+      "hits": [
+        {
+          "line": 675,
+          "text": "\t\t/* This card has the Panasonic VP27 tuner */"
+        },
+        {
+          "line": 676,
+          "text": "\t\t{ .std = V4L2_STD_MN, .tuner = TUNER_PANASONIC_VP27 },"
+        },
+        {
+          "line": 712,
+          "text": "\t\t/* This card has the Panasonic VP27 tuner */"
+        },
+        {
+          "line": 713,
+          "text": "\t\t{ .std = V4L2_STD_MN, .tuner = TUNER_PANASONIC_VP27 },"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/tuners/tuner-types.c",
+      "hits": [
+        {
+          "line": 718,
+          "text": "/* ------------ TUNER_PANASONIC_VP27 - Panasonic NTSC ------------ */"
+        },
+        {
+          "line": 720,
+          "text": "static struct tuner_range tuner_panasonic_vp27_ntsc_ranges[] = {"
+        },
+        {
+          "line": 726,
+          "text": "static struct tuner_params tuner_panasonic_vp27_params[] = {"
+        },
+        {
+          "line": 729,
+          "text": "\t\t.ranges = tuner_panasonic_vp27_ntsc_ranges,"
+        },
+        {
+          "line": 730,
+          "text": "\t\t.count  = ARRAY_SIZE(tuner_panasonic_vp27_ntsc_ranges),"
+        },
+        {
+          "line": 1677,
+          "text": "\t[TUNER_PANASONIC_VP27] = { /* Panasonic NTSC */"
+        },
+        {
+          "line": 1678,
+          "text": "\t\t.name   = \"Panasonic VP27s/ENGE4324D\","
+        },
+        {
+          "line": 1679,
+          "text": "\t\t.params = tuner_panasonic_vp27_params,"
+        },
+        {
+          "line": 1680,
+          "text": "\t\t.count  = ARRAY_SIZE(tuner_panasonic_vp27_params),"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/usb/dvb-usb/dibusb-mc-common.c",
+      "hits": [
+        {
+          "line": 52,
+          "text": "static struct dibx000_agc_config dib3000p_panasonic_agc_config = {"
+        },
+        {
+          "line": 75,
+          "text": "\t&dib3000p_panasonic_agc_config,"
+        },
+        {
+          "line": 159,
+          "text": "\t\t/* not found - use panasonic pll parameters */"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/usb/dvb-usb/dibusb-mb.c",
+      "hits": [
+        {
+          "line": 55,
+          "text": "static int dibusb_panasonic_tuner_attach(struct dvb_usb_adapter *adap)"
+        },
+        {
+          "line": 67,
+          "text": " * (Thomson Cable), but with a Panasonic ENV77H11D5.  This function figures"
+        },
+        {
+          "line": 79,
+          "text": "\t/* the Panasonic sits on I2C addrass 0x60, the Thomson on 0x61 */"
+        },
+        {
+          "line": 97,
+          "text": "\t\tinfo(\"This device has the Panasonic ENV77H11D5 onboard.\");"
+        },
+        {
+          "line": 98,
+          "text": "\t\tret = dibusb_panasonic_tuner_attach(adap);"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/usb/gspca/nw80x.c",
+      "hits": [
+        {
+          "line": 88,
+          "text": "\t\t\t\t\t * Panasonic GP-KR651US */"
+        },
+        {
+          "line": 335,
+          "text": "/* 06a5:d001 - nw801 - Panasonic"
+        },
+        {
+          "line": 964,
+          "text": "/* 06a5:d001 - nw802 - Panasonic"
+        },
+        {
+          "line": 2109,
+          "text": "\t\"6: Panasonic GP-KR651US\\n\""
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/dvb-frontends/af9013_priv.h",
+      "hits": [
+        {
+          "line": 174,
+          "text": " * Panasonic ENV77H11D5 tuner init"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/dvb-frontends/mn88473.h",
+      "hits": [
+        {
+          "line": 2,
+          "text": " * Panasonic MN88473 DVB-T/T2/C demodulator driver"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/dvb-frontends/dvb-pll.c",
+      "hits": [
+        {
+          "line": 196,
+          "text": "/* Panasonic env57h1xd5 (some Philips PLL ?) */"
+        },
+        {
+          "line": 198,
+          "text": "\t.name  = \"Panasonic ENV57H1XD5\","
+        },
+        {
+          "line": 212,
+          "text": " * used in Panasonic ENV77H11D5"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/dvb-frontends/bcm3510_priv.h",
+      "hits": [
+        {
+          "line": 31,
+          "text": "#define PANASONIC_FIRST_IF_BASE_IN_KHz  1407500"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/dvb-frontends/mn88473.c",
+      "hits": [
+        {
+          "line": 2,
+          "text": " * Panasonic MN88473 DVB-T/T2/C demodulator driver"
+        },
+        {
+          "line": 584,
+          "text": "\t\t.name = \"Panasonic MN88473\","
+        },
+        {
+          "line": 720,
+          "text": "\tdev_info(&client->dev, \"Panasonic MN88473 successfully identified\\n\");"
+        },
+        {
+          "line": 778,
+          "text": "MODULE_DESCRIPTION(\"Panasonic MN88473 DVB-T/T2/C demodulator driver\");"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/dvb-frontends/mn88472_priv.h",
+      "hits": [
+        {
+          "line": 2,
+          "text": " * Panasonic MN88472 DVB-T/T2/C demodulator driver"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/dvb-frontends/Kconfig",
+      "hits": [
+        {
+          "line": 105,
+          "text": "\ttristate \"Panasonic MN88472\""
+        },
+        {
+          "line": 113,
+          "text": "\ttristate \"Panasonic MN88473\""
+        },
+        {
+          "line": 748,
+          "text": "\t  A driver for Socionext/Panasonic MN884433 and MN884434"
+        },
+        {
+          "line": 868,
+          "text": "\t  * Panasonic ENV57H12D5 (ET-50DT)"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/dvb-frontends/mn88473_priv.h",
+      "hits": [
+        {
+          "line": 2,
+          "text": " * Panasonic MN88473 DVB-T/T2/C demodulator driver"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/dvb-frontends/mn88472.c",
+      "hits": [
+        {
+          "line": 2,
+          "text": " * Panasonic MN88472 DVB-T/T2/C demodulator driver"
+        },
+        {
+          "line": 541,
+          "text": "\t\t.name = \"Panasonic MN88472\","
+        },
+        {
+          "line": 685,
+          "text": "\tdev_info(&client->dev, \"Panasonic MN88472 successfully identified\\n\");"
+        },
+        {
+          "line": 743,
+          "text": "MODULE_DESCRIPTION(\"Panasonic MN88472 DVB-T/T2/C demodulator driver\");"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/dvb-frontends/mn88472.h",
+      "hits": [
+        {
+          "line": 2,
+          "text": " * Panasonic MN88472 DVB-T/T2/C demodulator driver"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/dvb-frontends/bcm3510.c",
+      "hits": [
+        {
+          "line": 10,
+          "text": " *  (Panasonic CT10S) is located here, which is actually wrong. Unless there is"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/media/dvb-frontends/af9013.h",
+      "hits": [
+        {
+          "line": 53,
+          "text": "#define AF9013_TUNER_ENV77H11D5  129 /* Panasonic */"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/Makefile",
+      "hits": [
+        {
+          "line": 8,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/dma/milbeaut-xdmac.c",
+      "hits": [
+        {
+          "line": 5,
+          "text": "// Copyright (c) 2022 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/dma/dmaengine.c",
+      "hits": [
+        {
+          "line": 3,
+          "text": " * Copyright(c) 2022 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/dma/milbeaut_hdmac.c",
+      "hits": [
+        {
+          "line": 5,
+          "text": "// Copyright (c) 2022 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/hid/hid-multitouch.c",
+      "hits": [
+        {
+          "line": 201,
+          "text": "#define MT_CLS_PANASONIC\t\t\t0x0106"
+        },
+        {
+          "line": 312,
+          "text": "\t{ .name = MT_CLS_PANASONIC,"
+        },
+        {
+          "line": 2000,
+          "text": "\t/* Panasonic panels */"
+        },
+        {
+          "line": 2001,
+          "text": "\t{ .driver_data = MT_CLS_PANASONIC,"
+        },
+        {
+          "line": 2002,
+          "text": "\t\tMT_USB_DEVICE(USB_VENDOR_ID_PANASONIC,"
+        },
+        {
+          "line": 2004,
+          "text": "\t{ .driver_data = MT_CLS_PANASONIC,"
+        },
+        {
+          "line": 2005,
+          "text": "\t\tMT_USB_DEVICE(USB_VENDOR_ID_PANASONIC,"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/hid/Kconfig",
+      "hits": [
+        {
+          "line": 634,
+          "text": "\t  - Panasonic multitouch panels"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/hid/hid-ids.h",
+      "hits": [
+        {
+          "line": 894,
+          "text": "#define USB_VENDOR_ID_PANASONIC\t\t0x04da"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/pci/controller/dwc/pcie-milbeaut-cfg.h",
+      "hits": [
+        {
+          "line": 4,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/pci/controller/dwc/pcie-milbeaut.c",
+      "hits": [
+        {
+          "line": 7,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/pci/controller/dwc/pcie-designware.h",
+      "hits": [
+        {
+          "line": 10,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/pci/controller/dwc/pcie-designware-host.c",
+      "hits": [
+        {
+          "line": 10,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/pci/controller/dwc/Kconfig",
+      "hits": [
+        {
+          "line": 5,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/pci/controller/dwc/pcie-designware.c",
+      "hits": [
+        {
+          "line": 10,
+          "text": " * Copyright (c) 2022 Panasonic Entertainment & Communication Co., Ltd"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/Kconfig",
+      "hits": [
+        {
+          "line": 5,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/reset/reset-milbeaut.c",
+      "hits": [
+        {
+          "line": 5,
+          "text": " * Copyright (c) 2021 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/watchdog/uniphier_wdt.c",
+      "hits": [
+        {
+          "line": 5,
+          "text": " * (c) Copyright 2014 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/block/paride/pf.c",
+      "hits": [
+        {
+          "line": 48,
+          "text": "                        Matshita/Panasonic.  This device has a "
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/block/paride/friq.c",
+      "hits": [
+        {
+          "line": 11,
+          "text": "\tMaxell and Panasonic, and other devices."
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/storage/unusual_devs.h",
+      "hits": [
+        {
+          "line": 431,
+          "text": " * This is to support the Panasonic PalmCam PV-SD4090"
+        },
+        {
+          "line": 435,
+          "text": "\t\t\"Panasonic\","
+        },
+        {
+          "line": 450,
+          "text": "\t\t\"Panasonic\","
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/serial/qcserial.c",
+      "hits": [
+        {
+          "line": 44,
+          "text": "\t{DEVICE_G1K(0x04da, 0x250d)},\t/* Panasonic Gobi Modem device */"
+        },
+        {
+          "line": 45,
+          "text": "\t{DEVICE_G1K(0x04da, 0x250c)},\t/* Panasonic Gobi QDL device */"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/serial/ipaq.c",
+      "hits": [
+        {
+          "line": 195,
+          "text": "\t{ USB_DEVICE(0x04DA, 0x2500) }, /* Panasonic USB Sync */"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/dwc3/gadget.h",
+      "hits": [
+        {
+          "line": 10,
+          "text": " * Copyright (c) 2025 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/dwc3/core.h",
+      "hits": [
+        {
+          "line": 10,
+          "text": " * Copyright (c) 2024 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/dwc3/Kconfig",
+      "hits": [
+        {
+          "line": 4,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/dwc3/dwc3-milbeaut.c",
+      "hits": [
+        {
+          "line": 8,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/dwc3/gadget.c",
+      "hits": [
+        {
+          "line": 10,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/legacy/Makefile",
+      "hits": [
+        {
+          "line": 5,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        },
+        {
+          "line": 59,
+          "text": "# [SBG-SAV] Revised by Panasonic 2008-APR-01, for \"ua\" application"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/legacy/Kconfig",
+      "hits": [
+        {
+          "line": 15,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        },
+        {
+          "line": 509,
+          "text": "\t  Revised by Panasonic 2008-APR-01, for \"ua\" application"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/legacy/pvc_mass_storage.c",
+      "hits": [
+        {
+          "line": 6,
+          "text": "\tby Panasonic."
+        },
+        {
+          "line": 7,
+          "text": "\t(c) 2004-2008, Matsushita Electric industrial Co.,Ltd.(Panasonic)"
+        },
+        {
+          "line": 15,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        },
+        {
+          "line": 85,
+          "text": "//#define DEVICE_MANUFACTURER     \"Panasonic\""
+        },
+        {
+          "line": 88,
+          "text": "#define DEVICE_VENDOR_NUM       0x04DA  /* Panasonic */"
+        },
+        {
+          "line": 2051,
+          "text": "\tRevised by Panasonic, 2008-02-28"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/function/uvc.h",
+      "hits": [
+        {
+          "line": 8,
+          "text": " *\tCopyright (c) 2025 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/function/uvc_v4l2.c",
+      "hits": [
+        {
+          "line": 8,
+          "text": " * Copyright (c) 2024 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/function/f_uac1.c",
+      "hits": [
+        {
+          "line": 7,
+          "text": " * Copyright (c) 2024 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/function/u_uac1.h",
+      "hits": [
+        {
+          "line": 7,
+          "text": " * Copyright (c) 2024 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/function/uvc_video.h",
+      "hits": [
+        {
+          "line": 12,
+          "text": " * Copyright (c) 2025 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/function/f_fs.c",
+      "hits": [
+        {
+          "line": 12,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/function/uvc_queue.c",
+      "hits": [
+        {
+          "line": 8,
+          "text": " * Copyright (c) 2025 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/function/uvc_video.c",
+      "hits": [
+        {
+          "line": 8,
+          "text": " *\tCopyright (c) 2025 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/function/f_uvc.c",
+      "hits": [
+        {
+          "line": 8,
+          "text": " *\tCopyright (c) 2025 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/configfs.c",
+      "hits": [
+        {
+          "line": 5,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/udc/core.c",
+      "hits": [
+        {
+          "line": 8,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/usb/gadget/composite.c",
+      "hits": [
+        {
+          "line": 7,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/wireless/ti/wl18xx/debugfs.c",
+      "hits": [
+        {
+          "line": 134,
+          "text": "WL18XX_DEBUGFS_FWSTATS_FILE(pwr, ap_sleep_active_conf, \"%u\");"
+        },
+        {
+          "line": 533,
+          "text": "\tDEBUGFS_FWSTATS_ADD(pwr, ap_sleep_active_conf);"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/wireless/ti/wl18xx/acx.h",
+      "hits": [
+        {
+          "line": 200,
+          "text": "\tu32 ap_sleep_active_conf;"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/wireless/ralink/rt2x00/rt2800usb.c",
+      "hits": [
+        {
+          "line": 1164,
+          "text": "\t/* Panasonic */"
+        },
+        {
+          "line": 1271,
+          "text": "\t/* Panasonic */"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/wireless/marvell/libertas/debugfs.c",
+      "hits": [
+        {
+          "line": 173,
+          "text": "\tpos += snprintf(buf, len, \"%d\\n\", priv->is_host_sleep_activated);"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/wireless/marvell/libertas/main.c",
+      "hits": [
+        {
+          "line": 845,
+          "text": "\tpriv->is_host_sleep_activated = 0;"
+        },
+        {
+          "line": 1017,
+          "text": "\tpriv->is_host_sleep_activated = 0;"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/wireless/marvell/libertas/cmd.c",
+      "hits": [
+        {
+          "line": 166,
+          "text": "\tif (priv->is_host_sleep_activated) {"
+        },
+        {
+          "line": 169,
+          "text": "\t\t\tpriv->is_host_sleep_activated = 0;"
+        },
+        {
+          "line": 349,
+          "text": "static int lbs_ret_host_sleep_activate(struct lbs_private *priv,"
+        },
+        {
+          "line": 353,
+          "text": "\tpriv->is_host_sleep_activated = 1;"
+        },
+        {
+          "line": 366,
+          "text": "\t\tif (priv->is_host_sleep_activated != 1) {"
+        },
+        {
+          "line": 378,
+          "text": "\t\t\t\t\t\tCMD_802_11_HOST_SLEEP_ACTIVATE,"
+        },
+        {
+          "line": 381,
+          "text": "\t\t\t\t\t\tlbs_ret_host_sleep_activate, 0);"
+        },
+        {
+          "line": 384,
+          "text": "\t\t\t\t\t\t    \"HOST_SLEEP_ACTIVATE failed: %d\\n\","
+        },
+        {
+          "line": 390,
+          "text": "\t\t\t\t\t\tpriv->is_host_sleep_activated,"
+        },
+        {
+          "line": 400,
+          "text": "\t\tif (priv->is_host_sleep_activated)"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/wireless/marvell/libertas/cmdresp.c",
+      "hits": [
+        {
+          "line": 274,
+          "text": "\t\tpriv->is_host_sleep_activated = 0;"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/wireless/marvell/libertas/dev.h",
+      "hits": [
+        {
+          "line": 97,
+          "text": "\tint is_host_sleep_activated;"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/wireless/marvell/libertas/host.h",
+      "hits": [
+        {
+          "line": 68,
+          "text": "#define CMD_802_11_HOST_SLEEP_ACTIVATE          0x0045"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/wireless/marvell/mwifiex/fw.h",
+      "hits": [
+        {
+          "line": 1295,
+          "text": "enum Host_Sleep_Action {"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/usb/ipheth.c",
+      "hits": [
+        {
+          "line": 6,
+          "text": " * Copyright (c) 2022-2025 Panasonic Entertainment & Communication Co., Ltd"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/usb/rndis_host.c",
+      "hits": [
+        {
+          "line": 5,
+          "text": " * Copyright (c) 2022 Panasonic Entertainment & Communication Co., Ltd"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/usb/qmi_wwan.c",
+      "hits": [
+        {
+          "line": 1315,
+          "text": "\t{QMI_GOBI1K_DEVICE(0x04da, 0x250d)},\t/* Panasonic Gobi Modem device */"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/ethernet/atheros/alx/hw.h",
+      "hits": [
+        {
+          "line": 334,
+          "text": "#define ALX_SLEEP_ACTIVE\t(ALX_SLEEP_WOL_PHY | \\"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/ethernet/fujitsu/fmvj18x_cs.c",
+      "hits": [
+        {
+          "line": 484,
+          "text": "\t\tcard_name = \"Panasonic\";"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/ethernet/socionext/sni_ave.c",
+      "hits": [
+        {
+          "line": 4,
+          "text": " * Copyright 2014 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/net/ethernet/8390/pcnet_cs.c",
+      "hits": [
+        {
+          "line": 182,
+          "text": "    { /* Panasonic VEL211 */ 0x0ff0, 0x00, 0x80, 0x45,"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/irqchip/Kconfig",
+      "hits": [
+        {
+          "line": 4,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/irqchip/irq-gic-v3.c",
+      "hits": [
+        {
+          "line": 7,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/spi/spi-uniphier.c",
+      "hits": [
+        {
+          "line": 3,
+          "text": "// Copyright 2012      Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/thermal/uniphier_thermal.c",
+      "hits": [
+        {
+          "line": 4,
+          "text": " * Copyright 2014      Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/char/uha/uhadev.c",
+      "hits": [
+        {
+          "line": 2,
+          "text": " * Copyright (c) 2013-     Panasonic Corporation"
+        },
+        {
+          "line": 25,
+          "text": "#define\tCONFIG_USB_PANASONIC_LIMITDEV_NUM\t1"
+        },
+        {
+          "line": 38,
+          "text": "#define UHADEV_MINOR_NUM\t\tCONFIG_USB_PANASONIC_LIMITDEV_NUM"
+        },
+        {
+          "line": 1457,
+          "text": "MODULE_AUTHOR(\"Panasonic\");"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/char/Makefile",
+      "hits": [
+        {
+          "line": 5,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/char/mem.c",
+      "hits": [
+        {
+          "line": 11,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/char/Kconfig",
+      "hits": [
+        {
+          "line": 5,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/scsi/mpt3sas/mpi/mpi2_cnfg.h",
+      "hits": [
+        {
+          "line": 2625,
+          "text": "#define MPI25_SASIOUNIT8_TXRXSLEEP_ACTIVE               (0x02)"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/scsi/pcmcia/Kconfig",
+      "hits": [
+        {
+          "line": 39,
+          "text": "\t    Panasonic KXL-RW10AN CD-RW's card"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/drivers/sniipcu/sni_ipcu_drv.c",
+      "hits": [
+        {
+          "line": 4,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/Documentation/media/v4l-drivers/tuner-cardlist.rst",
+      "hits": [
+        {
+          "line": 53,
+          "text": "46           Panasonic VP27s/ENGE4324D"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/Documentation/media/dvb-drivers/dvb-usb.rst",
+      "hits": [
+        {
+          "line": 117,
+          "text": "    Panasonic Tuner assembled). Tunerprobing implemented."
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/Documentation/admin-guide/devices.txt",
+      "hits": [
+        {
+          "line": 568,
+          "text": "  25 block\tFirst Matsushita (Panasonic/SoundBlaster) CD-ROM"
+        },
+        {
+          "line": 569,
+          "text": "\t\t  0 = /dev/sbpcd0\tPanasonic CD-ROM controller 0 unit 0"
+        },
+        {
+          "line": 570,
+          "text": "\t\t  1 = /dev/sbpcd1\tPanasonic CD-ROM controller 0 unit 1"
+        },
+        {
+          "line": 571,
+          "text": "\t\t  2 = /dev/sbpcd2\tPanasonic CD-ROM controller 0 unit 2"
+        },
+        {
+          "line": 572,
+          "text": "\t\t  3 = /dev/sbpcd3\tPanasonic CD-ROM controller 0 unit 3"
+        },
+        {
+          "line": 576,
+          "text": "  26 block\tSecond Matsushita (Panasonic/SoundBlaster) CD-ROM"
+        },
+        {
+          "line": 577,
+          "text": "\t\t  0 = /dev/sbpcd4\tPanasonic CD-ROM controller 1 unit 0"
+        },
+        {
+          "line": 578,
+          "text": "\t\t  1 = /dev/sbpcd5\tPanasonic CD-ROM controller 1 unit 1"
+        },
+        {
+          "line": 579,
+          "text": "\t\t  2 = /dev/sbpcd6\tPanasonic CD-ROM controller 1 unit 2"
+        },
+        {
+          "line": 580,
+          "text": "\t\t  3 = /dev/sbpcd7\tPanasonic CD-ROM controller 1 unit 3"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/Documentation/sound/hd-audio/models.rst",
+      "hits": [
+        {
+          "line": 557,
+          "text": "panasonic"
+        },
+        {
+          "line": 558,
+          "text": "    Panasonic CF-74"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/Documentation/sound/alsa-configuration.rst",
+      "hits": [
+        {
+          "line": 1456,
+          "text": "For example, a Panasonic notebook might need ``amp_gpio=0x0d``"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/Documentation/cdrom/cdrom-standard.tex",
+      "hits": [
+        {
+          "line": 70,
+          "text": "own proprietary design (Sony, Mitsumi, Panasonic, Philips), other"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/Documentation/devicetree/bindings/display/panel/panasonic,vvx10f034n00.txt",
+      "hits": [
+        {
+          "line": 1,
+          "text": "Panasonic 10\" WUXGA TFT LCD panel"
+        },
+        {
+          "line": 4,
+          "text": "- compatible: should be \"panasonic,vvx10f034n00\""
+        },
+        {
+          "line": 15,
+          "text": "\t\t\tcompatible = \"panasonic,vvx10f034n00\";"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/Documentation/devicetree/bindings/display/panel/panasonic,vvx10f004b00.txt",
+      "hits": [
+        {
+          "line": 1,
+          "text": "Panasonic Corporation 10.1\" WUXGA TFT LCD panel"
+        },
+        {
+          "line": 4,
+          "text": "- compatible: should be \"panasonic,vvx10f004b00\""
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/Documentation/devicetree/bindings/media/i2c/panasonic,amg88xx.txt",
+      "hits": [
+        {
+          "line": 1,
+          "text": "* Panasonic AMG88xx"
+        },
+        {
+          "line": 3,
+          "text": "The Panasonic family of AMG88xx Grid-Eye sensors allow recording"
+        },
+        {
+          "line": 7,
+          "text": " - compatible : Must be \"panasonic,amg88xx\""
+        },
+        {
+          "line": 15,
+          "text": "\t\t\tcompatible = \"panasonic,amg88xx\";"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/Documentation/devicetree/bindings/vendor-prefixes.txt",
+      "hits": [
+        {
+          "line": 290,
+          "text": "panasonic\tPanasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/GNUmakefile",
+      "hits": [
+        {
+          "line": 4,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/arch/arm64/configs/pvc04v_MC8241_defconfig",
+      "hits": [
+        {
+          "line": 4,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241-rtos.h",
+      "hits": [
+        {
+          "line": 5,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241-gpio.h",
+      "hits": [
+        {
+          "line": 4,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241.dts",
+      "hits": [
+        {
+          "line": 4,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241.dtsi",
+      "hits": [
+        {
+          "line": 5,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/arch/arm64/boot/dts/socionext/Makefile",
+      "hits": [
+        {
+          "line": 5,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/arch/arm64/kernel/sleep.S",
+      "hits": [
+        {
+          "line": 2,
+          "text": "/* Copyright (c) 2021 Panasonic Corporation */"
+        },
+        {
+          "line": 105,
+          "text": "\t// Run dummy wfi. (start) : Modified by Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/arch/arm/boot/dts/tegra114-dalmore.dts",
+      "hits": [
+        {
+          "line": 49,
+          "text": "\t\t\t\tcompatible = \"panasonic,vvx10f004b00\","
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/arch/arm/mach-uniphier/Kconfig",
+      "hits": [
+        {
+          "line": 15,
+          "text": "\t  (formerly, System LSI Business Division of Panasonic Corporation)"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/CREDITS",
+      "hits": [
+        {
+          "line": 2613,
+          "text": "D: CDROM driver \"sbpcd\" (Matsushita/Panasonic/Soundblaster)"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/media/tuner.h",
+      "hits": [
+        {
+          "line": 88,
+          "text": "#define TUNER_PANASONIC_VP27\t\t46"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/dt-bindings/interrupt-controller/arm-gic.h",
+      "hits": [
+        {
+          "line": 5,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/net/cfg80211.h",
+      "hits": [
+        {
+          "line": 11,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/uapi/linux/pci_regs.h",
+      "hits": [
+        {
+          "line": 9,
+          "text": " *  Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/uapi/linux/nl80211.h",
+      "hits": [
+        {
+          "line": 16,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/uapi/linux/usb/functionfs.h",
+      "hits": [
+        {
+          "line": 5,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/uapi/linux/exmem.h",
+      "hits": [
+        {
+          "line": 4,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/uapi/linux/elf-em.h",
+      "hits": [
+        {
+          "line": 35,
+          "text": "#define EM_MN10300\t89\t/* Panasonic/MEI MN10300, AM33 */"
+        },
+        {
+          "line": 57,
+          "text": "/* Also Panasonic/MEI MN10300, AM33 */"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/uapi/linux/milbeaut_pcie_com.h",
+      "hits": [
+        {
+          "line": 4,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/linux/pvc_mass_storage.h",
+      "hits": [
+        {
+          "line": 4,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/linux/scullp.h",
+      "hits": [
+        {
+          "line": 7,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/linux/uha/Usbhd_Event.h",
+      "hits": [
+        {
+          "line": 2,
+          "text": " * Copyright (c) 2013-     Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/linux/uha/uhadev.h",
+      "hits": [
+        {
+          "line": 2,
+          "text": " * Copyright (c) 2013-     Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/linux/sni_ipcu_parts.h",
+      "hits": [
+        {
+          "line": 9,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/linux/usb/composite.h",
+      "hits": [
+        {
+          "line": 7,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/linux/dmaengine.h",
+      "hits": [
+        {
+          "line": 3,
+          "text": " * Copyright(c) 2022 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/linux/milbeaut_pcie_drv.h",
+      "hits": [
+        {
+          "line": 4,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/include/linux/dmdrv.h",
+      "hits": [
+        {
+          "line": 4,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/Makefile",
+      "hits": [
+        {
+          "line": 5,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/fs/read_write.c",
+      "hits": [
+        {
+          "line": 7,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/fs/cifs/file.c",
+      "hits": [
+        {
+          "line": 9,
+          "text": " *   Copyright (c) 2021 Panasonic Corporation, 2021-09-22 Modified"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/fs/cifs/cifssmb.c",
+      "hits": [
+        {
+          "line": 6,
+          "text": " *   Copyright (c) 2021 Panasonic Corporation, 2021-09-22 Modified"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/fs/cifs/transport.c",
+      "hits": [
+        {
+          "line": 5,
+          "text": " *   Copyright (c) 2021 Panasonic Corporation, 2021-09-22 Modified"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/fs/cifs/smb2pdu.c",
+      "hits": [
+        {
+          "line": 8,
+          "text": " *   Copyright (c) 2021 Panasonic Corporation, 2021-09-22 Modified"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/sound/soc/codecs/cpcap.c",
+      "hits": [
+        {
+          "line": 207,
+          "text": "#define SLEEP_ACTIVATE_POWER 2"
+        },
+        {
+          "line": 660,
+          "text": "\tSND_SOC_DAPM_REGULATOR_SUPPLY(\"VAUDIO\", SLEEP_ACTIVATE_POWER, 0),"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/sound/pci/intel8x0.c",
+      "hits": [
+        {
+          "line": 2104,
+          "text": "\t\t.name = \"Panasonic CF-R4\","
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/sound/pci/maestro3.c",
+      "hits": [
+        {
+          "line": 827,
+          "text": "\tSND_PCI_QUIRK(0x10f7, 0x833e, \"Panasonic CF-28\", 0x0d),"
+        },
+        {
+          "line": 828,
+          "text": "\tSND_PCI_QUIRK(0x10f7, 0x833d, \"Panasonic CF-72\", 0x0d),"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/sound/pci/hda/patch_sigmatel.c",
+      "hits": [
+        {
+          "line": 57,
+          "text": "\tSTAC_9200_PANASONIC,"
+        },
+        {
+          "line": 1369,
+          "text": "static void stac9200_fixup_panasonic(struct hda_codec *codec,"
+        },
+        {
+          "line": 1448,
+          "text": "\t[STAC_9200_PANASONIC] = {"
+        },
+        {
+          "line": 1450,
+          "text": "\t\t.v.func = stac9200_fixup_panasonic,"
+        },
+        {
+          "line": 1476,
+          "text": "\t{ .id = STAC_9200_PANASONIC, .name = \"panasonic\" },"
+        },
+        {
+          "line": 1547,
+          "text": "\t/* Panasonic */"
+        },
+        {
+          "line": 1548,
+          "text": "\tSND_PCI_QUIRK(0x10f7, 0x8338, \"Panasonic CF-74\", STAC_9200_PANASONIC),"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/sound/pci/hda/patch_realtek.c",
+      "hits": [
+        {
+          "line": 7005,
+          "text": "\tSND_PCI_QUIRK(0x10f7, 0x8338, \"Panasonic CF-SZ6\", ALC269_FIXUP_HEADSET_MODE),"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/sound/pci/cs46xx/cs46xx_dsp_task_types.h",
+      "hits": [
+        {
+          "line": 64,
+          "text": "#define SLEEP_ACTIVE_INCREMENT\t\t0\t\t/* Enable task tree thread to go to sleep"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/sound/isa/cmi8328.c",
+      "hits": [
+        {
+          "line": 97,
+          "text": " * bits 0-1: CD-ROM mode: 00=disabled, 01=Panasonic, 10=Sony/Mitsumi/Wearnes,"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/sound/isa/gus/interwave.c",
+      "hits": [
+        {
+          "line": 50,
+          "text": "\t\t\"{Panasonic,PCA761AW}}\");"
+        },
+        {
+          "line": 150,
+          "text": "\t/* Panasonic PCA761AW Audio Card */"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/sound/isa/Kconfig",
+      "hits": [
+        {
+          "line": 255,
+          "text": "\t  MED3210, Dynasonic Pro, Panasonic PCA761AW)."
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/sound/isa/galaxy/azt2316.c",
+      "hits": [
+        {
+          "line": 72,
+          "text": "#define GALAXY_CONFIG_CD_PANASONIC\t(1 << 16)"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/sound/isa/galaxy/azt1605.c",
+      "hits": [
+        {
+          "line": 48,
+          "text": "#define GALAXY_CONFIG_CD_PANASONIC\t(1 << 5)"
+        },
+        {
+          "line": 51,
+          "text": "\tGALAXY_CONFIG_CD_PANASONIC | GALAXY_CONFIG_CD_MITSUMI)"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/net/wireless/trace.h",
+      "hits": [
+        {
+          "line": 5,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/net/wireless/reg.c",
+      "hits": [
+        {
+          "line": 12,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/net/wireless/Kconfig",
+      "hits": [
+        {
+          "line": 4,
+          "text": "# Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/net/wireless/rdev-ops.h",
+      "hits": [
+        {
+          "line": 5,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/net/wireless/util.c",
+      "hits": [
+        {
+          "line": 9,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/net/wireless/chan.c",
+      "hits": [
+        {
+          "line": 10,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/net/wireless/nl80211.c",
+      "hits": [
+        {
+          "line": 9,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/MAINTAINERS",
+      "hits": [
+        {
+          "line": 10967,
+          "text": "PANASONIC LAPTOP ACPI EXTRAS DRIVER"
+        },
+        {
+          "line": 10971,
+          "text": "F:\tdrivers/platform/x86/panasonic-laptop.c"
+        }
+      ]
+    },
+    {
+      "file": "linux-4.19.124/kernel/irq/manage.c",
+      "hits": [
+        {
+          "line": 6,
+          "text": " * Copyright (c) 2020 Panasonic Corporation"
+        }
+      ]
+    }
+  ],
+  "saved": [
+    "linux-4.19.124/drivers/clk/clk-milbeaut.c",
+    "linux-4.19.124/drivers/clk/clk-milbeaut-karine.c",
+    "linux-4.19.124/drivers/i2c/busses/i2c-milbeaut.c",
+    "linux-4.19.124/drivers/input/touchscreen/tsc2007.h",
+    "linux-4.19.124/drivers/input/touchscreen/tsc2004.c",
+    "linux-4.19.124/drivers/input/touchscreen/tsc200x-core.c",
+    "linux-4.19.124/drivers/input/touchscreen/tsc2007_iio.c",
+    "linux-4.19.124/drivers/input/touchscreen/tsc200x-core.h",
+    "linux-4.19.124/drivers/input/touchscreen/tsc2007_core.c",
+    "linux-4.19.124/drivers/input/touchscreen/tsc2005.c",
+    "linux-4.19.124/drivers/platform/milbeaut/Makefile",
+    "linux-4.19.124/drivers/platform/milbeaut/milbeaut_misctop.c",
+    "linux-4.19.124/drivers/platform/milbeaut/milbeaut_exsint.c",
+    "linux-4.19.124/drivers/platform/milbeaut/Kconfig",
+    "linux-4.19.124/drivers/platform/milbeaut/cclogic.c",
+    "linux-4.19.124/drivers/mmc/host/sdhci-milbeaut.c",
+    "linux-4.19.124/drivers/pinctrl/pinctrl-milbeaut.c",
+    "linux-4.19.124/drivers/pinctrl/pinctrl-milbeaut-karine.c",
+    "linux-4.19.124/drivers/pinctrl/pinconf-milbeaut.h",
+    "linux-4.19.124/drivers/clocksource/timer-milbeaut.c",
+    "linux-4.19.124/drivers/dma/milbeaut-xdmac.c",
+    "linux-4.19.124/drivers/dma/milbeaut_hdmac.c",
+    "linux-4.19.124/drivers/pci/endpoint/functions/pci-epf-milbeaut.c",
+    "linux-4.19.124/drivers/pci/controller/dwc/pcie-milbeaut-cfg.h",
+    "linux-4.19.124/drivers/pci/controller/dwc/pcie-milbeaut.c",
+    "linux-4.19.124/drivers/reset/reset-milbeaut.c",
+    "linux-4.19.124/drivers/reset/reset-milbeaut-karine.c",
+    "linux-4.19.124/drivers/mfd/milbeaut-updown.c",
+    "linux-4.19.124/drivers/pwm/pwm-milbeaut.c",
+    "linux-4.19.124/drivers/usb/dwc3/dwc3-milbeaut.c",
+    "linux-4.19.124/drivers/tty/serial/milbeaut_usio.c",
+    "linux-4.19.124/drivers/iio/counter/milbeaut-updown.h",
+    "linux-4.19.124/drivers/iio/counter/milbeaut-timer64.c",
+    "linux-4.19.124/drivers/iio/counter/milbeaut-updown_cnt.c",
+    "linux-4.19.124/drivers/bus/milbeaut_noc.c",
+    "linux-4.19.124/drivers/spi/spi-milbeaut.c",
+    "linux-4.19.124/Documentation/iio/milbeaut-updown_cnt.txt",
+    "linux-4.19.124/Documentation/iio/milbeaut-timer64.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/i2c/i2c-milbeaut.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/input/touchscreen/tsc2005.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/input/touchscreen/tsc2007.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/timer/socionext,milbeaut-timer.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/clock/milbeaut-clock.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/mmc/sdhci-milbeaut.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/pinctrl/socionext,milbeaut-pinctrl.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/dma/milbeaut-m10v-xdmac.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/dma/milbeaut_hdmac.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/serial/milbeaut-uart.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/misctop/milbeaut_misctop.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/pci/milbeaut-pcie.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/arm/milbeaut.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/reset/milbeaut-reset.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/mfd/milbeaut-updown.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/pwm/pwm-milbeaut.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/sram/milbeaut-smp-sram.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/usb/dwc3-milbeaut.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/iio/counter/milbeaut-updown_cnt.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/iio/counter/milbeaut-timer64.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/noc/milbeaut_noc.txt",
+    "linux-4.19.124/Documentation/devicetree/bindings/spi/spi-milbeaut.txt",
+    "linux-4.19.124/arch/arm/configs/milbeaut_m10v_defconfig",
+    "linux-4.19.124/arch/arm/configs/milbeaut_m10v_vbd_defconfig",
+    "linux-4.19.124/arch/arm/mach-milbeaut/Makefile",
+    "linux-4.19.124/arch/arm/mach-milbeaut/milb_cpu_hotplug.c",
+    "linux-4.19.124/arch/arm/mach-milbeaut/Kconfig",
+    "linux-4.19.124/arch/arm/mach-milbeaut/platsmp.c",
+    "linux-4.19.124/arch/arm/boot/dts/milbeaut-m10v-evb-vbd.dts",
+    "linux-4.19.124/arch/arm/boot/dts/milbeaut-m10v-bsp_evb.dts",
+    "linux-4.19.124/arch/arm/boot/dts/milbeaut-m10v-evb.dts",
+    "linux-4.19.124/arch/arm/boot/dts/milbeaut-m10v-gpio.h",
+    "linux-4.19.124/arch/arm/boot/dts/milbeaut-m10v.dtsi",
+    "linux-4.19.124/include/dt-bindings/clock/milbeaut,m20v-clock.h",
+    "linux-4.19.124/include/dt-bindings/clock/milbeaut,karine-clock.h",
+    "linux-4.19.124/include/dt-bindings/clock/milbeaut,m10v-clock.h",
+    "linux-4.19.124/include/dt-bindings/reset/milbeaut,karine-reset.h",
+    "linux-4.19.124/include/dt-bindings/reset/milbeaut,m20v-reset.h",
+    "linux-4.19.124/include/uapi/linux/milbeaut_noc_com.h",
+    "linux-4.19.124/include/uapi/linux/milbeaut_noc.h",
+    "linux-4.19.124/include/uapi/linux/milbeaut_misctop_com.h",
+    "linux-4.19.124/include/uapi/linux/milbeaut_misctop.h",
+    "linux-4.19.124/include/uapi/linux/milbeaut_pcie_com.h",
+    "linux-4.19.124/include/linux/platform_data/tsc2007.h",
+    "linux-4.19.124/include/linux/mfd/milbeaut-updown.h",
+    "linux-4.19.124/include/linux/milbeaut_noc_drv.h",
+    "linux-4.19.124/include/linux/milbeaut_pcie_drv.h",
+    "linux-4.19.124/include/linux/milbeaut_misctop_drv.h"
+  ]
+}

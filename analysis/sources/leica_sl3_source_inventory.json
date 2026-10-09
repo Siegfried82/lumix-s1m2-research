@@ -1,0 +1,854 @@
+{
+  "source_url": "https://leica-camera.com/sites/default/files/pm-28366-20260612_LeicaSL3_OSS.zip",
+  "zip_size": 245154904,
+  "zip_sha256": "36bb3e858170808a7f9eaa40837626c941ef446363766bc98cdb1ccd964aad80",
+  "archives": [
+    {
+      "zip_member": "20260612_OSS_SL3/linux-4.19.124.tar.gz",
+      "archive_sha256": "f43dc669b74253760e3b2560dbc2456844a783e965dc890fd9fc1a206ce47d00",
+      "identical_to_local_archive": false,
+      "selected": [
+        {
+          "path": "linux-4.19.124/drivers/iio/counter/milbeaut-updown_cnt.c",
+          "size": 10219,
+          "sha256": "976141e6ee46309a323c2b136236e07712e321c798cacc009d53f4710142a708",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/iio/counter/milbeaut-timer64.c",
+          "size": 17823,
+          "sha256": "ecff1ed3a74198d6ee48f6a22d167572447f5e291fa1676a10a1e324875a5bb6",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/iio/counter/milbeaut-updown.h",
+          "size": 1015,
+          "sha256": "a7631b5976cd9f657f69ed9002eae9abca0db16ec6b197beb264e7c6e10e9865",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/clocksource/timer-milbeaut.c",
+          "size": 8355,
+          "sha256": "a9f12630c636652f2057b6a3fbb40380f040e3fa526e2c47dd7dff2371b8ec11",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/pvc/buffer/scullpp.h",
+          "size": 1683,
+          "sha256": "74a05a5f67dda96887aaa5236c69656c746f59377c62c76f74f62541b34a9a6a",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/pvc/buffer/scullp.h",
+          "size": 1602,
+          "sha256": "6096197dc2195377dff16cb91cad6c1e213eed58c0d1f82feb2379262f965f21",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/pvc/buffer/main.c",
+          "size": 13905,
+          "sha256": "ee5d531276ca5d02a967315185ed00ed2b9efd15766f364825ead6c3cedcb512",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/pvc/buffer/Makefile",
+          "size": 621,
+          "sha256": "34213994c704a8b5bf990333fd0f8bc2a8426cb99c8e83f1545e94e6de4e9af6",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/pvc/buffer/Kconfig",
+          "size": 1237,
+          "sha256": "396b25a1ca4726d8f6ed4238f768c4095323bbec013b210e65d08156c43dcc3a",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/pvc/Makefile",
+          "size": 621,
+          "sha256": "e7039fdd07de6b9ac8934e10aa630e9aa367d8fa43380280313499a1dfa9a916",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/pvc/Kconfig",
+          "size": 4310,
+          "sha256": "d278743426214730db42a19ab1953dff83c2a8770227963dfee4404abe14dcf5",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/mmc/host/sdhci-milbeaut.c",
+          "size": 38424,
+          "sha256": "648d5f1a18f8a3f1e0eb4b37ddd8d3b8e943a3be8888415934aaef1251852b0b",
+          "identical_to_panasonic_selected": false
+        },
+        {
+          "path": "linux-4.19.124/drivers/tty/serial/milbeaut_usio.c",
+          "size": 29803,
+          "sha256": "dc7f7918afec4ded23f9ff38dee92dba1fbdb5da776fc82baf3e9c61375d2279",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/block/ipcu.c",
+          "size": 10119,
+          "sha256": "a9ffb9c7f0ec088e351063a119d016a8827a1864a855e5c518d81a6e24447ba1",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/dma/milbeaut_hdmac.c",
+          "size": 26917,
+          "sha256": "71992b2b1a56789ea982c71414bf89b66ee8d0735256f91a7df3f305acbaf14e",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/dma/milbeaut-xdmac.c",
+          "size": 17823,
+          "sha256": "c9aae5fbbbb7290065e6e669e56cf57a956b61ae4d64f1e2e8945fc116db869b",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/reset/reset-milbeaut-karine.c",
+          "size": 13179,
+          "sha256": "156013a1bb57fa175c3713618ca31a4046eebcaaec5cd1b72a12cbfd1c0bf62f",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/reset/reset-milbeaut.c",
+          "size": 13321,
+          "sha256": "2544bab937443f6915c6ddf8a52d1875cc59abddc1d427193db454e3f82f8736",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/pinctrl/pinctrl-milbeaut-karine.c",
+          "size": 53108,
+          "sha256": "3fe3e99233e6f0a27a7e0dd03a466e0dd9f8dbeec3d51a80ac09f845102d558e",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/pinctrl/pinconf-milbeaut.h",
+          "size": 670,
+          "sha256": "de4382b412e5dd550a967ed5c1b116eb1ae9574ac03264d42ef07bff89fa6bbc",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/pinctrl/pinctrl-milbeaut.c",
+          "size": 30163,
+          "sha256": "f171a24cdaa370b18cdd3463667b1e330cb05324008df9dd9a0d7e934192cda0",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/sniipcu/sni_ipcu_parts.c",
+          "size": 15060,
+          "sha256": "1a1f2a9ce5f6e59836781248d11f96c61fe1c7aa9ad3cfbb5697e80ae6e577b9",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/sniipcu/sni_ipcu_comm.c",
+          "size": 4503,
+          "sha256": "cd3c6660591fdc191849527455f95698a8b5cafafe1f017085c1cadcd8e458e0",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/sniipcu/sni_ipcu_drv.h",
+          "size": 821,
+          "sha256": "04fceac0330ed1a9232246bc83a2142e265f841dbb7a36e63910f790d8cd4148",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/sniipcu/sni_ipcu_comm.h",
+          "size": 1685,
+          "sha256": "2a832af00530d51292c7b087a0eb9c0944ad509d58c77000f5338326b902859a",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/sniipcu/sni_ipcu_drv.c",
+          "size": 14290,
+          "sha256": "6b697a58585e16c690e3b8890ef9d2d16a1d9ca0643134e60d4b6c6ccd218f15",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/sniipcu/Makefile",
+          "size": 110,
+          "sha256": "15841fa375e5ef6f1806f706480310d220265c3fcd9839d894853b534fd4ea00",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/sniipcu/shared_mem/shared_mem.c",
+          "size": 2666,
+          "sha256": "67c1783ef86bb469b4381b56fe4ebf1ddd3fb8725b614ccb53bc854a817b5be4",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/sniipcu/shared_mem/Makefile",
+          "size": 61,
+          "sha256": "3e665799a6c5d43c543dbf13d78293d6815486093dbb37a7595e363b6dfab9a8",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/sniipcu/Kconfig",
+          "size": 215,
+          "sha256": "dc80f364eb4841371322f41eb8123e1216be7b02512e9da4008dbf6b458b87a9",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/bus/milbeaut_noc.c",
+          "size": 8568,
+          "sha256": "2ffcfbc0c2b119ad86369941e8e5f0917c486774446ae9cfbd3c866d7d497670",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/mfd/milbeaut-updown.c",
+          "size": 1754,
+          "sha256": "d0b99f66695676073511cf17898c6e01bdb01befda2c1a9855e04880d464558a",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/usb/dwc3/dwc3-milbeaut.c",
+          "size": 11500,
+          "sha256": "78ff929959bae7bbf8d56f25c052234587b0707e4815572a2fe31a9cc3444a10",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/clk/clk-milbeaut-karine.c",
+          "size": 19272,
+          "sha256": "9d30d439f85a04cc3d1f0cbdb2c0697808298d7b19bdaf423b1f5efa785c2d05",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/clk/clk-milbeaut.c",
+          "size": 52107,
+          "sha256": "98b49332156e62d2f370583f6d450752a5b196dcf7fb5322683b41d0d65c1026",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/pwm/pwm-milbeaut.c",
+          "size": 9388,
+          "sha256": "145965a7f7db2a9306f0eea2ff0987299e2e8edf77eb891fe2b32fd5e3b1a980",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/platform/milbeaut/milbeaut_misctop.c",
+          "size": 10403,
+          "sha256": "43fac26fa5c0bef846ab45f53b584aff48c42c8b5cd93c763a939de780a0f277",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/platform/milbeaut/cclogic.c",
+          "size": 5944,
+          "sha256": "2935650a2bc387ed2097026bb62c0ace1f8a1c0c4dccfbf2750a917eafd84dd0",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/platform/milbeaut/Makefile",
+          "size": 162,
+          "sha256": "c1f1ec5c9bae22b7109e375c14ee07cb5cb3156fa98228c57087e0a953a73ca7",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/platform/milbeaut/Kconfig",
+          "size": 662,
+          "sha256": "ade69a1c077f80d45d5b5e3e613f4f7d5bb8a2ad0e1589e1a8a1a5f231f98555",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/platform/milbeaut/milbeaut_exsint.c",
+          "size": 6077,
+          "sha256": "ebee6da7b8337d8458ed23108c44948e7d5b0faca0c1848d02381e1d52dcb0ef",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/spi/spi-milbeaut.c",
+          "size": 25686,
+          "sha256": "0b9dd2e4eda6e4e697784c0c12aac6b840b0a1cb9ec6f7d3efcc6b62daa91972",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/pci/controller/dwc/pcie-milbeaut-cfg.h",
+          "size": 876,
+          "sha256": "2510b2f6871a2f0f6da9fcd6991a629fe14f5d0ba12447e2ee5f852d6fe586b0",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/pci/controller/dwc/pcie-milbeaut.c",
+          "size": 38903,
+          "sha256": "f2e241eb0deae1c103dca7cb52c10590b317390dcffe91d48c5885e3e5b685ec",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/pci/endpoint/functions/pci-epf-milbeaut.c",
+          "size": 5611,
+          "sha256": "592a0ccfa7513a620d44074a9933d3e0055779cf89602d4cfbd6626a848a0a6a",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/i2c/busses/i2c-milbeaut.c",
+          "size": 10525,
+          "sha256": "947b6d413f6a10c2a7e94c4214f569dfd9dbc0e19a8febd4384c9d9f0938112a",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/snidsp/sni_dsp_drv_karine.h",
+          "size": 1280,
+          "sha256": "7a8f1b21df43aced18c35e5d5a84bacd5aa730f16a322ea705865e0c0ac85c42",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/snidsp/sni_dsp_ipcu_drv.h",
+          "size": 841,
+          "sha256": "5009102e165e8e30cf965a18de7214df45f241f019b944a35345bef55f9068b4",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/snidsp/sni_dsp_ipcu_comm.c",
+          "size": 4571,
+          "sha256": "979b5dff5d68d0e3438b8fcd22699cfc42ba94920593aa8251e5b32d949d7169",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/snidsp/sni_dsp_drv_m20v.h",
+          "size": 1295,
+          "sha256": "16531265fbef9c20d93be834eb7fcab45ba7c8be4310b4d5a7726ee576efcc47",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/snidsp/sni_dsp_reg_karine.h",
+          "size": 6124,
+          "sha256": "c26216444e2c6d20184bdbce77271288ac54b89adcfd72dff77f3673ab8d3422",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/snidsp/sni_dsp_ipcu_parts.c",
+          "size": 11626,
+          "sha256": "952a10bd90da2662b4a52b20b179404bab7fc6f94ec149bd62fcb11acf6d592d",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/snidsp/sni_dsp_reg_m20v.h",
+          "size": 10595,
+          "sha256": "2058dc39e8c786e0b0088bddea21bfc913d1cb50a64be5dff16d853da6e6159e",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/snidsp/sni_dsp_ipcu_drv.c",
+          "size": 10372,
+          "sha256": "701040f10864f97bd6fcdcc70076e733b9ccf2d384e8daeeec261b9902addc15",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/snidsp/sni_dsp_ipcu_comm.h",
+          "size": 1723,
+          "sha256": "c67ed7623e1d78b63a73e9b3c1ed8f2d294779e0ea8ab3281d80a7882a83c401",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/snidsp/sni_dsp_drv_m20v.c",
+          "size": 28666,
+          "sha256": "5770acb0d10ac2660875022b427691c54d8836e069bbf8cbb997ad67a4f42fab",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/snidsp/Makefile",
+          "size": 255,
+          "sha256": "eee31cf4195e193536f85b24c810e9945c2cfa514a1ce62b56de8d573bf421d4",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/snidsp/sni_dsp_drv_karine.c",
+          "size": 15385,
+          "sha256": "3c19866130136895e4181126c7be4883f9d49ba7bb0e7ae8743cb2b8cad8a69e",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/drivers/snidsp/Kconfig",
+          "size": 87,
+          "sha256": "74bcfd916530789e3a53e0aab9f68b48c2abaa915585134293d65e4ae3e2dd64",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/fs/ipcufs.h",
+          "size": 6015,
+          "sha256": "287fcca53166cbce709d8ad6b39a7b55ef889ea6fff42a527157168a0b018a34",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/fs/ipcufs.c",
+          "size": 56540,
+          "sha256": "d026653716aa62a87dee10c05fdc6c94e68c7ea0046813f3e4399725639b79eb",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/dt-bindings/clock/milbeaut,karine-clock.h",
+          "size": 2006,
+          "sha256": "be6e558a37c856c32f1b538788a709ae6cd5156d67c87111d00032425bc6b193",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/dt-bindings/clock/milbeaut,m20v-clock.h",
+          "size": 2013,
+          "sha256": "465182c3f002c04eee848536d23f34daf079e15112e08576b824f39523b92571",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/dt-bindings/clock/milbeaut,m10v-clock.h",
+          "size": 714,
+          "sha256": "b7c52467657012199327cf66f4b7cd1d10bde362053d5092b78887d04bb35291",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/dt-bindings/reset/milbeaut,m20v-reset.h",
+          "size": 578,
+          "sha256": "d1214a6f8f63576cebbc66d8c3152ceec20597bc9cf41187e3a669cff54373e5",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/dt-bindings/reset/milbeaut,karine-reset.h",
+          "size": 546,
+          "sha256": "48ff4bdecc2d5e2c7501915f4ac05c32f7defdbc15312b8a0bfb6c9b07331b52",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/linux/milbeaut_noc_drv.h",
+          "size": 313,
+          "sha256": "d91d965f3ae22eb16656da1611aac77fe00fc54f50ca268ee8129411c990e229",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/linux/milbeaut_pcie_drv.h",
+          "size": 623,
+          "sha256": "448dc6232cb2c6173e69de949ff95ed5fa34e009cde5372cf9c170d868c88e67",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/linux/scullp.h",
+          "size": 2376,
+          "sha256": "98895e3e42effefe3200f4e7e6a0f476b0b13d338f1a969467be20e6e9a372aa",
+          "identical_to_panasonic_selected": null
+        },
+        {
+          "path": "linux-4.19.124/include/linux/mfd/milbeaut-updown.h",
+          "size": 1352,
+          "sha256": "443d64e0586be960a4a0d0b2669b05263f14fd58e2962a485b3e32da9213039c",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/linux/shared_mem.h",
+          "size": 797,
+          "sha256": "ce071d7046c5c34223b6458b7946218baf310267ece479925bc154d98793650d",
+          "identical_to_panasonic_selected": null
+        },
+        {
+          "path": "linux-4.19.124/include/linux/milbeaut_misctop_drv.h",
+          "size": 572,
+          "sha256": "64da316fb44e8b1c5ec433a0c5e7747074b741372270604988acd17ebf6827b2",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/uapi/linux/milbeaut_noc_com.h",
+          "size": 1236,
+          "sha256": "bf270c33e397e387393a760009d017fff60b9b46ca93204bec675dab955ed20e",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/uapi/linux/sni_dsp_ipcu_userland.h",
+          "size": 5667,
+          "sha256": "5221009c59eebb07eb4d87c43d3db54015ea21d7a7211daf1e5145cef9190a2b",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/uapi/linux/milbeaut_pcie_com.h",
+          "size": 872,
+          "sha256": "976eaf5128c38c40733c2ec9a14dd0800ba0efb7102de44437739421df9b26e2",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/uapi/linux/ipcu_userland.h",
+          "size": 8249,
+          "sha256": "bb16c104037b67732a6e48e93e4cbe0daa32a388330b2444c39cd552209fc389",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/uapi/linux/milbeaut_misctop_com.h",
+          "size": 746,
+          "sha256": "c2cb0613c382ddc5ce18a760ed968a56f275127775810f4008b48db9a9dc1e66",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/uapi/linux/milbeaut_misctop.h",
+          "size": 951,
+          "sha256": "0deef185a4173be43578bfbf345b0a24394376b0bc3096ad0beb639f41c6f732",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/include/uapi/linux/milbeaut_noc.h",
+          "size": 513,
+          "sha256": "9d520da5c015cc4b3ee45a916ef779862265f02eeb05a97722b26e083583cc8d",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/iio/milbeaut-timer64.txt",
+          "size": 3575,
+          "sha256": "785a6f370b0539d63dfacec632400d26a126ae286fabe1005a2319fc7e508097",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/iio/milbeaut-updown_cnt.txt",
+          "size": 2143,
+          "sha256": "bd3d3f3357c3cb846b5a20cc04ee93f8d35c29c1dab0214f32452a8113bdc0a9",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/clock/milbeaut-clock.txt",
+          "size": 2457,
+          "sha256": "fe4fe3112e1724298bcd424dfb4eb17227ee093886d60d34383f5f43f46cdac0",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/iio/counter/milbeaut-timer64.txt",
+          "size": 517,
+          "sha256": "c2cc1953b0fc61eb51fa00d9f5d3d85a7a63646c1c16eae6f9b857e6869b97d3",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/iio/counter/milbeaut-updown_cnt.txt",
+          "size": 682,
+          "sha256": "8029653b519086798d1689a540153eded44286a15fb554254015cbbd10c621d3",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/timer/socionext,milbeaut-timer.txt",
+          "size": 392,
+          "sha256": "2c77a9997f2d79e4b897fe85607035996a56bb59391d90dd1450d327d0a4dbbb",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/mmc/sdhci-milbeaut.txt",
+          "size": 1416,
+          "sha256": "a837f4926f50425d1980f4c570e28cc612bcb2da523ce55b13c91c95cb1add22",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/arm/milbeaut.txt",
+          "size": 222,
+          "sha256": "95c6bd45717e1297b32f0483538fb3282fcf02d58e002e850f6b23d0e903a464",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/noc/milbeaut_noc.txt",
+          "size": 454,
+          "sha256": "e8a975131216353d83de91cff45fce901308a64b545f45e285659ebf0e7f6992",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/dma/milbeaut_hdmac.txt",
+          "size": 1606,
+          "sha256": "894f9c7a30d06607958dc79ecbee26000d3ee33ace4dc116cc2dc06eeed92856",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/dma/milbeaut-m10v-xdmac.txt",
+          "size": 727,
+          "sha256": "a027205ff7d4f876bea7e322d97f3b014f56f35d13d8c828a36fd9986d8603d7",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/reset/milbeaut-reset.txt",
+          "size": 956,
+          "sha256": "7b08c1cc75767d187b11cf35ae462c2eeae0034fdbcbaac950d380ce6e7831b0",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/pinctrl/socionext,milbeaut-pinctrl.txt",
+          "size": 7019,
+          "sha256": "a089c578bad6a19154b96493105b45d3e6d9357a311e1234d7ff11d8344e57b0",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/mfd/milbeaut-updown.txt",
+          "size": 661,
+          "sha256": "90376312b3df067a8de4558486e291e5135e4d9f40f84218f45dcbc604a99d9a",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/usb/dwc3-milbeaut.txt",
+          "size": 2364,
+          "sha256": "bb0219e8b949e3589aeb2f91d6994a94504daeba53400dc179ac00d72ffae3b1",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/misctop/milbeaut_misctop.txt",
+          "size": 272,
+          "sha256": "0160885d413fce5e8a61b009b68c0fa79dc6d4aec8178288e83d9b09e4f07abd",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/serial/milbeaut-uart.txt",
+          "size": 587,
+          "sha256": "31266e61aa1c39d157d61beb1782ade7d6bd0433595a677d5d3c1d4af369f7b2",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/pwm/pwm-milbeaut.txt",
+          "size": 589,
+          "sha256": "92bf2f9ca32d9845402a3ead38b54e79de82b0e02ceedbed51d0c85dbd46821a",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/spi/spi-milbeaut.txt",
+          "size": 1808,
+          "sha256": "6f893462ec5707a9060fb4cdbc2b6a4f2b914cb21c3364ab8b0ffdb9208b724d",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/pci/milbeaut-pcie.txt",
+          "size": 6123,
+          "sha256": "3f72af18f6a6f610b1f6802d4bf407f8b5122ad34ec6de353bd83b83f24c0af5",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/sram/milbeaut-smp-sram.txt",
+          "size": 753,
+          "sha256": "471c1a2f942029b60a8b398fd603c095219ec0d03df5fd9c17a4c890acc5c250",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/Documentation/devicetree/bindings/i2c/i2c-milbeaut.txt",
+          "size": 518,
+          "sha256": "dc2315d9dbd39439cd5a50b5f1016d39e08242b2ef5eda7e8146ba9d6e76966e",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/mach-milbeaut/milb_cpu_hotplug.c",
+          "size": 11132,
+          "sha256": "81763770de737bfdde2e86a89490959f53f54dd1be34b97af606f558e5199269",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/mach-milbeaut/Makefile",
+          "size": 84,
+          "sha256": "440cf50e8d8a3e79b84ba62da7b2ad092a5d24250bb9658cfee4fa4c06b14df4",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/mach-milbeaut/platsmp.c",
+          "size": 4247,
+          "sha256": "7a6656fd2c20a579777466bf0641a6c7ea6e777479d6eb1b0001d8888310c3f0",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/mach-milbeaut/Kconfig",
+          "size": 649,
+          "sha256": "e93e19c02f621195f7cb0571c8ccc795a3892e901f6f5718977cdabc3ad1ac6f",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/milbeaut-m10v-evb-vbd.dts",
+          "size": 16339,
+          "sha256": "7111ec4a2e0607fe0efe9fb227d18dd12d54c5714f93c95b4395a5f3111901ee",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/milbeaut-m10v.dtsi",
+          "size": 7450,
+          "sha256": "eeba07b98272f1fb457c0284f80710f17d395260ae67aed431afc6e71707c85d",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/milbeaut-m10v-evb.dts",
+          "size": 9590,
+          "sha256": "5b7f45dfe22042f52143a842d9f23f65344df597d31d1c75a725f963213822f2",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/milbeaut-m10v-gpio.h",
+          "size": 410,
+          "sha256": "cfa4043803d4f44b5f844663f1cb1e4466d044d64fba421f9182eb75d827f698",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/milbeaut-m10v-bsp_evb.dts",
+          "size": 3115,
+          "sha256": "22113bdfbbeab605bd94145a64d998878e33c2689ce26a6c881d741b1916d026",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/configs/milbeaut_m10v_vbd_defconfig",
+          "size": 10707,
+          "sha256": "a20e652440f465c65f10e9a3928ed0926037791d2337b9e0f20001c79b89193c",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/configs/milbeaut_m10v_defconfig",
+          "size": 10719,
+          "sha256": "78fe03e2c5bf8717fb1e9bb5677fd4aff78c8902fdf7e18f27f1cf75af383dbe",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-DC1232-rtos.h",
+          "size": 1992,
+          "sha256": "ebce6f90948b5b112bdbfad8f6956f188b3dbc397f3d459a5e656ae06d4e903c",
+          "identical_to_panasonic_selected": null
+        },
+        {
+          "path": "linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-DC1232.dtsi",
+          "size": 27553,
+          "sha256": "f8607895c04f29c14a25cf55e28c431a9a59b415f329c8719db6f9a92416e748",
+          "identical_to_panasonic_selected": null
+        },
+        {
+          "path": "linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-DC1232.dts",
+          "size": 17205,
+          "sha256": "c6e4d133d2c0f5882cde9a81efa0b402771b4689106abc06ed56f70aa609b0ba",
+          "identical_to_panasonic_selected": null
+        },
+        {
+          "path": "linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-DC1231-gpio.h",
+          "size": 1237,
+          "sha256": "775a51c6133050ed095e1dd7265977bcc28a6039d49042bc0e9d411747c0b93e",
+          "identical_to_panasonic_selected": null
+        },
+        {
+          "path": "linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-DC1231.dts",
+          "size": 17205,
+          "sha256": "dac333e57aacb67370251dbc57d0864c4a2699239565dd06246894f6a0a0dc7d",
+          "identical_to_panasonic_selected": null
+        },
+        {
+          "path": "linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-DC1232-gpio.h",
+          "size": 1237,
+          "sha256": "e17c1ed576aa6aa98d466b4d7c067cc02b81f946af0aade2319a075d0e2c22c0",
+          "identical_to_panasonic_selected": null
+        },
+        {
+          "path": "linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-DC1231.dtsi",
+          "size": 27553,
+          "sha256": "e26c61853a6a658d644b3846f12f594fa2efd02ea0ea3f8e600221c879fa97ef",
+          "identical_to_panasonic_selected": null
+        },
+        {
+          "path": "linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-DC1231-rtos.h",
+          "size": 1992,
+          "sha256": "22356937605e6c95813aadff928214d5e6c9e33c02a3c7a4ea0b3b6045ea8865",
+          "identical_to_panasonic_selected": null
+        },
+        {
+          "path": "linux-4.19.124/arch/arm64/configs/pvc04v_DC1232_defconfig",
+          "size": 12972,
+          "sha256": "b429006ce1115264d8311d093ed82651bcec57147bb1215685a0f8526abd3b05",
+          "identical_to_panasonic_selected": null
+        },
+        {
+          "path": "linux-4.19.124/arch/arm64/configs/pvc04v_DC1231_defconfig",
+          "size": 12972,
+          "sha256": "7bbfb8d0c7969c5ca0db962634d60f3d7e80a44fcc6b42fbf9352d9ebc72659d",
+          "identical_to_panasonic_selected": null
+        }
+      ],
+      "keyword_hits": []
+    },
+    {
+      "zip_member": "20260612_OSS_SL3/u-boot.tar.gz",
+      "archive_sha256": "e4200181e51c181e995c021525ed736ede059c60441daa5b37d6cb34dfe4ec8e",
+      "identical_to_local_archive": false,
+      "selected": [
+        {
+          "path": "u-boot/drivers/serial/serial_milbeaut.c",
+          "size": 4167,
+          "sha256": "d0c51f2834bea7f6a97cd1e6f7a6129b393bd73a968473205c39fa8b49d4f54a",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "u-boot/drivers/mmc/milbeaut-sdhci.c",
+          "size": 7535,
+          "sha256": "7474eaca62b20faede54dca5112de3ed27a8a6442e71cabb1f058dbb89deed14",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "u-boot/arch/arm/mach-milbeaut/milbeaut.c",
+          "size": 1920,
+          "sha256": "95fb026bc447b59e53d699247f810738d3c58eb2a8d31d07d33d0d3bdb9f1d37",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "u-boot/arch/arm/mach-milbeaut/Makefile",
+          "size": 59,
+          "sha256": "094c65386309cff3fb6aad933a75cc052005a8ecbdb1d19844c8e69061a85b1e",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "u-boot/arch/arm/mach-milbeaut/Kconfig",
+          "size": 1537,
+          "sha256": "5b791e57f10032d4a3dafea54aae71f30ff4f9ed75815e250a8e0ee539600edb",
+          "identical_to_panasonic_selected": true
+        },
+        {
+          "path": "u-boot/arch/arm/dts/pvc04v-MC501.dtsi",
+          "size": 2690,
+          "sha256": "c883c5de3a8ece373068656f43e361d0c293931d831d3a3aa0418e4370c72f6b",
+          "identical_to_panasonic_selected": null
+        },
+        {
+          "path": "u-boot/arch/arm/dts/pvc04v-MC501.dts",
+          "size": 766,
+          "sha256": "02686b3623c9ed2f7bc5c6073004e482850d27a4ee6a25c275a7dc9bb433c6a7",
+          "identical_to_panasonic_selected": null
+        },
+        {
+          "path": "u-boot/configs/pvc04v_MC501_defconfig",
+          "size": 1126,
+          "sha256": "19dd82ae2f92bc8b9cafd5d2a60202006688287cdd8a0a801cc442fe338b8771",
+          "identical_to_panasonic_selected": null
+        }
+      ],
+      "keyword_hits": []
+    }
+  ],
+  "limits": "Different product source package; platform similarities are not proof of S1M2 build, proprietary code, decryption or execution support.",
+  "zip_members": [
+    "20260612_OSS_SL3/",
+    "20260612_OSS_SL3/alsa-lib-1.2.9.tar.gz",
+    "20260612_OSS_SL3/attr-2.4.47.tar.bz2",
+    "20260612_OSS_SL3/base-files-3.0.14.tar.bz2",
+    "20260612_OSS_SL3/bash-3.2.57.tar.bz2",
+    "20260612_OSS_SL3/bash-completion-2.7.tar.bz2",
+    "20260612_OSS_SL3/bind-9.10.6.tar.bz2",
+    "20260612_OSS_SL3/bridge-utils-1.6.tar.bz2",
+    "20260612_OSS_SL3/busybox-1.27.2.tar.bz2",
+    "20260612_OSS_SL3/coreutils-6.9.tar.bz2",
+    "20260612_OSS_SL3/debianutils-4.8.4.tar.bz2",
+    "20260612_OSS_SL3/devmem2-1.0.tar.bz2",
+    "20260612_OSS_SL3/eudev-3.2.5.tar.bz2",
+    "20260612_OSS_SL3/FreeRTOS-202212.00.tar.bz2",
+    "20260612_OSS_SL3/fuse-2.9.7.tar.bz2",
+    "20260612_OSS_SL3/glibc-2.27.tar.bz2",
+    "20260612_OSS_SL3/grep-2.5.1a.tar.bz2",
+    "20260612_OSS_SL3/i2c-tools-4.0.tar.bz2",
+    "20260612_OSS_SL3/ifupdown-0.8.16.tar.bz2",
+    "20260612_OSS_SL3/ifuse-1.1.4.tar.bz2",
+    "20260612_OSS_SL3/init-ifupdown-1.0.tar.bz2",
+    "20260612_OSS_SL3/iproute2-4.14.1.tar.bz2",
+    "20260612_OSS_SL3/iptables-1.6.2.tar.bz2",
+    "20260612_OSS_SL3/iputils-s20161105.tar.bz2",
+    "20260612_OSS_SL3/kmod-25+gitAUTOINC+aca4eca103.tar.bz2",
+    "20260612_OSS_SL3/less-394.tar.bz2",
+    "20260612_OSS_SL3/libimobiledevice-1.3.0.tar.bz2",
+    "20260612_OSS_SL3/libmnl-1.0.4.tar.bz2",
+    "20260612_OSS_SL3/libnl-3.4.0.tar.bz2",
+    "20260612_OSS_SL3/libplist-2.2.0.tar.bz2",
+    "20260612_OSS_SL3/libusb1-1.0.26.tar.bz2",
+    "20260612_OSS_SL3/libusbmuxd-2.0.2.tar.bz2",
+    "20260612_OSS_SL3/linux-4.19.124.tar.gz",
+    "20260612_OSS_SL3/mtd-utils-2.0.1+AUTOINC+9c6173559f.tar.bz2",
+    "20260612_OSS_SL3/net-tools-1.60-26.tar.bz2",
+    "20260612_OSS_SL3/netbase-5.4.tar.bz2",
+    "20260612_OSS_SL3/pciutils-3.5.6.tar.bz2",
+    "20260612_OSS_SL3/procps-3.3.12.tar.bz2",
+    "20260612_OSS_SL3/rng-tools-5.tar.bz2",
+    "20260612_OSS_SL3/sysfsutils-2.1.0.tar.bz2",
+    "20260612_OSS_SL3/sysvinit-2.88dsf.tar.bz2",
+    "20260612_OSS_SL3/tar-1.17.tar.bz2",
+    "20260612_OSS_SL3/time-1.7.tar.bz2",
+    "20260612_OSS_SL3/u-boot.tar.gz",
+    "20260612_OSS_SL3/usbmuxd-1.1.1.tar.bz2",
+    "20260612_OSS_SL3/usbutils-013.tar.bz2",
+    "20260612_OSS_SL3/util-linux-2.32.tar.bz2",
+    "20260612_OSS_SL3/wireless-tools-30.pre9.tar.bz2"
+  ]
+}

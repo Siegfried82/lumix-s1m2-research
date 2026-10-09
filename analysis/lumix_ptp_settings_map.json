@@ -1,0 +1,390 @@
+{
+  "metadata": {
+    "title": "LUMIX PTP Interface to Camera Settings (.DAT/.CAM) Semantic Bridge & Evidence Map",
+    "generation_date": "2026-10-08",
+    "scope": "DC-S5M2, DC-S5M2X, DC-S1M2 / S1M2ES Architecture",
+    "constraints_enforced": [
+      "Strictly read-only offline investigation",
+      "No physical camera connected",
+      "No live commands dispatched",
+      "No vendor binaries executed",
+      "No cryptographic key guessing",
+      "No speculative semantic claims based solely on numeric identity"
+    ],
+    "source_disassemblies": {
+      "app": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "ptp": "analysis/tether_2_12_ptp_arm64_disassembly.txt"
+    }
+  },
+  "ptp_opcode_catalog": {
+    "0x9108": {
+      "name": "PTP_OC_PANASONIC_ListProperty / Get_Tag_Capability",
+      "description": "Queries capability / supported enum list for a 32-bit vendor property tag.",
+      "callers": [
+        "__Z39Lmx_lib_ptpif_LmxExt_Get_Tag_CapabilityjjPhjPjPc (lines 28670-28680)",
+        "__Z35LMX_func_api_Get_Tag_CapabilityInfojPhjPjPc (line 28621)"
+      ],
+      "param_count": 3,
+      "params": [
+        "Param 1: Tag ID (uint32, e.g. 0x02000080 for CameraMode)",
+        "Param 2: Sub-index or 0",
+        "Param 3: Reserved (0)"
+      ]
+    },
+    "0x9402": {
+      "name": "PTP_OC_PANASONIC_GetProperty",
+      "description": "Reads current value/status for a vendor tag.",
+      "callers": [
+        "__Z38Lmx_lib_ptpif_LmxExt_GetCameraModeInfoP40_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_INFOjPc (lines 31767-31774)",
+        "__Z33Lmx_lib_ptpif_LmxExt_GetImageInfoP34_tag_LMX_STRUCT_RECINFO_IMAGE_INFOjPc (line 67009)"
+      ],
+      "param_count": 1,
+      "params": [
+        "Param 1: Tag ID (uint32, e.g. 0x02000080 for CameraMode)"
+      ]
+    },
+    "0x9403": {
+      "name": "PTP_OC_PANASONIC_SetProperty",
+      "description": "Sets parameter value for a vendor tag.",
+      "callers": [
+        "__Z38Lmx_lib_ptpif_LmxExt_SetCameraModeInfoPhjPc (lines 61189-61196)",
+        "__Z31Lmx_lib_ptpif_LmxExt_SetRecInfoPhjjPc (lines 24416-24419)",
+        "__Z33Lmx_lib_ptpif_LmxExt_SetImageInfoPhjPc (line 61280)"
+      ],
+      "param_count": 1,
+      "params": [
+        "Param 1: Tag ID (uint32, e.g. 0x02000081 for DriveMode, 0x02000031 for ShutterSpeed)"
+      ]
+    },
+    "0x940a": {
+      "name": "PTP_OC_PANASONIC_GetCaptureTarget / QuerySubcode",
+      "description": "General vendor query command used for configuration buffer limits, compatibility checks, and capture target query.",
+      "callers": [
+        "__Z64Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfigSetting_Get_MaxRecvBuffP45_tag_LMX_STRUCT_SETUP_FILES_CFG_MAX_RECV_BUFFjPcPj (subcode 0x800a3, line 37825)",
+        "__Z63Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfigSetting_Get_CompatibleP42_tag_LMX_STRUCT_SETUP_FILES_CFG_COMPATIBLEjPcPj (subcode 0x800a4, lines 37994, 38026-38034)"
+      ],
+      "param_count": 1,
+      "params": [
+        "Param 1: Subcommand ID (uint32)"
+      ]
+    },
+    "0x940b": {
+      "name": "PTP_OC_PANASONIC_SetCaptureTarget",
+      "description": "Sets storage target (SD card, PC, both).",
+      "callers": [
+        "__Z40LMX_func_api_SetupFilesConfig_Set_TargettPcPj (line 35342)"
+      ]
+    },
+    "0x9422": {
+      "name": "PTP_OC_PANASONIC_SetupFilesConfigSetting_Set_Data",
+      "description": "Transfers raw serialized binary camera settings (.DAT / .CAM) into camera firmware.",
+      "callers": [
+        "__Z45LMX_func_api_SetupFilesConfigSetting_Set_Data40_tag_LMX_STRUCT_SETUP_FILES_CFG_SET_DATAPcPj (lines 37553-37561, 37720-37780)"
+      ],
+      "packet_prefix": "12-byte header with subcode 0x800a2 and payload byte count, followed by raw buffer."
+    },
+    "0x9423": {
+      "name": "PTP_OC_PANASONIC_SetupFilesConfigSetting_Get_Data",
+      "description": "Receives raw serialized binary camera settings (.DAT / .CAM) from camera firmware.",
+      "callers": [
+        "__Z45LMX_func_api_SetupFilesConfigSetting_Get_DataP40_tag_LMX_STRUCT_SETUP_FILES_CFG_SET_DATAPcPj (lines 37199, 37270)"
+      ]
+    },
+    "0x9606": {
+      "name": "PTP_OC_PANASONIC_SendDataInfo",
+      "description": "Header descriptor for bulk block transmission.",
+      "callers": [
+        "__Z35Lmx_lib_ptpif_LmxExt_Send_Data_InfoPhjPc"
+      ]
+    },
+    "0x9607": {
+      "name": "PTP_OC_PANASONIC_StartSendData",
+      "description": "Block data transfer payload pipe (used in firmware updates and object transfers).",
+      "callers": [
+        "__Z30Lmx_lib_ptpif_LmxExt_Send_DataPhjPc"
+      ]
+    }
+  },
+  "targeted_features": {
+    "DriveMode": {
+      "category": "Drive Mode Control",
+      "ptp_opcode_set": "0x9403",
+      "ptp_opcode_get": "0x9402",
+      "ptp_opcode_capa": "0x9108",
+      "ptp_tag_set": "0x02000081",
+      "ptp_tag_get": "0x02000080",
+      "parameter_layout": {
+        "struct_name": "_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_INFO",
+        "value_offset": "0x08",
+        "value_type": "uint16_t",
+        "disassembly_ptp_evidence": [
+          "Line 31954: strh w21, [sp, #0x8]",
+          "Lines 31956-31957: mov w1, #0x81; movk w1, #0x200, lsl #16 (Tag 0x02000081)",
+          "Line 31474: ldrh w8, [sp, #0x8] (Tag 0x02000080 getter)"
+        ]
+      },
+      "app_enum_mapping": {
+        "enum_symbol": "__ZN11lumixtether9Utilities15arrDriveModeValE",
+        "virtual_address": "0x100146650",
+        "disassembly_app_evidence": [
+          "Line 119777: DeviceAdapter::adp_LMX_func_api_CameraMode_Set_DriveMode",
+          "Line 119797: cmp w1, #0xb (boundary check 0..11)",
+          "Lines 119800-119801: ldr x9, [x9, #0xd0]; ldr x22, [x9, w1, uxtw #3]",
+          "Line 119845: bl LMX_func_api_CameraMode_Set_DriveMode",
+          "Line 286109: getter switch lookup in DeviceAdapter"
+        ],
+        "values": {
+          "0": {
+            "name": "DM_Unknown",
+            "raw_val": "0x0000"
+          },
+          "1": {
+            "name": "DM_Single",
+            "raw_val": "0x0001"
+          },
+          "2": {
+            "name": "DM_Burst",
+            "raw_val": "0x0002"
+          },
+          "3": {
+            "name": "DM_Bracket",
+            "raw_val": "0x0003"
+          },
+          "4": {
+            "name": "DM_SelfTimer",
+            "raw_val": "0x0004"
+          },
+          "5": {
+            "name": "DM_Interval",
+            "raw_val": "0x0005"
+          },
+          "6": {
+            "name": "DM_4K6K",
+            "raw_val": "0x0006"
+          },
+          "7": {
+            "name": "DM_Focus",
+            "raw_val": "0x0007"
+          },
+          "8": {
+            "name": "DM_Burst1",
+            "raw_val": "0x0008"
+          },
+          "9": {
+            "name": "DM_Burst2",
+            "raw_val": "0x0009"
+          },
+          "10": {
+            "name": "DM_HRS",
+            "raw_val": "0x000a"
+          },
+          "11": {
+            "name": "DM_HANDHELD_HRS",
+            "raw_val": "0x0004"
+          }
+        }
+      },
+      "capability_query": {
+        "function": "__Z37LMX_func_api_CameraMode_GetCapabilityP45_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_CAPA_INFOPcPj",
+        "lines": "30916-31000",
+        "app_wrapper": "DeviceAdapter::driveModeCapability (lines 149778-149786)"
+      }
+    },
+    "HighResolutionMode": {
+      "category": "Pixel Shift High Resolution Mode",
+      "ptp_interface_status": "Lacks dedicated sub-property tag in Tether / libLmxptpif. Activated solely as DriveMode entry DM_HRS (0x000a) or DM_HANDHELD_HRS (0x0004).",
+      "detailed_settings": {
+        "synthesis_delay": "No PTP endpoint in Tether API",
+        "motion_blur_mode": "No PTP endpoint in Tether API",
+        "save_1st_normal_picture": "No PTP endpoint in Tether API"
+      },
+      "dat_cam_status": "Included in [High Resolution Mode Setting] block within DAT scope (DVQP2839 0148.html), but individual record tag is unmapped without single-variable A/B diff."
+    },
+    "ShutterType": {
+      "category": "Shutter Mechanism Selection (Mechanical vs Electronic vs EFCT)",
+      "ptp_interface_status": "ABSENT from Tether UI and libLmxptpif protocol tables. No LMX_func_api_ShutterType symbol exists.",
+      "related_ptp_controls": {
+        "shutter_speed": {
+          "symbol": "__Z24LMX_func_api_SS_SetParamjPcPj (lines 24382-24440)",
+          "ptp_tag": "0x02000031",
+          "ptp_opcode": "0x9403",
+          "function": "Controls shutter speed exposure duration or video angle (Tag 0x053A in S5IIX.DAT), not shutter physical mechanism."
+        },
+        "silent_mode": {
+          "symbol": "__Z36LMX_func_api_RecInfo_Set_Silent_ModejPcPj (line 49981)",
+          "ptp_tag": "0x020000b7",
+          "ptp_opcode": "0x9403",
+          "function": "Silent mode indirectly forces electronic shutter in camera firmware."
+        }
+      },
+      "dat_cam_status": "Confirmed in Save/Restore scope (DVQP2839 0148.html), but individual record tag is unmapped without single-variable A/B diff."
+    },
+    "Save1stNormalPicture": {
+      "category": "Simultaneous Normal Shot Recording",
+      "ptp_interface_status": "ABSENT from Tether UI and libLmxptpif protocol tables.",
+      "object_delivery_behavior": "Camera firmware generates an additional PTP object handle on SD/memory when enabled; Tether reacts passively via EV_OBJCT_ADD (0x10000040) notification.",
+      "dat_cam_status": "Sub-field within [High Resolution Mode Setting] menu block in DAT."
+    },
+    "RAWTransfer": {
+      "category": "RAW File Storage & Transmission",
+      "storage_location_control": {
+        "app_method": "ApplicationSettings::setRawTransferType (lines 242044, 242158)",
+        "enum_name": "StoLocType",
+        "options": [
+          "StoLocType_SdCard",
+          "StoLocType_SdCardPc",
+          "StoLocType_Pc"
+        ],
+        "ptp_opcodes": "0x940a (Get) / 0x940b (Set) with CaptureTarget subcode"
+      },
+      "quality_setting": {
+        "ptp_tag_set": "0x020000a2",
+        "ptp_tag_get": "0x020000a2",
+        "ptp_opcode_set": "0x9403",
+        "ptp_opcode_get": "0x9402",
+        "symbols": [
+          "__Z39LMX_func_api_ImageInfo_Set_ImageQualityjPcPj (lines 66570, 66604)",
+          "__Z39LMX_func_api_ImageInfo_Get_ImageQualityPjPcS_ (line 66473)",
+          "DeviceAdapter::adp_LMX_func_api_ImageInfo_Set_ImageQuality (lines 220248, 252933)"
+        ],
+        "enum_symbol": "__ZN11lumixtether9Utilities20arrImgInfoQualityValE (0x100146c60)",
+        "raw_quality_values": {
+          "0x0": "JPEG Fine",
+          "0x1": "JPEG Standard",
+          "0x3": "RAW Only",
+          "0x4": "RAW + Fine",
+          "0x5": "RAW + Standard"
+        }
+      },
+      "transfer_pipeline": {
+        "notification_events": [
+          "0x10000040 (EV_OBJCT_ADD, line 68859)",
+          "0x10000043 (EV_OBJCT_REQ_TRNSFER, lines 69121-69128)"
+        ],
+        "fetch_api": "__Z36LMX_func_api_Save_ObjectData_to_FilejP32_tag_LMX_STRUCT_PTP_ARRAY_STRINGS0_S0_PcPj (lines 74000-74240)",
+        "cardless_virtual_files": [
+          "CARDLESS.RW2 (line 190256)",
+          "CARDLESS.HSP (line 190280)",
+          "CARDLESS.HIF (line 190304)"
+        ]
+      }
+    }
+  },
+  "ptp_vs_dat_tag_bridge_verification": {
+    "conclusion": "NO DIRECT 1:1 NUMERICAL OR STRUCTURAL MAPPING EXISTS BETWEEN PTP PROPERTY TAGS AND .DAT RECORD TAGS.",
+    "verifiable_evidence": [
+      {
+        "test": "Check presence of low-16-bit PTP property tags in S5II.DAT catalog",
+        "ptp_tag": "0x02000020 (ISO)",
+        "dat_tag_tested": "0x0020",
+        "result": "NOT FOUND. Tags 0x001e through 0x0038 do not exist in S5II.DAT.",
+        "status": "REFUTES direct numeric mapping"
+      },
+      {
+        "test": "Check presence of low-16-bit PTP property tags in S5II.DAT catalog",
+        "ptp_tag": "0x02000030 (ShutterSpeed)",
+        "dat_tag_tested": "0x0030",
+        "result": "NOT FOUND. Tag 0x0030 does not exist in S5II.DAT.",
+        "status": "REFUTES direct numeric mapping"
+      },
+      {
+        "test": "Inspect DAT Tag 0x0081 (corresponding numerically to PTP DriveMode Set 0x02000081)",
+        "dat_tag_tested": "0x0081",
+        "actual_content": "Small record, declared length 20, payload 14 bytes all 0x00.",
+        "result": "Payload is entirely zeroed, inconsistent with active DriveMode enum states.",
+        "status": "REFUTES numerical identity as semantic bridge"
+      },
+      {
+        "test": "Inspect PC host software handling of .CAM / .DAT in disassembly",
+        "app_disassembly_lines": "148377-148410, 148753-148832",
+        "ptp_disassembly_lines": "37199, 37591, 37720-37780",
+        "result": "Host software treats .CAM/.DAT as an opaque 15MB binary blob and blind-pipes it directly via PTP OpCode 0x9422/0x9423 under subcode 0x800a2. There is ZERO unpacking loop, ZERO tag mapping table, and ZERO parameter translation code in the PC binaries.",
+        "status": "PROVES host-side opacity; semantic interpretation is 100% confined to camera RTOS/firmware"
+      }
+    ]
+  },
+  "differential_analysis_evaluation": {
+    "intra_model_diff_s5ii": {
+      "sample_dates": [
+        "2025-03-13",
+        "2026-05-28"
+      ],
+      "total_records": 966,
+      "modified_records": 84,
+      "unmodified_records": 882,
+      "limitation": "The 84 modifications occurred as a collective batch of video and general production preset adjustments (picture profile, frame rates, audio, button maps). Because multiple settings varied concurrently without a controlled single-variable experiment, no specific tag among the 84 can be mathematically assigned to High-Res or Shutter Type."
+    },
+    "inter_model_diff_s5ii_vs_s5iix": {
+      "common_records": 966,
+      "identical_common_records": 867,
+      "diff_common_records": 99,
+      "s5iix_exclusive_records": 12,
+      "exclusive_aligned_bytes": 304,
+      "isolated_evidence": [
+        "Tag 0x053A (exclusive to S5IIX): 14 repeated uint16 values of 0x00b4 (180 decimal), corresponding to 180-degree video shutter angle.",
+        "Tag 0x0001 (common): 14 repeated uint16 values of 0x004a ('J' for S5II) vs 0x004b ('K' for S5IIX), model hardware identifier.",
+        "12 exclusive tags total 304 bytes, matching exact file size difference between S5II and S5IIX."
+      ],
+      "limitation": "The 99 common record differences reflect divergent default profiles and user setups across models, not an isolated single-variable toggle."
+    }
+  },
+  "evidence_matrix": {
+    "items": [
+      {
+        "feature": "DriveMode (DM_HRS, DM_HANDHELD_HRS)",
+        "ptp_interface": "OpCode 0x9403, Tag 0x02000081, Enum 0x000a / 0x0004",
+        "ptp_evidence_level": "PROVED (Static disassembly line 31939, 119800)",
+        "dat_tag_mapping": "UNPROVEN (No direct link to DAT tag numbers; DAT Tag 0x0081 is all-zero)",
+        "status": "PTP confirmed, DAT bridge missing"
+      },
+      {
+        "feature": "High Resolution Sub-settings (Delay, Motion Blur, Save 1st)",
+        "ptp_interface": "NONE in Tether PTP API",
+        "ptp_evidence_level": "PROVED ABSENT from PTP API",
+        "dat_tag_mapping": "UNPROVEN (Present in DAT scope per manual 0148.html, but tag unisolated)",
+        "status": "Blocked in PTP; DAT isolated tag required"
+      },
+      {
+        "feature": "Shutter Type (Mechanical MS vs Electronic ES)",
+        "ptp_interface": "NONE in Tether PTP API (only Shutter Speed 0x02000031 and Silent Mode 0x020000b7)",
+        "ptp_evidence_level": "PROVED ABSENT from PTP API",
+        "dat_tag_mapping": "UNPROVEN (Present in DAT scope per manual 0148.html, but tag unisolated)",
+        "status": "Blocked in PTP; DAT isolated tag required"
+      },
+      {
+        "feature": "RAW Object Transmission",
+        "ptp_interface": "OpCode 0x940a/0x940b (CaptureTarget), Tag 0x020000a2 (Quality=0x3), Event 0x10000040",
+        "ptp_evidence_level": "PROVED (Static disassembly lines 66604, 74000, 190256)",
+        "dat_tag_mapping": "Host-managed session parameter; in-camera default preserved in DAT",
+        "status": "Fully verified in PTP"
+      },
+      {
+        "feature": "DAT / CAM Binary Container",
+        "ptp_interface": "OpCode 0x9422 / 0x9423, Subcode 0x800a2, Buffer 15MB pool",
+        "ptp_evidence_level": "PROVED (Static disassembly lines 37553, 148311)",
+        "dat_tag_mapping": "100% byte coverage (966/978 records, 8-bit two's complement checksum verified 4/4)",
+        "status": "Structural format verified; field semantics candidate"
+      }
+    ]
+  },
+  "actionable_next_steps_and_missing_materials": {
+    "immediate_offline_action": "Freeze PTP-to-DAT map specification in lumix_ptp_settings_map.json and Gemini_PTP配置字段映射_20261008.md, formally establishing the boundary that host software provides zero semantic translation for .DAT records.",
+    "missing_materials_for_this_path": [
+      {
+        "material": "Single-Variable Laboratory DAT/CAM A/B Sample Pair",
+        "description": "Two camera setting exports from the identical physical camera where ONLY ONE setting is changed (e.g. High-Res ON vs OFF, or Shutter Type MECH vs ES), exported without changing any other parameter.",
+        "why_essential": "Because host software does not parse .DAT records, single-variable differential analysis of the binary record hashes is the ONLY deterministic method to identify the true Tag ID without guessing."
+      },
+      {
+        "material": "Decrypted Firmware Microcode for RTOS / ISP State Machine",
+        "description": "Decrypted components of S1M2 firmware (specifically loader1 and imaging DSP code hr_c_prog).",
+        "why_essential": ""
+      },
+      {
+        "material": "Native DC-S1M2 / S1M2ES .DAT Sample",
+        "description": "Original setting export from S1M2 camera hardware.",
+        "why_essential": "All current 4 samples are S5II / S5IIX (architecture version 0x04 / 0x05). S1M2 may possess distinct architecture version headers, differing tag sets, or modified slot allocations."
+      }
+    ]
+  }
+}
