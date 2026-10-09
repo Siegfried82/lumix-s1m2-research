@@ -1,0 +1,91 @@
+{
+  "dll": "<PROJECT_ROOT>/analysis/sources/tether_windows_2_12/Lmxptpif.dll",
+  "sha256": "30ea6baa984200965a69151ba9e2b0276912bf2883d822272676f14d9593b395",
+  "image_base": "0x180000000",
+  "dir64_relocation_count": 11940,
+  "runtime_function_count": 6957,
+  "targets": {
+    "internal_query": {
+      "rva": "0x1a870",
+      "unwind_exact_entry": [
+        [
+          "0x1a870",
+          "0x1aaa3",
+          "0x22fdb0"
+        ]
+      ],
+      "direct_calls_or_jumps": [
+        "18001a733: e8 38 01 00 00              \tcallq\t0x18001a870 <LMX_func_api_Mnt_GetInfo_Get_UsbMode+0xd0>",
+        "18001a838: e8 33 00 00 00              \tcallq\t0x18001a870 <LMX_func_api_Mnt_GetInfo_Get_UsbMode+0xd0>"
+      ],
+      "decoded_address_materialization": [],
+      "raw_absolute_address_occurrences": [],
+      "dir64_pointer_references": [],
+      "raw_rva_occurrences": [
+        {
+          "file_offset": "0x25a9ec",
+          "section": ".pdata",
+          "rva": "0x4193ec"
+        }
+      ]
+    },
+    "version": {
+      "rva": "0x1a690",
+      "unwind_exact_entry": [
+        [
+          "0x1a690",
+          "0x1a79a",
+          "0x22fd78"
+        ]
+      ],
+      "direct_calls_or_jumps": [],
+      "decoded_address_materialization": [],
+      "raw_absolute_address_occurrences": [],
+      "dir64_pointer_references": [],
+      "raw_rva_occurrences": [
+        {
+          "file_offset": "0x243198",
+          "section": ".rdata",
+          "rva": "0x244198"
+        },
+        {
+          "file_offset": "0x25a9d4",
+          "section": ".pdata",
+          "rva": "0x4193d4"
+        }
+      ]
+    },
+    "usb_mode": {
+      "rva": "0x1a7a0",
+      "unwind_exact_entry": [
+        [
+          "0x1a7a0",
+          "0x1a86a",
+          "0x22fd94"
+        ]
+      ],
+      "direct_calls_or_jumps": [],
+      "decoded_address_materialization": [],
+      "raw_absolute_address_occurrences": [],
+      "dir64_pointer_references": [],
+      "raw_rva_occurrences": [
+        {
+          "file_offset": "0x24319c",
+          "section": ".rdata",
+          "rva": "0x24419c"
+        },
+        {
+          "file_offset": "0x25a9e0",
+          "section": ".pdata",
+          "rva": "0x4193e0"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No whole-program pointer/data-flow proof.",
+    "Encoded/computed pointers, dynamic resolution and runtime-loaded modules are not exhausted.",
+    "Raw RVA occurrence is not a callable pointer: export/unwind metadata must be distinguished.",
+    "Decoded instruction references use objdump coverage; embedded executable blobs are not proven covered."
+  ]
+}

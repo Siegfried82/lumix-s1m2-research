@@ -1,0 +1,80 @@
+{
+  "git_blob_ref": "refs/review/split-pr1:camera_api.zip",
+  "zip_bytes": 75324,
+  "zip_sha256": "7b9ae57bf96645f262911ed3bccedd46704f99e89bda50bae4718dc4a414b286",
+  "entries": [
+    {
+      "path": "camera_api/lumix_capability.xml",
+      "bytes": 8150,
+      "sha256": "6de123f761d05fcf55426ba61e48339c88de2107a22e1518076180188a823adc",
+      "parse_type": "XML",
+      "root_tag": "camrply",
+      "element_count": 170,
+      "model_attributes": [
+        "S5"
+      ],
+      "firmware_diagnostic_keyword_count": 0,
+      "candidate_attribute_records": []
+    },
+    {
+      "path": "camera_api/lumix_allmenu_analysis.md",
+      "bytes": 176627,
+      "sha256": "9fce605eed92e8264bd8e1c53323350202f549d21286514ba6908a296ee22db4"
+    },
+    {
+      "path": "camera_api/lumix_key_method.md",
+      "bytes": 7707,
+      "sha256": "5d46bfd067b7d3ce70ba7a92da0227fa5d309774a193b5d627562d6bc3b725db"
+    },
+    {
+      "path": "camera_api/lumix_lens.xml",
+      "bytes": 113,
+      "sha256": "281d2189b02b821580c7196b48b4d259fe46699c1a329ade1f083b509d706e65",
+      "parse_type": "not_XML",
+      "text_response": true
+    },
+    {
+      "path": "camera_api/lumix_state.xml",
+      "bytes": 622,
+      "sha256": "f023bab90e574d8733ab9c3fe326f182fff0d74699b6892182c1af071aaf1334",
+      "parse_type": "XML",
+      "root_tag": "camrply",
+      "element_count": 22,
+      "model_attributes": [],
+      "firmware_diagnostic_keyword_count": 0,
+      "candidate_attribute_records": []
+    },
+    {
+      "path": "camera_api/lumix_allmenu.xml",
+      "bytes": 307714,
+      "sha256": "2cf69074d41ac134e9a65ca631cf4842cefc5c49d24cc855ac2094fdbd1e857c",
+      "parse_type": "XML",
+      "root_tag": "camrply",
+      "element_count": 3918,
+      "model_attributes": [
+        "S5"
+      ],
+      "firmware_diagnostic_keyword_count": 0,
+      "candidate_attribute_records": []
+    },
+    {
+      "path": "camera_api/lumix_capability_analysis.md",
+      "bytes": 7349,
+      "sha256": "c87a96d9def51974474d801a00016823b2d8fbe3422e5c413ec855ac88201245"
+    },
+    {
+      "path": "camera_api/lumix_curmenu.xml",
+      "bytes": 46726,
+      "sha256": "1129195314340c331938e9654a05e56c3ce736c215e35b798fcc3e964b36e299",
+      "parse_type": "XML",
+      "root_tag": "camrply",
+      "element_count": 719,
+      "model_attributes": [
+        "MC801"
+      ],
+      "firmware_diagnostic_keyword_count": 0,
+      "candidate_attribute_records": []
+    }
+  ],
+  "boundary": "Submitted S5 comparison data; no device authentication or freshness verified."
+}

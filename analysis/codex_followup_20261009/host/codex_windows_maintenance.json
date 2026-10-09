@@ -1,0 +1,47 @@
+{
+  "dll": "<PROJECT_ROOT>/analysis/sources/tether_windows_2_12/Lmxptpif.dll",
+  "sha256": "30ea6baa984200965a69151ba9e2b0276912bf2883d822272676f14d9593b395",
+  "image_base": "0x180000000",
+  "checks": {
+    "first_arg_retained_in_r14": true,
+    "api_marker_written_to_host_pointer": true,
+    "version_selector_in_request_control": true,
+    "version_extra_count_zero": true,
+    "usb_selector_in_request_control": true,
+    "internal_query_opcode_low16_9703": true,
+    "query_reads_extra_count": true,
+    "query_reads_selector": true,
+    "query_copies_extra_params": true,
+    "receive_capacity_10001c": true,
+    "version_return_value_16bits": true,
+    "usb_return_value_32bits": true,
+    "output_size_4bytes": true
+  },
+  "internal_query_rva": "0x1a870",
+  "direct_call_sites": [
+    "18001a733: e8 38 01 00 00              \tcallq\t0x18001a870 <LMX_func_api_Mnt_GetInfo_Get_UsbMode+0xd0>",
+    "18001a838: e8 33 00 00 00              \tcallq\t0x18001a870 <LMX_func_api_Mnt_GetInfo_Get_UsbMode+0xd0>"
+  ],
+  "maintenance_selector_immediate_references": [
+    "18001a725: c7 44 24 40 01 00 03 80     \tmovl\t$0x80030001, 0x40(%rsp) # imm = 0x80030001",
+    "18001a82b: c7 44 24 40 02 00 03 80     \tmovl\t$0x80030002, 0x40(%rsp) # imm = 0x80030002",
+    "18001aa32: 3d 01 00 03 80              \tcmpl\t$0x80030001, %eax       # imm = 0x80030001",
+    "18001aa39: 3d 02 00 03 80              \tcmpl\t$0x80030002, %eax       # imm = 0x80030002"
+  ],
+  "known_request_parameters": [
+    [
+      "0x80030001"
+    ],
+    [
+      "0x80030002"
+    ]
+  ],
+  "host_api_marker_20001_is_request_parameter": false,
+  "receive_capacity_bytes": 1048604,
+  "limitations": [
+    "Decoded direct calls/jumps only; indirect calls and function pointers are not exhausted.",
+    "No device-side dispatcher or arbitrary memory read capability established.",
+    "objdump labels internal functions using nearest export; use RVA, not displayed name.",
+    "Windows internal helper hardcodes opcode 0x9703; Mac helper accepts opcode argument."
+  ]
+}

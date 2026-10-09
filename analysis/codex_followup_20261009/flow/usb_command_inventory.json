@@ -1,0 +1,2051 @@
+{
+  "base_apk_sha256": "f197f1ef09c718350fdf60aeebaa68de156a3e1ec4307f222760818d88339d28",
+  "enum_count": 82,
+  "commands": [
+    {
+      "name": "Undefined",
+      "opcode": "0x0000",
+      "source_line": 5,
+      "references": [
+        {
+          "path": "decompiled/sources/p054w1/a.java",
+          "line": 23
+        },
+        {
+          "path": "decompiled/sources/p040r1/h.java",
+          "line": 285
+        },
+        {
+          "path": "decompiled/sources/p040r1/h.java",
+          "line": 307
+        }
+      ],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdUndefined",
+      "opcode": "0x1000",
+      "source_line": 6,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdGetDeviceInfo",
+      "opcode": "0x1001",
+      "source_line": 7,
+      "references": [
+        {
+          "path": "decompiled/sources/p040r1/h.java",
+          "line": 240
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/p040r1/h.java",
+          "line": 240
+        }
+      ]
+    },
+    {
+      "name": "StdOpenSession",
+      "opcode": "0x1002",
+      "source_line": 8,
+      "references": [
+        {
+          "path": "decompiled/sources/p040r1/h.java",
+          "line": 607
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/p040r1/h.java",
+          "line": 607
+        }
+      ]
+    },
+    {
+      "name": "StdCloseSession",
+      "opcode": "0x1003",
+      "source_line": 9,
+      "references": [
+        {
+          "path": "decompiled/sources/p040r1/h.java",
+          "line": 196
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/p040r1/h.java",
+          "line": 196
+        }
+      ]
+    },
+    {
+      "name": "StdGetStorageIDs",
+      "opcode": "0x1004",
+      "source_line": 10,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdGetStorageInfo",
+      "opcode": "0x1005",
+      "source_line": 11,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdGetNumObjects",
+      "opcode": "0x1006",
+      "source_line": 12,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdGetObjectHandles",
+      "opcode": "0x1007",
+      "source_line": 13,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdGetObjectInfo",
+      "opcode": "0x1008",
+      "source_line": 14,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdGetObject",
+      "opcode": "0x1009",
+      "source_line": 15,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdGetThumb",
+      "opcode": "0x100a",
+      "source_line": 16,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdDeleteObject",
+      "opcode": "0x100b",
+      "source_line": 17,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdSendObjectInfo",
+      "opcode": "0x100c",
+      "source_line": 18,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdSendObject",
+      "opcode": "0x100d",
+      "source_line": 19,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdInitiateCapture",
+      "opcode": "0x100e",
+      "source_line": 20,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdFormatStore",
+      "opcode": "0x100f",
+      "source_line": 21,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdResetDevice",
+      "opcode": "0x1010",
+      "source_line": 22,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdSelfTest",
+      "opcode": "0x1011",
+      "source_line": 23,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdSetObjectProtection",
+      "opcode": "0x1012",
+      "source_line": 24,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdPowerDown",
+      "opcode": "0x1013",
+      "source_line": 25,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdGetDevicePropDesc",
+      "opcode": "0x1014",
+      "source_line": 26,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdGetDevicePropValue",
+      "opcode": "0x1015",
+      "source_line": 27,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdSetDevicePropValue",
+      "opcode": "0x1016",
+      "source_line": 28,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdResetDevicePropValue",
+      "opcode": "0x1017",
+      "source_line": 29,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdTerminateOpenCapture",
+      "opcode": "0x1018",
+      "source_line": 30,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdMoveObject",
+      "opcode": "0x1019",
+      "source_line": 31,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdCopyObject",
+      "opcode": "0x101a",
+      "source_line": 32,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdGetPartialObject",
+      "opcode": "0x101b",
+      "source_line": 33,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdInitiateOpenCapture",
+      "opcode": "0x101c",
+      "source_line": 34,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdStartEnumHandles",
+      "opcode": "0x101d",
+      "source_line": 35,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "StdEnumHandles",
+      "opcode": "0x101e",
+      "source_line": 36,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxOpenSession",
+      "opcode": "0x9102",
+      "source_line": 37,
+      "references": [
+        {
+          "path": "decompiled/sources/p040r1/h.java",
+          "line": 582
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/p040r1/h.java",
+          "line": 582
+        }
+      ]
+    },
+    {
+      "name": "LuxCloseSession",
+      "opcode": "0x9103",
+      "source_line": 38,
+      "references": [
+        {
+          "path": "decompiled/sources/p040r1/h.java",
+          "line": 174
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/p040r1/h.java",
+          "line": 174
+        }
+      ]
+    },
+    {
+      "name": "LuxGetDevieID",
+      "opcode": "0x9104",
+      "source_line": 39,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxGetTagListInfoSize",
+      "opcode": "0x9105",
+      "source_line": 40,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxGetTagListInfo",
+      "opcode": "0x9106",
+      "source_line": 41,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxGetCapabilityInfoSize",
+      "opcode": "0x9107",
+      "source_line": 42,
+      "references": [
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 46
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 46
+        }
+      ]
+    },
+    {
+      "name": "LuxGetCapabilityInfo",
+      "opcode": "0x9108",
+      "source_line": 43,
+      "references": [
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 1102
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 1102
+        }
+      ]
+    },
+    {
+      "name": "LuxGetPramNum",
+      "opcode": "0x9109",
+      "source_line": 44,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxGetPramInfoEx",
+      "opcode": "0x910a",
+      "source_line": 45,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxSetParamInfoEx",
+      "opcode": "0x910b",
+      "source_line": 46,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxExePramInfoEx",
+      "opcode": "0x910c",
+      "source_line": 47,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxGetObjectInfo",
+      "opcode": "0x9110",
+      "source_line": 48,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxGetObject",
+      "opcode": "0x9111",
+      "source_line": 49,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxGetPartialObject",
+      "opcode": "0x9112",
+      "source_line": 50,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxSkipObjectTransfer",
+      "opcode": "0x9113",
+      "source_line": 51,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxSetEventTypeFromCamera",
+      "opcode": "0x9116",
+      "source_line": 52,
+      "references": [
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 181
+        }
+      ],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxGetAFInfo",
+      "opcode": "0x9401",
+      "source_line": 53,
+      "references": [
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 3205
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 3205
+        }
+      ]
+    },
+    {
+      "name": "LuxGetRecInfo",
+      "opcode": "0x9402",
+      "source_line": 54,
+      "references": [
+        {
+          "path": "decompiled/sources/p059y0/i.java",
+          "line": 557
+        },
+        {
+          "path": "decompiled/sources/p059y0/i.java",
+          "line": 604
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/expose/SSData.java",
+          "line": 420
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/expose/ExposureData.java",
+          "line": 297
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/expose/WBData.java",
+          "line": 560
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/expose/FData.java",
+          "line": 330
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/expose/ISOData.java",
+          "line": 328
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 199
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 244
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 280
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 298
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 321
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 344
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 363
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 382
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 401
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 424
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 442
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 465
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 504
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 540
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 558
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 581
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 604
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 623
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 642
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 661
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 684
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 702
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 725
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 762
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 784
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 807
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 830
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 849
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 868
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 887
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 910
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 928
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 951
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 985
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1008
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1027
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1046
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1069
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1087
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1110
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1144
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1166
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1189
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1223
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1250
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1269
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1288
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1307
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1330
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1348
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1371
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1405
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1432
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1450
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1473
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1507
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1545
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1572
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1595
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1614
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1633
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1652
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1675
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1693
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1716
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1750
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1773
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1796
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1814
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1837
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1871
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1898
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1932
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1955
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1974
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1997
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2015
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2038
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2196
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2460
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2487
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2515
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2543
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2569
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2597
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2629
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2657
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2683
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2711
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2743
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2769
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2797
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2829
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2859
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 3152
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/p059y0/i.java",
+          "line": 557
+        },
+        {
+          "path": "decompiled/sources/p059y0/i.java",
+          "line": 604
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/expose/SSData.java",
+          "line": 420
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/expose/ExposureData.java",
+          "line": 297
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/expose/WBData.java",
+          "line": 560
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/expose/FData.java",
+          "line": 330
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/expose/ISOData.java",
+          "line": 328
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 199
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 244
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 280
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 298
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 321
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 344
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 363
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 382
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 401
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 424
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 442
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 465
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 504
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 540
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 558
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 581
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 604
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 623
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 642
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 661
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 684
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 702
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 725
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 762
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 784
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 807
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 830
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 849
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 868
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 887
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 910
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 928
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 951
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 985
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1008
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1027
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1046
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1069
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1087
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1110
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1144
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1166
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1189
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1223
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1250
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1269
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1288
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1307
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1330
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1348
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1371
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1405
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1432
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1450
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1473
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1507
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1545
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1572
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1595
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1614
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1633
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1652
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1675
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1693
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1716
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1750
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1773
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1796
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1814
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1837
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1871
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1898
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1932
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1955
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1974
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 1997
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2015
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2038
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2196
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2460
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2487
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2515
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2543
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2569
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2597
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2629
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2657
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2683
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2711
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2743
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2769
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2797
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2829
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2859
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 3152
+        }
+      ]
+    },
+    {
+      "name": "LuxSetRecInfo",
+      "opcode": "0x9403",
+      "source_line": 55,
+      "references": [
+        {
+          "path": "decompiled/sources/V0/v.java",
+          "line": 295
+        },
+        {
+          "path": "decompiled/sources/V0/v.java",
+          "line": 323
+        },
+        {
+          "path": "decompiled/sources/V0/v.java",
+          "line": 351
+        },
+        {
+          "path": "decompiled/sources/V0/v.java",
+          "line": 421
+        },
+        {
+          "path": "decompiled/sources/V0/v.java",
+          "line": 449
+        },
+        {
+          "path": "decompiled/sources/V0/v.java",
+          "line": 477
+        },
+        {
+          "path": "decompiled/sources/V0/v.java",
+          "line": 530
+        },
+        {
+          "path": "decompiled/sources/V0/v.java",
+          "line": 599
+        },
+        {
+          "path": "decompiled/sources/N0/e.java",
+          "line": 70
+        },
+        {
+          "path": "decompiled/sources/N0/e.java",
+          "line": 107
+        },
+        {
+          "path": "decompiled/sources/N0/e.java",
+          "line": 139
+        },
+        {
+          "path": "decompiled/sources/N0/e.java",
+          "line": 171
+        },
+        {
+          "path": "decompiled/sources/N0/e.java",
+          "line": 218
+        },
+        {
+          "path": "decompiled/sources/N0/e.java",
+          "line": 260
+        },
+        {
+          "path": "decompiled/sources/J0/S.java",
+          "line": 339
+        },
+        {
+          "path": "decompiled/sources/J0/S.java",
+          "line": 367
+        },
+        {
+          "path": "decompiled/sources/J0/S.java",
+          "line": 398
+        },
+        {
+          "path": "decompiled/sources/J0/X.java",
+          "line": 105
+        },
+        {
+          "path": "decompiled/sources/J0/X.java",
+          "line": 135
+        },
+        {
+          "path": "decompiled/sources/J/a.java",
+          "line": 359
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 240
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 730
+        }
+      ],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxCtrlRecRelease",
+      "opcode": "0x9404",
+      "source_line": 56,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxCtrlRecAFAE",
+      "opcode": "0x9405",
+      "source_line": 57,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxCtrlSetup",
+      "opcode": "0x9406",
+      "source_line": 58,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxCtrl4KRec",
+      "opcode": "0x9407",
+      "source_line": 59,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxGetMovieInfo",
+      "opcode": "0x9408",
+      "source_line": 60,
+      "references": [
+        {
+          "path": "decompiled/sources/J0/G.java",
+          "line": 183
+        },
+        {
+          "path": "decompiled/sources/p038q0/a0.java",
+          "line": 397
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/J0/G.java",
+          "line": 183
+        },
+        {
+          "path": "decompiled/sources/p038q0/a0.java",
+          "line": 397
+        }
+      ]
+    },
+    {
+      "name": "LuxSetMovieInfo",
+      "opcode": "0x9409",
+      "source_line": 61,
+      "references": [
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/liveview/RecordActivity.java",
+          "line": 600
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/liveview/RecordActivity.java",
+          "line": 678
+        }
+      ],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxGetSetupInfo",
+      "opcode": "0x940a",
+      "source_line": 62,
+      "references": [
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/vmodel/PcMakingXmlViewModel.java",
+          "line": 298
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/wireless/activity/WLPcMakingXmlViewModel.java",
+          "line": 313
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/vmodel/PcMakingXmlViewModel.java",
+          "line": 298
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/wireless/activity/WLPcMakingXmlViewModel.java",
+          "line": 313
+        }
+      ]
+    },
+    {
+      "name": "LuxSetSetupInfo",
+      "opcode": "0x940b",
+      "source_line": 63,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxCtrlMovieRec",
+      "opcode": "0x940c",
+      "source_line": 64,
+      "references": [
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/liveview/RecordActivity.java",
+          "line": 7577
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/liveview/RecordActivity.java",
+          "line": 7683
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/liveview/RecordActivity.java",
+          "line": 7577
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/liveview/RecordActivity.java",
+          "line": 7683
+        }
+      ]
+    },
+    {
+      "name": "LuxCtrlPower",
+      "opcode": "0x940d",
+      "source_line": 65,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxCtrlPlaySingle",
+      "opcode": "0x940e",
+      "source_line": 66,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxCtrlPlayOther",
+      "opcode": "0x940f",
+      "source_line": 67,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxCtrlRecOther",
+      "opcode": "0x9410",
+      "source_line": 68,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxSendGPSData",
+      "opcode": "0x9411",
+      "source_line": 69,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxCtrlLiveView",
+      "opcode": "0x9412",
+      "source_line": 70,
+      "references": [
+        {
+          "path": "decompiled/sources/p056x0/c.java",
+          "line": 49
+        },
+        {
+          "path": "decompiled/sources/J0/G.java",
+          "line": 240
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/p056x0/c.java",
+          "line": 49
+        },
+        {
+          "path": "decompiled/sources/J0/G.java",
+          "line": 240
+        }
+      ]
+    },
+    {
+      "name": "LuxCtrlGet4KPhotoPict",
+      "opcode": "0x9413",
+      "source_line": 71,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxGetPramInfo",
+      "opcode": "0x9414",
+      "source_line": 72,
+      "references": [
+        {
+          "path": "decompiled/sources/p059y0/i.java",
+          "line": 474
+        },
+        {
+          "path": "decompiled/sources/p059y0/i.java",
+          "line": 515
+        },
+        {
+          "path": "decompiled/sources/p056x0/c.java",
+          "line": 102
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 62
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/expose/FData.java",
+          "line": 305
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/para/VolumeData.java",
+          "line": 83
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/para/VolumeData.java",
+          "line": 135
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/para/VolumeData.java",
+          "line": 150
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/para/VolumeData.java",
+          "line": 207
+        },
+        {
+          "path": "decompiled/sources/p038q0/a0.java",
+          "line": 329
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2255
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2287
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2371
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2904
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2958
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2994
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 3325
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/p059y0/i.java",
+          "line": 474
+        },
+        {
+          "path": "decompiled/sources/p059y0/i.java",
+          "line": 515
+        },
+        {
+          "path": "decompiled/sources/p056x0/c.java",
+          "line": 102
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 62
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/expose/FData.java",
+          "line": 305
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/para/VolumeData.java",
+          "line": 83
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/para/VolumeData.java",
+          "line": 135
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/para/VolumeData.java",
+          "line": 150
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/para/VolumeData.java",
+          "line": 207
+        },
+        {
+          "path": "decompiled/sources/p038q0/a0.java",
+          "line": 329
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2255
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2287
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2371
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2904
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2958
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2994
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 3325
+        }
+      ]
+    },
+    {
+      "name": "LuxSetPramInfo",
+      "opcode": "0x9415",
+      "source_line": 73,
+      "references": [
+        {
+          "path": "decompiled/sources/N0/n.java",
+          "line": 112
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 215
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/data/para/VolumeData.java",
+          "line": 181
+        }
+      ],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxExePramInfo",
+      "opcode": "0x9416",
+      "source_line": 74,
+      "references": [
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 554
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 581
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 610
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 637
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 666
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 698
+        }
+      ],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxExportConfigFile",
+      "opcode": "0x9421",
+      "source_line": 75,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxImportConfigFile",
+      "opcode": "0x9422",
+      "source_line": 76,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxSaveConfigFile",
+      "opcode": "0x9423",
+      "source_line": 77,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxGetStreamFrameData",
+      "opcode": "0x9707",
+      "source_line": 78,
+      "references": [],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxGetLiveViewData",
+      "opcode": "0x9706",
+      "source_line": 79,
+      "references": [
+        {
+          "path": "decompiled/sources/p062z0/C1086a.java",
+          "line": 222
+        },
+        {
+          "path": "decompiled/sources/p020h1/q.java",
+          "line": 254
+        },
+        {
+          "path": "decompiled/sources/p057x1/d.java",
+          "line": 325
+        },
+        {
+          "path": "decompiled/sources/p057x1/d.java",
+          "line": 437
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/p020h1/q.java",
+          "line": 254
+        },
+        {
+          "path": "decompiled/sources/p057x1/d.java",
+          "line": 325
+        },
+        {
+          "path": "decompiled/sources/p057x1/d.java",
+          "line": 437
+        }
+      ]
+    },
+    {
+      "name": "LuxGetFlowMovRecInfo",
+      "opcode": "0x9901",
+      "source_line": 80,
+      "references": [
+        {
+          "path": "decompiled/sources/J0/O.java",
+          "line": 64
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/J0/O.java",
+          "line": 64
+        }
+      ]
+    },
+    {
+      "name": "LuxSetXmlData",
+      "opcode": "0x9902",
+      "source_line": 81,
+      "references": [
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 269
+        }
+      ],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxEndOfSendData",
+      "opcode": "0x9903",
+      "source_line": 82,
+      "references": [
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/vmodel/PcMakingXmlViewModel.java",
+          "line": 71
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/wireless/activity/WLPcMakingXmlViewModel.java",
+          "line": 82
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2153
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/vmodel/PcMakingXmlViewModel.java",
+          "line": 71
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/wireless/activity/WLPcMakingXmlViewModel.java",
+          "line": 82
+        },
+        {
+          "path": "decompiled/sources/p038q0/X.java",
+          "line": 2153
+        }
+      ]
+    },
+    {
+      "name": "LuxSendXmlData",
+      "opcode": "0x9904",
+      "source_line": 83,
+      "references": [
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 148
+        }
+      ],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxFlowCtrlMoviePlay",
+      "opcode": "0x9905",
+      "source_line": 84,
+      "references": [
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 764
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 792
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 820
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 845
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 870
+        },
+        {
+          "path": "decompiled/sources/q2/c.java",
+          "line": 895
+        }
+      ],
+      "direct_builder_calls": []
+    },
+    {
+      "name": "LuxFlowGetMoviePlayData",
+      "opcode": "0x9906",
+      "source_line": 85,
+      "references": [
+        {
+          "path": "decompiled/sources/N0/j.java",
+          "line": 56
+        },
+        {
+          "path": "decompiled/sources/N0/j.java",
+          "line": 143
+        },
+        {
+          "path": "decompiled/sources/N0/j.java",
+          "line": 223
+        },
+        {
+          "path": "decompiled/sources/p062z0/C1086a.java",
+          "line": 222
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/replay/S.java",
+          "line": 82
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/replay/S.java",
+          "line": 309
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/replay/S.java",
+          "line": 454
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/replay/S.java",
+          "line": 540
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/N0/j.java",
+          "line": 56
+        },
+        {
+          "path": "decompiled/sources/N0/j.java",
+          "line": 143
+        },
+        {
+          "path": "decompiled/sources/N0/j.java",
+          "line": 223
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/replay/S.java",
+          "line": 82
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/replay/S.java",
+          "line": 309
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/replay/S.java",
+          "line": 454
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/replay/S.java",
+          "line": 540
+        }
+      ]
+    },
+    {
+      "name": "LuxFlowGetMoviePlayAudioData",
+      "opcode": "0x9907",
+      "source_line": 86,
+      "references": [
+        {
+          "path": "decompiled/sources/p062z0/C1086a.java",
+          "line": 222
+        },
+        {
+          "path": "decompiled/sources/p057x1/d.java",
+          "line": 378
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/replay/S.java",
+          "line": 204
+        }
+      ],
+      "direct_builder_calls": [
+        {
+          "path": "decompiled/sources/p057x1/d.java",
+          "line": 378
+        },
+        {
+          "path": "decompiled/sources/com/panasonic/jp/flow/ui/activity/replay/S.java",
+          "line": 204
+        }
+      ]
+    }
+  ],
+  "serializer_checks": {
+    "command_buffer_little_endian": true,
+    "header_length_type_opcode_transaction": true,
+    "parameter_f_serializes_uint32": true,
+    "size_is_payload_plus_12": true
+  },
+  "instruction_outputs": [
+    {
+      "file": "USBWorker_instructions.java",
+      "bytes": 108889,
+      "sha256": "0ac4ce75d15d6f7724a1f3ebd6d1ec16b163e2aca39731ebc76619f902c1ca49"
+    },
+    {
+      "file": "RemoteUDPPacketManager_instructions.java",
+      "bytes": 152753,
+      "sha256": "dd2f9aebce425a7ab10bd68f8fa29c94b749f41fc02a20093301a7a5af049002"
+    }
+  ],
+  "limitations": [
+    "Source reference scan is not complete DEX data flow or runtime reachability.",
+    "Builder-call matches exclude dynamically supplied enum arguments and failed decompilation methods.",
+    "Enum membership alone does not prove app usage or camera support.",
+    "No camera-side arbitrary memory handler established; no device operation performed."
+  ]
+}

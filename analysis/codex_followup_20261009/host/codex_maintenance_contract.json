@@ -1,0 +1,87 @@
+{
+  "source": "<PROJECT_ROOT>/analysis/tether_2_12_ptp_arm64_disassembly.txt",
+  "sha256": "f0beab04bef63508de6492cf263f62199548bda97911ab5852b371474537af1d",
+  "evidence_locations": {
+    "version": {
+      "symbol": "__Z36LMX_func_api_Mnt_GetInfo_Get_VersionPjS_PcS_",
+      "line": 75144,
+      "last_line": 75201
+    },
+    "usb_mode": {
+      "symbol": "__Z36LMX_func_api_Mnt_GetInfo_Get_UsbModePjPcS_",
+      "line": 75336,
+      "last_line": 75375
+    },
+    "query": {
+      "symbol": "__Z32Lmx_lib_ptpif_LmxExt_Mnt_GetInfojP33_tag_LMX_STRUCT_MNT_GET_INFO_CTRLPjjS1_Pc",
+      "line": 75202,
+      "last_line": 75335
+    },
+    "phase": {
+      "symbol": "__Z42Lmx_lib_ptpif_util_Get_NextPhase_StdOpCodetPj",
+      "line": 40828,
+      "last_line": 40931
+    }
+  },
+  "instruction_checks": {
+    "version_first_arg_retained_in_x22": true,
+    "version_api_marker_written_to_first_arg": true,
+    "version_marker_high_word_2": true,
+    "version_selector_high_word_8003": true,
+    "version_extra_param_count_zero": true,
+    "version_opcode_9703": true,
+    "usb_selector_low_word_2": true,
+    "query_reads_extra_param_count": true,
+    "query_adds_one_param_for_selector": true,
+    "query_copies_extra_params_from_plus8": true,
+    "query_request_selector_from_control_plus0": true,
+    "query_allocates_10001c_on_receive_phase": true,
+    "query_response_scalar_size4": true
+  },
+  "observed_requests": [
+    {
+      "wrapper": "version",
+      "opcode": "0x9703",
+      "ptp_params": [
+        "0x80030001"
+      ],
+      "extra_param_count": 0,
+      "host_api_marker": "0x00020001",
+      "host_api_marker_is_sent": false
+    },
+    {
+      "wrapper": "usb_mode",
+      "opcode": "0x9703",
+      "ptp_params": [
+        "0x80030002"
+      ],
+      "extra_param_count": 0
+    }
+  ],
+  "generic_control_layout": {
+    "offset_0": "uint32 selector",
+    "offset_4": "uint16 extra parameter count",
+    "offset_8": "uint32 extra parameters"
+  },
+  "receive_phase_for_9703": {
+    "phase": 3,
+    "reason": "(1 << (0x9703 - 0x9701)) & 0x66 != 0",
+    "host_buffer_capacity": "0x10001c"
+  },
+  "response_parser": {
+    "accepted_record_tags": [
+      "0x80030001",
+      "0x80030002"
+    ],
+    "version_value_load_bits": 16,
+    "usb_mode_value_load_bits": 32,
+    "caller_output_size_bytes": 4
+  },
+  "limitations": [
+    "No device command executed.",
+    "Generic serialization does not establish target handler support.",
+    "Host receive capacity is not a proven device payload limit or RAM read size.",
+    "Additional selector semantics and target memory access remain unknown.",
+    "Evidence extraction checks exact instructions, not all binaries or all control-flow paths."
+  ]
+}

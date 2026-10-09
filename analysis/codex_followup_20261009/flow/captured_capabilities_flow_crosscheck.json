@@ -1,0 +1,3746 @@
+{
+  "scope": "Flow-source framing independently applied to stored S1M2 capability captures; no live camera operations",
+  "outer_count_source": "capture top header word5, not independently matched size response",
+  "results": [
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_02000010.bin",
+      "sha256": "bb6bd5f0b448090a9d40d969baa3d611706c4a826c9e564f85aa180bc4214e14",
+      "bytes": 1336,
+      "records": [
+        {
+          "tag": "0x02000011",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 108,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                0,
+                3,
+                50,
+                52,
+                40,
+                49,
+                19
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.StyleMode"
+        },
+        {
+          "tag": "0x02000012",
+          "offset": 108,
+          "parameters": [
+            {
+              "offset": 136,
+              "end": 216,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                32773,
+                33289,
+                32772,
+                33287,
+                32771,
+                33285,
+                32770,
+                33283,
+                32769,
+                33281,
+                0,
+                513,
+                1,
+                515,
+                2,
+                517,
+                3,
+                519,
+                4,
+                521,
+                5
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.Contrast"
+        },
+        {
+          "tag": "0x02000013",
+          "offset": 216,
+          "parameters": [
+            {
+              "offset": 244,
+              "end": 324,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                32773,
+                33289,
+                32772,
+                33287,
+                32771,
+                33285,
+                32770,
+                33283,
+                32769,
+                33281,
+                0,
+                513,
+                1,
+                515,
+                2,
+                517,
+                3,
+                519,
+                4,
+                521,
+                5
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.Sharpness"
+        },
+        {
+          "tag": "0x02000014",
+          "offset": 324,
+          "parameters": [
+            {
+              "offset": 352,
+              "end": 432,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                32773,
+                33289,
+                32772,
+                33287,
+                32771,
+                33285,
+                32770,
+                33283,
+                32769,
+                33281,
+                0,
+                513,
+                1,
+                515,
+                2,
+                517,
+                3,
+                519,
+                4,
+                521,
+                5
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.NoiseReduction"
+        },
+        {
+          "tag": "0x02000015",
+          "offset": 432,
+          "parameters": [
+            {
+              "offset": 460,
+              "end": 540,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                32773,
+                33289,
+                32772,
+                33287,
+                32771,
+                33285,
+                32770,
+                33283,
+                32769,
+                33281,
+                0,
+                513,
+                1,
+                515,
+                2,
+                517,
+                3,
+                519,
+                4,
+                521,
+                5
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.Saturation"
+        },
+        {
+          "tag": "0x02000016",
+          "offset": 540,
+          "parameters": [
+            {
+              "offset": 568,
+              "end": 606,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.Filter"
+        },
+        {
+          "tag": "0x02000017",
+          "offset": 606,
+          "parameters": [
+            {
+              "offset": 634,
+              "end": 714,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                32773,
+                33289,
+                32772,
+                33287,
+                32771,
+                33285,
+                32770,
+                33283,
+                32769,
+                33281,
+                0,
+                513,
+                1,
+                515,
+                2,
+                517,
+                3,
+                519,
+                4,
+                521,
+                5
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.Hue"
+        },
+        {
+          "tag": "0x02000018",
+          "offset": 714,
+          "parameters": [
+            {
+              "offset": 742,
+              "end": 788,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.Granulation"
+        },
+        {
+          "tag": "0x02000019",
+          "offset": 788,
+          "parameters": [
+            {
+              "offset": 816,
+              "end": 854,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.KneeMode"
+        },
+        {
+          "tag": "0x0200001a",
+          "offset": 854,
+          "parameters": [
+            {
+              "offset": 882,
+              "end": 920,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.Color"
+        },
+        {
+          "tag": "0x0200001b",
+          "offset": 920,
+          "parameters": [
+            {
+              "offset": 948,
+              "end": 1028,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                32773,
+                33289,
+                32772,
+                33287,
+                32771,
+                33285,
+                32770,
+                33283,
+                32769,
+                33281,
+                0,
+                513,
+                1,
+                515,
+                2,
+                517,
+                3,
+                519,
+                4,
+                521,
+                5
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.Highlight"
+        },
+        {
+          "tag": "0x0200001c",
+          "offset": 1028,
+          "parameters": [
+            {
+              "offset": 1056,
+              "end": 1136,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                32773,
+                33289,
+                32772,
+                33287,
+                32771,
+                33285,
+                32770,
+                33283,
+                32769,
+                33281,
+                0,
+                513,
+                1,
+                515,
+                2,
+                517,
+                3,
+                519,
+                4,
+                521,
+                5
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.Shadow"
+        },
+        {
+          "tag": "0x0200001d",
+          "offset": 1136,
+          "parameters": [
+            {
+              "offset": 1164,
+              "end": 1204,
+              "type": 6,
+              "form": 2,
+              "default_raw": 4294967295,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.ISO"
+        },
+        {
+          "tag": "0x0200001e",
+          "offset": 1204,
+          "parameters": [
+            {
+              "offset": 1232,
+              "end": 1270,
+              "type": 4,
+              "form": 2,
+              "default_raw": 2,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.WB"
+        },
+        {
+          "tag": "0x0200001f",
+          "offset": 1270,
+          "parameters": [
+            {
+              "offset": 1298,
+              "end": 1336,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "C.PhotoStyle"
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_02000020.bin",
+      "sha256": "3c63d8e100d9b8e4fdd3f6787ff2f6b896bdfc3927b7669a1bf42a9abdbfc5e1",
+      "bytes": 522,
+      "records": [
+        {
+          "tag": "0x02000021",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 212,
+              "type": 6,
+              "form": 2,
+              "default_raw": 4294967295,
+              "enum_values_raw": [
+                4294967295,
+                100,
+                125,
+                160,
+                200,
+                250,
+                320,
+                400,
+                500,
+                640,
+                800,
+                1000,
+                1250,
+                1600,
+                2000,
+                2500,
+                3200,
+                4000,
+                5000,
+                6400,
+                8000,
+                10000,
+                12800,
+                16000,
+                20000,
+                25600,
+                32000,
+                40000,
+                51200
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "J.ISOValue"
+        },
+        {
+          "tag": "0x02000022",
+          "offset": 212,
+          "parameters": [
+            {
+              "offset": 240,
+              "end": 316,
+              "type": 6,
+              "form": 2,
+              "default_raw": 25600,
+              "enum_values_raw": [
+                200,
+                400,
+                800,
+                1600,
+                3200,
+                6400,
+                12800,
+                25600,
+                51200
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "J.ISOMaximum"
+        },
+        {
+          "tag": "0x02000023",
+          "offset": 316,
+          "parameters": [
+            {
+              "offset": 344,
+              "end": 386,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [
+                1,
+                2
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "J.ISOSensitivity"
+        },
+        {
+          "tag": "0x02000024",
+          "offset": 386,
+          "parameters": [
+            {
+              "offset": 414,
+              "end": 456,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                1,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "J.ExtendedISOSensitivity"
+        },
+        {
+          "tag": "0x02000025",
+          "offset": 456,
+          "parameters": [
+            {
+              "offset": 484,
+              "end": 522,
+              "type": 4,
+              "form": 2,
+              "default_raw": 65535,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "J.GainValue"
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_02000030.bin",
+      "sha256": "a533760e685d6e9b60236b3af062a7c82448bca92e544e69a9427c6b8f09f93d",
+      "bytes": 506,
+      "records": [
+        {
+          "tag": "0x02000031",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 332,
+              "type": 6,
+              "form": 2,
+              "default_raw": 320000,
+              "enum_values_raw": [
+                4294967295,
+                2147543648,
+                2147533648,
+                2147523648,
+                2147513648,
+                2147508648,
+                2147503648,
+                2147498648,
+                2147496648,
+                2147493648,
+                2147491648,
+                2147489648,
+                2147488648,
+                2147487648,
+                2147486848,
+                2147486148,
+                2147485648,
+                2147485248,
+                2147484948,
+                2147484648,
+                1300,
+                1600,
+                2000,
+                2500,
+                3200,
+                4000,
+                5000,
+                6000,
+                8000,
+                10000,
+                13000,
+                15000,
+                20000,
+                25000,
+                30000,
+                40000,
+                50000,
+                60000,
+                80000,
+                100000,
+                125000,
+                160000,
+                200000,
+                250000,
+                320000,
+                400000,
+                500000,
+                640000,
+                800000,
+                1000000,
+                1300000,
+                1600000,
+                2000000,
+                2500000,
+                3200000,
+                4000000,
+                5000000,
+                6400000,
+                8000000
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "K.SSValue"
+        },
+        {
+          "tag": "0x02000032",
+          "offset": 332,
+          "parameters": [
+            {
+              "offset": 360,
+              "end": 400,
+              "type": 6,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 400,
+              "end": 440,
+              "type": 6,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "K.SSLimit"
+        },
+        {
+          "tag": "0x02000034",
+          "offset": 440,
+          "parameters": [
+            {
+              "offset": 468,
+              "end": 506,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1100,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "K.SSAngle"
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_02000040.bin",
+      "sha256": "60bf2b6f14c737cb7361e035a10a13825ee78fbd84415095e335d7d235bcb714",
+      "bytes": 364,
+      "records": [
+        {
+          "tag": "0x02000041",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 260,
+              "type": 4,
+              "form": 2,
+              "default_raw": 40,
+              "enum_values_raw": [
+                320,
+                310,
+                300,
+                290,
+                280,
+                270,
+                260,
+                250,
+                240,
+                230,
+                220,
+                210,
+                200,
+                190,
+                180,
+                170,
+                160,
+                150,
+                140,
+                130,
+                120,
+                110,
+                100,
+                99,
+                98,
+                97,
+                96,
+                95,
+                94,
+                93,
+                92,
+                91,
+                90,
+                89,
+                88,
+                87,
+                86,
+                85,
+                84,
+                83,
+                82,
+                81,
+                80,
+                79,
+                78,
+                77,
+                76,
+                75,
+                74,
+                73,
+                72,
+                71,
+                70,
+                69,
+                68,
+                67,
+                66,
+                65,
+                64,
+                63,
+                62,
+                61,
+                60,
+                59,
+                58,
+                57,
+                56,
+                55,
+                54,
+                53,
+                52,
+                51,
+                50,
+                49,
+                48,
+                47,
+                46,
+                45,
+                44,
+                43,
+                42,
+                41,
+                40
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "I.FValue"
+        },
+        {
+          "tag": "0x02000042",
+          "offset": 260,
+          "parameters": [
+            {
+              "offset": 288,
+              "end": 326,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 326,
+              "end": 364,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "I.FLimit"
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_02000050.bin",
+      "sha256": "9f87162dfc4591c2af678c40e28a5e04da860a757feb204e402fe03fc3be17cf",
+      "bytes": 390,
+      "records": [
+        {
+          "tag": "0x02000051",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 126,
+              "type": 4,
+              "form": 2,
+              "default_raw": 2,
+              "enum_values_raw": [
+                2,
+                32788,
+                32789,
+                4,
+                32776,
+                32783,
+                6,
+                7,
+                32779,
+                32780,
+                32781,
+                32782,
+                32784,
+                32785,
+                32786,
+                32787
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "L.WBValue"
+        },
+        {
+          "tag": "0x02000052",
+          "offset": 126,
+          "parameters": [
+            {
+              "offset": 154,
+              "end": 192,
+              "type": 4,
+              "form": 2,
+              "default_raw": 5500,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "L.WBColorTemperature"
+        },
+        {
+          "tag": "0x02000053",
+          "offset": 192,
+          "parameters": [
+            {
+              "offset": 220,
+              "end": 258,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "L.WBAxisValueAB"
+        },
+        {
+          "tag": "0x02000054",
+          "offset": 258,
+          "parameters": [
+            {
+              "offset": 286,
+              "end": 324,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "L.WBAxisValueGM"
+        },
+        {
+          "tag": "0x02000055",
+          "offset": 324,
+          "parameters": [
+            {
+              "offset": 352,
+              "end": 390,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "L.IModeAdjust"
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_02000060.bin",
+      "sha256": "b2e25628ba8e989e9a8003df562cd3282f57b31ab9fa43216dff779554aae8af",
+      "bytes": 316,
+      "records": [
+        {
+          "tag": "0x02000061",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 156,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                32783,
+                32782,
+                32781,
+                32780,
+                32779,
+                32778,
+                32777,
+                32776,
+                32775,
+                32774,
+                32773,
+                32772,
+                32771,
+                32770,
+                32769,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "H.ExposureValue"
+        },
+        {
+          "tag": "0x02000062",
+          "offset": 156,
+          "parameters": [
+            {
+              "offset": 184,
+              "end": 250,
+              "type": 4,
+              "form": 2,
+              "default_raw": 32783,
+              "enum_values_raw": [
+                32783,
+                32782,
+                32781,
+                32780,
+                32779,
+                32778,
+                32777,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 250,
+              "end": 316,
+              "type": 4,
+              "form": 2,
+              "default_raw": 32783,
+              "enum_values_raw": [
+                32783,
+                32782,
+                32781,
+                32780,
+                32779,
+                32778,
+                32777,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": "H.ExposureLimit"
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_02000070.bin",
+      "sha256": "3df186d44ce01f4da76de16d731affbaffa9d57486509a03be1616033d0e9b0e",
+      "bytes": 680,
+      "records": [
+        {
+          "tag": "0x02000071",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 94,
+              "type": 4,
+              "form": 2,
+              "default_raw": 5,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000072",
+          "offset": 94,
+          "parameters": [
+            {
+              "offset": 122,
+              "end": 168,
+              "type": 4,
+              "form": 2,
+              "default_raw": 21,
+              "enum_values_raw": [
+                2,
+                21,
+                14,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000073",
+          "offset": 168,
+          "parameters": [
+            {
+              "offset": 196,
+              "end": 238,
+              "type": 4,
+              "form": 2,
+              "default_raw": 3,
+              "enum_values_raw": [
+                3,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000074",
+          "offset": 238,
+          "parameters": [
+            {
+              "offset": 266,
+              "end": 304,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000075",
+          "offset": 304,
+          "parameters": [
+            {
+              "offset": 332,
+              "end": 374,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                0,
+                1
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000076",
+          "offset": 374,
+          "parameters": [
+            {
+              "offset": 402,
+              "end": 452,
+              "type": 4,
+              "form": 2,
+              "default_raw": 4,
+              "enum_values_raw": [
+                4,
+                5,
+                6,
+                10,
+                8,
+                9
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000077",
+          "offset": 452,
+          "parameters": [
+            {
+              "offset": 480,
+              "end": 522,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                0,
+                1
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000078",
+          "offset": 522,
+          "parameters": [
+            {
+              "offset": 550,
+              "end": 594,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                0,
+                1,
+                14
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000079",
+          "offset": 594,
+          "parameters": [
+            {
+              "offset": 622,
+              "end": 680,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_02000080.bin",
+      "sha256": "9872a02d37feefbd8c9926fb28b4b1b70ec7425362ccd69b7d9011b4190f256c",
+      "bytes": 612,
+      "records": [
+        {
+          "tag": "0x02000081",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 94,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000082",
+          "offset": 94,
+          "parameters": [
+            {
+              "offset": 122,
+              "end": 160,
+              "type": 4,
+              "form": 2,
+              "default_raw": 3,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000083",
+          "offset": 160,
+          "parameters": [
+            {
+              "offset": 188,
+              "end": 244,
+              "type": 4,
+              "form": 2,
+              "default_raw": 22,
+              "enum_values_raw": [
+                22,
+                0,
+                1,
+                15,
+                2,
+                3,
+                4,
+                12,
+                17
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000084",
+          "offset": 244,
+          "parameters": [
+            {
+              "offset": 272,
+              "end": 310,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000085",
+          "offset": 310,
+          "parameters": [
+            {
+              "offset": 338,
+              "end": 376,
+              "type": 4,
+              "form": 2,
+              "default_raw": 2,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000086",
+          "offset": 376,
+          "parameters": [
+            {
+              "offset": 404,
+              "end": 480,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [
+                1,
+                2,
+                4,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000087",
+          "offset": 480,
+          "parameters": [
+            {
+              "offset": 508,
+              "end": 546,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000088",
+          "offset": 546,
+          "parameters": [
+            {
+              "offset": 574,
+              "end": 612,
+              "type": 4,
+              "form": 2,
+              "default_raw": 4,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_020000a0.bin",
+      "sha256": "a0a6ad355a6c48c25ccc1fc2985d0965797ad8b831cdf471941b114189949014",
+      "bytes": 460,
+      "records": [
+        {
+          "tag": "0x020000a1",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 94,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000a2",
+          "offset": 94,
+          "parameters": [
+            {
+              "offset": 122,
+              "end": 178,
+              "type": 4,
+              "form": 2,
+              "default_raw": 3,
+              "enum_values_raw": [
+                0,
+                1,
+                4,
+                5,
+                3,
+                13,
+                14,
+                15,
+                16
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000a3",
+          "offset": 178,
+          "parameters": [
+            {
+              "offset": 206,
+              "end": 256,
+              "type": 4,
+              "form": 2,
+              "default_raw": 2,
+              "enum_values_raw": [
+                1,
+                2,
+                3,
+                4,
+                10,
+                11
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000a4",
+          "offset": 256,
+          "parameters": [
+            {
+              "offset": 284,
+              "end": 328,
+              "type": 4,
+              "form": 2,
+              "default_raw": 2,
+              "enum_values_raw": [
+                0,
+                1,
+                2
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000a5",
+          "offset": 328,
+          "parameters": [
+            {
+              "offset": 356,
+              "end": 394,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000a6",
+          "offset": 394,
+          "parameters": [
+            {
+              "offset": 422,
+              "end": 460,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_020000b0.bin",
+      "sha256": "e5401e69effca451595a906a5f9a25567542faa446f6636198d6a1e617f7ba44",
+      "bytes": 236,
+      "records": [
+        {
+          "tag": "0x020000b1",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 102,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [
+                1,
+                2,
+                0,
+                3
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000b2",
+          "offset": 102,
+          "parameters": [
+            {
+              "offset": 130,
+              "end": 168,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000b3",
+          "offset": 168,
+          "parameters": [
+            {
+              "offset": 196,
+              "end": 236,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [
+                1
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_020000e0.bin",
+      "sha256": "309b2414304901e57d35a8754cdb2ff80b3bc14b4d7e1bcd75d5dfc3a758308e",
+      "bytes": 1086,
+      "records": [
+        {
+          "tag": "0x020000e1",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 98,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                1,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000e2",
+          "offset": 98,
+          "parameters": [
+            {
+              "offset": 126,
+              "end": 166,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 166,
+              "end": 206,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000e3",
+          "offset": 206,
+          "parameters": [
+            {
+              "offset": 234,
+              "end": 280,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [
+                1,
+                2,
+                3,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000e4",
+          "offset": 280,
+          "parameters": [
+            {
+              "offset": 308,
+              "end": 348,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 348,
+              "end": 388,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000e5",
+          "offset": 388,
+          "parameters": [
+            {
+              "offset": 416,
+              "end": 464,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000e7",
+          "offset": 464,
+          "parameters": [
+            {
+              "offset": 492,
+              "end": 538,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                1,
+                2,
+                3,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000e8",
+          "offset": 538,
+          "parameters": [
+            {
+              "offset": 566,
+              "end": 626,
+              "type": 4,
+              "form": 2,
+              "default_raw": 80,
+              "enum_values_raw": [
+                95,
+                90,
+                85,
+                80,
+                75,
+                70,
+                65,
+                60,
+                55,
+                50,
+                1
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000e9",
+          "offset": 626,
+          "parameters": [
+            {
+              "offset": 654,
+              "end": 714,
+              "type": 4,
+              "form": 2,
+              "default_raw": 95,
+              "enum_values_raw": [
+                95,
+                90,
+                85,
+                80,
+                75,
+                70,
+                65,
+                60,
+                55,
+                50,
+                1
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000ea",
+          "offset": 714,
+          "parameters": [
+            {
+              "offset": 742,
+              "end": 784,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [
+                1,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000eb",
+          "offset": 784,
+          "parameters": [
+            {
+              "offset": 812,
+              "end": 860,
+              "type": 4,
+              "form": 2,
+              "default_raw": 5,
+              "enum_values_raw": [
+                7,
+                6,
+                5,
+                4,
+                3
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000ec",
+          "offset": 860,
+          "parameters": [
+            {
+              "offset": 888,
+              "end": 946,
+              "type": 4,
+              "form": 2,
+              "default_raw": 6,
+              "enum_values_raw": [
+                6,
+                1,
+                7,
+                2,
+                8,
+                3,
+                9,
+                4,
+                5,
+                10
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000ed",
+          "offset": 946,
+          "parameters": [
+            {
+              "offset": 974,
+              "end": 1016,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                1,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020000ee",
+          "offset": 1016,
+          "parameters": [
+            {
+              "offset": 1044,
+              "end": 1086,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                0,
+                1
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_02000110.bin",
+      "sha256": "4e11208bdeb12656f94a105f129b0647c077d30ff258a6e5671f69480d38f56f",
+      "bytes": 818,
+      "records": [
+        {
+          "tag": "0x02000111",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 100,
+              "type": 4,
+              "form": 2,
+              "default_raw": 5,
+              "enum_values_raw": [
+                3,
+                6,
+                5
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000112",
+          "offset": 100,
+          "parameters": [
+            {
+              "offset": 128,
+              "end": 170,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [
+                2,
+                1
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000113",
+          "offset": 170,
+          "parameters": [
+            {
+              "offset": 198,
+              "end": 240,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [
+                1,
+                2
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000114",
+          "offset": 240,
+          "parameters": [
+            {
+              "offset": 268,
+              "end": 310,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [
+                1,
+                2
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000115",
+          "offset": 310,
+          "parameters": [
+            {
+              "offset": 338,
+              "end": 414,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                32777,
+                32776,
+                32775,
+                32774,
+                32773,
+                32772,
+                32771,
+                32770,
+                32769,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000116",
+          "offset": 414,
+          "parameters": [
+            {
+              "offset": 442,
+              "end": 484,
+              "type": 4,
+              "form": 2,
+              "default_raw": 2,
+              "enum_values_raw": [
+                2,
+                1
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000117",
+          "offset": 484,
+          "parameters": [
+            {
+              "offset": 512,
+              "end": 550,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000118",
+          "offset": 550,
+          "parameters": [
+            {
+              "offset": 578,
+              "end": 620,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [
+                2,
+                1
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000119",
+          "offset": 620,
+          "parameters": [
+            {
+              "offset": 648,
+              "end": 686,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x0200011a",
+          "offset": 686,
+          "parameters": [
+            {
+              "offset": 714,
+              "end": 752,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x0200011b",
+          "offset": 752,
+          "parameters": [
+            {
+              "offset": 780,
+              "end": 818,
+              "type": 4,
+              "form": 2,
+              "default_raw": 3,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_02000120.bin",
+      "sha256": "d6c852d45d0813c6eaa61413dcb12739b1849f47ea3d35e4604b7b140c7106c8",
+      "bytes": 524,
+      "records": [
+        {
+          "tag": "0x02000121",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 98,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                1,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000122",
+          "offset": 98,
+          "parameters": [
+            {
+              "offset": 126,
+              "end": 172,
+              "type": 4,
+              "form": 2,
+              "default_raw": 4,
+              "enum_values_raw": [
+                4,
+                3,
+                2,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000123",
+          "offset": 172,
+          "parameters": [
+            {
+              "offset": 200,
+              "end": 242,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                0,
+                1
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000124",
+          "offset": 242,
+          "parameters": [
+            {
+              "offset": 270,
+              "end": 314,
+              "type": 4,
+              "form": 2,
+              "default_raw": 2,
+              "enum_values_raw": [
+                2,
+                3,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000125",
+          "offset": 314,
+          "parameters": [
+            {
+              "offset": 342,
+              "end": 384,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                0,
+                1
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000126",
+          "offset": 384,
+          "parameters": [
+            {
+              "offset": 412,
+              "end": 454,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [
+                0,
+                1
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000127",
+          "offset": 454,
+          "parameters": [
+            {
+              "offset": 482,
+              "end": 524,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [
+                0,
+                1
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_02000140.bin",
+      "sha256": "c01c5a60cf0db97ac2bdb541ef86132483a1269801e4a3551fbc69a6bd994665",
+      "bytes": 110,
+      "records": [
+        {
+          "tag": "0x02000141",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 110,
+              "type": 4,
+              "form": 2,
+              "default_raw": 36,
+              "enum_values_raw": [
+                24,
+                26,
+                38,
+                40,
+                4,
+                3,
+                2,
+                36
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_02000170.bin",
+      "sha256": "9d353395578ea2af57e777bf97534c0631cbcb715da61b2897c64eafddaed325",
+      "bytes": 250,
+      "records": [
+        {
+          "tag": "0x02000171",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 108,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                254,
+                5,
+                4,
+                3,
+                2,
+                1,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000172",
+          "offset": 108,
+          "parameters": [
+            {
+              "offset": 136,
+              "end": 178,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [
+                1,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x02000173",
+          "offset": 178,
+          "parameters": [
+            {
+              "offset": 206,
+              "end": 250,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                0,
+                1,
+                2
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_020001a0.bin",
+      "sha256": "02b713b575f88b80b1f3003613e18b9eb0c31a79b3f1d405966b8a5eab77aadc",
+      "bytes": 186,
+      "records": [
+        {
+          "tag": "0x020001a1",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 102,
+              "type": 4,
+              "form": 2,
+              "default_raw": 4,
+              "enum_values_raw": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001a2",
+          "offset": 102,
+          "parameters": [
+            {
+              "offset": 130,
+              "end": 186,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [
+                8,
+                7,
+                6,
+                5,
+                4,
+                3,
+                2,
+                1,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_020001b0.bin",
+      "sha256": "0c983b79e269a43f4135e09b5c1f612e5d4e13f44ee232aca2bd5f852b8c1543",
+      "bytes": 1018,
+      "records": [
+        {
+          "tag": "0x020001b1",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 94,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001b2",
+          "offset": 94,
+          "parameters": [
+            {
+              "offset": 122,
+              "end": 160,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001b3",
+          "offset": 160,
+          "parameters": [
+            {
+              "offset": 188,
+              "end": 226,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001b4",
+          "offset": 226,
+          "parameters": [
+            {
+              "offset": 254,
+              "end": 292,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001b5",
+          "offset": 292,
+          "parameters": [
+            {
+              "offset": 320,
+              "end": 358,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001b6",
+          "offset": 358,
+          "parameters": [
+            {
+              "offset": 386,
+              "end": 424,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001b7",
+          "offset": 424,
+          "parameters": [
+            {
+              "offset": 452,
+              "end": 490,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001b8",
+          "offset": 490,
+          "parameters": [
+            {
+              "offset": 518,
+              "end": 556,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001b9",
+          "offset": 556,
+          "parameters": [
+            {
+              "offset": 584,
+              "end": 622,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001ba",
+          "offset": 622,
+          "parameters": [
+            {
+              "offset": 650,
+              "end": 688,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001bb",
+          "offset": 688,
+          "parameters": [
+            {
+              "offset": 716,
+              "end": 754,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001bc",
+          "offset": 754,
+          "parameters": [
+            {
+              "offset": 782,
+              "end": 820,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001bd",
+          "offset": 820,
+          "parameters": [
+            {
+              "offset": 848,
+              "end": 886,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001be",
+          "offset": 886,
+          "parameters": [
+            {
+              "offset": 914,
+              "end": 952,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001bf",
+          "offset": 952,
+          "parameters": [
+            {
+              "offset": 980,
+              "end": 1018,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_020001c0.bin",
+      "sha256": "53c382885ea508546ecf9291ae10e59df288255d1d9632ec10811a0be9f63e49",
+      "bytes": 160,
+      "records": [
+        {
+          "tag": "0x020001c1",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 94,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001c2",
+          "offset": 94,
+          "parameters": [
+            {
+              "offset": 122,
+              "end": 160,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_020001d0.bin",
+      "sha256": "432e0d15e030a27eaa331848890b507803a9c9ffe0dedbee70cc868912c8cebd",
+      "bytes": 1664,
+      "records": [
+        {
+          "tag": "0x020001d1",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 96,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 96,
+              "end": 136,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 136,
+              "end": 176,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 176,
+              "end": 216,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 216,
+              "end": 254,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 254,
+              "end": 292,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001d2",
+          "offset": 292,
+          "parameters": [
+            {
+              "offset": 320,
+              "end": 360,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 360,
+              "end": 400,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 400,
+              "end": 440,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 440,
+              "end": 480,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 480,
+              "end": 518,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 518,
+              "end": 558,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 558,
+              "end": 598,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 598,
+              "end": 638,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 638,
+              "end": 678,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 678,
+              "end": 718,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 718,
+              "end": 758,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 758,
+              "end": 798,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 798,
+              "end": 838,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 838,
+              "end": 878,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 878,
+              "end": 918,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 918,
+              "end": 958,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 958,
+              "end": 996,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001d3",
+          "offset": 996,
+          "parameters": [
+            {
+              "offset": 1024,
+              "end": 1064,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 1064,
+              "end": 1102,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001d4",
+          "offset": 1102,
+          "parameters": [
+            {
+              "offset": 1130,
+              "end": 1170,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 1170,
+              "end": 1208,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001d5",
+          "offset": 1208,
+          "parameters": [
+            {
+              "offset": 1236,
+              "end": 1276,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 1276,
+              "end": 1316,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001d6",
+          "offset": 1316,
+          "parameters": [
+            {
+              "offset": 1344,
+              "end": 1384,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 1384,
+              "end": 1424,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 1424,
+              "end": 1464,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 1464,
+              "end": 1504,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 1504,
+              "end": 1544,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 1544,
+              "end": 1584,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 1584,
+              "end": 1624,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 1624,
+              "end": 1664,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_020001f0.bin",
+      "sha256": "1a3a5751cc69440c2e3edd3ecf069278f093769f6c64b6d3c0d31b4f92cbe1f5",
+      "bytes": 556,
+      "records": [
+        {
+          "tag": "0x020001f1",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 94,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001f2",
+          "offset": 94,
+          "parameters": [
+            {
+              "offset": 122,
+              "end": 160,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001f3",
+          "offset": 160,
+          "parameters": [
+            {
+              "offset": 188,
+              "end": 226,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001f6",
+          "offset": 226,
+          "parameters": [
+            {
+              "offset": 254,
+              "end": 292,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001f7",
+          "offset": 292,
+          "parameters": [
+            {
+              "offset": 320,
+              "end": 358,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001f8",
+          "offset": 358,
+          "parameters": [
+            {
+              "offset": 386,
+              "end": 424,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001f9",
+          "offset": 424,
+          "parameters": [
+            {
+              "offset": 452,
+              "end": 490,
+              "type": 4,
+              "form": 2,
+              "default_raw": 100,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x020001fa",
+          "offset": 490,
+          "parameters": [
+            {
+              "offset": 518,
+              "end": 556,
+              "type": 4,
+              "form": 2,
+              "default_raw": 100,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_06000010.bin",
+      "sha256": "39beb1e6512ce3d1f46fff6e69a9b9b22b93833e31c9a329c14e6a5d0a911d48",
+      "bytes": 924,
+      "records": [
+        {
+          "tag": "0x06000011",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 94,
+              "type": 4,
+              "form": 2,
+              "default_raw": 4,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x06000012",
+          "offset": 94,
+          "parameters": [
+            {
+              "offset": 122,
+              "end": 164,
+              "type": 4,
+              "form": 2,
+              "default_raw": 2,
+              "enum_values_raw": [
+                2,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x06000013",
+          "offset": 164,
+          "parameters": [
+            {
+              "offset": 192,
+              "end": 390,
+              "type": 4,
+              "form": 2,
+              "default_raw": 494,
+              "enum_values_raw": [
+                999,
+                1000,
+                1001,
+                410,
+                764,
+                765,
+                742,
+                412,
+                238,
+                237,
+                743,
+                241,
+                240,
+                746,
+                484,
+                485,
+                486,
+                402,
+                379,
+                487,
+                488,
+                489,
+                404,
+                378,
+                381,
+                490,
+                380,
+                224,
+                222,
+                491,
+                223,
+                884,
+                888,
+                896,
+                904,
+                912,
+                887,
+                891,
+                899,
+                907,
+                892,
+                900,
+                908,
+                914,
+                895,
+                903,
+                911,
+                917,
+                494,
+                495,
+                496,
+                406,
+                227,
+                497,
+                498,
+                499,
+                408,
+                229,
+                228,
+                500,
+                61,
+                231,
+                230,
+                501,
+                63,
+                245,
+                246,
+                511,
+                817,
+                512,
+                513,
+                420,
+                247,
+                248,
+                514,
+                818,
+                249,
+                250,
+                515,
+                819
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x06000014",
+          "offset": 390,
+          "parameters": [
+            {
+              "offset": 418,
+              "end": 464,
+              "type": 4,
+              "form": 2,
+              "default_raw": 3,
+              "enum_values_raw": [
+                7,
+                2,
+                3,
+                6
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x06000015",
+          "offset": 464,
+          "parameters": [
+            {
+              "offset": 492,
+              "end": 536,
+              "type": 4,
+              "form": 2,
+              "default_raw": 4096,
+              "enum_values_raw": [
+                4096,
+                4098,
+                4097
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x06000019",
+          "offset": 536,
+          "parameters": [
+            {
+              "offset": 564,
+              "end": 602,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 602,
+              "end": 640,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 640,
+              "end": 678,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 678,
+              "end": 716,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 716,
+              "end": 754,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            },
+            {
+              "offset": 754,
+              "end": 792,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x0600001b",
+          "offset": 792,
+          "parameters": [
+            {
+              "offset": 820,
+              "end": 858,
+              "type": 4,
+              "form": 2,
+              "default_raw": 1,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x0600001f",
+          "offset": 858,
+          "parameters": [
+            {
+              "offset": 886,
+              "end": 924,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_06000030.bin",
+      "sha256": "5fcc338c9beeca8c8a701296c35a163e15b24da6f373a79f905b473a80b5a971",
+      "bytes": 498,
+      "records": [
+        {
+          "tag": "0x06000031",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 128,
+              "type": 6,
+              "form": 2,
+              "default_raw": 4294967295,
+              "enum_values_raw": [
+                4294967295,
+                2147507624,
+                2147495636,
+                2147493238,
+                2147489642,
+                2147488443,
+                2147486645,
+                2147486046
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x06000032",
+          "offset": 128,
+          "parameters": [
+            {
+              "offset": 156,
+              "end": 218,
+              "type": 4,
+              "form": 2,
+              "default_raw": 65535,
+              "enum_values_raw": [
+                65535,
+                0,
+                31,
+                2,
+                38,
+                45,
+                46,
+                6,
+                3,
+                32,
+                4,
+                8
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x06000033",
+          "offset": 218,
+          "parameters": [
+            {
+              "offset": 246,
+              "end": 294,
+              "type": 4,
+              "form": 2,
+              "default_raw": 65535,
+              "enum_values_raw": [
+                65535,
+                4352,
+                4368,
+                272,
+                16
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x06000034",
+          "offset": 294,
+          "parameters": [
+            {
+              "offset": 322,
+              "end": 360,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x06000035",
+          "offset": 360,
+          "parameters": [
+            {
+              "offset": 388,
+              "end": 426,
+              "type": 4,
+              "form": 2,
+              "default_raw": 65535,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x06000036",
+          "offset": 426,
+          "parameters": [
+            {
+              "offset": 454,
+              "end": 498,
+              "type": 4,
+              "form": 2,
+              "default_raw": 65535,
+              "enum_values_raw": [
+                65535,
+                1,
+                0
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_08000050.bin",
+      "sha256": "1aef4d97307decf1218e1940bc3ccbd788f1e6e1995c864043a197ce002ad3a1",
+      "bytes": 28,
+      "records": [],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_08000070.bin",
+      "sha256": "9688bbebf36f705179614944f40f89666bdc4340ca49468f2fe507fc9be75011",
+      "bytes": 28,
+      "records": [],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_08000090.bin",
+      "sha256": "28087bdcce065d14a1c3690ef68094a7a1ea30d84e67f87c308be8b9669bd4bf",
+      "bytes": 100,
+      "records": [
+        {
+          "tag": "0x08000091",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 100,
+              "type": 4,
+              "form": 2,
+              "default_raw": 0,
+              "enum_values_raw": [
+                0,
+                1,
+                2
+              ],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    },
+    {
+      "file": "<PROJECT_ROOT>/analysis/vendor_capability_inventory_20261008_10/capability_120100a0.bin",
+      "sha256": "d987593cc8c286c641f57434f895462bc55e7e57917c1e248ec2f45147aac7d7",
+      "bytes": 232,
+      "records": [
+        {
+          "tag": "0x120100a1",
+          "offset": 28,
+          "parameters": [
+            {
+              "offset": 56,
+              "end": 96,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x120100a2",
+          "offset": 96,
+          "parameters": [
+            {
+              "offset": 124,
+              "end": 164,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        },
+        {
+          "tag": "0x120100a3",
+          "offset": 164,
+          "parameters": [
+            {
+              "offset": 192,
+              "end": 232,
+              "type": 4,
+              "form": 1,
+              "default_raw": 0,
+              "enum_values_raw": [],
+              "unconsumed_bytes": 0
+            }
+          ],
+          "app_enum_name": null
+        }
+      ],
+      "fully_traversed": true,
+      "matches_previous_raw_decode": true
+    }
+  ],
+  "summary": {
+    "files": 26,
+    "fully_traversed": 26,
+    "matches_previous_decode": 26
+  }
+}

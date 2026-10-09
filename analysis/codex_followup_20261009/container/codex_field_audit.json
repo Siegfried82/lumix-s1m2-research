@@ -1,0 +1,525 @@
+{
+  "scope": "raw fields, digests and cross-version statistics only; no identified cipher or signature scheme",
+  "files": [
+    {
+      "file": "<USER_HOME>/\u76f8\u673a\u529f\u80fd\u9a8c\u8bc1/analysis/sources/S1m2_V13.bin",
+      "sha256": "cc512f22374005ec99cbe458809b996f3d9ee441b2a8034330708463739c9c66",
+      "version_like_bytes": "31013101",
+      "four_bytes_at_0x20": "04000100",
+      "time_like_bytes": "29172711",
+      "outer_inner_fields_equal": true,
+      "opaque_64b_at_0x220_sha256": "9cef81bc2fe4c2bd96c47862e819b0cff808a275d3b7f3573a2d99049c71ea1a"
+    },
+    {
+      "file": "<USER_HOME>/\u76f8\u673a\u529f\u80fd\u9a8c\u8bc1/S1m2_V14.bin",
+      "sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+      "version_like_bytes": "46014601",
+      "four_bytes_at_0x20": "04000100",
+      "time_like_bytes": "40130403",
+      "outer_inner_fields_equal": true,
+      "opaque_64b_at_0x220_sha256": "47d502a94009cd62533799523e3ca6358ae58bdb5503771986d05a8e1a545818"
+    }
+  ],
+  "same_directory_digest_pairs": [
+    {
+      "index": 0,
+      "name": "boot",
+      "size_same": true,
+      "raw_same": true,
+      "flags": 2
+    },
+    {
+      "index": 2,
+      "name": "loader2",
+      "size_same": true,
+      "raw_same": true,
+      "flags": 2
+    },
+    {
+      "index": 3,
+      "name": "loader3",
+      "size_same": true,
+      "raw_same": true,
+      "flags": 2
+    },
+    {
+      "index": 4,
+      "name": "storage",
+      "size_same": true,
+      "raw_same": true,
+      "flags": 2
+    },
+    {
+      "index": 8,
+      "name": "postboot2_r",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 524490,
+      "total_bits": 1048576,
+      "bit_change_ratio": 0.5001926422119141
+    },
+    {
+      "index": 10,
+      "name": "postboot4_r",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 524489,
+      "total_bits": 1048576,
+      "bit_change_ratio": 0.5001916885375977
+    },
+    {
+      "index": 15,
+      "name": "eep_ow_a",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 523773,
+      "total_bits": 1048576,
+      "bit_change_ratio": 0.4995088577270508
+    },
+    {
+      "index": 16,
+      "name": "eep_ow_b",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 523750,
+      "total_bits": 1048576,
+      "bit_change_ratio": 0.49948692321777344
+    },
+    {
+      "index": 17,
+      "name": "eep_adj",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 524594,
+      "total_bits": 1048576,
+      "bit_change_ratio": 0.5002918243408203
+    },
+    {
+      "index": 19,
+      "name": "eep_act_a",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 2073,
+      "total_bits": 4096,
+      "bit_change_ratio": 0.506103515625
+    },
+    {
+      "index": 20,
+      "name": "eep_act_b",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 1994,
+      "total_bits": 4096,
+      "bit_change_ratio": 0.48681640625
+    },
+    {
+      "index": 21,
+      "name": "eep_exp_a",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 48941,
+      "total_bits": 98304,
+      "bit_change_ratio": 0.4978535970052083
+    },
+    {
+      "index": 22,
+      "name": "eep_exp_b",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 49152,
+      "total_bits": 98304,
+      "bit_change_ratio": 0.5
+    },
+    {
+      "index": 23,
+      "name": "history",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 1047295,
+      "total_bits": 2097152,
+      "bit_change_ratio": 0.4993891716003418
+    },
+    {
+      "index": 24,
+      "name": "lens_hist",
+      "size_same": true,
+      "raw_same": true,
+      "flags": 2
+    },
+    {
+      "index": 27,
+      "name": "wifi_info",
+      "size_same": true,
+      "raw_same": true,
+      "flags": 2
+    },
+    {
+      "index": 28,
+      "name": "menu_save",
+      "size_same": true,
+      "raw_same": true,
+      "flags": 2
+    },
+    {
+      "index": 29,
+      "name": "kizu_data",
+      "size_same": true,
+      "raw_same": true,
+      "flags": 2
+    },
+    {
+      "index": 30,
+      "name": "vkizu_data",
+      "size_same": true,
+      "raw_same": true,
+      "flags": 2
+    },
+    {
+      "index": 31,
+      "name": "usbcharge",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 524807,
+      "total_bits": 1048576,
+      "bit_change_ratio": 0.5004949569702148
+    },
+    {
+      "index": 32,
+      "name": "hm_c_ddr",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 12584749,
+      "total_bits": 25165824,
+      "bit_change_ratio": 0.5000729958216349
+    },
+    {
+      "index": 33,
+      "name": "hm_d_ddr",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 4193818,
+      "total_bits": 8388608,
+      "bit_change_ratio": 0.4999420642852783
+    },
+    {
+      "index": 34,
+      "name": "hr_c_prog",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 261731,
+      "total_bits": 524288,
+      "bit_change_ratio": 0.49921226501464844
+    },
+    {
+      "index": 35,
+      "name": "hr_d_prog",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 2098258,
+      "total_bits": 4194304,
+      "bit_change_ratio": 0.5002636909484863
+    },
+    {
+      "index": 36,
+      "name": "hr_c_ddr",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 2098381,
+      "total_bits": 4194304,
+      "bit_change_ratio": 0.5002930164337158
+    },
+    {
+      "index": 37,
+      "name": "pzm_data",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 262050,
+      "total_bits": 524288,
+      "bit_change_ratio": 0.4998207092285156
+    },
+    {
+      "index": 38,
+      "name": "xtk",
+      "size_same": true,
+      "raw_same": true,
+      "flags": 2
+    },
+    {
+      "index": 39,
+      "name": "lut_data",
+      "size_same": true,
+      "raw_same": true,
+      "flags": 2
+    },
+    {
+      "index": 40,
+      "name": "dsp_kizu_c",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 262252,
+      "total_bits": 524288,
+      "bit_change_ratio": 0.5002059936523438
+    },
+    {
+      "index": 41,
+      "name": "dsp_kizu_d",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 262378,
+      "total_bits": 524288,
+      "bit_change_ratio": 0.5004463195800781
+    },
+    {
+      "index": 42,
+      "name": "dsp_eisldc_",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 262068,
+      "total_bits": 524288,
+      "bit_change_ratio": 0.49985504150390625
+    },
+    {
+      "index": 43,
+      "name": "dsp_eisldc_",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 262647,
+      "total_bits": 524288,
+      "bit_change_ratio": 0.5009593963623047
+    },
+    {
+      "index": 44,
+      "name": "dsp_fstack_",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 261928,
+      "total_bits": 524288,
+      "bit_change_ratio": 0.4995880126953125
+    },
+    {
+      "index": 45,
+      "name": "dsp_fstack_",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 261866,
+      "total_bits": 524288,
+      "bit_change_ratio": 0.4994697570800781
+    },
+    {
+      "index": 46,
+      "name": "fstack_c_ex",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 2098225,
+      "total_bits": 4194304,
+      "bit_change_ratio": 0.500255823135376
+    },
+    {
+      "index": 47,
+      "name": "raw_kizu_c",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 262406,
+      "total_bits": 524288,
+      "bit_change_ratio": 0.5004997253417969
+    },
+    {
+      "index": 48,
+      "name": "raw_kizu_d",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 261369,
+      "total_bits": 524288,
+      "bit_change_ratio": 0.4985218048095703
+    },
+    {
+      "index": 49,
+      "name": "dsh_adj",
+      "size_same": true,
+      "raw_same": true,
+      "flags": 2
+    },
+    {
+      "index": 50,
+      "name": "hm_d_nw_1st",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 5766566,
+      "total_bits": 11534336,
+      "bit_change_ratio": 0.499947808005593
+    },
+    {
+      "index": 51,
+      "name": "hm_d_nw_2nd",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 5764397,
+      "total_bits": 11534336,
+      "bit_change_ratio": 0.4997597607699307
+    },
+    {
+      "index": 52,
+      "name": "hm_d_nw_3rd",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 5766091,
+      "total_bits": 11534336,
+      "bit_change_ratio": 0.4999066266146573
+    },
+    {
+      "index": 53,
+      "name": "hm_d_nw_4th",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 5766964,
+      "total_bits": 11534336,
+      "bit_change_ratio": 0.4999823136763139
+    },
+    {
+      "index": 54,
+      "name": "hm_d_nw_5th",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 5766488,
+      "total_bits": 11534336,
+      "bit_change_ratio": 0.4999410455877131
+    },
+    {
+      "index": 55,
+      "name": "hm_d_nw_6th",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 5768080,
+      "total_bits": 11534336,
+      "bit_change_ratio": 0.5000790682705966
+    },
+    {
+      "index": 56,
+      "name": "hm_d_nw_7th",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 5769245,
+      "total_bits": 11534336,
+      "bit_change_ratio": 0.5001800710504706
+    },
+    {
+      "index": 57,
+      "name": "hm_d_nw_8th",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 5767333,
+      "total_bits": 11534336,
+      "bit_change_ratio": 0.5000143051147461
+    },
+    {
+      "index": 58,
+      "name": "hm_d_nw_9th",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 5765388,
+      "total_bits": 11534336,
+      "bit_change_ratio": 0.49984567815607245
+    },
+    {
+      "index": 59,
+      "name": "hm_d_reid",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 12583651,
+      "total_bits": 25165824,
+      "bit_change_ratio": 0.5000293652216593
+    },
+    {
+      "index": 60,
+      "name": "ai_awb_data",
+      "size_same": true,
+      "raw_same": false,
+      "flags": 3,
+      "different_bits": 7338483,
+      "total_bits": 14680064,
+      "bit_change_ratio": 0.49989448274884907
+    },
+    {
+      "index": 61,
+      "name": "mbr_dummy_d",
+      "size_same": true,
+      "raw_same": true,
+      "flags": 2
+    }
+  ],
+  "ff_candidate_checks": [
+    {
+      "index": 8,
+      "name": "postboot2_r",
+      "size": 131072,
+      "flags": 3,
+      "ff_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+      "directory_digest_matches_ff": true,
+      "raw_sha256_matches_ff": false
+    },
+    {
+      "index": 10,
+      "name": "postboot4_r",
+      "size": 131072,
+      "flags": 3,
+      "ff_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+      "directory_digest_matches_ff": true,
+      "raw_sha256_matches_ff": false
+    },
+    {
+      "index": 61,
+      "name": "mbr_dummy_d",
+      "size": 131072,
+      "flags": 2,
+      "ff_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+      "directory_digest_matches_ff": true,
+      "raw_sha256_matches_ff": true
+    }
+  ],
+  "flags3_bit_change_ratio_range": [
+    0.48681640625,
+    0.506103515625
+  ],
+  "semantic_limits": [
+    "directory digest interpretation unverified for protected contents",
+    "0x220 opaque 64 bytes not authenticated as signature",
+    "alignment does not identify flash physical addressing",
+    "time-like field has no decoded year"
+  ]
+}
