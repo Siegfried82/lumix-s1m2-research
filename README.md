@@ -12,9 +12,15 @@
 | :--- | :--- |
 | [williamwu1234](https://github.com/Siegfried82/lumix-s1m2-research/tree/contributors/williamwu1234) | **DC-S5 / LUMIX Sync**：相机 HTTP 控制协议、固件更新传输、UPD 容器分析与解密尝试记录；含研究总览、文件索引及接口资料压缩包。 |
 | [reveriel](https://github.com/Siegfried82/lumix-s1m2-research/tree/contributors/reveriel) | **S1M2 ROM BACKUP 与 LUMIX Flow**：S1M2 V1.4 服务菜单及 EEPROM 导出实测报告；LUMIX Flow v1.6.0 的 TLS 信任体系与 HTTP API 分析。 |
-| [kings1221-code](https://github.com/Siegfried82/lumix-s1m2-research/tree/contributors/kings1221-code) | **S5 / S5M2 固件研究**：PR #4 提交的研究交接资料，按提交者原始内容单独保存。 |
+| [kings1221-code](https://github.com/Siegfried82/lumix-s1m2-research/tree/contributors/kings1221-code) | **S5 / S5M2 固件研究**：PR #4 提交的研究交接资料与 LUMIX Lab 3.1.0 APK 静态分析；交接文档已并入 `docs/`，分支保留提交者原始内容。 |
+| [Yooglery](https://github.com/Siegfried82/lumix-s1m2-research/tree/contributors/Yooglery) | **S1RM2 (S1R II) 内核漏洞**：FunctionFS（`f_fs.c`）USB 主机可触发的内核越界读写实机验证报告；报告已并入 `docs/`。 |
 
 分支保留贡献者原提交；研究结论及其证据边界请结合各 PR 下的审核意见阅读。
+
+
+## 相关外部研究
+
+- [ShaoCI-Hz/lumix-fullframe-reverse](https://github.com/ShaoCI-Hz/lumix-fullframe-reverse)：独立进行的全画幅 LUMIX 固件逆向（6 机型 UPD 容器与分区表、AES 级加密与 ECDSA P-256 签名结论、MTP 厂商私有协议、镜头固件明文与符号表）。其 DC-S5 48 分区结论与上表 PR #4 交接报告一致，可作交叉参照；该项目为第三方独立仓库，结论以其自身证据边界为准。
 
 ## 阅读入口
 
@@ -25,6 +31,9 @@
 - [历史技术结论更正](docs/CORRECTIONS.md)
 - [公开材料与脱敏](docs/PUBLICATION.md)
 - [参与贡献](CONTRIBUTING.md)
+- [S5 / S5M2 固件研究交接报告](docs/S5与S5M2固件研究交接报告.md)
+- [LUMIX Lab APK 静态分析（DC-S5M2）](docs/LUMIX_LAB_S5M2_APK_ANALYSIS.md)
+- [S1RM2 FunctionFS 越界读写漏洞报告](docs/S1RM2-ffs-OOB-漏洞报告-中文.md)
 
 ## 目录
 
