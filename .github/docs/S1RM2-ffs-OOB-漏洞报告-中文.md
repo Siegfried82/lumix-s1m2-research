@@ -195,22 +195,7 @@ GET_INTERFACE wIndex=0x4000 下标=16384 -> 0x69
 2. 或在 `f_fs.c` 中对 `current_alt_setting[interface]` 的每次访问增加 `interface >= MAX_CONFIG_INTERFACES` 的边界检查；
 3. 长期建议：同步上游对 FunctionFS `get_alt`/`set_alt` 的越界修复补丁（上游已有公开修复）。
 
----
 
-## 8. 披露与致谢
 
-- 本报告为独立安全研究，未与厂商预沟通。
-- 建议按**负责任披露（Responsible Disclosure）**流程向 Panasonic PSIRT 报告。
-- 涉及的真实设备标识（序列号、MAC、SSID、网络地址等）均已在本报告中**隐去**，以保护研究者隐私。
-
----
-
-## 附录：隐私脱敏说明
-
-本报告及随附复现材料中，以下信息已全部替换为占位符或移除：
-
-- 相机序列号、WiFi / 蓝牙 MAC 地址、SSID
-- 内网 IP 地址、网络拓扑
-- 研究用 NAS / 主机的主机名、用户名、端口、凭证
 
 > 复现脚本仅需替换 USB 设备的 VID/PID 与接口号即可通用。
