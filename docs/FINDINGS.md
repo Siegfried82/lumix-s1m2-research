@@ -15,3 +15,13 @@
 | Tether 更新和对象读取路径可在电脑端静态追踪 | `analysis/Tether应用维护审计_Codex核验_20261008.md`、`analysis/ram_dump_routes_codex_evidence_20261008.json` | 尚无可信的物理地址任意读取或组件解码入口 |
 | S1M2NT 官方开源刷新未在本轮比较中提供新 UPD 解码代码 | `analysis/oss_nt_uboot_content_comparison_codex_20261009.json`、`analysis/oss_nt_linux_content_comparison_codex_20261009.json` | 仅针对本次版本与所查路径 |
 | 同型号维修手册描述 ROM BACKUP 与 Factory Data | `analysis/S1M2维修手册_Codex核验_20261009.md` | 未取得调整软件；备份内容、目的地及协议仍未知 |
+
+## 2026-10-10 补充
+
+- 26能力响应含144子标签/185参数，重建一致；完整离线重放记录见evidence/replay_verified_20261010。
+- Sync指定更新路径的ZIP/basename文件/数组切片/multipart和原始DEX下载条件已核验，不是整个app或机身解码的否定证明。
+- S5/S5M2完整官方样本已核查，跨机型原始相同项是空/填充，未得到共同程序明文。
+- 私人对象原件仅本地；2593媒体/目录对象的完成结论属于研究者汇总，公共仓库不提供逐项独立复放。
+- FunctionFS在S1M2官方发布源码中有同类索引问题；运行版本和功能可达性未知，不声明本机漏洞链/RAM/RCE完成。
+
+定位、散列及参与者区别见PROGRESS_20261010.md。

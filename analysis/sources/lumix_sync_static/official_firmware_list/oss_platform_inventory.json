@@ -1,0 +1,277 @@
+{
+  "archive_sha256": "2067822653621ff9f3e1acdad99d7777812d0dc1036007921014da18fc9c6fce",
+  "total_file_members": 61993,
+  "platform_c_h_files": 53,
+  "files": [
+    {
+      "path": "linux-4.19.124/drivers/clk/clk-milbeaut.c",
+      "sha256": "98b49332156e62d2f370583f6d450752a5b196dcf7fb5322683b41d0d65c1026",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/clk/clk-milbeaut-karine.c",
+      "sha256": "9d30d439f85a04cc3d1f0cbdb2c0697808298d7b19bdaf423b1f5efa785c2d05",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/i2c/busses/i2c-milbeaut.c",
+      "sha256": "947b6d413f6a10c2a7e94c4214f569dfd9dbc0e19a8febd4384c9d9f0938112a",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/platform/milbeaut/milbeaut_misctop.c",
+      "sha256": "43fac26fa5c0bef846ab45f53b584aff48c42c8b5cd93c763a939de780a0f277",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/platform/milbeaut/milbeaut_exsint.c",
+      "sha256": "ebee6da7b8337d8458ed23108c44948e7d5b0faca0c1848d02381e1d52dcb0ef",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/platform/milbeaut/cclogic.c",
+      "sha256": "2935650a2bc387ed2097026bb62c0ace1f8a1c0c4dccfbf2750a917eafd84dd0",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/mmc/host/sdhci-milbeaut.c",
+      "sha256": "767e2cfc085e63a7bc53a30f997e14815815f410dc5ec38b1370b6875ae24c4a",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/pinctrl/pinctrl-milbeaut.c",
+      "sha256": "f171a24cdaa370b18cdd3463667b1e330cb05324008df9dd9a0d7e934192cda0",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/pinctrl/pinctrl-milbeaut-karine.c",
+      "sha256": "3fe3e99233e6f0a27a7e0dd03a466e0dd9f8dbeec3d51a80ac09f845102d558e",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/pinctrl/pinconf-milbeaut.h",
+      "sha256": "de4382b412e5dd550a967ed5c1b116eb1ae9574ac03264d42ef07bff89fa6bbc",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/clocksource/timer-milbeaut.c",
+      "sha256": "a9f12630c636652f2057b6a3fbb40380f040e3fa526e2c47dd7dff2371b8ec11",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/dma/milbeaut-xdmac.c",
+      "sha256": "c9aae5fbbbb7290065e6e669e56cf57a956b61ae4d64f1e2e8945fc116db869b",
+      "terms": [
+        "arm_smccc"
+      ]
+    },
+    {
+      "path": "linux-4.19.124/drivers/dma/milbeaut_hdmac.c",
+      "sha256": "71992b2b1a56789ea982c71414bf89b66ee8d0735256f91a7df3f305acbaf14e",
+      "terms": [
+        "arm_smccc"
+      ]
+    },
+    {
+      "path": "linux-4.19.124/drivers/snidsp/sni_dsp_reg_m20v.h",
+      "sha256": "2058dc39e8c786e0b0088bddea21bfc913d1cb50a64be5dff16d853da6e6159e",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/snidsp/sni_dsp_drv_m20v.h",
+      "sha256": "16531265fbef9c20d93be834eb7fcab45ba7c8be4310b4d5a7726ee576efcc47",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/snidsp/sni_dsp_drv_m20v.c",
+      "sha256": "5770acb0d10ac2660875022b427691c54d8836e069bbf8cbb997ad67a4f42fab",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/pci/endpoint/functions/pci-epf-milbeaut.c",
+      "sha256": "592a0ccfa7513a620d44074a9933d3e0055779cf89602d4cfbd6626a848a0a6a",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/pci/controller/dwc/pcie-milbeaut-cfg.h",
+      "sha256": "2510b2f6871a2f0f6da9fcd6991a629fe14f5d0ba12447e2ee5f852d6fe586b0",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/pci/controller/dwc/pcie-milbeaut.c",
+      "sha256": "f2e241eb0deae1c103dca7cb52c10590b317390dcffe91d48c5885e3e5b685ec",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/reset/reset-milbeaut.c",
+      "sha256": "2544bab937443f6915c6ddf8a52d1875cc59abddc1d427193db454e3f82f8736",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/reset/reset-milbeaut-karine.c",
+      "sha256": "156013a1bb57fa175c3713618ca31a4046eebcaaec5cd1b72a12cbfd1c0bf62f",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/mfd/milbeaut-updown.c",
+      "sha256": "d0b99f66695676073511cf17898c6e01bdb01befda2c1a9855e04880d464558a",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/pwm/pwm-milbeaut.c",
+      "sha256": "145965a7f7db2a9306f0eea2ff0987299e2e8edf77eb891fe2b32fd5e3b1a980",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/usb/dwc3/dwc3-milbeaut.c",
+      "sha256": "78ff929959bae7bbf8d56f25c052234587b0707e4815572a2fe31a9cc3444a10",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/tty/serial/milbeaut_usio.c",
+      "sha256": "dc7f7918afec4ded23f9ff38dee92dba1fbdb5da776fc82baf3e9c61375d2279",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/iio/counter/milbeaut-updown.h",
+      "sha256": "a7631b5976cd9f657f69ed9002eae9abca0db16ec6b197beb264e7c6e10e9865",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/iio/counter/milbeaut-timer64.c",
+      "sha256": "ecff1ed3a74198d6ee48f6a22d167572447f5e291fa1676a10a1e324875a5bb6",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/iio/counter/milbeaut-updown_cnt.c",
+      "sha256": "976141e6ee46309a323c2b136236e07712e321c798cacc009d53f4710142a708",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/bus/milbeaut_noc.c",
+      "sha256": "2ffcfbc0c2b119ad86369941e8e5f0917c486774446ae9cfbd3c866d7d497670",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/spi/spi-milbeaut.c",
+      "sha256": "0b9dd2e4eda6e4e697784c0c12aac6b840b0a1cb9ec6f7d3efcc6b62daa91972",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/sniipcu/sni_ipcu_parts.c",
+      "sha256": "1a1f2a9ce5f6e59836781248d11f96c61fe1c7aa9ad3cfbb5697e80ae6e577b9",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/sniipcu/shared_mem/shared_mem.c",
+      "sha256": "67c1783ef86bb469b4381b56fe4ebf1ddd3fb8725b614ccb53bc854a817b5be4",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/sniipcu/sni_ipcu_drv.h",
+      "sha256": "04fceac0330ed1a9232246bc83a2142e265f841dbb7a36e63910f790d8cd4148",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/sniipcu/sni_ipcu_comm.c",
+      "sha256": "cd3c6660591fdc191849527455f95698a8b5cafafe1f017085c1cadcd8e458e0",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/sniipcu/sni_ipcu_comm.h",
+      "sha256": "2a832af00530d51292c7b087a0eb9c0944ad509d58c77000f5338326b902859a",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/drivers/sniipcu/sni_ipcu_drv.c",
+      "sha256": "6b697a58585e16c690e3b8890ef9d2d16a1d9ca0643134e60d4b6c6ccd218f15",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/arch/arm/mach-milbeaut/milb_cpu_hotplug.c",
+      "sha256": "81763770de737bfdde2e86a89490959f53f54dd1be34b97af606f558e5199269",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/arch/arm/mach-milbeaut/platsmp.c",
+      "sha256": "7a6656fd2c20a579777466bf0641a6c7ea6e777479d6eb1b0001d8888310c3f0",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/arch/arm/boot/dts/milbeaut-m10v-gpio.h",
+      "sha256": "cfa4043803d4f44b5f844663f1cb1e4466d044d64fba421f9182eb75d827f698",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/include/dt-bindings/clock/milbeaut,m20v-clock.h",
+      "sha256": "465182c3f002c04eee848536d23f34daf079e15112e08576b824f39523b92571",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/include/dt-bindings/clock/milbeaut,karine-clock.h",
+      "sha256": "be6e558a37c856c32f1b538788a709ae6cd5156d67c87111d00032425bc6b193",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/include/dt-bindings/clock/milbeaut,m10v-clock.h",
+      "sha256": "b7c52467657012199327cf66f4b7cd1d10bde362053d5092b78887d04bb35291",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/include/dt-bindings/reset/milbeaut,karine-reset.h",
+      "sha256": "48ff4bdecc2d5e2c7501915f4ac05c32f7defdbc15312b8a0bfb6c9b07331b52",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/include/dt-bindings/reset/milbeaut,m20v-reset.h",
+      "sha256": "d1214a6f8f63576cebbc66d8c3152ceec20597bc9cf41187e3a669cff54373e5",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/include/uapi/linux/milbeaut_noc_com.h",
+      "sha256": "bf270c33e397e387393a760009d017fff60b9b46ca93204bec675dab955ed20e",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/include/uapi/linux/milbeaut_noc.h",
+      "sha256": "9d520da5c015cc4b3ee45a916ef779862265f02eeb05a97722b26e083583cc8d",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/include/uapi/linux/milbeaut_misctop_com.h",
+      "sha256": "c2cb0613c382ddc5ce18a760ed968a56f275127775810f4008b48db9a9dc1e66",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/include/uapi/linux/milbeaut_misctop.h",
+      "sha256": "0deef185a4173be43578bfbf345b0a24394376b0bc3096ad0beb639f41c6f732",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/include/uapi/linux/milbeaut_pcie_com.h",
+      "sha256": "976eaf5128c38c40733c2ec9a14dd0800ba0efb7102de44437739421df9b26e2",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/include/linux/mfd/milbeaut-updown.h",
+      "sha256": "443d64e0586be960a4a0d0b2669b05263f14fd58e2962a485b3e32da9213039c",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/include/linux/milbeaut_noc_drv.h",
+      "sha256": "d91d965f3ae22eb16656da1611aac77fe00fc54f50ca268ee8129411c990e229",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/include/linux/milbeaut_pcie_drv.h",
+      "sha256": "448dc6232cb2c6173e69de949ff95ed5fa34e009cde5372cf9c170d868c88e67",
+      "terms": []
+    },
+    {
+      "path": "linux-4.19.124/include/linux/milbeaut_misctop_drv.h",
+      "sha256": "64da316fb44e8b1c5ec433a0c5e7747074b741372270604988acd17ebf6827b2",
+      "terms": []
+    }
+  ],
+  "scope": "platform-named files only, not every implementation"
+}

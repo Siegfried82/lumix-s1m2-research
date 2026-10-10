@@ -1,0 +1,102 @@
+[
+  {
+    "caller": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowseExtentionTag",
+    "pc": "0x8a6fc",
+    "plt": "0x15e390",
+    "got": "0x1717e8",
+    "relocation": {
+      "name": "malloc",
+      "type": 1026
+    }
+  },
+  {
+    "caller": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowseExtentionTag",
+    "pc": "0x8a73c",
+    "plt": "0x15e410",
+    "got": "0x171828",
+    "relocation": {
+      "name": "dmpBrowseForExtensionTags",
+      "type": 1026
+    }
+  },
+  {
+    "caller": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowseExtentionTag",
+    "pc": "0x8a770",
+    "plt": "0x15e3c0",
+    "got": "0x171800",
+    "relocation": {
+      "name": "free",
+      "type": 1026
+    }
+  },
+  {
+    "caller": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowseExtentionTag",
+    "pc": "0x8a7d0",
+    "plt": "0x15e3c0",
+    "got": "0x171800",
+    "relocation": {
+      "name": "free",
+      "type": 1026
+    }
+  },
+  {
+    "caller": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowseExtentionTag",
+    "pc": "0x8a8a0",
+    "plt": "0x15e3d0",
+    "got": "0x171808",
+    "relocation": {
+      "name": "__stack_chk_fail",
+      "type": 1026
+    }
+  },
+  {
+    "caller": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowseExtentionTag2",
+    "pc": "0x8a9d8",
+    "plt": "0x15e390",
+    "got": "0x1717e8",
+    "relocation": {
+      "name": "malloc",
+      "type": 1026
+    }
+  },
+  {
+    "caller": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowseExtentionTag2",
+    "pc": "0x8aa24",
+    "plt": "0x15e420",
+    "got": "0x171830",
+    "relocation": {
+      "name": "dmpBrowseForExtensionTags2",
+      "type": 1026
+    }
+  },
+  {
+    "caller": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowseExtentionTag2",
+    "pc": "0x8aa7c",
+    "plt": "0x15e3c0",
+    "got": "0x171800",
+    "relocation": {
+      "name": "free",
+      "type": 1026
+    }
+  },
+  {
+    "caller": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowseExtentionTag2",
+    "pc": "0x8aadc",
+    "plt": "0x15e3c0",
+    "got": "0x171800",
+    "relocation": {
+      "name": "free",
+      "type": 1026
+    }
+  },
+  {
+    "caller": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowseExtentionTag2",
+    "pc": "0x8abc8",
+    "plt": "0x15e3d0",
+    "got": "0x171808",
+    "relocation": {
+      "name": "__stack_chk_fail",
+      "type": 1026
+    }
+  }
+]

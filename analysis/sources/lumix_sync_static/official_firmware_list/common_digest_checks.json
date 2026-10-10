@@ -1,0 +1,98 @@
+[
+  {
+    "name": "hm_c_ddr",
+    "raw_equal": false,
+    "s5": {
+      "size": 3145728,
+      "digest_matches_ff": false,
+      "digest_matches_zero": false,
+      "raw_all_ff": false,
+      "entropy": 7.999939873807271,
+      "distinct_blocks": 196608,
+      "blocks": 196608,
+      "tail": "5e544a070658d4825c6615df59d37a3e00000000000000000000000000000000"
+    },
+    "s1m2": {
+      "size": 3145728,
+      "digest_matches_ff": false,
+      "digest_matches_zero": false,
+      "raw_all_ff": false,
+      "entropy": 7.999939208383115,
+      "distinct_blocks": 196608,
+      "blocks": 196608,
+      "tail": "5d637067d4f4183f76ae441ce95810bb00000000000000000000000000000000"
+    }
+  },
+  {
+    "name": "hm_d_ddr",
+    "raw_equal": false,
+    "s5": {
+      "size": 1048576,
+      "digest_matches_ff": false,
+      "digest_matches_zero": false,
+      "raw_all_ff": false,
+      "entropy": 7.999813055929723,
+      "distinct_blocks": 65536,
+      "blocks": 65536,
+      "tail": "f5aaae53c2e4a45d8a1044d692b32e2c00000000000000000000000000000000"
+    },
+    "s1m2": {
+      "size": 1048576,
+      "digest_matches_ff": false,
+      "digest_matches_zero": false,
+      "raw_all_ff": false,
+      "entropy": 7.999837427789101,
+      "distinct_blocks": 65536,
+      "blocks": 65536,
+      "tail": "6a422d35dde9d4d57ac32dcb94bfdb9a00000000000000000000000000000000"
+    }
+  },
+  {
+    "name": "lens_hist",
+    "raw_equal": true,
+    "s5": {
+      "size": 393216,
+      "digest_matches_ff": false,
+      "digest_matches_zero": true,
+      "raw_all_ff": false,
+      "entropy": -0.0,
+      "distinct_blocks": 1,
+      "blocks": 24576,
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "s1m2": {
+      "size": 393216,
+      "digest_matches_ff": false,
+      "digest_matches_zero": true,
+      "raw_all_ff": false,
+      "entropy": -0.0,
+      "distinct_blocks": 1,
+      "blocks": 24576,
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  {
+    "name": "storage",
+    "raw_equal": true,
+    "s5": {
+      "size": 0,
+      "digest_matches_ff": true,
+      "digest_matches_zero": true,
+      "raw_all_ff": false,
+      "entropy": null,
+      "distinct_blocks": 0,
+      "blocks": 0,
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "s1m2": {
+      "size": 0,
+      "digest_matches_ff": true,
+      "digest_matches_zero": true,
+      "raw_all_ff": false,
+      "entropy": null,
+      "distinct_blocks": 0,
+      "blocks": 0,
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  }
+]

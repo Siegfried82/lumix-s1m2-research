@@ -1,3 +1,6 @@
+/* Host-side PTP observations; only saved responses were device-validated.
+ * Declarations do not prove all commands are supported by S1M2.
+ */
 /* SPDX-License-Identifier: MIT */
 /**
  * @file s1m2_ptp_proto.h
@@ -7,7 +10,8 @@
  * Reverse engineered from:
  *   - LUMIX Tether 2.12 (libLmxptpif.dylib & LUMIX Tether ARM64)
  *   - S1M2 Service Manual (DSC2505007CE)
- *   - Offline baseline captures (0x9402, 0x9406, 0x9421-0x9423, 0x9603-0x9607)
+ *   - Saved read-only baseline responses plus static host update/write paths;
+ *     firmware-update and write opcodes were not validated by sending them
  */
 
 #ifndef S1M2_PTP_PROTO_H

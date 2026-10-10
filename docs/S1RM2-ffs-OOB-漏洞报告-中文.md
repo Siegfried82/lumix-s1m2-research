@@ -1,3 +1,5 @@
+> 维护者状态注（2026-10-10）：以下为贡献者原报告；“实机验证”属于作者陈述，本项目未独立复现。S1M2官方源码关联与部署/USB可达性缺口见[最新全体进度](PROGRESS_20261010.md)。
+
 # Panasonic LUMIX DC-S1RM2 (S1R II) — FunctionFS 内核越界读写漏洞
 
 > 漏洞类型：内核越界写 / 越界读（Out-of-Bounds Write / Read）

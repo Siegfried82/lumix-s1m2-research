@@ -1,0 +1,27 @@
+{
+  "summary": [
+    {
+      "archive": "analysis/sources/linux-4.19.124.tar.gz",
+      "examined": 49381,
+      "hit_files_by_pattern": {
+        "update_name": 71,
+        "pana_secure_call": 2,
+        "component_name": 1,
+        "upd_literal": 1
+      }
+    },
+    {
+      "archive": "analysis/sources/u-boot.tar.gz",
+      "examined": 10410,
+      "hit_files_by_pattern": {
+        "update_name": 15
+      }
+    }
+  ],
+  "synthetic_pattern_controls": {
+    "upd_literal": true,
+    "component_name": true,
+    "pana_secure_call": true,
+    "update_name": true
+  }
+}

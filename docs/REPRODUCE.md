@@ -12,7 +12,7 @@ cd lumix-s1m2-research
 python3 --version
 ```
 
-随库复现步骤使用 Python 3 标准库；固件五套测试额外需要 clang/gcc。发布复核所用 Python/编译器版本见 `evidence/REPLAY_ENVIRONMENT.json`。不需要连接相机、不需要运行下载的 EXE/APK、不需要 Antigravity。
+随库复现步骤使用 Python 3 标准库；当前三套公开固件工具检查不需要 C 编译器。发布复核所用 Python/编译器版本见 `evidence/REPLAY_ENVIRONMENT.json`。不需要连接相机、不需要运行下载的 EXE/APK、不需要 Antigravity。
 
 第三方输入未随仓库分发，下载来源与原始散列可在 `analysis/sources/*manifest*.json`、`analysis/sources/official_v14_verification.json` 和 `evidence/FILE_MANIFEST.csv` 查询。同名文件不代表相同版本，先校验散列。已脱敏样本的正确散列是 public_sha256。
 
@@ -65,7 +65,7 @@ python3 analysis/read_s1m2_known_setting.py --json analysis/highres_firstnormal_
 python3 evidence/reproduce_offline.py --firmware /absolute/path/S1m2_V14.bin --output ../s1m2-replay-with-firmware
 ```
 
-入口先验证完整 BIN SHA-256，再在临时目录提取组件并运行全部五套测试，结果保存在 SUMMARY。原始输入不修改，组件与测试临时文件自动清理。
+入口先验证完整 BIN SHA-256，再在临时目录提取组件并运行三套当前公开测试，结果保存在 SUMMARY。原始输入不修改，组件与测试临时文件自动清理。
 
 手动等价步骤（在额外工作副本操作）：
 
@@ -110,3 +110,13 @@ python3 analysis/compare_versions.py
 ## 8. 到这里必须停止声称完成的地方
 
 以上能重放的成果止于封装、协议/配置分析与选定电脑端观察。没有 S1M2 专有组件的可信明文、真实机内执行入口、完整 RAM 转储、功能补丁或恢复验证。相关失败和重新打开路线所需证据见 DEAD_ENDS。
+
+## 2026-10-10 清理后的测试入口
+
+公开副本提供三套检查：真实 PTP 样本、合成标记解析、原始固件封装往返。本地主项目另有模拟调度测试；该私有功能研究不随公开仓库发布。生成硬件结构与 C 存根已撤回，因此不再要求 clang/gcc 或旧头文件测试。
+
+## 2026-10-10 新增静态审计的复现边界
+
+Sync2.0.17及S5/S5M2对照报告、原始DEX有限指令记录、自编DEX/ELF/容器审计脚本和结果已补充。APK、完整反编译树、原生库、第三方工具与原厂ZIP/BIN不分发，需按各provenance/源码散列记录自行取得。Java审计需要匹配JADX/dexlib2环境；Python脚本中历史路径或<LOCAL_WORKSPACE>需在副本映射，输出不得覆盖原始证据。部分脚本含网络获取分支或注册树读取；先读具体入口，公共离线重放不运行它们。
+
+完整私人物件/媒体元数据和六份尚未取得的维修TXT不能从本仓库重放。新的源代码检查、有限负实验与作者实机报告必须各自核验，完整离线入口只保证其列出的阶段。

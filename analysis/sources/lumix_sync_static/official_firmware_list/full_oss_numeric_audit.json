@@ -1,0 +1,1989 @@
+{
+  "patterns": {
+    "upd_numeric": "0x0*(?:445055|555044)(?![0-9a-f])",
+    "upd_byte_array": "0x55\\s*,\\s*0x50\\s*,\\s*0x44",
+    "directory_count_offset": "0x0*2e8(?![0-9a-f])",
+    "directory_start_offset": "0x0*2ec(?![0-9a-f])"
+  },
+  "results": [
+    {
+      "archive": "analysis/sources/linux-4.19.124.tar.gz",
+      "archive_sha256": "2067822653621ff9f3e1acdad99d7777812d0dc1036007921014da18fc9c6fce",
+      "examined_source_files": 49381,
+      "hits": [
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/amd/include/asic_reg/oss/oss_3_0_d.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            275
+          ],
+          "sha256": "4769d032f6c15ddff2277bff0ca430dbaac86d3aed4e2f6ea05c453d166b3c37"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/amd/include/asic_reg/oss/oss_3_0_d.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            276
+          ],
+          "sha256": "4769d032f6c15ddff2277bff0ca430dbaac86d3aed4e2f6ea05c453d166b3c37"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/amd/include/asic_reg/nbio/nbio_6_1_offset.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            336,
+            591
+          ],
+          "sha256": "5fe8a0fa8c0c8bace6d675fde6c6ee92ddb195215a8a5d20403a2604b668216e"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/amd/include/asic_reg/nbio/nbio_7_0_offset.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            557,
+            808,
+            1063
+          ],
+          "sha256": "378a07a6f848dbdcd621e57b5189c07f023d95cbbd544e50f2a802e7f6ab6f4e"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/amd/include/asic_reg/nbif/nbif_6_1_offset.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            189
+          ],
+          "sha256": "c47ef7044b3464aa32568144cbfa5c57b638c402da6faaa109533ede82e9f276"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/amd/powerplay/hwmgr/pp_overdriver.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            356,
+            356,
+            479,
+            479,
+            735,
+            735,
+            739,
+            739,
+            1127,
+            1127
+          ],
+          "sha256": "1bb0771995b47445ad19388ba1b2770713c6758234dd712e84db1b0f4bcde2c2"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/amd/powerplay/hwmgr/pp_overdriver.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            200,
+            200,
+            221,
+            221,
+            236,
+            236,
+            279,
+            279,
+            523,
+            523,
+            547,
+            547,
+            792,
+            792,
+            855,
+            855,
+            1202,
+            1202
+          ],
+          "sha256": "1bb0771995b47445ad19388ba1b2770713c6758234dd712e84db1b0f4bcde2c2"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/ast/ast_dram_tables.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            178,
+            198
+          ],
+          "sha256": "70f2524de522305cee2c2b0ad4a96990b3597f4f0cf0f232a0388970b31a7ee6"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/ast/ast_dram_tables.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            179,
+            199
+          ],
+          "sha256": "70f2524de522305cee2c2b0ad4a96990b3597f4f0cf0f232a0388970b31a7ee6"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/radeon/radeon_reg.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            1120,
+            1795
+          ],
+          "sha256": "ed549525a1668899fd0c348ac6d1f52f3d9f4abc08d10387c8666cceaa5c552d"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/radeon/radeon_reg.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            1161,
+            1796
+          ],
+          "sha256": "ed549525a1668899fd0c348ac6d1f52f3d9f4abc08d10387c8666cceaa5c552d"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/bridge/sil-sii8620.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            624
+          ],
+          "sha256": "25c45129884e956b4bf581c29b50d0d4e58580a0f92ff80a48c329c9824b3b26"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/nouveau/nv50_fbcon.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            218
+          ],
+          "sha256": "6d77fd078449d5fe97d7711dca9089a681f1fcf220badcfaf73c26a87d73ce9a"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/nouveau/nvkm/engine/disp/wndwgv100.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            84
+          ],
+          "sha256": "7505d12862837b6ccaf481c627627949e9ecb778ab7afd8b063d0d325f0a305b"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/nouveau/nvkm/engine/disp/wndwgv100.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            85
+          ],
+          "sha256": "7505d12862837b6ccaf481c627627949e9ecb778ab7afd8b063d0d325f0a305b"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/nouveau/nvkm/engine/gr/ctxgk110.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            72
+          ],
+          "sha256": "ac66a53d2aad3507810c6a390ce13c211d6cdd27216229264760cf5738a9e9cb"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/nouveau/nvkm/engine/gr/ctxgf119.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            76
+          ],
+          "sha256": "73ec66b71b69cf4f583650b0d13dd25b8e19099436b60cc0b3c3b6587184bfd6"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/nouveau/nvkm/engine/gr/ctxgf108.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            76
+          ],
+          "sha256": "8aea4223018dad21e660153a1ee255d46d1a6833a93fa0a65142239ab38f5f0a"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/nouveau/nvkm/engine/gr/ctxgf100.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            78
+          ],
+          "sha256": "94da4049a3061f6ac786f382f87939c26137e193d90c18cf8629af10fad23f13"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/nouveau/nvkm/engine/gr/ctxgk104.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            75
+          ],
+          "sha256": "dfb361e3204c5aab4ba0c93ef32cfb1d76e310852ed4632be74cb8b7884edd18"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/nouveau/nvkm/engine/gr/ctxgk208.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            72
+          ],
+          "sha256": "0494b9eb8a45fd01d0c3ec691dc1dfadad3c08e91e53f09a796ff944fad6047f"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/nouveau/nvkm/engine/gr/ctxgf110.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            74
+          ],
+          "sha256": "e9dff1976bc272a3b7d2228f096338f0df48f18779d871160aadf3a8af798836"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/nouveau/dispnv50/wndwc37e.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            109
+          ],
+          "sha256": "6093c6f8744b8d56467b4ff00c689401850df98ac1067cdd6a1ae5ed823e4dbe"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/nouveau/nvc0_fbcon.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            215
+          ],
+          "sha256": "a2cc8244c3639867f9b5d06b44d20a7ad15921e02d46d6613ff8108567c5dd17"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/exynos/regs-fimc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            242
+          ],
+          "sha256": "ac78866c8cf08e7dceeda6b4f5071ac8f770d1f246c421c350db5bf84fe96dfe"
+        },
+        {
+          "path": "linux-4.19.124/drivers/gpu/drm/exynos/regs-fimc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            244
+          ],
+          "sha256": "ac78866c8cf08e7dceeda6b4f5071ac8f770d1f246c421c350db5bf84fe96dfe"
+        },
+        {
+          "path": "linux-4.19.124/drivers/clk/sprd/sc9860-clk.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            640
+          ],
+          "sha256": "957dbbb8049c83fdc07c25594dc3b2f5f48beb79aac088b4c11e762590c78aec"
+        },
+        {
+          "path": "linux-4.19.124/drivers/clk/meson/axg.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            94
+          ],
+          "sha256": "67c31888eb98b7ce1d677825970877363b284710030cce4264d3a3254e925af5"
+        },
+        {
+          "path": "linux-4.19.124/drivers/clk/sirf/clk-atlas7.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            210
+          ],
+          "sha256": "a796a07648e7b3e5fd0f81d8a02ce3822307bbf59265db997d8568e52b933377"
+        },
+        {
+          "path": "linux-4.19.124/drivers/clk/sirf/clk-atlas7.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            211
+          ],
+          "sha256": "a796a07648e7b3e5fd0f81d8a02ce3822307bbf59265db997d8568e52b933377"
+        },
+        {
+          "path": "linux-4.19.124/drivers/clk/mediatek/clk-mt8135.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            630,
+            630
+          ],
+          "sha256": "0df2147d54072020941e1087f6324f4a9d2458e9a7d4b3f8dbeb55e56be9a5f3"
+        },
+        {
+          "path": "linux-4.19.124/drivers/clk/mediatek/clk-mt8135.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            630
+          ],
+          "sha256": "0df2147d54072020941e1087f6324f4a9d2458e9a7d4b3f8dbeb55e56be9a5f3"
+        },
+        {
+          "path": "linux-4.19.124/drivers/clk/mediatek/clk-mt6797.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            647
+          ],
+          "sha256": "890f17734798e388304966f6446302634a64ab0189817a6a1a34bdc23342e29a"
+        },
+        {
+          "path": "linux-4.19.124/drivers/input/keyboard/atkbd.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            149
+          ],
+          "sha256": "4f10d52e65a51427464ee2064206979ac480d6e4c71f030580a92d6e9a8ce968"
+        },
+        {
+          "path": "linux-4.19.124/drivers/isdn/i4l/isdn_audio.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            54,
+            88
+          ],
+          "sha256": "28130f7cb104cc48f75cb724445ac64a38251bf92b29125e2cb5f065061df114"
+        },
+        {
+          "path": "linux-4.19.124/drivers/isdn/hisax/hisax.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            78
+          ],
+          "sha256": "c199a84b089368851bcd8a8d941aa6a5fd73c5f0084329df330957bbf35fd59c"
+        },
+        {
+          "path": "linux-4.19.124/drivers/platform/x86/dell-wmi.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            329
+          ],
+          "sha256": "55cd0cf0f8cc0cbc98c2801476349fa087a1b4d7219b8728272135bd8c39bcd3"
+        },
+        {
+          "path": "linux-4.19.124/drivers/platform/x86/dell-smbios.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            36
+          ],
+          "sha256": "7fb4b81e32568f62e11c3ddb8d792d041f3a18e213295bf5ecd9166506810dcf"
+        },
+        {
+          "path": "linux-4.19.124/drivers/bluetooth/bt3c_cs.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            661
+          ],
+          "sha256": "dad8eab884699714507d30926237cd444a9b3cfa4b6558f1542f1f6b8708af38"
+        },
+        {
+          "path": "linux-4.19.124/drivers/soc/mediatek/mtk-scpsys.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            56
+          ],
+          "sha256": "16f66834e8cbfb258ba012f226ce76417774c9fe604afc434cd8a5fbc854bbfe"
+        },
+        {
+          "path": "linux-4.19.124/drivers/soc/mediatek/mtk-scpsys.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            57
+          ],
+          "sha256": "16f66834e8cbfb258ba012f226ce76417774c9fe604afc434cd8a5fbc854bbfe"
+        },
+        {
+          "path": "linux-4.19.124/drivers/infiniband/hw/hfi1/chip_registers.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            210
+          ],
+          "sha256": "873a8704683957d440bfde0a2b7473e8c57e9b27d3e5664dee32822edfbb7fc4"
+        },
+        {
+          "path": "linux-4.19.124/drivers/pcmcia/i82365.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            651
+          ],
+          "sha256": "336cf3e10035847a7ad5c477be6d471d37a2cba144adc98fdc5420c8b08f727b"
+        },
+        {
+          "path": "linux-4.19.124/drivers/pcmcia/tcic.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            320
+          ],
+          "sha256": "7a809d26eb5d1c928def9e9743b52726a0f4ecb49f787c5e0b541dad486ad276"
+        },
+        {
+          "path": "linux-4.19.124/drivers/memory/emif.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            257
+          ],
+          "sha256": "a3393e9c8362ddde2cf192259d98f399d9874d9c00065a6d5205c7264d23141f"
+        },
+        {
+          "path": "linux-4.19.124/drivers/memory/emif.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            258
+          ],
+          "sha256": "a3393e9c8362ddde2cf192259d98f399d9874d9c00065a6d5205c7264d23141f"
+        },
+        {
+          "path": "linux-4.19.124/drivers/memory/tegra/tegra124-emc.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            151
+          ],
+          "sha256": "6f35eae24d58d5b70fee43cc60ca566097df6caf6020c161bcfca0b0bffd7592"
+        },
+        {
+          "path": "linux-4.19.124/drivers/memory/tegra/tegra114.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            30,
+            58
+          ],
+          "sha256": "7ac90af34d0f5f0d64a4ba99cd6d985d29e9e830322730b3132551d28d9c5f3b"
+        },
+        {
+          "path": "linux-4.19.124/drivers/memory/tegra/tegra114.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            86
+          ],
+          "sha256": "7ac90af34d0f5f0d64a4ba99cd6d985d29e9e830322730b3132551d28d9c5f3b"
+        },
+        {
+          "path": "linux-4.19.124/drivers/memory/tegra/tegra124.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            72,
+            100
+          ],
+          "sha256": "0dec940f9dbda977b588c60394fa8025af462a41ccab6e7d740ef6b90d5e5d77"
+        },
+        {
+          "path": "linux-4.19.124/drivers/memory/tegra/tegra124.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            128
+          ],
+          "sha256": "0dec940f9dbda977b588c60394fa8025af462a41ccab6e7d740ef6b90d5e5d77"
+        },
+        {
+          "path": "linux-4.19.124/drivers/memory/tegra/tegra30.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            30,
+            58
+          ],
+          "sha256": "84810ebcee5001529c6ccccb74f281861d23e5afb6f8f6b991a904c8cd120818"
+        },
+        {
+          "path": "linux-4.19.124/drivers/memory/tegra/tegra30.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            86,
+            114
+          ],
+          "sha256": "84810ebcee5001529c6ccccb74f281861d23e5afb6f8f6b991a904c8cd120818"
+        },
+        {
+          "path": "linux-4.19.124/drivers/memory/tegra/tegra210.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            27,
+            55
+          ],
+          "sha256": "1b2c8667c60fb3084d39fc1c7195620ab1e548773d7c70ce522d6186f6e2e132"
+        },
+        {
+          "path": "linux-4.19.124/drivers/memory/tegra/tegra210.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            83
+          ],
+          "sha256": "1b2c8667c60fb3084d39fc1c7195620ab1e548773d7c70ce522d6186f6e2e132"
+        },
+        {
+          "path": "linux-4.19.124/drivers/media/i2c/tvaudio.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            581
+          ],
+          "sha256": "2f46d228d7a5c47f6b1b929c4f3a0fa9d4394cf4700f049d390b937d13ed9b96"
+        },
+        {
+          "path": "linux-4.19.124/drivers/media/platform/ti-vpe/sc_coeff.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            742,
+            752,
+            775,
+            785
+          ],
+          "sha256": "49cc77d2e66a51622588de4591d2c75681ff131c36c96bf50b330185dc497e6d"
+        },
+        {
+          "path": "linux-4.19.124/drivers/media/platform/ti-vpe/sc_coeff.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            114,
+            122,
+            147,
+            155
+          ],
+          "sha256": "49cc77d2e66a51622588de4591d2c75681ff131c36c96bf50b330185dc497e6d"
+        },
+        {
+          "path": "linux-4.19.124/drivers/media/platform/qcom/camss/camss-vfe-4-1.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            129
+          ],
+          "sha256": "a3125e200533a5a9050931c00c1fbf525ec0dd2276a9722e3be23b1c86beb47c"
+        },
+        {
+          "path": "linux-4.19.124/drivers/media/pci/tw5864/tw5864-reg.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            1916,
+            1917,
+            1929
+          ],
+          "sha256": "a700f8681a7c3a1510e1da8be192c20933b7ad6a4f7b646709edcafab23e9bd1"
+        },
+        {
+          "path": "linux-4.19.124/drivers/dma/idma64.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            85
+          ],
+          "sha256": "53b4de1b097949d9b662b873b3d7d3fb485a1157d6e5f93f7d7395f7a3cbc604"
+        },
+        {
+          "path": "linux-4.19.124/drivers/video/fbdev/mmp/hw/mmp_ctrl.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            917
+          ],
+          "sha256": "5f62a6ad454eb0d18b440fd9939e8800fdba7776b8cec933b55cde0320d9b18c"
+        },
+        {
+          "path": "linux-4.19.124/drivers/video/fbdev/mmp/hw/mmp_ctrl.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            918
+          ],
+          "sha256": "5f62a6ad454eb0d18b440fd9939e8800fdba7776b8cec933b55cde0320d9b18c"
+        },
+        {
+          "path": "linux-4.19.124/drivers/video/fbdev/aty/radeon_pm.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            1559,
+            2178,
+            2193
+          ],
+          "sha256": "2324a3917699bc88e99eab023850dbe49a2bf8110fcefc35941db3cb1f736c43"
+        },
+        {
+          "path": "linux-4.19.124/drivers/staging/media/omap4iss/iss_regs.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            644
+          ],
+          "sha256": "2ee228a4844d61c35589cb14d76bb7482ad08dba4e92e5cccf384fa03cc4def0"
+        },
+        {
+          "path": "linux-4.19.124/drivers/staging/media/omap4iss/iss_regs.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            645
+          ],
+          "sha256": "2ee228a4844d61c35589cb14d76bb7482ad08dba4e92e5cccf384fa03cc4def0"
+        },
+        {
+          "path": "linux-4.19.124/drivers/staging/media/davinci_vpfe/dm365_ipipe_hw.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            211
+          ],
+          "sha256": "0d2935e130b6a3909a498732cbdcd41376877b0c1a3c73d61ad2c78a8d7e1b7b"
+        },
+        {
+          "path": "linux-4.19.124/drivers/staging/media/davinci_vpfe/dm365_ipipe_hw.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            212
+          ],
+          "sha256": "0d2935e130b6a3909a498732cbdcd41376877b0c1a3c73d61ad2c78a8d7e1b7b"
+        },
+        {
+          "path": "linux-4.19.124/drivers/mfd/wm5110-tables.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            50,
+            219
+          ],
+          "sha256": "94c547a5256302b0c1e9c2ac25bf98b1de1bf0fa765bebc5db0214fce4500087"
+        },
+        {
+          "path": "linux-4.19.124/drivers/phy/samsung/phy-exynos-pcie.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            60
+          ],
+          "sha256": "15ce032b8430c4ab6ff7258b0e619730964ba753655caf5bbcc8123431dfe8df"
+        },
+        {
+          "path": "linux-4.19.124/drivers/usb/gadget/udc/renesas_usb3.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            68
+          ],
+          "sha256": "59310e7e5fc4779b7a252864bc2942e29f105adf9b94e3166303742e7cf97bd5"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/hamradio/baycom_ser_fdx.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            52
+          ],
+          "sha256": "5f4fddc821ff1a2e7d2062faebd610627b02a1cc3ddf1a7b93b44087314998b2"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/hamradio/baycom_ser_hdx.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            45
+          ],
+          "sha256": "66d0b5cda7ceba41f42ac5b4ddb4ad58241a166a072077aa91e7de4b9fcf8de0"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/wireless/realtek/rtl818x/rtl8180/grf5101.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            148
+          ],
+          "sha256": "9b40abe654e9ed31290130a7ca882a8dde37c2e5b05898c15c120152b73715cd"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/wireless/realtek/rtlwifi/rtl8192se/reg.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            246
+          ],
+          "sha256": "4664761817459801c8a1c8d7b4dc975f0293066bb22f76779bd95dec8c1ba823"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/wireless/realtek/rtlwifi/rtl8192se/reg.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            247
+          ],
+          "sha256": "4664761817459801c8a1c8d7b4dc975f0293066bb22f76779bd95dec8c1ba823"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/wireless/zydas/zd1211rw/zd_chip.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            274
+          ],
+          "sha256": "b8c6bb5d0b7ffdab69a9e8a22fb9ae91876e19b77d74cece13cd2c682aec8c8a"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/wireless/zydas/zd1211rw/zd_chip.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            275
+          ],
+          "sha256": "b8c6bb5d0b7ffdab69a9e8a22fb9ae91876e19b77d74cece13cd2c682aec8c8a"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/ethernet/fujitsu/fmvj18x_cs.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            284
+          ],
+          "sha256": "633914734a95f80c888dd1705b3f463f02da7a321358a0bf1f43f2faf12cd692"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/ethernet/smsc/smc91c92_cs.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            616
+          ],
+          "sha256": "489c0f1fef427929424a2bef0659a66523d8359510d4015031ecebe0812f455d"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/ethernet/nvidia/forcedeth.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            339
+          ],
+          "sha256": "98e692bbef24f26fd7c4f6eb11f6b938fd8d16d25fb24ff371ac8b08904efd8d"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/ethernet/neterion/vxge/vxge-traffic.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            1441
+          ],
+          "sha256": "9281771e025c53c4a59b2740c4ecd43aa7f999e109a932f50b0d01f8c623ed50"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/ethernet/broadcom/tg3.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            340
+          ],
+          "sha256": "7674ad61c43cc4a4389365d091481be80e7e2e32fa16f1effb221475f2b741d3"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/fddi/skfp/h/skfbi.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            439
+          ],
+          "sha256": "64460d943d031926059c454b57572820c98287f8ccf1e804db827e54a123cc74"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/fddi/skfp/h/skfbi.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            440
+          ],
+          "sha256": "64460d943d031926059c454b57572820c98287f8ccf1e804db827e54a123cc74"
+        },
+        {
+          "path": "linux-4.19.124/drivers/tty/serial/8250/8250_pnp.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            402,
+            418
+          ],
+          "sha256": "3d98a8192e4cdc0c159bf53f31daee140b779493d8a790e8d0d5e2d4fe5ddbca"
+        },
+        {
+          "path": "linux-4.19.124/drivers/tty/serial/8250/serial_cs.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            421
+          ],
+          "sha256": "c75444619c272a9dd988e8442867e322a08f78b86d05195470f6c067b8e54edb"
+        },
+        {
+          "path": "linux-4.19.124/drivers/char/mwave/mwavedd.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            446
+          ],
+          "sha256": "5e5d8c24048d7a9d3d7f9eea88c314695539f15a4956f57ac33155b781dd347f"
+        },
+        {
+          "path": "linux-4.19.124/drivers/char/mwave/3780i.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            229
+          ],
+          "sha256": "935208c9a4f5a32a92fbcf2417eff22bd3bef2e30fd45ec3819875fbf7f781f8"
+        },
+        {
+          "path": "linux-4.19.124/drivers/char/mwave/smapi.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            135,
+            213
+          ],
+          "sha256": "8b77f4a202412c57bac21442c7616420662a8212da73d3046abcda782b293ee5"
+        },
+        {
+          "path": "linux-4.19.124/drivers/char/mwave/tp3780i.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            330
+          ],
+          "sha256": "2ff0e92cb74825a97c975daaa2274cc4375d882009133c7242e6b2d226259c8b"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/aic94xx/aic94xx_reg_def.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            2116
+          ],
+          "sha256": "33bdce5895fc04b8128f2a273d2c3d493557915cc4ef1f4b325693689ba6e967"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/hisi_sas/hisi_sas_v1_hw.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            192
+          ],
+          "sha256": "2cd06d631965bb6fa0101eb8c274bd7843da90b0231a9b70d3c140137de3c1f5"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/hisi_sas/hisi_sas_v3_hw.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            196
+          ],
+          "sha256": "9834814a5e486c46418b2b3635da6cfe052eed1e53599d9f231e15a54a150117"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/hisi_sas/hisi_sas_v2_hw.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            276
+          ],
+          "sha256": "27c479871909fbcea437d8df5b1f49eb9241659e330f836e065f9ba740d04c9a"
+        },
+        {
+          "path": "linux-4.19.124/tools/perf/arch/powerpc/util/book3s_hcalls.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            115
+          ],
+          "sha256": "1eaabcabf6dd897c3d0ca9993b659a3875094e363842a1aa719df339a583d713"
+        },
+        {
+          "path": "linux-4.19.124/arch/m68k/include/asm/serial.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            35
+          ],
+          "sha256": "1986f7f6d70c28ee8a05e89cba3540c9c212ad4112767506b86a370cfee27fd1"
+        },
+        {
+          "path": "linux-4.19.124/arch/m68k/q40/config.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            153
+          ],
+          "sha256": "1cd0f24461b163960b354b23493c40bd059dbb000d9767befdc1ec7c52505a04"
+        },
+        {
+          "path": "linux-4.19.124/arch/mips/sni/pcit.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            49
+          ],
+          "sha256": "fe0710c625baec4155556f7fe18b28457f967cc930086786a6e3500992d79471"
+        },
+        {
+          "path": "linux-4.19.124/arch/mips/kernel/8250-platform.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            25
+          ],
+          "sha256": "9dface816c40f10e71c8e87a27d1c292d5081ec7fa4ce78dd2133a7f0144a7d2"
+        },
+        {
+          "path": "linux-4.19.124/arch/x86/include/asm/serial.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            28
+          ],
+          "sha256": "0cecef6c93ae466a624d16573bfc07350ba5c8f3565b609098e10a9f031194b4"
+        },
+        {
+          "path": "linux-4.19.124/arch/s390/include/asm/lowcore.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            91
+          ],
+          "sha256": "7a44469f6d9705723da357adfccc2de3f14655e16ae4765326930243faa4948d"
+        },
+        {
+          "path": "linux-4.19.124/arch/powerpc/kvm/book3s_hv_rmhandlers.S",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            2585
+          ],
+          "sha256": "8d970e60b033f92fc459128dc715f9312046b218048853a1197c7bc36c25ab9c"
+        },
+        {
+          "path": "linux-4.19.124/arch/powerpc/kvm/book3s_hv_rmhandlers.S",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            2586
+          ],
+          "sha256": "8d970e60b033f92fc459128dc715f9312046b218048853a1197c7bc36c25ab9c"
+        },
+        {
+          "path": "linux-4.19.124/arch/powerpc/include/asm/hvcall.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            274
+          ],
+          "sha256": "7e320c9efd99aa2bccd36ba322d0bc6984c246baa4317e87c9cc9394e51b9a31"
+        },
+        {
+          "path": "linux-4.19.124/arch/powerpc/include/asm/hvcall.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            271
+          ],
+          "sha256": "7e320c9efd99aa2bccd36ba322d0bc6984c246baa4317e87c9cc9394e51b9a31"
+        },
+        {
+          "path": "linux-4.19.124/arch/powerpc/xmon/spu-insns.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            233
+          ],
+          "sha256": "279f66d41a886b813ce2a0aac92daa475883fd22aa08706e77d32d5c8e4d0e9d"
+        },
+        {
+          "path": "linux-4.19.124/arch/powerpc/math-emu/math_efp.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            82
+          ],
+          "sha256": "1b399ec8c0827a06cc41d954e49f94ac1abea8a9311a55f3850b9ef9ebd2902c"
+        },
+        {
+          "path": "linux-4.19.124/arch/powerpc/math-emu/math_efp.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            86
+          ],
+          "sha256": "1b399ec8c0827a06cc41d954e49f94ac1abea8a9311a55f3850b9ef9ebd2902c"
+        },
+        {
+          "path": "linux-4.19.124/arch/powerpc/boot/dts/fsp2.dts",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            202
+          ],
+          "sha256": "530dcf32c631fe3e46cdf0ae9ee91100162fda135bf97b9935297060b0ec29a5"
+        },
+        {
+          "path": "linux-4.19.124/arch/alpha/include/asm/serial.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            30
+          ],
+          "sha256": "6b0aca424363e2c232e4602d29f5096f13882bce57d6953ae35c350598c934c9"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/mach-tegra/sleep-tegra30.S",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            44
+          ],
+          "sha256": "b5091d06549d8914fcf08eac30b748868eeb858cb81192aedd4466ca0d701e7a"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx6sll-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            33,
+            34,
+            35,
+            36,
+            37,
+            38
+          ],
+          "sha256": "e86adeac3ad8fb45e7f07bbbd08bc09ae88e78c990e10d47844b0dcf1363a8a8"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx6sll-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            39,
+            40,
+            41,
+            42,
+            43
+          ],
+          "sha256": "e86adeac3ad8fb45e7f07bbbd08bc09ae88e78c990e10d47844b0dcf1363a8a8"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/dra7xx-clocks.dtsi",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            427
+          ],
+          "sha256": "b7a24ffc4c41190a74b66bbb5dd5296641e45646ad71d9f548b7a68a04fdf3fc"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx53-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            1021,
+            1022,
+            1023,
+            1024,
+            1025
+          ],
+          "sha256": "b1b8160227e7d30a27c48dd8b3f6ec7e0503668ea79e97577d5db54ceaf98e53"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx53-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            1026,
+            1027,
+            1028,
+            1029,
+            1030
+          ],
+          "sha256": "b1b8160227e7d30a27c48dd8b3f6ec7e0503668ea79e97577d5db54ceaf98e53"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/dm814x-clocks.dtsi",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            185
+          ],
+          "sha256": "336559283eb1fdda86a8bc73015b814580fc724e9cf05aa87da19d5956b02145"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx6dl-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            965,
+            966,
+            967,
+            968
+          ],
+          "sha256": "80c89e2318599d768a71b870ae5fdc3cb0bf25387c3e31fc104e1c595318fa95"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx6dl-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            969,
+            970,
+            971,
+            972,
+            973,
+            974
+          ],
+          "sha256": "80c89e2318599d768a71b870ae5fdc3cb0bf25387c3e31fc104e1c595318fa95"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx50-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            52,
+            53,
+            54,
+            55,
+            56
+          ],
+          "sha256": "03d25209acff06506fcf224448dfdebef5e93569f3e95747a21852028540f5be"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx50-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            57,
+            58,
+            59
+          ],
+          "sha256": "03d25209acff06506fcf224448dfdebef5e93569f3e95747a21852028540f5be"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx6q-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            921,
+            922,
+            923,
+            924
+          ],
+          "sha256": "b36192b1ea6ea0dd4b4323b7249acc7c36595d2d854928fc58f6f74df30eef52"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx6q-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            925,
+            926,
+            927,
+            928,
+            929,
+            930,
+            931
+          ],
+          "sha256": "b36192b1ea6ea0dd4b4323b7249acc7c36595d2d854928fc58f6f74df30eef52"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx51-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            551,
+            552
+          ],
+          "sha256": "155ba2122592031dee87b7db829fc80a86cdb81dc2d80ad845e6e6cbefe7cfec"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx51-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            553,
+            554
+          ],
+          "sha256": "155ba2122592031dee87b7db829fc80a86cdb81dc2d80ad845e6e6cbefe7cfec"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx7ulp-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            94,
+            226,
+            395
+          ],
+          "sha256": "d2931a5aeb54bb298958babe3e17091595fe38d21e8247dca8fe94380960c2f8"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx7ulp-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            101,
+            235,
+            403
+          ],
+          "sha256": "d2931a5aeb54bb298958babe3e17091595fe38d21e8247dca8fe94380960c2f8"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx25-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            247,
+            248,
+            249
+          ],
+          "sha256": "33bcec7f9ac738de942d75127b0081c9af7fbe8357018cc15b574c0f6ee90143"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx25-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            251,
+            252,
+            253,
+            254
+          ],
+          "sha256": "33bcec7f9ac738de942d75127b0081c9af7fbe8357018cc15b574c0f6ee90143"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/vf610-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            45,
+            55,
+            274
+          ],
+          "sha256": "6740ad996ce8d9e898b6fb664185449a4b257355e04334323cd8f7bfff3c2d62"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx6ul-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83
+          ],
+          "sha256": "4c52783a16b01f59805dc0417cd407ed10ee073f96a9269c557aa365795aeb06"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx6ul-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92
+          ],
+          "sha256": "4c52783a16b01f59805dc0417cd407ed10ee073f96a9269c557aa365795aeb06"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx7d-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            290,
+            291,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297
+          ],
+          "sha256": "b7a3080dadfd6ca07dfc346c7734266ec8fbbfefb6367d243960f4ae21e27523"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx7d-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305
+          ],
+          "sha256": "b7a3080dadfd6ca07dfc346c7734266ec8fbbfefb6367d243960f4ae21e27523"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx35-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            863,
+            864,
+            865,
+            866,
+            867,
+            868,
+            869,
+            870
+          ],
+          "sha256": "5f8ae70143a81072dc2fc6e9ae6ef5ce5dd35fe1dfc7904cfb7b3bbc9c2b53f2"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/imx35-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            871,
+            872,
+            873,
+            874,
+            875,
+            876,
+            877,
+            878
+          ],
+          "sha256": "5f8ae70143a81072dc2fc6e9ae6ef5ce5dd35fe1dfc7904cfb7b3bbc9c2b53f2"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/mach-pxa/pxa930.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            28
+          ],
+          "sha256": "2ce484915dc0b9cab18e919e97aea321dbcd830e80b3589ac3546ed845471263"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/mach-pxa/pxa930.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            31
+          ],
+          "sha256": "2ce484915dc0b9cab18e919e97aea321dbcd830e80b3589ac3546ed845471263"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/mach-imx/iomux-mx35.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            1142,
+            1143,
+            1144,
+            1145,
+            1146,
+            1147,
+            1148,
+            1149
+          ],
+          "sha256": "5d922a0868d01691430c4693f08e69d7e8204c1d5d7740846c89e367f8feaf7c"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/mach-imx/iomux-mx35.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            1151,
+            1152,
+            1153,
+            1154,
+            1155,
+            1156,
+            1157,
+            1158
+          ],
+          "sha256": "5d922a0868d01691430c4693f08e69d7e8204c1d5d7740846c89e367f8feaf7c"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/mach-imx/pm-imx6.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            141
+          ],
+          "sha256": "be585ad170fbc2476362b0c96ea1b5916b01b930519d8deafcc51a3a708a8232"
+        },
+        {
+          "path": "linux-4.19.124/include/video/sstfb.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            185
+          ],
+          "sha256": "d44a95749379d97e2b8b388be9675c0e270bf3fb93dc6fee14eb5d802334dd80"
+        },
+        {
+          "path": "linux-4.19.124/include/video/sstfb.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            186
+          ],
+          "sha256": "d44a95749379d97e2b8b388be9675c0e270bf3fb93dc6fee14eb5d802334dd80"
+        },
+        {
+          "path": "linux-4.19.124/include/video/radeon.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            403
+          ],
+          "sha256": "40cf2d601d1da0a20340ce88a9c8bae187dd3d48890af4da11233f6558a2d52e"
+        },
+        {
+          "path": "linux-4.19.124/include/video/mach64.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            336
+          ],
+          "sha256": "b08488939ad14db1d1916cb8ad31d79eb19f45e251a053b5ed350a27eacf36bc"
+        },
+        {
+          "path": "linux-4.19.124/include/video/mach64.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            337
+          ],
+          "sha256": "b08488939ad14db1d1916cb8ad31d79eb19f45e251a053b5ed350a27eacf36bc"
+        },
+        {
+          "path": "linux-4.19.124/include/video/aty128.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            55
+          ],
+          "sha256": "0d23406a033230e3f7e05357c4f29d2dfcc5839776f87519d5d2b8a5548a8083"
+        },
+        {
+          "path": "linux-4.19.124/include/video/aty128.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            56
+          ],
+          "sha256": "0d23406a033230e3f7e05357c4f29d2dfcc5839776f87519d5d2b8a5548a8083"
+        },
+        {
+          "path": "linux-4.19.124/fs/hfsplus/tables.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            1076
+          ],
+          "sha256": "60c894de078f8146390234f4e498833203cb5b14e6df6c9b024aecc0f71dec75"
+        },
+        {
+          "path": "linux-4.19.124/sound/drivers/opl4/opl4_synth.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            204
+          ],
+          "sha256": "e61cef12625f3245bbf361617c5ea64e05d1cdfda048fce2e04817bf02fc9ae4"
+        },
+        {
+          "path": "linux-4.19.124/sound/drivers/opl4/opl4_synth.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            204
+          ],
+          "sha256": "e61cef12625f3245bbf361617c5ea64e05d1cdfda048fce2e04817bf02fc9ae4"
+        },
+        {
+          "path": "linux-4.19.124/sound/drivers/serial-u16550.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            72
+          ],
+          "sha256": "54b27878d145e1266fe7e576caf8164eefc9aa843c55f97fd9d49cb38043f9cb"
+        }
+      ]
+    },
+    {
+      "archive": "analysis/sources/u-boot.tar.gz",
+      "archive_sha256": "f3d7fb6e3e609751d3d62d076fde898c39a969d22deb4ede4819ee4d982c4fae",
+      "examined_source_files": 10410,
+      "hits": [
+        {
+          "path": "u-boot/drivers/power/domain/mtk-power-domain.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            32
+          ],
+          "sha256": "c7b943be24bead0502a7922d573885d5b815c697ff0ea277eec5efcd7680c842"
+        },
+        {
+          "path": "u-boot/drivers/misc/atsha204a-i2c.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            124
+          ],
+          "sha256": "18c74c7cd29d8cb97c3ac8b188ec2c1d42d09dcd0350fa311b91fceb310c7e82"
+        },
+        {
+          "path": "u-boot/arch/arm/mach-omap2/am33xx/ti816x_emif4.c",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            72
+          ],
+          "sha256": "0a27d062a26122b3f2c5b96ebd826cb4e19432861fbe0f1ceb774550c3183477"
+        },
+        {
+          "path": "u-boot/arch/arm/mach-omap2/am33xx/ti816x_emif4.c",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            73
+          ],
+          "sha256": "0a27d062a26122b3f2c5b96ebd826cb4e19432861fbe0f1ceb774550c3183477"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx6/mx6sll_pins.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            33,
+            34,
+            35,
+            36,
+            37,
+            38
+          ],
+          "sha256": "6d7cb17c9607b0772929926c81ab71e7318025a1e9afb7bdcb743a6a3085aae9"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx6/mx6sll_pins.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            40,
+            41,
+            42,
+            43,
+            44
+          ],
+          "sha256": "6d7cb17c9607b0772929926c81ab71e7318025a1e9afb7bdcb743a6a3085aae9"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx6/mx6q_pins.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            909,
+            910,
+            911,
+            912
+          ],
+          "sha256": "4d2d3a494fed3c9be7b3fc7aa9414a929c72274cc2f46abac59205a7268d5b01"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx6/mx6q_pins.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            913,
+            914,
+            915,
+            916,
+            917,
+            918,
+            919
+          ],
+          "sha256": "4d2d3a494fed3c9be7b3fc7aa9414a929c72274cc2f46abac59205a7268d5b01"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx6/mx6dl_pins.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            952,
+            953,
+            954,
+            955
+          ],
+          "sha256": "3641ba57879d807295e156ea17edc6f5e95e625c1e267c628975234dc43a75a3"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx6/mx6dl_pins.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            956,
+            957,
+            958,
+            959,
+            960,
+            961
+          ],
+          "sha256": "3641ba57879d807295e156ea17edc6f5e95e625c1e267c628975234dc43a75a3"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx6/mx6ul_pins.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86
+          ],
+          "sha256": "59f914490795829760e60b1b0246d10bee9888ef42282af0d813729747eaad4d"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx6/mx6ul_pins.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96
+          ],
+          "sha256": "59f914490795829760e60b1b0246d10bee9888ef42282af0d813729747eaad4d"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx6/mx6ull_pins.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86
+          ],
+          "sha256": "1b33aa1823c01c7bf894d8d1c80c4df9f98006fe24e6b5ebfdcca1b1ee9e5fec"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx6/mx6ull_pins.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96
+          ],
+          "sha256": "1b33aa1823c01c7bf894d8d1c80c4df9f98006fe24e6b5ebfdcca1b1ee9e5fec"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx7/mx7d_pins.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            307,
+            308,
+            309,
+            310,
+            311,
+            312,
+            313,
+            314
+          ],
+          "sha256": "7e892f5ebcf899cbc51bc40c4e033fb10cdccfc41ad1ba8264996ff91285d0c6"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx7/mx7d_pins.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            316,
+            317,
+            318,
+            319,
+            320,
+            321,
+            322,
+            323
+          ],
+          "sha256": "7e892f5ebcf899cbc51bc40c4e033fb10cdccfc41ad1ba8264996ff91285d0c6"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx7ulp/mx7ulp-pins.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            502,
+            661,
+            834
+          ],
+          "sha256": "e328aeb75dede6a065bd07cd540555d48a316e361277efd2e56a9f11f6c62ce8"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx7ulp/mx7ulp-pins.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            510,
+            669,
+            842
+          ],
+          "sha256": "e328aeb75dede6a065bd07cd540555d48a316e361277efd2e56a9f11f6c62ce8"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-imx8m/imx8mq_pins.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            113,
+            114
+          ],
+          "sha256": "1b603af1d5b08528f8ee2ab0423cf4080f0762c09b953c5c94c5c5c2f75e524d"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-imx8m/imx8mq_pins.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            116,
+            117,
+            118
+          ],
+          "sha256": "1b603af1d5b08528f8ee2ab0423cf4080f0762c09b953c5c94c5c5c2f75e524d"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-omap5/mux_dra7xx.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            256
+          ],
+          "sha256": "ae7450b2772e4c03e87ff767c5dac8897a41bfafb8081be4849fed6b6f0eea43"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-omap5/mux_dra7xx.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            257
+          ],
+          "sha256": "ae7450b2772e4c03e87ff767c5dac8897a41bfafb8081be4849fed6b6f0eea43"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-meson/clock-axg.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            92
+          ],
+          "sha256": "974b21470052439dee99a44b4960f9160f615669ca1fc25094c528ffe8d52573"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx35/iomux-mx35.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            1134,
+            1135,
+            1136,
+            1137,
+            1138,
+            1139,
+            1140,
+            1141
+          ],
+          "sha256": "42298a12979a6772d110adcf33d060eaf48d2e746ce1272f9a34e13105a56bfb"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx35/iomux-mx35.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            1143,
+            1144,
+            1145,
+            1146,
+            1147,
+            1148,
+            1149,
+            1150
+          ],
+          "sha256": "42298a12979a6772d110adcf33d060eaf48d2e746ce1272f9a34e13105a56bfb"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx5/iomux-mx53.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            1042,
+            1043,
+            1044,
+            1045,
+            1046
+          ],
+          "sha256": "50301c225a811f464ed0c19d1e9c839fc10557f33c5eda31639456b4079e5430"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx5/iomux-mx53.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            1047,
+            1048,
+            1049,
+            1050,
+            1051
+          ],
+          "sha256": "50301c225a811f464ed0c19d1e9c839fc10557f33c5eda31639456b4079e5430"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx25/iomux-mx25.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            231,
+            232
+          ],
+          "sha256": "527e2142e3a135b28be77c85ad786debcf731873ad33867939e323b686f5eef7"
+        },
+        {
+          "path": "u-boot/arch/arm/include/asm/arch-mx25/iomux-mx25.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            234,
+            235
+          ],
+          "sha256": "527e2142e3a135b28be77c85ad786debcf731873ad33867939e323b686f5eef7"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/imx6sll-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            35,
+            36,
+            37,
+            38,
+            39,
+            40
+          ],
+          "sha256": "da5a73a179a03ba601351a8f4ee28af45875adff2e3b572881fb8a5c7405a8fc"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/imx6sll-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            41,
+            42,
+            43,
+            44,
+            45
+          ],
+          "sha256": "da5a73a179a03ba601351a8f4ee28af45875adff2e3b572881fb8a5c7405a8fc"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/dra7xx-clocks.dtsi",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            427
+          ],
+          "sha256": "e739a07c7f48c012c395102f530c2acbdb30720c3527ee22fb5f0d2b932167b8"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/imx53-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            1018,
+            1019,
+            1020,
+            1021,
+            1022
+          ],
+          "sha256": "64529429e2664f5393b9650f87f7cbbd14e92d82f54dddd6d139cf15547c1cf8"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/imx53-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            1023,
+            1024,
+            1025,
+            1026,
+            1027
+          ],
+          "sha256": "64529429e2664f5393b9650f87f7cbbd14e92d82f54dddd6d139cf15547c1cf8"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/imx6dl-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            964,
+            965,
+            966,
+            967
+          ],
+          "sha256": "0d83d7f65f9fc3b3c3c857827cc34a954f168c408a6dc655424228d36dd4db0a"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/imx6dl-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            968,
+            969,
+            970,
+            971,
+            972,
+            973
+          ],
+          "sha256": "0d83d7f65f9fc3b3c3c857827cc34a954f168c408a6dc655424228d36dd4db0a"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/imx6q-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            920,
+            921,
+            922,
+            923
+          ],
+          "sha256": "7a28ba42b17a9d32eedb5b3b72aabd52b9d371de5ef25ddc2698631a0cdd34fb"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/imx6q-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            924,
+            925,
+            926,
+            927,
+            928,
+            929,
+            930
+          ],
+          "sha256": "7a28ba42b17a9d32eedb5b3b72aabd52b9d371de5ef25ddc2698631a0cdd34fb"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/imx7ulp-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            508,
+            640,
+            809
+          ],
+          "sha256": "35b02c8e191b87658c63bad2d4d844d426597361bc75cc49f69b0775af8c35bf"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/imx7ulp-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            515,
+            649,
+            817
+          ],
+          "sha256": "35b02c8e191b87658c63bad2d4d844d426597361bc75cc49f69b0775af8c35bf"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/vf610-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            45,
+            55,
+            274
+          ],
+          "sha256": "aae0883e18238aca94a76f82250ea181a99684c4f39196db6ad93bd3e1a6e90d"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/imx6ul-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81
+          ],
+          "sha256": "d9158d8a96f3f4275508516ae960d7d2d66396e1c49c5ada13af9f2b23738ce6"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/imx6ul-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90
+          ],
+          "sha256": "d9158d8a96f3f4275508516ae960d7d2d66396e1c49c5ada13af9f2b23738ce6"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/imx7d-pinfunc.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            290,
+            291,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297
+          ],
+          "sha256": "5b27074dbbd23163c363e2fab29bf53ab9a86694a2629b035230e8fb3fbc2327"
+        },
+        {
+          "path": "u-boot/arch/arm/dts/imx7d-pinfunc.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305
+          ],
+          "sha256": "5b27074dbbd23163c363e2fab29bf53ab9a86694a2629b035230e8fb3fbc2327"
+        },
+        {
+          "path": "u-boot/include/fsl_qbman.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            48
+          ],
+          "sha256": "711fadab521d63c6f414964e43709315766834ec1a8f6f0dcaf8ba05caa1e84d"
+        },
+        {
+          "path": "u-boot/include/radeon.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            405
+          ],
+          "sha256": "16085b785cb5bc8c37d411e2c3e8830dde9f8aa0f1ac23eb7bde4715dd98de9c"
+        },
+        {
+          "path": "u-boot/include/dt-bindings/pinctrl/pins-imx8mq.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            119,
+            120
+          ],
+          "sha256": "36f3d42ff4e726d210cf3cb9d73ee16c943bbc1de107cd6c755e820371cffacd"
+        },
+        {
+          "path": "u-boot/include/dt-bindings/pinctrl/pins-imx8mq.h",
+          "pattern": "directory_start_offset",
+          "line_numbers": [
+            121,
+            122,
+            123
+          ],
+          "sha256": "36f3d42ff4e726d210cf3cb9d73ee16c943bbc1de107cd6c755e820371cffacd"
+        },
+        {
+          "path": "u-boot/board/ti/am57xx/mux_data.h",
+          "pattern": "directory_count_offset",
+          "line_numbers": [
+            1028,
+            1113
+          ],
+          "sha256": "982bd84c11f407818e72414370fdbfd1f77acf95d497531dd683375a1ad19255"
+        }
+      ]
+    }
+  ]
+}

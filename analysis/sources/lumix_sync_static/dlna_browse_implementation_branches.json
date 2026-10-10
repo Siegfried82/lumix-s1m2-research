@@ -1,0 +1,330 @@
+[
+  {
+    "function": "JNI_OnLoad",
+    "address": "0x8bb14",
+    "size": 28,
+    "direct_branches": []
+  },
+  {
+    "function": "dmpBrowseForExtensionTags2",
+    "address": "0x8c8a4",
+    "size": 544,
+    "direct_branches": [
+      {
+        "pc": "0x8c914",
+        "kind": "BL",
+        "target": "0x15e7b0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c930",
+        "kind": "BL",
+        "target": "0x15e7e0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c970",
+        "kind": "BL",
+        "target": "0x15e810",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c974",
+        "kind": "B",
+        "target": "0x8ca38",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c9b4",
+        "kind": "B",
+        "target": "0x15e410",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c9d8",
+        "kind": "BL",
+        "target": "0x15e7b0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c9f4",
+        "kind": "BL",
+        "target": "0x15e7e0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8ca34",
+        "kind": "BL",
+        "target": "0x15e7f0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8ca44",
+        "kind": "B",
+        "target": "0x8ca98",
+        "symbols": []
+      },
+      {
+        "pc": "0x8ca54",
+        "kind": "BL",
+        "target": "0x15e7b0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8ca84",
+        "kind": "BL",
+        "target": "0x15e7c0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8ca90",
+        "kind": "B",
+        "target": "0x8ca98",
+        "symbols": []
+      },
+      {
+        "pc": "0x8ca9c",
+        "kind": "BL",
+        "target": "0x15e7d0",
+        "symbols": []
+      }
+    ]
+  },
+  {
+    "function": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowseExtentionTag",
+    "address": "0x8a608",
+    "size": 668,
+    "direct_branches": [
+      {
+        "pc": "0x8a6fc",
+        "kind": "BL",
+        "target": "0x15e390",
+        "symbols": []
+      },
+      {
+        "pc": "0x8a73c",
+        "kind": "BL",
+        "target": "0x15e410",
+        "symbols": []
+      },
+      {
+        "pc": "0x8a770",
+        "kind": "BL",
+        "target": "0x15e3c0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8a77c",
+        "kind": "B",
+        "target": "0x8a7cc",
+        "symbols": []
+      },
+      {
+        "pc": "0x8a780",
+        "kind": "BL",
+        "target": "0x8b97c",
+        "symbols": [
+          "DM_DMP_BROWSE_CONTENT_ITEM_LIST_Delete",
+          "$x.46"
+        ]
+      },
+      {
+        "pc": "0x8a7c0",
+        "kind": "B",
+        "target": "0x8a780",
+        "symbols": []
+      },
+      {
+        "pc": "0x8a7c8",
+        "kind": "BL",
+        "target": "0x8b97c",
+        "symbols": [
+          "DM_DMP_BROWSE_CONTENT_ITEM_LIST_Delete",
+          "$x.46"
+        ]
+      },
+      {
+        "pc": "0x8a7d0",
+        "kind": "BL",
+        "target": "0x15e3c0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8a7d4",
+        "kind": "B",
+        "target": "0x8a7dc",
+        "symbols": []
+      },
+      {
+        "pc": "0x8a89c",
+        "kind": "B",
+        "target": "0x8a774",
+        "symbols": []
+      },
+      {
+        "pc": "0x8a8a0",
+        "kind": "BL",
+        "target": "0x15e3d0",
+        "symbols": []
+      }
+    ]
+  },
+  {
+    "function": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowseExtentionTag2",
+    "address": "0x8a8a4",
+    "size": 808,
+    "direct_branches": [
+      {
+        "pc": "0x8a9d8",
+        "kind": "BL",
+        "target": "0x15e390",
+        "symbols": []
+      },
+      {
+        "pc": "0x8aa24",
+        "kind": "BL",
+        "target": "0x15e420",
+        "symbols": []
+      },
+      {
+        "pc": "0x8aa54",
+        "kind": "B",
+        "target": "0x8aa70",
+        "symbols": []
+      },
+      {
+        "pc": "0x8aa68",
+        "kind": "B",
+        "target": "0x8aae8",
+        "symbols": []
+      },
+      {
+        "pc": "0x8aa7c",
+        "kind": "BL",
+        "target": "0x15e3c0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8aa88",
+        "kind": "B",
+        "target": "0x8aad8",
+        "symbols": []
+      },
+      {
+        "pc": "0x8aa8c",
+        "kind": "BL",
+        "target": "0x8b97c",
+        "symbols": [
+          "DM_DMP_BROWSE_CONTENT_ITEM_LIST_Delete",
+          "$x.46"
+        ]
+      },
+      {
+        "pc": "0x8aacc",
+        "kind": "B",
+        "target": "0x8aa8c",
+        "symbols": []
+      },
+      {
+        "pc": "0x8aad4",
+        "kind": "BL",
+        "target": "0x8b97c",
+        "symbols": [
+          "DM_DMP_BROWSE_CONTENT_ITEM_LIST_Delete",
+          "$x.46"
+        ]
+      },
+      {
+        "pc": "0x8aadc",
+        "kind": "BL",
+        "target": "0x15e3c0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8abc8",
+        "kind": "BL",
+        "target": "0x15e3d0",
+        "symbols": []
+      }
+    ]
+  },
+  {
+    "function": "dmpBrowseForExtensionTags",
+    "address": "0x8c6ec",
+    "size": 440,
+    "direct_branches": [
+      {
+        "pc": "0x8c748",
+        "kind": "BL",
+        "target": "0x15e7b0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c764",
+        "kind": "BL",
+        "target": "0x15e7e0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c798",
+        "kind": "BL",
+        "target": "0x15e800",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c79c",
+        "kind": "B",
+        "target": "0x8c818",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c7b8",
+        "kind": "BL",
+        "target": "0x15e7b0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c7d4",
+        "kind": "BL",
+        "target": "0x15e7e0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c814",
+        "kind": "BL",
+        "target": "0x15e7f0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c824",
+        "kind": "B",
+        "target": "0x8c878",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c834",
+        "kind": "BL",
+        "target": "0x15e7b0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c864",
+        "kind": "BL",
+        "target": "0x15e7c0",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c870",
+        "kind": "B",
+        "target": "0x8c878",
+        "symbols": []
+      },
+      {
+        "pc": "0x8c87c",
+        "kind": "BL",
+        "target": "0x15e7d0",
+        "symbols": []
+      }
+    ]
+  }
+]

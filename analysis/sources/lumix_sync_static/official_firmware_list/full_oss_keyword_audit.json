@@ -1,0 +1,857 @@
+{
+  "patterns": {
+    "upd_literal": "\"UPD(?:\\\\0|\"| )",
+    "component_name": "postboot[0-9_]|eep_act_[ab]|hm_c_ddr",
+    "pana_secure_call": "0x8200[Cc][0-9A-Fa-f]{3}",
+    "update_name": "firmware[_ -]update|update[_ -]firmware"
+  },
+  "results": [
+    {
+      "archive": "analysis/sources/linux-4.19.124.tar.gz",
+      "archive_sha256": "2067822653621ff9f3e1acdad99d7777812d0dc1036007921014da18fc9c6fce",
+      "examined_source_files": 49381,
+      "hits": [
+        {
+          "path": "linux-4.19.124/drivers/input/rmi4/rmi_f01.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            700
+          ],
+          "sha256": "a81f1e55ff297af9a869917fa1a548d20419130d6bc173f8344b05a613c5441c"
+        },
+        {
+          "path": "linux-4.19.124/drivers/input/rmi4/rmi_f34.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            245,
+            361,
+            418,
+            422,
+            427,
+            429,
+            486
+          ],
+          "sha256": "3c57e1b061b222e19f04c872b6b444df9de3f9660568dfaf681f3eabe6445db4"
+        },
+        {
+          "path": "linux-4.19.124/drivers/input/misc/ims-pcu.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            72,
+            761,
+            875,
+            890,
+            912,
+            913,
+            937,
+            1164,
+            1201,
+            1212,
+            1213,
+            1216,
+            1223,
+            1226,
+            1227,
+            1237,
+            1238,
+            1251,
+            1252,
+            1257
+          ],
+          "sha256": "48c2479f382f2d6e958b45ba3fd25ede91aef15acda87ae722f75927ea8771c4"
+        },
+        {
+          "path": "linux-4.19.124/drivers/input/mouse/cyapa.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            375
+          ],
+          "sha256": "35afa87b2e4d8837ceeae7f8c33f3e01a8a0fc9760edd1f14cfaeb71c268fec9"
+        },
+        {
+          "path": "linux-4.19.124/drivers/input/mouse/cyapa.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            1040,
+            1117,
+            1119,
+            1122
+          ],
+          "sha256": "4f0290e7a1f7e761f89d361eed2757daecfc9f6890b34053fe5eec8ccd3b30ab"
+        },
+        {
+          "path": "linux-4.19.124/drivers/input/mouse/elan_i2c_core.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            349,
+            396,
+            418,
+            472,
+            478,
+            483,
+            485,
+            598
+          ],
+          "sha256": "734fc7531e1ced3a3fcc79480f3e4cbc8faae6044f1170c4bdd61fae352d5e6d"
+        },
+        {
+          "path": "linux-4.19.124/drivers/input/touchscreen/elants_i2c.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            582,
+            620,
+            716,
+            749,
+            752,
+            760,
+            985
+          ],
+          "sha256": "669779aa3a6a4b8deb25f44a010c9b742a7ef652164b31c83698753fed511258"
+        },
+        {
+          "path": "linux-4.19.124/drivers/input/touchscreen/raydium_i2c_ts.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            282,
+            630,
+            773,
+            775,
+            783
+          ],
+          "sha256": "526a7ce281e3dd71fdec6292dc2cf4266ff4b7d7a76a7b9db299aaf1bda01896"
+        },
+        {
+          "path": "linux-4.19.124/drivers/input/touchscreen/atmel_mxt_ts.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            2905,
+            2908
+          ],
+          "sha256": "8c08fb61edac4e847411f56db12d865bc6d5fc81578404898dbd1163d628c193"
+        },
+        {
+          "path": "linux-4.19.124/drivers/input/touchscreen/wdt87xx_i2c.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            816,
+            859,
+            873,
+            917,
+            928
+          ],
+          "sha256": "2f65badd1a5e09e9999c248647c76b40a990e204e6b65f6e3e0bf422bdee2145"
+        },
+        {
+          "path": "linux-4.19.124/drivers/input/touchscreen/hideep.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            619,
+            624,
+            634,
+            636,
+            643,
+            900
+          ],
+          "sha256": "8be67072051cb1a43086eaa1d16e287f6bb0880f2f5cb0b5bdb4642497db3676"
+        },
+        {
+          "path": "linux-4.19.124/drivers/input/touchscreen/melfas_mip4.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            662,
+            1276,
+            1328,
+            1345,
+            1367
+          ],
+          "sha256": "b02af3c34af6f54841d7de0f5f322e84b0649855868cb2f9323bb5ae849a6992"
+        },
+        {
+          "path": "linux-4.19.124/drivers/platform/x86/intel_scu_ipc.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            33
+          ],
+          "sha256": "8b1e8589faeba0b002a03a0914b8e99ecd8641291e6ead33f605ba635c71f8b8"
+        },
+        {
+          "path": "linux-4.19.124/drivers/crypto/ccp/psp-dev.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            444,
+            486,
+            931
+          ],
+          "sha256": "af8bc629bae7fe99c3e55c1fc1965445755b6b1390359aa7049285819dc3d0c1"
+        },
+        {
+          "path": "linux-4.19.124/drivers/s390/char/tape_34xx.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            705
+          ],
+          "sha256": "1b729102db06e7a8c052e0504ac315af5df73aefb53060c9fd0facb45a90d508"
+        },
+        {
+          "path": "linux-4.19.124/drivers/s390/scsi/zfcp_fsf.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            103,
+            132
+          ],
+          "sha256": "55604527ee7b5d537d7e1a103806d862e53326744220c647a95fb349216af679"
+        },
+        {
+          "path": "linux-4.19.124/drivers/s390/scsi/zfcp_fsf.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            146,
+            149,
+            209
+          ],
+          "sha256": "b2cb09a09442d0edcebfaa8c601296c6489cbd76a56c3499c2cb280895b72179"
+        },
+        {
+          "path": "linux-4.19.124/drivers/media/i2c/m5mols/m5mols_core.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            796
+          ],
+          "sha256": "682845875ee07c204eb9c11082502d760dc11d9fd46fa95f52ebf471295b3800"
+        },
+        {
+          "path": "linux-4.19.124/drivers/dma/milbeaut-xdmac.c",
+          "pattern": "pana_secure_call",
+          "line_numbers": [
+            25
+          ],
+          "sha256": "c9aae5fbbbb7290065e6e669e56cf57a956b61ae4d64f1e2e8945fc116db869b"
+        },
+        {
+          "path": "linux-4.19.124/drivers/dma/milbeaut_hdmac.c",
+          "pattern": "pana_secure_call",
+          "line_numbers": [
+            25
+          ],
+          "sha256": "71992b2b1a56789ea982c71414bf89b66ee8d0735256f91a7df3f305acbaf14e"
+        },
+        {
+          "path": "linux-4.19.124/drivers/hid/hid-roccat-kone.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            218
+          ],
+          "sha256": "ac5eaeea38b11d2abccbc46d60aa927e054304e7dd6c7746abca399cd0d562f9"
+        },
+        {
+          "path": "linux-4.19.124/drivers/pci/vpd.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            171
+          ],
+          "sha256": "11a51a68d528541efd5b3c048c7c811102fff4f80e3f831411a545a669107b45"
+        },
+        {
+          "path": "linux-4.19.124/drivers/staging/greybus/Documentation/firmware/firmware.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            175,
+            191,
+            233
+          ],
+          "sha256": "3bd832f64301ab5ee0d88af4cddca7a94e3a11c097f760dac2c81cc6a4625d61"
+        },
+        {
+          "path": "linux-4.19.124/drivers/staging/greybus/greybus_protocols.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            357,
+            362,
+            364,
+            369
+          ],
+          "sha256": "9e565a670cbb10ddb98e69b3aa2e3260054f788bbdc1dfa84b75eaf209c3ed13"
+        },
+        {
+          "path": "linux-4.19.124/drivers/staging/greybus/fw-management.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            334,
+            350,
+            355,
+            364,
+            482
+          ],
+          "sha256": "634ddf64d066912954b15e1846d5684b12572ca3859145d66fed2c8e0474b51c"
+        },
+        {
+          "path": "linux-4.19.124/drivers/watchdog/ziirave_wdt.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            567,
+            571,
+            580,
+            597,
+            604
+          ],
+          "sha256": "06c81f4e1cb3c3956aae2117826050dc338782c33c765ef545816405cf44cc96"
+        },
+        {
+          "path": "linux-4.19.124/drivers/mfd/cros_ec.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            17
+          ],
+          "sha256": "7fee73df3f96c0dd9313453129c70e311fb6088b2b808e9039454408e7c0af53"
+        },
+        {
+          "path": "linux-4.19.124/drivers/mtd/devices/powernv_flash.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            118
+          ],
+          "sha256": "f02a0624c1ea72494764b0bac73e06520933f40d8fe0e688308cdd26b20ce39f"
+        },
+        {
+          "path": "linux-4.19.124/drivers/firmware/efi/esrt.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            8
+          ],
+          "sha256": "3c5470c0fea6b06340726c21d3ac0476c108ff2a5fbaae261f511f7d738f7e4a"
+        },
+        {
+          "path": "linux-4.19.124/drivers/usb/class/cdc-acm.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            1925
+          ],
+          "sha256": "95603699a7555be45035f8ad4875d93acf313d0eab829c7cffc1c42b9b09f4ef"
+        },
+        {
+          "path": "linux-4.19.124/drivers/usb/storage/unusual_devs.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            824
+          ],
+          "sha256": "a8be201ac5b2de54a5c837c09c75cd08ada836a70286d38fccd384c0352160b9"
+        },
+        {
+          "path": "linux-4.19.124/drivers/usb/serial/io_ti.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            797,
+            1354
+          ],
+          "sha256": "c3fc5888b83197567e09fdc072fdd862eb44a1714f9c9fc23f66a04ff562dc51"
+        },
+        {
+          "path": "linux-4.19.124/drivers/usb/serial/iuu_phoenix.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            825
+          ],
+          "sha256": "1aba349e432b7dc4b61b1c2edd0df23bd7bde6ec874f203ce76f79ea66a30fff"
+        },
+        {
+          "path": "linux-4.19.124/drivers/nfc/st-nci/st-nci.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            98,
+            100
+          ],
+          "sha256": "0b57426d36b8662bb47b75dd161d22915901482178eeb15b3659a4771d63e9d9"
+        },
+        {
+          "path": "linux-4.19.124/drivers/nfc/s3fwrn5/firmware.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            466,
+            469,
+            484,
+            497
+          ],
+          "sha256": "b39d36d812d124ca913b3289a8797c74c9ac95c693379baf9e34d1ed9caca112"
+        },
+        {
+          "path": "linux-4.19.124/drivers/nfc/s3fwrn5/core.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            34,
+            41,
+            123
+          ],
+          "sha256": "2c3a7404acf5ff1ac881077aa43bdc2739b57196ffc8f2ace4fdf41b61a970e6"
+        },
+        {
+          "path": "linux-4.19.124/drivers/nfc/fdp/fdp.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            547
+          ],
+          "sha256": "3e32fdf36ea2d65661b05c188eb6dda7e06b87f0820e31d1d5ad368ffa06a2db"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/wireless/broadcom/brcm80211/brcmfmac/usb.c",
+          "pattern": "component_name",
+          "line_numbers": [
+            40,
+            798,
+            826,
+            830
+          ],
+          "sha256": "1d78c7368501694d9e7059ac0cdc8bee91023f1b2f6802438918c6d241ecb04f"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/ethernet/intel/i40e/i40e_main.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            1996,
+            9284
+          ],
+          "sha256": "da4bede947b05106f27360d0cdae992916a7b8c904827b50fc177851244b3884"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/ethernet/ibm/ibmvnic.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            3829
+          ],
+          "sha256": "26e2d85578747117affa3f7071d8ce7569b6313c15d116860e7fef764e9895ba"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/ethernet/ibm/ehea/ehea_main.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            154,
+            2399,
+            2466,
+            3291,
+            3483,
+            3508
+          ],
+          "sha256": "5365aa74aac718b1e608a1ceeb4c1020588ac7a3bfe293f1abfbabb6f6442b4b"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/ethernet/qlogic/netxen/netxen_nic_init.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            978
+          ],
+          "sha256": "2146602c516b1ad815bc9798fca1dc38aeb7931f9a3683500b759ae79afb94a3"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/ethernet/qlogic/qed/qed_sp.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            458
+          ],
+          "sha256": "b9d8dcecd4a086ecb25c968a4d134f19c0455d127a44e850bcc9441ac232298b"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/ethernet/qlogic/qed/qed_dev.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            1902
+          ],
+          "sha256": "929619694aa2a7c7b5e7b23e7fc5c86261b35a836c63e9e8669efed0e0c884ab"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/ethernet/sfc/mcdi_pcol.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            2589
+          ],
+          "sha256": "3dba9911d40c3d299f0c499ebbf27624a2153ccccc7dd1a2c71f55f72df08af3"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/ethernet/broadcom/bnxt/bnxt.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            5379
+          ],
+          "sha256": "ce336de16a3c089172e2771920eeff8294733b86785be972a3fdba340a57d683"
+        },
+        {
+          "path": "linux-4.19.124/drivers/net/ethernet/broadcom/bnxt/bnxt_ethtool.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            1587
+          ],
+          "sha256": "f45ea8da75238dfbec6dc2e22769efdc7d4567c37225027489536959fc4891c9"
+        },
+        {
+          "path": "linux-4.19.124/drivers/tty/serial/atmel_serial.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            2840
+          ],
+          "sha256": "e174eb809dbe5f92650963c7c7860d3152017769f0c0992754975282345bd60d"
+        },
+        {
+          "path": "linux-4.19.124/drivers/leds/leds-lp5562.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            209,
+            283
+          ],
+          "sha256": "ae1532b135b119d7473e970ce3d31433a220b80f0d64d01daa112b4d35292383"
+        },
+        {
+          "path": "linux-4.19.124/drivers/ata/libahci_platform.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            690
+          ],
+          "sha256": "92826f907fee80132615717d22a065a93aefbec8c3cadbadadb68c428ceb83cd"
+        },
+        {
+          "path": "linux-4.19.124/drivers/ata/libata-core.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            2778
+          ],
+          "sha256": "c20f352905f3e8ce1a24f5d07bc104c12931d8773c006fa6186b879239144555"
+        },
+        {
+          "path": "linux-4.19.124/drivers/ata/sata_highbank.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            591
+          ],
+          "sha256": "0d227b42b5dda3f0cee1a3388192ec254a059da5fcf53c95f57bef145b10e786"
+        },
+        {
+          "path": "linux-4.19.124/drivers/message/fusion/lsi/mpi_log_sas.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            299,
+            301,
+            303,
+            305,
+            307,
+            309,
+            311
+          ],
+          "sha256": "a04c716ee318a2c10bcc527eced7d3a35510dcf23ada805b2788b2fae1c50086"
+        },
+        {
+          "path": "linux-4.19.124/drivers/char/ipmi/ipmi_si_intf.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            1024
+          ],
+          "sha256": "484f881b1b24adda9d7669e0f7506127b6bb538bee22c757bffa2d1458eeb87e"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/device_handler/scsi_dh_alua.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            551
+          ],
+          "sha256": "5c06dec0051a685fc8727a56c9eb9580af23ca2d81f1c3ad8d550adf6b869698"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/csiostor/csio_hw.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            2530
+          ],
+          "sha256": "241dea995369a33dfa81e6982b1a411aca746143b6471c2fe1654697698b0b12"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/megaraid/megaraid_sas.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            1391
+          ],
+          "sha256": "2980b6163bb3cc490fd92cb21211aa6fd3a4dfa2f89bc97fb26b7d94d2d745d2"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/lpfc/lpfc_attr.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            4677
+          ],
+          "sha256": "5c6f1d5b2e09de3860e742bec6972f922c821b316083c5959d03d7328a5abacf"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/lpfc/lpfc_crtn.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            525
+          ],
+          "sha256": "3a73c3ee3e94d890a7d31b02295090274a2ed3eae602809807bfe18afc31f76c"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/lpfc/lpfc_init.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            1960,
+            11502,
+            11516,
+            11521,
+            11528,
+            11709
+          ],
+          "sha256": "0510a21547ac31e5f11fba916f87192416dc1e3e246c00b3fd338f0b39080114"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/qla2xxx/qla_mbx.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            4242,
+            4243,
+            4250
+          ],
+          "sha256": "e797a8cece3e1d18ae846c4887d94f073a5a4621be8d23b2cd162e29ab8cd14c"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/qla2xxx/qla_init.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            3750
+          ],
+          "sha256": "5dfa44b5ead5b9f5421f1c756ce0a35b7153dd42098c0f52e4e4326086688e4f"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/hpsa.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            7261
+          ],
+          "sha256": "6336e41e37840a4f2f8736777e57cbfc15b9ae23f9eea3d0d8e32b49fd69bbe0"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/pm8001/pm8001_hwi.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            681,
+            4915
+          ],
+          "sha256": "2349eda4f086ac08c20edf1548b5ab346851c104abbcceef9816f76296bdb30e"
+        },
+        {
+          "path": "linux-4.19.124/drivers/scsi/pm8001/pm80xx_hwi.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            1135
+          ],
+          "sha256": "b80f5fb4d2d71e241a2acc66fc75a7a72790f730022b61461e5bbca4f07bbf06"
+        },
+        {
+          "path": "linux-4.19.124/arch/powerpc/kvm/book3s_xics.c",
+          "pattern": "upd_literal",
+          "line_numbers": [
+            289,
+            293
+          ],
+          "sha256": "9922ccd77b9da5030584aacf55b3faa47077fce1908719af0f4b0b37b001975e"
+        },
+        {
+          "path": "linux-4.19.124/arch/powerpc/platforms/powernv/opal-flash.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            2
+          ],
+          "sha256": "81b04abb265a1378b48357be8fde1de944455ae62a82ba8d563e16b54e974021"
+        },
+        {
+          "path": "linux-4.19.124/arch/powerpc/kernel/rtas_flash.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            29,
+            29,
+            676
+          ],
+          "sha256": "7ac2c452359aa9616a0d56783354781d855259a7d24bd11f4629a05af8a278d1"
+        },
+        {
+          "path": "linux-4.19.124/arch/arm/boot/dts/da850-lego-ev3.dts",
+          "pattern": "update_name",
+          "line_numbers": [
+            192
+          ],
+          "sha256": "edcf627bcda1a67c3d6ff5ed483ae69dbd936590e47676f8de56bcc681e64837"
+        },
+        {
+          "path": "linux-4.19.124/include/linux/libata.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            427
+          ],
+          "sha256": "695cd5993699c6a36114b7209605a6984a02335f5ecce0ca947fd18e908908d4"
+        },
+        {
+          "path": "linux-4.19.124/include/linux/mfd/cros_ec_commands.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            17
+          ],
+          "sha256": "c9b38a36b93535a5c84ac6e73e54fe0cc4c5816a92e264e1902e813ef4fa5735"
+        },
+        {
+          "path": "linux-4.19.124/fs/cifs/smb2maperror.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            155,
+            155
+          ],
+          "sha256": "060075680a305eccb82bdb9c40c11f7011020a6381727b03172ae9dab056549d"
+        },
+        {
+          "path": "linux-4.19.124/fs/cifs/smb2status.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            139
+          ],
+          "sha256": "084e5f563fdbb39db911db74ccca71a9001dc6b6084799492939aae853005399"
+        },
+        {
+          "path": "linux-4.19.124/sound/pci/asihpi/hpi.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            441,
+            447
+          ],
+          "sha256": "c581092b1684e46f650645d89ab57facb9188e3c09eb13009d9f41a88ab01853"
+        },
+        {
+          "path": "linux-4.19.124/sound/usb/6fire/chip.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            119
+          ],
+          "sha256": "410b63dd1197b4729e7339d2d06996880707cdff05902747b71c3203f4f1b38c"
+        }
+      ]
+    },
+    {
+      "archive": "analysis/sources/u-boot.tar.gz",
+      "archive_sha256": "f3d7fb6e3e609751d3d62d076fde898c39a969d22deb4ede4819ee4d982c4fae",
+      "examined_source_files": 10410,
+      "hits": [
+        {
+          "path": "u-boot/drivers/usb/host/xhci-rcar-r8a779x_usb3_v3.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            39
+          ],
+          "sha256": "6cd2ea1bbe05e64b81a029b5d52a0aeaf27427d9d5fb656e863d780b5b02c4a5"
+        },
+        {
+          "path": "u-boot/drivers/usb/gadget/f_dfu.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            3
+          ],
+          "sha256": "884ab39f5458f328e26b7ddb970b31d97ce998afe0fedd5a47a719adb045eb30"
+        },
+        {
+          "path": "u-boot/drivers/usb/gadget/f_dfu.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            3
+          ],
+          "sha256": "a988fe3d1c37437a232dffb0819c31e606fd8e7ed81d216e5565439f02a02b6f"
+        },
+        {
+          "path": "u-boot/arch/x86/include/asm/me_common.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            244
+          ],
+          "sha256": "82f076793f1ea99069d3948c9e395c12580bb8bcab16b630dd0e0d549356961b"
+        },
+        {
+          "path": "u-boot/include/android_bootloader_message.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            38
+          ],
+          "sha256": "1856064f949651c47311e6524fb2fe39e95fbf3bfea086c2c900fd1e07604d46"
+        },
+        {
+          "path": "u-boot/include/ec_commands.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            3755
+          ],
+          "sha256": "dbf08019b7320a4dd37a0b23a7bcce2a142548af0b31fdf1abc2f96237903386"
+        },
+        {
+          "path": "u-boot/include/configs/bav335x.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            397
+          ],
+          "sha256": "96f0baf2d104144a2804866ddfb3f4d0bc023a0a270c3be382d7a487d4fc3f9f"
+        },
+        {
+          "path": "u-boot/include/configs/siemens-am33x-common.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            160
+          ],
+          "sha256": "233296b0c5238ff43a4d0aa02a236bd6a2c9998c00b78916c44631ab9b5a70a3"
+        },
+        {
+          "path": "u-boot/include/configs/warp7.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            138
+          ],
+          "sha256": "7163360a78896a809b698f22021c3aee6209936294d5a7bdb377c51441bbc59e"
+        },
+        {
+          "path": "u-boot/include/configs/colibri_imx7.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            231
+          ],
+          "sha256": "940d80ed77bbe725172b841d8100680eb8021bb57cb22b30847c785df544b850"
+        },
+        {
+          "path": "u-boot/include/configs/colibri-imx6ull.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            169
+          ],
+          "sha256": "8b753cefc7028d7e1ac854b686f99069ab66c9cb0681f82807ca2adb3d0a93ad"
+        },
+        {
+          "path": "u-boot/include/configs/am43xx_evm.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            104
+          ],
+          "sha256": "06698aead9a495bb914c43f4fed7beaff877a3ac2e55a1f85bba8bc6058955c4"
+        },
+        {
+          "path": "u-boot/include/configs/am335x_evm.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            260
+          ],
+          "sha256": "0ef920291918a1a979fdb0dd3573b1c83e72a220f760d96c665bba5c37aa0c8a"
+        },
+        {
+          "path": "u-boot/include/net.h",
+          "pattern": "update_name",
+          "line_numbers": [
+            863
+          ],
+          "sha256": "d206dfcadc3088942a17b99ab481452be44f6c3c0f118e019e2537c7a016a308"
+        },
+        {
+          "path": "u-boot/board/samsung/common/misc.c",
+          "pattern": "update_name",
+          "line_numbers": [
+            204
+          ],
+          "sha256": "edd4778c6e3a3b00700c95eaba4ef18c426f6ff6f8bc03ac106d762e47b232d4"
+        }
+      ]
+    }
+  ]
+}

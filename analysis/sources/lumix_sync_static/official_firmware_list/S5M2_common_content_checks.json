@@ -1,0 +1,181 @@
+[
+  {
+    "name": "boot",
+    "size": 0,
+    "flags": 2,
+    "raw_equal": true,
+    "uniform_raw": [],
+    "directory_matches_ff": true,
+    "directory_matches_zero": true
+  },
+  {
+    "name": "loader2",
+    "size": 0,
+    "flags": 2,
+    "raw_equal": true,
+    "uniform_raw": [],
+    "directory_matches_ff": true,
+    "directory_matches_zero": true
+  },
+  {
+    "name": "loader3",
+    "size": 0,
+    "flags": 2,
+    "raw_equal": true,
+    "uniform_raw": [],
+    "directory_matches_ff": true,
+    "directory_matches_zero": true
+  },
+  {
+    "name": "storage",
+    "size": 0,
+    "flags": 2,
+    "raw_equal": true,
+    "uniform_raw": [],
+    "directory_matches_ff": true,
+    "directory_matches_zero": true
+  },
+  {
+    "name": "eep_act_a",
+    "size": 512,
+    "flags": 3,
+    "raw_equal": false,
+    "uniform_raw": null,
+    "directory_matches_ff": false,
+    "directory_matches_zero": false
+  },
+  {
+    "name": "eep_act_b",
+    "size": 512,
+    "flags": 3,
+    "raw_equal": false,
+    "uniform_raw": null,
+    "directory_matches_ff": false,
+    "directory_matches_zero": false
+  },
+  {
+    "name": "eep_exp_a",
+    "size": 12288,
+    "flags": 3,
+    "raw_equal": false,
+    "uniform_raw": null,
+    "directory_matches_ff": false,
+    "directory_matches_zero": false
+  },
+  {
+    "name": "eep_exp_b",
+    "size": 12288,
+    "flags": 3,
+    "raw_equal": false,
+    "uniform_raw": null,
+    "directory_matches_ff": false,
+    "directory_matches_zero": false
+  },
+  {
+    "name": "history",
+    "size": 262144,
+    "flags": 3,
+    "raw_equal": false,
+    "uniform_raw": null,
+    "directory_matches_ff": false,
+    "directory_matches_zero": false
+  },
+  {
+    "name": "lens_hist",
+    "size": 393216,
+    "flags": 2,
+    "raw_equal": true,
+    "uniform_raw": [
+      0
+    ],
+    "directory_matches_ff": false,
+    "directory_matches_zero": true
+  },
+  {
+    "name": "kizu_data",
+    "size": 524288,
+    "flags": 2,
+    "raw_equal": true,
+    "uniform_raw": [
+      0
+    ],
+    "directory_matches_ff": false,
+    "directory_matches_zero": true
+  },
+  {
+    "name": "hm_c_ddr",
+    "size": 3145728,
+    "flags": 3,
+    "raw_equal": false,
+    "uniform_raw": null,
+    "directory_matches_ff": false,
+    "directory_matches_zero": false
+  },
+  {
+    "name": "hm_d_ddr",
+    "size": 1048576,
+    "flags": 3,
+    "raw_equal": false,
+    "uniform_raw": null,
+    "directory_matches_ff": false,
+    "directory_matches_zero": false
+  },
+  {
+    "name": "pzm_data",
+    "size": 65536,
+    "flags": 3,
+    "raw_equal": false,
+    "uniform_raw": null,
+    "directory_matches_ff": false,
+    "directory_matches_zero": false
+  },
+  {
+    "name": "xtk",
+    "size": 131072,
+    "flags": 2,
+    "raw_equal": true,
+    "uniform_raw": [
+      0
+    ],
+    "directory_matches_ff": false,
+    "directory_matches_zero": true
+  },
+  {
+    "name": "dsp_kizu_c",
+    "size": 65536,
+    "flags": 3,
+    "raw_equal": false,
+    "uniform_raw": null,
+    "directory_matches_ff": false,
+    "directory_matches_zero": false
+  },
+  {
+    "name": "dsp_kizu_d",
+    "size": 65536,
+    "flags": 3,
+    "raw_equal": false,
+    "uniform_raw": null,
+    "directory_matches_ff": false,
+    "directory_matches_zero": false
+  },
+  {
+    "name": "hm_d_nw_1st",
+    "size": 1441792,
+    "flags": 3,
+    "raw_equal": false,
+    "uniform_raw": null,
+    "directory_matches_ff": false,
+    "directory_matches_zero": false
+  },
+  {
+    "name": "mbr_dummy_d",
+    "size": 131072,
+    "flags": 2,
+    "raw_equal": true,
+    "uniform_raw": [
+      255
+    ],
+    "directory_matches_ff": true,
+    "directory_matches_zero": false
+  }
+]

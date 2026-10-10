@@ -1,0 +1,255 @@
+[
+  {
+    "name": "LMX_func_api_Hl_Shd_GetCapability",
+    "start_rva": "0x14c90",
+    "next_export_rva": "0x14ff0",
+    "direct_transfers": [
+      "180014cec: e8 19 76 18 00              \tcallq\t0x18019c30a <LMX_func_api_ptpip_UpdateCer+0x14e86a>",
+      "180014d12: e8 b9 1c 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180014d2a: e8 a1 1c 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180014d35: e9 63 02 00 00              \tjmp\t0x180014f9d <LMX_func_api_Hl_Shd_GetCapability+0x30d>",
+      "180014d62: e8 69 1c 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180014d6d: e9 2b 02 00 00              \tjmp\t0x180014f9d <LMX_func_api_Hl_Shd_GetCapability+0x30d>",
+      "180014d7a: e8 b1 fc ff ff              \tcallq\t0x180014a30 <LMX_func_api_GPS_Set_GPS_Data_Info+0x300>",
+      "180014d91: e8 3a 1c 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180014d9c: e9 fc 01 00 00              \tjmp\t0x180014f9d <LMX_func_api_Hl_Shd_GetCapability+0x30d>",
+      "180014dbf: e8 2c fa 01 00              \tcallq\t0x1800347f0 <LMX_func_api_Get_Tag_CapabilityInfo_Size>",
+      "180014dd6: e8 f5 1b 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180014de1: e9 b7 01 00 00              \tjmp\t0x180014f9d <LMX_func_api_Hl_Shd_GetCapability+0x30d>",
+      "180014e28: e8 a3 1b 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180014e33: e9 65 01 00 00              \tjmp\t0x180014f9d <LMX_func_api_Hl_Shd_GetCapability+0x30d>",
+      "180014e75: e8 56 1b 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180014e80: e9 06 01 00 00              \tjmp\t0x180014f8b <LMX_func_api_Hl_Shd_GetCapability+0x2fb>",
+      "180014eaf: e8 cc f9 01 00              \tcallq\t0x180034880 <LMX_func_api_Get_Tag_CapabilityInfo>",
+      "180014ebe: e9 c8 00 00 00              \tjmp\t0x180014f8b <LMX_func_api_Hl_Shd_GetCapability+0x2fb>",
+      "180014ed2: e8 f9 fd 01 00              \tcallq\t0x180034cd0 <LMX_func_api_Get_Tag_CapabilityInfo+0x450>",
+      "180014ee9: e8 e2 1a 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180014eee: eb 13                       \tjmp\t0x180014f03 <LMX_func_api_Hl_Shd_GetCapability+0x273>",
+      "180014f16: e8 b5 fd 01 00              \tcallq\t0x180034cd0 <LMX_func_api_Get_Tag_CapabilityInfo+0x450>",
+      "180014f2d: e8 9e 1a 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180014f32: eb 13                       \tjmp\t0x180014f47 <LMX_func_api_Hl_Shd_GetCapability+0x2b7>",
+      "180014f5a: e8 71 fd 01 00              \tcallq\t0x180034cd0 <LMX_func_api_Get_Tag_CapabilityInfo+0x450>",
+      "180014f71: e8 5a 1a 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180014f76: eb 13                       \tjmp\t0x180014f8b <LMX_func_api_Hl_Shd_GetCapability+0x2fb>",
+      "180014fab: e8 20 1a 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180014fb1: eb 0a                       \tjmp\t0x180014fbd <LMX_func_api_Hl_Shd_GetCapability+0x32d>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_Hl_Shd_Get_Highlight_Adj",
+    "start_rva": "0x150d0",
+    "next_export_rva": "0x151b0",
+    "direct_transfers": [
+      "180015124: e8 a7 18 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180015143: eb 30                       \tjmp\t0x180015175 <LMX_func_api_Hl_Shd_Get_Highlight_Adj+0xa5>",
+      "18001514d: e8 de f8 ff ff              \tcallq\t0x180014a30 <LMX_func_api_GPS_Set_GPS_Data_Info+0x300>",
+      "180015167: e8 64 18 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "18001516c: eb 07                       \tjmp\t0x180015175 <LMX_func_api_Hl_Shd_Get_Highlight_Adj+0xa5>",
+      "180015183: e8 48 18 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_Hl_Shd_Get_Pattern_Info",
+    "start_rva": "0x14ff0",
+    "next_export_rva": "0x150d0",
+    "direct_transfers": [
+      "180015044: e8 87 19 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180015063: eb 30                       \tjmp\t0x180015095 <LMX_func_api_Hl_Shd_Get_Pattern_Info+0xa5>",
+      "18001506d: e8 be f9 ff ff              \tcallq\t0x180014a30 <LMX_func_api_GPS_Set_GPS_Data_Info+0x300>",
+      "180015087: e8 44 19 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "18001508c: eb 07                       \tjmp\t0x180015095 <LMX_func_api_Hl_Shd_Get_Pattern_Info+0xa5>",
+      "1800150a3: e8 28 19 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_Hl_Shd_Get_Shadow_Adj",
+    "start_rva": "0x151b0",
+    "next_export_rva": "0x15290",
+    "direct_transfers": [
+      "180015204: e8 c7 17 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180015223: eb 30                       \tjmp\t0x180015255 <LMX_func_api_Hl_Shd_Get_Shadow_Adj+0xa5>",
+      "18001522d: e8 fe f7 ff ff              \tcallq\t0x180014a30 <LMX_func_api_GPS_Set_GPS_Data_Info+0x300>",
+      "180015247: e8 84 17 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "18001524c: eb 07                       \tjmp\t0x180015255 <LMX_func_api_Hl_Shd_Get_Shadow_Adj+0xa5>",
+      "180015263: e8 68 17 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_Hl_Shd_Set_Highlight_Adj",
+    "start_rva": "0x153a0",
+    "next_export_rva": "0x154b0",
+    "direct_transfers": [
+      "1800153d2: e8 f9 15 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "18001540b: e8 c0 15 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180015410: eb 63                       \tjmp\t0x180015475 <LMX_func_api_Hl_Shd_Set_Highlight_Adj+0xd5>",
+      "18001543a: e8 91 15 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "18001543f: eb 34                       \tjmp\t0x180015475 <LMX_func_api_Hl_Shd_Set_Highlight_Adj+0xd5>",
+      "18001545b: e8 10 3a 02 00              \tcallq\t0x180038e70 <LMX_func_api_Skip_Object_Transfer+0x1340>",
+      "180015491: e8 3a 15 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_Hl_Shd_Set_Pattern_Info",
+    "start_rva": "0x15290",
+    "next_export_rva": "0x153a0",
+    "direct_transfers": [
+      "1800152c2: e8 09 17 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "1800152fb: e8 d0 16 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180015300: eb 63                       \tjmp\t0x180015365 <LMX_func_api_Hl_Shd_Set_Pattern_Info+0xd5>",
+      "18001532a: e8 a1 16 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "18001532f: eb 34                       \tjmp\t0x180015365 <LMX_func_api_Hl_Shd_Set_Pattern_Info+0xd5>",
+      "18001534b: e8 20 3b 02 00              \tcallq\t0x180038e70 <LMX_func_api_Skip_Object_Transfer+0x1340>",
+      "180015381: e8 4a 16 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_Hl_Shd_Set_Shadow_Adj",
+    "start_rva": "0x154b0",
+    "next_export_rva": "0x155c0",
+    "direct_transfers": [
+      "1800154e2: e8 e9 14 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "18001551b: e8 b0 14 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "180015520: eb 63                       \tjmp\t0x180015585 <LMX_func_api_Hl_Shd_Set_Shadow_Adj+0xd5>",
+      "18001554a: e8 81 14 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "18001554f: eb 34                       \tjmp\t0x180015585 <LMX_func_api_Hl_Shd_Set_Shadow_Adj+0xd5>",
+      "18001556b: e8 00 39 02 00              \tcallq\t0x180038e70 <LMX_func_api_Skip_Object_Transfer+0x1340>",
+      "1800155a1: e8 2a 14 02 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_SetupRangeSet_Get_Aperture",
+    "start_rva": "0x2fad0",
+    "next_export_rva": "0x2fb70",
+    "direct_transfers": [
+      "18002fb25: e8 76 06 00 00              \tcallq\t0x1800301a0 <LMX_func_api_SetupRangeSet_Set_Info+0x330>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_SetupRangeSet_Get_ExposureComp",
+    "start_rva": "0x2fb70",
+    "next_export_rva": "0x2fc10",
+    "direct_transfers": [
+      "18002fbc5: e8 d6 05 00 00              \tcallq\t0x1800301a0 <LMX_func_api_SetupRangeSet_Set_Info+0x330>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_SetupRangeSet_Get_ISO",
+    "start_rva": "0x2fc10",
+    "next_export_rva": "0x2fcb0",
+    "direct_transfers": [
+      "18002fc65: e8 36 05 00 00              \tcallq\t0x1800301a0 <LMX_func_api_SetupRangeSet_Set_Info+0x330>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_SetupRangeSet_Get_Info",
+    "start_rva": "0x2fcb0",
+    "next_export_rva": "0x2fcf0",
+    "direct_transfers": [
+      "18002fcdc: e9 bf 04 00 00              \tjmp\t0x1800301a0 <LMX_func_api_SetupRangeSet_Set_Info+0x330>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_SetupRangeSet_Get_SS",
+    "start_rva": "0x2fa30",
+    "next_export_rva": "0x2fad0",
+    "direct_transfers": [
+      "18002fa85: e8 16 07 00 00              \tcallq\t0x1800301a0 <LMX_func_api_SetupRangeSet_Set_Info+0x330>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_SetupRangeSet_Set_Aperture",
+    "start_rva": "0x2fd50",
+    "next_export_rva": "0x2fdb0",
+    "direct_transfers": [
+      "18002fd97: e8 d4 00 00 00              \tcallq\t0x18002fe70 <LMX_func_api_SetupRangeSet_Set_Info>",
+      "18002fda4: e8 57 b4 16 00              \tcallq\t0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_SetupRangeSet_Set_ExposureComp",
+    "start_rva": "0x2fdb0",
+    "next_export_rva": "0x2fe10",
+    "direct_transfers": [
+      "18002fdf7: e8 74 00 00 00              \tcallq\t0x18002fe70 <LMX_func_api_SetupRangeSet_Set_Info>",
+      "18002fe04: e8 f7 b3 16 00              \tcallq\t0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_SetupRangeSet_Set_ISO",
+    "start_rva": "0x2fe10",
+    "next_export_rva": "0x2fe70",
+    "direct_transfers": [
+      "18002fe55: e8 16 00 00 00              \tcallq\t0x18002fe70 <LMX_func_api_SetupRangeSet_Set_Info>",
+      "18002fe62: e8 99 b3 16 00              \tcallq\t0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_SetupRangeSet_Set_Info",
+    "start_rva": "0x2fe70",
+    "next_export_rva": "0x30440",
+    "direct_transfers": [
+      "18002fec1: e9 29 01 00 00              \tjmp\t0x18002ffef <LMX_func_api_SetupRangeSet_Set_Info+0x17f>",
+      "18002fee1: eb 44                       \tjmp\t0x18002ff27 <LMX_func_api_SetupRangeSet_Set_Info+0xb7>",
+      "18002fef7: eb 2e                       \tjmp\t0x18002ff27 <LMX_func_api_SetupRangeSet_Set_Info+0xb7>",
+      "18002ff0d: eb 18                       \tjmp\t0x18002ff27 <LMX_func_api_SetupRangeSet_Set_Info+0xb7>",
+      "18002ff84: eb 41                       \tjmp\t0x18002ffc7 <LMX_func_api_SetupRangeSet_Set_Info+0x157>",
+      "18002fffa: e8 01 b2 16 00              \tcallq\t0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>",
+      "180030018: e8 e1 c2 16 00              \tcallq\t0x18019c2fe <LMX_func_api_ptpip_UpdateCer+0x14e85e>",
+      "18003005a: e8 31 73 00 00              \tcallq\t0x180037390 <LMX_func_api_WB_Ctrl_WBSET+0xc10>",
+      "18003009e: eb 47                       \tjmp\t0x1800300e7 <LMX_func_api_SetupRangeSet_Set_Info+0x277>",
+      "1800300ab: eb 37                       \tjmp\t0x1800300e4 <LMX_func_api_SetupRangeSet_Set_Info+0x274>",
+      "1800300df: e8 1a c2 16 00              \tcallq\t0x18019c2fe <LMX_func_api_ptpip_UpdateCer+0x14e85e>",
+      "180030143: e8 38 1e 02 00              \tcallq\t0x180051f80 <LMX_func_api_ptpip_UpdateCer+0x44e0>",
+      "180030168: eb 12                       \tjmp\t0x18003017c <LMX_func_api_SetupRangeSet_Set_Info+0x30c>",
+      "180030192: e9 28 fe ff ff              \tjmp\t0x18002ffbf <LMX_func_api_SetupRangeSet_Set_Info+0x14f>",
+      "180030199: e9 49 fe ff ff              \tjmp\t0x18002ffe7 <LMX_func_api_SetupRangeSet_Set_Info+0x177>",
+      "180030212: e8 79 71 00 00              \tcallq\t0x180037390 <LMX_func_api_WB_Ctrl_WBSET+0xc10>",
+      "18003025a: eb 3b                       \tjmp\t0x180030297 <LMX_func_api_SetupRangeSet_Set_Info+0x427>",
+      "180030267: eb 28                       \tjmp\t0x180030291 <LMX_func_api_SetupRangeSet_Set_Info+0x421>",
+      "1800302e6: e8 95 1c 02 00              \tcallq\t0x180051f80 <LMX_func_api_ptpip_UpdateCer+0x44e0>",
+      "180030315: e8 e6 ae 16 00              \tcallq\t0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>",
+      "180030399: eb 70                       \tjmp\t0x18003040b <LMX_func_api_SetupRangeSet_Set_Info+0x59b>",
+      "1800303ca: eb 3b                       \tjmp\t0x180030407 <LMX_func_api_SetupRangeSet_Set_Info+0x597>",
+      "1800303de: eb cd                       \tjmp\t0x1800303ad <LMX_func_api_SetupRangeSet_Set_Info+0x53d>",
+      "18003041e: eb 03                       \tjmp\t0x180030423 <LMX_func_api_SetupRangeSet_Set_Info+0x5b3>",
+      "180030439: e9 cc fe ff ff              \tjmp\t0x18003030a <LMX_func_api_SetupRangeSet_Set_Info+0x49a>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_SetupRangeSet_Set_SS",
+    "start_rva": "0x2fcf0",
+    "next_export_rva": "0x2fd50",
+    "direct_transfers": [
+      "18002fd35: e8 36 01 00 00              \tcallq\t0x18002fe70 <LMX_func_api_SetupRangeSet_Set_Info>",
+      "18002fd42: e8 b9 b4 16 00              \tcallq\t0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_Setup_Exec_Menu_Save_Comp",
+    "start_rva": "0x2d780",
+    "next_export_rva": "0x2d820",
+    "direct_transfers": [
+      "18002d7bf: e8 0c 92 00 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "18002d7d9: e8 c2 d8 00 00              \tcallq\t0x18003b0a0 <LMX_func_api_Skip_Object_Transfer+0x3570>",
+      "18002d7f2: e8 d9 91 00 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "18002d805: e8 f6 d9 16 00              \tcallq\t0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>"
+    ]
+  },
+  {
+    "name": "LMX_func_api_Setup_Exec_Pixel_Refresh_Comp",
+    "start_rva": "0x2d820",
+    "next_export_rva": "0x2d8c0",
+    "direct_transfers": [
+      "18002d85f: e8 6c 91 00 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "18002d879: e8 22 d8 00 00              \tcallq\t0x18003b0a0 <LMX_func_api_Skip_Object_Transfer+0x3570>",
+      "18002d892: e8 39 91 00 00              \tcallq\t0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>",
+      "18002d8a5: e8 56 d9 16 00              \tcallq\t0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>"
+    ]
+  },
+  {
+    "name": "Lmx_func_api_Get_Error",
+    "start_rva": "0x10530",
+    "next_export_rva": "0x105c0",
+    "direct_transfers": []
+  }
+]

@@ -1,0 +1,752 @@
+[
+  {
+    "filepath": "/Users/lixiuqi/\u76f8\u673a\u529f\u80fd\u9a8c\u8bc1/outputs/lumix-s1m2-research-public/analysis/baseline_20261008_01/config_1.DAT",
+    "container": {
+      "file_size": 9197409,
+      "magic": "Panasonic",
+      "model": "DC-S1M2",
+      "declared_payload_len": 9197360,
+      "checksum_byte": 229,
+      "checksum_hex": "0xe5",
+      "checksum_valid": true
+    },
+    "record_0004": {
+      "offset_hex": "0x0102cc",
+      "declared_length": 327684,
+      "subtype_flags": "0x00610045"
+    },
+    "target_subtag_030f": {
+      "name": "Save 1st Normal Picture Candidate",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 97256,
+          "record_offset_hex": "0x017be8",
+          "value_offset": 97268,
+          "value_offset_hex": "0x017bf4",
+          "value_byte": 1,
+          "payload_hex": "01010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 97284,
+          "record_offset_hex": "0x017c04",
+          "value_offset": 97296,
+          "value_offset_hex": "0x017c10",
+          "value_byte": 1,
+          "payload_hex": "01010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 97312,
+          "record_offset_hex": "0x017c20",
+          "value_offset": 97324,
+          "value_offset_hex": "0x017c2c",
+          "value_byte": 1,
+          "payload_hex": "01010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        }
+      ],
+      "state_label": "ON (1)",
+      "values": [
+        1,
+        1,
+        1
+      ]
+    },
+    "preceding_boundary_030e_slot2": {
+      "offset_hex": "0x017bcc",
+      "tag_hex": "0x030e",
+      "slot": 2,
+      "len": 28
+    },
+    "succeeding_boundary_0310_slot0": {
+      "offset_hex": "0x017c3c",
+      "tag_hex": "0x0310",
+      "slot": 0,
+      "len": 28
+    },
+    "fan_subtag_045d": {
+      "name": "Body Fan Candidate",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 261644,
+          "record_offset_hex": "0x03fe0c",
+          "value_offset": 261656,
+          "value_offset_hex": "0x03fe18",
+          "value_byte": 1,
+          "payload_hex": "01060606060606060606060601060600",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 261672,
+          "record_offset_hex": "0x03fe28",
+          "value_offset": 261684,
+          "value_offset_hex": "0x03fe34",
+          "value_byte": 1,
+          "payload_hex": "01060606060606060606060101010600",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 261700,
+          "record_offset_hex": "0x03fe44",
+          "value_offset": 261712,
+          "value_offset_hex": "0x03fe50",
+          "value_byte": 1,
+          "payload_hex": "01060606060606060606060606060600",
+          "flags_hex": "0x00010000"
+        }
+      ],
+      "values": [
+        1,
+        1,
+        1
+      ]
+    },
+    "group_z_subtag_0291": {
+      "name": "Secondary Accidental Variable Group Z",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 60348,
+          "record_offset_hex": "0x00ebbc",
+          "value_offset": 60360,
+          "value_offset_hex": "0x00ebc8",
+          "value_byte": 1,
+          "payload_hex": "01000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 60376,
+          "record_offset_hex": "0x00ebd8",
+          "value_offset": 60388,
+          "value_offset_hex": "0x00ebe4",
+          "value_byte": 1,
+          "payload_hex": "01000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 60404,
+          "record_offset_hex": "0x00ebf4",
+          "value_offset": 60416,
+          "value_offset_hex": "0x00ec00",
+          "value_byte": 1,
+          "payload_hex": "01000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        }
+      ],
+      "values": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "filepath": "/Users/lixiuqi/\u76f8\u673a\u529f\u80fd\u9a8c\u8bc1/outputs/lumix-s1m2-research-public/analysis/highres_20261008_02/config_1.DAT",
+    "container": {
+      "file_size": 9197409,
+      "magic": "Panasonic",
+      "model": "DC-S1M2",
+      "declared_payload_len": 9197360,
+      "checksum_byte": 229,
+      "checksum_hex": "0xe5",
+      "checksum_valid": true
+    },
+    "record_0004": {
+      "offset_hex": "0x0102cc",
+      "declared_length": 327684,
+      "subtype_flags": "0x00610045"
+    },
+    "target_subtag_030f": {
+      "name": "Save 1st Normal Picture Candidate",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 97256,
+          "record_offset_hex": "0x017be8",
+          "value_offset": 97268,
+          "value_offset_hex": "0x017bf4",
+          "value_byte": 1,
+          "payload_hex": "01010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 97284,
+          "record_offset_hex": "0x017c04",
+          "value_offset": 97296,
+          "value_offset_hex": "0x017c10",
+          "value_byte": 1,
+          "payload_hex": "01010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 97312,
+          "record_offset_hex": "0x017c20",
+          "value_offset": 97324,
+          "value_offset_hex": "0x017c2c",
+          "value_byte": 1,
+          "payload_hex": "01010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        }
+      ],
+      "state_label": "ON (1)",
+      "values": [
+        1,
+        1,
+        1
+      ]
+    },
+    "preceding_boundary_030e_slot2": {
+      "offset_hex": "0x017bcc",
+      "tag_hex": "0x030e",
+      "slot": 2,
+      "len": 28
+    },
+    "succeeding_boundary_0310_slot0": {
+      "offset_hex": "0x017c3c",
+      "tag_hex": "0x0310",
+      "slot": 0,
+      "len": 28
+    },
+    "fan_subtag_045d": {
+      "name": "Body Fan Candidate",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 261644,
+          "record_offset_hex": "0x03fe0c",
+          "value_offset": 261656,
+          "value_offset_hex": "0x03fe18",
+          "value_byte": 1,
+          "payload_hex": "01060606060606060606060601060600",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 261672,
+          "record_offset_hex": "0x03fe28",
+          "value_offset": 261684,
+          "value_offset_hex": "0x03fe34",
+          "value_byte": 1,
+          "payload_hex": "01060606060606060606060101010600",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 261700,
+          "record_offset_hex": "0x03fe44",
+          "value_offset": 261712,
+          "value_offset_hex": "0x03fe50",
+          "value_byte": 1,
+          "payload_hex": "01060606060606060606060606060600",
+          "flags_hex": "0x00010000"
+        }
+      ],
+      "values": [
+        1,
+        1,
+        1
+      ]
+    },
+    "group_z_subtag_0291": {
+      "name": "Secondary Accidental Variable Group Z",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 60348,
+          "record_offset_hex": "0x00ebbc",
+          "value_offset": 60360,
+          "value_offset_hex": "0x00ebc8",
+          "value_byte": 1,
+          "payload_hex": "01000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 60376,
+          "record_offset_hex": "0x00ebd8",
+          "value_offset": 60388,
+          "value_offset_hex": "0x00ebe4",
+          "value_byte": 1,
+          "payload_hex": "01000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 60404,
+          "record_offset_hex": "0x00ebf4",
+          "value_offset": 60416,
+          "value_offset_hex": "0x00ec00",
+          "value_byte": 1,
+          "payload_hex": "01000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        }
+      ],
+      "values": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "filepath": "/Users/lixiuqi/\u76f8\u673a\u529f\u80fd\u9a8c\u8bc1/outputs/lumix-s1m2-research-public/analysis/highres_firstnormal_off_20261008_03/config_1.DAT",
+    "container": {
+      "file_size": 9197409,
+      "magic": "Panasonic",
+      "model": "DC-S1M2",
+      "declared_payload_len": 9197360,
+      "checksum_byte": 217,
+      "checksum_hex": "0xd9",
+      "checksum_valid": true
+    },
+    "record_0004": {
+      "offset_hex": "0x0102cc",
+      "declared_length": 327684,
+      "subtype_flags": "0x00610045"
+    },
+    "target_subtag_030f": {
+      "name": "Save 1st Normal Picture Candidate",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 97256,
+          "record_offset_hex": "0x017be8",
+          "value_offset": 97268,
+          "value_offset_hex": "0x017bf4",
+          "value_byte": 2,
+          "payload_hex": "02010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 97284,
+          "record_offset_hex": "0x017c04",
+          "value_offset": 97296,
+          "value_offset_hex": "0x017c10",
+          "value_byte": 2,
+          "payload_hex": "02010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 97312,
+          "record_offset_hex": "0x017c20",
+          "value_offset": 97324,
+          "value_offset_hex": "0x017c2c",
+          "value_byte": 2,
+          "payload_hex": "02010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        }
+      ],
+      "state_label": "OFF (2)",
+      "values": [
+        2,
+        2,
+        2
+      ]
+    },
+    "preceding_boundary_030e_slot2": {
+      "offset_hex": "0x017bcc",
+      "tag_hex": "0x030e",
+      "slot": 2,
+      "len": 28
+    },
+    "succeeding_boundary_0310_slot0": {
+      "offset_hex": "0x017c3c",
+      "tag_hex": "0x0310",
+      "slot": 0,
+      "len": 28
+    },
+    "fan_subtag_045d": {
+      "name": "Body Fan Candidate",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 261644,
+          "record_offset_hex": "0x03fe0c",
+          "value_offset": 261656,
+          "value_offset_hex": "0x03fe18",
+          "value_byte": 4,
+          "payload_hex": "04060606060606060606060601060600",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 261672,
+          "record_offset_hex": "0x03fe28",
+          "value_offset": 261684,
+          "value_offset_hex": "0x03fe34",
+          "value_byte": 4,
+          "payload_hex": "04060606060606060606060101010600",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 261700,
+          "record_offset_hex": "0x03fe44",
+          "value_offset": 261712,
+          "value_offset_hex": "0x03fe50",
+          "value_byte": 4,
+          "payload_hex": "04060606060606060606060606060600",
+          "flags_hex": "0x00010000"
+        }
+      ],
+      "values": [
+        4,
+        4,
+        4
+      ]
+    },
+    "group_z_subtag_0291": {
+      "name": "Secondary Accidental Variable Group Z",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 60348,
+          "record_offset_hex": "0x00ebbc",
+          "value_offset": 60360,
+          "value_offset_hex": "0x00ebc8",
+          "value_byte": 1,
+          "payload_hex": "01000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 60376,
+          "record_offset_hex": "0x00ebd8",
+          "value_offset": 60388,
+          "value_offset_hex": "0x00ebe4",
+          "value_byte": 1,
+          "payload_hex": "01000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 60404,
+          "record_offset_hex": "0x00ebf4",
+          "value_offset": 60416,
+          "value_offset_hex": "0x00ec00",
+          "value_byte": 1,
+          "payload_hex": "01000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        }
+      ],
+      "values": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "filepath": "/Users/lixiuqi/\u76f8\u673a\u529f\u80fd\u9a8c\u8bc1/outputs/lumix-s1m2-research-public/analysis/highres_firstnormal_on_fan_20261008_04/config_1.DAT",
+    "container": {
+      "file_size": 9197409,
+      "magic": "Panasonic",
+      "model": "DC-S1M2",
+      "declared_payload_len": 9197360,
+      "checksum_byte": 217,
+      "checksum_hex": "0xd9",
+      "checksum_valid": true
+    },
+    "record_0004": {
+      "offset_hex": "0x0102cc",
+      "declared_length": 327684,
+      "subtype_flags": "0x00610045"
+    },
+    "target_subtag_030f": {
+      "name": "Save 1st Normal Picture Candidate",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 97256,
+          "record_offset_hex": "0x017be8",
+          "value_offset": 97268,
+          "value_offset_hex": "0x017bf4",
+          "value_byte": 1,
+          "payload_hex": "01010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 97284,
+          "record_offset_hex": "0x017c04",
+          "value_offset": 97296,
+          "value_offset_hex": "0x017c10",
+          "value_byte": 1,
+          "payload_hex": "01010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 97312,
+          "record_offset_hex": "0x017c20",
+          "value_offset": 97324,
+          "value_offset_hex": "0x017c2c",
+          "value_byte": 1,
+          "payload_hex": "01010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        }
+      ],
+      "state_label": "ON (1)",
+      "values": [
+        1,
+        1,
+        1
+      ]
+    },
+    "preceding_boundary_030e_slot2": {
+      "offset_hex": "0x017bcc",
+      "tag_hex": "0x030e",
+      "slot": 2,
+      "len": 28
+    },
+    "succeeding_boundary_0310_slot0": {
+      "offset_hex": "0x017c3c",
+      "tag_hex": "0x0310",
+      "slot": 0,
+      "len": 28
+    },
+    "fan_subtag_045d": {
+      "name": "Body Fan Candidate",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 261644,
+          "record_offset_hex": "0x03fe0c",
+          "value_offset": 261656,
+          "value_offset_hex": "0x03fe18",
+          "value_byte": 4,
+          "payload_hex": "04060606060606060606060601060600",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 261672,
+          "record_offset_hex": "0x03fe28",
+          "value_offset": 261684,
+          "value_offset_hex": "0x03fe34",
+          "value_byte": 4,
+          "payload_hex": "04060606060606060606060101010600",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 261700,
+          "record_offset_hex": "0x03fe44",
+          "value_offset": 261712,
+          "value_offset_hex": "0x03fe50",
+          "value_byte": 4,
+          "payload_hex": "04060606060606060606060606060600",
+          "flags_hex": "0x00010000"
+        }
+      ],
+      "values": [
+        4,
+        4,
+        4
+      ]
+    },
+    "group_z_subtag_0291": {
+      "name": "Secondary Accidental Variable Group Z",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 60348,
+          "record_offset_hex": "0x00ebbc",
+          "value_offset": 60360,
+          "value_offset_hex": "0x00ebc8",
+          "value_byte": 2,
+          "payload_hex": "02000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 60376,
+          "record_offset_hex": "0x00ebd8",
+          "value_offset": 60388,
+          "value_offset_hex": "0x00ebe4",
+          "value_byte": 2,
+          "payload_hex": "02000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 60404,
+          "record_offset_hex": "0x00ebf4",
+          "value_offset": 60416,
+          "value_offset_hex": "0x00ec00",
+          "value_byte": 2,
+          "payload_hex": "02000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        }
+      ],
+      "values": [
+        2,
+        2,
+        2
+      ]
+    }
+  },
+  {
+    "filepath": "/Users/lixiuqi/\u76f8\u673a\u529f\u80fd\u9a8c\u8bc1/outputs/lumix-s1m2-research-public/analysis/highres_firstnormal_off_fan_20261008_05/config_1.DAT",
+    "container": {
+      "file_size": 9197409,
+      "magic": "Panasonic",
+      "model": "DC-S1M2",
+      "declared_payload_len": 9197360,
+      "checksum_byte": 214,
+      "checksum_hex": "0xd6",
+      "checksum_valid": true
+    },
+    "record_0004": {
+      "offset_hex": "0x0102cc",
+      "declared_length": 327684,
+      "subtype_flags": "0x00610045"
+    },
+    "target_subtag_030f": {
+      "name": "Save 1st Normal Picture Candidate",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 97256,
+          "record_offset_hex": "0x017be8",
+          "value_offset": 97268,
+          "value_offset_hex": "0x017bf4",
+          "value_byte": 2,
+          "payload_hex": "02010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 97284,
+          "record_offset_hex": "0x017c04",
+          "value_offset": 97296,
+          "value_offset_hex": "0x017c10",
+          "value_byte": 2,
+          "payload_hex": "02010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 97312,
+          "record_offset_hex": "0x017c20",
+          "value_offset": 97324,
+          "value_offset_hex": "0x017c2c",
+          "value_byte": 2,
+          "payload_hex": "02010101010101010101010101010100",
+          "flags_hex": "0x00010000"
+        }
+      ],
+      "state_label": "OFF (2)",
+      "values": [
+        2,
+        2,
+        2
+      ]
+    },
+    "preceding_boundary_030e_slot2": {
+      "offset_hex": "0x017bcc",
+      "tag_hex": "0x030e",
+      "slot": 2,
+      "len": 28
+    },
+    "succeeding_boundary_0310_slot0": {
+      "offset_hex": "0x017c3c",
+      "tag_hex": "0x0310",
+      "slot": 0,
+      "len": 28
+    },
+    "fan_subtag_045d": {
+      "name": "Body Fan Candidate",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 261644,
+          "record_offset_hex": "0x03fe0c",
+          "value_offset": 261656,
+          "value_offset_hex": "0x03fe18",
+          "value_byte": 4,
+          "payload_hex": "04060606060606060606060601060600",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 261672,
+          "record_offset_hex": "0x03fe28",
+          "value_offset": 261684,
+          "value_offset_hex": "0x03fe34",
+          "value_byte": 4,
+          "payload_hex": "04060606060606060606060101010600",
+          "flags_hex": "0x00010000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 261700,
+          "record_offset_hex": "0x03fe44",
+          "value_offset": 261712,
+          "value_offset_hex": "0x03fe50",
+          "value_byte": 4,
+          "payload_hex": "04060606060606060606060606060600",
+          "flags_hex": "0x00010000"
+        }
+      ],
+      "values": [
+        4,
+        4,
+        4
+      ]
+    },
+    "group_z_subtag_0291": {
+      "name": "Secondary Accidental Variable Group Z",
+      "slots": [
+        {
+          "slot_index": 0,
+          "record_offset": 60348,
+          "record_offset_hex": "0x00ebbc",
+          "value_offset": 60360,
+          "value_offset_hex": "0x00ebc8",
+          "value_byte": 2,
+          "payload_hex": "02000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        },
+        {
+          "slot_index": 1,
+          "record_offset": 60376,
+          "record_offset_hex": "0x00ebd8",
+          "value_offset": 60388,
+          "value_offset_hex": "0x00ebe4",
+          "value_byte": 2,
+          "payload_hex": "02000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        },
+        {
+          "slot_index": 2,
+          "record_offset": 60404,
+          "record_offset_hex": "0x00ebf4",
+          "value_offset": 60416,
+          "value_offset_hex": "0x00ec00",
+          "value_byte": 2,
+          "payload_hex": "02000000000000000000000000000000",
+          "flags_hex": "0x00000000"
+        }
+      ],
+      "values": [
+        2,
+        2,
+        2
+      ]
+    }
+  }
+]

@@ -1,0 +1,498 @@
+{
+  "url": "https://panasonic.jp/support/share/eww/com/software/lumix_sync/dsc/ff/zip/S5m2_V31.zip",
+  "zip_bytes": 186598983,
+  "zip_sha256": "2e3a5ce15e71079a3cba6acf412393fba30270389409bf637f8d285fef7b518a",
+  "entry": "S5m2_V31.bin",
+  "bin_bytes": 205683712,
+  "bin_sha256": "3ce8a371c2a3c088e573a5716ab92dd6a095a780b1d58420d4d6856ed75afd58",
+  "model_bytes": "4d4338323233000000000000",
+  "component_count": 54,
+  "rows": [
+    {
+      "name": "boot",
+      "offset": 6144,
+      "size": 0,
+      "flags": 2,
+      "directory_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "loader1",
+      "offset": 6144,
+      "size": 131072,
+      "flags": 3,
+      "directory_digest": "02e33a94d319c4439e4261e615f8f8b459ba5f5e6bccdd60e2d6bad8b29e8bab",
+      "raw_sha256": "941b1ed761ee596acbafc0ce808216543d9fe7b16502fc59c37084dabfcfc4d9",
+      "tail": "7299ce21c75d2e47f28da725d64212e700000000000000000000000000000000"
+    },
+    {
+      "name": "loader2",
+      "offset": 137216,
+      "size": 0,
+      "flags": 2,
+      "directory_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "loader3",
+      "offset": 137216,
+      "size": 0,
+      "flags": 2,
+      "directory_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "storage",
+      "offset": 137216,
+      "size": 0,
+      "flags": 2,
+      "directory_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "program",
+      "offset": 137216,
+      "size": 97517568,
+      "flags": 3,
+      "directory_digest": "2e85b0e563a1e137197100add7ec8491aaacea4cc41c3c284d8e80fe2a475d9a",
+      "raw_sha256": "dbd48cd9b78e5ae07c187b21c1241111302eb8ff1eda7128ca9893a0f756396d",
+      "tail": "d83b69d61d086cd96ab20ab2346d393600000000000000000000000000000000"
+    },
+    {
+      "name": "postboot1_r",
+      "offset": 97654784,
+      "size": 6553600,
+      "flags": 3,
+      "directory_digest": "aa8a3b03d23748ea78d79dd378931a81b08d69298296a04319c2eaece639afe6",
+      "raw_sha256": "19b480115b78484b659920fe6a58e9f7a48086f3b0cd4b6c69c419bc20545129",
+      "tail": "91bd4820e3045dd6d349a43770b46be000000000000000000000000000000000"
+    },
+    {
+      "name": "postboot2_r",
+      "offset": 104208384,
+      "size": 131072,
+      "flags": 3,
+      "directory_digest": "f435427e3b3f3b273809e4251fe3645f74cead389d58e2fcdbfe765ba6aede45",
+      "raw_sha256": "790bb7fb8bed3af1c3ee557b1929bd4c0d99c3d6d31b5539893cf08f9c8d51a5",
+      "tail": "3ac1a435a940bd1e7384389880fcfa5900000000000000000000000000000000"
+    },
+    {
+      "name": "postboot3_r",
+      "offset": 104339456,
+      "size": 8257536,
+      "flags": 3,
+      "directory_digest": "f75b389921062dd1e2c49e377525536b8020db7ce66b93d8e169287c3a7d8387",
+      "raw_sha256": "400a24285e12df357d1f6679f539977ab8ca40f53a5e43f6a943b5906fef6285",
+      "tail": "9dd4ae31c0a23aadfaeb8b760857f9a700000000000000000000000000000000"
+    },
+    {
+      "name": "postboot4_r",
+      "offset": 112596992,
+      "size": 131072,
+      "flags": 3,
+      "directory_digest": "b3a4797684c60230487469705ba5e79eb5f5e9bc08264a8b7a868d57d5675b81",
+      "raw_sha256": "811cbc496096ac15be37391504539d5677def637c5ba730b7fac27091711bee4",
+      "tail": "a7f364cd80e402500d4ddec6a17fec7600000000000000000000000000000000"
+    },
+    {
+      "name": "postboot5_r",
+      "offset": 112728064,
+      "size": 1835008,
+      "flags": 3,
+      "directory_digest": "a6eb8fda6909f078c474a70f90d94998425cedaa80dda4a06eb0ccadf181653c",
+      "raw_sha256": "5bb4fc2a295382609d2c732871b81c6cd4a41ab274e2b01c59d5d62502f5a118",
+      "tail": "41edac0f9052e75133d9e68c507a30d200000000000000000000000000000000"
+    },
+    {
+      "name": "postboot1_r",
+      "offset": 114563072,
+      "size": 3801088,
+      "flags": 3,
+      "directory_digest": "f9c254b5fb761eed39b0253ef082f416944cb51b2ceb7238afbc508b4b31a2a4",
+      "raw_sha256": "1278fa96908c6618fa01041886bccf50abbb942967ea2a43df16a75d3f68050f",
+      "tail": "9a9b49d53c78eedd4983eccd08b1e73800000000000000000000000000000000"
+    },
+    {
+      "name": "postboot3_r",
+      "offset": 118364160,
+      "size": 14024704,
+      "flags": 3,
+      "directory_digest": "7b5d7fd4a69316ac2b4b7aad8250af2f35c758b67b31db17d37468dd88a34286",
+      "raw_sha256": "b107394233d249c2186a96667f96726ec2b400438dcd5c01bdc801b69c9baed6",
+      "tail": "da9fa36df05dcda56187b676e10d6d9800000000000000000000000000000000"
+    },
+    {
+      "name": "postboot5_r",
+      "offset": 132388864,
+      "size": 1835008,
+      "flags": 3,
+      "directory_digest": "54e78624be0570843718cbe63b2d0259803a527276a15515529bf0bd180dbbbf",
+      "raw_sha256": "f5f1f336981a990c036ca4feaa6cacb6c7382a976f757acd2d863002f1a49907",
+      "tail": "b0c6d37894d0c8b73540f6bba4259e7100000000000000000000000000000000"
+    },
+    {
+      "name": "eep_ow_a",
+      "offset": 134223872,
+      "size": 131072,
+      "flags": 3,
+      "directory_digest": "24455f01ae339c6b866415d6bac5f47e2187e34dfdb645248594b24813bfdb0f",
+      "raw_sha256": "dcee487bff44f873459d5e62c97f392d6b4405d17e1903fcc5e4cdc668f1077e",
+      "tail": "2226961963d777e33ce9f976f44d057f00000000000000000000000000000000"
+    },
+    {
+      "name": "eep_ow_b",
+      "offset": 134354944,
+      "size": 131072,
+      "flags": 3,
+      "directory_digest": "24455f01ae339c6b866415d6bac5f47e2187e34dfdb645248594b24813bfdb0f",
+      "raw_sha256": "5ab8e0123e947368408b4c90576ad519054e2cc7556330403d72b363a8625de8",
+      "tail": "6ca768eb2d2af9e867accab76e8d0dd400000000000000000000000000000000"
+    },
+    {
+      "name": "eep_adj",
+      "offset": 134486016,
+      "size": 131072,
+      "flags": 3,
+      "directory_digest": "fc60fe2aaab388cc0ac86215fde8de5c30a131c312605768916491de0b9588b4",
+      "raw_sha256": "3e9c28bc4a0719f913123b2f367b30a2f9fa3e788caf6d2b8c7c4f3ed0d74bce",
+      "tail": "a3066db127ffc7e2cb83ec378fdf212400000000000000000000000000000000"
+    },
+    {
+      "name": "eep_fix",
+      "offset": 134617088,
+      "size": 131072,
+      "flags": 3,
+      "directory_digest": "ed76389c54977049c5ea71a181609b8949929231afe82a6aea4b5de3bd924f20",
+      "raw_sha256": "ed148a414a7794eba3b5fac7409392131cee26a0b90c3cc93eb9a2e4d09a9482",
+      "tail": "6187061f40fe6a7b43171dec044923e100000000000000000000000000000000"
+    },
+    {
+      "name": "eep_act_a",
+      "offset": 134748160,
+      "size": 512,
+      "flags": 3,
+      "directory_digest": "3bdcb4d0d03318c64c76be1f413395e666aec061f62236ebe6f757cac84a88d0",
+      "raw_sha256": "3394612e87638ffc27a25266ffaa74ba52e664865641400c5924e122ba7a4cbe",
+      "tail": "fde2bc5ae9f8a7590f0ab60fe81557f200000000000000000000000000000000"
+    },
+    {
+      "name": "eep_act_b",
+      "offset": 134748672,
+      "size": 512,
+      "flags": 3,
+      "directory_digest": "3bdcb4d0d03318c64c76be1f413395e666aec061f62236ebe6f757cac84a88d0",
+      "raw_sha256": "95a18064df85c5549c81acf9cd0926dcd74332be52e8599a63e24e41645a6645",
+      "tail": "b81deb21772f362eb2a5dfd26e7b348a00000000000000000000000000000000"
+    },
+    {
+      "name": "eep_exp_a",
+      "offset": 134749184,
+      "size": 12288,
+      "flags": 3,
+      "directory_digest": "9eb84b8d7df42801a6038c54bdf91a750f8397bdd387e2ad7518ccf466659b12",
+      "raw_sha256": "9d38420200ea6827b3c34fe78948b11898fac79ee08d9c11035962de24f0b598",
+      "tail": "1b8beecf0eca1dbd7d4304ecd94ea69600000000000000000000000000000000"
+    },
+    {
+      "name": "eep_exp_b",
+      "offset": 134761472,
+      "size": 12288,
+      "flags": 3,
+      "directory_digest": "9eb84b8d7df42801a6038c54bdf91a750f8397bdd387e2ad7518ccf466659b12",
+      "raw_sha256": "5101e4ceef0996532234e8c2e9494300a489a5acdc4540286641b3cb8c16e709",
+      "tail": "413b9e430952c6de2d7832445735798700000000000000000000000000000000"
+    },
+    {
+      "name": "history",
+      "offset": 134773760,
+      "size": 262144,
+      "flags": 3,
+      "directory_digest": "b52fe951cf1c915661f8c2d5735fcd408284771260720143babb26487ba56997",
+      "raw_sha256": "b9bdec401fb7c166a7b9d83a3cc95ec5427a70159754acd429a18a53ecb560b6",
+      "tail": "a560a5b559313bc477fbebaff9bd82bd00000000000000000000000000000000"
+    },
+    {
+      "name": "lens_hist",
+      "offset": 135035904,
+      "size": 393216,
+      "flags": 2,
+      "directory_digest": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+      "raw_sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "music",
+      "offset": 135429120,
+      "size": 3538944,
+      "flags": 3,
+      "directory_digest": "5dcc34ae10f9d7be2150752d7fbf4e7bae58d585ea3b3eeff93e985cf557c723",
+      "raw_sha256": "5fa5452903ddae2ab5fb57ae650e9c052a45e240054b0ad954552cc18b13babe",
+      "tail": "84a77368ac59fd0f0abae9618405ce3700000000000000000000000000000000"
+    },
+    {
+      "name": "osdover",
+      "offset": 138968064,
+      "size": 16252928,
+      "flags": 3,
+      "directory_digest": "a9fed254391772fba5583e19dd8f6780197b61e85d5f6b0486214e19fb1d280d",
+      "raw_sha256": "92bab9723132ad7996fa5fe84295d5c23136697aa09616220691c88fcba4ab92",
+      "tail": "9d0ac88a1a8e05d86b5a1f32a8fef2c400000000000000000000000000000000"
+    },
+    {
+      "name": "osddata",
+      "offset": 155220992,
+      "size": 18612224,
+      "flags": 3,
+      "directory_digest": "3c08181a4b1705c733110b6ae2809450ea8e98fabb12505b953c7940c42823ec",
+      "raw_sha256": "279c9603237b0e50b48dbbb6a982c46e73b216800bb39e7d8ea755b0e0b77629",
+      "tail": "592e992d0c1b961edc2df84270877bda00000000000000000000000000000000"
+    },
+    {
+      "name": "wifi_info",
+      "offset": 173833216,
+      "size": 131072,
+      "flags": 2,
+      "directory_digest": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+      "raw_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "wifi2_info",
+      "offset": 173964288,
+      "size": 262144,
+      "flags": 2,
+      "directory_digest": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+      "raw_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "menu_save",
+      "offset": 174226432,
+      "size": 262144,
+      "flags": 2,
+      "directory_digest": "3b874d3ba46c638fc3094f8e92fb744ca974893873f8885f54e23760f9b6311b",
+      "raw_sha256": "3b874d3ba46c638fc3094f8e92fb744ca974893873f8885f54e23760f9b6311b",
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "kizu_data",
+      "offset": 174488576,
+      "size": 524288,
+      "flags": 2,
+      "directory_digest": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+      "raw_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "vkizu_data",
+      "offset": 175012864,
+      "size": 6291456,
+      "flags": 2,
+      "directory_digest": "b69dae56a14d1a8314ed40664c4033ea0a550eea2673e04df42a66ac6b9faf2c",
+      "raw_sha256": "b69dae56a14d1a8314ed40664c4033ea0a550eea2673e04df42a66ac6b9faf2c",
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "usbcharge",
+      "offset": 181304320,
+      "size": 131072,
+      "flags": 3,
+      "directory_digest": "c6f871a63ec7f1aa618e929df0eb315ef18690b8e750fc1415e7c16513451627",
+      "raw_sha256": "2bdd5fdf31ad3256583fee4ade45c0e679b9fe4d4d2f9fa4f6b3b3c6182046ec",
+      "tail": "b9f8ba850870933f21826a847e0dd05c00000000000000000000000000000000"
+    },
+    {
+      "name": "hm_c_ddr",
+      "offset": 181435392,
+      "size": 3145728,
+      "flags": 3,
+      "directory_digest": "b26f3b3d07c411f1b7e641b03aec415f8ae2068edd8746b8ac71d50db143415f",
+      "raw_sha256": "9eb461463db65a6adfc5b2a00952d27982bd36d65e4b488298ce0e818f166815",
+      "tail": "86413a76163a95d2ef7a6a5cd1eb1f0d00000000000000000000000000000000"
+    },
+    {
+      "name": "hm_d_ddr",
+      "offset": 184581120,
+      "size": 1048576,
+      "flags": 3,
+      "directory_digest": "e9688a52f4371814874321f244516d809d36d8fa16f1895b26a6e0224de734e2",
+      "raw_sha256": "44757bbe17acc12069b88fa79bcd3728768a225336a0c903534e0dfa0ebd39ce",
+      "tail": "8d173b56038f89bfe9cfd58f122c8d7900000000000000000000000000000000"
+    },
+    {
+      "name": "hr_c_prog",
+      "offset": 185629696,
+      "size": 65536,
+      "flags": 3,
+      "directory_digest": "0716efd7bafd01e9d40851d62af78aa9628c22e7b40eb55abd4246f3ebae3d6f",
+      "raw_sha256": "79d638a2399200cd930869001e17031a02e4db1410251ab2d0b740c5710e4484",
+      "tail": "662180a29aec26412f2d0910732b803400000000000000000000000000000000"
+    },
+    {
+      "name": "hr_d_prog",
+      "offset": 185695232,
+      "size": 524288,
+      "flags": 3,
+      "directory_digest": "7d5cf24140bb821ce34a3d3e64fb17e6c54da9961fc72a5d2c067b455ac1ecf5",
+      "raw_sha256": "713e478abd505a6a0ea8153c1cd51a931f8a64b12ca06f40a1172390c7ad88b6",
+      "tail": "6ce5834315a4a33b2b1d38d9ad5a414f00000000000000000000000000000000"
+    },
+    {
+      "name": "hr_c_ddr",
+      "offset": 186219520,
+      "size": 524288,
+      "flags": 3,
+      "directory_digest": "49c23024aa30eea861354532c98840f9d603c8b2d737e969db7c3cdfec019cdb",
+      "raw_sha256": "3097503d8ddb2ee2142201c4d931aa45f7d0f8aa13b0332cb4f64f2c69ceaef1",
+      "tail": "addae03ad315d9aff707511aba79e7ef00000000000000000000000000000000"
+    },
+    {
+      "name": "pzm_data",
+      "offset": 186743808,
+      "size": 65536,
+      "flags": 3,
+      "directory_digest": "c197c49bd583974d8d2c603c7948fb585a3a3f9b7374d0c6086d69069ec61841",
+      "raw_sha256": "c7e53fde775f149fd964a39b847c345756975034e5e848264fc031a359093d8a",
+      "tail": "c120063d2a1d05f816b9aae6a8a9f28300000000000000000000000000000000"
+    },
+    {
+      "name": "xtk",
+      "offset": 186809344,
+      "size": 131072,
+      "flags": 2,
+      "directory_digest": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+      "raw_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "lut_data",
+      "offset": 186940416,
+      "size": 2228224,
+      "flags": 2,
+      "directory_digest": "7b15c3f99be0c5f9ae0a0ecdc21d3a8c4dc8006aed712338a0ad06aa35382793",
+      "raw_sha256": "7b15c3f99be0c5f9ae0a0ecdc21d3a8c4dc8006aed712338a0ad06aa35382793",
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "lut2_data",
+      "offset": 189168640,
+      "size": 8781824,
+      "flags": 2,
+      "directory_digest": "6217bc4155fa384f23c6e11e7823877d36d13419e7941b5bcd25ed8e9d4644ee",
+      "raw_sha256": "6217bc4155fa384f23c6e11e7823877d36d13419e7941b5bcd25ed8e9d4644ee",
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "dsp_kizu_c",
+      "offset": 197950464,
+      "size": 65536,
+      "flags": 3,
+      "directory_digest": "abfd6d9ae6df5b822b1450f56161314ee492bc445455059099dd534b53f12a5d",
+      "raw_sha256": "7a70d0c3ad183cb8010bf6affa6a42345874386d3feca1e9f56e95a9bed710dd",
+      "tail": "72ba89d4afdd2951d6ff6c5574b2354500000000000000000000000000000000"
+    },
+    {
+      "name": "dsp_kizu_d",
+      "offset": 198016000,
+      "size": 65536,
+      "flags": 3,
+      "directory_digest": "d9ffe60b68d04269ee8143bd44cbebc4c71eac3dd7f2c12bc6554d894a4e74cc",
+      "raw_sha256": "0bbb51b4ff0fba4c6b550c091f4736803952734417249379269a9a5204f9ed6a",
+      "tail": "d6aa837b43cf485a2fa3955dab57da2d00000000000000000000000000000000"
+    },
+    {
+      "name": "dsp_eisldc_",
+      "offset": 198081536,
+      "size": 65536,
+      "flags": 3,
+      "directory_digest": "e1ccd458ff3c41024849254cd07daa97884c59411a535383545c69b52e4965fa",
+      "raw_sha256": "5acde818ce179f8316baf474de54b48dd11b6df9309b041ed1f1d04d5e5d6db0",
+      "tail": "76465892add06cc6fe505508a3554d1900000000000000000000000000000000"
+    },
+    {
+      "name": "dsp_eisldc_",
+      "offset": 198147072,
+      "size": 65536,
+      "flags": 3,
+      "directory_digest": "6de3e8b02d6e85fe678fbfa5990863afe943a460b41bf0d28d26dac7a276ff5d",
+      "raw_sha256": "a875c1336e0c6471de8782bc0c508f73901e75d135ff89d9cf4bd016ecbccf61",
+      "tail": "e9df4afd9f5024fa565657b871954dee00000000000000000000000000000000"
+    },
+    {
+      "name": "raw_kizu_c",
+      "offset": 198212608,
+      "size": 65536,
+      "flags": 3,
+      "directory_digest": "ab8e72a505ead725659ce7a4d35ca3700e081aef8cf82193c8e8350d2023f984",
+      "raw_sha256": "954eab6e921338723a575f285aa3d3bde9df232db84f88e7347bf4283d5948ef",
+      "tail": "ef365993bf7c34730d6de0548035dc3700000000000000000000000000000000"
+    },
+    {
+      "name": "raw_kizu_d",
+      "offset": 198278144,
+      "size": 65536,
+      "flags": 3,
+      "directory_digest": "a1f452647741311aa6acea466010498d102777379786a8dec324e3aad4ef4af6",
+      "raw_sha256": "28ccc7296b37d994bc0b76e36dea54956fe8f6e6236191275d5c171c54c6afdf",
+      "tail": "853b732aa38ff4d7beb888d37cb7568900000000000000000000000000000000"
+    },
+    {
+      "name": "hm_d_nw_1st",
+      "offset": 198343680,
+      "size": 1441792,
+      "flags": 3,
+      "directory_digest": "6f8c3c074542db9423d5ca3bc8d75f679d197255c57d00334d34697d2c532d6a",
+      "raw_sha256": "ae545a77895880fefff25248643f113c929d2f234c5458a9b31aeb0438e7d2c7",
+      "tail": "ba3ba06c9edf2113af1c9e9e41dd2ed200000000000000000000000000000000"
+    },
+    {
+      "name": "hm_d_nw_2nd",
+      "offset": 199785472,
+      "size": 1441792,
+      "flags": 3,
+      "directory_digest": "7bcaadb2117535a88646cdc3f4b07b9a115f38759461a3116b7acebc1fe280d3",
+      "raw_sha256": "8dd4120c60a1f193e30d649be6d3dac95a7a6841d0b1dfaf1b01009ea9dfbffc",
+      "tail": "f492d23cc4f5b2366db1e0c0b8f3cbe900000000000000000000000000000000"
+    },
+    {
+      "name": "hm_d_nw_3rd",
+      "offset": 201227264,
+      "size": 1441792,
+      "flags": 3,
+      "directory_digest": "de5df9b9af2138703210f21d212b407574b30fd44d1ce6d3bf463363546ab3b3",
+      "raw_sha256": "ebe085e87ee5a5363e8caaa42e229502205f7b40ef93dd4e355f84adb0c95d43",
+      "tail": "08c8c6c65eab553e336be8856c66348b00000000000000000000000000000000"
+    },
+    {
+      "name": "hm_d_nw_4th",
+      "offset": 202669056,
+      "size": 1441792,
+      "flags": 3,
+      "directory_digest": "8bfce07fd527f00ea247545521f5211a2d4f036c675752431f1b1b3eadaf6f4b",
+      "raw_sha256": "d0ed3904155224e93061120c7cceaeca2de24b6a991cbe4b206e7f91c08e1541",
+      "tail": "f9ae5b09db1f28aab93e5e9c33b294f900000000000000000000000000000000"
+    },
+    {
+      "name": "hm_d_nw_5th",
+      "offset": 204110848,
+      "size": 1441792,
+      "flags": 3,
+      "directory_digest": "db04628359bbed47e5c1016bd32e3e86b70fd79186a812d1de12fe200a908a9c",
+      "raw_sha256": "b714ff615820994c09ef3c83463bf6279f50f4883e551a925069760ca453a1a2",
+      "tail": "25d089407463877bef9fde86c5baedd000000000000000000000000000000000"
+    },
+    {
+      "name": "mbr_dummy_d",
+      "offset": 205552640,
+      "size": 131072,
+      "flags": 2,
+      "directory_digest": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+      "raw_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+      "tail": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ]
+}

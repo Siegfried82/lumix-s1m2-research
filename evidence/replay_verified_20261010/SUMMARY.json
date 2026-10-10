@@ -1,0 +1,17 @@
+{
+  "device_access": false,
+  "network_access": false,
+  "stages": {
+    "archive_and_public_tests": "[TEST] Creating synthetic memory dump slice with S1M2 structures...\n[PASS] Dump parser correctly extracted shared memory table and RAW frame markers.\nPASS: 534 original experiment files match public SHA-256\nPASS: dump synthetic test, real PTP property samples\nFirmware round-trip requires separately obtained S1m2_V14.bin and extracted components.\nNo device functionality is claimed by these tests.\n...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+    "capabilities": {
+      "files": 26,
+      "fully_traversed_subtags": 144
+    },
+    "settings": {
+      "samples": 5,
+      "note": "sample 03 changes fan too; use 04/05 controlled comparison"
+    },
+    "maintenance_comparison": "{\"compared\": 12, \"normalized_equal\": 7}\n",
+    "firmware_toolchain_suites": "CHECK: Saved real PTP property samples\nCHECK: Synthetic parser data only\n[TEST] Creating synthetic memory dump slice with S1M2 structures...\n[PASS] Dump parser correctly extracted shared memory table and RAW frame markers.\nCHECK: Original UPD payload round trip only\n=================================================================\n  Panasonic LUMIX S1M2 Toolchain Integration Tests                \n=================================================================\n[TEST 1/3] Verifying reference unpacked components...\n[PASS] Reference unpacked components verified cleanly.\n[TEST 2/3] Testing bit-exact repacking from reference components...\n[PASS] Repacked binary is 100% BIT-IDENTICAL to S1m2_V14.bin (SHA-256: e91620854dd43513...)\n[TEST 3/3] Testing full unpack -> verify -> repack pipeline...\n[PASS] Full pipeline test passed successfully with 100% fidelity.\n=================================================================\n  ALL TOOLCHAIN TESTS PASSED                                     \n=================================================================\nPASS: three published offline suites. No camera feature, ABI, RAM dump or installability verified.\n...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+  }
+}

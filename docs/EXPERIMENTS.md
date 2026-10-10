@@ -2,7 +2,6 @@
 
 [复现指南](REPRODUCE.md)；[输入来源与散列](../evidence/FILE_MANIFEST.csv)。仅列松下系统逆向范围内的公开文件。
 
-
 ## 研究概览
 
 - [S1M2固件逆向_阶段结果汇总.md](../S1M2%E5%9B%BA%E4%BB%B6%E9%80%86%E5%90%91_%E9%98%B6%E6%AE%B5%E7%BB%93%E6%9E%9C%E6%B1%87%E6%80%BB.md) — scope-edited
@@ -1032,10 +1031,6 @@
 
 - [analysis/维护接口跨版本比较_20261008.md](../analysis/%E7%BB%B4%E6%8A%A4%E6%8E%A5%E5%8F%A3%E8%B7%A8%E7%89%88%E6%9C%AC%E6%AF%94%E8%BE%83_20261008.md) — published
 
-## s1m2_firmware_project/CMakeLists.txt
-
-- [s1m2_firmware_project/CMakeLists.txt](../s1m2_firmware_project/CMakeLists.txt) — scope-edited
-
 ## s1m2_firmware_project/Makefile
 
 - [s1m2_firmware_project/Makefile](../s1m2_firmware_project/Makefile) — scope-edited
@@ -1044,40 +1039,15 @@
 
 - [s1m2_firmware_project/README.md](../s1m2_firmware_project/README.md) — scope-edited
 
-## s1m2_firmware_project/dts
-
-- [s1m2_firmware_project/dts/s1m2-m20v-gpio.h](../s1m2_firmware_project/dts/s1m2-m20v-gpio.h) — published
-- [s1m2_firmware_project/dts/s1m2-m20v-rtos.h](../s1m2_firmware_project/dts/s1m2-m20v-rtos.h) — published
-- [s1m2_firmware_project/dts/s1m2-socionext-m20v.dts](../s1m2_firmware_project/dts/s1m2-socionext-m20v.dts) — published
-- [s1m2_firmware_project/dts/s1m2-socionext-m20v.dtsi](../s1m2_firmware_project/dts/s1m2-socionext-m20v.dtsi) — published
-
 ## s1m2_firmware_project/include
 
-- [s1m2_firmware_project/include/s1m2_dsp_xm6.h](../s1m2_firmware_project/include/s1m2_dsp_xm6.h) — scope-edited
-- [s1m2_firmware_project/include/s1m2_eeprom.h](../s1m2_firmware_project/include/s1m2_eeprom.h) — published
-- [s1m2_firmware_project/include/s1m2_ipcu.h](../s1m2_firmware_project/include/s1m2_ipcu.h) — published
-- [s1m2_firmware_project/include/s1m2_mmap.h](../s1m2_firmware_project/include/s1m2_mmap.h) — published
-- [s1m2_firmware_project/include/s1m2_npu_cnn.h](../s1m2_firmware_project/include/s1m2_npu_cnn.h) — published
 - [s1m2_firmware_project/include/s1m2_ptp_proto.h](../s1m2_firmware_project/include/s1m2_ptp_proto.h) — published
 - [s1m2_firmware_project/include/s1m2_types.h](../s1m2_firmware_project/include/s1m2_types.h) — published
-
-## s1m2_firmware_project/ld
-
-- [s1m2_firmware_project/ld/dsp_xm6.ld](../s1m2_firmware_project/ld/dsp_xm6.ld) — published
-- [s1m2_firmware_project/ld/linux_memory.ld](../s1m2_firmware_project/ld/linux_memory.ld) — published
-- [s1m2_firmware_project/ld/rtos_memory.ld](../s1m2_firmware_project/ld/rtos_memory.ld) — published
-
-## s1m2_firmware_project/src
-
-- [s1m2_firmware_project/src/ipcu_protocol.c](../s1m2_firmware_project/src/ipcu_protocol.c) — published
-- [s1m2_firmware_project/src/main_verify.c](../s1m2_firmware_project/src/main_verify.c) — published
-- [s1m2_firmware_project/src/rtos_entry_stub.c](../s1m2_firmware_project/src/rtos_entry_stub.c) — published
 
 ## s1m2_firmware_project/tests
 
 - [s1m2_firmware_project/tests/run_all_tests.py](../s1m2_firmware_project/tests/run_all_tests.py) — scope-edited
 - [s1m2_firmware_project/tests/test_dump_parser.py](../s1m2_firmware_project/tests/test_dump_parser.py) — published
-- [s1m2_firmware_project/tests/test_headers.c](../s1m2_firmware_project/tests/test_headers.c) — published
 - [s1m2_firmware_project/tests/test_ptp_wire_parser.py](../s1m2_firmware_project/tests/test_ptp_wire_parser.py) — published
 - [s1m2_firmware_project/tests/test_toolchain.py](../s1m2_firmware_project/tests/test_toolchain.py) — published
 
@@ -1088,3 +1058,96 @@
 - [s1m2_firmware_project/tools/repack_upd.py](../s1m2_firmware_project/tools/repack_upd.py) — published
 - [s1m2_firmware_project/tools/unpack_upd.py](../s1m2_firmware_project/tools/unpack_upd.py) — published
 - [s1m2_firmware_project/tools/verify_components.py](../s1m2_firmware_project/tools/verify_components.py) — published
+
+## 2026-10-10 清理补充
+
+- [存储布局限定核验](../analysis/S1M2存储布局_Codex核验_20261009.md)
+- 已移除无本机 ABI 证据的生成硬件结构与功能存根；历史报告原路径仅保留更正说明。
+
+## 2026-10-10 新增独立研究记录
+
+- `analysis/sources/lumix_sync_static/DLNA原生直接调用核验_20261010.md`
+- `analysis/sources/lumix_sync_static/DLNA浏览调用核验_20261010.md`
+- `analysis/sources/lumix_sync_static/DLNA跳板与SOAP链核验_20261010.md`
+- `analysis/sources/lumix_sync_static/DumpDownloadDex.java`
+- `analysis/sources/lumix_sync_static/JNI导出对应核验_20261010.md`
+- `analysis/sources/lumix_sync_static/ListNativeDex.java`
+- `analysis/sources/lumix_sync_static/audit_dlna_branches.py`
+- `analysis/sources/lumix_sync_static/audit_dlna_implementation.py`
+- `analysis/sources/lumix_sync_static/audit_dlna_implementation_plt.py`
+- `analysis/sources/lumix_sync_static/audit_dlna_plt.py`
+- `analysis/sources/lumix_sync_static/audit_jni_exports.py`
+- `analysis/sources/lumix_sync_static/auth_source_inventory.json`
+- `analysis/sources/lumix_sync_static/contributor_input_check.json`
+- `analysis/sources/lumix_sync_static/dex_browse_core_references.jsonl`
+- `analysis/sources/lumix_sync_static/dex_camsetting_read_references.json`
+- `analysis/sources/lumix_sync_static/dex_cgi_references.jsonl`
+- `analysis/sources/lumix_sync_static/dex_dlna_references.jsonl`
+- `analysis/sources/lumix_sync_static/dex_handshake_transform_references.jsonl`
+- `analysis/sources/lumix_sync_static/dlna_browse_implementation_branches.json`
+- `analysis/sources/lumix_sync_static/dlna_direct_branches.json`
+- `analysis/sources/lumix_sync_static/dlna_implementation_plt.json`
+- `analysis/sources/lumix_sync_static/dlna_jni_mapping.json`
+- `analysis/sources/lumix_sync_static/dlna_plt_resolved.json`
+- `analysis/sources/lumix_sync_static/firmware_send_source_hashes.json`
+- `analysis/sources/lumix_sync_static/jni_export_inventory.json`
+- `analysis/sources/lumix_sync_static/manifest_metadata.json`
+- `analysis/sources/lumix_sync_static/native_inventory.json`
+- `analysis/sources/lumix_sync_static/native_methods.jsonl`
+- `analysis/sources/lumix_sync_static/provenance.json`
+- `analysis/sources/lumix_sync_static/read_manifest.py`
+- `analysis/sources/lumix_sync_static/signature.jsonl`
+- `analysis/sources/lumix_sync_static/下载器原始DEX复核_20261010.md`
+- `analysis/sources/lumix_sync_static/原生接口核验_20261010.md`
+- `analysis/sources/lumix_sync_static/取得与鉴权链核验.md`
+- `analysis/sources/lumix_sync_static/固件发送链核验_20261010.md`
+- `analysis/sources/lumix_sync_static/维修样本输入缺口_20261010.md`
+- `analysis/sources/lumix_sync_static/配置读回链核验_20261010.md`
+- `analysis/sources/lumix_sync_static/official_firmware_list/S5M2_S1M2_comparison.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/S5M2_common_content_checks.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/S5M2_full_inventory.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/S5M2完整样本核验_20261010.md`
+- `analysis/sources/lumix_sync_static/official_firmware_list/S5_S1M2_comparison.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/S5_S1M2结构对照_20261010.md`
+- `analysis/sources/lumix_sync_static/official_firmware_list/S5_container_inventory.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/S5_zip_inventory.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/audit_full_oss.py`
+- `analysis/sources/lumix_sync_static/official_firmware_list/audit_numeric_oss.py`
+- `analysis/sources/lumix_sync_static/official_firmware_list/check_config_plaintext.py`
+- `analysis/sources/lumix_sync_static/official_firmware_list/common_digest_checks.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/compare_s5m2.py`
+- `analysis/sources/lumix_sync_static/official_firmware_list/config_plaintext_window_check.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/fetch_s5m2.py`
+- `analysis/sources/lumix_sync_static/official_firmware_list/full_oss_keyword_audit.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/full_oss_keyword_summary.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/full_oss_numeric_audit.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/info_results.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/oss_platform_inventory.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/probe_small_plaintext.py`
+- `analysis/sources/lumix_sync_static/official_firmware_list/probe_tv_keys.py`
+- `analysis/sources/lumix_sync_static/official_firmware_list/protected_twin_checks.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/provenance.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/small_plaintext_probe.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/tv_public_key_probe.json`
+- `analysis/sources/lumix_sync_static/official_firmware_list/公开电视解码器对照_20261010.md`
+- `analysis/sources/lumix_sync_static/official_firmware_list/完整开源包入口检索_20261010.md`
+- `analysis/sources/lumix_sync_static/official_firmware_list/官方样本对照_20261010.md`
+- `analysis/sources/lumix_sync_static/official_firmware_list/小组件重复项核验_20261010.md`
+- `analysis/sources/lumix_sync_static/official_firmware_list/开源平台调用核验_20261010.md`
+- `analysis/sources/lumix_sync_static/official_firmware_list/数值包头检索_20261010.md`
+- `analysis/sources/lumix_sync_static/official_firmware_list/配置与小组件对照_20261010.md`
+- `analysis/partial_object_host_audit_20261010/provenance.json`
+- `analysis/partial_object_host_audit_20261010/结论.md`
+- `analysis/backup_request_audit_20261010/callers.json`
+- `analysis/backup_request_audit_20261010/结论.md`
+- `analysis/windows_only_exports_audit_20261010/export_regions.json`
+- `analysis/windows_only_exports_audit_20261010/结论.md`
+- `analysis/tether_opcode_inventory_20261010/inventory.json`
+- `analysis/tether_opcode_inventory_20261010/结论.md`
+- `analysis/tether_opcode_inventory_20261010/complete_coverage/coverage.json`
+- `analysis/tether_opcode_inventory_20261010/complete_coverage/rec_ctrl_app_callers.json`
+- `analysis/new_pr_review_20261010/S1M2适用性核验.md`
+- `analysis/new_pr_review_20261010/初审.md`
+- `analysis/new_pr_review_20261010/source_model_comparison.json`
+- `analysis/new_pr_review_20261010/read_usb_inventory.py`
+- `analysis/object_metadata_full_20261010/结论.md`

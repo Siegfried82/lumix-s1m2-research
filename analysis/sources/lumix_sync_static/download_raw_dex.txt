@@ -1,0 +1,398 @@
+METHOD <init>
+0000 invoke-direct ref=LN5/l$b;-><init>()V regs=0,0,0,0,0 count=1
+0003 iput-object A=v1 B=v0 ref=LH5/c;->f:Landroid/content/Context;
+0005 iput-object A=v2 B=v0 ref=LH5/c;->g:Ljava/lang/String;
+0007 iput-object A=v3 B=v0 ref=LH5/c;->h:Ljava/lang/String;
+0009 iput-object A=v4 B=v0 ref=LH5/c;->i:Ljava/lang/String;
+000b return-void
+METHOD o
+0000 iget-object A=v0 B=v0 ref=LH5/c;->g:Ljava/lang/String;
+0002 return-object A=v0
+METHOD p
+0000 iget-object A=v0 B=v0 ref=LH5/c;->h:Ljava/lang/String;
+0002 return-object A=v0
+METHOD q
+0000 iget-object A=v0 B=v0 ref=LH5/c;->i:Ljava/lang/String;
+0002 return-object A=v0
+METHOD r
+0000 iget-object A=v0 B=v0 ref=LH5/c;->f:Landroid/content/Context;
+0002 return-object A=v0
+METHOD s
+0000 invoke-static ref=Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File; regs=0,0,0,0,0 count=0
+0003 move-result-object A=v5
+0004 invoke-virtual ref=Ljava/io/File;->getPath()Ljava/lang/String; regs=5,0,0,0,0 count=1
+0007 move-result-object A=v5
+0008 if-eqz A=v5 target=0019
+000a new-instance A=v0 ref=Landroid/os/StatFs;
+000c invoke-direct ref=Landroid/os/StatFs;-><init>(Ljava/lang/String;)V regs=0,5,0,0,0 count=2
+000f invoke-virtual ref=Landroid/os/StatFs;->getBlockSizeLong()J regs=0,0,0,0,0 count=1
+0012 move-result-wide A=v1
+0013 invoke-virtual ref=Landroid/os/StatFs;->getAvailableBlocksLong()J regs=0,0,0,0,0 count=1
+0016 move-result-wide A=v3
+0017 mul-long/2addr A=v1 B=v3
+0018 goto target=001b
+0019 const-wide/16 A=v1 literal=-1
+001b cmp-long A=v5 B=v1
+001d if-lez A=v5 target=0021
+001f const/4 A=v5 literal=1
+0020 return A=v5
+0021 const/4 A=v5 literal=0
+0022 return A=v5
+METHOD g
+0000 check-cast A=v1 ref=[Ljava/lang/String;
+0002 invoke-virtual ref=LH5/c;->u([Ljava/lang/String;)Ljava/lang/Boolean; regs=0,1,0,0,0 count=2
+0005 move-result-object A=v0
+0006 return-object A=v0
+METHOD j
+0000 invoke-super ref=LN5/l$b;->j()V regs=2,0,0,0,0 count=1
+0003 invoke-virtual ref=LH5/c;->t()V regs=2,0,0,0,0 count=1
+0006 sget-object A=v0 ref=Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+0008 iput-object A=v0 B=v2 ref=LH5/c;->j:Ljava/lang/Boolean;
+000a iget-object A=v2 B=v2 ref=LH5/c;->f:Landroid/content/Context;
+000c check-cast A=v2 ref=Landroid/app/Activity;
+000e sget-object A=v0 ref=LT5/a;->z3:LT5/a;
+0010 const/4 A=v1 literal=0
+0011 invoke-static ref=LT5/c;->I(Landroid/app/Activity;LT5/a;Landroid/os/Bundle;)V regs=2,0,1,0,0 count=3
+0014 return-void
+METHOD k
+0000 check-cast A=v1 ref=Ljava/lang/Boolean;
+0002 invoke-virtual ref=LH5/c;->v(Ljava/lang/Boolean;)V regs=0,1,0,0,0 count=2
+0005 return-void
+METHOD l
+0000 invoke-super ref=LN5/l$b;->l()V regs=1,0,0,0,0 count=1
+0003 sget-object A=v0 ref=Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+0005 iput-object A=v0 B=v1 ref=LH5/c;->j:Ljava/lang/Boolean;
+0007 iget-object A=v0 B=v1 ref=LH5/c;->f:Landroid/content/Context;
+0009 check-cast A=v0 ref=Landroid/app/Activity;
+000b invoke-virtual ref=LH5/c;->y(Landroid/app/Activity;)V regs=1,0,0,0,0 count=2
+000e return-void
+METHOD m
+0000 check-cast A=v1 ref=[Ljava/lang/Integer;
+0002 invoke-virtual ref=LH5/c;->w([Ljava/lang/Integer;)V regs=0,1,0,0,0 count=2
+0005 return-void
+METHOD t
+0000 iget-object A=v0 B=v2 ref=LH5/c;->f:Landroid/content/Context;
+0002 check-cast A=v0 ref=Landroid/app/Activity;
+0004 sget-object A=v1 ref=LT5/a;->A3:LT5/a;
+0006 invoke-static ref=LT5/c;->s(Landroid/app/Activity;LT5/a;)Z regs=0,1,0,0,0 count=2
+0009 move-result A=v0
+000a if-eqz A=v0 target=0013
+000c iget-object A=v2 B=v2 ref=LH5/c;->f:Landroid/content/Context;
+000e check-cast A=v2 ref=Landroid/app/Activity;
+0010 invoke-static ref=LT5/c;->i(Landroid/app/Activity;LT5/a;)V regs=2,1,0,0,0 count=2
+0013 return-void
+METHOD u
+0000 move-object/from16 A=v1 B=v20
+0002 const-string A=v0 ref=GET
+0004 const-string A=v2 ref=doInBackground(start)
+0006 const-string A=v3 ref=DownloadTask
+0008 invoke-static ref=LN5/c;->h(Ljava/lang/String;Ljava/lang/String;)V regs=3,2,0,0,0 count=2
+000b const/4 A=v2 literal=0
+000c new-instance A=v4 ref=Ljava/net/URL;
+000e const/4 A=v5 literal=0
+000f aget-object A=v6 B=v21
+0011 invoke-direct ref=Ljava/net/URL;-><init>(Ljava/lang/String;)V regs=4,6,0,0,0 count=2
+0014 const/4 A=v6 literal=1
+0015 aget-object A=v7 B=v21
+0017 if-nez A=v7 target=0025
+0019 invoke-static ref=Lp5/b;->g()Lp5/m; regs=0,0,0,0,0 count=0
+001c move-result-object A=v7
+001d aget-object A=v8 B=v21
+001f iget-object A=v9 B=v1 ref=LH5/c;->f:Landroid/content/Context;
+0021 invoke-virtual ref=Lp5/m;->e(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String; regs=7,8,9,0,0 count=3
+0024 move-result-object A=v7
+0025 invoke-virtual ref=Ljava/net/URL;->openConnection()Ljava/net/URLConnection; regs=4,0,0,0,0 count=1
+0028 move-result-object A=v4
+0029 check-cast A=v4 ref=Ljava/net/HttpURLConnection;
+002b invoke-virtual ref=Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V regs=4,0,0,0,0 count=2
+002e invoke-virtual ref=Ljava/net/HttpURLConnection;->setInstanceFollowRedirects(Z)V regs=4,5,0,0,0 count=2
+0031 invoke-virtual ref=Ljava/net/URLConnection;->connect()V regs=4,0,0,0,0 count=1
+0034 invoke-virtual ref=Ljava/net/HttpURLConnection;->getResponseCode()I regs=4,0,0,0,0 count=1
+0037 move-result A=v8
+0038 const/16 A=v9 literal=302
+003a if-eq A=v8 B=v9 target=0044
+003c const/16 A=v9 literal=301
+003e if-eq A=v8 B=v9 target=0044
+0040 const/16 A=v9 literal=303
+0042 if-ne A=v8 B=v9 target=0061
+0044 const-string A=v8 ref=Location
+0046 invoke-virtual ref=Ljava/net/URLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String; regs=4,8,0,0,0 count=2
+0049 move-result-object A=v8
+004a new-instance A=v9 ref=Ljava/net/URL;
+004c invoke-direct ref=Ljava/net/URL;-><init>(Ljava/lang/String;)V regs=9,8,0,0,0 count=2
+004f invoke-virtual ref=Ljava/net/URL;->openConnection()Ljava/net/URLConnection; regs=9,0,0,0,0 count=1
+0052 move-result-object A=v8
+0053 check-cast A=v8 ref=Ljava/net/HttpURLConnection;
+0055 invoke-virtual ref=Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V regs=8,0,0,0,0 count=2
+0058 invoke-virtual ref=Ljava/net/URLConnection;->connect()V regs=8,0,0,0,0 count=1
+005b invoke-virtual ref=Ljava/net/HttpURLConnection;->getResponseCode()I regs=8,0,0,0,0 count=1
+005e move-result A=v0
+005f move-object A=v4 B=v8
+0060 move A=v8 B=v0
+0061 invoke-virtual ref=Ljava/net/URLConnection;->getContentLength()I regs=4,0,0,0,0 count=1
+0064 move-result A=v0
+0065 iput A=v0 B=v1 ref=LH5/c;->k:I
+0067 int-to-long A=v9 B=v0
+0068 invoke-direct ref=LH5/c;->s(J)Z regs=1,9,10,0,0 count=3
+006b move-result A=v0
+006c if-nez A=v0 target=0094
+006e iget-object A=v0 B=v1 ref=LH5/c;->f:Landroid/content/Context;
+0070 check-cast A=v0 ref=Landroid/app/Activity;
+0072 sget-object A=v3 ref=LT5/a;->D3:LT5/a;
+0074 invoke-static ref=LT5/c;->I(Landroid/app/Activity;LT5/a;Landroid/os/Bundle;)V regs=0,3,2,0,0 count=3
+0077 sget-object A=v0 ref=Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+0079 if-eqz A=v7 target=007e
+007b invoke-static ref=LN5/f;->b(Ljava/lang/String;)V regs=7,0,0,0,0 count=1
+007e invoke-virtual ref=Ljava/net/HttpURLConnection;->disconnect()V regs=4,0,0,0,0 count=1
+0081 return-object A=v0
+0082 move-exception A=v0
+0083 move-object A=v2 B=v4
+0084 move A=v5 B=v6
+0085 goto/16 target=0188
+0087 move-exception A=v0
+0088 move A=v5 B=v6
+0089 move A=v9 B=v5
+008a goto/16 target=016b
+008c move-exception A=v0
+008d move-object A=v2 B=v4
+008e goto/16 target=0188
+0090 move-exception A=v0
+0091 move A=v9 B=v6
+0092 goto/16 target=016b
+0094 const/16 A=v0 literal=200
+0096 if-ne A=v8 B=v0 target=0147
+0098 invoke-virtual ref=Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream; regs=4,0,0,0,0 count=1
+009b move-result-object A=v0
+009c new-instance A=v8 ref=Ljava/io/FileOutputStream;
+009e invoke-direct ref=Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V regs=8,7,0,0,0 count=2
+00a1 const A=v9 literal=32768
+00a4 new-array A=v9 B=v9 ref=[B
+00a6 invoke-static ref=Ljava/lang/System;->nanoTime()J regs=0,0,0,0,0 count=0
+00a9 move-result-wide A=v10
+00aa const-wide/16 A=v12 literal=0
+00ac move-wide A=v14 B=v10
+00ad invoke-virtual ref=Ljava/io/InputStream;->read([B)I regs=0,9,0,0,0 count=2
+00b0 move-result A=v2
+00b1 const/4 A=v6 literal=-1
+00b2 if-eq A=v2 B=v6 target=0128
+00b4 const-string A=v6 ref=doInBackground(downloading...)
+00b6 invoke-static ref=LN5/c;->h(Ljava/lang/String;Ljava/lang/String;)V regs=3,6,0,0,0 count=2
+00b9 invoke-virtual/range ref=LN5/l$b;->i()Z
+00bc move-result A=v6
+00bd if-eqz A=v6 target=00cb
+00bf const-string A=v2 ref=doInBackground(cancelling...)
+00c1 invoke-static ref=LN5/c;->h(Ljava/lang/String;Ljava/lang/String;)V regs=3,2,0,0,0 count=2
+00c4 const/4 A=v5 literal=1
+00c5 const/4 A=v9 literal=1
+00c6 goto target=012a
+00c7 move-exception A=v0
+00c8 const/4 A=v9 literal=1
+00c9 goto/16 target=016b
+00cb invoke-virtual ref=Ljava/io/FileOutputStream;->write([BII)V regs=8,9,5,2,0 count=4
+00ce int-to-long A=v5 B=v2
+00cf add-long/2addr A=v12 B=v5
+00d0 invoke-static ref=Ljava/lang/System;->nanoTime()J regs=0,0,0,0,0 count=0
+00d3 move-result-wide A=v5
+00d4 sub-long/2addr A=v5 B=v14
+00d5 const-wide/32 A=v16 literal=10000000
+00d8 cmp-long A=v2 B=v5
+00da if-lez A=v2 target=0125
+00dc invoke-static ref=Ljava/lang/System;->nanoTime()J regs=0,0,0,0,0 count=0
+00df move-result-wide A=v14
+00e0 invoke-static ref=Ljava/lang/System;->nanoTime()J regs=0,0,0,0,0 count=0
+00e3 move-result-wide A=v5
+00e4 sub-long/2addr A=v5 B=v10
+00e5 move-object A=v2 B=v9
+00e6 move-wide/from16 A=v16 B=v10
+00e8 div-long A=v9 B=v5
+00ea long-to-float A=v9 B=v9
+00eb iget A=v10 B=v1 ref=LH5/c;->k:I
+00ed int-to-float A=v11 B=v10
+00ee mul-float/2addr A=v9 B=v11
+00ef move-wide/from16 A=v18 B=v14
+00f1 float-to-long A=v14 B=v9
+00f2 sub-long/2addr A=v14 B=v5
+00f3 const-wide/16 A=v5 literal=1000
+00f5 div-long/2addr A=v14 B=v5
+00f6 const-wide/32 A=v5 literal=1000000
+00f9 div-long/2addr A=v14 B=v5
+00fa long-to-int A=v5 B=v14
+00fb const-wide/16 A=v14 literal=100
+00fd mul-long/2addr A=v14 B=v12
+00fe int-to-long A=v9 B=v10
+00ff div-long/2addr A=v14 B=v9
+0100 long-to-int A=v6 B=v14
+0101 invoke-static ref=Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer; regs=6,0,0,0,0 count=1
+0104 move-result-object A=v6
+0105 const/4 A=v9 literal=1
+0106 add-int/2addr A=v5 B=v9
+0107 invoke-static ref=Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer; regs=5,0,0,0,0 count=1
+010a move-result-object A=v5
+010b filled-new-array ref=[Ljava/lang/Integer; regs=6,5,0,0,0 count=2
+010e move-result-object A=v5
+010f invoke-virtual ref=LN5/l$b;->n([Ljava/lang/Object;)V regs=1,5,0,0,0 count=2
+0112 move A=v6 B=v9
+0113 move-wide/from16 A=v10 B=v16
+0115 move-wide/from16 A=v14 B=v18
+0117 const/4 A=v5 literal=0
+0118 move-object A=v9 B=v2
+0119 goto target=00ad
+011a move-exception A=v0
+011b move-object A=v2 B=v4
+011c const/4 A=v5 literal=0
+011d goto/16 target=0188
+011f move-exception A=v0
+0120 const/4 A=v5 literal=0
+0121 goto target=016b
+0122 move-exception A=v0
+0123 const/4 A=v9 literal=1
+0124 goto target=0120
+0125 const/4 A=v5 literal=0
+0126 const/4 A=v6 literal=1
+0127 goto target=00ad
+0128 const/4 A=v9 literal=1
+0129 const/4 A=v5 literal=0
+012a invoke-virtual ref=Ljava/io/FileOutputStream;->close()V regs=8,0,0,0,0 count=1
+012d invoke-virtual ref=Ljava/io/InputStream;->close()V regs=0,0,0,0,0 count=1
+0130 const-string A=v0 ref=doInBackground(finish)
+0132 invoke-static ref=LN5/c;->h(Ljava/lang/String;Ljava/lang/String;)V regs=3,0,0,0,0 count=2
+0135 sget-object A=v0 ref=Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+0137 if-eqz A=v5 target=013e
+0139 if-eqz A=v7 target=013e
+013b invoke-static ref=LN5/f;->b(Ljava/lang/String;)V regs=7,0,0,0,0 count=1
+013e invoke-virtual ref=Ljava/net/HttpURLConnection;->disconnect()V regs=4,0,0,0,0 count=1
+0141 return-object A=v0
+0142 move-exception A=v0
+0143 goto target=016b
+0144 move-exception A=v0
+0145 move A=v9 B=v6
+0146 goto target=0120
+0147 move A=v9 B=v6
+0148 iget-object A=v0 B=v1 ref=LH5/c;->f:Landroid/content/Context;
+014a check-cast A=v0 ref=Landroid/app/Activity;
+014c sget-object A=v2 ref=LT5/a;->E3:LT5/a;
+014e const/4 A=v3 literal=0
+014f invoke-static ref=LT5/c;->I(Landroid/app/Activity;LT5/a;Landroid/os/Bundle;)V regs=0,2,3,0,0 count=3
+0152 if-eqz A=v7 target=0157
+0154 invoke-static ref=LN5/f;->b(Ljava/lang/String;)V regs=7,0,0,0,0 count=1
+0157 invoke-virtual ref=Ljava/net/HttpURLConnection;->disconnect()V regs=4,0,0,0,0 count=1
+015a sget-object A=v0 ref=Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+015c return-object A=v0
+015d move-exception A=v0
+015e move-object A=v2 B=v8
+015f goto target=011c
+0160 move-exception A=v0
+0161 move A=v9 B=v6
+0162 move-object A=v4 B=v8
+0163 goto target=0120
+0164 move-exception A=v0
+0165 const/4 A=v2 literal=0
+0166 goto target=011c
+0167 move-exception A=v0
+0168 move A=v9 B=v6
+0169 const/4 A=v4 literal=0
+016a goto target=0120
+016b invoke-virtual ref=Ljava/lang/Throwable;->printStackTrace()V regs=0,0,0,0,0 count=1
+016e iget-object A=v0 B=v1 ref=LH5/c;->f:Landroid/content/Context;
+0170 check-cast A=v0 ref=Landroid/app/Activity;
+0172 sget-object A=v1 ref=LT5/a;->E3:LT5/a;
+0174 const/4 A=v2 literal=0
+0175 invoke-static ref=LT5/c;->I(Landroid/app/Activity;LT5/a;Landroid/os/Bundle;)V regs=0,1,2,0,0 count=3
+0178 sget-object A=v0 ref=Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+017a if-eqz A=v7 target=017f
+017c invoke-static ref=LN5/f;->b(Ljava/lang/String;)V regs=7,0,0,0,0 count=1
+017f if-eqz A=v4 target=0184
+0181 invoke-virtual ref=Ljava/net/HttpURLConnection;->disconnect()V regs=4,0,0,0,0 count=1
+0184 return-object A=v0
+0185 move-exception A=v0
+0186 move-object A=v2 B=v4
+0187 move A=v5 B=v9
+0188 if-eqz A=v5 target=018f
+018a if-eqz A=v7 target=018f
+018c invoke-static ref=LN5/f;->b(Ljava/lang/String;)V regs=7,0,0,0,0 count=1
+018f if-eqz A=v2 target=0194
+0191 invoke-virtual ref=Ljava/net/HttpURLConnection;->disconnect()V regs=2,0,0,0,0 count=1
+0194 throw A=v0
+0195 move-exception A=v0
+0196 invoke-virtual ref=Ljava/lang/Throwable;->printStackTrace()V regs=0,0,0,0,0 count=1
+0199 const/4 A=v1 literal=0
+019a return-object A=v1
+METHOD v
+0000 invoke-super ref=LN5/l$b;->k(Ljava/lang/Object;)V regs=1,2,0,0,0 count=2
+0003 invoke-virtual ref=LH5/c;->t()V regs=1,0,0,0,0 count=1
+0006 sget-object A=v0 ref=Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+0008 iput-object A=v0 B=v1 ref=LH5/c;->j:Ljava/lang/Boolean;
+000a iget-object A=v1 B=v1 ref=LH5/c;->e:LH5/c$b;
+000c invoke-virtual ref=Ljava/lang/Boolean;->booleanValue()Z regs=2,0,0,0,0 count=1
+000f move-result A=v2
+0010 invoke-virtual ref=LH5/c$b;->a(Z)V regs=1,2,0,0,0 count=2
+0013 return-void
+METHOD w
+0000 invoke-super ref=LN5/l$b;->m([Ljava/lang/Object;)V regs=5,6,0,0,0 count=2
+0003 iget-object A=v0 B=v5 ref=LH5/c;->f:Landroid/content/Context;
+0005 check-cast A=v0 ref=Landroid/app/Activity;
+0007 sget-object A=v1 ref=LT5/a;->A3:LT5/a;
+0009 const/4 A=v2 literal=0
+000a aget-object A=v3 B=v6
+000c invoke-virtual ref=Ljava/lang/Integer;->intValue()I regs=3,0,0,0,0 count=1
+000f move-result A=v3
+0010 const A=v4 literal=2131297222
+0013 invoke-static ref=LT5/c;->D(Landroid/app/Activity;LT5/a;II)V regs=0,1,4,3,0 count=4
+0016 iget-object A=v0 B=v5 ref=LH5/c;->f:Landroid/content/Context;
+0018 check-cast A=v0 ref=Landroid/app/Activity;
+001a new-instance A=v3 ref=Ljava/lang/StringBuilder;
+001c invoke-direct ref=Ljava/lang/StringBuilder;-><init>()V regs=3,0,0,0,0 count=1
+001f aget-object A=v2 B=v6
+0021 invoke-static ref=Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String; regs=2,0,0,0,0 count=1
+0024 move-result-object A=v2
+0025 invoke-virtual ref=Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder; regs=3,2,0,0,0 count=2
+0028 const-string A=v2 ref=%
+002a invoke-virtual ref=Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder; regs=3,2,0,0,0 count=2
+002d invoke-virtual ref=Ljava/lang/StringBuilder;->toString()Ljava/lang/String; regs=3,0,0,0,0 count=1
+0030 move-result-object A=v2
+0031 const A=v3 literal=2131297270
+0034 invoke-static ref=LT5/c;->G(Landroid/app/Activity;LT5/a;ILjava/lang/CharSequence;)V regs=0,1,3,2,0 count=4
+0037 const/4 A=v0 literal=1
+0038 aget-object A=v6 B=v6
+003a invoke-virtual ref=Ljava/lang/Integer;->intValue()I regs=6,0,0,0,0 count=1
+003d move-result A=v0
+003e const/16 A=v2 literal=3600
+0040 if-lt A=v0 B=v2 target=004c
+0042 iget-object A=v6 B=v5 ref=LH5/c;->f:Landroid/content/Context;
+0044 const A=v0 literal=2131690815
+0047 invoke-virtual ref=Landroid/content/Context;->getString(I)Ljava/lang/String; regs=6,0,0,0,0 count=2
+004a move-result-object A=v6
+004b goto target=0070
+004c const/16 A=v2 literal=60
+004e if-lt A=v0 B=v2 target=0063
+0050 iget-object A=v6 B=v5 ref=LH5/c;->f:Landroid/content/Context;
+0052 div-int/2addr A=v0 B=v2
+0053 invoke-static ref=Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer; regs=0,0,0,0,0 count=1
+0056 move-result-object A=v0
+0057 filled-new-array ref=[Ljava/lang/Object; regs=0,0,0,0,0 count=1
+005a move-result-object A=v0
+005b const A=v2 literal=2131690816
+005e invoke-virtual ref=Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String; regs=6,2,0,0,0 count=3
+0061 move-result-object A=v6
+0062 goto target=0070
+0063 iget-object A=v0 B=v5 ref=LH5/c;->f:Landroid/content/Context;
+0065 filled-new-array ref=[Ljava/lang/Object; regs=6,0,0,0,0 count=1
+0068 move-result-object A=v6
+0069 const A=v2 literal=2131690817
+006c invoke-virtual ref=Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String; regs=0,2,6,0,0 count=3
+006f move-result-object A=v6
+0070 iget-object A=v5 B=v5 ref=LH5/c;->f:Landroid/content/Context;
+0072 check-cast A=v5 ref=Landroid/app/Activity;
+0074 const A=v0 literal=2131297271
+0077 invoke-static ref=LT5/c;->G(Landroid/app/Activity;LT5/a;ILjava/lang/CharSequence;)V regs=5,1,0,6,0 count=4
+007a return-void
+METHOD x
+0000 iput-object A=v1 B=v0 ref=LH5/c;->e:LH5/c$b;
+0002 return-void
+METHOD y
+0000 sget-object A=v0 ref=LT5/a;->A3:LT5/a;
+0002 new-instance A=v1 ref=LH5/c$a;
+0004 invoke-direct ref=LH5/c$a;-><init>(LH5/c;Landroid/app/Activity;LT5/a;)V regs=1,2,3,0,0 count=4
+0007 const/4 A=v2 literal=0
+0008 invoke-static ref=LT5/c;->J(Landroid/app/Activity;LT5/a;Landroid/os/Bundle;LU5/a$h;)V regs=3,0,2,1,0 count=4
+000b return-void

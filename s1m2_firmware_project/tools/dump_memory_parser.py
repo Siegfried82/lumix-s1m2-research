@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Panasonic LUMIX S1M2 Physical Memory Dump Parser and Asset Carver.
+"""Candidate-layout parser for externally supplied files and synthetic tests.
 
-Parses physical memory dumps acquired from /dev/mem on camera Linux domain
-(or via debugger / JTAG). Identifies shared memory control structures,
-extracts running RTOS vectors, carves 14-bit Bayer RAW frames, XM6 DSP microcodes,
-and CNN neural network weights.
+This tool does not obtain camera RAM. Address, structure, and asset signatures
+are research assumptions, not confirmed S1M2 runtime data. A synthetic match
+is not evidence of real RAW frames, executable code, or neural weights.
 """
 
 import argparse
@@ -25,7 +24,7 @@ IPCU_MAGIC_CODE = 0xBEEFCAFE
 RAW_FRAME_WIDTH = 6000
 RAW_FRAME_HEIGHT = 4000
 RAW_FRAME_STRIDE = 10500             # (6000 * 14) / 8
-RAW_FRAME_SIZE = RAW_FRAME_STRIDE * RAW_FRAME_HEIGHT  # 42,000,000 bytes or 28,000,000 depending on packing (28MB unpacked)
+RAW_FRAME_SIZE = RAW_FRAME_STRIDE * RAW_FRAME_HEIGHT  # 42,000,000 bytes for this tightly packed 14-bit example; actual camera stride unknown
 
 
 class MemoryDumpParser:

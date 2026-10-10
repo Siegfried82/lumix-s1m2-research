@@ -1,0 +1,9599 @@
+{
+ "source": "tether_2_12_ptp_arm64_disassembly.txt",
+ "sha256": "f0beab04bef63508de6492cf263f62199548bda97911ab5852b371474537af1d",
+ "opcode_candidates_16bit": {
+  "0x4dd3": {
+   "func_count": 17,
+   "sites": [
+    {
+     "func": "__Z28Lmx_lib_ptpip_Socket_ConnectiPK8sockaddrjj",
+     "line": 531,
+     "ext": true
+    },
+    {
+     "func": "__Z18Lmx_lib_ptpip_SendP26_tag_LMX_STRUCT_PTPIP_HOSTP29_tag_LMX_STRUCT_PTPIP_MESSAGEj",
+     "line": 698,
+     "ext": true
+    },
+    {
+     "func": "__Z24Lmx_lib_ptpip_Send_QuickP26_tag_LMX_STRUCT_PTPIP_HOSTP29_tag_LMX_STRUCT_PTPIP_MESSAGE",
+     "line": 993,
+     "ext": true
+    },
+    {
+     "func": "__Z29Lmx_lib_ptpip_Send_And_WaitOKP26_tag_LMX_STRUCT_PTPIP_HOSTP28_tag_LMX_STRUCT_PTPIP_SO",
+     "line": 1234,
+     "ext": true
+    },
+    {
+     "func": "__Z28Lmx_lib_ptpip_Send_KeepAliveP26_tag_LMX_STRUCT_PTPIP_HOSTP29_tag_LMX_STRUCT_PTPIP_MES",
+     "line": 1486,
+     "ext": true
+    },
+    {
+     "func": "__Z37Lmx_lib_ptpip_Init_Command_Packet_SubPvP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPcP26_tag_LMX",
+     "line": 6746,
+     "ext": true
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpip_Init_Event_Packet_SubPvP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPcj",
+     "line": 7023,
+     "ext": true
+    },
+    {
+     "func": "__ZN12TcpTlsClient7ConnectENSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEE",
+     "line": 34723,
+     "ext": true
+    },
+    {
+     "func": "__ZN12TcpTlsClient4SendEPhii",
+     "line": 34882,
+     "ext": true
+    },
+    {
+     "func": "__ZN12TcpTlsClient4RecvEPhii",
+     "line": 34935,
+     "ext": true
+    },
+    {
+     "func": "__ZN12TcpTlsClient10SetTimeoutEi",
+     "line": 35010,
+     "ext": true
+    },
+    {
+     "func": "__Z36Lmx_lib_dbg_Disp_Insert_Time_to_Filev",
+     "line": 65571,
+     "ext": true
+    }
+   ]
+  },
+  "0x1007": {
+   "func_count": 16,
+   "sites": [
+    {
+     "func": "__Z28Lmx_lib_ptpip_Socket_ConnectiPK8sockaddrjj",
+     "line": 583,
+     "ext": false
+    },
+    {
+     "func": "__ZN12TcpTlsClient7ConnectENSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEE",
+     "line": 34779,
+     "ext": false
+    },
+    {
+     "func": "__Z34Lmx_lib_ptpif_std_GetObjectHandlesjjPjjPc",
+     "line": 58069,
+     "ext": false
+    },
+    {
+     "func": "__Z34Lmx_lib_ptpif_std_GetObjectHandlesjjPjjPc",
+     "line": 58078,
+     "ext": false
+    },
+    {
+     "func": "_BIO_sock_error",
+     "line": 105481,
+     "ext": false
+    },
+    {
+     "func": "_dh_pkey_ctrl",
+     "line": 160106,
+     "ext": false
+    },
+    {
+     "func": "_dh_pkey_ctrl",
+     "line": 160411,
+     "ext": false
+    },
+    {
+     "func": "_ec_pkey_ctrl",
+     "line": 188614,
+     "ext": false
+    },
+    {
+     "func": "_ec_pkey_ctrl",
+     "line": 188832,
+     "ext": false
+    },
+    {
+     "func": "_pkey_hkdf_ctrl_str",
+     "line": 242295,
+     "ext": false
+    },
+    {
+     "func": "_OCSP_REQ_CTX_nbio",
+     "line": 258562,
+     "ext": false
+    },
+    {
+     "func": "_OCSP_REQ_CTX_nbio",
+     "line": 258654,
+     "ext": false
+    }
+   ]
+  },
+  "0x1006": {
+   "func_count": 29,
+   "sites": [
+    {
+     "func": "__Z18Lmx_lib_ptpip_SendP26_tag_LMX_STRUCT_PTPIP_HOSTP29_tag_LMX_STRUCT_PTPIP_MESSAGEj",
+     "line": 710,
+     "ext": false
+    },
+    {
+     "func": "__Z24Lmx_lib_ptpip_Send_QuickP26_tag_LMX_STRUCT_PTPIP_HOSTP29_tag_LMX_STRUCT_PTPIP_MESSAGE",
+     "line": 1005,
+     "ext": false
+    },
+    {
+     "func": "__Z29Lmx_lib_ptpip_Send_And_WaitOKP26_tag_LMX_STRUCT_PTPIP_HOSTP28_tag_LMX_STRUCT_PTPIP_SO",
+     "line": 1246,
+     "ext": false
+    },
+    {
+     "func": "__Z28Lmx_lib_ptpip_Send_KeepAliveP26_tag_LMX_STRUCT_PTPIP_HOSTP29_tag_LMX_STRUCT_PTPIP_MES",
+     "line": 1498,
+     "ext": false
+    },
+    {
+     "func": "__Z47Lmx_lib_ptpip_Thread_Connect_Device_SendMSearchb22_tag_LMX_PTPIP_IP_ADDRiNSt3__112bas",
+     "line": 3850,
+     "ext": false
+    },
+    {
+     "func": "__Z37Lmx_lib_ptpip_Init_Command_Packet_SubPvP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPcP26_tag_LMX",
+     "line": 6758,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpip_Init_Event_Packet_SubPvP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPcj",
+     "line": 7035,
+     "ext": false
+    },
+    {
+     "func": "__Z43Lmx_lib_ptpip_Thread_Get_Liveview_Data_procPv",
+     "line": 9159,
+     "ext": false
+    },
+    {
+     "func": "__ZN12TcpTlsClient4RecvEPhii",
+     "line": 34947,
+     "ext": false
+    },
+    {
+     "func": "__ZN12TcpTlsClient10SetTimeoutEi",
+     "line": 35028,
+     "ext": false
+    },
+    {
+     "func": "__Z30Lmx_lib_ptpif_std_GetNumObjectjjPjPc",
+     "line": 57973,
+     "ext": false
+    },
+    {
+     "func": "__Z30Lmx_lib_ptpif_std_GetNumObjectjjPjPc",
+     "line": 57982,
+     "ext": false
+    }
+   ]
+  },
+  "0x1005": {
+   "func_count": 22,
+   "sites": [
+    {
+     "func": "__Z24Lmx_lib_ptpip_Send_QuickP26_tag_LMX_STRUCT_PTPIP_HOSTP29_tag_LMX_STRUCT_PTPIP_MESSAGE",
+     "line": 1012,
+     "ext": false
+    },
+    {
+     "func": "__Z28Lmx_lib_ptpip_Send_KeepAliveP26_tag_LMX_STRUCT_PTPIP_HOSTP29_tag_LMX_STRUCT_PTPIP_MES",
+     "line": 1505,
+     "ext": false
+    },
+    {
+     "func": "__ZN12TcpTlsClient4SendEPhii",
+     "line": 34894,
+     "ext": false
+    },
+    {
+     "func": "__ZN12TcpTlsClient10SetTimeoutEi",
+     "line": 35021,
+     "ext": false
+    },
+    {
+     "func": "__ZN13UdpDtlsClient4SendEPhii",
+     "line": 65908,
+     "ext": false
+    },
+    {
+     "func": "_dgram_ctrl",
+     "line": 108976,
+     "ext": false
+    },
+    {
+     "func": "_dgram_ctrl",
+     "line": 108989,
+     "ext": false
+    },
+    {
+     "func": "_pkey_dh_ctrl_str",
+     "line": 163034,
+     "ext": false
+    },
+    {
+     "func": "_ec_pkey_ctrl",
+     "line": 188565,
+     "ext": false
+    },
+    {
+     "func": "_ec_pkey_ctrl",
+     "line": 188778,
+     "ext": false
+    },
+    {
+     "func": "_pkey_ec_ctrl_str",
+     "line": 198704,
+     "ext": false
+    },
+    {
+     "func": "_pkey_hkdf_ctrl_str",
+     "line": 242285,
+     "ext": false
+    }
+   ]
+  },
+  "0x4144": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z19GetHttpResponseDatePc",
+     "line": 2620,
+     "ext": true
+    }
+   ]
+  },
+  "0x6938": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z15IsWLANInterfacePKc",
+     "line": 3313,
+     "ext": true
+    }
+   ]
+  },
+  "0x2d88": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34Lmx_lib_ptpip_Start_Connect_DeviceiPKw",
+     "line": 3356,
+     "ext": false
+    }
+   ]
+  },
+  "0x2d98": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34Lmx_lib_ptpip_Start_Connect_DeviceiPKw",
+     "line": 3357,
+     "ext": false
+    }
+   ]
+  },
+  "0x2da8": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34Lmx_lib_ptpip_Start_Connect_DeviceiPKw",
+     "line": 3358,
+     "ext": false
+    }
+   ]
+  },
+  "0x2d68": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34Lmx_lib_ptpip_Start_Connect_DeviceiPKw",
+     "line": 3359,
+     "ext": false
+    }
+   ]
+  },
+  "0x2d78": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34Lmx_lib_ptpip_Start_Connect_DeviceiPKw",
+     "line": 3360,
+     "ext": false
+    }
+   ]
+  },
+  "0x2390": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z40Lmx_lib_ptpip_Thread_Connect_Device_procPv",
+     "line": 3511,
+     "ext": false
+    }
+   ]
+  },
+  "0x1170": {
+   "func_count": 15,
+   "sites": [
+    {
+     "func": "__Z40Lmx_lib_ptpip_Thread_Connect_Device_procPv",
+     "line": 3570,
+     "ext": false
+    },
+    {
+     "func": "__Z40Lmx_lib_ptpip_Thread_Connect_Device_procPv",
+     "line": 3593,
+     "ext": false
+    },
+    {
+     "func": "__Z47Lmx_lib_ptpip_Thread_Connect_Device_SendMSearchb22_tag_LMX_PTPIP_IP_ADDRiNSt3__112bas",
+     "line": 3942,
+     "ext": false
+    },
+    {
+     "func": "__Z47Lmx_lib_ptpip_Thread_Connect_Device_SendMSearchb22_tag_LMX_PTPIP_IP_ADDRiNSt3__112bas",
+     "line": 4027,
+     "ext": false
+    },
+    {
+     "func": "__Z42Lmx_lib_ptpip_Thread_Connect_Device_GetDDD30_tag_LMX_PTPIP_DEV_DETAIL_INFOiNSt3__112b",
+     "line": 4382,
+     "ext": false
+    },
+    {
+     "func": "__Z42Lmx_lib_ptpip_Thread_Connect_Device_GetDDD30_tag_LMX_PTPIP_DEV_DETAIL_INFOiNSt3__112b",
+     "line": 4523,
+     "ext": false
+    },
+    {
+     "func": "__Z42Lmx_lib_ptpip_Thread_Connect_Device_GetDDD30_tag_LMX_PTPIP_DEV_DETAIL_INFOiNSt3__112b",
+     "line": 4528,
+     "ext": false
+    },
+    {
+     "func": "__Z14AddGetDDDQueueP18_DDD_THREAD_HANDLE30_tag_LMX_PTPIP_DEV_DETAIL_INFOi",
+     "line": 5100,
+     "ext": false
+    },
+    {
+     "func": "__Z16GetDDDThreadFuncP17_DDD_THREAD_PARAM",
+     "line": 5255,
+     "ext": false
+    },
+    {
+     "func": "__Z31Lmx_lib_ptpip_Get_DevDetailInfoj",
+     "line": 6332,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpip_Thread_Get_State_procPv",
+     "line": 7772,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpip_Thread_Get_State_procPv",
+     "line": 7841,
+     "ext": false
+    }
+   ]
+  },
+  "0x2810": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z47Lmx_lib_ptpip_Thread_Connect_Device_SendMSearchb22_tag_LMX_PTPIP_IP_ADDRiNSt3__112bas",
+     "line": 3702,
+     "ext": true
+    }
+   ]
+  },
+  "0x86a0": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z47Lmx_lib_ptpip_Thread_Connect_Device_SendMSearchb22_tag_LMX_PTPIP_IP_ADDRiNSt3__112bas",
+     "line": 3843,
+     "ext": true
+    }
+   ]
+  },
+  "0x105c": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z42Lmx_lib_ptpip_Thread_Connect_Device_GetDDD30_tag_LMX_PTPIP_DEV_DETAIL_INFOiNSt3__112b",
+     "line": 4582,
+     "ext": false
+    },
+    {
+     "func": "__Z20getDeviceInfoFromDDDPcP30_tag_LMX_PTPIP_DEV_DETAIL_INFOi",
+     "line": 5451,
+     "ext": false
+    }
+   ]
+  },
+  "0x2a20": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z20createMSearchMessageP26_tag_LMX_STRUCT_PTPIP_HOSTPc",
+     "line": 4720,
+     "ext": true
+    }
+   ]
+  },
+  "0x4f48": {
+   "func_count": 8,
+   "sites": [
+    {
+     "func": "__Z20createMSearchMessageP26_tag_LMX_STRUCT_PTPIP_HOSTPc",
+     "line": 4740,
+     "ext": true
+    },
+    {
+     "func": "__Z16createDDDMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPc",
+     "line": 5352,
+     "ext": true
+    },
+    {
+     "func": "__Z20createAccCtrlMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPcS1_S1_S1_t",
+     "line": 6144,
+     "ext": true
+    },
+    {
+     "func": "__Z22createGetStatelMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPc",
+     "line": 7481,
+     "ext": true
+    },
+    {
+     "func": "__Z25createStartStreamlMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOjPc",
+     "line": 8263,
+     "ext": true
+    },
+    {
+     "func": "__Z24createStopStreamlMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPc",
+     "line": 8338,
+     "ext": true
+    },
+    {
+     "func": "__Z20createCamModeMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPcS1_",
+     "line": 8425,
+     "ext": true
+    },
+    {
+     "func": "__Z23createGetSrcPortMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPc",
+     "line": 8500,
+     "ext": true
+    }
+   ]
+  },
+  "0x3a54": {
+   "func_count": 8,
+   "sites": [
+    {
+     "func": "__Z20createMSearchMessageP26_tag_LMX_STRUCT_PTPIP_HOSTPc",
+     "line": 4743,
+     "ext": true
+    },
+    {
+     "func": "__Z16createDDDMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPc",
+     "line": 5355,
+     "ext": true
+    },
+    {
+     "func": "__Z20createAccCtrlMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPcS1_S1_S1_t",
+     "line": 6147,
+     "ext": true
+    },
+    {
+     "func": "__Z22createGetStatelMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPc",
+     "line": 7484,
+     "ext": true
+    },
+    {
+     "func": "__Z25createStartStreamlMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOjPc",
+     "line": 8266,
+     "ext": true
+    },
+    {
+     "func": "__Z24createStopStreamlMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPc",
+     "line": 8341,
+     "ext": true
+    },
+    {
+     "func": "__Z20createCamModeMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPcS1_",
+     "line": 8428,
+     "ext": true
+    },
+    {
+     "func": "__Z23createGetSrcPortMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPc",
+     "line": 8503,
+     "ext": true
+    }
+   ]
+  },
+  "0x414d": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z20createMSearchMessageP26_tag_LMX_STRUCT_PTPIP_HOSTPc",
+     "line": 4763,
+     "ext": true
+    }
+   ]
+  },
+  "0x5453": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z20createMSearchMessageP26_tag_LMX_STRUCT_PTPIP_HOSTPc",
+     "line": 4782,
+     "ext": true
+    }
+   ]
+  },
+  "0x1020": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z24getDeviceInfoFromMSearchPcP30_tag_LMX_PTPIP_DEV_DETAIL_INFO",
+     "line": 4948,
+     "ext": false
+    },
+    {
+     "func": "_SMIME_text",
+     "line": 91129,
+     "ext": false
+    }
+   ]
+  },
+  "0x3a4e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z24getDeviceInfoFromMSearchPcP30_tag_LMX_PTPIP_DEV_DETAIL_INFO",
+     "line": 4964,
+     "ext": true
+    }
+   ]
+  },
+  "0x1174": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z14AddGetDDDQueueP18_DDD_THREAD_HANDLE30_tag_LMX_PTPIP_DEV_DETAIL_INFOi",
+     "line": 5095,
+     "ext": false
+    }
+   ]
+  },
+  "0x1190": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z16GetDDDThreadFuncP17_DDD_THREAD_PARAM",
+     "line": 5215,
+     "ext": false
+    }
+   ]
+  },
+  "0x4547": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z16createDDDMessageP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPc",
+     "line": 5333,
+     "ext": true
+    }
+   ]
+  },
+  "0x1160": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z20getDeviceInfoFromDDDPcP30_tag_LMX_PTPIP_DEV_DETAIL_INFOi",
+     "line": 5808,
+     "ext": false
+    }
+   ]
+  },
+  "0x6b6f": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34Lmx_lib_ptpip_Thread_Acc_Ctrl_procPv",
+     "line": 6448,
+     "ext": false
+    }
+   ]
+  },
+  "0x7461": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34Lmx_lib_ptpip_Thread_Acc_Ctrl_procPv",
+     "line": 6460,
+     "ext": true
+    }
+   ]
+  },
+  "0x1388": {
+   "func_count": 5,
+   "sites": [
+    {
+     "func": "__Z37Lmx_lib_ptpip_Init_Command_Packet_SubPvP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPcP26_tag_LMX",
+     "line": 6769,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpip_Init_Event_Packet_SubPvP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPcj",
+     "line": 6985,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpip_Init_Event_Packet_SubPvP30_tag_LMX_PTPIP_DEV_DETAIL_INFOPcj",
+     "line": 7014,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpip_Thread_Get_State_procPv",
+     "line": 7684,
+     "ext": false
+    },
+    {
+     "func": "__Z43Lmx_lib_ptpip_Thread_Get_Liveview_Data_procPv",
+     "line": 9125,
+     "ext": false
+    }
+   ]
+  },
+  "0x2710": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "__Z38Lmx_lib_ptpip_Thread_Event_Packet_procPv",
+     "line": 7219,
+     "ext": false
+    },
+    {
+     "func": "__Z19LMX_ptpip_util_Initv",
+     "line": 69415,
+     "ext": false
+    },
+    {
+     "func": "_tls_parse_ctos_psk",
+     "line": 447561,
+     "ext": false
+    }
+   ]
+  },
+  "0x400b": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z38Lmx_lib_ptpip_Thread_Event_Packet_procPv",
+     "line": 7316,
+     "ext": false
+    },
+    {
+     "func": "-[LmxReceiverThread doReceiveEvent:fromCamera:]",
+     "line": 42488,
+     "ext": false
+    }
+   ]
+  },
+  "0x1102": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z32Lmx_lib_ptpip_Start_Liveview_ReqPc",
+     "line": 8894,
+     "ext": false
+    }
+   ]
+  },
+  "0x6574": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "__Z43Lmx_lib_ptpip_Thread_Get_Liveview_Data_procPv",
+     "line": 9165,
+     "ext": true
+    },
+    {
+     "func": "_ChaCha20_ctr32",
+     "line": 139022,
+     "ext": true
+    },
+    {
+     "func": "_ChaCha20_ctr32",
+     "line": 139135,
+     "ext": true
+    }
+   ]
+  },
+  "0x1000": {
+   "func_count": 33,
+   "sites": [
+    {
+     "func": "__ZNSt3__15dequeIP16_DDD_QUEUE_PARAMNS_9allocatorIS2_EEE19__add_back_capacityEv",
+     "line": 11237,
+     "ext": false
+    },
+    {
+     "func": "__ZNSt3__15dequeIP16_DDD_QUEUE_PARAMNS_9allocatorIS2_EEE19__add_back_capacityEv",
+     "line": 11256,
+     "ext": false
+    },
+    {
+     "func": "_ASN1_mbstring_ncopy",
+     "line": 80905,
+     "ext": false
+    },
+    {
+     "func": "_generate_v3",
+     "line": 86959,
+     "ext": false
+    },
+    {
+     "func": "_SMIME_text",
+     "line": 91214,
+     "ext": false
+    },
+    {
+     "func": "_SMIME_text",
+     "line": 91224,
+     "ext": false
+    },
+    {
+     "func": "_buffer_new",
+     "line": 106963,
+     "ext": false
+    },
+    {
+     "func": "_buffer_new",
+     "line": 106967,
+     "ext": false
+    },
+    {
+     "func": "_buffer_new",
+     "line": 106975,
+     "ext": false
+    },
+    {
+     "func": "_BN_generate_prime_ex",
+     "line": 131787,
+     "ext": false
+    },
+    {
+     "func": "_pkey_ec_ctrl",
+     "line": 198603,
+     "ext": false
+    },
+    {
+     "func": "_ERR_print_errors_cb",
+     "line": 213692,
+     "ext": false
+    }
+   ]
+  },
+  "0x2d50": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "___cxx_global_array_dtor",
+     "line": 12301,
+     "ext": false
+    }
+   ]
+  },
+  "0x2dd8": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__GLOBAL__sub_I_LMX_lib_ptpip_connect.cpp",
+     "line": 12348,
+     "ext": false
+    }
+   ]
+  },
+  "0x2e28": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__GLOBAL__sub_I_LMX_lib_ptpip_connect.cpp",
+     "line": 12350,
+     "ext": false
+    }
+   ]
+  },
+  "0x2c42": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z33LMX_func_api_Strobe_GetCapabilityP40_tag_lmx_struct_recinfo_strobe_capa_infoPcPj",
+     "line": 13527,
+     "ext": false
+    }
+   ]
+  },
+  "0x201e": {
+   "func_count": 8,
+   "sites": [
+    {
+     "func": "__Z33LMX_func_api_Strobe_GetCapabilityP40_tag_lmx_struct_recinfo_strobe_capa_infoPcPj",
+     "line": 13579,
+     "ext": false
+    },
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27556,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_CameraMode_GetCapabilityP45_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_CAPA_INFO",
+     "line": 30995,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45365,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53457,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63297,
+     "ext": false
+    },
+    {
+     "func": "__Z25Lmx_lib_wpdif_SendCommandP19_PTP_VENDOR_DATA_INmPhP20_PTP_VENDOR_DATA_OUTmS1_PjPc",
+     "line": 64279,
+     "ext": false
+    },
+    {
+     "func": "__Z32Lmx_lib_ptpif_LmxExt_OpenSessionjPjPcS_",
+     "line": 75710,
+     "ext": false
+    }
+   ]
+  },
+  "0x100e": {
+   "func_count": 15,
+   "sites": [
+    {
+     "func": "__Z33LMX_func_api_Strobe_GetCapabilityP40_tag_lmx_struct_recinfo_strobe_capa_infoPcPj",
+     "line": 13682,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_AFMF_Cfg2_GetCapabilityP41_tag_lmx_struct_recinfo_af_cfg2_Capa_infoPcPj",
+     "line": 16256,
+     "ext": false
+    },
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27481,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_Mov_Filter_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_FILTER_CAPA_INFOPcPj",
+     "line": 30308,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_CameraMode_GetCapabilityP45_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_CAPA_INFO",
+     "line": 31093,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45291,
+     "ext": false
+    },
+    {
+     "func": "__Z29LMX_func_api_WB_GetCapabilityP28_tag_LMX_STRUCT_WB_CAPA_INFOPcPj",
+     "line": 48937,
+     "ext": false
+    },
+    {
+     "func": "__Z43LMX_func_api_RecInfo_Metering_GetCapabilityP42_tag_LMX_STRUCT_RECINFO_METERING_CAPA_I",
+     "line": 50009,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53355,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_Mov_Config_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_CONFIG_CAPA_INFOPcPj",
+     "line": 56416,
+     "ext": false
+    },
+    {
+     "func": "__Z30Lmx_lib_ptpif_STD_StillCapturePc",
+     "line": 59634,
+     "ext": false
+    },
+    {
+     "func": "__Z30Lmx_lib_ptpif_STD_StillCapturePc",
+     "line": 59639,
+     "ext": false
+    }
+   ]
+  },
+  "0x1010": {
+   "func_count": 13,
+   "sites": [
+    {
+     "func": "__Z33LMX_func_api_Strobe_GetCapabilityP40_tag_lmx_struct_recinfo_strobe_capa_infoPcPj",
+     "line": 13694,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_AFMF_Cfg2_GetCapabilityP41_tag_lmx_struct_recinfo_af_cfg2_Capa_infoPcPj",
+     "line": 16268,
+     "ext": false
+    },
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27491,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_Mov_Filter_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_FILTER_CAPA_INFOPcPj",
+     "line": 30320,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45301,
+     "ext": false
+    },
+    {
+     "func": "__Z29LMX_func_api_WB_GetCapabilityP28_tag_LMX_STRUCT_WB_CAPA_INFOPcPj",
+     "line": 48949,
+     "ext": false
+    },
+    {
+     "func": "__Z43LMX_func_api_RecInfo_Metering_GetCapabilityP42_tag_LMX_STRUCT_RECINFO_METERING_CAPA_I",
+     "line": 49891,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53458,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_Mov_Config_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_CONFIG_CAPA_INFOPcPj",
+     "line": 56426,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63399,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_ImageInfo_GetCapabilityP39_tag_LMX_STRUCT_RECINFO_IMAGE_CAPA_INFOPcPj",
+     "line": 66617,
+     "ext": false
+    },
+    {
+     "func": "_pkey_dh_ctrl_str",
+     "line": 163046,
+     "ext": false
+    }
+   ]
+  },
+  "0x1414": {
+   "func_count": 9,
+   "sites": [
+    {
+     "func": "__Z33LMX_func_api_Strobe_GetCapabilityP40_tag_lmx_struct_recinfo_strobe_capa_infoPcPj",
+     "line": 13711,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_AFMF_Cfg2_GetCapabilityP41_tag_lmx_struct_recinfo_af_cfg2_Capa_infoPcPj",
+     "line": 16285,
+     "ext": false
+    },
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27509,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_Mov_Filter_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_FILTER_CAPA_INFOPcPj",
+     "line": 30337,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45319,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53475,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_Mov_Config_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_CONFIG_CAPA_INFOPcPj",
+     "line": 56444,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63251,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_ImageInfo_GetCapabilityP39_tag_LMX_STRUCT_RECINFO_IMAGE_CAPA_INFOPcPj",
+     "line": 66635,
+     "ext": false
+    }
+   ]
+  },
+  "0x1818": {
+   "func_count": 10,
+   "sites": [
+    {
+     "func": "__Z33LMX_func_api_Strobe_GetCapabilityP40_tag_lmx_struct_recinfo_strobe_capa_infoPcPj",
+     "line": 13728,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_AFMF_Cfg2_GetCapabilityP41_tag_lmx_struct_recinfo_af_cfg2_Capa_infoPcPj",
+     "line": 16302,
+     "ext": false
+    },
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27527,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_Mov_Filter_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_FILTER_CAPA_INFOPcPj",
+     "line": 30354,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45337,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53493,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_Mov_Config_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_CONFIG_CAPA_INFOPcPj",
+     "line": 56462,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63269,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_ImageInfo_GetCapabilityP39_tag_LMX_STRUCT_RECINFO_IMAGE_CAPA_INFOPcPj",
+     "line": 66497,
+     "ext": false
+    },
+    {
+     "func": "_ssl_io_intern",
+     "line": 429448,
+     "ext": false
+    }
+   ]
+  },
+  "0x1c1c": {
+   "func_count": 6,
+   "sites": [
+    {
+     "func": "__Z33LMX_func_api_Strobe_GetCapabilityP40_tag_lmx_struct_recinfo_strobe_capa_infoPcPj",
+     "line": 13745,
+     "ext": false
+    },
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27545,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45355,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53510,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_Mov_Config_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_CONFIG_CAPA_INFOPcPj",
+     "line": 56306,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63287,
+     "ext": false
+    }
+   ]
+  },
+  "0x2020": {
+   "func_count": 11,
+   "sites": [
+    {
+     "func": "__Z33LMX_func_api_Strobe_GetCapabilityP40_tag_lmx_struct_recinfo_strobe_capa_infoPcPj",
+     "line": 13762,
+     "ext": false
+    },
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27373,
+     "ext": false
+    },
+    {
+     "func": "__Z39LMX_func_api_LiveView_Str_Get_Trans_ImgP38_tag_LMX_STRUCT_LIVEVIEW_STR_TRANS_IMGPcPj",
+     "line": 34048,
+     "ext": false
+    },
+    {
+     "func": "__Z39LMX_func_api_LiveView_Str_Set_Trans_Img38_tag_LMX_STRUCT_LIVEVIEW_STR_TRANS_IMGPcPj",
+     "line": 34225,
+     "ext": false
+    },
+    {
+     "func": "__Z39LMX_func_api_LiveView_Str_Get_Recom_ImgP38_tag_LMX_STRUCT_LIVEVIEW_STR_RECOM_IMGPcPj",
+     "line": 34281,
+     "ext": false
+    },
+    {
+     "func": "+[IccUtil dumpData:length:comment:]",
+     "line": 41779,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45375,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53528,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63307,
+     "ext": false
+    },
+    {
+     "func": "_BIO_dump_indent_cb",
+     "line": 103676,
+     "ext": true
+    },
+    {
+     "func": "_BIO_dump_indent_cb",
+     "line": 103687,
+     "ext": false
+    }
+   ]
+  },
+  "0x2424": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "__Z33LMX_func_api_Strobe_GetCapabilityP40_tag_lmx_struct_recinfo_strobe_capa_infoPcPj",
+     "line": 13779,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45183,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53545,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63417,
+     "ext": false
+    }
+   ]
+  },
+  "0x2828": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "__Z33LMX_func_api_Strobe_GetCapabilityP40_tag_lmx_struct_recinfo_strobe_capa_infoPcPj",
+     "line": 13796,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53563,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63325,
+     "ext": false
+    }
+   ]
+  },
+  "0x9402": {
+   "func_count": 46,
+   "sites": [
+    {
+     "func": "__Z36Lmx_lib_ptpif_LmxExt_Get_Strobe_InfoP35_tag_lmx_struct_recinfo_strobe_infojPc",
+     "line": 13852,
+     "ext": false
+    },
+    {
+     "func": "__Z36Lmx_lib_ptpif_LmxExt_Get_Strobe_InfoP35_tag_lmx_struct_recinfo_strobe_infojPc",
+     "line": 13859,
+     "ext": false
+    },
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_Get_AFMF_Cfg2_InfoP36_tag_lmx_struct_recinfo_af_cfg2_infojPc",
+     "line": 16360,
+     "ext": false
+    },
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_Get_AFMF_Cfg2_InfoP36_tag_lmx_struct_recinfo_af_cfg2_infojPc",
+     "line": 16367,
+     "ext": false
+    },
+    {
+     "func": "__Z34Lmx_lib_ptpif_LmxExt_Get_4K6K_InfoP25_tag_LMX_STRUCT_4K6K_INFOjPc",
+     "line": 19003,
+     "ext": false
+    },
+    {
+     "func": "__Z34Lmx_lib_ptpif_LmxExt_Get_4K6K_InfoP25_tag_LMX_STRUCT_4K6K_INFOjPc",
+     "line": 19010,
+     "ext": false
+    },
+    {
+     "func": "__Z38Lmx_lib_ptpif_LmxExt_Get_AF_Frame_InfoP29_tag_LMX_STRUCT_AF_FRAME_INFOjPc",
+     "line": 19802,
+     "ext": false
+    },
+    {
+     "func": "__Z38Lmx_lib_ptpif_LmxExt_Get_AF_Frame_InfoP29_tag_LMX_STRUCT_AF_FRAME_INFOjPc",
+     "line": 19809,
+     "ext": false
+    },
+    {
+     "func": "__Z50Lmx_lib_ptpif_LmxExt_Get_AF_Frame_Small_Frame_InfoP36_tag_LMX_STRUCT_AF_FRAME_SMALL_F",
+     "line": 20471,
+     "ext": false
+    },
+    {
+     "func": "__Z50Lmx_lib_ptpif_LmxExt_Get_AF_Frame_Small_Frame_InfoP36_tag_LMX_STRUCT_AF_FRAME_SMALL_F",
+     "line": 20478,
+     "ext": false
+    },
+    {
+     "func": "__Z57Lmx_lib_ptpif_LmxExt_Get_AF_Frame_OnePoint_Face_Size_InfoP43_tag_LMX_STRUCT_AF_FRAME_",
+     "line": 20631,
+     "ext": false
+    },
+    {
+     "func": "__Z57Lmx_lib_ptpif_LmxExt_Get_AF_Frame_OnePoint_Face_Size_InfoP43_tag_LMX_STRUCT_AF_FRAME_",
+     "line": 20638,
+     "ext": false
+    }
+   ]
+  },
+  "0x940d": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "__Z32LMX_func_api_Power_Ctrl_PowerOffPcPj",
+     "line": 15377,
+     "ext": false
+    },
+    {
+     "func": "__Z35LMX_func_api_Power_Ctrl_DeviceResetPcPj",
+     "line": 15412,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_Power_Ctrl_DeviceRestartPcPj",
+     "line": 15447,
+     "ext": false
+    }
+   ]
+  },
+  "0x9110": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z36Lmx_lib_ptpif_LmxExt_GetObjectInfoExP41_tag_LMX_STRUCT_PTP_DATASET_OBJECTINFO_EXPcPj",
+     "line": 15485,
+     "ext": false
+    },
+    {
+     "func": "__Z36Lmx_lib_ptpif_LmxExt_GetObjectInfoExP41_tag_LMX_STRUCT_PTP_DATASET_OBJECTINFO_EXPcPj",
+     "line": 15493,
+     "ext": false
+    }
+   ]
+  },
+  "0x2001": {
+   "func_count": 34,
+   "sites": [
+    {
+     "func": "__Z36Lmx_lib_ptpif_LmxExt_GetObjectInfoExP41_tag_LMX_STRUCT_PTP_DATASET_OBJECTINFO_EXPcPj",
+     "line": 15746,
+     "ext": false
+    },
+    {
+     "func": "__Z41Lmx_lib_ptpif_LmxExt_Get_RecDisp_Cfg_InfoP37_tag_lmx_struct_recinfo_rec_disp_infojPcP",
+     "line": 25444,
+     "ext": false
+    },
+    {
+     "func": "__Z43Lmx_lib_ptpif_LmxExt_Get_Tag_CapabilitySizejjPhjPjPc",
+     "line": 28581,
+     "ext": false
+    },
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_Get_Tag_CapabilityjjPhjPjPc",
+     "line": 28729,
+     "ext": false
+    },
+    {
+     "func": "__Z36Lmx_lib_ptpif_LmxExt_Get_AF_Cfg_InfoP30_tag_LMX_STRUCT_AF_CONFIG_INFOjPcPj",
+     "line": 45627,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpif_LmxExt_GetStorageInfojP27_tag_LMX_STRUCT_STORAGEINFOPcPj",
+     "line": 59106,
+     "ext": false
+    },
+    {
+     "func": "__Z34Lmx_lib_ptpif_LmxExt_GetObjectInfoP26_tag_LMX_STRUCT_OBJECTINFOPcPj",
+     "line": 59407,
+     "ext": false
+    },
+    {
+     "func": "__Z31Lmx_lib_ptpif_LmxExt_SetRecInfoPhjjPc",
+     "line": 59879,
+     "ext": false
+    },
+    {
+     "func": "__Z31Lmx_lib_ptpif_LmxExt_SetMovInfoPhjjPc",
+     "line": 59977,
+     "ext": false
+    },
+    {
+     "func": "__Z33Lmx_lib_ptpif_LmxExt_SetMovFilterPhjjPc",
+     "line": 60072,
+     "ext": false
+    },
+    {
+     "func": "__Z34Lmx_lib_ptpif_LmxExt_SetLvTransImgPhjjPc",
+     "line": 60167,
+     "ext": false
+    },
+    {
+     "func": "__Z29Lmx_lib_ptpif_LmxExt_Rec_CtrljP24_tag_LMX_STRUCT_REC_CTRLPc",
+     "line": 60268,
+     "ext": false
+    }
+   ]
+  },
+  "0x2019": {
+   "func_count": 10,
+   "sites": [
+    {
+     "func": "__Z36Lmx_lib_ptpif_LmxExt_GetObjectInfoExP41_tag_LMX_STRUCT_PTP_DATASET_OBJECTINFO_EXPcPj",
+     "line": 15749,
+     "ext": false
+    },
+    {
+     "func": "-[LmxSenderThread didSendPTPCommand:inData:response:error:contextInfo:]",
+     "line": 43140,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpif_LmxExt_GetStorageInfojP27_tag_LMX_STRUCT_STORAGEINFOPcPj",
+     "line": 59109,
+     "ext": false
+    },
+    {
+     "func": "__Z34Lmx_lib_ptpif_LmxExt_GetObjectInfoP26_tag_LMX_STRUCT_OBJECTINFOPcPj",
+     "line": 59410,
+     "ext": false
+    },
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamDataPhPjPcS0_",
+     "line": 60699,
+     "ext": false
+    },
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamDataPhPjPcS0_",
+     "line": 60714,
+     "ext": false
+    },
+    {
+     "func": "__Z40Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamData2PhPjP38_tag_LMX_STRUCT_LIVEVIEW_INFO_HISTGRAM",
+     "line": 60987,
+     "ext": false
+    },
+    {
+     "func": "__Z40Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamData2PhPjP38_tag_LMX_STRUCT_LIVEVIEW_INFO_HISTGRAM",
+     "line": 61043,
+     "ext": false
+    },
+    {
+     "func": "__Z44Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamFrameDataPhPjPcS0_",
+     "line": 61142,
+     "ext": false
+    },
+    {
+     "func": "__Z44Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamFrameDataPhPjPcS0_",
+     "line": 61157,
+     "ext": false
+    }
+   ]
+  },
+  "0x9112": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_GetPartialObjectExjPhmjPc",
+     "line": 15793,
+     "ext": false
+    },
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_GetPartialObjectExjPhmjPc",
+     "line": 15804,
+     "ext": false
+    }
+   ]
+  },
+  "0x9113": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_SkipObjectTransferjPc",
+     "line": 15881,
+     "ext": false
+    },
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_SkipObjectTransferjPc",
+     "line": 15888,
+     "ext": false
+    }
+   ]
+  },
+  "0x1c2c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_AFMF_Cfg2_GetCapabilityP41_tag_lmx_struct_recinfo_af_cfg2_Capa_infoPcPj",
+     "line": 16103,
+     "ext": false
+    }
+   ]
+  },
+  "0x9416": {
+   "func_count": 12,
+   "sites": [
+    {
+     "func": "__Z26LMX_func_api_WB_Ctrl_WBSETP26_tag_LMX_STRUCT_WBSET_CTRLPcPj",
+     "line": 17449,
+     "ext": false
+    },
+    {
+     "func": "__Z27LMX_func_api_Rec_Ctrl_AF_AEP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+     "line": 67734,
+     "ext": false
+    },
+    {
+     "func": "__Z28LMX_func_api_Rec_Ctrl_AF_AE2P24_tag_LMX_STRUCT_REC_CTRLPcPj",
+     "line": 67797,
+     "ext": false
+    },
+    {
+     "func": "__Z32LMX_func_api_Rec_Ctrl_Backup_ReqP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+     "line": 67872,
+     "ext": false
+    },
+    {
+     "func": "__Z24LMX_func_api_Rec_Ctrl_4kP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+     "line": 67912,
+     "ext": false
+    },
+    {
+     "func": "__Z31LMX_func_api_Rec_Ctrl_MF_AssistP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+     "line": 67952,
+     "ext": false
+    },
+    {
+     "func": "__Z26LMX_func_api_Rec_Ctrl_ZoomP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+     "line": 67992,
+     "ext": false
+    },
+    {
+     "func": "__Z29LMX_func_api_Rec_Ctrl_AF_AreaP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+     "line": 68032,
+     "ext": false
+    },
+    {
+     "func": "__Z26LMX_func_api_Rec_Ctrl_4K6KP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+     "line": 68072,
+     "ext": false
+    },
+    {
+     "func": "__Z28LMX_func_api_Rec_Ctrl_LV_MagP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+     "line": 68112,
+     "ext": false
+    },
+    {
+     "func": "__Z26LMX_func_api_Rec_Ctrl_LensP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+     "line": 68152,
+     "ext": false
+    },
+    {
+     "func": "__Z26LMX_func_api_Rec_Ctrl_MenuP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+     "line": 68192,
+     "ext": false
+    }
+   ]
+  },
+  "0x940a": {
+   "func_count": 12,
+   "sites": [
+    {
+     "func": "__Z41Lmx_lib_ptpif_LmxExt_Get_PowerSaving_InfoP33_tag_LMX_STRUCT_POWER_SAVING_INFOjPc",
+     "line": 17784,
+     "ext": false
+    },
+    {
+     "func": "__Z41Lmx_lib_ptpif_LmxExt_Get_PowerSaving_InfoP33_tag_LMX_STRUCT_POWER_SAVING_INFOjPc",
+     "line": 17791,
+     "ext": false
+    },
+    {
+     "func": "__Z64Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfigSetting_Get_MaxRecvBuffP45_tag_LMX_STRUCT_SE",
+     "line": 37857,
+     "ext": false
+    },
+    {
+     "func": "__Z64Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfigSetting_Get_MaxRecvBuffP45_tag_LMX_STRUCT_SE",
+     "line": 37864,
+     "ext": false
+    },
+    {
+     "func": "__Z63Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfigSetting_Get_CompatibleP42_tag_LMX_STRUCT_SET",
+     "line": 38026,
+     "ext": false
+    },
+    {
+     "func": "__Z63Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfigSetting_Get_CompatibleP42_tag_LMX_STRUCT_SET",
+     "line": 38033,
+     "ext": false
+    },
+    {
+     "func": "__Z46Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfig_InfoP36_tag_LMX_STRUCT_SETUP_FILES_CFG_INFO",
+     "line": 48428,
+     "ext": false
+    },
+    {
+     "func": "__Z46Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfig_InfoP36_tag_LMX_STRUCT_SETUP_FILES_CFG_INFO",
+     "line": 48435,
+     "ext": false
+    },
+    {
+     "func": "__Z41Lmx_lib_ptpif_LmxExt_Get_SetupConfig_InfoP30_tag_LMX_STRUCT_SETUP_CFG_INFOjPc",
+     "line": 72838,
+     "ext": false
+    },
+    {
+     "func": "__Z41Lmx_lib_ptpif_LmxExt_Get_SetupConfig_InfoP30_tag_LMX_STRUCT_SETUP_CFG_INFOjPc",
+     "line": 72845,
+     "ext": false
+    },
+    {
+     "func": "__Z41Lmx_lib_ptpif_LmxExt_Get_BodySetting_InfoP33_tag_LMX_STRUCT_BODY_SETTING_INFOjPc",
+     "line": 74785,
+     "ext": false
+    },
+    {
+     "func": "__Z41Lmx_lib_ptpif_LmxExt_Get_BodySetting_InfoP33_tag_LMX_STRUCT_BODY_SETTING_INFOjPc",
+     "line": 74792,
+     "ext": false
+    }
+   ]
+  },
+  "0x9414": {
+   "func_count": 24,
+   "sites": [
+    {
+     "func": "__ZL33Lmx_lib_ptpif_LmxExt_LensZoomInfoP34_tag_LMX_STRUCT_LENS_ZOOM_SET_INFOjPc",
+     "line": 18276,
+     "ext": false
+    },
+    {
+     "func": "__ZL33Lmx_lib_ptpif_LmxExt_LensZoomInfoP34_tag_LMX_STRUCT_LENS_ZOOM_SET_INFOjPc",
+     "line": 18283,
+     "ext": false
+    },
+    {
+     "func": "__Z24LMX_func_api_GetUSBSpeedPtPcPj",
+     "line": 24739,
+     "ext": false
+    },
+    {
+     "func": "__Z24LMX_func_api_GetUSBSpeedPtPcPj",
+     "line": 24746,
+     "ext": false
+    },
+    {
+     "func": "__ZL33Lmx_lib_ptpif_LmxExt_GetSetupInfoP39_tag_LMX_STRUCT_SETUP_INFO_NOTIFICATIONjPc",
+     "line": 32956,
+     "ext": false
+    },
+    {
+     "func": "__ZL33Lmx_lib_ptpif_LmxExt_GetSetupInfoP39_tag_LMX_STRUCT_SETUP_INFO_NOTIFICATIONjPc",
+     "line": 32963,
+     "ext": false
+    },
+    {
+     "func": "__Z42Lmx_lib_ptpif_LmxExt_Get_Lv_Composite_InfoP39_tag_LMX_STRUCT_LIVEVIEW_COMPOSITE_INFOj",
+     "line": 33183,
+     "ext": false
+    },
+    {
+     "func": "__Z42Lmx_lib_ptpif_LmxExt_Get_Lv_Composite_InfoP39_tag_LMX_STRUCT_LIVEVIEW_COMPOSITE_INFOj",
+     "line": 33190,
+     "ext": false
+    },
+    {
+     "func": "__Z42Lmx_lib_ptpif_LmxExt_Get_LiveView_Str_InfoP33_tag_LMX_STRUCT_LIVEVIEW_STR_INFOjPc",
+     "line": 34099,
+     "ext": false
+    },
+    {
+     "func": "__Z42Lmx_lib_ptpif_LmxExt_Get_LiveView_Str_InfoP33_tag_LMX_STRUCT_LIVEVIEW_STR_INFOjPc",
+     "line": 34106,
+     "ext": false
+    },
+    {
+     "func": "__ZL31Lmx_lib_ptpif_LmxExt_GetRecInfoP24_tag_LMX_STRUCT_REC_INFOjPc",
+     "line": 35101,
+     "ext": false
+    },
+    {
+     "func": "__ZL31Lmx_lib_ptpif_LmxExt_GetRecInfoP24_tag_LMX_STRUCT_REC_INFOjPc",
+     "line": 35108,
+     "ext": false
+    }
+   ]
+  },
+  "0x940e": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "__Z41LMX_func_api_Play_Ctrl_SinglePlay_CurrentPcPj",
+     "line": 18498,
+     "ext": false
+    },
+    {
+     "func": "__Z38LMX_func_api_Play_Ctrl_SinglePlay_NextPcPj",
+     "line": 18535,
+     "ext": false
+    },
+    {
+     "func": "__Z38LMX_func_api_Play_Ctrl_SinglePlay_PrevPcPj",
+     "line": 18577,
+     "ext": false
+    }
+   ]
+  },
+  "0x940f": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "__Z33LMX_func_api_Play_Ctrl_Play_StartjjjjjPcPj",
+     "line": 18634,
+     "ext": false
+    },
+    {
+     "func": "__Z32LMX_func_api_Play_Ctrl_Play_StopPcPj",
+     "line": 18679,
+     "ext": false
+    },
+    {
+     "func": "__Z33LMX_func_api_Play_Ctrl_Play_PausePcPj",
+     "line": 18721,
+     "ext": false
+    },
+    {
+     "func": "__Z35LMX_func_api_Play_Ctrl_Play_RestartPcPj",
+     "line": 18766,
+     "ext": false
+    }
+   ]
+  },
+  "0x11fd": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z43LMX_func_api_RecInfo_AF_Frame_GetCapabilityP34_tag_LMX_STRUCT_AF_FRAME_CAPA_INFOPcPj",
+     "line": 19389,
+     "ext": false
+    }
+   ]
+  },
+  "0x103e": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z43LMX_func_api_RecInfo_AF_Frame_GetCapabilityP34_tag_LMX_STRUCT_AF_FRAME_CAPA_INFOPcPj",
+     "line": 19563,
+     "ext": false
+    },
+    {
+     "func": "__Z41LMX_func_api_RecDisp_Config_GetCapabilityP42_tag_lmx_struct_recinfo_rec_disp_capa_inf",
+     "line": 25129,
+     "ext": false
+    }
+   ]
+  },
+  "0x10ac": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z43LMX_func_api_RecInfo_AF_Frame_GetCapabilityP34_tag_LMX_STRUCT_AF_FRAME_CAPA_INFOPcPj",
+     "line": 19681,
+     "ext": false
+    }
+   ]
+  },
+  "0x1040": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z43LMX_func_api_RecInfo_AF_Frame_GetCapabilityP34_tag_LMX_STRUCT_AF_FRAME_CAPA_INFOPcPj",
+     "line": 19701,
+     "ext": false
+    }
+   ]
+  },
+  "0x1048": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z43LMX_func_api_RecInfo_AF_Frame_GetCapabilityP34_tag_LMX_STRUCT_AF_FRAME_CAPA_INFOPcPj",
+     "line": 19716,
+     "ext": false
+    },
+    {
+     "func": "_BF_set_key",
+     "line": 102663,
+     "ext": false
+    }
+   ]
+  },
+  "0x11ef": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z43LMX_func_api_RecInfo_AF_Frame_GetCapabilityP34_tag_LMX_STRUCT_AF_FRAME_CAPA_INFOPcPj",
+     "line": 19725,
+     "ext": false
+    }
+   ]
+  },
+  "0x1050": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z43LMX_func_api_RecInfo_AF_Frame_GetCapabilityP34_tag_LMX_STRUCT_AF_FRAME_CAPA_INFOPcPj",
+     "line": 19740,
+     "ext": false
+    },
+    {
+     "func": "_curve448_base_double_scalarmul_non_secret",
+     "line": 181604,
+     "ext": false
+    }
+   ]
+  },
+  "0x1960": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z26LMX_func_api_GetDeviceInfoP26_tag_lmx_struct_deviceinfoPcPj",
+     "line": 21605,
+     "ext": false
+    },
+    {
+     "func": "__Z35LMX_func_api_GetDeviceInfo_SerialNoPhjPjPcS0_",
+     "line": 21961,
+     "ext": false
+    }
+   ]
+  },
+  "0x1940": {
+   "func_count": 25,
+   "sites": [
+    {
+     "func": "__Z26LMX_func_api_GetDeviceInfoP26_tag_lmx_struct_deviceinfoPcPj",
+     "line": 21629,
+     "ext": false
+    },
+    {
+     "func": "__Z26LMX_func_api_GetDeviceInfoP26_tag_lmx_struct_deviceinfoPcPj",
+     "line": 21636,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_GetDeviceInfo_VendorNamePhjPjPcS0_",
+     "line": 21751,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_GetDeviceInfo_VendorNamePhjPjPcS0_",
+     "line": 21761,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_GetDeviceInfo_ModelNamePhjPjPcS0_",
+     "line": 21827,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_GetDeviceInfo_ModelNamePhjPjPcS0_",
+     "line": 21837,
+     "ext": false
+    },
+    {
+     "func": "__Z38LMX_func_api_GetDeviceInfo_VersionInfoPhjPjPcS0_",
+     "line": 21903,
+     "ext": false
+    },
+    {
+     "func": "__Z38LMX_func_api_GetDeviceInfo_VersionInfoPhjPjPcS0_",
+     "line": 21913,
+     "ext": false
+    },
+    {
+     "func": "__Z35LMX_func_api_GetDeviceInfo_SerialNoPhjPjPcS0_",
+     "line": 21986,
+     "ext": false
+    },
+    {
+     "func": "__Z35LMX_func_api_GetDeviceInfo_SerialNoPhjPjPcS0_",
+     "line": 21996,
+     "ext": false
+    },
+    {
+     "func": "__Z33LMX_func_api_GetDeviceInfo_OpCodehPjPtjS_Pc",
+     "line": 22081,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_GetDeviceInfo_EventCodehPjPtjS_Pc",
+     "line": 22149,
+     "ext": false
+    }
+   ]
+  },
+  "0x1538": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "__Z26LMX_func_api_GetDeviceInfoP26_tag_lmx_struct_deviceinfoPcPj",
+     "line": 21643,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_GetDeviceInfo_VendorNamePhjPjPcS0_",
+     "line": 21769,
+     "ext": false
+    },
+    {
+     "func": "__Z56Lmx_lib_ptpif_std_GetDeviceInfo_sub_set_DevInfo_form_bufP38_tag_LMX_STRUCT_PTP_DATASE",
+     "line": 57919,
+     "ext": false
+    }
+   ]
+  },
+  "0x1539": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z26LMX_func_api_GetDeviceInfoP26_tag_lmx_struct_deviceinfoPcPj",
+     "line": 21648,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_GetDeviceInfo_VendorNamePhjPjPcS0_",
+     "line": 21775,
+     "ext": false
+    }
+   ]
+  },
+  "0x163b": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z26LMX_func_api_GetDeviceInfoP26_tag_lmx_struct_deviceinfoPcPj",
+     "line": 21670,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_GetDeviceInfo_ModelNamePhjPjPcS0_",
+     "line": 21851,
+     "ext": false
+    }
+   ]
+  },
+  "0x173d": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z26LMX_func_api_GetDeviceInfoP26_tag_lmx_struct_deviceinfoPcPj",
+     "line": 21683,
+     "ext": false
+    },
+    {
+     "func": "__Z38LMX_func_api_GetDeviceInfo_VersionInfoPhjPjPcS0_",
+     "line": 21927,
+     "ext": false
+    }
+   ]
+  },
+  "0x183f": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z26LMX_func_api_GetDeviceInfoP26_tag_lmx_struct_deviceinfoPcPj",
+     "line": 21696,
+     "ext": false
+    },
+    {
+     "func": "__Z35LMX_func_api_GetDeviceInfo_SerialNoPhjPjPcS0_",
+     "line": 22010,
+     "ext": false
+    }
+   ]
+  },
+  "0x1950": {
+   "func_count": 8,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_GetDeviceInfo_VendorNamePhjPjPcS0_",
+     "line": 21732,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_GetDeviceInfo_ModelNamePhjPjPcS0_",
+     "line": 21808,
+     "ext": false
+    },
+    {
+     "func": "__Z38LMX_func_api_GetDeviceInfo_VersionInfoPhjPjPcS0_",
+     "line": 21884,
+     "ext": false
+    },
+    {
+     "func": "__Z33LMX_func_api_GetDeviceInfo_OpCodehPjPtjS_Pc",
+     "line": 22051,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_GetDeviceInfo_EventCodehPjPtjS_Pc",
+     "line": 22122,
+     "ext": false
+    },
+    {
+     "func": "__Z41LMX_func_api_GetDeviceInfo_DevicePropCodehPjPtjS_Pc",
+     "line": 22189,
+     "ext": false
+    },
+    {
+     "func": "__Z44LMX_func_api_GetDeviceInfo_CaptureFormatCodehPjPtjS_Pc",
+     "line": 22261,
+     "ext": false
+    },
+    {
+     "func": "__Z42LMX_func_api_GetDeviceInfo_ImageFormatCodehPjPtjS_Pc",
+     "line": 22333,
+     "ext": false
+    }
+   ]
+  },
+  "0x163a": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_GetDeviceInfo_ModelNamePhjPjPcS0_",
+     "line": 21845,
+     "ext": false
+    },
+    {
+     "func": "__Z56Lmx_lib_ptpif_std_GetDeviceInfo_sub_set_DevInfo_form_bufP38_tag_LMX_STRUCT_PTP_DATASE",
+     "line": 57928,
+     "ext": false
+    }
+   ]
+  },
+  "0x173c": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z38LMX_func_api_GetDeviceInfo_VersionInfoPhjPjPcS0_",
+     "line": 21921,
+     "ext": false
+    },
+    {
+     "func": "__Z56Lmx_lib_ptpif_std_GetDeviceInfo_sub_set_DevInfo_form_bufP38_tag_LMX_STRUCT_PTP_DATASE",
+     "line": 57937,
+     "ext": false
+    }
+   ]
+  },
+  "0x183e": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z35LMX_func_api_GetDeviceInfo_SerialNoPhjPjPcS0_",
+     "line": 22003,
+     "ext": false
+    },
+    {
+     "func": "__Z56Lmx_lib_ptpif_std_GetDeviceInfo_sub_set_DevInfo_form_bufP38_tag_LMX_STRUCT_PTP_DATASE",
+     "line": 57946,
+     "ext": false
+    }
+   ]
+  },
+  "0x1134": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z42LMX_func_api_GetDeviceInfo_ImageFormatCodehPjPtjS_Pc",
+     "line": 22375,
+     "ext": false
+    }
+   ]
+  },
+  "0x500d": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "__Z38LMX_func_api_ShtterSpeed_GetCapability30LMX_DEF_USER_FUNC_GETCAPA_TYPEP38_tag_LMX_STR",
+     "line": 22550,
+     "ext": false
+    },
+    {
+     "func": "__Z33LMX_func_api_ShtterSpeed_SetParamjPc",
+     "line": 22596,
+     "ext": false
+    },
+    {
+     "func": "__Z33LMX_func_api_ShtterSpeed_GetParamPjPc",
+     "line": 22641,
+     "ext": false
+    }
+   ]
+  },
+  "0x5007": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "__Z32LMX_func_api_F_Val_GetCapability30LMX_DEF_USER_FUNC_GETCAPA_TYPEP38_tag_LMX_STRUCT_PT",
+     "line": 22686,
+     "ext": false
+    },
+    {
+     "func": "__Z27LMX_func_api_F_Val_SetParamjPc",
+     "line": 22734,
+     "ext": false
+    },
+    {
+     "func": "__Z27LMX_func_api_F_Val_GetParamPjPc",
+     "line": 22779,
+     "ext": false
+    }
+   ]
+  },
+  "0x500e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z45LMX_func_api_ExposureProgramMode_Val_GetParamPjPc",
+     "line": 22819,
+     "ext": false
+    }
+   ]
+  },
+  "0x5013": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z42LMX_func_api_StillCaptureMode_Val_GetParamPjPc",
+     "line": 22859,
+     "ext": false
+    }
+   ]
+  },
+  "0x500a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z35LMX_func_api_FocusMode_Val_GetParamPjPc",
+     "line": 22899,
+     "ext": false
+    }
+   ]
+  },
+  "0x3800": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "__Z27LMX_func_api_Get_ObjectInfoP26_tag_LMX_STRUCT_OBJECTINFOPcPj",
+     "line": 22938,
+     "ext": false
+    },
+    {
+     "func": "__Z27LMX_func_api_Get_ObjectInfoP26_tag_LMX_STRUCT_OBJECTINFOPcPj",
+     "line": 22983,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Get_Object_FormatTypejPjPcS_",
+     "line": 23159,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Get_Object_FormatTypejPjPcS_",
+     "line": 23207,
+     "ext": false
+    }
+   ]
+  },
+  "0x3811": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z27LMX_func_api_Get_ObjectInfoP26_tag_LMX_STRUCT_OBJECTINFOPcPj",
+     "line": 22941,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Get_Object_FormatTypejPjPcS_",
+     "line": 23162,
+     "ext": false
+    }
+   ]
+  },
+  "0x3801": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z27LMX_func_api_Get_ObjectInfoP26_tag_LMX_STRUCT_OBJECTINFOPcPj",
+     "line": 22945,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Get_Object_FormatTypejPjPcS_",
+     "line": 23165,
+     "ext": false
+    }
+   ]
+  },
+  "0x3808": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z27LMX_func_api_Get_ObjectInfoP26_tag_LMX_STRUCT_OBJECTINFOPcPj",
+     "line": 22948,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Get_Object_FormatTypejPjPcS_",
+     "line": 23168,
+     "ext": false
+    }
+   ]
+  },
+  "0x3001": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z27LMX_func_api_Get_ObjectInfoP26_tag_LMX_STRUCT_OBJECTINFOPcPj",
+     "line": 22977,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Get_Object_FormatTypejPjPcS_",
+     "line": 23201,
+     "ext": false
+    }
+   ]
+  },
+  "0x300d": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "__Z27LMX_func_api_Get_ObjectInfoP26_tag_LMX_STRUCT_OBJECTINFOPcPj",
+     "line": 22980,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Get_Object_FormatTypejPjPcS_",
+     "line": 23204,
+     "ext": false
+    },
+    {
+     "func": "__Z25LXM_func_api_DeleteObjectjjPcPj",
+     "line": 74331,
+     "ext": false
+    }
+   ]
+  },
+  "0x3812": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "__Z27LMX_func_api_Get_ObjectInfoP26_tag_LMX_STRUCT_OBJECTINFOPcPj",
+     "line": 22988,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Get_Object_FormatTypejPjPcS_",
+     "line": 23212,
+     "ext": false
+    },
+    {
+     "func": "__Z25LXM_func_api_DeleteObjectjjPcPj",
+     "line": 74337,
+     "ext": false
+    }
+   ]
+  },
+  "0x8001": {
+   "func_count": 12,
+   "sites": [
+    {
+     "func": "__Z27LMX_func_api_Get_ObjectInfoP26_tag_LMX_STRUCT_OBJECTINFOPcPj",
+     "line": 23014,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_Get_Object_AssociatTypejPjPcS_",
+     "line": 23288,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_digests_int",
+     "line": 216401,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_digests_int",
+     "line": 216411,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_digests_int",
+     "line": 216417,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_digests_int",
+     "line": 216427,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_digests_int",
+     "line": 216432,
+     "ext": false
+    },
+    {
+     "func": "_EVP_add_digest",
+     "line": 232678,
+     "ext": false
+    },
+    {
+     "func": "_EVP_add_digest",
+     "line": 232684,
+     "ext": false
+    },
+    {
+     "func": "_ossl_init_ssl_base_ossl_",
+     "line": 426314,
+     "ext": false
+    },
+    {
+     "func": "_ossl_init_ssl_base_ossl_",
+     "line": 426324,
+     "ext": false
+    },
+    {
+     "func": "_ossl_init_ssl_base_ossl_",
+     "line": 426330,
+     "ext": false
+    }
+   ]
+  },
+  "0x1028": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z29LMX_func_api_SS_GetCapabilityP28_tag_LMX_STRUCT_SS_CAPA_INFOPcPj",
+     "line": 23950,
+     "ext": false
+    }
+   ]
+  },
+  "0x1024": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z29LMX_func_api_SS_GetCapabilityP28_tag_LMX_STRUCT_SS_CAPA_INFOPcPj",
+     "line": 24078,
+     "ext": false
+    }
+   ]
+  },
+  "0x2864": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z41LMX_func_api_RecDisp_Config_GetCapabilityP42_tag_lmx_struct_recinfo_rec_disp_capa_inf",
+     "line": 24872,
+     "ext": false
+    }
+   ]
+  },
+  "0x204c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z41LMX_func_api_RecDisp_Config_GetCapabilityP42_tag_lmx_struct_recinfo_rec_disp_capa_inf",
+     "line": 25098,
+     "ext": false
+    }
+   ]
+  },
+  "0x103c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z41LMX_func_api_RecDisp_Config_GetCapabilityP42_tag_lmx_struct_recinfo_rec_disp_capa_inf",
+     "line": 25100,
+     "ext": false
+    }
+   ]
+  },
+  "0x1442": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z41LMX_func_api_RecDisp_Config_GetCapabilityP42_tag_lmx_struct_recinfo_rec_disp_capa_inf",
+     "line": 25112,
+     "ext": false
+    }
+   ]
+  },
+  "0x1846": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z41LMX_func_api_RecDisp_Config_GetCapabilityP42_tag_lmx_struct_recinfo_rec_disp_capa_inf",
+     "line": 25146,
+     "ext": false
+    }
+   ]
+  },
+  "0x1c4a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z41LMX_func_api_RecDisp_Config_GetCapabilityP42_tag_lmx_struct_recinfo_rec_disp_capa_inf",
+     "line": 25163,
+     "ext": false
+    }
+   ]
+  },
+  "0x204e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z41LMX_func_api_RecDisp_Config_GetCapabilityP42_tag_lmx_struct_recinfo_rec_disp_capa_inf",
+     "line": 25180,
+     "ext": false
+    }
+   ]
+  },
+  "0x2452": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z41LMX_func_api_RecDisp_Config_GetCapabilityP42_tag_lmx_struct_recinfo_rec_disp_capa_inf",
+     "line": 25197,
+     "ext": false
+    }
+   ]
+  },
+  "0x2030": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27333,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_CameraMode_GetCapabilityP45_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_CAPA_INFO",
+     "line": 30935,
+     "ext": false
+    }
+   ]
+  },
+  "0x2022": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27439,
+     "ext": false
+    }
+   ]
+  },
+  "0x2024": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27456,
+     "ext": false
+    }
+   ]
+  },
+  "0x2026": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27473,
+     "ext": false
+    }
+   ]
+  },
+  "0x2028": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27493,
+     "ext": false
+    }
+   ]
+  },
+  "0x202a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27511,
+     "ext": false
+    }
+   ]
+  },
+  "0x202c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27529,
+     "ext": false
+    }
+   ]
+  },
+  "0x202e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z38LMX_func_api_PhotoStyle2_GetCapabilityP42_tag_LMX_STRUCT_PHOTO_STYLE2_CFG_CAPA_INFOPc",
+     "line": 27547,
+     "ext": false
+    }
+   ]
+  },
+  "0x9107": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z43Lmx_lib_ptpif_LmxExt_Get_Tag_CapabilitySizejjPhjPjPc",
+     "line": 28522,
+     "ext": false
+    },
+    {
+     "func": "__Z43Lmx_lib_ptpif_LmxExt_Get_Tag_CapabilitySizejjPhjPjPc",
+     "line": 28531,
+     "ext": false
+    }
+   ]
+  },
+  "0x9108": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_Get_Tag_CapabilityjjPhjPjPc",
+     "line": 28670,
+     "ext": false
+    },
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_Get_Tag_CapabilityjjPhjPjPc",
+     "line": 28679,
+     "ext": false
+    }
+   ]
+  },
+  "0x1c2a": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_Mov_Filter_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_FILTER_CAPA_INFOPcPj",
+     "line": 30171,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_Mov_Config_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_CONFIG_CAPA_INFOPcPj",
+     "line": 56266,
+     "ext": false
+    }
+   ]
+  },
+  "0x9408": {
+   "func_count": 6,
+   "sites": [
+    {
+     "func": "__Z40Lmx_lib_ptpif_LmxExt_Get_Mov_Filter_InfoP31_tag_LMX_STRUCT_MOV_FILTER_INFOjPc",
+     "line": 30410,
+     "ext": false
+    },
+    {
+     "func": "__Z40Lmx_lib_ptpif_LmxExt_Get_Mov_Filter_InfoP31_tag_LMX_STRUCT_MOV_FILTER_INFOjPc",
+     "line": 30417,
+     "ext": false
+    },
+    {
+     "func": "__Z37Lmx_lib_ptpif_LmxExt_Get_Mov_Cfg_InfoP31_tag_LMX_STRUCT_MOV_CONFIG_INFOjPc",
+     "line": 56573,
+     "ext": false
+    },
+    {
+     "func": "__Z37Lmx_lib_ptpif_LmxExt_Get_Mov_Cfg_InfoP31_tag_LMX_STRUCT_MOV_CONFIG_INFOjPc",
+     "line": 56580,
+     "ext": false
+    },
+    {
+     "func": "__Z56Lmx_lib_ptpif_LmxExt_Get_Mov_Quality_Detail_Display_InfoP47_tag_LMX_STRUCT_MOV_QUALIT",
+     "line": 57448,
+     "ext": false
+    },
+    {
+     "func": "__Z56Lmx_lib_ptpif_LmxExt_Get_Mov_Quality_Detail_Display_InfoP47_tag_LMX_STRUCT_MOV_QUALIT",
+     "line": 57455,
+     "ext": false
+    }
+   ]
+  },
+  "0x1012": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_CameraMode_GetCapabilityP45_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_CAPA_INFO",
+     "line": 31133,
+     "ext": false
+    },
+    {
+     "func": "__Z43LMX_func_api_RecInfo_Metering_GetCapabilityP42_tag_LMX_STRUCT_RECINFO_METERING_CAPA_I",
+     "line": 49959,
+     "ext": false
+    }
+   ]
+  },
+  "0x1416": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_CameraMode_GetCapabilityP45_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_CAPA_INFO",
+     "line": 31166,
+     "ext": false
+    }
+   ]
+  },
+  "0x181a": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_CameraMode_GetCapabilityP45_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_CAPA_INFO",
+     "line": 31199,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_ImageInfo_GetCapabilityP39_tag_LMX_STRUCT_RECINFO_IMAGE_CAPA_INFOPcPj",
+     "line": 66565,
+     "ext": false
+    }
+   ]
+  },
+  "0x1c1e": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_CameraMode_GetCapabilityP45_tag_LMX_STRUCT_RECINFO_CAMERA_MODE_CAPA_INFO",
+     "line": 31233,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_Mov_Config_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_CONFIG_CAPA_INFOPcPj",
+     "line": 56374,
+     "ext": false
+    }
+   ]
+  },
+  "0x4445": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__ZN9NWLibUtil13SetDefCiphersEP10ssl_ctx_st",
+     "line": 32523,
+     "ext": true
+    }
+   ]
+  },
+  "0x4844": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__ZN9NWLibUtil13SetDefCiphersEP10ssl_ctx_st",
+     "line": 32525,
+     "ext": false
+    }
+   ]
+  },
+  "0x4345": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__ZN9NWLibUtil13SetDefCiphersEP10ssl_ctx_st",
+     "line": 32608,
+     "ext": true
+    }
+   ]
+  },
+  "0x4544": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__ZN9NWLibUtil13SetDefCiphersEP10ssl_ctx_st",
+     "line": 32634,
+     "ext": true
+    }
+   ]
+  },
+  "0x4352": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__ZN9NWLibUtil13SetDefCiphersEP10ssl_ctx_st",
+     "line": 32659,
+     "ext": true
+    }
+   ]
+  },
+  "0x4433": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__ZN9NWLibUtil13SetDefCiphersEP10ssl_ctx_st",
+     "line": 32676,
+     "ext": true
+    }
+   ]
+  },
+  "0x4449": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__ZN9NWLibUtil13SetDefCiphersEP10ssl_ctx_st",
+     "line": 32740,
+     "ext": true
+    }
+   ]
+  },
+  "0x4d2d": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__ZN9NWLibUtil13SetDefCiphersEP10ssl_ctx_st",
+     "line": 32760,
+     "ext": true
+    }
+   ]
+  },
+  "0x201c": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z39LMX_func_api_LiveView_Str_Get_Trans_ImgP38_tag_LMX_STRUCT_LIVEVIEW_STR_TRANS_IMGPcPj",
+     "line": 34061,
+     "ext": false
+    },
+    {
+     "func": "__Z39LMX_func_api_LiveView_Str_Get_Recom_ImgP38_tag_LMX_STRUCT_LIVEVIEW_STR_RECOM_IMGPcPj",
+     "line": 34294,
+     "ext": false
+    }
+   ]
+  },
+  "0x301c": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "__Z42Lmx_lib_ptpif_LmxExt_Get_LiveView_Str_InfoP33_tag_LMX_STRUCT_LIVEVIEW_STR_INFOjPc",
+     "line": 34115,
+     "ext": true
+    },
+    {
+     "func": "__Z42Lmx_lib_ptpif_LmxExt_Get_LiveView_Str_InfoP33_tag_LMX_STRUCT_LIVEVIEW_STR_INFOjPc",
+     "line": 34118,
+     "ext": true
+    },
+    {
+     "func": "__Z42Lmx_lib_ptpif_LmxExt_Get_LiveView_Str_InfoP33_tag_LMX_STRUCT_LIVEVIEW_STR_INFOjPc",
+     "line": 34135,
+     "ext": false
+    },
+    {
+     "func": "__Z42Lmx_lib_ptpif_LmxExt_Get_LiveView_Str_InfoP33_tag_LMX_STRUCT_LIVEVIEW_STR_INFOjPc",
+     "line": 34143,
+     "ext": false
+    }
+   ]
+  },
+  "0x9421": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z49Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfigSet_InfoP40_tag_LMX_STRUCT_SETUP_FILES_CFG_S",
+     "line": 37344,
+     "ext": false
+    },
+    {
+     "func": "__Z49Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfigSet_InfoP40_tag_LMX_STRUCT_SETUP_FILES_CFG_S",
+     "line": 37351,
+     "ext": false
+    }
+   ]
+  },
+  "0x9422": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z47Lmx_lib_ptpif_LmxExt_SetSetupFilesConfigSetInfojPhjPc",
+     "line": 37720,
+     "ext": false
+    }
+   ]
+  },
+  "0x9423": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z47Lmx_lib_ptpif_LmxExt_SetSetupFilesConfigSetInfojPhjPc",
+     "line": 37722,
+     "ext": false
+    }
+   ]
+  },
+  "0x9400": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z42Lmx_lib_ptpif_util_Get_NextPhase_StdOpCodetPj",
+     "line": 40835,
+     "ext": false
+    }
+   ]
+  },
+  "0x4064": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z42Lmx_lib_ptpif_util_Get_NextPhase_StdOpCodetPj",
+     "line": 40899,
+     "ext": true
+    }
+   ]
+  },
+  "0x67a1": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "-[LmxUsbSender getStatusForDevice:]",
+     "line": 42157,
+     "ext": false
+    }
+   ]
+  },
+  "0x6421": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "-[LmxUsbSender cancelRequestForDevice:]",
+     "line": 42188,
+     "ext": false
+    }
+   ]
+  },
+  "0x6621": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "-[LmxUsbSender resetRequestForDevice:]",
+     "line": 42218,
+     "ext": false
+    }
+   ]
+  },
+  "0x4240": {
+   "func_count": 7,
+   "sites": [
+    {
+     "func": "-[LmxSenderThread timeCheckStart]",
+     "line": 42870,
+     "ext": true
+    },
+    {
+     "func": "-[Controller sleepWithLoop:]",
+     "line": 44982,
+     "ext": true
+    },
+    {
+     "func": "_dgram_read",
+     "line": 108743,
+     "ext": true
+    },
+    {
+     "func": "_dtls1_get_timeout",
+     "line": 403081,
+     "ext": true
+    },
+    {
+     "func": "_dtls1_start_timer",
+     "line": 403204,
+     "ext": true
+    },
+    {
+     "func": "_dtls1_start_timer",
+     "line": 403218,
+     "ext": true
+    },
+    {
+     "func": "_dtls1_stop_timer",
+     "line": 403281,
+     "ext": true
+    }
+   ]
+  },
+  "0x2436": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45143,
+     "ext": false
+    }
+   ]
+  },
+  "0x2426": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45249,
+     "ext": false
+    }
+   ]
+  },
+  "0x2428": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45266,
+     "ext": false
+    }
+   ]
+  },
+  "0x242a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45283,
+     "ext": false
+    }
+   ]
+  },
+  "0x242c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45303,
+     "ext": false
+    }
+   ]
+  },
+  "0x242e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45321,
+     "ext": false
+    }
+   ]
+  },
+  "0x2430": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45339,
+     "ext": false
+    }
+   ]
+  },
+  "0x2432": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45357,
+     "ext": false
+    }
+   ]
+  },
+  "0x2434": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_AF_Config_GetCapabilityP35_tag_LMX_STRUCT_AF_CONFIG_CAPA_INFOPcPj",
+     "line": 45377,
+     "ext": false
+    }
+   ]
+  },
+  "0x9406": {
+   "func_count": 8,
+   "sites": [
+    {
+     "func": "__Z32LMX_func_api_Setup_Ctrl_MenuSavePcPj",
+     "line": 48049,
+     "ext": false
+    },
+    {
+     "func": "__Z33LMX_func_api_Setup_Ctrl_SD_FormatPcPj",
+     "line": 48088,
+     "ext": false
+    },
+    {
+     "func": "__Z42LMX_func_api_Setup_Ctrl_SensorCleaning_ReqPcPj",
+     "line": 48123,
+     "ext": false
+    },
+    {
+     "func": "__Z40LMX_func_api_Setup_Ctrl_PixelRefresh_ReqPcPj",
+     "line": 48158,
+     "ext": false
+    },
+    {
+     "func": "__Z39LMX_func_api_Setup_Ctrl_FirmUpAbort_ReqPcPj",
+     "line": 48193,
+     "ext": false
+    },
+    {
+     "func": "__Z40LMX_func_api_Setup_Ctrl_ResetSetting_ReqjPcPj",
+     "line": 48232,
+     "ext": false
+    },
+    {
+     "func": "__Z30LMX_func_api_FirmwareUpdate_ThPcPhjjhhPj",
+     "line": 70551,
+     "ext": false
+    },
+    {
+     "func": "__Z30LMX_func_api_FirmwareUpdate_ThPcPhjjhhPj",
+     "line": 70690,
+     "ext": false
+    }
+   ]
+  },
+  "0x940b": {
+   "func_count": 8,
+   "sites": [
+    {
+     "func": "__Z44Lmx_lib_ptpif_LmxExt_SetSetupFilesConfigInfoPhjPc",
+     "line": 48609,
+     "ext": false
+    },
+    {
+     "func": "__Z44Lmx_lib_ptpif_LmxExt_SetSetupFilesConfigInfoPhjPc",
+     "line": 48616,
+     "ext": false
+    },
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_SetSetupConfigInfoPhjPc",
+     "line": 61986,
+     "ext": false
+    },
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_SetSetupConfigInfoPhjPc",
+     "line": 61993,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpif_LmxExt_SetPowerSavingPhjPc",
+     "line": 62077,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpif_LmxExt_SetPowerSavingPhjPc",
+     "line": 62084,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpif_LmxExt_SetBodySettingPhjPc",
+     "line": 62168,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpif_LmxExt_SetBodySettingPhjPc",
+     "line": 62175,
+     "ext": false
+    }
+   ]
+  },
+  "0x940c": {
+   "func_count": 5,
+   "sites": [
+    {
+     "func": "__Z35LMX_func_api_MovieFilter_Ctrl_StartPcPj",
+     "line": 48709,
+     "ext": false
+    },
+    {
+     "func": "__Z33LMX_func_api_MovieFilter_Ctrl_EndhPcPj",
+     "line": 48752,
+     "ext": false
+    },
+    {
+     "func": "__Z31LMX_func_api_MoveRec_Ctrl_StartPcPj",
+     "line": 73551,
+     "ext": false
+    },
+    {
+     "func": "__Z30LMX_func_api_MoveRec_Ctrl_StophPcPj",
+     "line": 73594,
+     "ext": false
+    },
+    {
+     "func": "__Z35LMX_func_api_MoveRec_Ctrl_StillCaptPcPj",
+     "line": 73632,
+     "ext": false
+    }
+   ]
+  },
+  "0x141e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z29LMX_func_api_WB_GetCapabilityP28_tag_LMX_STRUCT_WB_CAPA_INFOPcPj",
+     "line": 48786,
+     "ext": false
+    }
+   ]
+  },
+  "0x1018": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z43LMX_func_api_RecInfo_Metering_GetCapabilityP42_tag_LMX_STRUCT_RECINFO_METERING_CAPA_I",
+     "line": 49851,
+     "ext": false
+    }
+   ]
+  },
+  "0x1014": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "__Z43LMX_func_api_RecInfo_Metering_GetCapabilityP42_tag_LMX_STRUCT_RECINFO_METERING_CAPA_I",
+     "line": 49976,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpif_std_GetDevicePropDescP44_tag_LMX_STRUCT_PTP_DATASET_DEVICE_PROP_DESCPc",
+     "line": 58171,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpif_std_GetDevicePropDescP44_tag_LMX_STRUCT_PTP_DATASET_DEVICE_PROP_DESCPc",
+     "line": 58179,
+     "ext": false
+    }
+   ]
+  },
+  "0x1016": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "__Z43LMX_func_api_RecInfo_Metering_GetCapabilityP42_tag_LMX_STRUCT_RECINFO_METERING_CAPA_I",
+     "line": 49993,
+     "ext": false
+    },
+    {
+     "func": "__Z34Lmx_lib_ptpif_std_SetDevicePropValP43_tag_LMX_STRUCT_PTP_DATASET_DEVICE_PROP_VALPc",
+     "line": 58681,
+     "ext": false
+    },
+    {
+     "func": "__Z34Lmx_lib_ptpif_std_SetDevicePropValP43_tag_LMX_STRUCT_PTP_DATASET_DEVICE_PROP_VALPc",
+     "line": 58689,
+     "ext": false
+    }
+   ]
+  },
+  "0x2382": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "__Z17LMX_func_api_Initv",
+     "line": 50617,
+     "ext": false
+    },
+    {
+     "func": "__Z31LMX_func_api_SetSearchConditionjPhPj",
+     "line": 50699,
+     "ext": false
+    },
+    {
+     "func": "__Z31LMX_func_api_SetSearchConditionjPhPj",
+     "line": 50747,
+     "ext": false
+    },
+    {
+     "func": "__Z30Search_and_Connect_DEVICE_TYPEjPcPjPKc",
+     "line": 51878,
+     "ext": false
+    }
+   ]
+  },
+  "0x2374": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z31LMX_func_api_SetSearchConditionjPhPj",
+     "line": 50740,
+     "ext": false
+    },
+    {
+     "func": "__Z30Search_and_Connect_DEVICE_TYPEjPcPjPKc",
+     "line": 51874,
+     "ext": false
+    }
+   ]
+  },
+  "0x4060": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53314,
+     "ext": false
+    }
+   ]
+  },
+  "0x4040": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53356,
+     "ext": false
+    }
+   ]
+  },
+  "0x4042": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53409,
+     "ext": false
+    }
+   ]
+  },
+  "0x4044": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53426,
+     "ext": false
+    }
+   ]
+  },
+  "0x4046": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53442,
+     "ext": false
+    }
+   ]
+  },
+  "0x4048": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53460,
+     "ext": false
+    }
+   ]
+  },
+  "0x404a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53477,
+     "ext": false
+    }
+   ]
+  },
+  "0x404c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53495,
+     "ext": false
+    }
+   ]
+  },
+  "0x404e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53512,
+     "ext": false
+    }
+   ]
+  },
+  "0x302e": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53527,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63353,
+     "ext": false
+    }
+   ]
+  },
+  "0x4050": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53530,
+     "ext": false
+    }
+   ]
+  },
+  "0x4052": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53547,
+     "ext": false
+    }
+   ]
+  },
+  "0x4054": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53565,
+     "ext": false
+    }
+   ]
+  },
+  "0x2c2c": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53580,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63343,
+     "ext": false
+    }
+   ]
+  },
+  "0x4056": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53582,
+     "ext": false
+    }
+   ]
+  },
+  "0x3030": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53597,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63363,
+     "ext": false
+    }
+   ]
+  },
+  "0x4058": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53599,
+     "ext": false
+    }
+   ]
+  },
+  "0x3838": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53614,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63435,
+     "ext": false
+    }
+   ]
+  },
+  "0x405c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53616,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c3c": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53631,
+     "ext": false
+    },
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63130,
+     "ext": false
+    }
+   ]
+  },
+  "0x405e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53633,
+     "ext": false
+    }
+   ]
+  },
+  "0x403e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_PhotoStyle_GetCapabilityP36_tag_LMX_STRUCT_PHOTOSTYLE_CAPA_INFOPcPj",
+     "line": 53641,
+     "ext": false
+    }
+   ]
+  },
+  "0x1c20": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_Mov_Config_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_CONFIG_CAPA_INFOPcPj",
+     "line": 56391,
+     "ext": false
+    },
+    {
+     "func": "_dtls1_default_timeout",
+     "line": 402743,
+     "ext": false
+    },
+    {
+     "func": "_ssl3_default_timeout",
+     "line": 415324,
+     "ext": false
+    },
+    {
+     "func": "_tls1_default_timeout",
+     "line": 468523,
+     "ext": false
+    }
+   ]
+  },
+  "0x1c22": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_Mov_Config_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_CONFIG_CAPA_INFOPcPj",
+     "line": 56408,
+     "ext": false
+    }
+   ]
+  },
+  "0x1c24": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_Mov_Config_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_CONFIG_CAPA_INFOPcPj",
+     "line": 56428,
+     "ext": false
+    }
+   ]
+  },
+  "0x1c26": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_Mov_Config_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_CONFIG_CAPA_INFOPcPj",
+     "line": 56446,
+     "ext": false
+    }
+   ]
+  },
+  "0x1c28": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37LMX_func_api_Mov_Config_GetCapabilityP41_tag_LMX_STRUCT_MOV_MENU_CONFIG_CAPA_INFOPcPj",
+     "line": 56464,
+     "ext": false
+    }
+   ]
+  },
+  "0x6070": {
+   "func_count": 15,
+   "sites": [
+    {
+     "func": "__Z46LMX_func_api_Mov_Config_Get_C_Movie_mode_ParamPjPcS_",
+     "line": 56509,
+     "ext": false
+    },
+    {
+     "func": "__Z43LMX_func_api_Mov_Config_Get_HDMI_mode_ParamPjPcS_",
+     "line": 56767,
+     "ext": false
+    },
+    {
+     "func": "__Z46LMX_func_api_Mov_Config_Get_Quality_mode_ParamPjPcS_",
+     "line": 56816,
+     "ext": false
+    },
+    {
+     "func": "__Z42LMX_func_api_Mov_Config_Get_Rec_mode_ParamPjPcS_",
+     "line": 56856,
+     "ext": false
+    },
+    {
+     "func": "__Z48LMX_func_api_Mov_Config_Get_ExTelecon_mode_ParamPjPcS_",
+     "line": 56896,
+     "ext": false
+    },
+    {
+     "func": "__Z41LMX_func_api_Mov_Config_Get_SS_Gain_ParamPjPcS_",
+     "line": 56936,
+     "ext": false
+    },
+    {
+     "func": "__Z46LMX_func_api_Mov_Config_Set_C_Movie_mode_ParamjPcPj",
+     "line": 56978,
+     "ext": false
+    },
+    {
+     "func": "__Z43LMX_func_api_Mov_Config_Set_HDMI_mode_ParamjPcPj",
+     "line": 57043,
+     "ext": false
+    },
+    {
+     "func": "__Z46LMX_func_api_Mov_Config_Set_Quality_mode_ParamjPcPj",
+     "line": 57108,
+     "ext": false
+    },
+    {
+     "func": "__Z42LMX_func_api_Mov_Config_Set_Rec_mode_ParamjPcPj",
+     "line": 57164,
+     "ext": false
+    },
+    {
+     "func": "__Z48LMX_func_api_Mov_Config_Set_ExTelecon_mode_ParamjPcPj",
+     "line": 57220,
+     "ext": false
+    },
+    {
+     "func": "__Z41LMX_func_api_Mov_Config_Set_SS_Gain_ParamjPcPj",
+     "line": 57277,
+     "ext": false
+    }
+   ]
+  },
+  "0x606a": {
+   "func_count": 8,
+   "sites": [
+    {
+     "func": "__Z46LMX_func_api_Mov_Config_Get_C_Movie_mode_ParamPjPcS_",
+     "line": 56522,
+     "ext": false
+    },
+    {
+     "func": "__Z43LMX_func_api_Mov_Config_Get_HDMI_mode_ParamPjPcS_",
+     "line": 56777,
+     "ext": false
+    },
+    {
+     "func": "__Z46LMX_func_api_Mov_Config_Get_Quality_mode_ParamPjPcS_",
+     "line": 56829,
+     "ext": false
+    },
+    {
+     "func": "__Z42LMX_func_api_Mov_Config_Get_Rec_mode_ParamPjPcS_",
+     "line": 56869,
+     "ext": false
+    },
+    {
+     "func": "__Z48LMX_func_api_Mov_Config_Get_ExTelecon_mode_ParamPjPcS_",
+     "line": 56909,
+     "ext": false
+    },
+    {
+     "func": "__Z41LMX_func_api_Mov_Config_Get_SS_Gain_ParamPjPcS_",
+     "line": 56949,
+     "ext": false
+    },
+    {
+     "func": "__Z44LMX_func_api_Mov_Config_Get_Photo_Shot_ParamPjPcS_",
+     "line": 57562,
+     "ext": false
+    },
+    {
+     "func": "__Z47LMX_func_api_Mov_Config_Get_Quality_Detail_ListP41_tag_LMX_STRUCT_MOV_QUALITY_DATA_TA",
+     "line": 57693,
+     "ext": false
+    }
+   ]
+  },
+  "0x706a": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "__Z37Lmx_lib_ptpif_LmxExt_Get_Mov_Cfg_InfoP31_tag_LMX_STRUCT_MOV_CONFIG_INFOjPc",
+     "line": 56589,
+     "ext": true
+    },
+    {
+     "func": "__Z37Lmx_lib_ptpif_LmxExt_Get_Mov_Cfg_InfoP31_tag_LMX_STRUCT_MOV_CONFIG_INFOjPc",
+     "line": 56592,
+     "ext": true
+    },
+    {
+     "func": "__Z37Lmx_lib_ptpif_LmxExt_Get_Mov_Cfg_InfoP31_tag_LMX_STRUCT_MOV_CONFIG_INFOjPc",
+     "line": 56607,
+     "ext": false
+    },
+    {
+     "func": "__Z37Lmx_lib_ptpif_LmxExt_Get_Mov_Cfg_InfoP31_tag_LMX_STRUCT_MOV_CONFIG_INFOjPc",
+     "line": 56615,
+     "ext": false
+    }
+   ]
+  },
+  "0x6060": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z37Lmx_lib_ptpif_LmxExt_Get_Mov_Cfg_InfoP31_tag_LMX_STRUCT_MOV_CONFIG_INFOjPc",
+     "line": 56631,
+     "ext": false
+    }
+   ]
+  },
+  "0x6068": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z41LMX_func_api_Mov_Config_Get_SS_Gain_ParamPjPcS_",
+     "line": 56959,
+     "ext": false
+    },
+    {
+     "func": "__Z41LMX_func_api_Mov_Config_Set_SS_Gain_ParamjPcPj",
+     "line": 57292,
+     "ext": false
+    }
+   ]
+  },
+  "0x6064": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z41LMX_func_api_Mov_Config_Set_SS_Gain_ParamjPcPj",
+     "line": 57303,
+     "ext": false
+    }
+   ]
+  },
+  "0x1001": {
+   "func_count": 33,
+   "sites": [
+    {
+     "func": "__Z31Lmx_lib_ptpif_std_GetDeviceInfoP38_tag_LMX_STRUCT_PTP_DATASET_DEVICEINFOPc",
+     "line": 57749,
+     "ext": false
+    },
+    {
+     "func": "__Z31Lmx_lib_ptpif_std_GetDeviceInfoP38_tag_LMX_STRUCT_PTP_DATASET_DEVICEINFOPc",
+     "line": 57754,
+     "ext": false
+    },
+    {
+     "func": "_ASN1_mbstring_ncopy",
+     "line": 80938,
+     "ext": false
+    },
+    {
+     "func": "_ASN1_mbstring_ncopy",
+     "line": 80941,
+     "ext": false
+    },
+    {
+     "func": "_ASN1_mbstring_ncopy",
+     "line": 80944,
+     "ext": false
+    },
+    {
+     "func": "_ASN1_mbstring_ncopy",
+     "line": 80947,
+     "ext": false
+    },
+    {
+     "func": "_ASN1_mbstring_ncopy",
+     "line": 80996,
+     "ext": false
+    },
+    {
+     "func": "_traverse_string",
+     "line": 81123,
+     "ext": false
+    },
+    {
+     "func": "_generate_v3",
+     "line": 87016,
+     "ext": false
+    },
+    {
+     "func": "_pkey_dh_ctrl_str",
+     "line": 162960,
+     "ext": false
+    },
+    {
+     "func": "_pkey_dsa_ctrl",
+     "line": 167396,
+     "ext": false
+    },
+    {
+     "func": "_pkey_dsa_ctrl_str",
+     "line": 167559,
+     "ext": false
+    }
+   ]
+  },
+  "0x1130": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z56Lmx_lib_ptpif_std_GetDeviceInfo_sub_set_DevInfo_form_bufP38_tag_LMX_STRUCT_PTP_DATASE",
+     "line": 57910,
+     "ext": false
+    }
+   ]
+  },
+  "0x1015": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z34Lmx_lib_ptpif_std_GetDevicePropValP43_tag_LMX_STRUCT_PTP_DATASET_DEVICE_PROP_VALPc",
+     "line": 58483,
+     "ext": false
+    },
+    {
+     "func": "__Z34Lmx_lib_ptpif_std_GetDevicePropValP43_tag_LMX_STRUCT_PTP_DATASET_DEVICE_PROP_VALPc",
+     "line": 58491,
+     "ext": false
+    }
+   ]
+  },
+  "0x9114": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z34Lmx_lib_ptpif_LmxExt_GetStorageIDsP32_tag_LMX_STRUCT_PTP_ARRAY_UINT32Pc",
+     "line": 58814,
+     "ext": false
+    },
+    {
+     "func": "__Z34Lmx_lib_ptpif_LmxExt_GetStorageIDsP32_tag_LMX_STRUCT_PTP_ARRAY_UINT32Pc",
+     "line": 58819,
+     "ext": false
+    }
+   ]
+  },
+  "0x9115": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z35Lmx_lib_ptpif_LmxExt_GetStorageInfojP27_tag_LMX_STRUCT_STORAGEINFOPcPj",
+     "line": 58939,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpif_LmxExt_GetStorageInfojP27_tag_LMX_STRUCT_STORAGEINFOPcPj",
+     "line": 58946,
+     "ext": false
+    }
+   ]
+  },
+  "0x1008": {
+   "func_count": 10,
+   "sites": [
+    {
+     "func": "__Z34Lmx_lib_ptpif_LmxExt_GetObjectInfoP26_tag_LMX_STRUCT_OBJECTINFOPcPj",
+     "line": 59157,
+     "ext": false
+    },
+    {
+     "func": "__Z34Lmx_lib_ptpif_LmxExt_GetObjectInfoP26_tag_LMX_STRUCT_OBJECTINFOPcPj",
+     "line": 59165,
+     "ext": false
+    },
+    {
+     "func": "_BIO_listen",
+     "line": 106085,
+     "ext": false
+    },
+    {
+     "func": "_dh_pkey_ctrl",
+     "line": 160243,
+     "ext": false
+    },
+    {
+     "func": "_pkey_scrypt_ctrl_str",
+     "line": 242770,
+     "ext": false
+    },
+    {
+     "func": "_pkey_scrypt_ctrl_str",
+     "line": 242777,
+     "ext": false
+    },
+    {
+     "func": "_OCSP_REQ_CTX_nbio",
+     "line": 258867,
+     "ext": false
+    },
+    {
+     "func": "_rsa_pkey_ctrl",
+     "line": 281740,
+     "ext": false
+    },
+    {
+     "func": "_rsa_ctx_to_pss_string",
+     "line": 282641,
+     "ext": false
+    },
+    {
+     "func": "_pkey_rsa_ctrl",
+     "line": 288981,
+     "ext": false
+    }
+   ]
+  },
+  "0x1009": {
+   "func_count": 13,
+   "sites": [
+    {
+     "func": "__Z30Lmx_lib_ptpif_LmxExt_GetObjectP38_tag_LMX_STRUCT_PTP_DATASET_OBJECTINFOPhPc",
+     "line": 59453,
+     "ext": false
+    },
+    {
+     "func": "__Z30Lmx_lib_ptpif_LmxExt_GetObjectP38_tag_LMX_STRUCT_PTP_DATASET_OBJECTINFOPhPc",
+     "line": 59461,
+     "ext": false
+    },
+    {
+     "func": "_dh_pkey_ctrl",
+     "line": 160160,
+     "ext": false
+    },
+    {
+     "func": "_dh_pkey_ctrl",
+     "line": 160463,
+     "ext": false
+    },
+    {
+     "func": "_ec_pkey_ctrl",
+     "line": 188631,
+     "ext": false
+    },
+    {
+     "func": "_ec_pkey_ctrl",
+     "line": 188849,
+     "ext": false
+    },
+    {
+     "func": "_pkey_scrypt_ctrl_str",
+     "line": 242784,
+     "ext": false
+    },
+    {
+     "func": "_pkey_scrypt_ctrl_str",
+     "line": 242791,
+     "ext": false
+    },
+    {
+     "func": "_OCSP_REQ_CTX_http",
+     "line": 258911,
+     "ext": false
+    },
+    {
+     "func": "_OCSP_REQ_CTX_add1_header",
+     "line": 258993,
+     "ext": false
+    },
+    {
+     "func": "_OCSP_sendreq_new",
+     "line": 259028,
+     "ext": false
+    },
+    {
+     "func": "_rsa_pkey_ctrl",
+     "line": 281890,
+     "ext": false
+    }
+   ]
+  },
+  "0x101b": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z37Lmx_lib_ptpif_LmxExt_GetPartialObjectjPhjjPc",
+     "line": 59549,
+     "ext": false
+    },
+    {
+     "func": "__Z37Lmx_lib_ptpif_LmxExt_GetPartialObjectjPhjjPc",
+     "line": 59558,
+     "ext": false
+    }
+   ]
+  },
+  "0x9403": {
+   "func_count": 12,
+   "sites": [
+    {
+     "func": "__Z38Lmx_lib_ptpif_LmxExt_SetPhotoStyleInfoPhjPc",
+     "line": 59720,
+     "ext": false
+    },
+    {
+     "func": "__Z38Lmx_lib_ptpif_LmxExt_SetPhotoStyleInfoPhjPc",
+     "line": 59727,
+     "ext": false
+    },
+    {
+     "func": "__Z31Lmx_lib_ptpif_LmxExt_SetRecInfoPhjjPc",
+     "line": 59815,
+     "ext": false
+    },
+    {
+     "func": "__Z31Lmx_lib_ptpif_LmxExt_SetRecInfoPhjjPc",
+     "line": 59822,
+     "ext": false
+    },
+    {
+     "func": "__Z38Lmx_lib_ptpif_LmxExt_SetCameraModeInfoPhjPc",
+     "line": 61189,
+     "ext": false
+    },
+    {
+     "func": "__Z38Lmx_lib_ptpif_LmxExt_SetCameraModeInfoPhjPc",
+     "line": 61196,
+     "ext": false
+    },
+    {
+     "func": "__Z33Lmx_lib_ptpif_LmxExt_SetImageInfoPhjPc",
+     "line": 61280,
+     "ext": false
+    },
+    {
+     "func": "__Z33Lmx_lib_ptpif_LmxExt_SetImageInfoPhjPc",
+     "line": 61287,
+     "ext": false
+    },
+    {
+     "func": "__Z36Lmx_lib_ptpif_LmxExt_SetMeteringInfoPhjPc",
+     "line": 61371,
+     "ext": false
+    },
+    {
+     "func": "__Z36Lmx_lib_ptpif_LmxExt_SetMeteringInfoPhjPc",
+     "line": 61378,
+     "ext": false
+    },
+    {
+     "func": "__Z36Lmx_lib_ptpif_LmxExt_SetIntervalInfoPhjPc",
+     "line": 62350,
+     "ext": false
+    },
+    {
+     "func": "__Z36Lmx_lib_ptpif_LmxExt_SetIntervalInfoPhjPc",
+     "line": 62357,
+     "ext": false
+    }
+   ]
+  },
+  "0x9409": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "__Z31Lmx_lib_ptpif_LmxExt_SetMovInfoPhjjPc",
+     "line": 59913,
+     "ext": false
+    },
+    {
+     "func": "__Z31Lmx_lib_ptpif_LmxExt_SetMovInfoPhjjPc",
+     "line": 59920,
+     "ext": false
+    },
+    {
+     "func": "__Z33Lmx_lib_ptpif_LmxExt_SetMovFilterPhjjPc",
+     "line": 60008,
+     "ext": false
+    },
+    {
+     "func": "__Z33Lmx_lib_ptpif_LmxExt_SetMovFilterPhjjPc",
+     "line": 60015,
+     "ext": false
+    }
+   ]
+  },
+  "0x9415": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z34Lmx_lib_ptpif_LmxExt_SetLvTransImgPhjjPc",
+     "line": 60103,
+     "ext": false
+    },
+    {
+     "func": "__Z34Lmx_lib_ptpif_LmxExt_SetLvTransImgPhjjPc",
+     "line": 60110,
+     "ext": false
+    }
+   ]
+  },
+  "0x2013": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z29Lmx_lib_ptpif_LmxExt_Rec_CtrljP24_tag_LMX_STRUCT_REC_CTRLPc",
+     "line": 60281,
+     "ext": false
+    }
+   ]
+  },
+  "0x9706": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamDataPhPjPcS0_",
+     "line": 60631,
+     "ext": false
+    },
+    {
+     "func": "__Z39Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamDataPhPjPcS0_",
+     "line": 60637,
+     "ext": false
+    },
+    {
+     "func": "__Z40Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamData2PhPjP38_tag_LMX_STRUCT_LIVEVIEW_INFO_HISTGRAM",
+     "line": 60787,
+     "ext": false
+    },
+    {
+     "func": "__Z40Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamData2PhPjP38_tag_LMX_STRUCT_LIVEVIEW_INFO_HISTGRAM",
+     "line": 60793,
+     "ext": false
+    }
+   ]
+  },
+  "0x9707": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z44Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamFrameDataPhPjPcS0_",
+     "line": 61074,
+     "ext": false
+    },
+    {
+     "func": "__Z44Lmx_lib_ptpif_LmxExt_Mnt_Get_StreamFrameDataPhPjPcS0_",
+     "line": 61080,
+     "ext": false
+    }
+   ]
+  },
+  "0x9704": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z31Lmx_lib_ptpif_LmxExt_SetMntInfoPhjPc",
+     "line": 62259,
+     "ext": false
+    },
+    {
+     "func": "__Z31Lmx_lib_ptpif_LmxExt_SetMntInfoPhjPc",
+     "line": 62266,
+     "ext": false
+    }
+   ]
+  },
+  "0x9411": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z37Lmx_lib_ptpif_LmxExt_SetGps_Data_InfoPhjPc",
+     "line": 62441,
+     "ext": false
+    },
+    {
+     "func": "__Z37Lmx_lib_ptpif_LmxExt_SetGps_Data_InfoPhjPc",
+     "line": 62448,
+     "ext": false
+    }
+   ]
+  },
+  "0x100a": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "__Z29Lmx_lib_ptpif_LmxExt_GetThumbP38_tag_LMX_STRUCT_PTP_DATASET_OBJECTINFOPhPc",
+     "line": 62630,
+     "ext": false
+    },
+    {
+     "func": "__Z29Lmx_lib_ptpif_LmxExt_GetThumbP38_tag_LMX_STRUCT_PTP_DATASET_OBJECTINFOPhPc",
+     "line": 62638,
+     "ext": false
+    },
+    {
+     "func": "_rsa_pkey_ctrl",
+     "line": 281908,
+     "ext": false
+    },
+    {
+     "func": "_pkey_rsa_ctrl_str",
+     "line": 289368,
+     "ext": false
+    }
+   ]
+  },
+  "0x100b": {
+   "func_count": 6,
+   "sites": [
+    {
+     "func": "__Z30Lmx_lib_ptpif_std_DeleteObjectjjPcPj",
+     "line": 62724,
+     "ext": false
+    },
+    {
+     "func": "__Z30Lmx_lib_ptpif_std_DeleteObjectjjPcPj",
+     "line": 62732,
+     "ext": false
+    },
+    {
+     "func": "_dh_pkey_ctrl",
+     "line": 160534,
+     "ext": false
+    },
+    {
+     "func": "_dh_pkey_ctrl",
+     "line": 160589,
+     "ext": false
+    },
+    {
+     "func": "_rsa_pkey_ctrl",
+     "line": 281732,
+     "ext": false
+    },
+    {
+     "func": "_pkey_rsa_ctrl",
+     "line": 288990,
+     "ext": false
+    }
+   ]
+  },
+  "0x9116": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z43Lmx_lib_ptpif_LmxExt_SetEventTypeFromCamerajPhjPc",
+     "line": 62816,
+     "ext": false
+    },
+    {
+     "func": "__Z43Lmx_lib_ptpif_LmxExt_SetEventTypeFromCamerajPhjPc",
+     "line": 62823,
+     "ext": false
+    }
+   ]
+  },
+  "0x9117": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z34Lmx_lib_ptpif_LmxExt_StartObjectRWjPcPj",
+     "line": 62909,
+     "ext": false
+    },
+    {
+     "func": "__Z34Lmx_lib_ptpif_LmxExt_StartObjectRWjPcPj",
+     "line": 62916,
+     "ext": false
+    }
+   ]
+  },
+  "0x9118": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z32Lmx_lib_ptpif_LmxExt_EndObjectRWjPcPj",
+     "line": 62998,
+     "ext": false
+    },
+    {
+     "func": "__Z32Lmx_lib_ptpif_LmxExt_EndObjectRWjPcPj",
+     "line": 63005,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c5a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63090,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c3e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63199,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c40": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63216,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c42": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63233,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c46": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63253,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c48": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63271,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c4a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63289,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c4c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63309,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c50": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63327,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c52": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63345,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c54": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63365,
+     "ext": false
+    }
+   ]
+  },
+  "0x3434": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63381,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c56": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63383,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c44": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63401,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c4e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63419,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c58": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z34LMX_func_api_Strobe2_GetCapabilityP41_tag_LMX_STRUCT_RECINFO_STROBE2_CAPA_INFOPcPj",
+     "line": 63437,
+     "ext": false
+    }
+   ]
+  },
+  "0x1370": {
+   "func_count": 6,
+   "sites": [
+    {
+     "func": "__Z31LMX_func_api_AF_Info_Get_StatusPjPcS_",
+     "line": 64339,
+     "ext": false
+    },
+    {
+     "func": "__Z35LMX_func_api_AF_Info_Get_Disp_FrameP33_tag_LMX_STRUCT_AFINFO_DISP_FRAMEPcPj",
+     "line": 64644,
+     "ext": false
+    },
+    {
+     "func": "__Z33LMX_func_api_AF_Info_Get_FaceInfoP31_tag_LMX_STRUCT_AFINFO_FACEINFOPcPj",
+     "line": 64710,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_AF_Info_Get_TrackingInfoP35_tag_LMX_STRUCT_AFINFO_TRACKINGINFOPcPj",
+     "line": 64781,
+     "ext": false
+    },
+    {
+     "func": "__Z31LMX_func_api_AF_Info_Get_APTypePjPcS_",
+     "line": 64837,
+     "ext": false
+    },
+    {
+     "func": "__Z33LMX_func_api_AF_Info_Get_Eye_InfoPjPcS_",
+     "line": 64888,
+     "ext": false
+    }
+   ]
+  },
+  "0x1368": {
+   "func_count": 8,
+   "sites": [
+    {
+     "func": "__Z31LMX_func_api_AF_Info_Get_StatusPjPcS_",
+     "line": 64352,
+     "ext": false
+    },
+    {
+     "func": "__Z30Lmx_lib_ptpif_LmxExt_GetAFInfoP23_tag_LMX_STRUCT_AF_INFOjPc",
+     "line": 64420,
+     "ext": false
+    },
+    {
+     "func": "__Z30Lmx_lib_ptpif_LmxExt_GetAFInfoP23_tag_LMX_STRUCT_AF_INFOjPc",
+     "line": 64428,
+     "ext": false
+    },
+    {
+     "func": "__Z35LMX_func_api_AF_Info_Get_Disp_FrameP33_tag_LMX_STRUCT_AFINFO_DISP_FRAMEPcPj",
+     "line": 64657,
+     "ext": false
+    },
+    {
+     "func": "__Z33LMX_func_api_AF_Info_Get_FaceInfoP31_tag_LMX_STRUCT_AFINFO_FACEINFOPcPj",
+     "line": 64723,
+     "ext": false
+    },
+    {
+     "func": "__Z37LMX_func_api_AF_Info_Get_TrackingInfoP35_tag_LMX_STRUCT_AFINFO_TRACKINGINFOPcPj",
+     "line": 64794,
+     "ext": false
+    },
+    {
+     "func": "__Z31LMX_func_api_AF_Info_Get_APTypePjPcS_",
+     "line": 64850,
+     "ext": false
+    },
+    {
+     "func": "__Z33LMX_func_api_AF_Info_Get_Eye_InfoPjPcS_",
+     "line": 64901,
+     "ext": false
+    }
+   ]
+  },
+  "0x9401": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z30Lmx_lib_ptpif_LmxExt_GetAFInfoP23_tag_LMX_STRUCT_AF_INFOjPc",
+     "line": 64403,
+     "ext": false
+    },
+    {
+     "func": "__Z30Lmx_lib_ptpif_LmxExt_GetAFInfoP23_tag_LMX_STRUCT_AF_INFOjPc",
+     "line": 64410,
+     "ext": false
+    }
+   ]
+  },
+  "0x133e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z30Lmx_lib_ptpif_LmxExt_GetAFInfoP23_tag_LMX_STRUCT_AF_INFOjPc",
+     "line": 64462,
+     "ext": false
+    }
+   ]
+  },
+  "0x1824": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_ImageInfo_GetCapabilityP39_tag_LMX_STRUCT_RECINFO_IMAGE_CAPA_INFOPcPj",
+     "line": 66457,
+     "ext": false
+    }
+   ]
+  },
+  "0x181c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_ImageInfo_GetCapabilityP39_tag_LMX_STRUCT_RECINFO_IMAGE_CAPA_INFOPcPj",
+     "line": 66582,
+     "ext": false
+    }
+   ]
+  },
+  "0x181e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_ImageInfo_GetCapabilityP39_tag_LMX_STRUCT_RECINFO_IMAGE_CAPA_INFOPcPj",
+     "line": 66599,
+     "ext": false
+    }
+   ]
+  },
+  "0x1820": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_ImageInfo_GetCapabilityP39_tag_LMX_STRUCT_RECINFO_IMAGE_CAPA_INFOPcPj",
+     "line": 66619,
+     "ext": false
+    }
+   ]
+  },
+  "0x1822": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_ImageInfo_GetCapabilityP39_tag_LMX_STRUCT_RECINFO_IMAGE_CAPA_INFOPcPj",
+     "line": 66637,
+     "ext": false
+    }
+   ]
+  },
+  "0x9404": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z29LMX_func_api_Rec_Ctrl_ReleaseP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+     "line": 67667,
+     "ext": false
+    }
+   ]
+  },
+  "0x9405": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z27LMX_func_api_Rec_Ctrl_AF_AEP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+     "line": 67724,
+     "ext": false
+    },
+    {
+     "func": "__Z28LMX_func_api_Rec_Ctrl_AF_AE2P24_tag_LMX_STRUCT_REC_CTRLPcPj",
+     "line": 67787,
+     "ext": false
+    }
+   ]
+  },
+  "0x9410": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z27LMX_func_api_Rec_Ctrl_OtherP30_tag_LMX_STRUCT_REC_CTRL_OTHERPcPj",
+     "line": 67832,
+     "ext": false
+    }
+   ]
+  },
+  "0x9603": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z32Lmx_lib_ptpif_LmxExt_ChgEvntTypejjPc",
+     "line": 69239,
+     "ext": false
+    },
+    {
+     "func": "__Z32Lmx_lib_ptpif_LmxExt_ChgEvntTypejjPc",
+     "line": 69247,
+     "ext": false
+    }
+   ]
+  },
+  "0x4002": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z30LMX_func_api_Chg_ObjctAddEventhPcPj",
+     "line": 69329,
+     "ext": false
+    }
+   ]
+  },
+  "0x3225": {
+   "func_count": 19,
+   "sites": [
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70071,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70087,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70096,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70103,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70106,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70110,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70114,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70120,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70124,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70128,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70133,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70137,
+     "ext": true
+    }
+   ]
+  },
+  "0x3325": {
+   "func_count": 7,
+   "sites": [
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70151,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70157,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70160,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70164,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70177,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70184,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70191,
+     "ext": true
+    }
+   ]
+  },
+  "0x3525": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70174,
+     "ext": true
+    },
+    {
+     "func": "__Z9asciiConvcPc",
+     "line": 70187,
+     "ext": true
+    }
+   ]
+  },
+  "0x93e0": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z30LMX_func_api_FirmwareUpdate_ThPcPhjjhhPj",
+     "line": 70408,
+     "ext": true
+    },
+    {
+     "func": "_CT_POLICY_EVAL_CTX_new",
+     "line": 152867,
+     "ext": true
+    }
+   ]
+  },
+  "0x9605": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z35Lmx_lib_ptpif_LmxExt_Get_Event_InfoP36_tag_LMX_STRUCT_EVENT_INFO_FROM_INFOjhPc",
+     "line": 71316,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpif_LmxExt_Get_Event_InfoP36_tag_LMX_STRUCT_EVENT_INFO_FROM_INFOjhPc",
+     "line": 71323,
+     "ext": false
+    }
+   ]
+  },
+  "0x9606": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z35Lmx_lib_ptpif_LmxExt_Send_Data_InfoPhjPc",
+     "line": 71501,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpif_LmxExt_Send_Data_InfoPhjPc",
+     "line": 71506,
+     "ext": false
+    }
+   ]
+  },
+  "0x9607": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z30Lmx_lib_ptpif_LmxExt_Send_DataPhjPc",
+     "line": 71632,
+     "ext": false
+    },
+    {
+     "func": "__Z30Lmx_lib_ptpif_LmxExt_Send_DataPhjPc",
+     "line": 71637,
+     "ext": false
+    }
+   ]
+  },
+  "0x1c60": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z39LMX_func_api_SetupCfgInfo_GetCapabilityP35_tag_LMX_STRUCT_SETUP_CFG_CAPA_INFOPcPj",
+     "line": 72088,
+     "ext": false
+    }
+   ]
+  },
+  "0x1036": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z39LMX_func_api_SetupCfgInfo_GetCapabilityP35_tag_LMX_STRUCT_SETUP_CFG_CAPA_INFOPcPj",
+     "line": 72270,
+     "ext": false
+    }
+   ]
+  },
+  "0x1038": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z39LMX_func_api_SetupCfgInfo_GetCapabilityP35_tag_LMX_STRUCT_SETUP_CFG_CAPA_INFOPcPj",
+     "line": 72338,
+     "ext": false
+    }
+   ]
+  },
+  "0x143c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z39LMX_func_api_SetupCfgInfo_GetCapabilityP35_tag_LMX_STRUCT_SETUP_CFG_CAPA_INFOPcPj",
+     "line": 72354,
+     "ext": false
+    }
+   ]
+  },
+  "0x1840": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z39LMX_func_api_SetupCfgInfo_GetCapabilityP35_tag_LMX_STRUCT_SETUP_CFG_CAPA_INFOPcPj",
+     "line": 72370,
+     "ext": false
+    }
+   ]
+  },
+  "0x9705": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z30LMX_func_api_Mnt_Ctrl_LiveViewP24_tag_LMX_STRUCT_MNT_CTRLPcPj",
+     "line": 73666,
+     "ext": false
+    }
+   ]
+  },
+  "0x9412": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z32LMX_func_api_Ctrl_LiveView_StartPcPj",
+     "line": 73765,
+     "ext": false
+    },
+    {
+     "func": "__Z31LMX_func_api_Ctrl_LiveView_StopPcPj",
+     "line": 73809,
+     "ext": false
+    }
+   ]
+  },
+  "0x9703": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z36LMX_func_api_Mnt_GetInfo_Get_VersionPjS_PcS_",
+     "line": 75178,
+     "ext": false
+    },
+    {
+     "func": "__Z36LMX_func_api_Mnt_GetInfo_Get_UsbModePjPcS_",
+     "line": 75360,
+     "ext": false
+    }
+   ]
+  },
+  "0x9417": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z35Lmx_lib_ptpif_LmxExt_GetNetworkInfoP24_tag_LMX_STRUCT_NET_INFOjPc",
+     "line": 75450,
+     "ext": false
+    },
+    {
+     "func": "__Z35Lmx_lib_ptpif_LmxExt_GetNetworkInfoP24_tag_LMX_STRUCT_NET_INFOjPc",
+     "line": 75457,
+     "ext": false
+    }
+   ]
+  },
+  "0x9102": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "__Z32Lmx_lib_ptpif_LmxExt_OpenSessionjPjPcS_",
+     "line": 75630,
+     "ext": false
+    },
+    {
+     "func": "__Z32Lmx_lib_ptpif_LmxExt_OpenSessionjPjPcS_",
+     "line": 75637,
+     "ext": false
+    },
+    {
+     "func": "__Z32Lmx_lib_ptpif_LmxExt_OpenSessionjPjPcS_",
+     "line": 75697,
+     "ext": false
+    }
+   ]
+  },
+  "0x1002": {
+   "func_count": 27,
+   "sites": [
+    {
+     "func": "__Z32Lmx_lib_ptpif_LmxExt_OpenSessionjPjPcS_",
+     "line": 75685,
+     "ext": false
+    },
+    {
+     "func": "_ASN1_mbstring_ncopy",
+     "line": 80950,
+     "ext": false
+    },
+    {
+     "func": "_ASN1_mbstring_ncopy",
+     "line": 80999,
+     "ext": false
+    },
+    {
+     "func": "_traverse_string",
+     "line": 81126,
+     "ext": false
+    },
+    {
+     "func": "_pkey_dh_ctrl_str",
+     "line": 162998,
+     "ext": false
+    },
+    {
+     "func": "_pkey_dsa_ctrl",
+     "line": 167393,
+     "ext": false
+    },
+    {
+     "func": "_pkey_dsa_ctrl_str",
+     "line": 167571,
+     "ext": false
+    },
+    {
+     "func": "_pkey_ec_ctrl_str",
+     "line": 198716,
+     "ext": false
+    },
+    {
+     "func": "_pkey_tls1_prf_ctrl",
+     "line": 243168,
+     "ext": false
+    },
+    {
+     "func": "_pkey_tls1_prf_ctrl_str",
+     "line": 243343,
+     "ext": false
+    },
+    {
+     "func": "_pkey_tls1_prf_ctrl_str",
+     "line": 243350,
+     "ext": false
+    },
+    {
+     "func": "_CRYPTO_secure_malloc_init",
+     "line": 246023,
+     "ext": false
+    }
+   ]
+  },
+  "0x2005": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "__Z32Lmx_lib_ptpif_LmxExt_OpenSessionjPjPcS_",
+     "line": 75713,
+     "ext": false
+    }
+   ]
+  },
+  "0x9103": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z33Lmx_lib_ptpif_LmxExt_CloseSessionPc",
+     "line": 75795,
+     "ext": false
+    },
+    {
+     "func": "__Z33Lmx_lib_ptpif_LmxExt_CloseSessionPc",
+     "line": 75800,
+     "ext": false
+    }
+   ]
+  },
+  "0x9104": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "__Z38Lmx_lib_ptpif_LmxExt_Get_DeviceID_InfohPhjPc",
+     "line": 75964,
+     "ext": false
+    },
+    {
+     "func": "__Z38Lmx_lib_ptpif_LmxExt_Get_DeviceID_InfohPhjPc",
+     "line": 75971,
+     "ext": false
+    }
+   ]
+  },
+  "0x5000": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "_aria_encrypt",
+     "line": 77004,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_CT_strings",
+     "line": 151627,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_EVP_strings",
+     "line": 229453,
+     "ext": true
+    },
+    {
+     "func": "_SSL_CTX_new",
+     "line": 431200,
+     "ext": false
+    }
+   ]
+  },
+  "0x4000": {
+   "func_count": 24,
+   "sites": [
+    {
+     "func": "_asn1_d2i_read_bio",
+     "line": 78443,
+     "ext": false
+    },
+    {
+     "func": "_ERR_load_ASN1_strings",
+     "line": 86814,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_ASYNC_strings",
+     "line": 101385,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_BIO_strings",
+     "line": 107051,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_BUF_strings",
+     "line": 136042,
+     "ext": true
+    },
+    {
+     "func": "_CMS_add1_signer",
+     "line": 145744,
+     "ext": true
+    },
+    {
+     "func": "_CONF_parse_list",
+     "line": 150813,
+     "ext": false
+    },
+    {
+     "func": "_CONF_parse_list",
+     "line": 150843,
+     "ext": false
+    },
+    {
+     "func": "_ERR_load_DSA_strings",
+     "line": 164491,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_DSO_strings",
+     "line": 168102,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_X509_strings",
+     "line": 319912,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_X509V3_strings",
+     "line": 355025,
+     "ext": true
+    }
+   ]
+  },
+  "0x2806": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_ASN1_mbstring_ncopy",
+     "line": 80785,
+     "ext": false
+    },
+    {
+     "func": "_ASN1_STRING_set_by_NID",
+     "line": 83978,
+     "ext": false
+    }
+   ]
+  },
+  "0x1004": {
+   "func_count": 12,
+   "sites": [
+    {
+     "func": "_ASN1_mbstring_ncopy",
+     "line": 80904,
+     "ext": false
+    },
+    {
+     "func": "_ASN1_mbstring_ncopy",
+     "line": 81002,
+     "ext": false
+    },
+    {
+     "func": "_traverse_string",
+     "line": 81129,
+     "ext": false
+    },
+    {
+     "func": "_pkey_dh_ctrl_str",
+     "line": 163010,
+     "ext": false
+    },
+    {
+     "func": "_ec_pkey_ctrl",
+     "line": 188517,
+     "ext": false
+    },
+    {
+     "func": "_ec_pkey_ctrl",
+     "line": 188551,
+     "ext": false
+    },
+    {
+     "func": "_ec_pkey_ctrl",
+     "line": 188764,
+     "ext": false
+    },
+    {
+     "func": "_pkey_hkdf_ctrl_str",
+     "line": 242267,
+     "ext": false
+    },
+    {
+     "func": "_pkey_hkdf_ctrl_str",
+     "line": 242276,
+     "ext": false
+    },
+    {
+     "func": "_OCSP_REQ_CTX_nbio",
+     "line": 258555,
+     "ext": false
+    },
+    {
+     "func": "_pkey_rsa_ctrl_str",
+     "line": 289489,
+     "ext": false
+    },
+    {
+     "func": "_tls13_generate_secret",
+     "line": 474524,
+     "ext": false
+    }
+   ]
+  },
+  "0x2493": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_a2d_ASN1_OBJECT",
+     "line": 81557,
+     "ext": true
+    },
+    {
+     "func": "_asn1_time_to_tm",
+     "line": 84461,
+     "ext": true
+    }
+   ]
+  },
+  "0x2000": {
+   "func_count": 17,
+   "sites": [
+    {
+     "func": "_ASN1_STRING_to_UTF8",
+     "line": 83449,
+     "ext": false
+    },
+    {
+     "func": "_ASN1_STRING_set_default_mask_asc",
+     "line": 83939,
+     "ext": false
+    },
+    {
+     "func": "_ERR_load_ERR_strings",
+     "line": 212018,
+     "ext": false
+    },
+    {
+     "func": "_aes_cfb1_cipher",
+     "line": 217590,
+     "ext": false
+    },
+    {
+     "func": "_aria_128_cfb1_cipher",
+     "line": 220581,
+     "ext": false
+    },
+    {
+     "func": "_aria_192_cfb1_cipher",
+     "line": 220645,
+     "ext": false
+    },
+    {
+     "func": "_aria_256_cfb1_cipher",
+     "line": 220709,
+     "ext": false
+    },
+    {
+     "func": "_camellia_cfb1_cipher",
+     "line": 222655,
+     "ext": false
+    },
+    {
+     "func": "_des_ede3_cfb1_cipher",
+     "line": 224975,
+     "ext": false
+    },
+    {
+     "func": "_EVP_DecryptUpdate",
+     "line": 228543,
+     "ext": false
+    },
+    {
+     "func": "_evp_EncryptDecryptUpdate",
+     "line": 229023,
+     "ext": false
+    },
+    {
+     "func": "_PEM_write_bio",
+     "line": 262333,
+     "ext": false
+    }
+   ]
+  },
+  "0x5c29": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_asn1_time_to_tm",
+     "line": 84356,
+     "ext": true
+    },
+    {
+     "func": "_asn1_time_to_tm",
+     "line": 84406,
+     "ext": true
+    }
+   ]
+  },
+  "0x5c28": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_asn1_time_to_tm",
+     "line": 84367,
+     "ext": true
+    },
+    {
+     "func": "_asn1_time_to_tm",
+     "line": 84417,
+     "ext": true
+    }
+   ]
+  },
+  "0x851f": {
+   "func_count": 5,
+   "sites": [
+    {
+     "func": "_asn1_time_to_tm",
+     "line": 84433,
+     "ext": true
+    },
+    {
+     "func": "_asn1_time_from_tm",
+     "line": 84727,
+     "ext": true
+    },
+    {
+     "func": "_OPENSSL_gmtime_adj",
+     "line": 254061,
+     "ext": true
+    },
+    {
+     "func": "_OPENSSL_gmtime_diff",
+     "line": 254225,
+     "ext": true
+    },
+    {
+     "func": "_OPENSSL_gmtime_diff",
+     "line": 254283,
+     "ext": true
+    }
+   ]
+  },
+  "0x6667": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "_asn1_time_to_tm",
+     "line": 84443,
+     "ext": true
+    },
+    {
+     "func": "_fmtfp",
+     "line": 105101,
+     "ext": true
+    },
+    {
+     "func": "_BN_bn2dec",
+     "line": 132832,
+     "ext": true
+    }
+   ]
+  },
+  "0x2906": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_mask_cb",
+     "line": 87507,
+     "ext": false
+    }
+   ]
+  },
+  "0x2600": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_asn1_parse2",
+     "line": 88870,
+     "ext": false
+    }
+   ]
+  },
+  "0x8040": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SMIME_write_ASN1",
+     "line": 89921,
+     "ext": false
+    }
+   ]
+  },
+  "0x2d2d": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_SMIME_read_ASN1",
+     "line": 90216,
+     "ext": false
+    },
+    {
+     "func": "_SMIME_read_ASN1",
+     "line": 90332,
+     "ext": false
+    }
+   ]
+  },
+  "0x2401": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_mime_parse_hdr",
+     "line": 90541,
+     "ext": false
+    },
+    {
+     "func": "_X509V3_parse_list",
+     "line": 353192,
+     "ext": false
+    }
+   ]
+  },
+  "0x41d5": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_i2a_ASN1_INTEGER",
+     "line": 93111,
+     "ext": true
+    },
+    {
+     "func": "_i2a_ASN1_STRING",
+     "line": 93389,
+     "ext": true
+    }
+   ]
+  },
+  "0x8000": {
+   "func_count": 5,
+   "sites": [
+    {
+     "func": "_async_fibre_makecontext",
+     "line": 100625,
+     "ext": false
+    },
+    {
+     "func": "_async_fibre_makecontext",
+     "line": 100631,
+     "ext": false
+    },
+    {
+     "func": "_ERR_load_CONF_strings",
+     "line": 149228,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_CRYPTO_strings",
+     "line": 151288,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_PKCS7_strings",
+     "line": 272163,
+     "ext": true
+    }
+   ]
+  },
+  "0x667e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_BIO_socket_nbio",
+     "line": 105744,
+     "ext": true
+    }
+   ]
+  },
+  "0x527f": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_blake2s_compress",
+     "line": 112393,
+     "ext": true
+    }
+   ]
+  },
+  "0x688c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_blake2s_compress",
+     "line": 112403,
+     "ext": true
+    }
+   ]
+  },
+  "0x3bff": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_BN_security_bits",
+     "line": 127816,
+     "ext": false
+    }
+   ]
+  },
+  "0x1dff": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_BN_security_bits",
+     "line": 127821,
+     "ext": false
+    }
+   ]
+  },
+  "0x1af3": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_BN_bn2dec",
+     "line": 132847,
+     "ext": true
+    }
+   ]
+  },
+  "0x667f": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_Camellia_Ekeygen",
+     "line": 136450,
+     "ext": true
+    }
+   ]
+  },
+  "0x908b": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_Camellia_Ekeygen",
+     "line": 136458,
+     "ext": true
+    }
+   ]
+  },
+  "0x73b2": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_Camellia_Ekeygen",
+     "line": 136492,
+     "ext": true
+    }
+   ]
+  },
+  "0x372f": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_Camellia_Ekeygen",
+     "line": 136523,
+     "ext": true
+    }
+   ]
+  },
+  "0x82be": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_Camellia_Ekeygen",
+     "line": 136528,
+     "ext": true
+    }
+   ]
+  },
+  "0x53a5": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_Camellia_Ekeygen",
+     "line": 136555,
+     "ext": true
+    }
+   ]
+  },
+  "0x6f1c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_Camellia_Ekeygen",
+     "line": 136560,
+     "ext": true
+    }
+   ]
+  },
+  "0x27fa": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_Camellia_Ekeygen",
+     "line": 136667,
+     "ext": true
+    },
+    {
+     "func": "_md5_block_data_order",
+     "line": 245114,
+     "ext": true
+    }
+   ]
+  },
+  "0x2d1d": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_Camellia_Ekeygen",
+     "line": 136675,
+     "ext": true
+    }
+   ]
+  },
+  "0x88c2": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_Camellia_Ekeygen",
+     "line": 136703,
+     "ext": true
+    }
+   ]
+  },
+  "0x7865": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_ChaCha20_ctr32",
+     "line": 139006,
+     "ext": true
+    },
+    {
+     "func": "_ChaCha20_ctr32",
+     "line": 139125,
+     "ext": true
+    }
+   ]
+  },
+  "0x646e": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_ChaCha20_ctr32",
+     "line": 139012,
+     "ext": true
+    },
+    {
+     "func": "_ChaCha20_ctr32",
+     "line": 139128,
+     "ext": true
+    }
+   ]
+  },
+  "0x2d32": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_ChaCha20_ctr32",
+     "line": 139017,
+     "ext": true
+    },
+    {
+     "func": "_ChaCha20_ctr32",
+     "line": 139132,
+     "ext": true
+    }
+   ]
+  },
+  "0x3000": {
+   "func_count": 6,
+   "sites": [
+    {
+     "func": "_ERR_load_CMS_strings",
+     "line": 142548,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_COMP_strings",
+     "line": 147245,
+     "ext": true
+    },
+    {
+     "func": "_rand_pool_new",
+     "line": 276378,
+     "ext": false
+    },
+    {
+     "func": "_RAND_poll",
+     "line": 276995,
+     "ext": false
+    },
+    {
+     "func": "_ERR_load_UI_strings",
+     "line": 311737,
+     "ext": true
+    },
+    {
+     "func": "_tls13_enc",
+     "line": 413019,
+     "ext": true
+    }
+   ]
+  },
+  "0x5c00": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SCT_print",
+     "line": 153069,
+     "ext": true
+    }
+   ]
+  },
+  "0x8103": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_DES_set_key_unchecked",
+     "line": 158773,
+     "ext": false
+    }
+   ]
+  },
+  "0x8889": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_do_dh_print",
+     "line": 159342,
+     "ext": true
+    },
+    {
+     "func": "_OPENSSL_gmtime_adj",
+     "line": 254158,
+     "ext": true
+    }
+   ]
+  },
+  "0x100d": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "_dh_pkey_ctrl",
+     "line": 160172,
+     "ext": false
+    },
+    {
+     "func": "_dh_pkey_ctrl",
+     "line": 160432,
+     "ext": false
+    },
+    {
+     "func": "_pkey_rsa_ctrl_str",
+     "line": 289512,
+     "ext": false
+    }
+   ]
+  },
+  "0x6000": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "_ERR_load_DH_strings",
+     "line": 161197,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_ENGINE_strings",
+     "line": 207998,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_OCSP_strings",
+     "line": 257867,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_SSL_strings",
+     "line": 426166,
+     "ext": true
+    }
+   ]
+  },
+  "0x2711": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "_generate_key",
+     "line": 161666,
+     "ext": false
+    },
+    {
+     "func": "_compute_key",
+     "line": 161812,
+     "ext": false
+    },
+    {
+     "func": "_dsa_do_verify",
+     "line": 166727,
+     "ext": false
+    }
+   ]
+  },
+  "0x1003": {
+   "func_count": 9,
+   "sites": [
+    {
+     "func": "_pkey_dsa_ctrl",
+     "line": 167390,
+     "ext": false
+    },
+    {
+     "func": "_pkey_dsa_ctrl_str",
+     "line": 167584,
+     "ext": false
+    },
+    {
+     "func": "_ec_pkey_ctrl",
+     "line": 188535,
+     "ext": false
+    },
+    {
+     "func": "_ec_pkey_ctrl",
+     "line": 188756,
+     "ext": false
+    },
+    {
+     "func": "_pkey_ec_ctrl_str",
+     "line": 198663,
+     "ext": false
+    },
+    {
+     "func": "_pkey_hkdf_ctrl_str",
+     "line": 242260,
+     "ext": false
+    },
+    {
+     "func": "_pkey_rsa_ctrl_str",
+     "line": 289472,
+     "ext": false
+    },
+    {
+     "func": "_tls13_hkdf_expand",
+     "line": 474231,
+     "ext": false
+    },
+    {
+     "func": "_tls13_generate_secret",
+     "line": 474506,
+     "ext": false
+    }
+   ]
+  },
+  "0x2c13": {
+   "func_count": 6,
+   "sites": [
+    {
+     "func": "_ED25519_sign",
+     "line": 169277,
+     "ext": true
+    },
+    {
+     "func": "_ED25519_sign",
+     "line": 169423,
+     "ext": true
+    },
+    {
+     "func": "_ED25519_sign",
+     "line": 169435,
+     "ext": true
+    },
+    {
+     "func": "_ED25519_sign",
+     "line": 169594,
+     "ext": true
+    },
+    {
+     "func": "_ED25519_sign",
+     "line": 169612,
+     "ext": true
+    },
+    {
+     "func": "_x25519_sc_reduce",
+     "line": 169992,
+     "ext": true
+    }
+   ]
+  },
+  "0x2d18": {
+   "func_count": 8,
+   "sites": [
+    {
+     "func": "_ED25519_sign",
+     "line": 169279,
+     "ext": true
+    },
+    {
+     "func": "_ED25519_sign",
+     "line": 169419,
+     "ext": true
+    },
+    {
+     "func": "_ED25519_sign",
+     "line": 169439,
+     "ext": true
+    },
+    {
+     "func": "_ED25519_sign",
+     "line": 169566,
+     "ext": true
+    },
+    {
+     "func": "_ED25519_sign",
+     "line": 169600,
+     "ext": true
+    },
+    {
+     "func": "_ED25519_sign",
+     "line": 169647,
+     "ext": true
+    },
+    {
+     "func": "_ED25519_sign",
+     "line": 169659,
+     "ext": true
+    },
+    {
+     "func": "_x25519_sc_reduce",
+     "line": 169994,
+     "ext": true
+    }
+   ]
+  },
+  "0x15d1": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_ED25519_sign",
+     "line": 169445,
+     "ext": true
+    },
+    {
+     "func": "_x25519_sc_reduce",
+     "line": 170005,
+     "ext": true
+    }
+   ]
+  },
+  "0x98aa": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_curve448_point_valid",
+     "line": 179128,
+     "ext": false
+    }
+   ]
+  },
+  "0x98a9": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_curve448_point_decode_like_eddsa_and_mul_by_ratio",
+     "line": 179861,
+     "ext": false
+    },
+    {
+     "func": "_x448_int",
+     "line": 180943,
+     "ext": false
+    }
+   ]
+  },
+  "0x3154": {
+   "func_count": 9,
+   "sites": [
+    {
+     "func": "_curve448_base_double_scalarmul_non_secret",
+     "line": 181783,
+     "ext": true
+    },
+    {
+     "func": "_curve448_base_double_scalarmul_non_secret",
+     "line": 181816,
+     "ext": true
+    },
+    {
+     "func": "_curve448_base_double_scalarmul_non_secret",
+     "line": 181854,
+     "ext": true
+    },
+    {
+     "func": "_curve448_base_double_scalarmul_non_secret",
+     "line": 181890,
+     "ext": true
+    },
+    {
+     "func": "_curve448_base_double_scalarmul_non_secret",
+     "line": 181926,
+     "ext": true
+    },
+    {
+     "func": "_curve448_base_double_scalarmul_non_secret",
+     "line": 181962,
+     "ext": true
+    },
+    {
+     "func": "_curve448_base_double_scalarmul_non_secret",
+     "line": 181998,
+     "ext": true
+    },
+    {
+     "func": "_curve448_base_double_scalarmul_non_secret",
+     "line": 182034,
+     "ext": true
+    },
+    {
+     "func": "_curve448_base_double_scalarmul_non_secret",
+     "line": 182070,
+     "ext": true
+    }
+   ]
+  },
+  "0x7600": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ENGINE_load_builtin_engines",
+     "line": 206615,
+     "ext": false
+    }
+   ]
+  },
+  "0x1150": {
+   "func_count": 6,
+   "sites": [
+    {
+     "func": "_ERR_print_errors_cb",
+     "line": 213653,
+     "ext": false
+    },
+    {
+     "func": "_ERR_print_errors",
+     "line": 213724,
+     "ext": false
+    },
+    {
+     "func": "_ERR_print_errors_fp",
+     "line": 213793,
+     "ext": false
+    },
+    {
+     "func": "_enc_new",
+     "line": 215385,
+     "ext": false
+    },
+    {
+     "func": "_enc_free",
+     "line": 215447,
+     "ext": false
+    },
+    {
+     "func": "_tls_parse_ctos_cookie",
+     "line": 446777,
+     "ext": false
+    }
+   ]
+  },
+  "0x8002": {
+   "func_count": 50,
+   "sites": [
+    {
+     "func": "_openssl_add_all_ciphers_int",
+     "line": 215837,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_ciphers_int",
+     "line": 215842,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_ciphers_int",
+     "line": 215851,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_ciphers_int",
+     "line": 215856,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_ciphers_int",
+     "line": 215867,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_ciphers_int",
+     "line": 215872,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_ciphers_int",
+     "line": 215883,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_ciphers_int",
+     "line": 215888,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_ciphers_int",
+     "line": 215897,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_ciphers_int",
+     "line": 215902,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_ciphers_int",
+     "line": 215911,
+     "ext": false
+    },
+    {
+     "func": "_openssl_add_all_ciphers_int",
+     "line": 215931,
+     "ext": false
+    }
+   ]
+  },
+  "0x103a": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_aes_ocb_cipher",
+     "line": 219326,
+     "ext": false
+    },
+    {
+     "func": "_tls_construct_new_session_ticket",
+     "line": 464032,
+     "ext": false
+    }
+   ]
+  },
+  "0x7000": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ERR_load_KDF_strings",
+     "line": 242438,
+     "ext": true
+    }
+   ]
+  },
+  "0x7999": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "_md4_block_data_order",
+     "line": 244202,
+     "ext": true
+    },
+    {
+     "func": "_ripemd160_block_data_order",
+     "line": 279375,
+     "ext": true
+    },
+    {
+     "func": "_sha1_block_data_order",
+     "line": 293899,
+     "ext": true
+    }
+   ]
+  },
+  "0x7e82": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 244695,
+     "ext": true
+    }
+   ]
+  },
+  "0x70db": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 244730,
+     "ext": true
+    }
+   ]
+  },
+  "0x4613": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 244772,
+     "ext": true
+    }
+   ]
+  },
+  "0x9501": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 244782,
+     "ext": true
+    }
+   ]
+  },
+  "0x98d8": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 244793,
+     "ext": true
+    }
+   ]
+  },
+  "0x1122": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 244834,
+     "ext": true
+    }
+   ]
+  },
+  "0x7193": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 244844,
+     "ext": true
+    }
+   ]
+  },
+  "0x438e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 244855,
+     "ext": true
+    }
+   ]
+  },
+  "0x2562": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 244875,
+     "ext": true
+    }
+   ]
+  },
+  "0x5a51": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 244895,
+     "ext": true
+    }
+   ]
+  },
+  "0x105d": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 244915,
+     "ext": true
+    }
+   ]
+  },
+  "0x1453": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 244925,
+     "ext": true
+    },
+    {
+     "func": "_SSL_client_hello_get1_extensions_present",
+     "line": 433782,
+     "ext": false
+    }
+   ]
+  },
+  "0x14ed": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 244985,
+     "ext": true
+    }
+   ]
+  },
+  "0x4c8a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245025,
+     "ext": true
+    }
+   ]
+  },
+  "0x3942": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245033,
+     "ext": true
+    }
+   ]
+  },
+  "0x6122": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245051,
+     "ext": true
+    }
+   ]
+  },
+  "0x380c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245060,
+     "ext": true
+    }
+   ]
+  },
+  "0x4b60": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245087,
+     "ext": true
+    }
+   ]
+  },
+  "0x7ec6": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245105,
+     "ext": true
+    }
+   ]
+  },
+  "0x3085": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245123,
+     "ext": true
+    }
+   ]
+  },
+  "0x1d05": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245132,
+     "ext": true
+    }
+   ]
+  },
+  "0x99e5": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245150,
+     "ext": true
+    }
+   ]
+  },
+  "0x7cf8": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245159,
+     "ext": true
+    }
+   ]
+  },
+  "0x5665": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245168,
+     "ext": true
+    }
+   ]
+  },
+  "0x2244": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245177,
+     "ext": true
+    }
+   ]
+  },
+  "0x23a7": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245195,
+     "ext": true
+    }
+   ]
+  },
+  "0x59c3": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245213,
+     "ext": true
+    }
+   ]
+  },
+  "0x5dd1": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245240,
+     "ext": true
+    }
+   ]
+  },
+  "0x7e4f": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245249,
+     "ext": true
+    }
+   ]
+  },
+  "0x4314": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245267,
+     "ext": true
+    }
+   ]
+  },
+  "0x11a1": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_md5_block_data_order",
+     "line": 245276,
+     "ext": true
+    }
+   ]
+  },
+  "0x59a6": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_CRYPTO_128_wrap_pad",
+     "line": 253131,
+     "ext": true
+    }
+   ]
+  },
+  "0x517f": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_OPENSSL_gmtime_adj",
+     "line": 254002,
+     "ext": true
+    }
+   ]
+  },
+  "0x1a90": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "_OPENSSL_gmtime_adj",
+     "line": 254059,
+     "ext": false
+    },
+    {
+     "func": "_OPENSSL_gmtime_diff",
+     "line": 254223,
+     "ext": false
+    },
+    {
+     "func": "_OPENSSL_gmtime_diff",
+     "line": 254281,
+     "ext": false
+    }
+   ]
+  },
+  "0x3ab1": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_OPENSSL_gmtime_adj",
+     "line": 254089,
+     "ext": true
+    }
+   ]
+  },
+  "0x5180": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_OPENSSL_gmtime_diff",
+     "line": 254179,
+     "ext": true
+    }
+   ]
+  },
+  "0x9000": {
+   "func_count": 6,
+   "sites": [
+    {
+     "func": "_ERR_load_OBJ_strings",
+     "line": 256712,
+     "ext": true
+    },
+    {
+     "func": "_OCSP_REQ_CTX_new",
+     "line": 258392,
+     "ext": true
+    },
+    {
+     "func": "_OCSP_set_max_response_length",
+     "line": 258461,
+     "ext": true
+    },
+    {
+     "func": "_ERR_load_PKCS12_strings",
+     "line": 268435,
+     "ext": true
+    },
+    {
+     "func": "_SSL_CTX_new",
+     "line": 431211,
+     "ext": true
+    },
+    {
+     "func": "_ossl_statem_client_max_message_size",
+     "line": 452687,
+     "ext": true
+    }
+   ]
+  },
+  "0x1400": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_PEM_write_bio",
+     "line": 262378,
+     "ext": false
+    }
+   ]
+  },
+  "0x8be6": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ripemd160_block_data_order",
+     "line": 279484,
+     "ext": true
+    }
+   ]
+  },
+  "0x3ef3": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ripemd160_block_data_order",
+     "line": 279983,
+     "ext": true
+    }
+   ]
+  },
+  "0x76e9": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ripemd160_block_data_order",
+     "line": 280185,
+     "ext": true
+    }
+   ]
+  },
+  "0x100c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_rsa_pkey_ctrl",
+     "line": 281749,
+     "ext": false
+    }
+   ]
+  },
+  "0x8647": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291401,
+     "ext": true
+    }
+   ]
+  },
+  "0x79b9": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291426,
+     "ext": true
+    }
+   ]
+  },
+  "0x191a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291484,
+     "ext": true
+    }
+   ]
+  },
+  "0x3234": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291517,
+     "ext": true
+    }
+   ]
+  },
+  "0x6467": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291552,
+     "ext": true
+    }
+   ]
+  },
+  "0x9b99": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291556,
+     "ext": true
+    }
+   ]
+  },
+  "0x3733": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291589,
+     "ext": true
+    }
+   ]
+  },
+  "0x9199": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291620,
+     "ext": true
+    }
+   ]
+  },
+  "0x6e67": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291624,
+     "ext": true
+    }
+   ]
+  },
+  "0x2331": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291653,
+     "ext": true
+    }
+   ]
+  },
+  "0x4662": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291686,
+     "ext": true
+    }
+   ]
+  },
+  "0x8cc4": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291719,
+     "ext": true
+    }
+   ]
+  },
+  "0x733c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291723,
+     "ext": true
+    }
+   ]
+  },
+  "0x1988": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291752,
+     "ext": true
+    }
+   ]
+  },
+  "0x330f": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291785,
+     "ext": true
+    }
+   ]
+  },
+  "0x661d": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291818,
+     "ext": true
+    }
+   ]
+  },
+  "0x99e3": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291822,
+     "ext": true
+    }
+   ]
+  },
+  "0x33c6": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291855,
+     "ext": true
+    }
+   ]
+  },
+  "0x9873": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291884,
+     "ext": true
+    }
+   ]
+  },
+  "0x678d": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291888,
+     "ext": true
+    }
+   ]
+  },
+  "0x30e5": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SEED_set_key",
+     "line": 291917,
+     "ext": true
+    }
+   ]
+  },
+  "0x2f98": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sha256_block_data_order",
+     "line": 295335,
+     "ext": true
+    }
+   ]
+  },
+  "0x4491": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sha256_block_data_order",
+     "line": 295361,
+     "ext": true
+    }
+   ]
+  },
+  "0x11f1": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sha256_block_data_order",
+     "line": 295461,
+     "ext": true
+    }
+   ]
+  },
+  "0x82a4": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sha256_block_data_order",
+     "line": 295485,
+     "ext": true
+    }
+   ]
+  },
+  "0x5ed5": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sha256_block_data_order",
+     "line": 295509,
+     "ext": true
+    }
+   ]
+  },
+  "0x5b01": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sha256_block_data_order",
+     "line": 295557,
+     "ext": true
+    }
+   ]
+  },
+  "0x85be": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sha256_block_data_order",
+     "line": 295581,
+     "ext": true
+    }
+   ]
+  },
+  "0x7dc3": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sha256_block_data_order",
+     "line": 295605,
+     "ext": true
+    }
+   ]
+  },
+  "0x5d74": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sha256_block_data_order",
+     "line": 295629,
+     "ext": true
+    }
+   ]
+  },
+  "0x1fff": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm2_compute_z_digest",
+     "line": 299812,
+     "ext": false
+    }
+   ]
+  },
+  "0x4519": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 300829,
+     "ext": true
+    }
+   ]
+  },
+  "0x8a32": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 300978,
+     "ext": true
+    }
+   ]
+  },
+  "0x1465": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301012,
+     "ext": true
+    }
+   ]
+  },
+  "0x28cb": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301069,
+     "ext": true
+    }
+   ]
+  },
+  "0x5197": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301174,
+     "ext": true
+    }
+   ]
+  },
+  "0x465e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301249,
+     "ext": true
+    }
+   ]
+  },
+  "0x8cbc": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301276,
+     "ext": true
+    }
+   ]
+  },
+  "0x1979": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301305,
+     "ext": true
+    }
+   ]
+  },
+  "0x32f3": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301353,
+     "ext": true
+    }
+   ]
+  },
+  "0x65e7": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301390,
+     "ext": true
+    }
+   ]
+  },
+  "0x979c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301442,
+     "ext": true
+    }
+   ]
+  },
+  "0x2f39": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301466,
+     "ext": true
+    }
+   ]
+  },
+  "0x5e73": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301489,
+     "ext": true
+    }
+   ]
+  },
+  "0x7a87": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301533,
+     "ext": true
+    },
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302635,
+     "ext": true
+    }
+   ]
+  },
+  "0x50f3": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301661,
+     "ext": true
+    },
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302776,
+     "ext": true
+    }
+   ]
+  },
+  "0x43ce": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301739,
+     "ext": true
+    },
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302828,
+     "ext": true
+    }
+   ]
+  },
+  "0x879d": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301767,
+     "ext": true
+    },
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302854,
+     "ext": true
+    }
+   ]
+  },
+  "0x1e76": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301828,
+     "ext": true
+    },
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302907,
+     "ext": true
+    }
+   ]
+  },
+  "0x3cec": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301874,
+     "ext": true
+    },
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302935,
+     "ext": true
+    }
+   ]
+  },
+  "0x79d8": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 301907,
+     "ext": true
+    },
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302961,
+     "ext": true
+    }
+   ]
+  },
+  "0x9d8a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302103,
+     "ext": true
+    }
+   ]
+  },
+  "0x3b14": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302124,
+     "ext": true
+    }
+   ]
+  },
+  "0x7629": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302160,
+     "ext": true
+    }
+   ]
+  },
+  "0x629e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302303,
+     "ext": true
+    }
+   ]
+  },
+  "0x8a7a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302361,
+     "ext": true
+    }
+   ]
+  },
+  "0x14f5": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302378,
+     "ext": true
+    }
+   ]
+  },
+  "0x29ea": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302426,
+     "ext": true
+    }
+   ]
+  },
+  "0x53d4": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302455,
+     "ext": true
+    }
+   ]
+  },
+  "0x4f50": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302528,
+     "ext": true
+    }
+   ]
+  },
+  "0x9ea1": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302556,
+     "ext": true
+    }
+   ]
+  },
+  "0x3d43": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sm3_block_data_order",
+     "line": 302614,
+     "ext": true
+    }
+   ]
+  },
+  "0x3350": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SM4_set_key",
+     "line": 303191,
+     "ext": true
+    }
+   ]
+  },
+  "0x9197": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SM4_set_key",
+     "line": 303197,
+     "ext": true
+    }
+   ]
+  },
+  "0x22dc": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SM4_set_key",
+     "line": 303201,
+     "ext": true
+    }
+   ]
+  },
+  "0x13b0": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SRP_create_verifier",
+     "line": 306091,
+     "ext": false
+    }
+   ]
+  },
+  "0x5556": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_t_tob64",
+     "line": 306510,
+     "ext": true
+    }
+   ]
+  },
+  "0x5554": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_OPENSSL_sk_insert",
+     "line": 306947,
+     "ext": true
+    }
+   ]
+  },
+  "0x10c0": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_file_open",
+     "line": 307465,
+     "ext": false
+    }
+   ]
+  },
+  "0x7265": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_UI_construct_prompt",
+     "line": 313004,
+     "ext": true
+    }
+   ]
+  },
+  "0x6e45": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_UI_construct_prompt",
+     "line": 313007,
+     "ext": true
+    }
+   ]
+  },
+  "0x6620": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_UI_construct_prompt",
+     "line": 313012,
+     "ext": true
+    }
+   ]
+  },
+  "0x8e39": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "_X509_print_ex",
+     "line": 316945,
+     "ext": true
+    },
+    {
+     "func": "_X509_print_ex",
+     "line": 317013,
+     "ext": true
+    },
+    {
+     "func": "_X509_signature_print",
+     "line": 317144,
+     "ext": true
+    },
+    {
+     "func": "_X509_signature_dump",
+     "line": 317226,
+     "ext": true
+    }
+   ]
+  },
+  "0x785c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_X509_NAME_oneline",
+     "line": 322019,
+     "ext": false
+    }
+   ]
+  },
+  "0x807f": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "_check_revocation",
+     "line": 326333,
+     "ext": false
+    },
+    {
+     "func": "_crl_cb",
+     "line": 331010,
+     "ext": false
+    },
+    {
+     "func": "_crl_cb",
+     "line": 331093,
+     "ext": false
+    },
+    {
+     "func": "_x509v3_cache_extensions",
+     "line": 350383,
+     "ext": false
+    }
+   ]
+  },
+  "0x2956": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_x509_name_canon",
+     "line": 332063,
+     "ext": false
+    }
+   ]
+  },
+  "0x2040": {
+   "func_count": 9,
+   "sites": [
+    {
+     "func": "_X509_check_ca",
+     "line": 350926,
+     "ext": false
+    },
+    {
+     "func": "_check_purpose_ssl_client",
+     "line": 351328,
+     "ext": false
+    },
+    {
+     "func": "_check_purpose_ssl_server",
+     "line": 351364,
+     "ext": false
+    },
+    {
+     "func": "_check_purpose_ns_ssl_server",
+     "line": 351401,
+     "ext": false
+    },
+    {
+     "func": "_check_purpose_smime_sign",
+     "line": 351435,
+     "ext": false
+    },
+    {
+     "func": "_check_purpose_smime_encrypt",
+     "line": 351477,
+     "ext": false
+    },
+    {
+     "func": "_check_purpose_crl_sign",
+     "line": 351514,
+     "ext": false
+    },
+    {
+     "func": "_ocsp_helper",
+     "line": 351547,
+     "ext": false
+    },
+    {
+     "func": "_check_purpose_timestamp_sign",
+     "line": 351580,
+     "ext": false
+    }
+   ]
+  },
+  "0x2143": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_unsignedCharToPrintable",
+     "line": 358391,
+     "ext": false
+    }
+   ]
+  },
+  "0x12b3": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_doProlog",
+     "line": 359217,
+     "ext": false
+    }
+   ]
+  },
+  "0x1540": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_doProlog",
+     "line": 361017,
+     "ext": false
+    }
+   ]
+  },
+  "0x15a5": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_doProlog",
+     "line": 361276,
+     "ext": false
+    }
+   ]
+  },
+  "0x15a9": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_doProlog",
+     "line": 361294,
+     "ext": false
+    }
+   ]
+  },
+  "0x15ad": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_doProlog",
+     "line": 361303,
+     "ext": false
+    }
+   ]
+  },
+  "0x1ed0": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_accountingDiffTolerated",
+     "line": 361868,
+     "ext": false
+    }
+   ]
+  },
+  "0x1104": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_processXmlDecl",
+     "line": 362003,
+     "ext": false
+    },
+    {
+     "func": "_SSL_use_psk_identity_hint",
+     "line": 432809,
+     "ext": false
+    }
+   ]
+  },
+  "0x1843": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_storeEntityValue",
+     "line": 363838,
+     "ext": false
+    }
+   ]
+  },
+  "0x186d": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_storeEntityValue",
+     "line": 363946,
+     "ext": false
+    }
+   ]
+  },
+  "0x1871": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_storeEntityValue",
+     "line": 363964,
+     "ext": false
+    }
+   ]
+  },
+  "0x1876": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_storeEntityValue",
+     "line": 363973,
+     "ext": false
+    }
+   ]
+  },
+  "0x187e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_storeEntityValue",
+     "line": 363998,
+     "ext": false
+    }
+   ]
+  },
+  "0x1883": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_storeEntityValue",
+     "line": 364015,
+     "ext": false
+    }
+   ]
+  },
+  "0x10a8": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_doIgnoreSection",
+     "line": 364278,
+     "ext": false
+    }
+   ]
+  },
+  "0x16ca": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_processInternalEntity",
+     "line": 364659,
+     "ext": false
+    }
+   ]
+  },
+  "0x16ec": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_processInternalEntity",
+     "line": 364771,
+     "ext": false
+    }
+   ]
+  },
+  "0x1f1b": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_entityTrackingOnOpen",
+     "line": 364817,
+     "ext": false
+    }
+   ]
+  },
+  "0x1f2a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_entityTrackingOnClose",
+     "line": 364872,
+     "ext": false
+    }
+   ]
+  },
+  "0x1f38": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_getRootParserOf",
+     "line": 365260,
+     "ext": false
+    }
+   ]
+  },
+  "0x1e7a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_accountingGetCurrentAmplification",
+     "line": 365323,
+     "ext": false
+    }
+   ]
+  },
+  "0x1e81": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_accountingReportStats",
+     "line": 365352,
+     "ext": false
+    }
+   ]
+  },
+  "0x1e9b": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_accountingReportDiff",
+     "line": 365413,
+     "ext": false
+    }
+   ]
+  },
+  "0x167a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_epilogProcessor",
+     "line": 369573,
+     "ext": false
+    }
+   ]
+  },
+  "0x176e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_appendAttributeValue",
+     "line": 370975,
+     "ext": false
+    }
+   ]
+  },
+  "0x17b3": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_appendAttributeValue",
+     "line": 371198,
+     "ext": false
+    }
+   ]
+  },
+  "0x1804": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_appendAttributeValue",
+     "line": 371398,
+     "ext": false
+    }
+   ]
+  },
+  "0x180b": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_appendAttributeValue",
+     "line": 371413,
+     "ext": false
+    }
+   ]
+  },
+  "0x171f": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_internalEntityProcessor",
+     "line": 371595,
+     "ext": false
+    }
+   ]
+  },
+  "0x1f03": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_entityTrackingReportStats",
+     "line": 371720,
+     "ext": false
+    }
+   ]
+  },
+  "0x3c00": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_initScan",
+     "line": 390732,
+     "ext": false
+    }
+   ]
+  },
+  "0x3a97": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_dtls1_get_timeout",
+     "line": 403086,
+     "ext": false
+    }
+   ]
+  },
+  "0x8700": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_dtls1_handle_timeout",
+     "line": 403136,
+     "ext": true
+    }
+   ]
+  },
+  "0x400d": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_DTLSv1_listen",
+     "line": 403410,
+     "ext": false
+    },
+    {
+     "func": "_DTLSv1_listen",
+     "line": 403712,
+     "ext": false
+    }
+   ]
+  },
+  "0x4008": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_dtls1_dispatch_alert",
+     "line": 404157,
+     "ext": false
+    },
+    {
+     "func": "_ssl3_dispatch_alert",
+     "line": 418241,
+     "ext": false
+    }
+   ]
+  },
+  "0x17d8": {
+   "func_count": 7,
+   "sites": [
+    {
+     "func": "_dtls1_record_replay_check",
+     "line": 405729,
+     "ext": false
+    },
+    {
+     "func": "_dtls1_record_bitmap_update",
+     "line": 405770,
+     "ext": false
+    },
+    {
+     "func": "_dtls1_reset_seq_numbers",
+     "line": 407104,
+     "ext": false
+    },
+    {
+     "func": "_tls1_enc",
+     "line": 411339,
+     "ext": false
+    },
+    {
+     "func": "_n_ssl3_mac",
+     "line": 412037,
+     "ext": false
+    },
+    {
+     "func": "_tls1_mac",
+     "line": 412234,
+     "ext": false
+    },
+    {
+     "func": "_tls13_enc",
+     "line": 412930,
+     "ext": false
+    }
+   ]
+  },
+  "0x1788": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_dtls1_buffer_record",
+     "line": 406044,
+     "ext": false
+    }
+   ]
+  },
+  "0x17da": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "_dtls1_retrieve_buffered_record",
+     "line": 406150,
+     "ext": false
+    },
+    {
+     "func": "_dtls1_read_bytes",
+     "line": 406360,
+     "ext": false
+    },
+    {
+     "func": "_dtls1_get_record",
+     "line": 412716,
+     "ext": false
+    }
+   ]
+  },
+  "0x4004": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_dtls1_read_bytes",
+     "line": 406554,
+     "ext": false
+    },
+    {
+     "func": "_ssl3_read_bytes",
+     "line": 409182,
+     "ext": false
+    }
+   ]
+  },
+  "0x17e2": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_do_dtls1_write",
+     "line": 407009,
+     "ext": false
+    }
+   ]
+  },
+  "0x17e0": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "_do_dtls1_write",
+     "line": 407033,
+     "ext": false
+    },
+    {
+     "func": "_dtls1_reset_seq_numbers",
+     "line": 407091,
+     "ext": false
+    },
+    {
+     "func": "_n_ssl3_mac",
+     "line": 412034,
+     "ext": false
+    },
+    {
+     "func": "_tls1_mac",
+     "line": 412237,
+     "ext": false
+    }
+   ]
+  },
+  "0x1090": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_do_ssl3_write",
+     "line": 407988,
+     "ext": false
+    }
+   ]
+  },
+  "0x17a0": {
+   "func_count": 5,
+   "sites": [
+    {
+     "func": "_ssl3_read_bytes",
+     "line": 408895,
+     "ext": false
+    },
+    {
+     "func": "_ssl3_read_bytes",
+     "line": 408908,
+     "ext": false
+    },
+    {
+     "func": "_ssl3_read_bytes",
+     "line": 409027,
+     "ext": false
+    },
+    {
+     "func": "_ssl3_read_bytes",
+     "line": 409341,
+     "ext": false
+    },
+    {
+     "func": "_ssl3_read_bytes",
+     "line": 409345,
+     "ext": false
+    }
+   ]
+  },
+  "0x4150": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_ssl3_setup_read_buffer",
+     "line": 409641,
+     "ext": false
+    },
+    {
+     "func": "_ssl3_setup_buffers",
+     "line": 409771,
+     "ext": false
+    }
+   ]
+  },
+  "0x4148": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_ssl3_setup_read_buffer",
+     "line": 409642,
+     "ext": false
+    },
+    {
+     "func": "_ssl3_setup_buffers",
+     "line": 409772,
+     "ext": false
+    }
+   ]
+  },
+  "0x4101": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl3_get_record",
+     "line": 410125,
+     "ext": false
+    }
+   ]
+  },
+  "0x4540": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "_ssl3_get_record",
+     "line": 410131,
+     "ext": false
+    },
+    {
+     "func": "_ssl3_get_record",
+     "line": 410394,
+     "ext": false
+    },
+    {
+     "func": "_ssl3_do_uncompress",
+     "line": 411007,
+     "ext": false
+    },
+    {
+     "func": "_dtls1_process_record",
+     "line": 412639,
+     "ext": false
+    }
+   ]
+  },
+  "0x4140": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl3_get_record",
+     "line": 410132,
+     "ext": false
+    }
+   ]
+  },
+  "0x4400": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_ssl3_get_record",
+     "line": 410285,
+     "ext": false
+    },
+    {
+     "func": "_dtls1_process_record",
+     "line": 412612,
+     "ext": false
+    }
+   ]
+  },
+  "0x4401": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_ssl3_get_record",
+     "line": 410373,
+     "ext": false
+    },
+    {
+     "func": "_dtls1_process_record",
+     "line": 412620,
+     "ext": false
+    }
+   ]
+  },
+  "0x4541": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_dtls1_process_record",
+     "line": 412423,
+     "ext": false
+    },
+    {
+     "func": "_dtls1_get_record",
+     "line": 412721,
+     "ext": false
+    }
+   ]
+  },
+  "0x1128": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_ssl3_ctrl",
+     "line": 415786,
+     "ext": false
+    },
+    {
+     "func": "_ssl3_ctx_ctrl",
+     "line": 416400,
+     "ext": false
+    }
+   ]
+  },
+  "0x112f": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_ssl3_ctrl",
+     "line": 415799,
+     "ext": false
+    },
+    {
+     "func": "_ssl3_ctx_ctrl",
+     "line": 416569,
+     "ext": false
+    }
+   ]
+  },
+  "0x1215": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_generate_master_secret",
+     "line": 417631,
+     "ext": false
+    }
+   ]
+  },
+  "0x1222": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_generate_master_secret",
+     "line": 417686,
+     "ext": false
+    }
+   ]
+  },
+  "0x122c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_generate_master_secret",
+     "line": 417706,
+     "ext": false
+    }
+   ]
+  },
+  "0x1228": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_generate_master_secret",
+     "line": 417713,
+     "ext": false
+    }
+   ]
+  },
+  "0x123e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_generate_master_secret",
+     "line": 417722,
+     "ext": false
+    }
+   ]
+  },
+  "0x1284": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_generate_pkey_group",
+     "line": 417813,
+     "ext": false
+    }
+   ]
+  },
+  "0x126a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_generate_pkey_group",
+     "line": 417825,
+     "ext": false
+    }
+   ]
+  },
+  "0x1274": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_generate_pkey_group",
+     "line": 417840,
+     "ext": false
+    }
+   ]
+  },
+  "0x1279": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_generate_pkey_group",
+     "line": 417848,
+     "ext": false
+    }
+   ]
+  },
+  "0x127f": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_generate_pkey_group",
+     "line": 417856,
+     "ext": false
+    }
+   ]
+  },
+  "0x12cc": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_derive",
+     "line": 417968,
+     "ext": false
+    }
+   ]
+  },
+  "0x12be": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_derive",
+     "line": 418013,
+     "ext": false
+    }
+   ]
+  },
+  "0x12c8": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_derive",
+     "line": 418028,
+     "ext": false
+    }
+   ]
+  },
+  "0x12f4": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_derive",
+     "line": 418036,
+     "ext": false
+    }
+   ]
+  },
+  "0x12cf": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_derive",
+     "line": 418052,
+     "ext": false
+    }
+   ]
+  },
+  "0x12d5": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_derive",
+     "line": 418060,
+     "ext": false
+    }
+   ]
+  },
+  "0x8080": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_CONF_cmd",
+     "line": 424672,
+     "ext": true
+    }
+   ]
+  },
+  "0x1878": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "_SSL_clear",
+     "line": 426588,
+     "ext": false
+    },
+    {
+     "func": "_tls1_set_server_sigalgs",
+     "line": 470247,
+     "ext": false
+    },
+    {
+     "func": "_tls1_process_sigalgs",
+     "line": 470556,
+     "ext": false
+    }
+   ]
+  },
+  "0x1888": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_new",
+     "line": 426667,
+     "ext": false
+    }
+   ]
+  },
+  "0x133f": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "_SSL_new",
+     "line": 426857,
+     "ext": false
+    },
+    {
+     "func": "_SSL_set_ct_validation_callback",
+     "line": 426941,
+     "ext": false
+    },
+    {
+     "func": "_SSL_enable_ct",
+     "line": 433567,
+     "ext": false
+    }
+   ]
+  },
+  "0x3e00": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_SSL_ctrl",
+     "line": 427548,
+     "ext": false
+    },
+    {
+     "func": "_SSL_CTX_ctrl",
+     "line": 430354,
+     "ext": false
+    }
+   ]
+  },
+  "0x1808": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_start_async_job",
+     "line": 429383,
+     "ext": false
+    }
+   ]
+  },
+  "0x10f1": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_CTX_use_psk_identity_hint",
+     "line": 432756,
+     "ext": false
+    }
+   ]
+  },
+  "0x10f4": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_SSL_CTX_use_psk_identity_hint",
+     "line": 432767,
+     "ext": false
+    },
+    {
+     "func": "_SSL_CTX_use_psk_identity_hint",
+     "line": 432777,
+     "ext": false
+    }
+   ]
+  },
+  "0x10f6": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_CTX_use_psk_identity_hint",
+     "line": 432781,
+     "ext": false
+    }
+   ]
+  },
+  "0x1107": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_SSL_use_psk_identity_hint",
+     "line": 432820,
+     "ext": false
+    },
+    {
+     "func": "_SSL_use_psk_identity_hint",
+     "line": 432830,
+     "ext": false
+    }
+   ]
+  },
+  "0x1109": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_use_psk_identity_hint",
+     "line": 432834,
+     "ext": false
+    }
+   ]
+  },
+  "0x11e2": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_handshake_hash",
+     "line": 433023,
+     "ext": false
+    }
+   ]
+  },
+  "0x11e9": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_handshake_hash",
+     "line": 433049,
+     "ext": false
+    }
+   ]
+  },
+  "0x11f0": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_handshake_hash",
+     "line": 433057,
+     "ext": false
+    }
+   ]
+  },
+  "0x135c": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_SSL_CTX_set_ct_validation_callback",
+     "line": 433307,
+     "ext": false
+    },
+    {
+     "func": "_SSL_CTX_enable_ct",
+     "line": 433469,
+     "ext": false
+    }
+   ]
+  },
+  "0x1397": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_validate_ct",
+     "line": 433417,
+     "ext": false
+    }
+   ]
+  },
+  "0x13b4": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_validate_ct",
+     "line": 433425,
+     "ext": false
+    }
+   ]
+  },
+  "0x13bd": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_validate_ct",
+     "line": 433433,
+     "ext": false
+    }
+   ]
+  },
+  "0x13d9": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_CTX_enable_ct",
+     "line": 433480,
+     "ext": false
+    }
+   ]
+  },
+  "0x1330": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ct_strict",
+     "line": 433523,
+     "ext": false
+    }
+   ]
+  },
+  "0x13e6": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_enable_ct",
+     "line": 433574,
+     "ext": false
+    }
+   ]
+  },
+  "0x1451": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_client_hello_get1_extensions_present",
+     "line": 433743,
+     "ext": false
+    }
+   ]
+  },
+  "0x1462": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_client_hello_get1_extensions_present",
+     "line": 433791,
+     "ext": false
+    }
+   ]
+  },
+  "0x14d3": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_log_rsa_client_key_exchange",
+     "line": 433872,
+     "ext": false
+    }
+   ]
+  },
+  "0x14af": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_nss_keylog_int",
+     "line": 433910,
+     "ext": false
+    }
+   ]
+  },
+  "0x14c6": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_nss_keylog_int",
+     "line": 433952,
+     "ext": false
+    }
+   ]
+  },
+  "0x14b1": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_nss_keylog_int",
+     "line": 433962,
+     "ext": false
+    }
+   ]
+  },
+  "0x14fd": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_cache_cipherlist",
+     "line": 434005,
+     "ext": false
+    }
+   ]
+  },
+  "0x14f7": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_cache_cipherlist",
+     "line": 434013,
+     "ext": false
+    }
+   ]
+  },
+  "0x1501": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_cache_cipherlist",
+     "line": 434027,
+     "ext": false
+    }
+   ]
+  },
+  "0x1512": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_cache_cipherlist",
+     "line": 434038,
+     "ext": false
+    }
+   ]
+  },
+  "0x1516": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_cache_cipherlist",
+     "line": 434102,
+     "ext": false
+    }
+   ]
+  },
+  "0x1523": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_cache_cipherlist",
+     "line": 434111,
+     "ext": false
+    }
+   ]
+  },
+  "0x1524": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_cache_cipherlist",
+     "line": 434116,
+     "ext": false
+    }
+   ]
+  },
+  "0x152f": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ssl_cache_cipherlist",
+     "line": 434134,
+     "ext": false
+    }
+   ]
+  },
+  "0x155a": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_bytes_to_cipher_list",
+     "line": 434181,
+     "ext": false
+    }
+   ]
+  },
+  "0x1551": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_bytes_to_cipher_list",
+     "line": 434191,
+     "ext": false
+    }
+   ]
+  },
+  "0x1586": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_bytes_to_cipher_list",
+     "line": 434217,
+     "ext": false
+    }
+   ]
+  },
+  "0x155d": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_bytes_to_cipher_list",
+     "line": 434225,
+     "ext": false
+    }
+   ]
+  },
+  "0x1553": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_bytes_to_cipher_list",
+     "line": 434233,
+     "ext": false
+    }
+   ]
+  },
+  "0x1566": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_bytes_to_cipher_list",
+     "line": 434243,
+     "ext": false
+    }
+   ]
+  },
+  "0x1568": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_bytes_to_cipher_list",
+     "line": 434317,
+     "ext": false
+    }
+   ]
+  },
+  "0x1588": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_bytes_to_cipher_list",
+     "line": 434327,
+     "ext": false
+    }
+   ]
+  },
+  "0x157c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_bytes_to_cipher_list",
+     "line": 434336,
+     "ext": false
+    }
+   ]
+  },
+  "0x157e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_bytes_to_cipher_list",
+     "line": 434354,
+     "ext": false
+    }
+   ]
+  },
+  "0x1617": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_verify_client_post_handshake",
+     "line": 434506,
+     "ext": false
+    }
+   ]
+  },
+  "0x1608": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_verify_client_post_handshake",
+     "line": 434518,
+     "ext": false
+    }
+   ]
+  },
+  "0x160c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_verify_client_post_handshake",
+     "line": 434530,
+     "ext": false
+    }
+   ]
+  },
+  "0x1611": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_verify_client_post_handshake",
+     "line": 434542,
+     "ext": false
+    }
+   ]
+  },
+  "0x161b": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_verify_client_post_handshake",
+     "line": 434554,
+     "ext": false
+    }
+   ]
+  },
+  "0x1620": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_verify_client_post_handshake",
+     "line": 434579,
+     "ext": false
+    }
+   ]
+  },
+  "0x1623": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_verify_client_post_handshake",
+     "line": 434591,
+     "ext": false
+    }
+   ]
+  },
+  "0x162c": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_SSL_verify_client_post_handshake",
+     "line": 434605,
+     "ext": false
+    }
+   ]
+  },
+  "0x1293": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ct_move_scts",
+     "line": 434703,
+     "ext": false
+    }
+   ]
+  },
+  "0x17f8": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_use_certificate_chain_file",
+     "line": 436061,
+     "ext": false
+    }
+   ]
+  },
+  "0x1800": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_use_certificate_chain_file",
+     "line": 436063,
+     "ext": false
+    }
+   ]
+  },
+  "0x6080": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_tls_collect_extensions",
+     "line": 438963,
+     "ext": false
+    },
+    {
+     "func": "_tls_construct_extensions",
+     "line": 439696,
+     "ext": false
+    }
+   ]
+  },
+  "0x3373": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "_tls_collect_extensions",
+     "line": 438967,
+     "ext": false
+    },
+    {
+     "func": "_tls_collect_extensions",
+     "line": 439176,
+     "ext": false
+    },
+    {
+     "func": "_tls_collect_extensions",
+     "line": 439251,
+     "ext": false
+    },
+    {
+     "func": "_tls_collect_extensions",
+     "line": 439265,
+     "ext": false
+    }
+   ]
+  },
+  "0x3374": {
+   "func_count": 4,
+   "sites": [
+    {
+     "func": "_tls_collect_extensions",
+     "line": 439023,
+     "ext": false
+    },
+    {
+     "func": "_tls_construct_ctos_npn",
+     "line": 441969,
+     "ext": false
+    },
+    {
+     "func": "_SSL_extension_supported",
+     "line": 445546,
+     "ext": false
+    },
+    {
+     "func": "_tls_construct_stoc_next_proto_neg",
+     "line": 448227,
+     "ext": false
+    }
+   ]
+  },
+  "0x7fff": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_tls_parse_extension",
+     "line": 439481,
+     "ext": true
+    },
+    {
+     "func": "_tls_parse_extension",
+     "line": 439495,
+     "ext": true
+    }
+   ]
+  },
+  "0x1200": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_final_ems",
+     "line": 440733,
+     "ext": false
+    }
+   ]
+  },
+  "0x4080": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_custom_ext_parse",
+     "line": 444837,
+     "ext": false
+    }
+   ]
+  },
+  "0x10cc": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_tls_parse_ctos_cookie",
+     "line": 446994,
+     "ext": false
+    }
+   ]
+  },
+  "0x1076": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_tls_construct_stoc_cookie",
+     "line": 448741,
+     "ext": false
+    }
+   ]
+  },
+  "0x1057": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_tls_construct_stoc_cookie",
+     "line": 448900,
+     "ext": false
+    }
+   ]
+  },
+  "0x1077": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_tls_construct_stoc_cookie",
+     "line": 448934,
+     "ext": false
+    }
+   ]
+  },
+  "0x2002": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_state_machine",
+     "line": 449901,
+     "ext": false
+    }
+   ]
+  },
+  "0x4e20": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_ossl_statem_client_max_message_size",
+     "line": 452681,
+     "ext": false
+    }
+   ]
+  },
+  "0x454c": {
+   "func_count": 3,
+   "sites": [
+    {
+     "func": "_dtls_get_message",
+     "line": 456434,
+     "ext": false
+    },
+    {
+     "func": "_dtls1_reassemble_fragment",
+     "line": 457405,
+     "ext": false
+    },
+    {
+     "func": "_dtls1_preprocess_fragment",
+     "line": 457623,
+     "ext": false
+    }
+   ]
+  },
+  "0x1027": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_tls_construct_new_session_ticket",
+     "line": 463891,
+     "ext": false
+    }
+   ]
+  },
+  "0x1029": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_tls_construct_new_session_ticket",
+     "line": 463897,
+     "ext": false
+    }
+   ]
+  },
+  "0x102e": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_tls_construct_new_session_ticket",
+     "line": 464112,
+     "ext": false
+    }
+   ]
+  },
+  "0x1858": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_tls_construct_new_session_ticket",
+     "line": 464246,
+     "ext": false
+    }
+   ]
+  },
+  "0x1070": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_tls_construct_cert_status",
+     "line": 464387,
+     "ext": false
+    },
+    {
+     "func": "_tls_construct_cert_status_body",
+     "line": 467417,
+     "ext": false
+    }
+   ]
+  },
+  "0x10b6": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_tls_process_end_of_early_data",
+     "line": 464858,
+     "ext": false
+    }
+   ]
+  },
+  "0x10c8": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_tls_process_end_of_early_data",
+     "line": 464877,
+     "ext": false
+    }
+   ]
+  },
+  "0x10bd": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_tls_process_end_of_early_data",
+     "line": 464889,
+     "ext": false
+    }
+   ]
+  },
+  "0x1096": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_tls_process_next_proto",
+     "line": 466170,
+     "ext": false
+    }
+   ]
+  },
+  "0x109d": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_tls_process_next_proto",
+     "line": 466205,
+     "ext": false
+    }
+   ]
+  },
+  "0x5600": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_tls_post_process_client_hello",
+     "line": 466470,
+     "ext": true
+    }
+   ]
+  },
+  "0x3a80": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_create_ticket_prequel",
+     "line": 467443,
+     "ext": true
+    }
+   ]
+  },
+  "0x6465": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sig_cb",
+     "line": 471733,
+     "ext": true
+    }
+   ]
+  },
+  "0x3532": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sig_cb",
+     "line": 471752,
+     "ext": true
+    }
+   ]
+  },
+  "0x3833": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sig_cb",
+     "line": 471762,
+     "ext": true
+    }
+   ]
+  },
+  "0x3135": {
+   "func_count": 1,
+   "sites": [
+    {
+     "func": "_sig_cb",
+     "line": 471772,
+     "ext": true
+    }
+   ]
+  },
+  "0x1880": {
+   "func_count": 2,
+   "sites": [
+    {
+     "func": "_tls_choose_sigalg",
+     "line": 473593,
+     "ext": false
+    },
+    {
+     "func": "_tls_choose_sigalg",
+     "line": 473719,
+     "ext": false
+    }
+   ]
+  }
+ },
+ "opcode_count": 591,
+ "rec_ctrl_call_sites": [
+  {
+   "callee": "__Z39Lmx_lib_ptpif_LmxExt_Rec_Ctrl_with_datajP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z26LMX_func_api_WB_Ctrl_WBSETP26_tag_LMX_STRUCT_WBSET_CTRLPcPj",
+   "line": 17451,
+   "preceding": [
+    [
+     17446,
+     "mov\tw2, #0x808"
+    ],
+    [
+     17449,
+     "mov\tw0, #0x9416"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z29Lmx_lib_ptpif_LmxExt_Rec_CtrljP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z29LMX_func_api_Rec_Ctrl_ReleaseP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+   "line": 67670,
+   "preceding": [
+    [
+     67667,
+     "mov\tw0, #0x9404"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z29Lmx_lib_ptpif_LmxExt_Rec_CtrljP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z27LMX_func_api_Rec_Ctrl_AF_AEP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+   "line": 67727,
+   "preceding": [
+    [
+     67724,
+     "mov\tw0, #0x9405"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z39Lmx_lib_ptpif_LmxExt_Rec_Ctrl_with_datajP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z27LMX_func_api_Rec_Ctrl_AF_AEP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+   "line": 67737,
+   "preceding": [
+    [
+     67724,
+     "mov\tw0, #0x9405"
+    ],
+    [
+     67734,
+     "mov\tw0, #0x9416"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z29Lmx_lib_ptpif_LmxExt_Rec_CtrljP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z28LMX_func_api_Rec_Ctrl_AF_AE2P24_tag_LMX_STRUCT_REC_CTRLPcPj",
+   "line": 67790,
+   "preceding": [
+    [
+     67787,
+     "mov\tw0, #0x9405"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z39Lmx_lib_ptpif_LmxExt_Rec_Ctrl_with_datajP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z28LMX_func_api_Rec_Ctrl_AF_AE2P24_tag_LMX_STRUCT_REC_CTRLPcPj",
+   "line": 67800,
+   "preceding": [
+    [
+     67787,
+     "mov\tw0, #0x9405"
+    ],
+    [
+     67797,
+     "mov\tw0, #0x9416"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z35Lmx_lib_ptpif_LmxExt_Rec_Ctrl_OtherjP30_tag_LMX_STRUCT_REC_CTRL_OTHERPc",
+   "func": "__Z27LMX_func_api_Rec_Ctrl_OtherP30_tag_LMX_STRUCT_REC_CTRL_OTHERPcPj",
+   "line": 67835,
+   "preceding": [
+    [
+     67832,
+     "mov\tw0, #0x9410"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z41Lmx_lib_ptpif_LmxExt_Rec_Ctrl_with_paramsjP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z32LMX_func_api_Rec_Ctrl_Backup_ReqP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+   "line": 67875,
+   "preceding": [
+    [
+     67872,
+     "mov\tw0, #0x9416"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z39Lmx_lib_ptpif_LmxExt_Rec_Ctrl_with_datajP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z24LMX_func_api_Rec_Ctrl_4kP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+   "line": 67915,
+   "preceding": [
+    [
+     67912,
+     "mov\tw0, #0x9416"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z39Lmx_lib_ptpif_LmxExt_Rec_Ctrl_with_datajP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z31LMX_func_api_Rec_Ctrl_MF_AssistP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+   "line": 67955,
+   "preceding": [
+    [
+     67952,
+     "mov\tw0, #0x9416"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z39Lmx_lib_ptpif_LmxExt_Rec_Ctrl_with_datajP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z26LMX_func_api_Rec_Ctrl_ZoomP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+   "line": 67995,
+   "preceding": [
+    [
+     67992,
+     "mov\tw0, #0x9416"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z39Lmx_lib_ptpif_LmxExt_Rec_Ctrl_with_datajP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z29LMX_func_api_Rec_Ctrl_AF_AreaP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+   "line": 68035,
+   "preceding": [
+    [
+     68032,
+     "mov\tw0, #0x9416"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z39Lmx_lib_ptpif_LmxExt_Rec_Ctrl_with_datajP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z26LMX_func_api_Rec_Ctrl_4K6KP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+   "line": 68075,
+   "preceding": [
+    [
+     68072,
+     "mov\tw0, #0x9416"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z39Lmx_lib_ptpif_LmxExt_Rec_Ctrl_with_datajP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z28LMX_func_api_Rec_Ctrl_LV_MagP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+   "line": 68115,
+   "preceding": [
+    [
+     68112,
+     "mov\tw0, #0x9416"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z39Lmx_lib_ptpif_LmxExt_Rec_Ctrl_with_datajP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z26LMX_func_api_Rec_Ctrl_LensP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+   "line": 68155,
+   "preceding": [
+    [
+     68152,
+     "mov\tw0, #0x9416"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z39Lmx_lib_ptpif_LmxExt_Rec_Ctrl_with_datajP24_tag_LMX_STRUCT_REC_CTRLPc",
+   "func": "__Z26LMX_func_api_Rec_Ctrl_MenuP24_tag_LMX_STRUCT_REC_CTRLPcPj",
+   "line": 68195,
+   "preceding": [
+    [
+     68192,
+     "mov\tw0, #0x9416"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z33Lmx_lib_ptpif_LmxExt_MoveRec_CtrljP29_tag_LMX_STRUCT_MOVE_REC_CTRLPc",
+   "func": "__Z31LMX_func_api_MoveRec_Ctrl_StartPcPj",
+   "line": 73553,
+   "preceding": [
+    [
+     73539,
+     "mov\tw1, #0x808"
+    ],
+    [
+     73541,
+     "mov\tw8, #0x11"
+    ],
+    [
+     73551,
+     "mov\tw0, #0x940c"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z33Lmx_lib_ptpif_LmxExt_MoveRec_CtrljP29_tag_LMX_STRUCT_MOVE_REC_CTRLPc",
+   "func": "__Z30LMX_func_api_MoveRec_Ctrl_StophPcPj",
+   "line": 73596,
+   "preceding": [
+    [
+     73579,
+     "mov\tw1, #0x808"
+    ],
+    [
+     73581,
+     "mov\tw8, #0x12"
+    ],
+    [
+     73584,
+     "mov\tw8, #0x1"
+    ],
+    [
+     73594,
+     "mov\tw0, #0x940c"
+    ]
+   ]
+  },
+  {
+   "callee": "__Z33Lmx_lib_ptpif_LmxExt_MoveRec_CtrljP29_tag_LMX_STRUCT_MOVE_REC_CTRLPc",
+   "func": "__Z35LMX_func_api_MoveRec_Ctrl_StillCaptPcPj",
+   "line": 73634,
+   "preceding": [
+    [
+     73620,
+     "mov\tw1, #0x808"
+    ],
+    [
+     73622,
+     "mov\tw8, #0x13"
+    ],
+    [
+     73632,
+     "mov\tw0, #0x940c"
+    ]
+   ]
+  }
+ ],
+ "rec_ctrl_call_count": 19
+}

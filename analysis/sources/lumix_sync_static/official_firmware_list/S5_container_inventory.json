@@ -1,0 +1,342 @@
+{
+  "component_count": 48,
+  "inner_magic": "55504400",
+  "rows": [
+    {
+      "index": 0,
+      "name": "loader1",
+      "flags": 3,
+      "size": 4096,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 1,
+      "name": "loader2",
+      "flags": 3,
+      "size": 38912,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 2,
+      "name": "loader3",
+      "flags": 3,
+      "size": 49152,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 3,
+      "name": "program",
+      "flags": 3,
+      "size": 16674816,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 4,
+      "name": "storage",
+      "flags": 2,
+      "size": 0,
+      "raw_digest_equals_directory": true
+    },
+    {
+      "index": 5,
+      "name": "postboot1",
+      "flags": 3,
+      "size": 4718592,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 6,
+      "name": "postboot2",
+      "flags": 3,
+      "size": 131072,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 7,
+      "name": "postboot3",
+      "flags": 3,
+      "size": 8257536,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 8,
+      "name": "postboot4",
+      "flags": 3,
+      "size": 131072,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 9,
+      "name": "postboot5",
+      "flags": 3,
+      "size": 917504,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 10,
+      "name": "dram_sleep",
+      "flags": 3,
+      "size": 6144,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 11,
+      "name": "eep_ow_a",
+      "flags": 3,
+      "size": 131072,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 12,
+      "name": "eep_ow_b",
+      "flags": 3,
+      "size": 131072,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 13,
+      "name": "eep_adj",
+      "flags": 3,
+      "size": 131072,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 14,
+      "name": "eep_fix",
+      "flags": 3,
+      "size": 131072,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 15,
+      "name": "eep_act_a",
+      "flags": 3,
+      "size": 2048,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 16,
+      "name": "eep_act_b",
+      "flags": 3,
+      "size": 2048,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 17,
+      "name": "history",
+      "flags": 2,
+      "size": 262144,
+      "raw_digest_equals_directory": true
+    },
+    {
+      "index": 18,
+      "name": "lens_hist",
+      "flags": 2,
+      "size": 393216,
+      "raw_digest_equals_directory": true
+    },
+    {
+      "index": 19,
+      "name": "music",
+      "flags": 3,
+      "size": 3538944,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 20,
+      "name": "osdover",
+      "flags": 3,
+      "size": 10485760,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 21,
+      "name": "osddata",
+      "flags": 3,
+      "size": 11010048,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 22,
+      "name": "fileinfo",
+      "flags": 2,
+      "size": 917504,
+      "raw_digest_equals_directory": true
+    },
+    {
+      "index": 23,
+      "name": "ninsho_db",
+      "flags": 2,
+      "size": 655360,
+      "raw_digest_equals_directory": true
+    },
+    {
+      "index": 24,
+      "name": "koutei_kao",
+      "flags": 3,
+      "size": 114688,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 25,
+      "name": "wifi_info",
+      "flags": 2,
+      "size": 131072,
+      "raw_digest_equals_directory": true
+    },
+    {
+      "index": 26,
+      "name": "menu_save",
+      "flags": 2,
+      "size": 131072,
+      "raw_digest_equals_directory": true
+    },
+    {
+      "index": 27,
+      "name": "zboot",
+      "flags": 3,
+      "size": 2048,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 28,
+      "name": "dtb",
+      "flags": 3,
+      "size": 4096,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 29,
+      "name": "zimage",
+      "flags": 3,
+      "size": 2621440,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 30,
+      "name": "rootfs1",
+      "flags": 3,
+      "size": 3145728,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 31,
+      "name": "rootfs2",
+      "flags": 3,
+      "size": 10485760,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 32,
+      "name": "usbcharge",
+      "flags": 3,
+      "size": 131072,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 33,
+      "name": "ipu_data",
+      "flags": 3,
+      "size": 262144,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 34,
+      "name": "ipu_code",
+      "flags": 3,
+      "size": 65536,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 35,
+      "name": "rc_data",
+      "flags": 3,
+      "size": 262144,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 36,
+      "name": "rc_code",
+      "flags": 3,
+      "size": 65536,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 37,
+      "name": "nr_data",
+      "flags": 3,
+      "size": 262144,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 38,
+      "name": "nr_code",
+      "flags": 3,
+      "size": 65536,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 39,
+      "name": "hm_c_prog",
+      "flags": 3,
+      "size": 65536,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 40,
+      "name": "hm_d_prog",
+      "flags": 3,
+      "size": 262144,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 41,
+      "name": "hm_c_ddr",
+      "flags": 3,
+      "size": 3145728,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 42,
+      "name": "hm_d_ddr",
+      "flags": 3,
+      "size": 1048576,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 43,
+      "name": "hm_d_nw",
+      "flags": 3,
+      "size": 4194304,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 44,
+      "name": "hm_d_nw_sng",
+      "flags": 3,
+      "size": 4194304,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 45,
+      "name": "hr_c_prog",
+      "flags": 3,
+      "size": 65536,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 46,
+      "name": "hr_d_prog",
+      "flags": 3,
+      "size": 262144,
+      "raw_digest_equals_directory": false
+    },
+    {
+      "index": 47,
+      "name": "hr_c_ddr",
+      "flags": 3,
+      "size": 524288,
+      "raw_digest_equals_directory": false
+    }
+  ]
+}

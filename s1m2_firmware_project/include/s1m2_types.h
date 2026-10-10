@@ -1,3 +1,4 @@
+/* Generic host C type helpers; not evidence of camera runtime architecture. */
 /* SPDX-License-Identifier: MIT */
 /**
  * @file s1m2_types.h

@@ -1,0 +1,7 @@
+{
+  "target_directory_digest": "3bdcb4d0d03318c64c76be1f413395e666aec061f62236ebe6f757cac84a88d0",
+  "assumption": "directory digest is SHA-256 of 512-byte decoded content, unverified",
+  "tested": 329732,
+  "matches": [],
+  "scope": "all one-byte substitutions in zero/FF fills; prefixes/transitions; repeated little-endian 16-bit words only"
+}

@@ -1,0 +1,446 @@
+[
+  {
+    "library": "lib/arm64-v8a/libbarhopper_v3.so",
+    "sha256": "ec09597e9eb3aee0eb55ae3366da0d4ba416f5aa35a1af0b3811f50ff46743a1",
+    "jni_symbols": [
+      {
+        "symbol": "Java_com_google_android_libraries_barhopper_BarhopperV3_closeNative",
+        "address": "0xe1938",
+        "size": 32,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_google_android_libraries_barhopper_BarhopperV3_recognizeBufferNative",
+        "address": "0xe1dd4",
+        "size": 108,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_google_android_libraries_barhopper_BarhopperV3_recognizeNative",
+        "address": "0xe1fa8",
+        "size": 140,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_google_android_libraries_barhopper_BarhopperV3_createNativeWithClientOptions",
+        "address": "0xe1890",
+        "size": 160,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_google_android_libraries_barhopper_BarhopperV3_recognizeBitmapNative",
+        "address": "0xe1958",
+        "size": 428,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_google_android_libraries_barhopper_BarhopperV3_recognizeStridedBufferNative",
+        "address": "0xe1ea4",
+        "size": 120,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_google_android_libraries_barhopper_BarhopperV3_createNative",
+        "address": "0xe1870",
+        "size": 32,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_google_android_libraries_barhopper_BarhopperV3_recognizeStridedNative",
+        "address": "0xe2034",
+        "size": 160,
+        "defined": true
+      }
+    ]
+  },
+  {
+    "library": "lib/arm64-v8a/libdlnaCore.so",
+    "sha256": "96b72aedc469ed8a7948028295bc7acb5b2bd1e46c49bdc5f264bef2171fabfc",
+    "jni_symbols": [
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpFinalize",
+        "address": "0x8af1c",
+        "size": 4,
+        "defined": true
+      },
+      {
+        "symbol": "JNI_OnLoad",
+        "address": "0x8bb14",
+        "size": 28,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_GetSelfIpAddress",
+        "address": "0x8b52c",
+        "size": 80,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpPause",
+        "address": "0x8ace4",
+        "size": 20,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dlnaSetAcceptIpAddress",
+        "address": "0x8b6d8",
+        "size": 100,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpSetPlayContent",
+        "address": "0x8ac54",
+        "size": 104,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmsFinalize",
+        "address": "0x8b528",
+        "size": 4,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dlnaSetNetworkIF",
+        "address": "0x8b670",
+        "size": 104,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_upnp_1createSubscriber",
+        "address": "0x8b73c",
+        "size": 328,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpSetupPlayer",
+        "address": "0x8abcc",
+        "size": 136,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmsStart",
+        "address": "0x8b41c",
+        "size": 20,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmcPlay",
+        "address": "0x8b03c",
+        "size": 100,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmcGetPositionInfo",
+        "address": "0x8b174",
+        "size": 220,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpStop",
+        "address": "0x8acd0",
+        "size": 20,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_getSearchPort",
+        "address": "0x8a20c",
+        "size": 4,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmsGetUploadStatus",
+        "address": "0x8b430",
+        "size": 228,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowseExtentionTag",
+        "address": "0x8a608",
+        "size": 668,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_advertisementStart",
+        "address": "0x8b254",
+        "size": 100,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmcSetAVTransportURI",
+        "address": "0x8af90",
+        "size": 172,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_advertisementStop",
+        "address": "0x8b30c",
+        "size": 4,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmcSeek",
+        "address": "0x8b0b4",
+        "size": 172,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpDeleteContent",
+        "address": "0x8aea4",
+        "size": 100,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dlnaSetUUIDSeed",
+        "address": "0x8b5f4",
+        "size": 104,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_upnp_1unregistSubscriber",
+        "address": "0x8b884",
+        "size": 124,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmsStop",
+        "address": "0x8b514",
+        "size": 20,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowseExtentionTag2",
+        "address": "0x8a8a4",
+        "size": 808,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmcFinalize",
+        "address": "0x8b250",
+        "size": 4,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dlnaFinalize",
+        "address": "0x8b57c",
+        "size": 4,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dlnaMakeUUIDSeed",
+        "address": "0x8b580",
+        "size": 116,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpPlay",
+        "address": "0x8acbc",
+        "size": 20,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmcPause",
+        "address": "0x8b0a0",
+        "size": 20,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpBrowse",
+        "address": "0x8a3f8",
+        "size": 528,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_upnp_1deleteSubscriber",
+        "address": "0x8b900",
+        "size": 124,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpFinishDeleteContent",
+        "address": "0x8af08",
+        "size": 20,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpSetConnectServer",
+        "address": "0x8a210",
+        "size": 100,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dlnaInitialize",
+        "address": "0x89fa8",
+        "size": 24,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpSeek",
+        "address": "0x8acf8",
+        "size": 24,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_deviceSearch",
+        "address": "0x89fc0",
+        "size": 588,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpGetContentCount",
+        "address": "0x8a274",
+        "size": 388,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpGetLoadStatus",
+        "address": "0x8adf0",
+        "size": 80,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmsInitialize",
+        "address": "0x8b310",
+        "size": 268,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpGetPosition",
+        "address": "0x8ad10",
+        "size": 224,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmpReadyDeleteContent",
+        "address": "0x8ae40",
+        "size": 100,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmcSetConnectRenderer",
+        "address": "0x8af20",
+        "size": 112,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dmcStop",
+        "address": "0x8b160",
+        "size": 20,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_dlnaGetUUID",
+        "address": "0x8b65c",
+        "size": 20,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_dlna_DlnaWrapper_advertisementCheck",
+        "address": "0x8b2b8",
+        "size": 84,
+        "defined": true
+      }
+    ]
+  },
+  {
+    "library": "lib/arm64-v8a/libg711Codec.so",
+    "sha256": "a157e006a9c42ba1849c77e3f442cd268a7a68b2e2138a8396e8f5e566a10874",
+    "jni_symbols": [
+      {
+        "symbol": "Java_com_panasonic_jp_core_audio_G711Codec_decode",
+        "address": "0x7ec",
+        "size": 344,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_audio_G711Codec_encode",
+        "address": "0x944",
+        "size": 336,
+        "defined": true
+      }
+    ]
+  },
+  {
+    "library": "lib/arm64-v8a/libimage_processing_util_jni.so",
+    "sha256": "3e0071afcdc7e321f839e196d266014182f18d0988e4455acc9857a085b2184e",
+    "jni_symbols": [
+      {
+        "symbol": "Java_androidx_camera_core_ImageProcessingUtil_nativeCopyBetweenByteBufferAndBitmap",
+        "address": "0x52c0",
+        "size": 244,
+        "defined": true
+      },
+      {
+        "symbol": "Java_androidx_camera_core_ImageProcessingUtil_nativeShiftPixel",
+        "address": "0x53b4",
+        "size": 440,
+        "defined": true
+      },
+      {
+        "symbol": "Java_androidx_camera_core_ImageProcessingUtil_nativeWriteJpegToSurface",
+        "address": "0x556c",
+        "size": 360,
+        "defined": true
+      },
+      {
+        "symbol": "Java_androidx_camera_core_ImageProcessingUtil_nativeConvertAndroid420ToABGR",
+        "address": "0x56d4",
+        "size": 1172,
+        "defined": true
+      },
+      {
+        "symbol": "Java_androidx_camera_core_ImageProcessingUtil_nativeConvertAndroid420ToBitmap",
+        "address": "0x5b68",
+        "size": 332,
+        "defined": true
+      },
+      {
+        "symbol": "Java_androidx_camera_core_ImageProcessingUtil_nativeRotateYUV",
+        "address": "0x5cb4",
+        "size": 2020,
+        "defined": true
+      }
+    ]
+  },
+  {
+    "library": "lib/arm64-v8a/libpacketLossConcealer.so",
+    "sha256": "0137b1ed3c7e38fa60460bf895d34877cc98edb7b751dfbe92aee1d2ad424df5",
+    "jni_symbols": [
+      {
+        "symbol": "Java_com_panasonic_jp_core_audio_PacketLossConcealer_destroy",
+        "address": "0x14c4",
+        "size": 56,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_audio_PacketLossConcealer_create",
+        "address": "0x148c",
+        "size": 56,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_audio_PacketLossConcealer_concealLoss",
+        "address": "0x14fc",
+        "size": 152,
+        "defined": true
+      },
+      {
+        "symbol": "Java_com_panasonic_jp_core_audio_PacketLossConcealer_notifyGoodFrame",
+        "address": "0x1594",
+        "size": 224,
+        "defined": true
+      }
+    ]
+  },
+  {
+    "library": "lib/arm64-v8a/libsurface_util_jni.so",
+    "sha256": "ee3f0d56f81cc0a301db32dc4fd51274c3216733b4c40172768e38bc5049a265",
+    "jni_symbols": [
+      {
+        "symbol": "Java_androidx_camera_core_impl_utils_SurfaceUtil_nativeGetSurfaceInfo",
+        "address": "0x824",
+        "size": 200,
+        "defined": true
+      }
+    ]
+  }
+]
