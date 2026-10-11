@@ -1,0 +1,18 @@
+images_cam/ — 相机风格模板 + 8 张短名单（模板=S1M2 亲笔格式克隆，见 TEST_PROTOCOL.md §0）
+刷写只需前 40MB: dd if=images_cam/<名>.img of=/dev/rdiskX bs=1m count=40（sha256=前 40MB）
+
+cam_b06_num_fats_9.img  sha256=47dec8e332f0d3e27f5b037f6d017e0a9daadd5a3a22151ab302a8eb623524c2  逻辑大小=128289079296
+cam_b14_boot_checksum_bad.img  sha256=f59ad009b5812aae10dd6506295f2cdea7a3fd6b7f05b2c2c2e925aaeff7e8e5  逻辑大小=128289079296
+cam_b16_fat_off_past_heap.img  sha256=7e35cc85717b26afc86a2cdf6f077b7ced446c0c36d8f8e06e30d2acabd0f9ae  逻辑大小=128289079296
+cam_d12_c1_namelen_ffff.img  sha256=68a6a743005dac631ec6be8920071369efb10f12f4e2ff38f685e200a3344563  逻辑大小=128289079296
+cam_d17_bitmap_datalen_0.img  sha256=0c81fc9c59fdccc4dd47b754e28fdc84cf8f293a406488c4a84437232a13f61d  逻辑大小=128289079296
+cam_d18_bitmap_chain_loop.img  sha256=c492569c562608ff662a1ff508a4efe5db97aa68f018227c76f81bff2cdab4d3  逻辑大小=128289079296
+cam_d19_upcase_chain_loop.img  sha256=aaf72f8b2bc0eba50a57cd044b42d1146ed5900da38fd45dc29bd832ea61fcad  逻辑大小=128289079296
+cam_m11_fat_loop_fat32.img  sha256=258b935a9b5f16742d0fe6a3eea4d87b1aede55c3e2e141fc027aaf02cbd6110  逻辑大小=17416192
+cam_m11_fat_loop_fat32_pad40.img  sha256(前40MB)=e1f0a9b9c387054764f6680dd1a5734bd11586dfec18d7a637c1d43a3fcdd4f8  逻辑大小=41943040（=m11 原镜像尾部补零到 40MB，供 flash40 固定 40MB 校验口径；文件系统字节不变）
+cam_cve4273_longname_19c1.img  sha256=faa33168770afc6a044db8637b8dcd783f27c3cd0503526dafbfdc00d0a9700a  逻辑大小=128289079296（第二轮① CVE-2023-4273 复现卡：TESTFILE.BIN 条目集 85+C0+19×C1，累计名长 285>255，seed 其余照搬）
+cam_cve4273_dcim_longname_19c1.img  sha256=fcb10fdb034a50bc47b6aa083d42037eaf3bfcff6d37f5def3fd32f2d70a05a6  逻辑大小=128289079296（第二轮②：唯一改动=DCIM(簇5) 100_PANA 集之后追加 85+C0+19×C1 长名条目集；根目录=seed 原样）
+cam_cve4273_p100pana_longname.img  sha256=08877e67b933bb3737ef8b8ded6bace393497eb50e6d9a62e9495e1faf224094  逻辑大小=128289079296（第二轮③：唯一改动=100_PANA(簇41) 写入照片形态长名集 P1000001.JPG+273A，NL=255，哈希=全285字符；DCIM/根=seed）
+cam_seed.img  sha256=b1fbba190bd656f50c38ec6cba571917073f9eb4df5aca4ce687a6db0ff8dfcd  逻辑大小=128289079296
+cam_x1_upcase_tail.img  sha256=01d59c34dd463841e78aa6a47b3502883414eb5a55e6b4ce89667320f4f92a9a  逻辑大小=128289079296
+manifest.txt  sha256=a5323f86b1400a9374d66f166d3f876af020df6145582c5e5c3be128e957d57a  逻辑大小=1457
