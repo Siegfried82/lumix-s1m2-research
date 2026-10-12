@@ -1,0 +1,20 @@
+
+<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GX1__V11.bin.plaintext:     file format binary
+
+
+Disassembly of section .data:
+
+40001274 <.data+0x1874>:
+40001274:	f8 fe ec    	add	-20,sp
+40001277:	cd c0 36 20 	call	0x40004937,[a2],8
+4000127b:	08 
+4000127c:	f8 fe 14    	add	20,sp
+4000127f:	fc cc 00 00 	mov	2075656192,d0
+40001283:	b8 7b 
+40001285:	f8 c4 10    	lsr	16,d0
+40001288:	fc 83 f2 2f 	movhu	d0,(0x9c012ff2)
+4000128c:	01 9c 
+4000128e:	fc cc 00 00 	mov	2075656192,d0
+40001292:	b8 7b 
+40001294:	fc 81 f0 2f 	mov	d0,(0x9c012ff0)
+40001298:	  

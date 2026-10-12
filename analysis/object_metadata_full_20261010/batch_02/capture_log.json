@@ -1,0 +1,1522 @@
+[
+  {
+    "purpose" : "allowlisted_read_inventory",
+    "read_count" : 100,
+    "event" : "started",
+    "time_utc" : "2026-10-09T22:23:03Z"
+  },
+  {
+    "event" : "device_found",
+    "model" : "DC-S1M2",
+    "time_utc" : "2026-10-09T22:23:04Z"
+  },
+  {
+    "event" : "session_opened",
+    "time_utc" : "2026-10-09T22:23:04Z"
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091324
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_191957fc",
+    "index" : 0
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650812
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_121957fc",
+    "index" : 1
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091325
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_191957fd",
+    "index" : 2
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650813
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:04Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_121957fd",
+    "index" : 3
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091326
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:05Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_191957fe",
+    "index" : 4
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650814
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:05Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_121957fe",
+    "index" : 5
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091327
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:05Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_191957ff",
+    "index" : 6
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650815
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:05Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_121957ff",
+    "index" : 7
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091328
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:06Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195800",
+    "index" : 8
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650816
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:06Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195800",
+    "index" : 9
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091329
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:06Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195801",
+    "index" : 10
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650817
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:06Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195801",
+    "index" : 11
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091330
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:07Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195802",
+    "index" : 12
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650818
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:07Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195802",
+    "index" : 13
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091331
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:07Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195803",
+    "index" : 14
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650819
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:07Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195803",
+    "index" : 15
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091332
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:07Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195804",
+    "index" : 16
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650820
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:08Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195804",
+    "index" : 17
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091333
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:08Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195805",
+    "index" : 18
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650821
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:08Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195805",
+    "index" : 19
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091334
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:08Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195806",
+    "index" : 20
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650822
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:09Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195806",
+    "index" : 21
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091335
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:09Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195807",
+    "index" : 22
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650823
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:09Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195807",
+    "index" : 23
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091336
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:09Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195808",
+    "index" : 24
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650824
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:10Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195808",
+    "index" : 25
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091337
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:10Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195809",
+    "index" : 26
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650825
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:10Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195809",
+    "index" : 27
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091338
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:10Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919580a",
+    "index" : 28
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650826
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:10Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219580a",
+    "index" : 29
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091339
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:11Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919580b",
+    "index" : 30
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650827
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:11Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219580b",
+    "index" : 31
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091340
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:11Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919580c",
+    "index" : 32
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650828
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:11Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219580c",
+    "index" : 33
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091341
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:12Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919580d",
+    "index" : 34
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650829
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:12Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219580d",
+    "index" : 35
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091342
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:12Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919580e",
+    "index" : 36
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650830
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:12Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219580e",
+    "index" : 37
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091343
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:13Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919580f",
+    "index" : 38
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650831
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:13Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219580f",
+    "index" : 39
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091344
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:13Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195810",
+    "index" : 40
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650832
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:13Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195810",
+    "index" : 41
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091345
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:14Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195811",
+    "index" : 42
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650833
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:14Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195811",
+    "index" : 43
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091346
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:14Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195812",
+    "index" : 44
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650834
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:14Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195812",
+    "index" : 45
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091347
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:14Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195813",
+    "index" : 46
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650835
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:15Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195813",
+    "index" : 47
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091348
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:15Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195814",
+    "index" : 48
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650836
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:15Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195814",
+    "index" : 49
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091349
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:15Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195815",
+    "index" : 50
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650837
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:16Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195815",
+    "index" : 51
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091350
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:16Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195816",
+    "index" : 52
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650838
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:16Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195816",
+    "index" : 53
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091351
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:16Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195817",
+    "index" : 54
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650839
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:17Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195817",
+    "index" : 55
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091352
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:17Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195818",
+    "index" : 56
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650840
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:17Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195818",
+    "index" : 57
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091353
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:17Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195819",
+    "index" : 58
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650841
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:18Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195819",
+    "index" : 59
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091354
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:18Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919581a",
+    "index" : 60
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650842
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:18Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219581a",
+    "index" : 61
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091355
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:18Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919581b",
+    "index" : 62
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650843
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:18Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219581b",
+    "index" : 63
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091356
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:19Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919581c",
+    "index" : 64
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650844
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:19Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219581c",
+    "index" : 65
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091357
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:19Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919581d",
+    "index" : 66
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650845
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:19Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219581d",
+    "index" : 67
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091358
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:20Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919581e",
+    "index" : 68
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650846
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:20Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219581e",
+    "index" : 69
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091359
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:20Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919581f",
+    "index" : 70
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650847
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:20Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219581f",
+    "index" : 71
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091360
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:21Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195820",
+    "index" : 72
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650848
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:21Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195820",
+    "index" : 73
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091361
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:21Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195821",
+    "index" : 74
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650849
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:21Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195821",
+    "index" : 75
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091362
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:21Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195822",
+    "index" : 76
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650850
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:22Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195822",
+    "index" : 77
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091363
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:22Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195823",
+    "index" : 78
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650851
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:22Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195823",
+    "index" : 79
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091364
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:22Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195824",
+    "index" : 80
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650852
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:23Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195824",
+    "index" : 81
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091365
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:23Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195825",
+    "index" : 82
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650853
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:23Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195825",
+    "index" : 83
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091366
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:23Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195826",
+    "index" : 84
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650854
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:24Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195826",
+    "index" : 85
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091367
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:24Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195827",
+    "index" : 86
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650855
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:24Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195827",
+    "index" : 87
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091368
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:24Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195828",
+    "index" : 88
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650856
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:25Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195828",
+    "index" : 89
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091369
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:25Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_19195829",
+    "index" : 90
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650857
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:25Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_12195829",
+    "index" : 91
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091370
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:25Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919582a",
+    "index" : 92
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650858
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:26Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219582a",
+    "index" : 93
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091371
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:26Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919582b",
+    "index" : 94
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650859
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:26Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219582b",
+    "index" : 95
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091372
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:26Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919582c",
+    "index" : 96
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650860
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:26Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219582c",
+    "index" : 97
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      421091373
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:27Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1919582d",
+    "index" : 98
+  },
+  {
+    "opcode" : "0x1008",
+    "params" : [
+      303650861
+    ],
+    "data_bytes" : 146,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:23:27Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "info_1219582d",
+    "index" : 99
+  },
+  {
+    "event" : "session_closed",
+    "error" : "",
+    "time_utc" : "2026-10-09T22:23:27Z"
+  }
+]

@@ -1,0 +1,394 @@
+{
+  "schema_version": 1,
+  "created_local": "2026-10-13T01:02:08",
+  "scope": "Offline static source and evidence review; no supplied code, binary, emulator, exploit or device operation executed; no AGY.",
+  "input_document": {
+    "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+    "sha256": "1c858088577888b0517dc8b6146a813cbcad272782d9e7d819c0ad6723ad548e",
+    "lines": 239
+  },
+  "source_provenance": {
+    "source_archive": "<LOCAL_WORKSPACE>/analysis/sources/linux-4.19.124.tar.gz",
+    "sha256": "2067822653621ff9f3e1acdad99d7777812d0dc1036007921014da18fc9c6fce",
+    "files": [
+      {
+        "tar_entry": "linux-4.19.124/drivers/pvc/buffer/scullpp.h",
+        "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/scullpp.h",
+        "sha256": "74a05a5f67dda96887aaa5236c69656c746f59377c62c76f74f62541b34a9a6a",
+        "bytes": 1683
+      },
+      {
+        "tar_entry": "linux-4.19.124/drivers/pvc/buffer/scullp.h",
+        "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/scullp.h",
+        "sha256": "6096197dc2195377dff16cb91cad6c1e213eed58c0d1f82feb2379262f965f21",
+        "bytes": 1602
+      },
+      {
+        "tar_entry": "linux-4.19.124/drivers/pvc/buffer/main.c",
+        "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/main.c",
+        "sha256": "ee5d531276ca5d02a967315185ed00ed2b9efd15766f364825ead6c3cedcb512",
+        "bytes": 13905
+      },
+      {
+        "tar_entry": "linux-4.19.124/drivers/pvc/buffer/Makefile",
+        "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/Makefile",
+        "sha256": "34213994c704a8b5bf990333fd0f8bc2a8426cb99c8e83f1545e94e6de4e9af6",
+        "bytes": 621
+      },
+      {
+        "tar_entry": "linux-4.19.124/drivers/pvc/buffer/Kconfig",
+        "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/Kconfig",
+        "sha256": "396b25a1ca4726d8f6ed4238f768c4095323bbec013b210e65d08156c43dcc3a",
+        "bytes": 1237
+      },
+      {
+        "tar_entry": "linux-4.19.124/drivers/usb/gadget/function/f_fs.c",
+        "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+        "sha256": "09e684e66b715948916c9627ee3416caf4b508684c0e90afd9014bee518bdc2c",
+        "bytes": 97199
+      },
+      {
+        "tar_entry": "linux-4.19.124/drivers/usb/gadget/composite.c",
+        "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/composite.c",
+        "sha256": "3146053ea44a0555d1bb847e7b090e93b91dbd30193094511fe5d0cfa3c1823f",
+        "bytes": 68613
+      },
+      {
+        "tar_entry": "linux-4.19.124/include/uapi/linux/usb/functionfs.h",
+        "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/functionfs.h",
+        "sha256": "340790c786dc5d1da1fb30aa012e18906d162f88adca1a6701a1cbdad436287b",
+        "bytes": 11425
+      }
+    ]
+  },
+  "independent_source_validation": {
+    "extracted_files_sha256_verified": true,
+    "local_3_18_source_found_under_analysis_sources": false,
+    "published_release_mapping": "Parent verified official publication mapping; running device image not verified in this subtask."
+  },
+  "overall_conclusion": "F1/F2 source defects and a flag-dependent mapped-buffer/AIO cleanup defect are real findings in this published 4.19.124 source. No demonstrated real-device USB-host arbitrary physical read/write, attacker-selected AIO free, decrypted rootfs export, firmware decoder or proprietary memory consumer is established. Document overstates S5 absence, model transfer and JTAG exclusivity.",
+  "findings": [
+    {
+      "id": "FF01",
+      "priority": "P1",
+      "claim": "F5 equals arbitrary attacker-selected physical-address kfree and a demonstrated kernel-execution route",
+      "verdict": "unsupported_and_conflicts_with_checked_AIO_buffer_initialization",
+      "evidence": [
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 16,
+          "line_end": 19
+        },
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 173,
+          "line_end": 190
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 1186,
+          "line_end": 1211
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 1223,
+          "line_end": 1258
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 982,
+          "line_end": 988
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 1083,
+          "line_end": 1083
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 779,
+          "line_end": 807
+        }
+      ],
+      "analysis": "Both asynchronous iter paths allocate zeroed ffs_io_data and neither assigns p->buf from the iovec before ffs_epfile_io. The physical-address branch consequently consumes zero, rather than a USB-host-selected or iovec-selected physical address. io_data->buf is later replaced by the translated data pointer and completion frees it. A conditional invalid-free defect is supported, but the arbitrary-address/free-list/code-execution claims require additional, currently absent, consumers or memory-corruption evidence."
+    },
+    {
+      "id": "FF02",
+      "priority": "P1",
+      "claim": "Changing descriptor flags and ordinary read/write or io_submit selects a physical rootfs address",
+      "verdict": "source_path_mismatch",
+      "evidence": [
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 199,
+          "line_end": 208
+        },
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 223,
+          "line_end": 229
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 1117,
+          "line_end": 1146
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 1370,
+          "line_end": 1390
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 1406,
+          "line_end": 1418
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 1186,
+          "line_end": 1265
+        }
+      ],
+      "analysis": "Checked endpoint file operations register read_iter/write_iter, whose zeroed ffs_io_data.buf is not initialized from the iterator. Helpers that actually assign the supplied buffer address have aio=false and are reached through local FUNCTIONFS_IO_READ/WRITE ioctls. Merely writing the physical value as the buffer argument of ordinary read/write or io_submit does not establish the claimed address selection in this tree. This audit supplies no exploitation procedure."
+    },
+    {
+      "id": "FF03",
+      "priority": "P1",
+      "claim": "A USB trace can directly establish FunctionFS physical-address flag or AIO use",
+      "verdict": "incorrect_as_a_direct_observation",
+      "evidence": [
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 194,
+          "line_end": 204
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 354,
+          "line_end": 386
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 2522,
+          "line_end": 2557
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/functionfs.h",
+          "line_start": 56,
+          "line_end": 64
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 1193,
+          "line_end": 1213
+        }
+      ],
+      "analysis": "The FunctionFS v2 magic/length/flags header is written by local userspace to ep0 and parsed into ffs->user_flags; it is not the USB on-wire configuration-descriptor header. AIO selection is determined by local kiocb state. usbmon/Wireshark records USB traffic, and cannot directly disclose this local descriptor header, I/O syscall selection or buffer-pointer provenance. ELF-like or arbitrary returned bytes also do not prove flags, physical address origin, or a new image consumer."
+    },
+    {
+      "id": "FF04",
+      "priority": "P1",
+      "claim": "Crash at translated physical address proves successful physical-memory readback",
+      "verdict": "incorrect",
+      "evidence": [
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 227,
+          "line_end": 229
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 779,
+          "line_end": 807
+        }
+      ],
+      "analysis": "Completion computes ret from req->status or actual. It performs read-copy only for positive ret, but kfree(io_data->buf) is unconditional after completion; an I/O error can therefore still lead to invalid free/crash. A register or crash address establishes neither successful USB bytes nor contents, length, provenance, or rootfs identity."
+    },
+    {
+      "id": "FF05",
+      "priority": "P2",
+      "claim": "F1/F2 array bounds defects exist in the supplied 4.19.124 source",
+      "verdict": "supported_at_source_level_with_runtime_prerequisites",
+      "evidence": [
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 110,
+          "line_end": 137
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/composite.c",
+          "line_start": 1651,
+          "line_end": 1653
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/composite.c",
+          "line_start": 1792,
+          "line_end": 1834
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 90,
+          "line_end": 90
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 3380,
+          "line_end": 3435
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 3567,
+          "line_end": 3579
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 2038,
+          "line_end": 2078
+        }
+      ],
+      "analysis": "Dispatcher checks the low byte yet passes full wIndex to FunctionFS. Reverse mapping narrows interface to u8 while subsequent array indexing uses original unsigned interface. Source supports out-of-bounds read/write conditions. Writes occur only after active-state and endpoint-enable return checks; reads with a negative int value produce no response data in composite. Host-visible readback is at most one byte per successful request, while writes affect a bounded array-relative location, not an arbitrary physical pointer. A running configured FunctionFS target and matching compiled code remain unverified."
+    },
+    {
+      "id": "FF06",
+      "priority": "P2",
+      "claim": "F3/F4 are existing host-accessible arbitrary physical-memory read/write consumers",
+      "verdict": "local_capability_exists_host_reachability_unproved",
+      "evidence": [
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 142,
+          "line_end": 167
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 982,
+          "line_end": 988
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 1031,
+          "line_end": 1097
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 1111,
+          "line_end": 1146
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 1370,
+          "line_end": 1390
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 2522,
+          "line_end": 2557
+        }
+      ],
+      "analysis": "The code conditionally translates a pointer or maps it according to local descriptor flags, queues it as endpoint transfer buffer, and exposes local ioctl helpers. No supplied proprietary daemon implementation establishes that a USB/PTP parameter controls flags, local ioctl choice, physical pointer and length. Valid mapping, UDC/DMA behavior, active endpoint and transfer completion are additional requirements. Kernel source capability is not a validated memory-dump command."
+    },
+    {
+      "id": "FF07",
+      "priority": "P2",
+      "claim": "S5 actual running kernel is unmodified 3.18.18; all F1-F5 are conclusively absent",
+      "verdict": "published_version_is_not_running_binary_or_complete_negative_proof",
+      "evidence": [
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 4,
+          "line_end": 6
+        },
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 12,
+          "line_end": 14
+        },
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 29,
+          "line_end": 82
+        }
+      ],
+      "analysis": "Parent independently verified the official S5 grouped publication advertises linux-3.18.18; that supports source-publication version only. This subtask found no local linux-3.18.18 source in analysis/sources, so alleged byte-identical comparisons, tree-wide absence and quoted defconfig/DTS are author claims not independently reproduced here. No running-image hash/config, kernel extraction or binding evidence was provided. A disabled USB feature in a sample defconfig does not establish actual camera kernel configuration or exclude other consumers."
+    },
+    {
+      "id": "FF08",
+      "priority": "P2",
+      "claim": "4.19.124 source guarantees the same F1-F5 chain in both S1M2 and S1R2 devices",
+      "verdict": "model_and_runtime_boundaries_unresolved",
+      "evidence": [
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 16,
+          "line_end": 19
+        },
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 233,
+          "line_end": 239
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "line_start": 1406,
+          "line_end": 1418
+        }
+      ],
+      "analysis": "Official S1M2 association reported by parent supports relevance of this source archive. Source review does not verify which source/config/patch set each actual device firmware runs, whether FunctionFS is bound to the active USB interface, or whether proprietary daemon flags/IOCTL/AIO usage match assumptions. S1R2 transfer needs separate provenance and runtime evidence; matching line numbers are not such evidence."
+    },
+    {
+      "id": "FF09",
+      "priority": "P2",
+      "claim": "DTS slram addresses and total-size similarity prove exact decrypted S5 rootfs mappings",
+      "verdict": "insufficient",
+      "evidence": [
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 85,
+          "line_end": 105
+        }
+      ],
+      "analysis": "The quoted bootargs, if reproduced in the correct release source, would describe intended RAM-backed MTD ranges for that configuration. This subtask did not obtain the 3.18 DTS. Matching aggregate size does not prove actual bootargs, loader copy/decompression, exact package-version mapping, rootfs partition boundaries, /sbin/finit identity, or present physical-memory contents. Treat both addresses as author-reported candidates rather than validated target dump ranges."
+    },
+    {
+      "id": "FF10",
+      "priority": "P2",
+      "claim": "JTAG is the unique remaining route and P7 is closed for S5",
+      "verdict": "not_supported_by_scope_of_negative_evidence",
+      "evidence": [
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 21,
+          "line_end": 23
+        },
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 101,
+          "line_end": 105
+        },
+        {
+          "path": "<USER_DESKTOP>/FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+          "line_start": 233,
+          "line_end": 239
+        }
+      ],
+      "analysis": "Even a verified absence of these particular FunctionFS implementations in one public source snapshot cannot exclude other protocol consumers, supported export interfaces, other firmware stages, other vulnerabilities or model-specific paths. JTAG effectiveness/access was not validated. Report should keep this investigation scoped to the checked source family and retain P7 device/runtime uncertainty."
+    }
+  ],
+  "usable_now": [
+    "Immutable source provenance and static F1/F2 bounds analysis",
+    "Local physical/remap flag and ioctl consumers as leads requiring daemon evidence",
+    "Conditional AIO translated-buffer cleanup defect, with zero-initialized buf caveat"
+  ],
+  "not_authorized_or_not_ready_to_run": [
+    "External QEMU/qoob reproduction and fuzz scripts",
+    "Any USB control, endpoint transfer, device memory dump or write",
+    "JTAG access or firmware flashing"
+  ],
+  "value_for_complete_firmware_reverse": "Prioritizes exact proprietary daemon descriptor/IOCTL consumers and version/runtime evidence. Does not decode encrypted payloads, supply keys, prove an address map, or produce a RAM/plaintext image.",
+  "required_evidence_before_stronger_claim": [
+    "Exact model/firmware association, input hashes, running kernel/config and USB function binding",
+    "Daemon descriptor header and local syscall/IOCTL implementation with flags, address/length provenance and synchronous/asynchronous path",
+    "Original transfer status, nonempty bytes, full digest and format validation with verified address mapping",
+    "Actual 3.18 source provenance and reproducible restricted negative checks; no generalized absence claim"
+  ]
+}

@@ -1,0 +1,21 @@
+Socionext Milbeaut PWM controller
+
+Required properties:
+- compatible:	should be "socionext,milbeaut-pwm"
+- reg:		physical base address and length of the controller's registers.
+- clocks:	phandle and clock specifier of the PWM reference clock.
+- #pwm-cells:	must be 3. See pwm.txt in this directory for a
+		description of the cell format.
+
+Optional properties:
+- base-rate:	set the rate of the clock to this at probe.
+
+Example:
+
+	pwm0: pwm@1e120000 {
+		compatible = "socionext,milbeaut-pwm";
+		reg = <0x1e001000 0x400>;
+		clocks = <&rclk>;
+		#pwm-cells = <3>;
+		base-rate = <13500000>;
+	};

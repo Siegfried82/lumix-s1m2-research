@@ -1,0 +1,5 @@
+{
+  "command": "uname -r; cat /proc/cmdline; test -d /proc/self",
+  "exit_code": 0,
+  "output": "4.19.124\nconsole=ttyAMA0 init=/init loglevel=7 sbox.shell=1\n"
+}

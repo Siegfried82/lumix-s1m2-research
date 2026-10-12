@@ -1,0 +1,50 @@
+{
+  "stages": [
+    {
+      "stage": "before",
+      "input_sha256": "72dc943004475f8923132e587392b84f31f294e689109a14361a2b4811b0207e",
+      "records": 3076,
+      "occupied_user_slots": 38,
+      "ptp_and_dat_names_equal": true
+    },
+    {
+      "stage": "blank",
+      "input_sha256": "72dc943004475f8923132e587392b84f31f294e689109a14361a2b4811b0207e",
+      "records": 3076,
+      "occupied_user_slots": 38,
+      "ptp_and_dat_names_equal": true
+    },
+    {
+      "stage": "after",
+      "input_sha256": "0a4dba992f1a971914387fb0fa6398b516fa3f73a6b6efd3a44c199a16ceb7bf",
+      "records": 3076,
+      "occupied_user_slots": 39,
+      "ptp_and_dat_names_equal": true
+    },
+    {
+      "stage": "reboot",
+      "input_sha256": "0a4dba992f1a971914387fb0fa6398b516fa3f73a6b6efd3a44c199a16ceb7bf",
+      "records": 3076,
+      "occupied_user_slots": 39,
+      "ptp_and_dat_names_equal": true
+    }
+  ],
+  "rejection_cases": [
+    {
+      "case": "truncated",
+      "rejected": "invalid envelope lengths"
+    },
+    {
+      "case": "checksum",
+      "rejected": "trailer/checksum mismatch"
+    },
+    {
+      "case": "wrong_model",
+      "rejected": "unsupported model/header"
+    },
+    {
+      "case": "invalid_record_with_correct_checksum",
+      "rejected": "record outside input"
+    }
+  ]
+}

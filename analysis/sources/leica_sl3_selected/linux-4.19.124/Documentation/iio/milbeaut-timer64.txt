@@ -1,0 +1,96 @@
+Milbeaut Timer64 time stamp driver.
+
+1. Overview
+
+This driver controls Timer64 controller.
+If some external trigger occurs, you can read its time stamp via
+ /dev/iio:device*. Also some additional counter can be read on sysfs.
+
+The base clock is automatically selected from in_count0_frequency
+ value on sysfs.
+
+2. Usage
+1) enable timer64 count action.
+$ echo 1 > /sys/bus/iio/devices/iio:device0/scan_elements/in_count0_en
+$ echo 1 > /sys/bus/iio/devices/iio:device0/in_count0_en
+
+2) start to capture time stamp.
+Here, use sample uses tools/iio/iio_generic_buffer.c.
+$ iio_generic_buffer -g -l 16 -N 0
+This will capture 16 samples data from timer64.
+This program will get the data type and enable data capture and
+ print captured stamp datas. "enable" action is to write 1 to
+ "/sys/bus/iio/devices/iio:device0/in_count0_en".
+And iio_generic_buffer will read 16 pieces of stamp datas
+ from "/dev/iio\:device0".
+
+3) stop to capture time stamp.
+$ echo 0 > /sys/bus/iio/devices/iio:device0/scan_elements/in_count0_en
+$ echo 0 > /sys/bus/iio/devices/iio:device0/in_count0_en
+
+3. Supplementary
+- Frame Start/End Time Stamp
+You can read each time stamp value of Frame start or end about
+ or Sensor0-3 or frame0-2 via sysfs.
+
+- Time Stamp value
+List in /sys/bus/iio/devices/iio\:device0/:
+
+ in_count0_STMP0L_L : F[S/E]STMP[N]0L's lower 16bit value
+ in_count0_STMP0L_H : F[S/E]STMP[N]0L's upper 16bit value
+ in_count0_STMP0H_L : F[S/E]STMP[N]0H's lower 16bit value
+ in_count0_STMP0H_H : F[S/E]STMP[N]0H's upper 16bit value
+ in_count0_STMP1L_L : F[S/E]STMP[N]1L's lower 16bit value
+ in_count0_STMP1L_H : F[S/E]STMP[N]1L's upper 16bit value
+ in_count0_STMP1H_L : F[S/E]STMP[N]1H's lower 16bit value
+ in_count0_STMP1H_H : F[S/E]STMP[N]1H's upper 16bit value
+ in_count0_STMP2L_L : F[S/E]STMP[N]2L's lower 16bit value
+ in_count0_STMP2L_H : F[S/E]STMP[N]2L's upper 16bit value
+ in_count0_STMP2L_L : F[S/E]STMP[N]2H's lower 16bit value
+ in_count0_STMP2H_H : F[S/E]STMP[N]2H's upper 16bit value
+
+ in_cout0_TMR64L_L : TMR64_L's lower 16bit balue
+ in_cout0_TMR64L_H : TMR64_L's upper 16bit balue
+ in_cout0_TMR64H_L : TMR64_H's lower 16bit balue
+ in_cout0_TMR64H_H : TMR64_H's upper 16bit balue
+
+Example:
+$ cat /sys/bus/iio/devices/iio\:device0/in_count0_STMP0L_L
+
+ You can get 64bit value as next.
+  value = atoi(in_count0_STMP0H_H) << 48
+	+ atoi(in_count0_STMP0H_L) << 32
+	+ atoi(in_count0_STMP0L_H) << 16
+	+ atoi(in_count0_STMP0L_L);
+
+ *note: TMR64 value is updated when TMR64_L_L is readed.
+
+- External Trig Signal Edge:
+You can select Frame Start or Frame End which time stamp shows 
+ by setting in_count0_ExtTrigEdge.
+ - rise-edge : time stamp is captured at rise edge of external trigger.
+ - fall-edge : time stamp is captured at fall edge of external trigger.
+ - both-edge : time stamp is captured at both of rise and fall edge of external trigger.
+
+- Time Stamp Type:
+You can select Frame Start or Frame End which time stamp shows 
+ by setting in_count0_FrameEdge.
+ - frame-start : time stamp is the value on Frame Start.
+ - frame-end   : time stamp is the value on Frame End.
+
+Example:
+$ echo frame-start > /sys/bus/iio/devices/iio\:device0/in_count0_FrameEdge
+
+- Sensor No:
+You can select Sensor No which time stamp shows by 
+ setting in_count0SensorNo from 0 to 3.
+
+Example:
+$ echo 0 > /sys/bus/iio/devices/iio\:device0/in_count0_SensorNo
+
+- counter clock frequency
+You can change frequency of counter clock by setting in_count0_frequency.
+Timer 64 driver will select proper setting near input value.
+
+Example:
+$ echo 1000000 > /sys/bus/iio/devices/iio\:device0/in_count0_frequency

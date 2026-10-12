@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "saturation_flag": true,
+    "under_flag": true,
+    "invalid_sample": true,
+    "geometry_weight": true,
+    "geometry_offset": true,
+    "sampled_amplitude_peak": true,
+    "exposure_channel": true,
+    "white_normalization": true,
+    "signal_equation": true,
+    "variance_equation": true,
+    "out_of_bounds": true,
+    "shortest_shoulder": true,
+    "alternate_cfa": true
+  },
+  "all_passed": true,
+  "scope": "Recovered evidence130 equations; synthetic aligned RAW bank, externally supplied amplitude/base.",
+  "cpu_network_finite": true,
+  "feature_max_difference": 5.960464477539063e-08,
+  "white_max_difference": 0.0,
+  "feature_parity": true,
+  "network_max_difference": 1.9073486328125e-06,
+  "network_parity": true
+}

@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "deleted_paths_absent": true,
+    "all_original_backups_hash_verified": true,
+    "all_8_compactions_written": true,
+    "no_unplanned_old_file_metadata_changes": true,
+    "new_primary_entry_links_exist": true,
+    "no_new_broken_markdown_file_links": true,
+    "firmware_and_62_components_hashes_match": true,
+    "historical_audit_replay_passed": true
+  },
+  "all_passed": true,
+  "deleted_documents": 49,
+  "deleted_bytes": 9208530,
+  "compacted_documents": 8,
+  "preserved_old_files_metadata_matching": 128210,
+  "remaining_preexisting_broken_links": 10,
+  "limitations": [
+    "Whole inventory compares size, mtime and mode, not all file contents. Firmware and components separately SHA-256 checked.",
+    "Link audit checks file existence, not heading anchors or all prose/code references.",
+    "Historical snapshot inventories intentionally retain old paths; external originals and public repository preserved."
+  ],
+  "backup_root": "<LOCAL_BACKUP>/相机文稿清理-20261012-212031"
+}

@@ -1,4 +1,3 @@
-from pathlib import Path
 #!/usr/bin/env python3
 """
 read_s1m2_known_setting.py - Bounded, Verifiable Reader for Known S1M2 Setting Records
@@ -242,11 +241,11 @@ def main():
     args = parser.parse_args()
 
     default_samples = [
-        ("01_baseline", str(Path(__file__).resolve().parents[1] / 'analysis/baseline_20261008_01/config_1.DAT')),
-        ("02_on", str(Path(__file__).resolve().parents[1] / 'analysis/highres_20261008_02/config_1.DAT')),
-        ("03_off", str(Path(__file__).resolve().parents[1] / 'analysis/highres_firstnormal_off_20261008_03/config_1.DAT')),
-        ("04_on_fan", str(Path(__file__).resolve().parents[1] / 'analysis/highres_firstnormal_on_fan_20261008_04/config_1.DAT')),
-        ("05_off_fan", str(Path(__file__).resolve().parents[1] / 'analysis/highres_firstnormal_off_fan_20261008_05/config_1.DAT')),
+        ("01_baseline", "<LOCAL_WORKSPACE>/analysis/baseline_20261008_01/config_1.DAT"),
+        ("02_on", "<LOCAL_WORKSPACE>/analysis/highres_20261008_02/config_1.DAT"),
+        ("03_off", "<LOCAL_WORKSPACE>/analysis/highres_firstnormal_off_20261008_03/config_1.DAT"),
+        ("04_on_fan", "<LOCAL_WORKSPACE>/analysis/highres_firstnormal_on_fan_20261008_04/config_1.DAT"),
+        ("05_off_fan", "<LOCAL_WORKSPACE>/analysis/highres_firstnormal_off_fan_20261008_05/config_1.DAT"),
     ]
 
     target_files = []

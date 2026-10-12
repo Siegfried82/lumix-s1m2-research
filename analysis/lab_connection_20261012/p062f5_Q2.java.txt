@@ -1,0 +1,36 @@
+55:                 return;
+56:             case 1:
+57:                 int i10 = this.f20839x;
+58:                 RemoteShootingActivity remoteShootingActivity = this.f20838s;
+59:                 String str = remoteShootingActivity.f17020z0;
+60:                 if (remoteShootingActivity.f16996k1 == null) {
+61:                     remoteShootingActivity.f16996k1 = new Q0();
+62:                 }
+63:                 SecureRandom secureRandom = new SecureRandom();
+64:                 try {
+65:                     try {
+66:                         DatagramSocket datagramSocket = new DatagramSocket(C1410v.f18185d);
+67:                         try {
+68:                             InetSocketAddress inetSocketAddress = new InetSocketAddress("192.168.54.1", i10);
+69:                             new C1637v();
+70:                             C1661c3 c1661c3 = new C1661c3(remoteShootingActivity, new f(secureRandom));
+71:                             datagramSocket.connect(inetSocketAddress);
+72:                             y1 y1Var = new y1(datagramSocket, 1048576);
+73:                             try {
+74:                                 aVar = new a(y1Var, secureRandom, 0, 0);
+75:                                 try {
+76:                                     hB = C1637v.b(c1661c3, aVar);
+77:                                     try {
+78:                                         byte[] bArr = new byte[1048576];
+79:                                         while (!remoteShootingActivity.f17000m1) {
+80:                                             int iA = hB.a(1048576, 0, bArr);
+81:                                             byte[] bArr2 = new byte[iA];
+82:                                             System.arraycopy(bArr, 0, bArr2, 0, iA);
+83:                                             remoteShootingActivity.E0(bArr2);
+84:                                         }
+85:                                         try {
+86:                                             datagramSocket.close();
+87:                                             try {
+88:                                                 hB.close();
+89:                                                 break;
+90:                                             } catch (Throwable unused) {

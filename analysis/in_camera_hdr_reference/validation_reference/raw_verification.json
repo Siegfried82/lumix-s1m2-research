@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "decoder_matches_equation": true,
+    "negative_values_preserved": true,
+    "above_white_preserved": true,
+    "trailing_crop_only": true,
+    "cfa_phase_order": true,
+    "five_dn_headroom": true,
+    "seven_frame_manifest": true,
+    "phase_underflow": true,
+    "padded_validity": true,
+    "bggr_decode": true
+  },
+  "all_passed": true,
+  "scope": "Real LibRaw decoding of generated DNG files; no camera photographs supplied."
+}

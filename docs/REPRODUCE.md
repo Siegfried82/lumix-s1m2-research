@@ -1,3 +1,5 @@
+> 这是早期离线重放记录；最新阶段的输入、参数与缺口见[2026-10-13完整复现指南](REPRODUCE_20261013.md)。
+
 # 从零复现：步骤、输入与验收
 
 这是一份**已完成离线实验的复现说明**。它不提供已经成功的 S1M2 专有固件解码、刷写或机内功能补丁流程；这些尚未实现。不能把历史脚本归档等同于每个分支都可独立运行。
@@ -7,7 +9,7 @@
 克隆仓库并进入根目录：
 
 ```sh
-git clone https://github.com/lixiuqi82-art/lumix-s1m2-research.git
+git clone https://github.com/Siegfried82/lumix-s1m2-research.git
 cd lumix-s1m2-research
 python3 --version
 ```

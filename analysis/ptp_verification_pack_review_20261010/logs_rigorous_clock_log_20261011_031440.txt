@@ -1,0 +1,53 @@
+[   0.033] CAMERA 04DA:2382 bus=5 addr=12
+[   0.033] OPEN iface=0 ep_out=0x01 ep_in=0x81 ep_int=0x82
+[   0.334] TX  CMD  tid=1 code=0x1002 params=['0x1'] len=16 hex=10000000010002100100000001000000   [OpenSession]
+[   0.335] RX  RESP tid=1 code=0x2001 len=12 head=0c0000000300012001000000
+[   0.536] TX  CMD  tid=2 code=0x9102 params=['0x10001'] len=16 hex=10000000010002910200000001000100   [LumixOpenSession]
+[   0.551] RX  RESP tid=2 code=0x2001 len=16 head=10000000030001200200000001000100
+[   0.751] 
+########## 步骤1：读基线 ##########
+[   0.751] TX  CMD  tid=3 code=0x940a params=['0x8000010'] len=16 hex=1000000001000a940300000010000008   [GetSetupInfo 基线]
+[   0.752] RX  DATA tid=3 code=0x940a len=94 head=5e00000002000a9403000000110000080a000000ee07010001000d00050012000008020000000000...
+[   0.752] RX  RESP tid=3 code=0x2001 len=12 head=0c0000000300012003000000
+[   0.752]   => 时钟: 2030-01-01 13:05:18   (tid=3)
+[   0.753] 
+########## 步骤2：恒等写回（内容完全相同）##########
+[   0.753] TX  CMD  tid=4 code=0x940b params=['0x8000010'] len=16 hex=1000000001000b940400000010000008   [SetSetupInfo 恒等]
+[   0.753] TX  DATA tid=4 code=0x940b len=82 head=5e00000002000b9404000000110000080a000000ee07010001000d000500120000080200000000001300...
+[   0.768] RX  RESP tid=4 code=0x2001 len=12 head=0c0000000300012004000000
+[   1.370] TX  CMD  tid=5 code=0x940a params=['0x8000010'] len=16 hex=1000000001000a940500000010000008   [GetSetupInfo 恒等写后]
+[   1.371] RX  DATA tid=5 code=0x940a len=94 head=5e00000002000a9405000000110000080a000000ee07010001000d00050012000008020000000000...
+[   1.371] RX  RESP tid=5 code=0x2001 len=12 head=0c0000000300012005000000
+[   1.371]   => 时钟: 2030-01-01 13:05:18   (tid=5)
+[   1.371] 
+########## 步骤3：改年份 +1 后写入 ##########
+[   1.371] TX  CMD  tid=6 code=0x940b params=['0x8000010'] len=16 hex=1000000001000b940600000010000008   [SetSetupInfo 改年份]
+[   1.371] TX  DATA tid=6 code=0x940b len=82 head=5e00000002000b9406000000110000080a000000ef07010001000d000500120000080200000000001300...
+[   1.389] RX  RESP tid=6 code=0x2001 len=12 head=0c0000000300012006000000
+[   1.392] EVENT tid=0xffffffff code=0xc104 len=16 hex=10000000040004c1ffffffff10000008
+[   1.397] EVENT tid=0xffffffff code=0xc104 len=16 hex=10000000040004c1ffffffff1000c015
+[   1.990] TX  CMD  tid=7 code=0x940a params=['0x8000010'] len=16 hex=1000000001000a940700000010000008   [GetSetupInfo 改值写后]
+[   1.994] RX  DATA tid=7 code=0x940a len=94 head=5e00000002000a9407000000110000080a000000ef07010001000d00050012000008020000000000...
+[   1.994] RX  RESP tid=7 code=0x2001 len=12 head=0c0000000300012007000000
+[   1.994]   => 时钟: 2031-01-01 13:05:18   (tid=7)
+[   1.994] 
+########## 步骤4：恢复原值 ##########
+[   1.994] TX  CMD  tid=8 code=0x940b params=['0x8000010'] len=16 hex=1000000001000b940800000010000008   [SetSetupInfo 恢复]
+[   1.995] TX  DATA tid=8 code=0x940b len=82 head=5e00000002000b9408000000110000080a000000ee07010001000d000500120000080200000000001300...
+[   2.012] RX  RESP tid=8 code=0x2001 len=12 head=0c0000000300012008000000
+[   2.012] EVENT tid=0xffffffff code=0xc104 len=16 hex=10000000040004c1ffffffff10000008
+[   2.016] EVENT tid=0xffffffff code=0xc104 len=16 hex=10000000040004c1ffffffff1000c015
+[   2.612] TX  CMD  tid=9 code=0x940a params=['0x8000010'] len=16 hex=1000000001000a940900000010000008   [GetSetupInfo 恢复后]
+[   2.614] RX  DATA tid=9 code=0x940a len=94 head=5e00000002000a9409000000110000080a000000ee07010001000d00050012000008020000000000...
+[   2.614] RX  RESP tid=9 code=0x2001 len=12 head=0c0000000300012009000000
+[   2.614]   => 时钟: 2030-01-01 13:05:18   (tid=9)
+[   2.614] 
+########## 结论 ##########
+[   2.614]   基线年=2030  改值写后年=2031  恢复后年=2030
+[   2.614]   改值写入生效: 是 ✅   恢复成功: 是 ✅
+[   2.614]   事务错配次数=0  未收到RESP次数=0  事件数=4
+[   2.614] TX  CMD  tid=10 code=0x9103 params=[] len=12 hex=0c000000010003910a000000   [LumixCloseSession]
+[   2.645] RX  RESP tid=10 code=0x2001 len=12 head=0c000000030001200a000000
+[   2.645] TX  CMD  tid=11 code=0x1003 params=[] len=12 hex=0c000000010003100b000000   [CloseSession]
+[   2.645] RX  RESP tid=11 code=0x2001 len=12 head=0c000000030001200b000000
+[   2.821] CLOSE interface

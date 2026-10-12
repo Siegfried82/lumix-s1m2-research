@@ -1,0 +1,400 @@
+[
+  {
+    "path": "scripts/common.py",
+    "lines": 411,
+    "imports": [
+      "import json",
+      "import os",
+      "import socket",
+      "import time",
+      "import urllib.request",
+      "import urllib.error",
+      "from xml.etree import ElementTree"
+    ],
+    "notable_lines": [
+      {
+        "line": 80,
+        "text": "            with urllib.request.urlopen(req, timeout=timeout or self.timeout) as r:"
+      },
+      {
+        "line": 104,
+        "text": "            with urllib.request.urlopen(req, timeout=timeout or self.timeout) as r:"
+      },
+      {
+        "line": 122,
+        "text": "        finally:"
+      },
+      {
+        "line": 142,
+        "text": "        finally:"
+      },
+      {
+        "line": 381,
+        "text": "        head = self._recv_until(b\"\\r\\n\\r\\n\")"
+      }
+    ]
+  },
+  {
+    "path": "scripts/enum_videoquality.py",
+    "lines": 142,
+    "imports": [
+      "import sys, os, time, json",
+      "from common import KA, Net, parse_camrply, Health, Reporter",
+      "from xml.etree import ElementTree"
+    ],
+    "notable_lines": [
+      {
+        "line": 22,
+        "text": "BASELINE = \"mp4_50p_28mbps\""
+      },
+      {
+        "line": 93,
+        "text": "    get(\"/cam.cgi?mode=accctrl&type=req_acc&value=4D454930-0100-1000-8001-020000025AD6&value2=iPhone\")"
+      },
+      {
+        "line": 95,
+        "text": "get(\"/cam.cgi?mode=camcmd&value=recmode\")"
+      },
+      {
+        "line": 106,
+        "text": "    accepted = wr not in (\"err_param\", \"error\", \"err_critical\", \"err_unsuitable\")"
+      },
+      {
+        "line": 122,
+        "text": "st, h, b, dt = get(\"/cam.cgi?mode=setsetting&type=videoquality&value=%s\" % BASELINE)"
+      },
+      {
+        "line": 123,
+        "text": "rep.log(\"ENUM_VQ\", \"REVERT to baseline %s\" % BASELINE, write_res(b), dt)"
+      },
+      {
+        "line": 128,
+        "text": "        finding=\"now=%s (want %s)\" % (rbv, BASELINE))"
+      },
+      {
+        "line": 133,
+        "text": "accepted = [r for r in results if r[\"accepted\"]]"
+      },
+      {
+        "line": 134,
+        "text": "canon = sorted(set(r[\"canonical\"] for r in accepted if r[\"canonical\"] not in (None, \"\", BASELINE)))"
+      }
+    ]
+  },
+  {
+    "path": "scripts/hidden_test_hlg.py",
+    "lines": 82,
+    "imports": [
+      "import re, sys, time, os",
+      "import common"
+    ],
+    "notable_lines": [
+      {
+        "line": 10,
+        "text": "LOG = os.path.join(os.path.dirname(os.path.abspath(__file__)), \"out\", \"hlg_test.log\")"
+      },
+      {
+        "line": 37,
+        "text": "    with open(LOG, \"a\") as f:"
+      },
+      {
+        "line": 41,
+        "text": "    open(LOG, \"a\").write(f\"\\n===== hlg=8k reversible test @ {time.strftime('%Y-%m-%d %H:%M:%S')} =====\\n\")"
+      },
+      {
+        "line": 52,
+        "text": "        sys.exit(3)"
+      },
+      {
+        "line": 64,
+        "text": "    accepted = (v1 == \"8k\" and v2 == \"8k\")"
+      }
+    ]
+  },
+  {
+    "path": "scripts/hidden_test_mp4hevc.py",
+    "lines": 143,
+    "imports": [
+      "import re, sys, time, os",
+      "import common"
+    ],
+    "notable_lines": [
+      {
+        "line": 36,
+        "text": "LOG = os.path.join(os.path.dirname(os.path.abspath(__file__)), \"out\", \"mp4hevc_test.log\")"
+      },
+      {
+        "line": 66,
+        "text": "    with open(LOG, \"a\") as f:"
+      },
+      {
+        "line": 70,
+        "text": "    os.makedirs(os.path.dirname(LOG), exist_ok=True)"
+      },
+      {
+        "line": 71,
+        "text": "    open(LOG, \"a\").write(f\"\\n===== mp4hevc reversible test @ {time.strftime('%Y-%m-%d %H:%M:%S')} target={TARGET} ip={IP}:{PORT} =====\\n\")"
+      },
+      {
+        "line": 78,
+        "text": "    base_fmt, _ = getsetting(net, \"videoformat\")"
+      },
+      {
+        "line": 80,
+        "text": "    log(f\"基线 videoformat={base_fmt!r}  videoquality={base_vq!r}\")"
+      },
+      {
+        "line": 81,
+        "text": "    if base_fmt is None or base_vq is None:"
+      },
+      {
+        "line": 83,
+        "text": "        sys.exit(3)"
+      },
+      {
+        "line": 115,
+        "text": "    accepted = (str(v2).startswith(\"mp4hevc_\"))"
+      }
+    ]
+  },
+  {
+    "path": "scripts/http_fingerprint.py",
+    "lines": 259,
+    "imports": [
+      "import os",
+      "import re",
+      "import socket",
+      "import subprocess",
+      "import sys",
+      "import time",
+      "from common import KA, parse_camrply"
+    ],
+    "notable_lines": [
+      {
+        "line": 80,
+        "text": "    finally:"
+      },
+      {
+        "line": 258,
+        "text": "    finally:"
+      }
+    ]
+  },
+  {
+    "path": "scripts/opengate_recon.py",
+    "lines": 140,
+    "imports": [
+      "import json, os, sys, time, hashlib",
+      "import urllib.parse, urllib.request",
+      "from xml.etree import ElementTree as ET"
+    ],
+    "notable_lines": [
+      {
+        "line": 21,
+        "text": "OPENER = urllib.request.build_opener("
+      },
+      {
+        "line": 30,
+        "text": "    with urllib.request.urlopen(req, timeout=timeout) as r:"
+      },
+      {
+        "line": 70,
+        "text": "    if 'S5' not in model.upper():"
+      }
+    ]
+  },
+  {
+    "path": "scripts/rce_surface_probe.py",
+    "lines": 91,
+    "imports": [
+      "import time, os, json",
+      "from common import Net, parse_camrply",
+      "from xml.etree import ElementTree as ET"
+    ],
+    "notable_lines": [
+      {
+        "line": 69,
+        "text": " 'ack','nack','req','reqacc','req_acc','handshake','pair','pairing','auth',"
+      }
+    ]
+  },
+  {
+    "path": "scripts/recon.py",
+    "lines": 132,
+    "imports": [
+      "import sys, os, time, json",
+      "from xml.etree import ElementTree",
+      "from common import KA, Net, parse_camrply, Health, Reporter"
+    ],
+    "notable_lines": [
+      {
+        "line": 10,
+        "text": "Safety: 100% read-only. Only GETs. The GX9-style handshake (req_acc) is"
+      },
+      {
+        "line": 60,
+        "text": "st, h, b, dt = get(\"/cam.cgi?mode=accctrl&type=req_acc&value=4D454930-0100-1000-8001-020000025AD6&value2=iPhone\")"
+      },
+      {
+        "line": 61,
+        "text": "rep.log(\"RECON\", \"handshake req_acc #1\", result_of(b), dt, finding=\"handshake part 1\")"
+      },
+      {
+        "line": 63,
+        "text": "st, h, b, dt = get(\"/cam.cgi?mode=accctrl&type=req_acc&value=4D454930-0100-1000-8001-020000025AD6&value2=iPhone\")"
+      },
+      {
+        "line": 64,
+        "text": "rep.log(\"RECON\", \"handshake req_acc #2\", result_of(b), dt, finding=\"handshake part 2\")"
+      },
+      {
+        "line": 66,
+        "text": "st, h, b, dt = get(\"/cam.cgi?mode=camcmd&value=recmode\")"
+      },
+      {
+        "line": 67,
+        "text": "rep.log(\"RECON\", \"handshake camcmd recmode\", result_of(b), dt, finding=\"establish connection\")"
+      },
+      {
+        "line": 97,
+        "text": "domains = [\"videoquality\", \"recmode\", \"color\", \"colormode\", \"audio\", \"bitrate\", \"framesize\","
+      }
+    ]
+  },
+  {
+    "path": "scripts/safe_handshake.py",
+    "lines": 190,
+    "imports": [
+      "import argparse",
+      "import random",
+      "import sys",
+      "import time",
+      "import os",
+      "import urllib.parse",
+      "import common",
+      "import common"
+    ],
+    "notable_lines": [
+      {
+        "line": 6,
+        "text": "  相机端 accctrl 只有一个\"待批复\"槽。一次没被清理的 req_acc 会留下【陈旧"
+      },
+      {
+        "line": 7,
+        "text": "  pending 请求】，下一次 req_acc 撞上它 -> 会话态被污染 -> 相机报"
+      },
+      {
+        "line": 12,
+        "text": "    * 结束/取消时用 req_acc_can + 同一 uuid 清理那次 pending 请求。"
+      },
+      {
+        "line": 16,
+        "text": "  * 一次干净 req_acc（同一 uuid）；ok_under_research 时按 --poll-delay 温和"
+      },
+      {
+        "line": 19,
+        "text": "  * 结束若非 ok：用【同一 uuid】发一次 req_acc_can 清理陈旧 pending（可用"
+      },
+      {
+        "line": 21,
+        "text": "  * 绝不发 req_acc_can 去打断一个已 ok 的会话；绝不快速连发 req_acc。"
+      },
+      {
+        "line": 53,
+        "text": "def req_acc(net, uuid, name):"
+      },
+      {
+        "line": 55,
+        "text": "        {\"mode\": \"accctrl\", \"type\": \"req_acc\", \"value\": uuid, \"value2\": name}"
+      },
+      {
+        "line": 63,
+        "text": "def req_acc_can(net, uuid):"
+      },
+      {
+        "line": 66,
+        "text": "        {\"mode\": \"accctrl\", \"type\": \"req_acc_can\", \"value\": uuid, \"value2\": \"\"}"
+      },
+      {
+        "line": 87,
+        "text": "                    help=\"结束时不发 req_acc_can 清理（默认会清理）\")"
+      },
+      {
+        "line": 108,
+        "text": "        st, r = req_acc(net, uuid, args.name)"
+      },
+      {
+        "line": 111,
+        "text": "            print(f\"[{i}] req_acc 无响应（相机可能掉线）-> 立即停手，温和探活。\")"
+      },
+      {
+        "line": 121,
+        "text": "                sys.exit(3)"
+      },
+      {
+        "line": 123,
+        "text": "        print(f\"[{i}] req_acc -> {r}\")"
+      },
+      {
+        "line": 124,
+        "text": "        head = r.split(\",\")[0].lower() if r else \"\""
+      },
+      {
+        "line": 126,
+        "text": "        if head == \"ok\":"
+      },
+      {
+        "line": 136,
+        "text": "        if head == \"err_user_refused\":"
+      },
+      {
+        "line": 138,
+        "text": "            print(\"  \\\"invalid login\\\"，说明态已被污染 -> 本轮结束后会用 req_acc_can 清理，\")"
+      },
+      {
+        "line": 142,
+        "text": "        if head == \"err_others_requesting\":"
+      },
+      {
+        "line": 147,
+        "text": "        if head == \"err_busy\":"
+      },
+      {
+        "line": 151,
+        "text": "        if head == \"err_param\":"
+      },
+      {
+        "line": 161,
+        "text": "            print(f\"清理：用同一 uuid 发 req_acc_can（清除陈旧 pending，防止下次再被污染）\")"
+      },
+      {
+        "line": 162,
+        "text": "            cst, cr = req_acc_can(net, uuid)"
+      },
+      {
+        "line": 163,
+        "text": "            print(f\"  req_acc_can -> {cr if cr is not None else '(no resp)'}\")"
+      },
+      {
+        "line": 174,
+        "text": "        print(\"req_acc 返回 ok，但 getstate 未确认。请检查相机。\")"
+      }
+    ]
+  },
+  {
+    "path": "scripts/state_check.py",
+    "lines": 45,
+    "imports": [
+      "import argparse, os, sys",
+      "import common",
+      "import common",
+      "import re"
+    ],
+    "notable_lines": [
+      {
+        "line": 3,
+        "text": "绝不写入、绝不 req_acc。用于在动相机之前确认它到底在不在、会话态是什么。\"\"\""
+      }
+    ]
+  }
+]

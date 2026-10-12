@@ -1,0 +1,53 @@
+
+analysis/sources/tether_windows_2_12/Lmxptpif.dll:	file format coff-x86-64
+
+Disassembly of section .text:
+
+000000018002fad0 <LMX_func_api_SetupRangeSet_Get_Aperture>:
+18002fad0: 48 89 5c 24 08              	movq	%rbx, 0x8(%rsp)
+18002fad5: 57                          	pushq	%rdi
+18002fad6: 48 83 ec 60                 	subq	$0x60, %rsp
+18002fada: 48 8b f9                    	movq	%rcx, %rdi
+18002fadd: 48 8b da                    	movq	%rdx, %rbx
+18002fae0: 33 c9                       	xorl	%ecx, %ecx
+18002fae2: 4d 85 c9                    	testq	%r9, %r9
+18002fae5: 74 03                       	je	0x18002faea <LMX_func_api_SetupRangeSet_Get_Aperture+0x1a>
+18002fae7: 41 89 09                    	movl	%ecx, (%r9)
+18002faea: 0f 57 c0                    	xorps	%xmm0, %xmm0
+18002faed: 33 c0                       	xorl	%eax, %eax
+18002faef: 48 89 44 24 50              	movq	%rax, 0x50(%rsp)
+18002faf4: 0f 11 44 24 20              	movups	%xmm0, 0x20(%rsp)
+18002faf9: 0f 11 44 24 30              	movups	%xmm0, 0x30(%rsp)
+18002fafe: 0f 11 44 24 40              	movups	%xmm0, 0x40(%rsp)
+18002fb03: 48 85 ff                    	testq	%rdi, %rdi
+18002fb06: 74 47                       	je	0x18002fb4f <LMX_func_api_SetupRangeSet_Get_Aperture+0x7f>
+18002fb08: 48 85 db                    	testq	%rbx, %rbx
+18002fb0b: 74 42                       	je	0x18002fb4f <LMX_func_api_SetupRangeSet_Get_Aperture+0x7f>
+18002fb0d: 4d 85 c9                    	testq	%r9, %r9
+18002fb10: 74 03                       	je	0x18002fb15 <LMX_func_api_SetupRangeSet_Get_Aperture+0x45>
+18002fb12: 41 89 09                    	movl	%ecx, (%r9)
+18002fb15: 89 0d e9 eb 22 00           	movl	%ecx, 0x22ebe9(%rip)    # 0x18025e704
+18002fb1b: ba b0 00 00 08              	movl	$0x80000b0, %edx        # imm = 0x80000B0
+18002fb20: 48 8d 4c 24 20              	leaq	0x20(%rsp), %rcx
+18002fb25: e8 76 06 00 00              	callq	0x1800301a0 <LMX_func_api_SetupRangeSet_Set_Info+0x330>
+18002fb2a: 0f b6 c8                    	movzbl	%al, %ecx
+18002fb2d: 84 c0                       	testb	%al, %al
+18002fb2f: 74 34                       	je	0x18002fb65 <LMX_func_api_SetupRangeSet_Get_Aperture+0x95>
+18002fb31: 0f b7 44 24 38              	movzwl	0x38(%rsp), %eax
+18002fb36: 66 89 07                    	movw	%ax, (%rdi)
+18002fb39: 0f b7 44 24 3a              	movzwl	0x3a(%rsp), %eax
+18002fb3e: 66 89 03                    	movw	%ax, (%rbx)
+18002fb41: 0f b6 c1                    	movzbl	%cl, %eax
+18002fb44: 48 8b 5c 24 70              	movq	0x70(%rsp), %rbx
+18002fb49: 48 83 c4 60                 	addq	$0x60, %rsp
+18002fb4d: 5f                          	popq	%rdi
+18002fb4e: c3                          	retq
+18002fb4f: 4d 85 c9                    	testq	%r9, %r9
+18002fb52: 74 07                       	je	0x18002fb5b <LMX_func_api_SetupRangeSet_Get_Aperture+0x8b>
+18002fb54: 41 c7 01 00 00 01 00        	movl	$0x10000, (%r9)         # imm = 0x10000
+18002fb5b: c7 05 9f eb 22 00 00 00 01 00       	movl	$0x10000, 0x22eb9f(%rip) # imm = 0x10000
+                                                                        # 0x18025e704
+18002fb65: 48 8b 5c 24 70              	movq	0x70(%rsp), %rbx
+18002fb6a: 48 83 c4 60                 	addq	$0x60, %rsp
+18002fb6e: 5f                          	popq	%rdi
+18002fb6f: c3                          	retq

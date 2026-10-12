@@ -1,0 +1,56 @@
+1055:                     I5.d.b(jVar.f6991f.getValue());
+1056:                     synchronized (G0.class) {
+1057:                     }
+1058:                     jVar.f6972R.c(jVar.f6991f.getValue());
+1059:                 }
+1060:                 if (bluetoothGattCharacteristic.getUuid().toString().equals("657edba2-5bc8-42dd-974f-21871d7dbcd1")) {
+1061:                     "read wifi ssid: ".concat(new String(jVar.f6989e.getValue(), StandardCharsets.UTF_8));
+1062:                     synchronized (G0.class) {
+1063:                     }
+1064:                     jVar.f6972R.c(jVar.f6989e.getValue());
+1065:                 }
+1066:                 if (bluetoothGattCharacteristic.getUuid().toString().equals("239c7203-922f-43e9-bdf1-6d1fedf6f43f")) {
+1067:                     I5.d.b(jVar.f6993g.getValue());
+1068:                     synchronized (G0.class) {
+1069:                     }
+1070:                     jVar.f6972R.c(jVar.f6993g.getValue());
+1071:                 }
+1072:                 if (bluetoothGattCharacteristic.getUuid().toString().equals("d6bbd828-eb91-4b00-acfc-b2c5821ff0f7")) {
+1073:                     "read slot info: ".concat(new String(jVar.f6999j.getValue(), StandardCharsets.UTF_8));
+1074:                     synchronized (G0.class) {
+1075:                     }
+1076:                     jVar.f6972R.c(jVar.f6999j.getValue());
+1077:                 }
+1078:                 if (bluetoothGattCharacteristic.getUuid().toString().equals("c623f9bd-beae-443b-b5e6-af4652b81343")) {
+1079:                     "read camera model name: ".concat(new String(jVar.f7007n.getValue(), StandardCharsets.UTF_8));
+1080:                     synchronized (G0.class) {
+1081:                     }
+1082:                     jVar.f6972R.c(jVar.f7007n.getValue());
+1083:                 }
+1084:                 if (bluetoothGattCharacteristic.getUuid().toString().equals("d2a2a363-16a4-43df-89f4-7817be9f0cde")) {
+1085:                     "read camera fm version: ".concat(new String(jVar.f7009o.getValue(), StandardCharsets.UTF_8));
+
+1565:                     }
+1566:                     if (AbstractC0105t.B(bluetoothGattCharacteristic, "05a797b6-9c2f-4d18-99a7-fa61a3880bfe")) {
+1567:                         jVar2.f6987d = bluetoothGattCharacteristic;
+1568:                     }
+1569:                     if (AbstractC0105t.B(bluetoothGattCharacteristic, "657edba2-5bc8-42dd-974f-21871d7dbcd1")) {
+1570:                         jVar2.f6989e = bluetoothGattCharacteristic;
+1571:                     }
+1572:                     if (AbstractC0105t.B(bluetoothGattCharacteristic, "42d509f7-f122-4816-92d1-5e402d9453cb")) {
+1573:                         jVar2.f6991f = bluetoothGattCharacteristic;
+1574:                     }
+1575:                     if (AbstractC0105t.B(bluetoothGattCharacteristic, "239c7203-922f-43e9-bdf1-6d1fedf6f43f")) {
+1576:                         jVar2.f6993g = bluetoothGattCharacteristic;
+1577:                     }
+1578:                     if (AbstractC0105t.B(bluetoothGattCharacteristic, "7644371c-1ddc-4b16-832f-f07c322e311b")) {
+1579:                         jVar2.f6995h = bluetoothGattCharacteristic;
+1580:                     }
+1581:                     "289270d6-c07d-46de-bf70-70f5120234d1".equals(bluetoothGattCharacteristic.getUuid().toString());
+1582:                     "6c875728-7636-425e-818a-f1d93a39e075".equals(bluetoothGattCharacteristic.getUuid().toString());
+1583:                     if ("09b2bddf-452b-48e8-96de-92954f48c21b".equals(bluetoothGattCharacteristic.getUuid().toString())) {
+1584:                         jVar2.f6997i = bluetoothGattCharacteristic;
+1585:                     }
+1586:                     "52f8c131-dd62-4e34-9283-3086db261fad".equals(bluetoothGattCharacteristic.getUuid().toString());
+1587:                     "30185b4a-f18f-44c1-9b19-1bf787956185".equals(bluetoothGattCharacteristic.getUuid().toString());
+1588:                     if ("d6bbd828-eb91-4b00-acfc-b2c5821ff0f7".equals(bluetoothGattCharacteristic.getUuid().toString())) {

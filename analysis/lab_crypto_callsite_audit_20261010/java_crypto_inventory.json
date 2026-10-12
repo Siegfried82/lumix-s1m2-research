@@ -1,0 +1,293 @@
+{
+  "pattern": "Cipher\\.getInstance|SecretKeySpec|IvParameterSpec|\\.doFinal\\(",
+  "files": [
+    {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/p241v9/a.java",
+      "sha256": "e6c58c1bfe03806de43b3f6e05b2cf7200ca192a55e6c95bdb1b0c5aec5963f3",
+      "hits": [
+        {
+          "line": 3,
+          "text": "import javax.crypto.spec.IvParameterSpec;"
+        },
+        {
+          "line": 7,
+          "text": "public final class a extends IvParameterSpec {"
+        }
+      ]
+    },
+    {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/ia/B.java",
+      "sha256": "94cbc989ae07fc418a55292d735184bc1380f288f7b9f5a026aa561133ae7b46",
+      "hits": [
+        {
+          "line": 8,
+          "text": "import javax.crypto.spec.SecretKeySpec;"
+        },
+        {
+          "line": 33,
+          "text": "return cipherA.wrap(new SecretKeySpec(bArr, 0, i10, \"TLS\"));"
+        },
+        {
+          "line": 37,
+          "text": "return cipherA.doFinal(bArr, 0, i10);"
+        }
+      ]
+    },
+    {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/ia/W.java",
+      "sha256": "9b4087ffe48aa29d8f253ab56f3652cd735d5a8cb6f49dd59977efa23869989f",
+      "hits": [
+        {
+          "line": 12,
+          "text": "import javax.crypto.spec.SecretKeySpec;"
+        },
+        {
+          "line": 88,
+          "text": "macB.init(new SecretKeySpec(bArr, 0, bArr.length, strE));"
+        },
+        {
+          "line": 90,
+          "text": "bArrDoFinal = macB.doFinal();"
+        },
+        {
+          "line": 117,
+          "text": "macB.init(new SecretKeySpec(bArr3, 0, bArr3.length, strE));"
+        },
+        {
+          "line": 126,
+          "text": "macB.doFinal(bArr5, 0);"
+        },
+        {
+          "line": 151,
+          "text": "macB.init(new SecretKeySpec(bArr, i10, i11, strN));"
+        },
+        {
+          "line": 159,
+          "text": "macB.doFinal(bArr4, 0);"
+        },
+        {
+          "line": 162,
+          "text": "macB.doFinal(bArr5, 0);"
+        }
+      ]
+    },
+    {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/ia/N.java",
+      "sha256": "c6de4516a225bc11a0bd79402018d0459bcb1df05ad7dc4ca26a94b709c9e4cf",
+      "hits": [
+        {
+          "line": 7,
+          "text": "import javax.crypto.spec.IvParameterSpec;"
+        },
+        {
+          "line": 8,
+          "text": "import javax.crypto.spec.SecretKeySpec;"
+        },
+        {
+          "line": 23,
+          "text": "public SecretKeySpec f23578d;"
+        },
+        {
+          "line": 39,
+          "text": "cipher.init(z10 ? 1 : 2, this.f23578d, new IvParameterSpec(this.f23579e), (SecureRandom) null);"
+        },
+        {
+          "line": 52,
+          "text": "int iDoFinal = iUpdate2 + cipher.doFinal(bArr2, i12 + iUpdate2);"
+        },
+        {
+          "line": 65,
+          "text": "this.f23578d = new SecretKeySpec(bArr, i10, i11, this.f23576b);"
+        }
+      ]
+    },
+    {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/ia/O.java",
+      "sha256": "cef8af6d894da8fe0c6294617d0b48581964773df7effc4d370db71c898c3571",
+      "hits": [
+        {
+          "line": 9,
+          "text": "import javax.crypto.spec.IvParameterSpec;"
+        },
+        {
+          "line": 10,
+          "text": "import javax.crypto.spec.SecretKeySpec;"
+        },
+        {
+          "line": 28,
+          "text": "public SecretKeySpec f23584d;"
+        },
+        {
+          "line": 48,
+          "text": "if (i14 != this.f23581a.doFinal(bArr3, 0, i14, bArr3, 0)) {"
+        },
+        {
+          "line": 52,
+          "text": "mac.init(new SecretKeySpec(bArr3, 0, 32, \"Poly1305\"));"
+        },
+        {
+          "line": 63,
+          "text": "mac.doFinal(bArr2, i12 + i11);"
+        },
+        {
+          "line": 70,
+          "text": "if (i17 != this.f23581a.doFinal(bArr6, 0, i17, bArr6, 0)) {"
+        },
+        {
+          "line": 73,
+          "text": "mac.init(new SecretKeySpec(bArr6, 0, 32, \"Poly1305\"));"
+        },
+        {
+          "line": 84,
+          "text": "mac.doFinal(bArr8, 0);"
+        },
+        {
+          "line": 97,
+          "text": "this.f23584d = new SecretKeySpec(bArr, i10, i11, \"ChaCha7539\");"
+        },
+        {
+          "line": 111,
+          "text": "this.f23581a.init(this.f23583c, this.f23584d, new IvParameterSpec(bArr), (SecureRandom) null);"
+        }
+      ]
+    },
+    {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/ia/V.java",
+      "sha256": "e75f9d7fb39997d48dd5df34e30faec58c2c97bf8e8741b092a84df19ced904c",
+      "hits": [
+        {
+          "line": 7,
+          "text": "import javax.crypto.spec.SecretKeySpec;"
+        },
+        {
+          "line": 51,
+          "text": "this.f23602a.init(new SecretKeySpec(bArr, i10, i11, this.f23603b));"
+        },
+        {
+          "line": 64,
+          "text": "return this.f23602a.doFinal();"
+        }
+      ]
+    },
+    {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/ia/L.java",
+      "sha256": "16913cec97b391346886819705f36cc0179851853a82e6f7b061e0de558063e1",
+      "hits": [
+        {
+          "line": 10,
+          "text": "import javax.crypto.spec.SecretKeySpec;"
+        },
+        {
+          "line": 37,
+          "text": "public SecretKeySpec f23569g;"
+        },
+        {
+          "line": 60,
+          "text": "return this.f23565c.doFinal(bArr, i10, i11, bArr2, i12);"
+        },
+        {
+          "line": 71,
+          "text": "this.f23569g = new SecretKeySpec(bArr, i10, i11, this.f23566d);"
+        }
+      ]
+    },
+    {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/ia/M.java",
+      "sha256": "e65d8fd33913c36db48ca5e6d651036ab89958de21504cc52eb81a63b386466d",
+      "hits": [
+        {
+          "line": 6,
+          "text": "import javax.crypto.spec.IvParameterSpec;"
+        },
+        {
+          "line": 7,
+          "text": "import javax.crypto.spec.SecretKeySpec;"
+        },
+        {
+          "line": 25,
+          "text": "public SecretKeySpec f23574e;"
+        },
+        {
+          "line": 47,
+          "text": "return iUpdate2 + this.f23571b.doFinal(bArr2, i12 + iUpdate2);"
+        },
+        {
+          "line": 55,
+          "text": "this.f23574e = new SecretKeySpec(bArr, i10, i11, this.f23572c);"
+        },
+        {
+          "line": 66,
+          "text": "this.f23571b.init(this.f23570a, this.f23574e, new IvParameterSpec(bArr, i10, i11), (SecureRandom) null);"
+        }
+      ]
+    },
+    {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/p252w9/c.java",
+      "sha256": "9c8fda3db0a1ce32a2f49013e8e063c0eae7c1b4ac3dcb95c415688281c61565",
+      "hits": [
+        {
+          "line": 41,
+          "text": "return Cipher.getInstance(str, this.f29087a);"
+        }
+      ]
+    },
+    {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/p252w9/a.java",
+      "sha256": "c71e79bb8182e4708d8caea33e47b15fa3a9439f783af54e6a6f456ef29ef879",
+      "hits": [
+        {
+          "line": 32,
+          "text": "return Cipher.getInstance(str);"
+        }
+      ]
+    },
+    {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/ea/k1.java",
+      "sha256": "965f4e8b9482f8561a8e2dafde8bd3f2a027edab5521aa20652e1ff48c32e63c",
+      "hits": [
+        {
+          "line": 92,
+          "text": "byte[] bArrDoFinal = cipherA.doFinal(bArrJ0);"
+        }
+      ]
+    },
+    {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/com/google/api/client/auth/oauth/OAuthHmacSigner.java",
+      "sha256": "c0cfe131a940094e2d8773d22c53014d7ef14dc2cbb23e2605261cb286caed00",
+      "hits": [
+        {
+          "line": 9,
+          "text": "import javax.crypto.spec.SecretKeySpec;"
+        },
+        {
+          "line": 29,
+          "text": "SecretKeySpec secretKeySpec = new SecretKeySpec(StringUtils.getBytesUtf8(sb.toString()), \"HmacSHA1\");"
+        },
+        {
+          "line": 32,
+          "text": "return Base64.encodeBase64String(mac.doFinal(StringUtils.getBytesUtf8(str)));"
+        }
+      ]
+    },
+    {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/com/google/api/client/auth/oauth/OAuthHmacSha256Signer.java",
+      "sha256": "0cb5e5b8ff2b242a503877a718d5acdb874a98f490c6351d99e73ae379c6ba43",
+      "hits": [
+        {
+          "line": 7,
+          "text": "import javax.crypto.spec.SecretKeySpec;"
+        },
+        {
+          "line": 31,
+          "text": "SecretKeySpec secretKeySpec = new SecretKeySpec(StringUtils.getBytesUtf8(sb.toString()), \"HmacSHA256\");"
+        },
+        {
+          "line": 34,
+          "text": "return h.f29067a.c(mac.doFinal(StringUtils.getBytesUtf8(str)));"
+        }
+      ]
+    }
+  ],
+  "panasonic_namespace_hit_files": [],
+  "limit": "Java decompiler outputs only; native code and incomplete methods are not excluded."
+}

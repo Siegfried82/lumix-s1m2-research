@@ -1,0 +1,20 @@
+{
+  "channels": 107811,
+  "source_sha256": "bfe3997adc54a16c9e2b973d16f6157a9c9f12e310e8347d2fac5da2c1b1702c",
+  "readback_sha256": "a276f860515fa0c76f20613fc315988bbe63a74d04a7debe786cd8f21ae4b5ae",
+  "models": {
+    "half_up": {
+      "requantized_mismatches": 0,
+      "max_export_decimal_error": "9.89776455329213397421E-8"
+    },
+    "half_even": {
+      "requantized_mismatches": 0,
+      "max_export_decimal_error": "9.89776455329213397421E-8"
+    },
+    "floor": {
+      "requantized_mismatches": 52272,
+      "max_export_decimal_error": "0.0000152516441596093690394446"
+    }
+  },
+  "midpoint_readback": "0.5000076"
+}

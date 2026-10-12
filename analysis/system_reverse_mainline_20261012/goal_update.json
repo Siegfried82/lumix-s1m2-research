@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-12",
+  "source": "direct user instruction",
+  "primary_objective": "完整逆向 Panasonic LUMIX S1M2 固件",
+  "paused_alternative_goals": [
+    "功能新增与解锁",
+    "LUT、快门声音、录像参数的独立功能支线",
+    "将沙箱运行或虚拟RAM导出作为固件逆向的交付终点"
+  ],
+  "operations": [
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "fd38ac3f4467636af40ccc727c283a78a0200117331972b6b4ecbaa69cde316b",
+      "backup": "<LOCAL_BACKUP>/完整固件逆向目标更新-20261012-213521/AGENTS.md",
+      "backup_present_at_verification": false,
+      "after_sha256": "dd8f16d57387b44b5da0eba0e4df9d2aa2ba65085eaea77ef880c2f13fa46f32"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "0aad805bb5d59f5247392ca1391c1b43721687356973f9f8e2840159eef96314",
+      "backup": "<LOCAL_BACKUP>/完整固件逆向目标更新-20261012-213521/README.md",
+      "backup_present_at_verification": false,
+      "after_sha256": "c194aa436153d2a2f778e2e56b1da6ff6cee2cba679daaff8e7e69678be5d1b5"
+    },
+    {
+      "path": "S1M2研究当前状态.md",
+      "before_sha256": "a1ed530b7d5e601f1a7d01af54239ea2b1dd8ce0a97f2ece1bde5b16db18d3f9",
+      "backup": "<LOCAL_BACKUP>/完整固件逆向目标更新-20261012-213521/S1M2研究当前状态.md",
+      "backup_present_at_verification": false,
+      "after_sha256": "5900802cc889ed91ce430538357b3a0674aeca5a9140df45d78c24e4d6a4b8d7"
+    },
+    {
+      "path": "S1M2固件研究需求与交接.md",
+      "before_sha256": "cdf609d438ec731ef9deaf7164246668e0bb648f8cb3bfd9481b90dd3d31e93f",
+      "backup": "<LOCAL_BACKUP>/完整固件逆向目标更新-20261012-213521/S1M2固件研究需求与交接.md",
+      "backup_present_at_verification": false,
+      "after_sha256": "dd0b6e39dc93dae17d8d3e5317e387756d2e9e13421881b85a0340fffb0b42fb"
+    },
+    {
+      "path": "analysis/system_reverse_mainline_20261012/主线重设.md",
+      "before_sha256": "8a40279928244f46a6b51a2821d53eecdbd42e13f43d44a7766a14212801afcb",
+      "backup": "<LOCAL_BACKUP>/完整固件逆向目标更新-20261012-213521/analysis/system_reverse_mainline_20261012/主线重设.md",
+      "backup_present_at_verification": false,
+      "after_sha256": "f1aba480730c506c4fcb6956fada8d49da6271ee48f895e5b4fa54f7cd4578fb"
+    },
+    {
+      "path": "研究推进_20261011_Ultra.md",
+      "before_sha256": "aece16785271c0fa89c42dd093cf61381aa47e841edd30355cd4befdeb30c57a",
+      "backup": "<LOCAL_BACKUP>/完整固件逆向目标更新-20261012-213521/研究推进_20261011_Ultra.md",
+      "backup_present_at_verification": false,
+      "after_sha256": "bdfbfbbc2fa2a97b2c1de37c8ee3e1afb5e15540a944ae53f20ce427961e63df"
+    },
+    {
+      "path": "s1m2_firmware_project/README.md",
+      "before_sha256": "e607f49d0fc3bdbdecec13fb073e1bcf880d6b12b688f2e879c985036b46608d",
+      "backup": "<LOCAL_BACKUP>/完整固件逆向目标更新-20261012-213521/s1m2_firmware_project/README.md",
+      "backup_present_at_verification": false,
+      "after_sha256": "11750e6929a63ca51e0225133fb88b54faff9050f40a4e4931ec5880282862c6"
+    }
+  ],
+  "historical_requirements": "docs/history/原功能需求_20261012归档.md",
+  "backup_status_note": "工作区外备份创建时已逐项核验；收尾时文件不在原位置，原因未知。旧功能需求正文另存工作区内历史归档。",
+  "verification": {
+    "all_7_current_entries_state_full_firmware_reverse_goal": true,
+    "old_function_goal_removed_from_current_handoff": true,
+    "historical_requirements_retained": true,
+    "modified_document_file_links_valid": true,
+    "scope": "Goal documents only; no firmware, device, runtime or code changes"
+  }
+}

@@ -1,0 +1,709 @@
+{
+  "mt_all_output_phases": {
+    "independent_oracle": "Python standard-library random.Random.getrandbits(32)",
+    "phases_checked": 625,
+    "all_passed": true,
+    "negative_capture_and_future_corruption_rejected": true
+  },
+  "cbc_controls": {
+    "unknown_iv_positive_passed": true,
+    "ciphertext_mutation_rejected": true
+  },
+  "ctr_controls": [
+    {
+      "layout": {
+        "offset": 0,
+        "size": 16,
+        "endian": "big"
+      },
+      "existing_full128_results": {
+        "big": true,
+        "little": false
+      }
+    },
+    {
+      "layout": {
+        "offset": 0,
+        "size": 16,
+        "endian": "little"
+      },
+      "existing_full128_results": {
+        "big": false,
+        "little": true
+      }
+    },
+    {
+      "layout": {
+        "offset": 12,
+        "size": 4,
+        "endian": "little"
+      },
+      "existing_full128_results": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "layout": {
+        "offset": 0,
+        "size": 4,
+        "endian": "big"
+      },
+      "existing_full128_results": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "layout": {
+        "offset": 8,
+        "size": 8,
+        "endian": "little"
+      },
+      "existing_full128_results": {
+        "big": false,
+        "little": false
+      }
+    }
+  ],
+  "parser_comparison": [
+    {
+      "file": "GH3__V12.bin",
+      "entries": 6,
+      "both_parsers_agree": true,
+      "input_sha256_reverified": true
+    },
+    {
+      "file": "GH4__V27.bin",
+      "entries": 18,
+      "both_parsers_agree": true,
+      "input_sha256_reverified": true
+    },
+    {
+      "file": "GH5__V28.bin",
+      "entries": 40,
+      "both_parsers_agree": true,
+      "input_sha256_reverified": true
+    },
+    {
+      "file": "S5___V28.bin",
+      "entries": 48,
+      "both_parsers_agree": true,
+      "input_sha256_reverified": true
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "entries": 62,
+      "both_parsers_agree": true,
+      "input_sha256_reverified": true
+    }
+  ],
+  "uniform_sha256_reverified": [
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "name": "apu0_code_e",
+      "offset": 57965056,
+      "size": 65536,
+      "value": 255,
+      "stored_sha256": "71189f7fb6aed638640078fba3a35fda6c39c8962e74dcc75935aac948da9063"
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "name": "ipu_data",
+      "offset": 58030592,
+      "size": 262144,
+      "value": 0,
+      "stored_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "name": "ipu_data",
+      "offset": 75492864,
+      "size": 262144,
+      "value": 0,
+      "stored_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "name": "postboot2_r",
+      "offset": 70785536,
+      "size": 131072,
+      "value": 255,
+      "stored_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260"
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "name": "postboot4_r",
+      "offset": 79174144,
+      "size": 131072,
+      "value": 255,
+      "stored_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260"
+    }
+  ],
+  "five_legacy_key_body_md5_controls_passed": true,
+  "previous_iv_results_reproduced": [
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "key_source": "GF3__V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "key_source": "GF2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "key_source": "G3___V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "key_source": "GX1__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "key_source": "GH2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "key_source": "GF3__V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "key_source": "GF2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "key_source": "G3___V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "key_source": "GX1__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "key_source": "GH2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "key_source": "GF3__V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "key_source": "GF2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "key_source": "G3___V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "key_source": "GX1__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "key_source": "GH2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "key_source": "GF3__V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "key_source": "GF2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "key_source": "G3___V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "key_source": "GX1__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "key_source": "GH2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "key_source": "GF3__V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "key_source": "GF2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "key_source": "G3___V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "key_source": "GX1__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "key_source": "GH2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      },
+      "wider_ctr_layouts_matching": []
+    }
+  ],
+  "previous_mt_results_reproduced": [
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "skip": 0,
+      "matches": 0
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "skip": 512,
+      "matches": 0
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "skip": 0,
+      "matches": 0
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "skip": 512,
+      "matches": 0
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "skip": 0,
+      "matches": 0
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "skip": 512,
+      "matches": 0
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "skip": 0,
+      "matches": 0
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "skip": 512,
+      "matches": 0
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "skip": 0,
+      "matches": 0
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "skip": 512,
+      "matches": 0
+    }
+  ],
+  "tz10_prefix_and_saved_full_md5_passed": true,
+  "all_30_method2_prefix_results_reproduced": [
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "seed_source": "verified_TZ10_fixed_seed",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "seed_source": "verified_TZ10_fixed_seed",
+      "skip": 512,
+      "matches": false
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "seed_source": "TZ10_rule_whole_file",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "seed_source": "TZ10_rule_whole_file",
+      "skip": 512,
+      "matches": false
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "seed_source": "TZ10_rule_component",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "seed_source": "TZ10_rule_component",
+      "skip": 512,
+      "matches": false
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "seed_source": "verified_TZ10_fixed_seed",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "seed_source": "verified_TZ10_fixed_seed",
+      "skip": 512,
+      "matches": false
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "seed_source": "TZ10_rule_whole_file",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "seed_source": "TZ10_rule_whole_file",
+      "skip": 512,
+      "matches": false
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "seed_source": "TZ10_rule_component",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "seed_source": "TZ10_rule_component",
+      "skip": 512,
+      "matches": false
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "seed_source": "verified_TZ10_fixed_seed",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "seed_source": "verified_TZ10_fixed_seed",
+      "skip": 512,
+      "matches": false
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "seed_source": "TZ10_rule_whole_file",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "seed_source": "TZ10_rule_whole_file",
+      "skip": 512,
+      "matches": false
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "seed_source": "TZ10_rule_component",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "seed_source": "TZ10_rule_component",
+      "skip": 512,
+      "matches": false
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "seed_source": "verified_TZ10_fixed_seed",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "seed_source": "verified_TZ10_fixed_seed",
+      "skip": 512,
+      "matches": false
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "seed_source": "TZ10_rule_whole_file",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "seed_source": "TZ10_rule_whole_file",
+      "skip": 512,
+      "matches": false
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "seed_source": "TZ10_rule_component",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "seed_source": "TZ10_rule_component",
+      "skip": 512,
+      "matches": false
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "seed_source": "verified_TZ10_fixed_seed",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "seed_source": "verified_TZ10_fixed_seed",
+      "skip": 512,
+      "matches": false
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "seed_source": "TZ10_rule_whole_file",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "seed_source": "TZ10_rule_whole_file",
+      "skip": 512,
+      "matches": false
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "seed_source": "TZ10_rule_component",
+      "skip": 0,
+      "matches": false
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "seed_source": "TZ10_rule_component",
+      "skip": 512,
+      "matches": false
+    }
+  ],
+  "legacy_probe_coverage": {
+    "stored_rows": 4500,
+    "expected_rows": 4500,
+    "no_duplicates_or_missing_rows": true,
+    "full_decryptions_not_repeated": true
+  },
+  "semantic_limit": "Directory SHA256 equality is exact, but its consumer and hashed object are still unknown. All plaintext-conditioned exclusions remain conditional.",
+  "counter_scope": "full128 tests omit e.g. 32-bit little-endian counter at byte 12 and big-endian counter at byte 0. Common BE suffix or LE prefix narrow counters agree with full128 until overflow; this audit additionally checked 4/8-byte leading/trailing layouts."
+}

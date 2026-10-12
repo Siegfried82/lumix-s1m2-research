@@ -1,0 +1,115 @@
+
+<LOCAL_WORKSPACE>/analysis/method0_review_20261011/decoded/GF1__122.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+7bc4579c <.data+0x55579c>:
+7bc4579c:	92          	mov	a0,a2
+7bc4579d:	9b          	mov	a2,a3
+7bc4579e:	f1 63       	add	d0,a3
+7bc457a0:	be          	cmp	a3,a2
+7bc457a1:	c6 0b       	bcc	0x7bc457ac
+7bc457a3:	db          	setlb	
+7bc457a4:	f0 41       	movbu	(a1),d0
+7bc457a6:	45          	inc	a1
+7bc457a7:	f0 52       	movbu	d0,(a2)
+7bc457a9:	49          	inc	a2
+7bc457aa:	be          	cmp	a3,a2
+7bc457ab:	d4          	lcs	
+7bc457ac:	de 30 08    	retf	[a2,a3],8
+7bc457af:	92          	mov	a0,a2
+7bc457b0:	9b          	mov	a2,a3
+7bc457b1:	f1 63       	add	d0,a3
+7bc457b3:	b6          	cmp	a1,a2
+7bc457b4:	c6 10       	bcc	0x7bc457c4
+7bc457b6:	be          	cmp	a3,a2
+7bc457b7:	c6 22       	bcc	0x7bc457d9
+7bc457b9:	db          	setlb	
+7bc457ba:	f0 41       	movbu	(a1),d0
+7bc457bc:	45          	inc	a1
+7bc457bd:	f0 52       	movbu	d0,(a2)
+7bc457bf:	49          	inc	a2
+7bc457c0:	be          	cmp	a3,a2
+7bc457c1:	d4          	lcs	
+7bc457c2:	ca 17       	bra	0x7bc457d9
+7bc457c4:	b6          	cmp	a1,a2
+7bc457c5:	c7 14       	bls	0x7bc457d9
+7bc457c7:	f1 61       	add	d0,a1
+7bc457c9:	be          	cmp	a3,a2
+7bc457ca:	c6 0f       	bcc	0x7bc457d9
+7bc457cc:	db          	setlb	
+7bc457cd:	80 01       	mov	1,d0
+7bc457cf:	f1 21       	sub	d0,a1
+7bc457d1:	f1 23       	sub	d0,a3
+7bc457d3:	f0 41       	movbu	(a1),d0
+7bc457d5:	be          	cmp	a3,a2
+7bc457d6:	f0 53       	movbu	d0,(a3)
+7bc457d8:	d4          	lcs	
+7bc457d9:	de 30 08    	retf	[a2,a3],8
+7bc457dc:	f1 e6       	mov	d1,a2
+7bc457de:	91          	mov	a0,a1
+7bc457df:	f1 76       	add	a1,a2
+7bc457e1:	b9          	cmp	a2,a1
+7bc457e2:	c6 08       	bcc	0x7bc457ea
+7bc457e4:	db          	setlb	
+7bc457e5:	f0 51       	movbu	d0,(a1)
+7bc457e7:	45          	inc	a1
+7bc457e8:	b9          	cmp	a2,a1
+7bc457e9:	d4          	lcs	
+7bc457ea:	de 20 04    	retf	[a2],4
+7bc457ed:	f0 40       	movbu	(a0),d0
+7bc457ef:	92          	mov	a0,a2
+7bc457f0:	a0 00       	cmp	0,d0
+7bc457f2:	c8 0a       	beq	0x7bc457fc
+7bc457f4:	db          	setlb	
+7bc457f5:	41          	inc	a0
+7bc457f6:	f0 40       	movbu	(a0),d0
+7bc457f8:	10          	extb	d0
+7bc457f9:	a0 00       	cmp	0,d0
+7bc457fb:	d9          	lne	
+7bc457fc:	f0 41       	movbu	(a1),d0
+7bc457fe:	f0 50       	movbu	d0,(a0)
+7bc45800:	a0 00       	cmp	0,d0
+7bc45802:	c8 0d       	beq	0x7bc4580f
+7bc45804:	db          	setlb	
+7bc45805:	45          	inc	a1
+7bc45806:	f0 41       	movbu	(a1),d0
+7bc45808:	41          	inc	a0
+7bc45809:	f0 50       	movbu	d0,(a0)
+7bc4580b:	10          	extb	d0
+7bc4580c:	a0 00       	cmp	0,d0
+7bc4580e:	d9          	lne	
+7bc4580f:	98          	mov	a2,a0
+7bc45810:	de 20 04    	retf	[a2],4
+7bc45813:	f0 44       	movbu	(a0),d1
+7bc45815:	a5 00       	cmp	0,d1
+7bc45817:	c8 12       	beq	0x7bc45829
+7bc45819:	82          	mov	d0,d2
+7bc4581a:	12          	extb	d2
+7bc4581b:	db          	setlb	
+7bc4581c:	f0 44       	movbu	(a0),d1
+7bc4581e:	11          	extb	d1
+7bc4581f:	a9          	cmp	d2,d1
+7bc45820:	c8 10       	beq	0x7bc45830
+7bc45822:	41          	inc	a0
+7bc45823:	f0 44       	movbu	(a0),d1
+7bc45825:	11          	extb	d1
+7bc45826:	a5 00       	cmp	0,d1
+7bc45828:	d9          	lne	
+7bc45829:	10          	extb	d0
+7bc4582a:	a0 00       	cmp	0,d0
+7bc4582c:	c8 04       	beq	0x7bc45830
+7bc4582e:	90 00       	mov	0,a0
+7bc45830:	de 80 04    	retf	[d2],4
+7bc45833:	f0 44       	movbu	(a0),d1
+7bc45835:	f0 41       	movbu	(a1),d0
+7bc45837:	a1          	cmp	d0,d1
+7bc45838:	c9 11       	bne	0x7bc45849
+7bc4583a:	db          	setlb	
+7bc4583b:	f0 40       	movbu	(a0),d0
+7bc4583d:	a0 00       	cmp	0,d0
+7bc4583f:	c8 0a       	beq	0x7bc45849
+7bc45841:	41          	inc	a0
+7bc45842:	45          	inc	a1
+7bc45843:	f0        	movbu	(a0),d1

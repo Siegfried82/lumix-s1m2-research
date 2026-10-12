@@ -1,0 +1,918 @@
+{
+  "subtask": "09_tether_wireless",
+  "title": "S1M2 Wi-Fi Tether 发现与连接逻辑、端口、机型判断及说明书/兼容表矛盾核查",
+  "input_files_sha256": {
+    "app_binary": {
+      "path": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/MacOS/LUMIX Tether",
+      "size_bytes": 23973680,
+      "sha256": "a20693256aeae33c93722cadb2e0ceaa760a98a48d9ebbfd2f697d3ad6420c3a"
+    },
+    "ptp_dylib": {
+      "path": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/Frameworks/libLmxptpif.dylib",
+      "size_bytes": 6870784,
+      "sha256": "b767e5680676eefdc05d02a4772c4120a45916e246169b79393356499c07ec97"
+    },
+    "app_disasm": {
+      "path": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "size_bytes": 12276137,
+      "sha256": "ccdf024ece6c12440fb79b85174fe1e0c0ddbffa81302867a5e37313b8fd293e"
+    },
+    "ptp_disasm": {
+      "path": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "size_bytes": 17035468,
+      "sha256": "f0beab04bef63508de6492cf263f62199548bda97911ab5852b371474537af1d"
+    },
+    "compat_html": {
+      "path": "analysis/sources/lumixtether_supported_functions.html",
+      "size_bytes": 15320,
+      "sha256": "67ef177cea15156fdcf7e9c0ff34cf08a05638a3a49d113d0e9d5eb43501f72e"
+    },
+    "precheck_result": {
+      "path": "analysis/s1m2_http_precheck_20261012/result.json",
+      "size_bytes": 189,
+      "sha256": "45d12a3b192871096e855dce77213ee369efec28a3dff1582cae34dafca640f0"
+    },
+    "precheck_192_168_2_17": {
+      "path": "analysis/s1m2_http_precheck_20261012/result_192_168_2_17.json",
+      "size_bytes": 208,
+      "sha256": "92885785b4edaa62bf2a8e5ede7fb9269514bcf2b94bb0d2817238b0f8efe06a"
+    },
+    "precheck_retry": {
+      "path": "analysis/s1m2_http_precheck_20261012/retry_result.json",
+      "size_bytes": 208,
+      "sha256": "e821b7ef33f4c89d97413460f9edd89306434e6fc61197d1f3467574cb36a857"
+    },
+    "precheck_latest_retry": {
+      "path": "analysis/s1m2_http_precheck_20261012/latest_retry.json",
+      "size_bytes": 191,
+      "sha256": "6c0e93245cb2031a2986520217af63b1414313bcca791d0176c6e3e532f49d20"
+    },
+    "precheck_dhcp_client_retry": {
+      "path": "analysis/s1m2_http_precheck_20261012/dhcp_client_retry.json",
+      "size_bytes": 191,
+      "sha256": "55e315a8edb0b894766dc60f6b251e1f4dd19d9fb339dce8656f8764832b324a"
+    },
+    "precheck_connected_retry": {
+      "path": "analysis/s1m2_http_precheck_20261012/connected_retry.json",
+      "size_bytes": 191,
+      "sha256": "def5e097fe9cd7db4236235e2d422099f5761cbe891eb95973d9f8a0f1d9ca80"
+    },
+    "precheck_mac_discovery": {
+      "path": "analysis/s1m2_http_precheck_20261012/mac_discovery.json",
+      "size_bytes": 259,
+      "sha256": "94445ee9cea501fc572679f232d1250537b7ceb9fe1cd3624baa080b2a06bd1d"
+    }
+  },
+  "macho_arm64_segments": {
+    "libLmxptpif.dylib": {
+      "fat_slice_offset": 3489792,
+      "fat_slice_size": 3380992,
+      "segments": [
+        {
+          "segname": "__TEXT",
+          "vmaddr": "0x0",
+          "vmsize": 2293760,
+          "fileoff_in_slice": 0,
+          "fileoff_in_file": 3489792,
+          "filesize": 2293760,
+          "sections": [
+            {
+              "sectname": "__text",
+              "addr": "0x2744",
+              "size": 1874700,
+              "offset_in_slice": 10052,
+              "offset_in_file": 3499844
+            },
+            {
+              "sectname": "__stubs",
+              "addr": "0x1cc250",
+              "size": 2964,
+              "offset_in_slice": 1884752,
+              "offset_in_file": 5374544
+            },
+            {
+              "sectname": "__stub_helper",
+              "addr": "0x1ccde4",
+              "size": 2940,
+              "offset_in_slice": 1887716,
+              "offset_in_file": 5377508
+            },
+            {
+              "sectname": "__objc_stubs",
+              "addr": "0x1cd960",
+              "size": 3968,
+              "offset_in_slice": 1890656,
+              "offset_in_file": 5380448
+            },
+            {
+              "sectname": "__objc_methlist",
+              "addr": "0x1ce8e0",
+              "size": 2128,
+              "offset_in_slice": 1894624,
+              "offset_in_file": 5384416
+            },
+            {
+              "sectname": "__gcc_except_tab",
+              "addr": "0x1cf130",
+              "size": 4620,
+              "offset_in_slice": 1896752,
+              "offset_in_file": 5386544
+            },
+            {
+              "sectname": "__const",
+              "addr": "0x1d0340",
+              "size": 182792,
+              "offset_in_slice": 1901376,
+              "offset_in_file": 5391168
+            },
+            {
+              "sectname": "__cstring",
+              "addr": "0x1fcd48",
+              "size": 181774,
+              "offset_in_slice": 2084168,
+              "offset_in_file": 5573960
+            },
+            {
+              "sectname": "__objc_methname",
+              "addr": "0x229356",
+              "size": 5240,
+              "offset_in_slice": 2265942,
+              "offset_in_file": 5755734
+            },
+            {
+              "sectname": "__objc_classname",
+              "addr": "0x22a7ce",
+              "size": 272,
+              "offset_in_slice": 2271182,
+              "offset_in_file": 5760974
+            },
+            {
+              "sectname": "__objc_methtype",
+              "addr": "0x22a8de",
+              "size": 1567,
+              "offset_in_slice": 2271454,
+              "offset_in_file": 5761246
+            },
+            {
+              "sectname": "__ustring",
+              "addr": "0x22aefe",
+              "size": 40,
+              "offset_in_slice": 2273022,
+              "offset_in_file": 5762814
+            },
+            {
+              "sectname": "__unwind_info",
+              "addr": "0x22af28",
+              "size": 19732,
+              "offset_in_slice": 2273064,
+              "offset_in_file": 5762856
+            },
+            {
+              "sectname": "__eh_frame",
+              "addr": "0x22fc40",
+              "size": 932,
+              "offset_in_slice": 2292800,
+              "offset_in_file": 5782592
+            }
+          ]
+        },
+        {
+          "segname": "__DATA_CONST",
+          "vmaddr": "0x230000",
+          "vmsize": 212992,
+          "fileoff_in_slice": 2293760,
+          "fileoff_in_file": 5783552,
+          "filesize": 212992,
+          "sections": [
+            {
+              "sectname": "__got",
+              "addr": "0x230000",
+              "size": 240,
+              "offset_in_slice": 2293760,
+              "offset_in_file": 5783552
+            },
+            {
+              "sectname": "__mod_init_func",
+              "addr": "0x2300f0",
+              "size": 24,
+              "offset_in_slice": 2294000,
+              "offset_in_file": 5783792
+            },
+            {
+              "sectname": "__const",
+              "addr": "0x230108",
+              "size": 194488,
+              "offset_in_slice": 2294024,
+              "offset_in_file": 5783816
+            },
+            {
+              "sectname": "__cfstring",
+              "addr": "0x25f8c0",
+              "size": 2688,
+              "offset_in_slice": 2488512,
+              "offset_in_file": 5978304
+            },
+            {
+              "sectname": "__objc_classlist",
+              "addr": "0x260340",
+              "size": 88,
+              "offset_in_slice": 2491200,
+              "offset_in_file": 5980992
+            },
+            {
+              "sectname": "__objc_protolist",
+              "addr": "0x260398",
+              "size": 32,
+              "offset_in_slice": 2491288,
+              "offset_in_file": 5981080
+            },
+            {
+              "sectname": "__objc_imageinfo",
+              "addr": "0x2603b8",
+              "size": 8,
+              "offset_in_slice": 2491320,
+              "offset_in_file": 5981112
+            }
+          ]
+        },
+        {
+          "segname": "__DATA",
+          "vmaddr": "0x264000",
+          "vmsize": 2375680,
+          "fileoff_in_slice": 2506752,
+          "fileoff_in_file": 5996544,
+          "filesize": 49152,
+          "sections": [
+            {
+              "sectname": "__la_symbol_ptr",
+              "addr": "0x264000",
+              "size": 1976,
+              "offset_in_slice": 2506752,
+              "offset_in_file": 5996544
+            },
+            {
+              "sectname": "__objc_const",
+              "addr": "0x2647b8",
+              "size": 6472,
+              "offset_in_slice": 2508728,
+              "offset_in_file": 5998520
+            },
+            {
+              "sectname": "__objc_selrefs",
+              "addr": "0x266100",
+              "size": 1384,
+              "offset_in_slice": 2515200,
+              "offset_in_file": 6004992
+            },
+            {
+              "sectname": "__objc_classrefs",
+              "addr": "0x266668",
+              "size": 224,
+              "offset_in_slice": 2516584,
+              "offset_in_file": 6006376
+            },
+            {
+              "sectname": "__objc_superrefs",
+              "addr": "0x266748",
+              "size": 80,
+              "offset_in_slice": 2516808,
+              "offset_in_file": 6006600
+            },
+            {
+              "sectname": "__objc_ivar",
+              "addr": "0x266798",
+              "size": 232,
+              "offset_in_slice": 2516888,
+              "offset_in_file": 6006680
+            },
+            {
+              "sectname": "__objc_data",
+              "addr": "0x266880",
+              "size": 880,
+              "offset_in_slice": 2517120,
+              "offset_in_file": 6006912
+            },
+            {
+              "sectname": "__data",
+              "addr": "0x266bf0",
+              "size": 24968,
+              "offset_in_slice": 2518000,
+              "offset_in_file": 6007792
+            },
+            {
+              "sectname": "__common",
+              "addr": "0x26cd78",
+              "size": 2300632,
+              "offset_in_slice": 0,
+              "offset_in_file": 3489792
+            },
+            {
+              "sectname": "__bss",
+              "addr": "0x49e850",
+              "size": 24164,
+              "offset_in_slice": 0,
+              "offset_in_file": 3489792
+            }
+          ]
+        },
+        {
+          "segname": "__LINKEDIT",
+          "vmaddr": "0x4a8000",
+          "vmsize": 835584,
+          "fileoff_in_slice": 2555904,
+          "fileoff_in_file": 6045696,
+          "filesize": 825088,
+          "sections": []
+        }
+      ]
+    },
+    "LUMIX_Tether": {
+      "fat_slice_offset": 12009472,
+      "fat_slice_size": 11964208,
+      "segments": [
+        {
+          "segname": "__PAGEZERO",
+          "vmaddr": "0x0",
+          "vmsize": 4294967296,
+          "fileoff_in_slice": 0,
+          "fileoff_in_file": 12009472,
+          "filesize": 0,
+          "sections": []
+        },
+        {
+          "segname": "__TEXT",
+          "vmaddr": "0x100000000",
+          "vmsize": 10371072,
+          "fileoff_in_slice": 0,
+          "fileoff_in_file": 12009472,
+          "filesize": 10371072,
+          "sections": [
+            {
+              "sectname": "__text",
+              "addr": "0x100009498",
+              "size": 1201712,
+              "offset_in_slice": 38040,
+              "offset_in_file": 12047512
+            },
+            {
+              "sectname": "__stubs",
+              "addr": "0x10012eac8",
+              "size": 9852,
+              "offset_in_slice": 1239752,
+              "offset_in_file": 13249224
+            },
+            {
+              "sectname": "__stub_helper",
+              "addr": "0x100131144",
+              "size": 9828,
+              "offset_in_slice": 1249604,
+              "offset_in_file": 13259076
+            },
+            {
+              "sectname": "__gcc_except_tab",
+              "addr": "0x1001337a8",
+              "size": 61164,
+              "offset_in_slice": 1259432,
+              "offset_in_file": 13268904
+            },
+            {
+              "sectname": "__cstring",
+              "addr": "0x100142694",
+              "size": 12460,
+              "offset_in_slice": 1320596,
+              "offset_in_file": 13330068
+            },
+            {
+              "sectname": "__const",
+              "addr": "0x100145740",
+              "size": 9011718,
+              "offset_in_slice": 1333056,
+              "offset_in_file": 13342528
+            },
+            {
+              "sectname": "__ustring",
+              "addr": "0x1009dd946",
+              "size": 4766,
+              "offset_in_slice": 10344774,
+              "offset_in_file": 22354246
+            },
+            {
+              "sectname": "__unwind_info",
+              "addr": "0x1009debe4",
+              "size": 21532,
+              "offset_in_slice": 10349540,
+              "offset_in_file": 22359012
+            }
+          ]
+        },
+        {
+          "segname": "__DATA_CONST",
+          "vmaddr": "0x1009e4000",
+          "vmsize": 49152,
+          "fileoff_in_slice": 10371072,
+          "fileoff_in_file": 22380544,
+          "filesize": 49152,
+          "sections": [
+            {
+              "sectname": "__got",
+              "addr": "0x1009e4000",
+              "size": 3736,
+              "offset_in_slice": 10371072,
+              "offset_in_file": 22380544
+            },
+            {
+              "sectname": "__mod_init_func",
+              "addr": "0x1009e4e98",
+              "size": 832,
+              "offset_in_slice": 10374808,
+              "offset_in_file": 22384280
+            },
+            {
+              "sectname": "__const",
+              "addr": "0x1009e51d8",
+              "size": 38056,
+              "offset_in_slice": 10375640,
+              "offset_in_file": 22385112
+            }
+          ]
+        },
+        {
+          "segname": "__DATA",
+          "vmaddr": "0x1009f0000",
+          "vmsize": 10534912,
+          "fileoff_in_slice": 10420224,
+          "fileoff_in_file": 22429696,
+          "filesize": 49152,
+          "sections": [
+            {
+              "sectname": "__la_symbol_ptr",
+              "addr": "0x1009f0000",
+              "size": 6568,
+              "offset_in_slice": 10420224,
+              "offset_in_file": 22429696
+            },
+            {
+              "sectname": "__data",
+              "addr": "0x1009f19a8",
+              "size": 30736,
+              "offset_in_slice": 10426792,
+              "offset_in_file": 22436264
+            },
+            {
+              "sectname": "__bss",
+              "addr": "0x1009f91b8",
+              "size": 10486960,
+              "offset_in_slice": 0,
+              "offset_in_file": 12009472
+            },
+            {
+              "sectname": "__common",
+              "addr": "0x1013f9668",
+              "size": 1508,
+              "offset_in_slice": 0,
+              "offset_in_file": 12009472
+            }
+          ]
+        },
+        {
+          "segname": "__LINKEDIT",
+          "vmaddr": "0x1013fc000",
+          "vmsize": 1507328,
+          "fileoff_in_slice": 10469376,
+          "fileoff_in_file": 22478848,
+          "filesize": 1494832,
+          "sections": []
+        }
+      ]
+    }
+  },
+  "verified_ptp_dylib_strings": {
+    "0x1d0354_default_wstr": "",
+    "0x1fd20b_ignore_loopback": "127.0.0.1 is found, ignore!!",
+    "0x1fd22b_ignore_dot_zero": "*.*.*.0 is found, ignore!!",
+    "0x1fd2a6_msearch_fmt": "%s - M-Search %d\r\n",
+    "0x1fd2e2_direct_ip_fmt": "%s - Direct IP Address\r\n",
+    "0x1fd2fb_direct_ip_addr": "192.168.54.1",
+    "0x1fd342_http_200_ok": "HTTP/1.1 200 OK",
+    "0x1fd352_ssdp_multicast_ip": "239.255.255.250",
+    "0x1fd57d_ignore_modelname": "Ignore ModelName %s , %s\n",
+    "0x1fd5b0_cb_device_found": "M-Search callback:LMX_DEF_LIB_PTPIP_TAG_CBID_DEVICE_FOUND index:%d\n",
+    "0x1fd624_msearch_prefix": "M-SEARCH * ",
+    "0x1fd63b_ssdp_discover": "\"ssdp:discover\"",
+    "0x1fd64b_upnp_mediaserver": "urn:schemas-upnp-org:device:MediaServer:1",
+    "0x1fd675_location_hdr": "LOCATION: ",
+    "0x1fd6a5_xml_deviceType": "deviceType",
+    "0x1fd6b0_xml_friendlyName": "friendlyName",
+    "0x1fd6bd_xml_manufacturer": "manufacturer",
+    "0x1fd6ca_xml_modelNumber": "modelNumber",
+    "0x1fd6d6_xml_serialNumber": "serialNumber",
+    "0x1fd6e3_xml_X_MacAddress": "pana:X_MacAddress",
+    "0x1fd6f5_xml_X_PTPPortNo": "pana:X_PTPPortNo",
+    "0x1fd706_xml_X_AdditionalFunction": "pana:X_AdditionalFunction",
+    "0x1fd720_xml_X_CamCapability": "pana:X_CamCapability",
+    "0x1fd735_default_ptp_port": "15740",
+    "0x1fd73b_ap_client_ip_10": "192.168.54.10",
+    "0x1fd749_ap_client_ip_100": "192.168.54.100",
+    "0x1fd685_http_1_1_crlf": " HTTP/1.1\r\n",
+    "0x1fd691_connection_close": "CONNECTION: Close\r\n",
+    "0x1fd758_create_uuid_fmt": "[DEBUG]:create UUID: %s\n",
+    "0x1fd771_accctrl_req_acc_a": "GET /cam.cgi?mode=accctrl&type=req_acc_a&value=",
+    "0x1fd7a1_accctrl_req_acc_c": "GET /cam.cgi?mode=accctrl&type=req_acc_c&value=",
+    "0x1fd7e3_cgi_user_agent": "USER-AGENT: Apache-HttpClient\r\n",
+    "0x1fd8c0_getstate_cgi": "GET /cam.cgi?mode=getstate HTTP/1.1\r\n",
+    "0x1fda27_startstream_cgi": "GET /cam.cgi?mode=startstream&value=",
+    "0x1fda65_stopstream_cgi": "GET /cam.cgi?mode=stopstream HTTP/1.1\r\n",
+    "0x1fda8d_camcmd_cgi": "GET /cam.cgi?mode=camcmd&value=",
+    "0x1fdaad_getlvsrcport_cgi": "GET /cam.cgi?mode=getlvsrcport HTTP/1.1\r\n",
+    "0x204aef_set_search_cond_fmt": "Enter %s - ConnectDevType:%d, pDeviceName:%s\r\n",
+    "0x204b3e_ddd_path_ptpremote": "/PTPRemote/Server0/ddd",
+    "0x204b55_add_func_ptpremoteview": "PTPRemoteView"
+  },
+  "protocol_and_ports_confirmed": {
+    "ssdp_discovery": {
+      "protocol": "UDP multicast",
+      "multicast_ip": "239.255.255.250",
+      "port": 1900,
+      "port_hex": "0x76c",
+      "request_method": "M-SEARCH * HTTP/1.1",
+      "st_header": "urn:schemas-upnp-org:device:MediaServer:1",
+      "man_header": "\"ssdp:discover\"",
+      "mx_header": "2",
+      "response_requirements": [
+        "HTTP/1.1 200 OK",
+        "urn:schemas-upnp-org:device:MediaServer:1",
+        "LOCATION: http://<ip>:<port>/<path>"
+      ],
+      "functions": [
+        "Lmx_lib_ptpip_Start_Connect_Device (0x5afc)",
+        "Lmx_lib_ptpip_Thread_Connect_Device_proc (0x5d88)",
+        "Lmx_lib_ptpip_Thread_Connect_Device_SendMSearch (0x6074)",
+        "createMSearchMessage (0x701c)",
+        "getDeviceInfoFromMSearch (0x73e8)"
+      ]
+    },
+    "legacy_direct_ip_ap_mode": {
+      "note": "In Lmx_lib_ptpip_Thread_Connect_Device_proc (0x5dd0-0x5dd4), branch 0x5e60 is taken only if thread_param->index < 0. However, Lmx_lib_ptpip_Start_Connect_Device (0x5c30, 0x5c60, 0x5c98) assigns index = 0, 1, 2... for each local interface, so index < 0 is never reached in LUMIX Tether 2.12.",
+      "target_ip": "192.168.54.1",
+      "port": 60606,
+      "port_network_byte_order_hex": "0xbeec",
+      "ddd_path_from_0x49e118": "/PTPRemote/Server0/ddd",
+      "ap_client_ips_checked_for_wlan_flag": [
+        "192.168.54.10",
+        "192.168.54.100"
+      ]
+    },
+    "upnp_ddd_fetch_and_filter": {
+      "protocol": "HTTP GET over TCP",
+      "port": "Parsed from SSDP LOCATION header (typically 60606)",
+      "headers": "HOST: <ip>:<port>, CONNECTION: Close (constructed in createDDDMessage at 0x7974)",
+      "xml_tags_parsed": [
+        "deviceType",
+        "friendlyName",
+        "manufacturer",
+        "modelNumber",
+        "serialNumber",
+        "pana:X_MacAddress",
+        "pana:X_PTPPortNo",
+        "pana:X_AdditionalFunction",
+        "pana:X_CamCapability"
+      ],
+      "default_ptp_port_if_xml_empty": 15740,
+      "tls_capability_bit": "Bit 1 of atoi(pana:X_CamCapability) -> ubfx w8, w0, #1, #1 at 0x8084 -> stored at dev_detail[0x920]",
+      "additional_function_gate": {
+        "instruction_addr": "0x6e4c - 0x6e60",
+        "field_offset": "dev_detail + 0x105c (pana:X_AdditionalFunction)",
+        "expected_value_addr": "0x49e218 (populated from 0x204b55)",
+        "expected_value": "PTPRemoteView",
+        "effect": "If strcmp(X_AdditionalFunction, 'PTPRemoteView') != 0, LMX_DEF_LIB_PTPIP_TAG_CBID_DEVICE_FOUND is NOT called and the camera is ignored."
+      },
+      "model_name_filter": {
+        "instruction_addr": "0x68f8 - 0x6924",
+        "mechanism": "If gModelName (0x49dd18) is non-empty, checks wcsstr(dev_detail.modelNumber, gModelName) and logs 'Ignore ModelName %s , %s'.",
+        "actual_client_behavior": "DeviceSearch::SearchThreadFunc (0x100009df8-0x100009e34) always calls adp_LMX_func_api_SetSearchCondition(0, ''), leaving gModelName empty (L''). Thus client-side model name filtering is a no-op."
+      },
+      "wlan_interface_detection": {
+        "instruction_addr": "IsWLANInterface (0x594c / 0x59b0), called at 0x8194",
+        "mechanism": "Calls getifaddrs() + ioctl(fd, SIOCGIFMEDIA [0xc02c6938]) on local interface IP and checks (ifmr.ifm_active & 0xe0) == 0x80 (IFM_IEEE80211).",
+        "effect": "Stored at dev_detail[0xd4c] -> CameraInfo[0xa0] (0x10002ab64) -> exposed to QML UI via ptpip_camera_is_connect_by_lan_wifi (0x10009f208) for icon display only; does NOT block Wi-Fi connections."
+      }
+    },
+    "tls_certificate_probe": {
+      "condition": "dev_detail[0x920] (use_tls) != 0",
+      "protocol": "TCP + TLS (TcpTlsClient)",
+      "port": 443,
+      "port_hex": "0x1bb",
+      "functions": [
+        "Lmx_lib_ptpip_Thread_Connect_Device_GetDDD (0x69c8 - 0x6af8)",
+        "Lmx_lib_ptpip_UpdateCer (0xc574 - 0xc714)",
+        "DeviceAdapter::ptpipConnectThreadProc (0x100042304 - 0x100042370)",
+        "DeviceAdapter::saveCerFile (0x100042730)"
+      ]
+    },
+    "http_cgi_control_and_keepalive": {
+      "protocol": "HTTP GET on TCP port 80 (when use_tls == 0) OR HTTPS GET on TCP port 443 via TcpTlsClient (when use_tls == 1)",
+      "plain_port": 80,
+      "tls_port": 443,
+      "user_agent": "Apache-HttpClient",
+      "endpoints": {
+        "access_control_a": "/cam.cgi?mode=accctrl&type=req_acc_a&value=<uuid>&value2=<pc_name>&value3=<password>",
+        "access_control_c": "/cam.cgi?mode=accctrl&type=req_acc_c&value=<uuid>&value2=<pc_name>&value3=<password>",
+        "keepalive_state": "/cam.cgi?mode=getstate",
+        "liveview_recmode": "/cam.cgi?mode=camcmd&value=recmode",
+        "liveview_startstream": "/cam.cgi?mode=startstream&value=<client_udp_port>",
+        "liveview_getlvsrcport": "/cam.cgi?mode=getlvsrcport",
+        "liveview_stopstream": "/cam.cgi?mode=stopstream"
+      },
+      "functions": [
+        "createAccCtrlMessage (0x84e4)",
+        "Lmx_lib_ptpip_Thread_Acc_Ctrl_proc (0x8ac8, port 80 at 0x8bfc / port 443 at 0x8c28)",
+        "createGetStateMessage (0x9b50)",
+        "Lmx_lib_ptpip_Thread_Get_State_proc (0x9eb8, port 80 at 0x9f84 / port 443 at 0x9fb0)",
+        "Lmx_lib_ptpip_Cam_Mode_Req (0xabb8, port 80 at 0xac4c / port 443 at 0xac74)",
+        "Lmx_lib_ptpip_Start_Stream_Req (0xad24, port 80 at 0xadb4 / port 443 at 0xaddc)",
+        "Lmx_lib_ptpip_Get_LV_port (0xae84, port 80 at 0xaf40 / port 443 at 0xaf68)"
+      ]
+    },
+    "ptpip_session_and_vendor_opcodes": {
+      "protocol": "PTP/IP over TCP (when use_tls == 0) OR PTP/IP over TLS via TcpTlsClient (when use_tls == 1)",
+      "port": "pana:X_PTPPortNo from DDD XML (default 15740)",
+      "connections": [
+        "Command socket: Lmx_lib_ptpip_Init_Command_Packet_Sub (0x8e30, sends packet type 1 Init_Command_Request)",
+        "Event socket: Lmx_lib_ptpip_Init_Event_Packet_Sub (0x91ac, sends packet type 3 Init_Event_Request)"
+      ],
+      "session_open_sequence": [
+        "Standard PTP OpenSession: opcode 0x1002 (at 0x4b250 in Lmx_lib_ptpif_LmxExt_OpenSession)",
+        "Panasonic vendor OpenSession: opcode 0x9102 with param 0x10001 (at 0x4b280 in Lmx_lib_ptpif_LmxExt_OpenSession)",
+        "SDK capability & value initialization: DeviceSearch::GetSDKCapability (0x10000a580) & GetSDKValue (0x10000aa9c) using 0x9107, 0x9108, 0x9402, 0x940a, 0x9414"
+      ]
+    },
+    "liveview_udp_stream": {
+      "protocol": "UDP (when use_tls == 0) OR DTLS over UDP via UdpDtlsClient (when use_tls == 1)",
+      "client_port": "Ephemeral local UDP port bound by Lmx_lib_ptpip_Init_Socket_Port (0xb144) or UdpDtlsClient::GetBindPort (0xb20c), sent to camera via mode=startstream&value=<port>",
+      "camera_port": "Returned by camera in response to GET /cam.cgi?mode=getlvsrcport (parsed by getSrcPortResult at 0xaf9c); client sends 4-byte UDP hole-punching payload 'test' (0xb54c) to camera_ip:camera_port"
+    }
+  },
+  "binary_model_string_scan": {
+    "libLmxptpif_dylib": {
+      "target": "libLmxptpif.dylib (arm64 slice)",
+      "slice_size_bytes": 3380992,
+      "patterns_tested": [
+        "DC-S1M2",
+        "S1M2",
+        "DC-S1RM2",
+        "S1RM2",
+        "DC-S5M2",
+        "S5M2",
+        "DC-BGH1",
+        "BGH1",
+        "DC-BS1H",
+        "BS1H",
+        "DC-GH6",
+        "GH6",
+        "DC-GH7",
+        "GH7",
+        "DC-G9M2",
+        "G9M2"
+      ],
+      "encodings_tested": [
+        "ascii_null_terminated_string",
+        "utf-16le",
+        "utf-32le"
+      ],
+      "ascii_null_terminated_matches": {
+        "DC-S1M2": [],
+        "S1M2": [],
+        "DC-S1RM2": [],
+        "S1RM2": [],
+        "DC-S5M2": [],
+        "S5M2": [],
+        "DC-BGH1": [],
+        "BGH1": [],
+        "DC-BS1H": [],
+        "BS1H": [],
+        "DC-GH6": [],
+        "GH6": [],
+        "DC-GH7": [],
+        "GH7": [],
+        "DC-G9M2": [],
+        "G9M2": []
+      },
+      "utf16le_matches": {
+        "DC-S1M2": [],
+        "S1M2": [],
+        "DC-S1RM2": [],
+        "S1RM2": [],
+        "DC-S5M2": [],
+        "S5M2": [],
+        "DC-BGH1": [],
+        "BGH1": [],
+        "DC-BS1H": [],
+        "BS1H": [],
+        "DC-GH6": [],
+        "GH6": [],
+        "DC-GH7": [],
+        "GH7": [],
+        "DC-G9M2": [],
+        "G9M2": []
+      },
+      "utf32le_matches": {
+        "DC-S1M2": [],
+        "S1M2": [],
+        "DC-S1RM2": [],
+        "S1RM2": [],
+        "DC-S5M2": [],
+        "S5M2": [],
+        "DC-BGH1": [],
+        "BGH1": [],
+        "DC-BS1H": [],
+        "BS1H": [],
+        "DC-GH6": [],
+        "GH6": [],
+        "DC-GH7": [],
+        "GH7": [],
+        "DC-G9M2": [],
+        "G9M2": []
+      }
+    },
+    "LUMIX_Tether_app": {
+      "target": "LUMIX Tether (arm64 slice)",
+      "slice_size_bytes": 11964208,
+      "patterns_tested": [
+        "DC-S1M2",
+        "S1M2",
+        "DC-S1RM2",
+        "S1RM2",
+        "DC-S5M2",
+        "S5M2",
+        "DC-BGH1",
+        "BGH1",
+        "DC-BS1H",
+        "BS1H",
+        "DC-GH6",
+        "GH6",
+        "DC-GH7",
+        "GH7",
+        "DC-G9M2",
+        "G9M2"
+      ],
+      "encodings_tested": [
+        "ascii_null_terminated_string",
+        "utf-16le",
+        "utf-32le"
+      ],
+      "ascii_null_terminated_matches": {
+        "DC-S1M2": [],
+        "S1M2": [],
+        "DC-S1RM2": [],
+        "S1RM2": [],
+        "DC-S5M2": [],
+        "S5M2": [],
+        "DC-BGH1": [],
+        "BGH1": [],
+        "DC-BS1H": [],
+        "BS1H": [],
+        "DC-GH6": [],
+        "GH6": [],
+        "DC-GH7": [],
+        "GH7": [],
+        "DC-G9M2": [],
+        "G9M2": []
+      },
+      "utf16le_matches": {
+        "DC-S1M2": [],
+        "S1M2": [],
+        "DC-S1RM2": [],
+        "S1RM2": [],
+        "DC-S5M2": [],
+        "S5M2": [],
+        "DC-BGH1": [],
+        "BGH1": [],
+        "DC-BS1H": [],
+        "BS1H": [],
+        "DC-GH6": [],
+        "GH6": [],
+        "DC-GH7": [],
+        "GH7": [],
+        "DC-G9M2": [],
+        "G9M2": []
+      },
+      "utf32le_matches": {
+        "DC-S1M2": [],
+        "S1M2": [],
+        "DC-S1RM2": [],
+        "S1RM2": [],
+        "DC-S5M2": [],
+        "S5M2": [],
+        "DC-BGH1": [],
+        "BGH1": [],
+        "DC-BS1H": [],
+        "BS1H": [],
+        "DC-GH6": [],
+        "GH6": [],
+        "DC-GH7": [],
+        "GH7": [],
+        "DC-G9M2": [],
+        "G9M2": []
+      }
+    }
+  },
+  "official_documentation_evidence": {
+    "compat_html_excerpt_lines_270_287": "270: <tr>\n271: <td style=\"background-color: #f3f3f3\">S5M2X/S1RM2<br>\n272: S1M2/S1M2ES</td>\n273: <td>Ethernet<br>\n274: USB</td>\n275: <td align=\"center\">OK</td>\n276: <td align=\"center\">OK</td>\n277: <td align=\"center\">OK</td>\n278: <td align=\"center\">OK</td>\n279: <td align=\"center\">OK</td>\n280: <td align=\"center\">OK</td>\n281: <td align=\"center\">NG</td>\n282: <td align=\"center\">NG</td>\n283: <td align=\"center\">OK</td>\n284: <td align=\"center\">OK</td>\n285: </tr>\n286: </table>\n287: </div>    ",
+    "urls_verified": [
+      {
+        "url": "https://av.jpn.support.panasonic.com/support/global/cs/soft/download/d_lumixtether.html",
+        "finding": "LUMIX Tether Ver. 2.12 (released Oct. 20, 2025) supported models table lists DC-S1M2 / DC-S1M2ES / DC-S1RM2 / DC-S5M2X with Interface='Ethernet / USB' and 'Tether connect mode'='NG'; only DC-BGH1 and DC-BS1H have Interface='Ethernet/Wi-Fi / USB' and 'Tether connect mode'='OK'."
+      },
+      {
+        "url": "https://av.jpn.support.panasonic.com/support/global/cs/dsc/download/ff/dl/s1m2.html",
+        "finding": "DC-S1M2 Firmware Ver. 1.1 (Jun. 24, 2025) changelog states: '1. Compatibility with Capture One has been improved. - Wi-Fi connection with Capture One and wired LAN connection using a USB Ethernet adapter are now supported.'"
+      },
+      {
+        "url": "https://eww.pavc.panasonic.co.jp/dscoi/DC-S1M2/html/DC-S1M2_DVQP3227_eng/0191.html",
+        "finding": "Firmware Ver. 1.1 changed menu [Setup] -> [IN/OUT] -> [USB] -> [USB ethernet adaptor] from [ON]/[OFF] to three distinct options: [LUMIX Tether] / [Tether] / [OFF]."
+      },
+      {
+        "url": "https://eww.pavc.panasonic.co.jp/dscoi/DC-S1M2/html/DC-S1M2_DVQP3227_eng/0187.html",
+        "finding": "Section #00003 ('Changes to the Procedure for Using LUMIX Tether with Wired LAN') requires selecting [USB ethernet adaptor] -> [LUMIX Tether]. Section #00002 ('Using Tethering Software with a Wi-Fi Connection') refers to generic third-party tethering software (Capture One) and uses [LAN / Wi-Fi] -> [Wi-Fi Function] -> [New Connection] -> [Tether]."
+      }
+    ]
+  },
+  "precheck_20261012_review": [
+    {
+      "file": "analysis/s1m2_http_precheck_20261012/result.json",
+      "sha256": "45d12a3b192871096e855dce77213ee369efec28a3dff1582cae34dafca640f0",
+      "content": {
+        "time_utc": "2026-10-11T22:22:29.165206+00:00",
+        "target": "192.168.0.2",
+        "request": "GET /cam.cgi?mode=getstate",
+        "handshake_sent": false,
+        "error": "<urlopen error timed out>"
+      }
+    },
+    {
+      "file": "analysis/s1m2_http_precheck_20261012/result_192_168_2_17.json",
+      "sha256": "92885785b4edaa62bf2a8e5ede7fb9269514bcf2b94bb0d2817238b0f8efe06a",
+      "content": {
+        "time_utc": "2026-10-11T22:24:00.897423+00:00",
+        "target": "192.168.2.17",
+        "request": "GET /cam.cgi?mode=getstate",
+        "handshake_sent": false,
+        "error": "<urlopen error [Errno 65] No route to host>"
+      }
+    },
+    {
+      "file": "analysis/s1m2_http_precheck_20261012/retry_result.json",
+      "sha256": "e821b7ef33f4c89d97413460f9edd89306434e6fc61197d1f3467574cb36a857",
+      "content": {
+        "time_utc": "2026-10-11T22:24:53.261658+00:00",
+        "target": "192.168.2.17",
+        "request": "GET /cam.cgi?mode=getstate",
+        "handshake_sent": false,
+        "error": "<urlopen error [Errno 65] No route to host>"
+      }
+    },
+    {
+      "file": "analysis/s1m2_http_precheck_20261012/latest_retry.json",
+      "sha256": "6c0e93245cb2031a2986520217af63b1414313bcca791d0176c6e3e532f49d20",
+      "content": {
+        "time_utc": "2026-10-11T22:26:10.657084+00:00",
+        "url": "http://192.168.2.17/cam.cgi?mode=getstate",
+        "handshake_sent": false,
+        "error": "<urlopen error [Errno 65] No route to host>"
+      }
+    },
+    {
+      "file": "analysis/s1m2_http_precheck_20261012/dhcp_client_retry.json",
+      "sha256": "55e315a8edb0b894766dc60f6b251e1f4dd19d9fb339dce8656f8764832b324a",
+      "content": {
+        "time_utc": "2026-10-11T22:29:24.260266+00:00",
+        "url": "http://192.168.2.17/cam.cgi?mode=getstate",
+        "handshake_sent": false,
+        "error": "<urlopen error [Errno 65] No route to host>"
+      }
+    },
+    {
+      "file": "analysis/s1m2_http_precheck_20261012/connected_retry.json",
+      "sha256": "def5e097fe9cd7db4236235e2d422099f5761cbe891eb95973d9f8a0f1d9ca80",
+      "content": {
+        "time_utc": "2026-10-11T22:34:48.185850+00:00",
+        "url": "http://192.168.2.17/cam.cgi?mode=getstate",
+        "handshake_sent": false,
+        "error": "<urlopen error [Errno 65] No route to host>"
+      }
+    },
+    {
+      "file": "analysis/s1m2_http_precheck_20261012/mac_discovery.json",
+      "sha256": "94445ee9cea501fc572679f232d1250537b7ceb9fe1cd3624baa080b2a06bd1d",
+      "content": {
+        "time_utc": "2026-10-11T22:37:41.435090+00:00",
+        "network": "192.168.2.0/24",
+        "matches": [
+          "? (192.168.2.17) at c:80:2f:b7:2d:24 on en0 ifscope [ethernet]"
+        ],
+        "method": "one ICMP echo per host then local ARP lookup",
+        "handshake_sent": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "positive_controls": "AES CBC and both full128 CTR counter orders passed; all five real key-source body MD5 controls passed",
+  "sample_bytes": 128,
+  "assumptions": "directory digest represents whole uniform plaintext; encryption starts at component origin; no additional transform or KDF; full 128-bit increment counter model",
+  "rows": [
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "name": "apu0_code_e",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF3__V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "name": "apu0_code_e",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "name": "apu0_code_e",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "G3___V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "name": "apu0_code_e",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GX1__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "name": "apu0_code_e",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GH2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "name": "ipu_data",
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GF3__V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "name": "ipu_data",
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GF2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "name": "ipu_data",
+      "hypothesized_uniform_byte": 0,
+      "key_source": "G3___V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "name": "ipu_data",
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GX1__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "name": "ipu_data",
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GH2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "name": "ipu_data",
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GF3__V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "name": "ipu_data",
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GF2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "name": "ipu_data",
+      "hypothesized_uniform_byte": 0,
+      "key_source": "G3___V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "name": "ipu_data",
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GX1__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "name": "ipu_data",
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GH2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "name": "postboot2_r",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF3__V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "name": "postboot2_r",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "name": "postboot2_r",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "G3___V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "name": "postboot2_r",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GX1__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "name": "postboot2_r",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GH2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "name": "postboot4_r",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF3__V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "name": "postboot4_r",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "name": "postboot4_r",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "G3___V12.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "name": "postboot4_r",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GX1__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "name": "postboot4_r",
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GH2__V11.bin",
+      "cbc_all_interior_blocks_match": false,
+      "ctr_full128_counter_increment_matches": {
+        "big": false,
+        "little": false
+      }
+    }
+  ]
+}

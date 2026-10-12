@@ -1,0 +1,1932 @@
+# pydisasm version 6.3.0
+# CPython Python bytecode 3.10 (3439)
+#   Disassembled from CPython Python 3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]
+# Timestamp in code: 0 (1970-01-01 03:00:00)
+# Method Name:       <module>
+# Filename:          v15_2\alignment.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        4
+# Flags:             0x00000040 (NOFREE)
+# First Line:        1
+# Constants:
+#    0: 'CFA proxy, observed H, and exactly tiled SPyNet level convolutions.'
+#    1: 0
+#    2: None
+#    3: 1
+#    4: ('Ops', 'bilinear')
+#    5: ('Physical',)
+#    6: <Code310 code object Proxy at 0x1069ff0b0, file v15_2\alignment.py>, line 7
+#    7: 'Proxy'
+#    8: <Code310 code object SPyNet at 0x1069ff710, file v15_2\alignment.py>, line 48
+#    9: 'SPyNet'
+# Names:
+#    0: __doc__
+#    1: math
+#    2: numpy
+#    3: np
+#    4: ops
+#    5: Ops
+#    6: bilinear
+#    7: physical
+#    8: Physical
+#    9: Proxy
+#   10: SPyNet
+
+  1:           0 LOAD_CONST           ("CFA proxy, observed H, and exactly tiled SPyNet level convolutions.")
+               2 STORE_NAME           (__doc__)
+
+  2:           4 LOAD_CONST           (0)
+               6 LOAD_CONST           (None)
+               8 IMPORT_NAME          (math)
+              10 STORE_NAME           (math)
+
+  3:          12 LOAD_CONST           (0)
+              14 LOAD_CONST           (None)
+              16 IMPORT_NAME          (numpy)
+              18 STORE_NAME           (np)
+
+  4:          20 LOAD_CONST           (1)
+              22 LOAD_CONST           (('Ops', 'bilinear'))
+              24 IMPORT_NAME          (ops)
+              26 IMPORT_FROM          (Ops)
+              28 STORE_NAME           (Ops)
+              30 IMPORT_FROM          (bilinear)
+              32 STORE_NAME           (bilinear)
+              34 POP_TOP
+
+  5:          36 LOAD_CONST           (1)
+              38 LOAD_CONST           (('Physical',))
+              40 IMPORT_NAME          (physical)
+              42 IMPORT_FROM          (Physical)
+              44 STORE_NAME           (Physical)
+              46 POP_TOP
+
+  7:          48 LOAD_BUILD_CLASS
+              50 LOAD_CONST           (<Code310 code object Proxy at 0x1069ff0b0, file v15_2\alignment.py>, line 7)
+              52 LOAD_CONST           ("Proxy")
+              54 MAKE_FUNCTION        (No arguments)
+              56 LOAD_CONST           ("Proxy")
+              58 LOAD_NAME            (Ops)
+              60 CALL_FUNCTION        (3 positional arguments)
+              62 STORE_NAME           (Proxy)
+
+ 48:          64 LOAD_BUILD_CLASS
+              66 LOAD_CONST           (<Code310 code object SPyNet at 0x1069ff710, file v15_2\alignment.py>, line 48)
+              68 LOAD_CONST           ("SPyNet")
+              70 MAKE_FUNCTION        (No arguments)
+              72 LOAD_CONST           ("SPyNet")
+              74 LOAD_NAME            (Ops)
+              76 CALL_FUNCTION        (3 positional arguments)
+              78 STORE_NAME           (SPyNet)
+              80 LOAD_CONST           (None)
+              82 RETURN_VALUE
+
+
+# Method Name:       Proxy
+# Filename:          v15_2\alignment.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        3
+# Flags:             0x00000040 (NOFREE)
+# First Line:        7
+# Constants:
+#    0: 'Proxy'
+#    1: None
+#    2: (0.0, 0.0)
+#    3: 1
+#    4: <Code310 code object components at 0x106ae6480, file v15_2\alignment.py>, line 8
+#    5: 'Proxy.components'
+#    6: <Code310 code object normalize at 0x106ae57f0, file v15_2\alignment.py>, line 31
+#    7: 'Proxy.normalize'
+#    8: <Code310 code object homography_warp at 0x1069fc800, file v15_2\alignment.py>, line 41
+#    9: 'Proxy.homography_warp'
+#   10: (None, (0.0, 0.0), 1)
+# Names:
+#    0: __name__
+#    1: __module__
+#    2: __qualname__
+#    3: components
+#    4: normalize
+#    5: homography_warp
+
+  7:           0 LOAD_NAME            (__name__)
+               2 STORE_NAME           (__module__)
+               4 LOAD_CONST           ("Proxy")
+               6 STORE_NAME           (__qualname__)
+
+  8:           8 LOAD_CONST           ((None, (0.0, 0.0), 1))
+              10 LOAD_CONST           (<Code310 code object components at 0x106ae6480, file v15_2\alignment.py>, line 8)
+              12 LOAD_CONST           ("Proxy.components")
+              14 MAKE_FUNCTION        (default)
+              16 STORE_NAME           (components)
+
+ 31:          18 LOAD_CONST           (<Code310 code object normalize at 0x106ae57f0, file v15_2\alignment.py>, line 31)
+              20 LOAD_CONST           ("Proxy.normalize")
+              22 MAKE_FUNCTION        (No arguments)
+              24 STORE_NAME           (normalize)
+
+ 41:          26 LOAD_CONST           (<Code310 code object homography_warp at 0x1069fc800, file v15_2\alignment.py>, line 41)
+              28 LOAD_CONST           ("Proxy.homography_warp")
+              30 MAKE_FUNCTION        (No arguments)
+              32 STORE_NAME           (homography_warp)
+              34 LOAD_CONST           (None)
+              36 RETURN_VALUE
+
+
+# Method Name:       SPyNet
+# Filename:          v15_2\alignment.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        4
+# Flags:             0x00000000 (0x0)
+# First Line:        48
+# Constants:
+#    0: 'SPyNet'
+#    1: 256
+#    2: <Code310 code object __init__ at 0x1069ff2c0, file v15_2\alignment.py>, line 49
+#    3: 'SPyNet.__init__'
+#    4: <Code310 code object predict at 0x1069fe060, file v15_2\alignment.py>, line 54
+#    5: 'SPyNet.predict'
+#    6: <Code310 code object level_tile at 0x106a6d190, file v15_2\alignment.py>, line 81
+#    7: 'SPyNet.level_tile'
+#    8: (256,)
+# Names:
+#    0: __name__
+#    1: __module__
+#    2: __qualname__
+#    3: __init__
+#    4: predict
+#    5: level_tile
+#    6: __classcell__
+# Free variables:
+#    0: __class__
+
+ 48:           0 LOAD_NAME            (__name__)
+               2 STORE_NAME           (__module__)
+               4 LOAD_CONST           ("SPyNet")
+               6 STORE_NAME           (__qualname__)
+
+ 49:           8 LOAD_CONST           ((256,))
+              10 LOAD_CLOSURE         (__class__)
+              12 BUILD_TUPLE          1
+              14 LOAD_CONST           (<Code310 code object __init__ at 0x1069ff2c0, file v15_2\alignment.py>, line 49)
+              16 LOAD_CONST           ("SPyNet.__init__")
+              18 MAKE_FUNCTION        (default, closure)
+              20 STORE_NAME           (__init__)
+
+ 54:          22 LOAD_CONST           (<Code310 code object predict at 0x1069fe060, file v15_2\alignment.py>, line 54)
+              24 LOAD_CONST           ("SPyNet.predict")
+              26 MAKE_FUNCTION        (No arguments)
+              28 STORE_NAME           (predict)
+
+ 81:          30 LOAD_CONST           (<Code310 code object level_tile at 0x106a6d190, file v15_2\alignment.py>, line 81)
+              32 LOAD_CONST           ("SPyNet.level_tile")
+              34 MAKE_FUNCTION        (No arguments)
+              36 STORE_NAME           (level_tile)
+              38 LOAD_CLOSURE         (__class__)
+              40 DUP_TOP
+              42 STORE_NAME           (__classcell__)
+              44 RETURN_VALUE
+
+
+# Method Name:       components
+# Filename:          v15_2\alignment.py
+# Argument count:    8
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  20
+# Stack size:        13
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        8
+# Constants:
+#    0: None
+#    1: 2
+#    2: (0.0, 0.0, 0.0)
+#    3: 0.0
+#    4: ('coefficients_rgb', 'center_native_xy')
+#    5: 'coefficients_rgb'
+#    6: 'center_native_xy'
+#    7: 64
+#    8: 1
+#    9: ('source_hw',)
+#   10: ('compact',)
+#   11: ''
+#   12: 'let p=i%'
+#   13: 'u;let c=i/'
+#   14: 'u;let x=f32(p%'
+#   15: 'u)*'
+#   16: '+0.5;let y=f32(p/'
+#   17: '+0.5;\nlet cs=array<f32,3>('
+#   18: ','
+#   19: <Code310 code object <genexpr> at 0x106b15e50, file v15_2\alignment.py>, line 17
+#   20: 'Proxy.components.<locals>.<genexpr>'
+#   21: ');let cc=select(select(1u,2u,c==3u),0u,c==0u);\nlet qbase=vec2<f32>(x,y);let qnative=qbase+(qbase+vec2<f32>('
+#   22: 0
+#   23: ')-vec2<f32>('
+#   24: '))*cs[cc];\nlet phase=u32(a2[1u+c]);let q=(qnative-vec2<f32>(f32(phase%2u),f32(phase/2u)))*0.5;let cell=vec2<i32>(floor(q));\nvar v=0.;var variance=0.;var ok=true;\nfor(var t=0u;t<4u;t++){let ij=cell+vec2<i32>(i32(t%2u),i32(t/2u));let d=vec2<f32>(ij)-q;let wt=(1.-abs(d.x))*(1.-abs(d.y));\nlet x=ij.x*2+i32(phase%2u);let y=ij.y*2+i32(phase/2u);let sx=clamp(ij.x,0,'
+#   25: ')*2+i32(phase%2u);let sy=clamp(ij.y,0,'
+#   26: ')*2+i32(phase/2u);let z=a0[ix(0u,sx,sy)];let vp=max(z,0.);let e=a2[0];\nv+=wt*z/e;variance+=wt*wt*(a2[13]*vp+a2[14]+a2[15]+a2[16]*vp*vp)/(e*e);ok=ok&&usable(0u,x,y);\n}\ndst[i]=v;dst['
+#   27: 4
+#   28: 'u+i]=variance;dst['
+#   29: 8
+#   30: 'u+i]=select(0.,1.,ok);'
+#   31: 'proxy_cfa'
+#   32: 12
+#   33: ('count',)
+#   34: 'u;let c=(i/'
+#   35: 'u)%3u;let f=i/'
+#   36: 3
+#   37: 'u;let first=select(3u,0u,c==0u);var v=a0[(f*4u+first)*'
+#   38: 'u+p];\nif(c==1u){v=(a0[(f*4u+1u)*'
+#   39: 'u+p]+a0[(f*4u+2u)*'
+#   40: 'u+p])*select(0.5,0.25,f==1u);}dst[i]=v;'
+#   41: 'proxy_rgb'
+#   42: 9
+# Names:
+#    0: math
+#    1: ceil
+#    2: dict
+#    3: Physical
+#    4: rt
+#    5: helpers
+#    6: spec
+#    7: numel
+#    8: join
+#    9: float
+#   10: emit
+#   11: free
+# Varnames:
+#	self, bank, meta, h, w, lca, origin, sample_stride, hp, wp, n, profile, co, cx, cy, ph, helper, body, planes, out
+# Positional arguments:
+#	self, bank, meta, h, w, lca, origin, sample_stride
+# Local variables:
+#    8: hp
+#    9: wp
+#   10: n
+#   11: profile
+#   12: co
+#   13: cx
+#   14: cy
+#   15: ph
+#   16: helper
+#   17: body
+#   18: planes
+#   19: out
+
+ 10:           0 LOAD_GLOBAL          (math)
+               2 LOAD_METHOD          (ceil)
+               4 LOAD_FAST            (h)
+               6 LOAD_CONST           (2)
+               8 BINARY_TRUE_DIVIDE
+              10 LOAD_FAST            (sample_stride)
+              12 BINARY_TRUE_DIVIDE
+              14 CALL_METHOD          (1 positional argument)
+              16 LOAD_GLOBAL          (math)
+              18 LOAD_METHOD          (ceil)
+              20 LOAD_FAST            (w)
+              22 LOAD_CONST           (2)
+              24 BINARY_TRUE_DIVIDE
+              26 LOAD_FAST            (sample_stride)
+              28 BINARY_TRUE_DIVIDE
+              30 CALL_METHOD          (1 positional argument)
+              32 ROT_TWO
+              34 STORE_FAST           (hp)
+              36 STORE_FAST           (wp)
+              38 LOAD_FAST            (hp)
+              40 LOAD_FAST            (wp)
+              42 BINARY_MULTIPLY
+              44 STORE_FAST           (n)
+
+ 11:          46 LOAD_FAST            (lca)
+              48 JUMP_IF_TRUE_OR_POP  (to 68)
+              50 LOAD_GLOBAL          (dict)
+              52 BUILD_LIST           0
+              54 LOAD_CONST           ((0.0, 0.0, 0.0))
+              56 LIST_EXTEND          1
+              58 LOAD_CONST           (0.0)
+              60 LOAD_CONST           (0.0)
+              62 BUILD_LIST           2
+              64 LOAD_CONST           (('coefficients_rgb', 'center_native_xy'))
+              66 CALL_FUNCTION_KW     (2 total positional and keyword args)
+         >>   68 STORE_FAST           (profile)
+
+ 12:          70 LOAD_FAST            (profile)
+              72 LOAD_CONST           ("coefficients_rgb")
+              74 BINARY_SUBSCR
+              76 STORE_FAST           (co)
+              78 LOAD_FAST            (profile)
+              80 LOAD_CONST           ("center_native_xy")
+              82 BINARY_SUBSCR
+              84 UNPACK_SEQUENCE      2
+              86 STORE_FAST           (cx)
+              88 STORE_FAST           (cy)
+
+ 13:          90 LOAD_GLOBAL          (Physical)
+              92 LOAD_FAST            (self)
+              94 LOAD_ATTR            (rt)
+              96 LOAD_CONST           (64)
+              98 LOAD_CONST           (1)
+             100 LOAD_FAST            (h)
+             102 LOAD_FAST            (w)
+             104 BUILD_TUPLE          2
+             106 LOAD_CONST           (('source_hw',))
+             108 CALL_FUNCTION_KW     (4 total positional and keyword args)
+             110 STORE_FAST           (ph)
+
+ 15:         112 LOAD_FAST            (ph)
+             114 LOAD_ATTR            (helpers)
+             116 LOAD_FAST            (bank)
+             118 LOAD_ATTR            (spec)
+             120 LOAD_ATTR            (numel)
+             122 LOAD_FAST            (h)
+             124 LOAD_FAST            (w)
+             126 BINARY_MULTIPLY
+             128 COMPARE_OP           (==)
+             130 LOAD_CONST           (('compact',))
+             132 CALL_FUNCTION_KW     (1 total positional and keyword args)
+             134 STORE_FAST           (helper)
+
+ 16:         136 LOAD_CONST           ("")
+             138 LOAD_METHOD          (join)
+             140 BUILD_LIST           0
+             142 LOAD_CONST           ("let p=i%")
+             144 LIST_APPEND          1
+             146 LOAD_FAST            (n)
+             148 FORMAT_VALUE         0
+             150 LIST_APPEND          1
+             152 LOAD_CONST           ("u;let c=i/")
+             154 LIST_APPEND          1
+             156 LOAD_FAST            (n)
+             158 FORMAT_VALUE         0
+             160 LIST_APPEND          1
+             162 LOAD_CONST           ("u;let x=f32(p%")
+             164 LIST_APPEND          1
+             166 LOAD_FAST            (wp)
+             168 FORMAT_VALUE         0
+             170 LIST_APPEND          1
+             172 LOAD_CONST           ("u)*")
+             174 LIST_APPEND          1
+             176 LOAD_GLOBAL          (float)
+             178 LOAD_CONST           (2)
+             180 LOAD_FAST            (sample_stride)
+             182 BINARY_MULTIPLY
+             184 CALL_FUNCTION        (1 positional argument)
+             186 FORMAT_VALUE         0
+             188 LIST_APPEND          1
+             190 LOAD_CONST           ("+0.5;let y=f32(p/")
+             192 LIST_APPEND          1
+             194 LOAD_FAST            (wp)
+             196 FORMAT_VALUE         0
+             198 LIST_APPEND          1
+             200 LOAD_CONST           ("u)*")
+             202 LIST_APPEND          1
+             204 LOAD_GLOBAL          (float)
+             206 LOAD_CONST           (2)
+             208 LOAD_FAST            (sample_stride)
+             210 BINARY_MULTIPLY
+             212 CALL_FUNCTION        (1 positional argument)
+             214 FORMAT_VALUE         0
+             216 LIST_APPEND          1
+             218 LOAD_CONST           ("+0.5;\nlet cs=array<f32,3>(")
+             220 LIST_APPEND          1
+
+ 17:         222 LOAD_CONST           (",")
+             224 LOAD_METHOD          (join)
+             226 LOAD_CONST           (<Code310 code object <genexpr> at 0x106b15e50, file v15_2\alignment.py>, line 17)
+             228 LOAD_CONST           ("Proxy.components.<locals>.<genexpr>")
+             230 MAKE_FUNCTION        (No arguments)
+             232 LOAD_FAST            (co)
+             234 GET_ITER
+             236 CALL_FUNCTION        (1 positional argument)
+             238 CALL_METHOD          (1 positional argument)
+
+ 16:         240 FORMAT_VALUE         0
+             242 LIST_APPEND          1
+             244 LOAD_CONST           (");let cc=select(select(1u,2u,c==3u),0u,c==0u);\nlet qbase=vec2<f32>(x,y);let qnative=qbase+(qbase+vec2<f32>(")
+             246 LIST_APPEND          1
+
+ 18:         248 LOAD_GLOBAL          (float)
+             250 LOAD_FAST            (origin)
+             252 LOAD_CONST           (0)
+             254 BINARY_SUBSCR
+             256 CALL_FUNCTION        (1 positional argument)
+
+ 16:         258 FORMAT_VALUE         0
+             260 LIST_APPEND          1
+             262 LOAD_CONST           (",")
+             264 LIST_APPEND          1
+
+ 18:         266 LOAD_GLOBAL          (float)
+             268 LOAD_FAST            (origin)
+             270 LOAD_CONST           (1)
+             272 BINARY_SUBSCR
+             274 CALL_FUNCTION        (1 positional argument)
+
+ 16:         276 FORMAT_VALUE         0
+             278 LIST_APPEND          1
+             280 LOAD_CONST           (")-vec2<f32>(")
+             282 LIST_APPEND          1
+
+ 18:         284 LOAD_GLOBAL          (float)
+             286 LOAD_FAST            (cx)
+             288 CALL_FUNCTION        (1 positional argument)
+
+ 16:         290 FORMAT_VALUE         0
+             292 LIST_APPEND          1
+             294 LOAD_CONST           (",")
+             296 LIST_APPEND          1
+
+ 18:         298 LOAD_GLOBAL          (float)
+             300 LOAD_FAST            (cy)
+             302 CALL_FUNCTION        (1 positional argument)
+
+ 16:         304 FORMAT_VALUE         0
+             306 LIST_APPEND          1
+             308 LOAD_CONST           ("))*cs[cc];\nlet phase=u32(a2[1u+c]);let q=(qnative-vec2<f32>(f32(phase%2u),f32(phase/2u)))*0.5;let cell=vec2<i32>(floor(q));\nvar v=0.;var variance=0.;var ok=true;\nfor(var t=0u;t<4u;t++){let ij=cell+vec2<i32>(i32(t%2u),i32(t/2u));let d=vec2<f32>(ij)-q;let wt=(1.-abs(d.x))*(1.-abs(d.y));\nlet x=ij.x*2+i32(phase%2u);let y=ij.y*2+i32(phase/2u);let sx=clamp(ij.x,0,")
+             310 LIST_APPEND          1
+
+ 22:         312 LOAD_FAST            (w)
+             314 LOAD_CONST           (2)
+             316 BINARY_FLOOR_DIVIDE
+             318 LOAD_CONST           (1)
+             320 BINARY_SUBTRACT
+
+ 16:         322 FORMAT_VALUE         0
+             324 LIST_APPEND          1
+             326 LOAD_CONST           (")*2+i32(phase%2u);let sy=clamp(ij.y,0,")
+             328 LIST_APPEND          1
+
+ 22:         330 LOAD_FAST            (h)
+             332 LOAD_CONST           (2)
+             334 BINARY_FLOOR_DIVIDE
+             336 LOAD_CONST           (1)
+             338 BINARY_SUBTRACT
+
+ 16:         340 FORMAT_VALUE         0
+             342 LIST_APPEND          1
+             344 LOAD_CONST           (")*2+i32(phase/2u);let z=a0[ix(0u,sx,sy)];let vp=max(z,0.);let e=a2[0];\nv+=wt*z/e;variance+=wt*wt*(a2[13]*vp+a2[14]+a2[15]+a2[16]*vp*vp)/(e*e);ok=ok&&usable(0u,x,y);\n}\ndst[i]=v;dst[")
+             346 LIST_APPEND          1
+
+ 25:         348 LOAD_CONST           (4)
+             350 LOAD_FAST            (n)
+             352 BINARY_MULTIPLY
+
+ 16:         354 FORMAT_VALUE         0
+             356 LIST_APPEND          1
+             358 LOAD_CONST           ("u+i]=variance;dst[")
+             360 LIST_APPEND          1
+
+ 25:         362 LOAD_CONST           (8)
+             364 LOAD_FAST            (n)
+             366 BINARY_MULTIPLY
+
+ 16:         368 FORMAT_VALUE         0
+             370 LIST_APPEND          1
+             372 LOAD_CONST           ("u+i]=select(0.,1.,ok);")
+             374 LIST_APPEND          1
+             376 CALL_METHOD          (1 positional argument)
+             378 STORE_FAST           (body)
+
+ 26:         380 LOAD_FAST            (self)
+             382 LOAD_ATTR            (emit)
+             384 LOAD_CONST           ("proxy_cfa")
+             386 LOAD_FAST            (bank)
+             388 LOAD_FAST            (meta)
+             390 LOAD_FAST            (meta)
+             392 BUILD_LIST           3
+             394 LOAD_CONST           (1)
+             396 LOAD_CONST           (12)
+             398 LOAD_FAST            (hp)
+             400 LOAD_FAST            (wp)
+             402 BUILD_TUPLE          4
+             404 LOAD_FAST            (body)
+             406 LOAD_FAST            (helper)
+             408 LOAD_CONST           (4)
+             410 LOAD_FAST            (n)
+             412 BINARY_MULTIPLY
+             414 LOAD_CONST           (('count',))
+             416 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             418 STORE_FAST           (planes)
+
+ 27:         420 LOAD_CONST           ("let p=i%")
+             422 LOAD_FAST            (n)
+             424 FORMAT_VALUE         0
+             426 LOAD_CONST           ("u;let c=(i/")
+             428 LOAD_FAST            (n)
+             430 FORMAT_VALUE         0
+             432 LOAD_CONST           ("u)%3u;let f=i/")
+             434 LOAD_CONST           (3)
+             436 LOAD_FAST            (n)
+             438 BINARY_MULTIPLY
+             440 FORMAT_VALUE         0
+             442 LOAD_CONST           ("u;let first=select(3u,0u,c==0u);var v=a0[(f*4u+first)*")
+             444 LOAD_FAST            (n)
+             446 FORMAT_VALUE         0
+             448 LOAD_CONST           ("u+p];\nif(c==1u){v=(a0[(f*4u+1u)*")
+
+ 28:         450 LOAD_FAST            (n)
+
+ 27:         452 FORMAT_VALUE         0
+             454 LOAD_CONST           ("u+p]+a0[(f*4u+2u)*")
+
+ 28:         456 LOAD_FAST            (n)
+
+ 27:         458 FORMAT_VALUE         0
+             460 LOAD_CONST           ("u+p])*select(0.5,0.25,f==1u);}dst[i]=v;")
+             462 BUILD_STRING         13
+             464 STORE_FAST           (body)
+
+ 29:         466 LOAD_FAST            (self)
+             468 LOAD_METHOD          (emit)
+             470 LOAD_CONST           ("proxy_rgb")
+             472 LOAD_FAST            (planes)
+             474 BUILD_LIST           1
+             476 LOAD_CONST           (1)
+             478 LOAD_CONST           (9)
+             480 LOAD_FAST            (hp)
+             482 LOAD_FAST            (wp)
+             484 BUILD_TUPLE          4
+             486 LOAD_FAST            (body)
+             488 CALL_METHOD          (4 positional arguments)
+             490 STORE_FAST           (out)
+             492 LOAD_FAST            (self)
+             494 LOAD_ATTR            (rt)
+             496 LOAD_METHOD          (free)
+             498 LOAD_FAST            (planes)
+             500 CALL_METHOD          (1 positional argument)
+             502 POP_TOP
+             504 LOAD_FAST            (out)
+             506 RETURN_VALUE
+
+
+# Method Name:       normalize
+# Filename:          v15_2\alignment.py
+# Argument count:    4
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  12
+# Stack size:        20
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        31
+# Constants:
+#    0: None
+#    1: 'let p=i%'
+#    2: 'u;let c=(i/'
+#    3: 'u)%3u;let field=i/'
+#    4: 3
+#    5: 'u;let z=a0[c*'
+#    6: 'u+p]/'
+#    7: ';\nlet white=select(select(a1[8],(a1[6]+a1[7])*0.5,c==1u),a1[5],c==0u)/a1[0]/'
+#    8: ';\nif(field==0u){dst[i]=pow(clamp(z,0.,1.),1./2.2);}else if(field==1u){let v=abs(z);dst[i]=sign(z)*log(v+sqrt(1.+v*v));}else if(field==2u){dst[i]=a0[(6u+c)*'
+#    9: 'u+p];}else if(field==3u){dst[i]=log(1.+white);}else{dst[i]=log(1.+a0[(3u+c)*'
+#   10: ');}'
+#   11: 'proxy_normalize'
+#   12: 1
+#   13: 15
+#   14: 'gamma'
+#   15: 'dst[i]=a0[i];'
+#   16: 'extra'
+#   17: 12
+#   18: 'dst[i]=a0['
+#   19: 'u+i];'
+# Names:
+#    0: spec
+#    1: shape
+#    2: float
+#    3: emit
+#    4: rt
+#    5: free
+# Varnames:
+#	self, components, meta, scale, _, h, w, n, body, joined, gamma, extra
+# Positional arguments:
+#	self, components, meta, scale
+# Local variables:
+#    4: _
+#    5: h
+#    6: w
+#    7: n
+#    8: body
+#    9: joined
+#   10: gamma
+#   11: extra
+
+ 32:           0 LOAD_FAST            (components)
+               2 LOAD_ATTR            (spec)
+               4 LOAD_ATTR            (shape)
+               6 UNPACK_SEQUENCE      4
+               8 STORE_FAST           (_)
+              10 STORE_FAST           (_)
+              12 STORE_FAST           (h)
+              14 STORE_FAST           (w)
+              16 LOAD_FAST            (h)
+              18 LOAD_FAST            (w)
+              20 BINARY_MULTIPLY
+              22 STORE_FAST           (n)
+
+ 33:          24 LOAD_CONST           ("let p=i%")
+              26 LOAD_FAST            (n)
+              28 FORMAT_VALUE         0
+              30 LOAD_CONST           ("u;let c=(i/")
+              32 LOAD_FAST            (n)
+              34 FORMAT_VALUE         0
+              36 LOAD_CONST           ("u)%3u;let field=i/")
+              38 LOAD_CONST           (3)
+              40 LOAD_FAST            (n)
+              42 BINARY_MULTIPLY
+              44 FORMAT_VALUE         0
+              46 LOAD_CONST           ("u;let z=a0[c*")
+              48 LOAD_FAST            (n)
+              50 FORMAT_VALUE         0
+              52 LOAD_CONST           ("u+p]/")
+              54 LOAD_GLOBAL          (float)
+              56 LOAD_FAST            (scale)
+              58 CALL_FUNCTION        (1 positional argument)
+              60 FORMAT_VALUE         0
+              62 LOAD_CONST           (";\nlet white=select(select(a1[8],(a1[6]+a1[7])*0.5,c==1u),a1[5],c==0u)/a1[0]/")
+
+ 34:          64 LOAD_GLOBAL          (float)
+              66 LOAD_FAST            (scale)
+              68 CALL_FUNCTION        (1 positional argument)
+
+ 33:          70 FORMAT_VALUE         0
+              72 LOAD_CONST           (";\nif(field==0u){dst[i]=pow(clamp(z,0.,1.),1./2.2);}else if(field==1u){let v=abs(z);dst[i]=sign(z)*log(v+sqrt(1.+v*v));}else if(field==2u){dst[i]=a0[(6u+c)*")
+
+ 35:          74 LOAD_FAST            (n)
+
+ 33:          76 FORMAT_VALUE         0
+              78 LOAD_CONST           ("u+p];}else if(field==3u){dst[i]=log(1.+white);}else{dst[i]=log(1.+a0[(3u+c)*")
+
+ 35:          80 LOAD_FAST            (n)
+
+ 33:          82 FORMAT_VALUE         0
+              84 LOAD_CONST           ("u+p]/")
+
+ 35:          86 LOAD_GLOBAL          (float)
+              88 LOAD_FAST            (scale)
+              90 LOAD_FAST            (scale)
+              92 BINARY_MULTIPLY
+              94 CALL_FUNCTION        (1 positional argument)
+
+ 33:          96 FORMAT_VALUE         0
+              98 LOAD_CONST           (");}")
+             100 BUILD_STRING         19
+             102 STORE_FAST           (body)
+
+ 36:         104 LOAD_FAST            (self)
+             106 LOAD_METHOD          (emit)
+             108 LOAD_CONST           ("proxy_normalize")
+             110 LOAD_FAST            (components)
+             112 LOAD_FAST            (meta)
+             114 BUILD_LIST           2
+             116 LOAD_CONST           (1)
+             118 LOAD_CONST           (15)
+             120 LOAD_FAST            (h)
+             122 LOAD_FAST            (w)
+             124 BUILD_TUPLE          4
+             126 LOAD_FAST            (body)
+             128 CALL_METHOD          (4 positional arguments)
+             130 STORE_FAST           (joined)
+
+ 37:         132 LOAD_FAST            (self)
+             134 LOAD_METHOD          (emit)
+             136 LOAD_CONST           ("gamma")
+             138 LOAD_FAST            (joined)
+             140 BUILD_LIST           1
+             142 LOAD_CONST           (1)
+             144 LOAD_CONST           (3)
+             146 LOAD_FAST            (h)
+             148 LOAD_FAST            (w)
+             150 BUILD_TUPLE          4
+             152 LOAD_CONST           ("dst[i]=a0[i];")
+             154 CALL_METHOD          (4 positional arguments)
+             156 STORE_FAST           (gamma)
+
+ 38:         158 LOAD_FAST            (self)
+             160 LOAD_METHOD          (emit)
+             162 LOAD_CONST           ("extra")
+             164 LOAD_FAST            (joined)
+             166 BUILD_LIST           1
+             168 LOAD_CONST           (1)
+             170 LOAD_CONST           (12)
+             172 LOAD_FAST            (h)
+             174 LOAD_FAST            (w)
+             176 BUILD_TUPLE          4
+             178 LOAD_CONST           ("dst[i]=a0[")
+             180 LOAD_CONST           (3)
+             182 LOAD_FAST            (n)
+             184 BINARY_MULTIPLY
+             186 FORMAT_VALUE         0
+             188 LOAD_CONST           ("u+i];")
+             190 BUILD_STRING         3
+             192 CALL_METHOD          (4 positional arguments)
+             194 STORE_FAST           (extra)
+
+ 39:         196 LOAD_FAST            (self)
+             198 LOAD_ATTR            (rt)
+             200 LOAD_METHOD          (free)
+             202 LOAD_FAST            (joined)
+             204 CALL_METHOD          (1 positional argument)
+             206 POP_TOP
+             208 LOAD_FAST            (gamma)
+             210 LOAD_FAST            (extra)
+             212 BUILD_TUPLE          2
+             214 RETURN_VALUE
+
+
+# Method Name:       homography_warp
+# Filename:          v15_2\alignment.py
+# Argument count:    3
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  10
+# Stack size:        10
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        41
+# Constants:
+#    0: None
+#    1: -1
+#    2: 'let p=i%'
+#    3: 'u;let c=i/'
+#    4: 'u;let x=f32(p%'
+#    5: 'u)*2.+0.5;let y=f32(p/'
+#    6: 'u)*2.+0.5;\nlet d=a1[6]*x+a1[7]*y+a1[8];let q=(vec2<f32>((a1[0]*x+a1[1]*y+a1[2])/d,(a1[3]*x+a1[4]*y+a1[5])/d)-0.5)*0.5;dst[i]=sample_a0(c,q);'
+#    7: 'Hwarp'
+#    8: 'a0'
+# Names:
+#    0: spec
+#    1: shape
+#    2: rt
+#    3: upload
+#    4: np
+#    5: asarray
+#    6: float32
+#    7: reshape
+#    8: emit
+#    9: bilinear
+#   10: release_external
+# Varnames:
+#	self, value, H, b, c, h, w, matrix, body, out
+# Positional arguments:
+#	self, value, H
+# Local variables:
+#    3: b
+#    4: c
+#    5: h
+#    6: w
+#    7: matrix
+#    8: body
+#    9: out
+
+ 42:           0 LOAD_FAST            (value)
+               2 LOAD_ATTR            (spec)
+               4 LOAD_ATTR            (shape)
+               6 UNPACK_SEQUENCE      4
+               8 STORE_FAST           (b)
+              10 STORE_FAST           (c)
+              12 STORE_FAST           (h)
+              14 STORE_FAST           (w)
+
+ 43:          16 LOAD_FAST            (self)
+              18 LOAD_ATTR            (rt)
+              20 LOAD_METHOD          (upload)
+              22 LOAD_GLOBAL          (np)
+              24 LOAD_METHOD          (asarray)
+              26 LOAD_FAST            (H)
+              28 LOAD_GLOBAL          (np)
+              30 LOAD_ATTR            (float32)
+              32 CALL_METHOD          (2 positional arguments)
+              34 LOAD_METHOD          (reshape)
+              36 LOAD_CONST           (-1)
+              38 CALL_METHOD          (1 positional argument)
+              40 CALL_METHOD          (1 positional argument)
+              42 STORE_FAST           (matrix)
+
+ 44:          44 LOAD_CONST           ("let p=i%")
+              46 LOAD_FAST            (h)
+              48 LOAD_FAST            (w)
+              50 BINARY_MULTIPLY
+              52 FORMAT_VALUE         0
+              54 LOAD_CONST           ("u;let c=i/")
+              56 LOAD_FAST            (h)
+              58 LOAD_FAST            (w)
+              60 BINARY_MULTIPLY
+              62 FORMAT_VALUE         0
+              64 LOAD_CONST           ("u;let x=f32(p%")
+              66 LOAD_FAST            (w)
+              68 FORMAT_VALUE         0
+              70 LOAD_CONST           ("u)*2.+0.5;let y=f32(p/")
+              72 LOAD_FAST            (w)
+              74 FORMAT_VALUE         0
+              76 LOAD_CONST           ("u)*2.+0.5;\nlet d=a1[6]*x+a1[7]*y+a1[8];let q=(vec2<f32>((a1[0]*x+a1[1]*y+a1[2])/d,(a1[3]*x+a1[4]*y+a1[5])/d)-0.5)*0.5;dst[i]=sample_a0(c,q);")
+              78 BUILD_STRING         9
+              80 STORE_FAST           (body)
+
+ 46:          82 LOAD_FAST            (self)
+              84 LOAD_METHOD          (emit)
+              86 LOAD_CONST           ("Hwarp")
+              88 LOAD_FAST            (value)
+              90 LOAD_FAST            (matrix)
+              92 BUILD_LIST           2
+              94 LOAD_FAST            (value)
+              96 LOAD_ATTR            (spec)
+              98 LOAD_ATTR            (shape)
+             100 LOAD_FAST            (body)
+             102 LOAD_GLOBAL          (bilinear)
+             104 LOAD_CONST           ("a0")
+             106 LOAD_FAST            (h)
+             108 LOAD_FAST            (w)
+             110 CALL_FUNCTION        (3 positional arguments)
+             112 CALL_METHOD          (5 positional arguments)
+             114 STORE_FAST           (out)
+             116 LOAD_FAST            (self)
+             118 LOAD_ATTR            (rt)
+             120 LOAD_METHOD          (release_external)
+             122 LOAD_FAST            (matrix)
+             124 CALL_METHOD          (1 positional argument)
+             126 POP_TOP
+             128 LOAD_FAST            (out)
+             130 RETURN_VALUE
+
+
+# Method Name:       __init__
+# Filename:          v15_2\alignment.py
+# Argument count:    4
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  4
+# Stack size:        8
+# Flags:             0x00000003 (NEWLOCALS | OPTIMIZED)
+# First Line:        49
+# Constants:
+#    0: None
+#    1: <Code310 code object <dictcomp> at 0x1069ff6e0, file v15_2\alignment.py>, line 51
+#    2: 'SPyNet.__init__.<locals>.<dictcomp>'
+#    3: 2
+# Names:
+#    0: super
+#    1: __init__
+#    2: core
+#    3: np
+#    4: load
+#    5: files
+#    6: weights
+#    7: upload
+#    8: zeros
+#    9: float32
+#   10: origin
+# Varnames:
+#	self, rt, weights_path, core
+# Positional arguments:
+#	self, rt, weights_path, core
+# Free variables:
+#    0: rt
+#    1: z
+# Cell variables:
+#    0: __class__
+
+ 50:           0 LOAD_GLOBAL          (super)
+               2 CALL_FUNCTION        (0 positional arguments)
+               4 LOAD_METHOD          (__init__)
+               6 LOAD_DEREF           (__class__)
+               8 CALL_METHOD          (1 positional argument)
+              10 POP_TOP
+              12 LOAD_FAST            (core)
+              14 LOAD_FAST            (self)
+              16 STORE_ATTR           (core)
+
+ 51:          18 LOAD_GLOBAL          (np)
+              20 LOAD_METHOD          (load)
+              22 LOAD_FAST            (weights_path)
+              24 CALL_METHOD          (1 positional argument)
+              26 SETUP_WITH           (to 68)
+              28 STORE_DEREF          (rt)
+              30 LOAD_CLOSURE         (__class__)
+              32 LOAD_CLOSURE         (rt)
+              34 BUILD_TUPLE          2
+              36 LOAD_CONST           (<Code310 code object <dictcomp> at 0x1069ff6e0, file v15_2\alignment.py>, line 51)
+              38 LOAD_CONST           ("SPyNet.__init__.<locals>.<dictcomp>")
+              40 MAKE_FUNCTION        (closure)
+              42 LOAD_DEREF           (rt)
+              44 LOAD_ATTR            (files)
+              46 GET_ITER
+              48 CALL_FUNCTION        (1 positional argument)
+              50 LOAD_FAST            (self)
+              52 STORE_ATTR           (weights)
+              54 POP_BLOCK
+              56 LOAD_CONST           (None)
+              58 DUP_TOP
+              60 DUP_TOP
+              62 CALL_FUNCTION        (3 positional arguments)
+              64 POP_TOP
+              66 JUMP_FORWARD         (to 84)
+         >>   68 WITH_EXCEPT_START
+              70 POP_JUMP_IF_TRUE     (to 74)
+              72 RERAISE              1
+         >>   74 POP_TOP
+              76 POP_TOP
+              78 POP_TOP
+              80 POP_EXCEPT
+              82 POP_TOP
+
+ 52:     >>   84 LOAD_DEREF           (__class__)
+              86 LOAD_METHOD          (upload)
+              88 LOAD_GLOBAL          (np)
+              90 LOAD_METHOD          (zeros)
+              92 LOAD_CONST           (2)
+              94 LOAD_GLOBAL          (np)
+              96 LOAD_ATTR            (float32)
+              98 CALL_METHOD          (2 positional arguments)
+             100 CALL_METHOD          (1 positional argument)
+             102 LOAD_FAST            (self)
+             104 STORE_ATTR           (origin)
+             106 LOAD_CONST           (None)
+             108 RETURN_VALUE
+
+
+# Method Name:       predict
+# Filename:          v15_2\alignment.py
+# Argument count:    5
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  28
+# Stack size:        19
+# Flags:             0x00000003 (NEWLOCALS | OPTIMIZED)
+# First Line:        54
+# Constants:
+#    0: None
+#    1: 32
+#    2: 2
+#    3: 'let c=(i/'
+#    4: 'u)%3u;let m=array<f32,3>(0.485,0.456,0.406);let s=array<f32,3>(0.229,0.224,0.225);dst[i]=(a0[i]-m[c])/s[c];'
+#    5: 'imagenet'
+#    6: 5
+#    7: -1
+#    8: 6
+#    9: <Code310 code object <listcomp> at 0x1069ff050, file v15_2\alignment.py>, line 67
+#   10: 'SPyNet.predict.<locals>.<listcomp>'
+#   11: -2
+#   12: 'zero'
+#   13: 1
+#   14: 'dst[i]=0.;'
+#   15: True
+#   16: 2.0
+#   17: ('align_corners', 'multiplier')
+#   18: 0
+#   19: 'flow_units'
+#   20: 'dst[i]=a0[i]*select('
+#   21: ','
+#   22: ',i>='
+#   23: 'u);'
+# Names:
+#    0: spec
+#    1: shape
+#    2: math
+#    3: ceil
+#    4: enumerate
+#    5: resize
+#    6: emit
+#    7: rt
+#    8: free
+#    9: range
+#   10: append
+#   11: pool2
+#   12: core
+#   13: level_tile
+#   14: min
+#   15: float
+# Varnames:
+#	self, ref, src, ref_hdr, src_hdr, _, h, w, uh, uw, pyramids, idx, v, x, body, out, p, flow, rr, ss, rc, sc, lh, lw, up, y, resized, output
+# Positional arguments:
+#	self, ref, src, ref_hdr, src_hdr
+# Local variables:
+#    5: _
+#    6: h
+#    7: w
+#    8: uh
+#    9: uw
+#   10: pyramids
+#   11: idx
+#   12: v
+#   13: x
+#   14: body
+#   15: out
+#   16: p
+#   17: flow
+#   18: rr
+#   19: ss
+#   20: rc
+#   21: sc
+#   22: lh
+#   23: lw
+#   24: up
+#   25: y
+#   26: resized
+#   27: output
+# Free variables:
+#    0: level
+
+ 55:           0 LOAD_FAST            (ref)
+               2 LOAD_ATTR            (spec)
+               4 LOAD_ATTR            (shape)
+               6 UNPACK_SEQUENCE      4
+               8 STORE_FAST           (_)
+              10 STORE_FAST           (_)
+              12 STORE_FAST           (h)
+              14 STORE_FAST           (w)
+              16 LOAD_GLOBAL          (math)
+              18 LOAD_METHOD          (ceil)
+              20 LOAD_FAST            (h)
+              22 LOAD_CONST           (32)
+              24 BINARY_TRUE_DIVIDE
+              26 CALL_METHOD          (1 positional argument)
+              28 LOAD_CONST           (32)
+              30 BINARY_MULTIPLY
+              32 LOAD_GLOBAL          (math)
+              34 LOAD_METHOD          (ceil)
+              36 LOAD_FAST            (w)
+              38 LOAD_CONST           (32)
+              40 BINARY_TRUE_DIVIDE
+              42 CALL_METHOD          (1 positional argument)
+              44 LOAD_CONST           (32)
+              46 BINARY_MULTIPLY
+              48 ROT_TWO
+              50 STORE_FAST           (uh)
+              52 STORE_FAST           (uw)
+
+ 56:          54 BUILD_LIST           0
+              56 STORE_FAST           (pyramids)
+
+ 57:          58 LOAD_GLOBAL          (enumerate)
+              60 LOAD_FAST            (ref)
+              62 LOAD_FAST            (src)
+              64 LOAD_FAST            (ref_hdr)
+              66 LOAD_FAST            (src_hdr)
+              68 BUILD_TUPLE          4
+              70 CALL_FUNCTION        (1 positional argument)
+              72 GET_ITER
+         >>   74 FOR_ITER             (to 220)
+              76 UNPACK_SEQUENCE      2
+              78 STORE_FAST           (idx)
+              80 STORE_FAST           (v)
+
+ 58:          82 LOAD_FAST            (self)
+              84 LOAD_METHOD          (resize)
+              86 LOAD_FAST            (v)
+              88 LOAD_FAST            (uh)
+              90 LOAD_FAST            (uw)
+              92 CALL_METHOD          (3 positional arguments)
+              94 STORE_FAST           (x)
+
+ 59:          96 LOAD_FAST            (idx)
+              98 LOAD_CONST           (2)
+             100 COMPARE_OP           (<)
+             102 POP_JUMP_IF_FALSE    (to 158)
+
+ 60:         104 LOAD_CONST           ("let c=(i/")
+             106 LOAD_FAST            (uh)
+             108 LOAD_FAST            (uw)
+             110 BINARY_MULTIPLY
+             112 FORMAT_VALUE         0
+             114 LOAD_CONST           ("u)%3u;let m=array<f32,3>(0.485,0.456,0.406);let s=array<f32,3>(0.229,0.224,0.225);dst[i]=(a0[i]-m[c])/s[c];")
+             116 BUILD_STRING         3
+             118 STORE_FAST           (body)
+
+ 61:         120 LOAD_FAST            (self)
+             122 LOAD_METHOD          (emit)
+             124 LOAD_CONST           ("imagenet")
+             126 LOAD_FAST            (x)
+             128 BUILD_LIST           1
+             130 LOAD_FAST            (x)
+             132 LOAD_ATTR            (spec)
+             134 LOAD_ATTR            (shape)
+             136 LOAD_FAST            (body)
+             138 CALL_METHOD          (4 positional arguments)
+             140 STORE_FAST           (out)
+             142 LOAD_FAST            (self)
+             144 LOAD_ATTR            (rt)
+             146 LOAD_METHOD          (free)
+             148 LOAD_FAST            (x)
+             150 CALL_METHOD          (1 positional argument)
+             152 POP_TOP
+             154 LOAD_FAST            (out)
+             156 STORE_FAST           (x)
+
+ 62:     >>  158 LOAD_FAST            (x)
+             160 BUILD_LIST           1
+             162 STORE_FAST           (p)
+
+ 63:         164 LOAD_GLOBAL          (range)
+             166 LOAD_CONST           (5)
+             168 CALL_FUNCTION        (1 positional argument)
+             170 GET_ITER
+         >>  172 FOR_ITER             (to 198)
+             174 STORE_FAST           (_)
+             176 LOAD_FAST            (p)
+             178 LOAD_METHOD          (append)
+             180 LOAD_FAST            (self)
+             182 LOAD_METHOD          (pool2)
+             184 LOAD_FAST            (p)
+             186 LOAD_CONST           (-1)
+             188 BINARY_SUBSCR
+             190 CALL_METHOD          (1 positional argument)
+             192 CALL_METHOD          (1 positional argument)
+             194 POP_TOP
+             196 JUMP_ABSOLUTE        (to 172)
+
+ 64:     >>  198 LOAD_FAST            (pyramids)
+             200 LOAD_METHOD          (append)
+             202 LOAD_FAST            (p)
+             204 LOAD_CONST           (None)
+             206 LOAD_CONST           (None)
+             208 LOAD_CONST           (-1)
+             210 BUILD_SLICE          3
+             212 BINARY_SUBSCR
+             214 CALL_METHOD          (1 positional argument)
+             216 POP_TOP
+             218 JUMP_ABSOLUTE        (to 74)
+
+ 65:     >>  220 LOAD_CONST           (None)
+             222 STORE_FAST           (flow)
+
+ 66:         224 LOAD_GLOBAL          (range)
+             226 LOAD_CONST           (6)
+             228 CALL_FUNCTION        (1 positional argument)
+             230 GET_ITER
+         >>  232 FOR_ITER             (to 518)
+             234 STORE_DEREF          (level)
+
+ 67:         236 LOAD_CLOSURE         (level)
+             238 BUILD_TUPLE          1
+             240 LOAD_CONST           (<Code310 code object <listcomp> at 0x1069ff050, file v15_2\alignment.py>, line 67)
+             242 LOAD_CONST           ("SPyNet.predict.<locals>.<listcomp>")
+             244 MAKE_FUNCTION        (closure)
+             246 LOAD_FAST            (pyramids)
+             248 GET_ITER
+             250 CALL_FUNCTION        (1 positional argument)
+             252 UNPACK_SEQUENCE      4
+             254 STORE_FAST           (rr)
+             256 STORE_FAST           (ss)
+             258 STORE_FAST           (rc)
+             260 STORE_FAST           (sc)
+             262 LOAD_FAST            (rr)
+             264 LOAD_ATTR            (spec)
+             266 LOAD_ATTR            (shape)
+             268 LOAD_CONST           (-2)
+             270 LOAD_CONST           (None)
+             272 BUILD_SLICE          2
+             274 BINARY_SUBSCR
+             276 UNPACK_SEQUENCE      2
+             278 STORE_FAST           (lh)
+             280 STORE_FAST           (lw)
+
+ 68:         282 LOAD_FAST            (flow)
+             284 LOAD_CONST           (None)
+             286 IS_OP                (is)
+             288 POP_JUMP_IF_FALSE    (to 316)
+             290 LOAD_FAST            (self)
+             292 LOAD_METHOD          (emit)
+             294 LOAD_CONST           ("zero")
+             296 BUILD_LIST           0
+             298 LOAD_CONST           (1)
+             300 LOAD_CONST           (2)
+             302 LOAD_FAST            (lh)
+             304 LOAD_FAST            (lw)
+             306 BUILD_TUPLE          4
+             308 LOAD_CONST           ("dst[i]=0.;")
+             310 CALL_METHOD          (4 positional arguments)
+             312 STORE_FAST           (flow)
+             314 JUMP_FORWARD         (to 352)
+
+ 70:     >>  316 LOAD_FAST            (self)
+             318 LOAD_ATTR            (resize)
+             320 LOAD_FAST            (flow)
+             322 LOAD_FAST            (lh)
+             324 LOAD_FAST            (lw)
+             326 LOAD_CONST           (True)
+             328 LOAD_CONST           (2.0)
+             330 LOAD_CONST           (('align_corners', 'multiplier'))
+             332 CALL_FUNCTION_KW     (5 total positional and keyword args)
+             334 STORE_FAST           (up)
+             336 LOAD_FAST            (self)
+             338 LOAD_ATTR            (rt)
+             340 LOAD_METHOD          (free)
+             342 LOAD_FAST            (flow)
+             344 CALL_METHOD          (1 positional argument)
+             346 POP_TOP
+             348 LOAD_FAST            (up)
+             350 STORE_FAST           (flow)
+
+ 71:     >>  352 LOAD_FAST            (self)
+             354 LOAD_METHOD          (emit)
+             356 LOAD_CONST           ("zero")
+             358 BUILD_LIST           0
+             360 LOAD_CONST           (1)
+             362 LOAD_CONST           (2)
+             364 LOAD_FAST            (lh)
+             366 LOAD_FAST            (lw)
+             368 BUILD_TUPLE          4
+             370 LOAD_CONST           ("dst[i]=0.;")
+             372 CALL_METHOD          (4 positional arguments)
+             374 STORE_FAST           (out)
+
+ 72:         376 LOAD_GLOBAL          (range)
+             378 LOAD_CONST           (0)
+             380 LOAD_FAST            (lh)
+             382 LOAD_FAST            (self)
+             384 LOAD_ATTR            (core)
+             386 CALL_FUNCTION        (3 positional arguments)
+             388 GET_ITER
+         >>  390 FOR_ITER             (to 470)
+             392 STORE_FAST           (y)
+
+ 73:         394 LOAD_GLOBAL          (range)
+             396 LOAD_CONST           (0)
+             398 LOAD_FAST            (lw)
+             400 LOAD_FAST            (self)
+             402 LOAD_ATTR            (core)
+             404 CALL_FUNCTION        (3 positional arguments)
+             406 GET_ITER
+         >>  408 FOR_ITER             (to 468)
+             410 STORE_FAST           (x)
+
+ 74:         412 LOAD_FAST            (self)
+             414 LOAD_METHOD          (level_tile)
+             416 LOAD_DEREF           (level)
+             418 LOAD_FAST            (rr)
+             420 LOAD_FAST            (ss)
+             422 LOAD_FAST            (rc)
+             424 LOAD_FAST            (sc)
+             426 LOAD_FAST            (flow)
+             428 LOAD_FAST            (out)
+             430 LOAD_FAST            (x)
+             432 LOAD_FAST            (y)
+             434 LOAD_GLOBAL          (min)
+             436 LOAD_FAST            (self)
+             438 LOAD_ATTR            (core)
+             440 LOAD_FAST            (lw)
+             442 LOAD_FAST            (x)
+             444 BINARY_SUBTRACT
+             446 CALL_FUNCTION        (2 positional arguments)
+             448 LOAD_GLOBAL          (min)
+             450 LOAD_FAST            (self)
+             452 LOAD_ATTR            (core)
+             454 LOAD_FAST            (lh)
+             456 LOAD_FAST            (y)
+             458 BINARY_SUBTRACT
+             460 CALL_FUNCTION        (2 positional arguments)
+             462 CALL_METHOD          (11 positional arguments)
+             464 POP_TOP
+             466 JUMP_ABSOLUTE        (to 408)
+
+ 73:     >>  468 JUMP_ABSOLUTE        (to 390)
+
+ 75:     >>  470 LOAD_FAST            (self)
+             472 LOAD_ATTR            (rt)
+             474 LOAD_METHOD          (free)
+             476 LOAD_FAST            (flow)
+             478 CALL_METHOD          (1 positional argument)
+             480 POP_TOP
+             482 LOAD_FAST            (out)
+             484 STORE_FAST           (flow)
+
+ 76:         486 LOAD_FAST            (rr)
+             488 LOAD_FAST            (ss)
+             490 LOAD_FAST            (rc)
+             492 LOAD_FAST            (sc)
+             494 BUILD_TUPLE          4
+             496 GET_ITER
+         >>  498 FOR_ITER             (to 516)
+             500 STORE_FAST           (v)
+             502 LOAD_FAST            (self)
+             504 LOAD_ATTR            (rt)
+             506 LOAD_METHOD          (free)
+             508 LOAD_FAST            (v)
+             510 CALL_METHOD          (1 positional argument)
+             512 POP_TOP
+             514 JUMP_ABSOLUTE        (to 498)
+         >>  516 JUMP_ABSOLUTE        (to 232)
+
+ 77:     >>  518 LOAD_FAST            (self)
+             520 LOAD_METHOD          (resize)
+             522 LOAD_FAST            (flow)
+             524 LOAD_FAST            (h)
+             526 LOAD_FAST            (w)
+             528 CALL_METHOD          (3 positional arguments)
+             530 STORE_FAST           (resized)
+             532 LOAD_FAST            (self)
+             534 LOAD_ATTR            (rt)
+             536 LOAD_METHOD          (free)
+             538 LOAD_FAST            (flow)
+             540 CALL_METHOD          (1 positional argument)
+             542 POP_TOP
+
+ 78:         544 LOAD_FAST            (self)
+             546 LOAD_METHOD          (emit)
+             548 LOAD_CONST           ("flow_units")
+             550 LOAD_FAST            (resized)
+             552 BUILD_LIST           1
+             554 LOAD_FAST            (resized)
+             556 LOAD_ATTR            (spec)
+             558 LOAD_ATTR            (shape)
+             560 LOAD_CONST           ("dst[i]=a0[i]*select(")
+             562 LOAD_GLOBAL          (float)
+             564 LOAD_FAST            (w)
+             566 LOAD_FAST            (uw)
+             568 BINARY_TRUE_DIVIDE
+             570 CALL_FUNCTION        (1 positional argument)
+             572 FORMAT_VALUE         0
+             574 LOAD_CONST           (",")
+             576 LOAD_GLOBAL          (float)
+             578 LOAD_FAST            (h)
+             580 LOAD_FAST            (uh)
+             582 BINARY_TRUE_DIVIDE
+             584 CALL_FUNCTION        (1 positional argument)
+             586 FORMAT_VALUE         0
+             588 LOAD_CONST           (",i>=")
+             590 LOAD_FAST            (h)
+             592 LOAD_FAST            (w)
+             594 BINARY_MULTIPLY
+             596 FORMAT_VALUE         0
+             598 LOAD_CONST           ("u);")
+             600 BUILD_STRING         7
+             602 CALL_METHOD          (4 positional arguments)
+             604 STORE_FAST           (output)
+             606 LOAD_FAST            (self)
+             608 LOAD_ATTR            (rt)
+             610 LOAD_METHOD          (free)
+             612 LOAD_FAST            (resized)
+             614 CALL_METHOD          (1 positional argument)
+             616 POP_TOP
+
+ 79:         618 LOAD_FAST            (output)
+             620 RETURN_VALUE
+
+
+# Method Name:       level_tile
+# Filename:          v15_2\alignment.py
+# Argument count:    12
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  30
+# Stack size:        17
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        81
+# Constants:
+#    0: None
+#    1: -2
+#    2: 15
+#    3: 30
+#    4: 'a1'
+#    5: 'let p=i%'
+#    6: 'u;let c=i/'
+#    7: 'u;let gx=i32(p%'
+#    8: 'u)+i32(a3[0])-15;let gy=i32(p/'
+#    9: 'u)+i32(a3[1])-15;\nif(gx<0||gy<0||gx>='
+#   10: '||gy>='
+#   11: '){dst[i]=0.;return;}\nlet ix=u32(gy)*'
+#   12: 'u+u32(gx);let f=vec2<f32>(a2[ix],a2['
+#   13: 'u+ix]);'
+#   14: 'flow_basic_input'
+#   15: 1
+#   16: 8
+#   17: 'if(c<3u){dst[i]=a0[c*'
+#   18: 'u+ix];}else if(c<6u){dst[i]=sample_a1(c-3u,vec2<f32>(f32(gx),f32(gy))+f);}else{dst[i]=f[c-6u];}'
+#   19: 'flow_hdr_input'
+#   20: 24
+#   21: 'if(c<12u){dst[i]=a0[c*'
+#   22: 'u+ix];}else{dst[i]=sample_a1(c-12u,vec2<f32>(f32(gx),f32(gy))+f);}'
+#   23: 'basic_module'
+#   24: 5
+#   25: 'hdr'
+#   26: 2
+#   27: 'basic_module.'
+#   28: '.basic_module.'
+#   29: '.conv'
+#   30: 'hdr.'
+#   31: '.'
+#   32: '.weight'
+#   33: '.bias'
+#   34: 'u)+i32(a1[0])-15;let gy=i32(p/'
+#   35: 'u)+i32(a1[1])-15;dst[i]=select(0.,'
+#   36: 'max(a0[i],0.)'
+#   37: 'a0[i]'
+#   38: ',gx>=0&&gy>=0&&gx<'
+#   39: '&&gy<'
+#   40: ');'
+#   41: 'flow_relu_boundary'
+#   42: 'flow_boundary'
+#   43: 'u;let xx=p%'
+#   44: 'u;let yy=p/'
+#   45: 'u;let q=c*'
+#   46: 'u+(yy+15u)*'
+#   47: 'u+xx+15u;let dstp=c*'
+#   48: 'u+(u32(a3[1])+yy)*'
+#   49: 'u+u32(a3[0])+xx;dst[dstp]=a0[dstp]+a1[q]+a2[q];'
+#   50: 'flow_paste'
+#   51: ('count', 'out')
+# Names:
+#    0: spec
+#    1: shape
+#    2: origin
+#    3: rt
+#    4: update
+#    5: np
+#    6: array
+#    7: float32
+#    8: bilinear
+#    9: emit
+#   10: range
+#   11: conv
+#   12: weights
+#   13: free
+# Varnames:
+#	self, level, ref, src, rc, sc, flow, out, x, y, cw, ch, h, w, halo, th, tw, n, params, helper, prefix, basic, extra, branch, v, layers, j, name, z, body
+# Positional arguments:
+#	self, level, ref, src, rc, sc, flow, out, x, y, cw, ch
+# Local variables:
+#   12: h
+#   13: w
+#   14: halo
+#   15: th
+#   16: tw
+#   17: n
+#   18: params
+#   19: helper
+#   20: prefix
+#   21: basic
+#   22: extra
+#   23: branch
+#   24: v
+#   25: layers
+#   26: j
+#   27: name
+#   28: z
+#   29: body
+
+ 84:           0 LOAD_FAST            (ref)
+               2 LOAD_ATTR            (spec)
+               4 LOAD_ATTR            (shape)
+               6 LOAD_CONST           (-2)
+               8 LOAD_CONST           (None)
+              10 BUILD_SLICE          2
+              12 BINARY_SUBSCR
+              14 UNPACK_SEQUENCE      2
+              16 STORE_FAST           (h)
+              18 STORE_FAST           (w)
+              20 LOAD_CONST           (15)
+              22 STORE_FAST           (halo)
+              24 LOAD_FAST            (ch)
+              26 LOAD_CONST           (30)
+              28 BINARY_ADD
+              30 LOAD_FAST            (cw)
+              32 LOAD_CONST           (30)
+              34 BINARY_ADD
+              36 ROT_TWO
+              38 STORE_FAST           (th)
+              40 STORE_FAST           (tw)
+              42 LOAD_FAST            (th)
+              44 LOAD_FAST            (tw)
+              46 BINARY_MULTIPLY
+              48 STORE_FAST           (n)
+
+ 85:          50 LOAD_FAST            (self)
+              52 LOAD_ATTR            (origin)
+              54 STORE_FAST           (params)
+              56 LOAD_FAST            (self)
+              58 LOAD_ATTR            (rt)
+              60 LOAD_METHOD          (update)
+              62 LOAD_FAST            (params)
+              64 LOAD_GLOBAL          (np)
+              66 LOAD_METHOD          (array)
+              68 LOAD_FAST            (x)
+              70 LOAD_FAST            (y)
+              72 BUILD_LIST           2
+              74 LOAD_GLOBAL          (np)
+              76 LOAD_ATTR            (float32)
+              78 CALL_METHOD          (2 positional arguments)
+              80 CALL_METHOD          (2 positional arguments)
+              82 POP_TOP
+
+ 86:          84 LOAD_GLOBAL          (bilinear)
+              86 LOAD_CONST           ("a1")
+              88 LOAD_FAST            (h)
+              90 LOAD_FAST            (w)
+              92 CALL_FUNCTION        (3 positional arguments)
+              94 STORE_FAST           (helper)
+
+ 87:          96 LOAD_CONST           ("let p=i%")
+              98 LOAD_FAST            (n)
+             100 FORMAT_VALUE         0
+             102 LOAD_CONST           ("u;let c=i/")
+             104 LOAD_FAST            (n)
+             106 FORMAT_VALUE         0
+             108 LOAD_CONST           ("u;let gx=i32(p%")
+             110 LOAD_FAST            (tw)
+             112 FORMAT_VALUE         0
+             114 LOAD_CONST           ("u)+i32(a3[0])-15;let gy=i32(p/")
+             116 LOAD_FAST            (tw)
+             118 FORMAT_VALUE         0
+             120 LOAD_CONST           ("u)+i32(a3[1])-15;\nif(gx<0||gy<0||gx>=")
+
+ 88:         122 LOAD_FAST            (w)
+
+ 87:         124 FORMAT_VALUE         0
+             126 LOAD_CONST           ("||gy>=")
+
+ 88:         128 LOAD_FAST            (h)
+
+ 87:         130 FORMAT_VALUE         0
+             132 LOAD_CONST           ("){dst[i]=0.;return;}\nlet ix=u32(gy)*")
+
+ 89:         134 LOAD_FAST            (w)
+
+ 87:         136 FORMAT_VALUE         0
+             138 LOAD_CONST           ("u+u32(gx);let f=vec2<f32>(a2[ix],a2[")
+
+ 89:         140 LOAD_FAST            (h)
+             142 LOAD_FAST            (w)
+             144 BINARY_MULTIPLY
+
+ 87:         146 FORMAT_VALUE         0
+             148 LOAD_CONST           ("u+ix]);")
+             150 BUILD_STRING         17
+             152 STORE_FAST           (prefix)
+
+ 90:         154 LOAD_FAST            (self)
+             156 LOAD_METHOD          (emit)
+             158 LOAD_CONST           ("flow_basic_input")
+             160 LOAD_FAST            (ref)
+             162 LOAD_FAST            (src)
+             164 LOAD_FAST            (flow)
+             166 LOAD_FAST            (params)
+             168 BUILD_LIST           4
+             170 LOAD_CONST           (1)
+             172 LOAD_CONST           (8)
+             174 LOAD_FAST            (th)
+             176 LOAD_FAST            (tw)
+             178 BUILD_TUPLE          4
+             180 LOAD_FAST            (prefix)
+             182 LOAD_CONST           ("if(c<3u){dst[i]=a0[c*")
+             184 LOAD_FAST            (h)
+             186 LOAD_FAST            (w)
+             188 BINARY_MULTIPLY
+             190 FORMAT_VALUE         0
+             192 LOAD_CONST           ("u+ix];}else if(c<6u){dst[i]=sample_a1(c-3u,vec2<f32>(f32(gx),f32(gy))+f);}else{dst[i]=f[c-6u];}")
+             194 BUILD_STRING         3
+             196 BINARY_ADD
+             198 LOAD_FAST            (helper)
+             200 CALL_METHOD          (5 positional arguments)
+             202 STORE_FAST           (basic)
+
+ 91:         204 LOAD_FAST            (self)
+             206 LOAD_METHOD          (emit)
+             208 LOAD_CONST           ("flow_hdr_input")
+             210 LOAD_FAST            (rc)
+             212 LOAD_FAST            (sc)
+             214 LOAD_FAST            (flow)
+             216 LOAD_FAST            (params)
+             218 BUILD_LIST           4
+             220 LOAD_CONST           (1)
+             222 LOAD_CONST           (24)
+             224 LOAD_FAST            (th)
+             226 LOAD_FAST            (tw)
+             228 BUILD_TUPLE          4
+             230 LOAD_FAST            (prefix)
+             232 LOAD_CONST           ("if(c<12u){dst[i]=a0[c*")
+             234 LOAD_FAST            (h)
+             236 LOAD_FAST            (w)
+             238 BINARY_MULTIPLY
+             240 FORMAT_VALUE         0
+             242 LOAD_CONST           ("u+ix];}else{dst[i]=sample_a1(c-12u,vec2<f32>(f32(gx),f32(gy))+f);}")
+             244 BUILD_STRING         3
+             246 BINARY_ADD
+             248 LOAD_FAST            (helper)
+             250 CALL_METHOD          (5 positional arguments)
+             252 STORE_FAST           (extra)
+
+ 92:         254 LOAD_CONST           ("basic_module")
+             256 LOAD_FAST            (basic)
+             258 LOAD_CONST           (5)
+             260 BUILD_TUPLE          3
+             262 LOAD_CONST           ("hdr")
+             264 LOAD_FAST            (extra)
+             266 LOAD_CONST           (2)
+             268 BUILD_TUPLE          3
+             270 BUILD_TUPLE          2
+             272 GET_ITER
+         >>  274 FOR_ITER             (to 526)
+             276 UNPACK_SEQUENCE      3
+             278 STORE_FAST           (branch)
+             280 STORE_FAST           (v)
+             282 STORE_FAST           (layers)
+
+ 93:         284 LOAD_GLOBAL          (range)
+             286 LOAD_FAST            (layers)
+             288 CALL_FUNCTION        (1 positional argument)
+             290 GET_ITER
+         >>  292 FOR_ITER             (to 504)
+             294 STORE_FAST           (j)
+
+ 94:         296 LOAD_FAST            (branch)
+             298 LOAD_CONST           ("basic_module")
+             300 COMPARE_OP           (==)
+             302 POP_JUMP_IF_FALSE    (to 322)
+             304 LOAD_CONST           ("basic_module.")
+             306 LOAD_FAST            (level)
+             308 FORMAT_VALUE         0
+             310 LOAD_CONST           (".basic_module.")
+             312 LOAD_FAST            (j)
+             314 FORMAT_VALUE         0
+             316 LOAD_CONST           (".conv")
+             318 BUILD_STRING         5
+             320 JUMP_FORWARD         (to 340)
+         >>  322 LOAD_CONST           ("hdr.")
+             324 LOAD_FAST            (level)
+             326 FORMAT_VALUE         0
+             328 LOAD_CONST           (".")
+             330 LOAD_FAST            (j)
+             332 LOAD_CONST           (2)
+             334 BINARY_MULTIPLY
+             336 FORMAT_VALUE         0
+             338 BUILD_STRING         4
+         >>  340 STORE_FAST           (name)
+
+ 95:         342 LOAD_FAST            (self)
+             344 LOAD_METHOD          (conv)
+             346 LOAD_FAST            (v)
+             348 LOAD_FAST            (self)
+             350 LOAD_ATTR            (weights)
+             352 LOAD_FAST            (name)
+             354 LOAD_CONST           (".weight")
+             356 BINARY_ADD
+             358 BINARY_SUBSCR
+             360 LOAD_FAST            (self)
+             362 LOAD_ATTR            (weights)
+             364 LOAD_FAST            (name)
+             366 LOAD_CONST           (".bias")
+             368 BINARY_ADD
+             370 BINARY_SUBSCR
+             372 CALL_METHOD          (3 positional arguments)
+             374 STORE_FAST           (z)
+             376 LOAD_FAST            (self)
+             378 LOAD_ATTR            (rt)
+             380 LOAD_METHOD          (free)
+             382 LOAD_FAST            (v)
+             384 CALL_METHOD          (1 positional argument)
+             386 POP_TOP
+
+ 96:         388 LOAD_CONST           ("let p=i%")
+             390 LOAD_FAST            (n)
+             392 FORMAT_VALUE         0
+             394 LOAD_CONST           ("u;let gx=i32(p%")
+             396 LOAD_FAST            (tw)
+             398 FORMAT_VALUE         0
+             400 LOAD_CONST           ("u)+i32(a1[0])-15;let gy=i32(p/")
+             402 LOAD_FAST            (tw)
+             404 FORMAT_VALUE         0
+             406 LOAD_CONST           ("u)+i32(a1[1])-15;dst[i]=select(0.,")
+             408 BUILD_STRING         7
+             410 LOAD_FAST            (j)
+             412 LOAD_FAST            (layers)
+             414 LOAD_CONST           (1)
+             416 BINARY_SUBTRACT
+             418 COMPARE_OP           (<)
+             420 POP_JUMP_IF_FALSE    (to 426)
+             422 LOAD_CONST           ("max(a0[i],0.)")
+             424 JUMP_FORWARD         (to 428)
+         >>  426 LOAD_CONST           ("a0[i]")
+         >>  428 BINARY_ADD
+             430 LOAD_CONST           (",gx>=0&&gy>=0&&gx<")
+             432 LOAD_FAST            (w)
+             434 FORMAT_VALUE         0
+             436 LOAD_CONST           ("&&gy<")
+             438 LOAD_FAST            (h)
+             440 FORMAT_VALUE         0
+             442 LOAD_CONST           (");")
+             444 BUILD_STRING         5
+             446 BINARY_ADD
+             448 STORE_FAST           (body)
+
+ 97:         450 LOAD_FAST            (self)
+             452 LOAD_METHOD          (emit)
+             454 LOAD_FAST            (j)
+             456 LOAD_FAST            (layers)
+             458 LOAD_CONST           (1)
+             460 BINARY_SUBTRACT
+             462 COMPARE_OP           (<)
+             464 POP_JUMP_IF_FALSE    (to 470)
+             466 LOAD_CONST           ("flow_relu_boundary")
+             468 JUMP_FORWARD         (to 472)
+         >>  470 LOAD_CONST           ("flow_boundary")
+         >>  472 LOAD_FAST            (z)
+             474 LOAD_FAST            (params)
+             476 BUILD_LIST           2
+             478 LOAD_FAST            (z)
+             480 LOAD_ATTR            (spec)
+             482 LOAD_ATTR            (shape)
+             484 LOAD_FAST            (body)
+             486 CALL_METHOD          (4 positional arguments)
+             488 STORE_FAST           (v)
+             490 LOAD_FAST            (self)
+             492 LOAD_ATTR            (rt)
+             494 LOAD_METHOD          (free)
+             496 LOAD_FAST            (z)
+             498 CALL_METHOD          (1 positional argument)
+             500 POP_TOP
+             502 JUMP_ABSOLUTE        (to 292)
+
+ 98:     >>  504 LOAD_FAST            (branch)
+             506 LOAD_CONST           ("basic_module")
+             508 COMPARE_OP           (==)
+             510 EXTENDED_ARG         (256)
+             512 POP_JUMP_IF_FALSE    (to 520)
+             514 LOAD_FAST            (v)
+             516 STORE_FAST           (basic)
+             518 JUMP_ABSOLUTE        (to 274)
+
+ 99:     >>  520 LOAD_FAST            (v)
+             522 STORE_FAST           (extra)
+             524 JUMP_ABSOLUTE        (to 274)
+
+100:     >>  526 LOAD_CONST           ("let p=i%")
+             528 LOAD_FAST            (ch)
+             530 LOAD_FAST            (cw)
+             532 BINARY_MULTIPLY
+             534 FORMAT_VALUE         0
+             536 LOAD_CONST           ("u;let c=i/")
+             538 LOAD_FAST            (ch)
+             540 LOAD_FAST            (cw)
+             542 BINARY_MULTIPLY
+             544 FORMAT_VALUE         0
+             546 LOAD_CONST           ("u;let xx=p%")
+             548 LOAD_FAST            (cw)
+             550 FORMAT_VALUE         0
+             552 LOAD_CONST           ("u;let yy=p/")
+             554 LOAD_FAST            (cw)
+             556 FORMAT_VALUE         0
+             558 LOAD_CONST           ("u;let q=c*")
+             560 LOAD_FAST            (n)
+             562 FORMAT_VALUE         0
+             564 LOAD_CONST           ("u+(yy+15u)*")
+             566 LOAD_FAST            (tw)
+             568 FORMAT_VALUE         0
+             570 LOAD_CONST           ("u+xx+15u;let dstp=c*")
+             572 LOAD_FAST            (h)
+             574 LOAD_FAST            (w)
+             576 BINARY_MULTIPLY
+             578 FORMAT_VALUE         0
+             580 LOAD_CONST           ("u+(u32(a3[1])+yy)*")
+             582 LOAD_FAST            (w)
+             584 FORMAT_VALUE         0
+             586 LOAD_CONST           ("u+u32(a3[0])+xx;dst[dstp]=a0[dstp]+a1[q]+a2[q];")
+             588 BUILD_STRING         17
+             590 STORE_FAST           (body)
+
+101:         592 LOAD_FAST            (self)
+             594 LOAD_ATTR            (emit)
+             596 LOAD_CONST           ("flow_paste")
+             598 LOAD_FAST            (flow)
+             600 LOAD_FAST            (basic)
+             602 LOAD_FAST            (extra)
+             604 LOAD_FAST            (params)
+             606 BUILD_LIST           4
+             608 LOAD_FAST            (out)
+             610 LOAD_ATTR            (spec)
+             612 LOAD_ATTR            (shape)
+             614 LOAD_FAST            (body)
+             616 LOAD_CONST           (2)
+             618 LOAD_FAST            (ch)
+             620 BINARY_MULTIPLY
+             622 LOAD_FAST            (cw)
+             624 BINARY_MULTIPLY
+             626 LOAD_FAST            (out)
+             628 LOAD_CONST           (('count', 'out'))
+             630 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             632 POP_TOP
+
+102:         634 LOAD_FAST            (self)
+             636 LOAD_ATTR            (rt)
+             638 LOAD_METHOD          (free)
+             640 LOAD_FAST            (basic)
+             642 CALL_METHOD          (1 positional argument)
+             644 POP_TOP
+             646 LOAD_FAST            (self)
+             648 LOAD_ATTR            (rt)
+             650 LOAD_METHOD          (free)
+             652 LOAD_FAST            (extra)
+             654 CALL_METHOD          (1 positional argument)
+             656 POP_TOP
+             658 LOAD_CONST           (None)
+             660 RETURN_VALUE
+
+
+# Method Name:       <genexpr>
+# Filename:          v15_2\alignment.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        4
+# Flags:             0x00000073 (NOFREE | GENERATOR | NESTED | NEWLOCALS | OPTIMIZED)
+# First Line:        17
+# Constants:
+#    0: None
+# Names:
+#    0: str
+#    1: float
+# Varnames:
+#	.0, v
+# Positional arguments:
+#	.0
+# Local variables:
+#    1: v
+               0 GEN_START            0
+
+ 17:           2 LOAD_FAST            (.0)
+         >>    4 FOR_ITER             (to 24)
+               6 STORE_FAST           (v)
+               8 LOAD_GLOBAL          (str)
+              10 LOAD_GLOBAL          (float)
+              12 LOAD_FAST            (v)
+              14 CALL_FUNCTION        (1 positional argument)
+              16 CALL_FUNCTION        (1 positional argument)
+              18 YIELD_VALUE
+              20 POP_TOP
+              22 JUMP_ABSOLUTE        (to 4)
+         >>   24 LOAD_CONST           (None)
+              26 RETURN_VALUE
+
+
+# Method Name:       <dictcomp>
+# Filename:          v15_2\alignment.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        7
+# Flags:             0x00000013 (NESTED | NEWLOCALS | OPTIMIZED)
+# First Line:        51
+# Names:
+#    0: upload
+# Varnames:
+#	.0, k
+# Positional arguments:
+#	.0
+# Local variables:
+#    1: k
+# Cell variables:
+#    0: rt
+#    1: z
+
+ 51:           0 BUILD_MAP            0
+               2 LOAD_FAST            (.0)
+         >>    4 FOR_ITER             (to 26)
+               6 STORE_FAST           (k)
+               8 LOAD_FAST            (k)
+              10 LOAD_DEREF           (rt)
+              12 LOAD_METHOD          (upload)
+              14 LOAD_DEREF           (z)
+              16 LOAD_FAST            (k)
+              18 BINARY_SUBSCR
+              20 CALL_METHOD          (1 positional argument)
+              22 MAP_ADD              2
+              24 JUMP_ABSOLUTE        (to 4)
+         >>   26 RETURN_VALUE
+
+
+# Method Name:       <listcomp>
+# Filename:          v15_2\alignment.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        4
+# Flags:             0x00000013 (NESTED | NEWLOCALS | OPTIMIZED)
+# First Line:        67
+# Varnames:
+#	.0, p
+# Positional arguments:
+#	.0
+# Local variables:
+#    1: p
+# Cell variables:
+#    0: level
+
+ 67:           0 BUILD_LIST           0
+               2 LOAD_FAST            (.0)
+         >>    4 FOR_ITER             (to 18)
+               6 STORE_FAST           (p)
+               8 LOAD_FAST            (p)
+              10 LOAD_DEREF           (level)
+              12 BINARY_SUBSCR
+              14 LIST_APPEND          2
+              16 JUMP_ABSOLUTE        (to 4)
+         >>   18 RETURN_VALUE
+

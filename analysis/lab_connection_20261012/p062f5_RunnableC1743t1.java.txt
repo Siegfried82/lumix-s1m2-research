@@ -1,0 +1,25 @@
+62:                 RemotePhotostyleActivity remotePhotostyleActivity = this.f21099s;
+63:                 int i10 = this.f21100x;
+64:                 if (remotePhotostyleActivity.f16878I0 == null) {
+65:                     remotePhotostyleActivity.f16878I0 = new C0657v0();
+66:                 }
+67:                 SecureRandom secureRandom = new SecureRandom();
+68:                 try {
+69:                     try {
+70:                         DatagramSocket datagramSocket = new DatagramSocket(C1410v.f18185d);
+71:                         try {
+72:                             InetSocketAddress inetSocketAddress = new InetSocketAddress("192.168.54.1", i10);
+73:                             new C1637v();
+74:                             C1650a2 c1650a2 = new C1650a2(remotePhotostyleActivity, new f(secureRandom));
+75:                             datagramSocket.connect(inetSocketAddress);
+76:                             y1 y1Var = new y1(datagramSocket, 1048576);
+77:                             try {
+78:                                 aVar = new a(y1Var, secureRandom, 0, 0);
+79:                                 try {
+80:                                     hB = C1637v.b(c1650a2, aVar);
+81:                                     try {
+82:                                         byte[] bArr = new byte[1048576];
+83:                                         while (!remotePhotostyleActivity.f16882M0) {
+84:                                             int iA = hB.a(1048576, 0, bArr);
+85:                                             byte[] bArr2 = new byte[iA];
+86:                                             System.arraycopy(bArr, 0, bArr2, 0, iA);

@@ -1,0 +1,186 @@
+{
+  "zip_sha256": "ee38f481880f9d86fc5192d1844fadf0bb90960fbba5d2e964ecc5997105e362",
+  "review": "static log/header parsing only; no device access; supplier scripts not executed",
+  "raw_binary_snapshots_in_zip": false,
+  "experiments": [
+    {
+      "entry": "logs\\rigorous_clock_log_20261011_031440.txt",
+      "sha256": "2e7800b3c356404e22b8a5d1f2e5c2d654ffef492a144691a1377c744e8f54e6",
+      "command_count": 11,
+      "matched_final_ok_response_count": 11,
+      "clock_years_from_hex": [
+        {
+          "tid": 3,
+          "year": 2030
+        },
+        {
+          "tid": 5,
+          "year": 2030
+        },
+        {
+          "tid": 7,
+          "year": 2031
+        },
+        {
+          "tid": 9,
+          "year": 2030
+        }
+      ],
+      "containers": [
+        {
+          "tid": 1,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        },
+        {
+          "tid": 2,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 16
+        },
+        {
+          "tid": 3,
+          "type": 2,
+          "code": "0x940a",
+          "container_length": 94
+        },
+        {
+          "tid": 3,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        },
+        {
+          "tid": 4,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        },
+        {
+          "tid": 5,
+          "type": 2,
+          "code": "0x940a",
+          "container_length": 94
+        },
+        {
+          "tid": 5,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        },
+        {
+          "tid": 6,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        },
+        {
+          "tid": 7,
+          "type": 2,
+          "code": "0x940a",
+          "container_length": 94
+        },
+        {
+          "tid": 7,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        },
+        {
+          "tid": 8,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        },
+        {
+          "tid": 9,
+          "type": 2,
+          "code": "0x940a",
+          "container_length": 94
+        },
+        {
+          "tid": 9,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        },
+        {
+          "tid": 10,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        },
+        {
+          "tid": 11,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        }
+      ]
+    },
+    {
+      "entry": "logs\\rigorous_config_log_20261011_031517.txt",
+      "sha256": "cce22b909f154def831d68c584d52ea2c07761368cb1124891314e269c8cd066",
+      "command_count": 7,
+      "matched_final_ok_response_count": 7,
+      "clock_years_from_hex": [],
+      "containers": [
+        {
+          "tid": 1,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        },
+        {
+          "tid": 2,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 16
+        },
+        {
+          "tid": 3,
+          "type": 2,
+          "code": "0x9421",
+          "container_length": 9197349
+        },
+        {
+          "tid": 3,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        },
+        {
+          "tid": 4,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        },
+        {
+          "tid": 5,
+          "type": 2,
+          "code": "0x9421",
+          "container_length": 9197349
+        },
+        {
+          "tid": 5,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        },
+        {
+          "tid": 6,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        },
+        {
+          "tid": 7,
+          "type": 3,
+          "code": "0x2001",
+          "container_length": 12
+        }
+      ]
+    }
+  ]
+}

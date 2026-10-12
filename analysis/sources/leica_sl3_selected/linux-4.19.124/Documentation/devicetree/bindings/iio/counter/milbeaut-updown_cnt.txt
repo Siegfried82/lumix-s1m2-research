@@ -1,0 +1,26 @@
+SOCIONEXT Milbeaut Updown counter
+
+Required properties:
+- compatible:		Must be "socionext,milbeaut-updown-counter".
+- interrupts:       SPI number of the device's set.
+- cms_type: 		connected_device
+                      1: updown button  (updown counter mode)
+                      2: rotary encoder (phase difference counter mode)
+
+Example:
+
+	updown0: updown@1e002000 {
+		#address-cells = <1>;
+		#size-cells = <0>;
+		compatible = "socionext,milbeaut-updown";
+		reg = <0x1e002000 0x20>;
+		interrupts = <0 104 0x4>;
+		clocks = <&rclk>;
+		clock-names = "mux";
+
+		counter {
+			compatible = "socionext,milbeaut-updown-counter";
+			interrupts = <0 104 0x4>;
+			cms_type = <1>;
+		};
+	};

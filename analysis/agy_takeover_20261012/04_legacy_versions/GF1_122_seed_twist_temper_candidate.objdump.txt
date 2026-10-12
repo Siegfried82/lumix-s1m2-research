@@ -1,0 +1,152 @@
+
+<LOCAL_WORKSPACE>/analysis/method0_review_20261011/decoded/GF1__122.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+400b2442 <.data+0xb2442>:
+400b2442:	fc 81 9c 5d 	mov	d0,(0x74145d9c)
+400b2446:	14 74 
+400b2448:	8a 01       	mov	1,d2
+400b244a:	db          	setlb	
+400b244b:	88          	mov	d2,d0
+400b244c:	54          	asl2	d0
+400b244d:	fc dd 9c 5d 	mov	1947491740,a1
+400b2451:	14 74 
+400b2453:	f1 61       	add	d0,a1
+400b2455:	fc dc fc ff 	mov	-4,a0
+400b2459:	ff ff 
+400b245b:	f1 74       	add	a1,a0
+400b245d:	74          	mov	(a0),d1
+400b245e:	70          	mov	(a0),d0
+400b245f:	f8 c4 1e    	lsr	30,d0
+400b2462:	f2 21       	xor	d0,d1
+400b2464:	fd 15 65 89 	udfu01	1812433253,d1
+400b2468:	07 6c 
+400b246a:	e9          	add	d2,d1
+400b246b:	65          	mov	d1,(a1)
+400b246c:	48          	inc	d2
+400b246d:	fc 89 30 63 	mov	d2,(0x74126330)
+400b2471:	12 74 
+400b2473:	fa ca 70 02 	cmp	624,d2
+400b2477:	d0          	llt	
+400b2478:	de a0 08    	retf	[d2,a2],8
+400b247b:	fc a4 30 63 	mov	(0x74126330),d0
+400b247f:	12 74 
+400b2481:	fa c8 70 02 	cmp	624,d0
+400b2485:	c2 05       	bge	0x400b248a
+400b2487:	cc cf 00    	jmp	0x400b2556
+400b248a:	fa c8 71 02 	cmp	625,d0
+400b248e:	c9 0a       	bne	0x400b2498
+400b2490:	2c 71 15    	mov	5489,d0
+400b2493:	cd af ff a0 	call	0x400b2442,[d2,a2],8
+400b2497:	08 
+400b2498:	0c          	clr	d3
+400b2499:	fc dc 9c 5d 	mov	1947491740,a0
+400b249d:	14 74 
+400b249f:	fc dd 34 63 	mov	1947362100,a1
+400b24a3:	12 74 
+400b24a5:	db          	setlb	
+400b24a6:	70          	mov	(a0),d0
+400b24a7:	f8 04 04    	mov	(4,a0),d1
+400b24aa:	fc e0 00 00 	and	-2147483648,d0
+400b24ae:	00 80 
+400b24b0:	fc e1 ff ff 	and	2147483647,d1
+400b24b4:	ff 7f 
+400b24b6:	f2 14       	or	d1,d0
+400b24b8:	fa 08 34 06 	mov	(1588,a0),d2
+400b24bc:	85 01       	mov	1,d1
+400b24be:	f2 01       	and	d0,d1
+400b24c0:	55          	asl2	d1
+400b24c1:	f3 15       	mov	(d1,a1),d1
+400b24c3:	f8 c4 01    	lsr	1,d0
+400b24c6:	f2 26       	xor	d1,d2
+400b24c8:	89          	mov	d2,d1
+400b24c9:	f2 21       	xor	d0,d1
+400b24cb:	64          	mov	d1,(a0)
+400b24cc:	4c          	inc	d3
+400b24cd:	50          	inc4	a0
+400b24ce:	fa cb e3 00 	cmp	227,d3
+400b24d2:	d0          	llt	
+400b24d3:	25 6f 02    	mov	623,a1
+400b24d6:	f1 97       	cmp	a1,d3
+400b24d8:	c2 3d       	bge	0x400b2515
+400b24da:	8c          	mov	d3,d0
+400b24db:	54          	asl2	d0
+400b24dc:	f1 e0       	mov	d0,a0
+400b24de:	fc d0 9c 5d 	add	1947491740,a0
+400b24e2:	14 74 
+400b24e4:	fc de 34 63 	mov	1947362100,a2
+400b24e8:	12 74 
+400b24ea:	db          	setlb	
+400b24eb:	74          	mov	(a0),d1
+400b24ec:	f8 00 04    	mov	(4,a0),d0
+400b24ef:	fc e1 00 00 	and	-2147483648,d1
+400b24f3:	00 80 
+400b24f5:	fc e0 ff ff 	and	2147483647,d0
+400b24f9:	ff 7f 
+400b24fb:	f2 11       	or	d0,d1
+400b24fd:	fa 00 74 fc 	mov	(-908,a0),d0
+400b2501:	8a 01       	mov	1,d2
+400b2503:	f2 06       	and	d1,d2
+400b2505:	56          	asl2	d2
+400b2506:	f3 2a       	mov	(d2,a2),d2
+400b2508:	f8 c5 01    	lsr	1,d1
+400b250b:	f2 28       	xor	d2,d0
+400b250d:	f2 24       	xor	d1,d0
+400b250f:	60          	mov	d0,(a0)
+400b2510:	4c          	inc	d3
+400b2511:	50          	inc4	a0
+400b2512:	f1 97       	cmp	a1,d3
+400b2514:	d0          	llt	
+400b2515:	fc a5 58 67 	mov	(0x74146758),d1
+400b2519:	14 74 
+400b251b:	fc a4 9c 5d 	mov	(0x74145d9c),d0
+400b251f:	14 74 
+400b2521:	fc e1 00 00 	and	-2147483648,d1
+400b2525:	00 80 
+400b2527:	fc e0 ff ff 	and	2147483647,d0
+400b252b:	ff 7f 
+400b252d:	f2 11       	or	d0,d1
+400b252f:	80 01       	mov	1,d0
+400b2531:	f2 04       	and	d1,d0
+400b2533:	54          	asl2	d0
+400b2534:	fc dc 34 63 	mov	1947362100,a0
+400b2538:	12 74 
+400b253a:	f3 20       	mov	(d0,a0),d2
+400b253c:	fc a4 cc 63 	mov	(0x741463cc),d0
+400b2540:	14 74 
+400b2542:	f8 c5 01    	lsr	1,d1
+400b2545:	f2 22       	xor	d0,d2
+400b2547:	f2 26       	xor	d1,d2
+400b2549:	fc 89 58 67 	mov	d2,(0x74146758)
+400b254d:	14 74 
+400b254f:	00          	clr	d0
+400b2550:	fc 81 30 63 	mov	d0,(0x74126330)
+400b2554:	12 74 
+400b2556:	54          	asl2	d0
+400b2557:	fc dc 9c 5d 	mov	1947491740,a0
+400b255b:	14 74 
+400b255d:	f3 00       	mov	(d0,a0),d0
+400b255f:	fc a5 30 63 	mov	(0x74126330),d1
+400b2563:	12 74 
+400b2565:	44          	inc	d1
+400b2566:	fc 85 30 63 	mov	d1,(0x74126330)
+400b256a:	12 74 
+400b256c:	81          	mov	d0,d1
+400b256d:	f8 c5 0b    	lsr	11,d1
+400b2570:	f2 24       	xor	d1,d0
+400b2572:	81          	mov	d0,d1
+400b2573:	f8 c1 07    	asl	7,d1
+400b2576:	fc e1 80 56 	and	-1658038656,d1
+400b257a:	2c 9d 
+400b257c:	f2 24       	xor	d1,d0
+400b257e:	81          	mov	d0,d1
+400b257f:	f8 c1 0f    	asl	15,d1
+400b2582:	fc e1 00 00 	and	-272236544,d1
+400b2586:	c6 ef 
+400b2588:	f2 21       	xor	d0,d1
+400b258a:	84          	mov	d1,d0
+400b258b:	f8 c4 12    	lsr	18,d0
+400b258e:	f2 24       	xor	d1,d0
+400b2590:	df e0 10    	ret	[d2,d3,a2],16

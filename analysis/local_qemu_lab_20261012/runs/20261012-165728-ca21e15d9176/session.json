@@ -1,0 +1,89 @@
+{
+  "name": "lumix-lab-ca21e15d9176",
+  "run_dir": "<LOCAL_WORKSPACE>/analysis/local_qemu_lab_20261012/runs/20261012-165728-ca21e15d9176",
+  "qmp": "/var/folders/lz/f84g6tx13n7fyq_cxr7pl56c0000gn/T/lumix-lab-0m2p3a2k/qmp.sock",
+  "serial": "/var/folders/lz/f84g6tx13n7fyq_cxr7pl56c0000gn/T/lumix-lab-0m2p3a2k/serial.sock",
+  "socket_dir": "/var/folders/lz/f84g6tx13n7fyq_cxr7pl56c0000gn/T/lumix-lab-0m2p3a2k",
+  "inputs": [
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/external_qemu_sandbox_20261012/qemu_sandbox/Image",
+      "bytes": 14379016,
+      "sha256": "7476c24106ec3a031a496d22da9d070dc9d7f92c2ad0a5c43a5813be11af82d4"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/external_qemu_sandbox_20261012/qemu_sandbox/initramfs.cpio.gz",
+      "bytes": 1622360,
+      "sha256": "fcf731f690c01b3d3468cc709fbc6f368f026472eea7b52a6fec88ea0d435764"
+    }
+  ],
+  "ram_base": 1073741824,
+  "ram_size": 1073741824,
+  "shell_verified": true,
+  "time_basis": "UTC",
+  "qemu_version": "QEMU emulator version 11.1.2",
+  "command": [
+    "<LOCAL_WORKSPACE>/analysis/local_qemu_lab_20261012/runtime/cellar/qemu/11.1.2/bin/qemu-system-aarch64",
+    "-name",
+    "lumix-lab-ca21e15d9176",
+    "-machine",
+    "virt,gic-version=2",
+    "-accel",
+    "tcg",
+    "-cpu",
+    "cortex-a53",
+    "-smp",
+    "1",
+    "-m",
+    "1024",
+    "-nodefaults",
+    "-nic",
+    "none",
+    "-display",
+    "none",
+    "-monitor",
+    "none",
+    "-no-reboot",
+    "-kernel",
+    "<LOCAL_WORKSPACE>/analysis/external_qemu_sandbox_20261012/qemu_sandbox/Image",
+    "-initrd",
+    "<LOCAL_WORKSPACE>/analysis/external_qemu_sandbox_20261012/qemu_sandbox/initramfs.cpio.gz",
+    "-append",
+    "console=ttyAMA0 init=/init loglevel=7 sbox.shell=1",
+    "-chardev",
+    "socket,id=console,path=/var/folders/lz/f84g6tx13n7fyq_cxr7pl56c0000gn/T/lumix-lab-0m2p3a2k/serial.sock,server=on,wait=off,logfile=<LOCAL_WORKSPACE>/analysis/local_qemu_lab_20261012/runs/20261012-165728-ca21e15d9176/serial.log",
+    "-serial",
+    "chardev:console",
+    "-qmp",
+    "unix:/var/folders/lz/f84g6tx13n7fyq_cxr7pl56c0000gn/T/lumix-lab-0m2p3a2k/qmp.sock,server=on,wait=off",
+    "-L",
+    "<LOCAL_WORKSPACE>/analysis/local_qemu_lab_20261012/runtime/cellar/qemu/11.1.2/share/qemu"
+  ],
+  "pid": 67220,
+  "boot_probe": {
+    "command": "uname -r; cat /proc/cmdline; test -d /proc/self",
+    "exit_code": 0,
+    "output": "4.19.124\nconsole=ttyAMA0 init=/init loglevel=7 sbox.shell=1\n"
+  },
+  "udc_bound": true,
+  "shutdown": {
+    "guest_requested": true,
+    "forced_qmp_quit": false,
+    "process_exited": true,
+    "qmp_eof": true,
+    "power_down_in_log": true,
+    "events": [
+      {
+        "timestamp": {
+          "seconds": 1791824394,
+          "microseconds": 141146
+        },
+        "event": "SHUTDOWN",
+        "data": {
+          "guest": true,
+          "reason": "guest-shutdown"
+        }
+      }
+    ],
+    "exit_code": null
+  }
+}

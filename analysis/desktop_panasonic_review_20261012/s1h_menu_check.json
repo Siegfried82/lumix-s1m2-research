@@ -1,0 +1,65 @@
+{
+  "model": "S1H",
+  "declared_quality_count": 106,
+  "mp4_enabled_count": 21,
+  "enabled_not_declared": [
+    "mp4_25p_10mbps",
+    "mp4ed_25p_100mbps",
+    "mp4ed_25p_100mbps_10bit",
+    "mp4ed_25p_100mbps_4k",
+    "mp4ed_25p_100mbps_c4k",
+    "mp4ed_25p_150mbps_4k_10bit",
+    "mp4ed_25p_150mbps_c4k_10bit",
+    "mp4ed_25p_200mbps_10bit",
+    "mp4ed_25p_400mbps_4k_10bit",
+    "mp4ed_25p_400mbps_c4k_10bit",
+    "mp4ed_50p_100mbps",
+    "mp4ed_50p_100mbps_10bit",
+    "mp4ed_50p_150mbps_4k",
+    "mp4ed_50p_150mbps_c4k",
+    "mp4ed_50p_200mbps_10bit",
+    "mp4hevc_25p_72mbps_4k_10bit"
+  ],
+  "target_declared": false,
+  "target_enabled": true,
+  "target_set_result": "ok",
+  "readbacks": {
+    "target_readback_0": {
+      "videoquality": "mp4ed_25p_400mbps_4k_10bit"
+    },
+    "target_readback_1": {
+      "videoquality": "mp4ed_25p_400mbps_4k_10bit"
+    },
+    "original_quality": {
+      "videoquality": "mov_25p_200mbps_5_4k_10bit"
+    },
+    "original_format": {
+      "videoformat": "mov"
+    },
+    "saved_mp4_quality": {
+      "videoquality": "mp4_50p_28mbps"
+    },
+    "target_format": {
+      "videoformat": "mp4ed"
+    }
+  },
+  "states": {
+    "initial_state": {
+      "rec": "off",
+      "cammode": "rec",
+      "version": "VD3.60"
+    },
+    "prepared_state": {
+      "rec": "off",
+      "cammode": "rec",
+      "version": "VD3.60"
+    }
+  },
+  "requests_without_response_file": [
+    "count_playback",
+    "before_count",
+    "count_restore_standby"
+  ],
+  "requests_have_timestamps": false,
+  "limitation": "Archived XML validates consistency, not independent hardware replication or request origin."
+}

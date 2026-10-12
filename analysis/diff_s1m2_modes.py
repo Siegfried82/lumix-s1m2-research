@@ -1,4 +1,3 @@
-from pathlib import Path
 import json
 import struct
 from inspect_lumix_settings import parse_lumix_settings
@@ -69,7 +68,7 @@ def diff_files(path_single, path_highres):
         for d in cr["diff_details"]:
             print(f"    {d}")
             
-    out_json = str(Path(__file__).resolve().parents[1] / 'analysis/s1m2_single_vs_highres_diff.json')
+    out_json = "<LOCAL_WORKSPACE>/analysis/s1m2_single_vs_highres_diff.json"
     with open(out_json, "w", encoding="utf-8") as f:
         json.dump({
             "total_byte_diffs": len(diff_offsets),
@@ -81,6 +80,6 @@ def diff_files(path_single, path_highres):
 
 if __name__ == "__main__":
     diff_files(
-        str(Path(__file__).resolve().parents[1] / 'analysis/S1M2_LIVE_EXTRACTED.DAT'),
-        str(Path(__file__).resolve().parents[1] / 'analysis/S1M2_LIVE_HIGHRES.DAT')
+        "<LOCAL_WORKSPACE>/analysis/S1M2_LIVE_EXTRACTED.DAT",
+        "<LOCAL_WORKSPACE>/analysis/S1M2_LIVE_HIGHRES.DAT"
     )

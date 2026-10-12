@@ -1,0 +1,2007 @@
+# pydisasm version 6.3.0
+# CPython Python bytecode 3.10 (3439)
+#   Disassembled from CPython Python 3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]
+# Timestamp in code: 0 (1970-01-01 03:00:00)
+# Method Name:       <module>
+# Filename:          v15_2\scene_consistency\detector.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        4
+# Flags:             0x00000040 (NOFREE)
+# First Line:        1
+# Constants:
+#    0: 'Bounded photometry -> common-censor evidence -> coherent scene supports.'
+#    1: 0
+#    2: None
+#    3: 2
+#    4: ('frame_meta',)
+#    5: 1
+#    6: ('PairEvidence',)
+#    7: ('SparseEvidence', 'Photometry', 'gain_tile')
+#    8: ('PairPolicy',)
+#    9: ('confirm',)
+#   10: ('CensoredShape',)
+#   11: <Code310 code object tiles at 0x106b168d0, file v15_2\scene_consistency\detector.py>, line 11
+#   12: 'tiles'
+#   13: False
+#   14: ('progress', 'resident', 'diagnostic_dir')
+#   15: <Code310 code object build_rejection at 0x10694f7a0, file v15_2\scene_consistency\detector.py>, line 37
+#   16: 'build_rejection'
+# Names:
+#    0: __doc__
+#    1: time
+#    2: math
+#    3: numpy
+#    4: np
+#    5: pipeline
+#    6: frame_meta
+#    7: evidence
+#    8: PairEvidence
+#    9: radiometry
+#   10: SparseEvidence
+#   11: Photometry
+#   12: gain_tile
+#   13: regions
+#   14: PairPolicy
+#   15: chroma
+#   16: confirm
+#   17: censored
+#   18: CensoredShape
+#   19: tiles
+#   20: build_rejection
+
+  1:           0 LOAD_CONST           ("Bounded photometry -> common-censor evidence -> coherent scene supports.")
+               2 STORE_NAME           (__doc__)
+
+  2:           4 LOAD_CONST           (0)
+               6 LOAD_CONST           (None)
+               8 IMPORT_NAME          (time)
+              10 STORE_NAME           (time)
+              12 LOAD_CONST           (0)
+              14 LOAD_CONST           (None)
+              16 IMPORT_NAME          (math)
+              18 STORE_NAME           (math)
+
+  3:          20 LOAD_CONST           (0)
+              22 LOAD_CONST           (None)
+              24 IMPORT_NAME          (numpy)
+              26 STORE_NAME           (np)
+
+  4:          28 LOAD_CONST           (2)
+              30 LOAD_CONST           (('frame_meta',))
+              32 IMPORT_NAME          (pipeline)
+              34 IMPORT_FROM          (frame_meta)
+              36 STORE_NAME           (frame_meta)
+              38 POP_TOP
+
+  5:          40 LOAD_CONST           (1)
+              42 LOAD_CONST           (('PairEvidence',))
+              44 IMPORT_NAME          (evidence)
+              46 IMPORT_FROM          (PairEvidence)
+              48 STORE_NAME           (PairEvidence)
+              50 POP_TOP
+
+  6:          52 LOAD_CONST           (1)
+              54 LOAD_CONST           (('SparseEvidence', 'Photometry', 'gain_tile'))
+              56 IMPORT_NAME          (radiometry)
+              58 IMPORT_FROM          (SparseEvidence)
+              60 STORE_NAME           (SparseEvidence)
+              62 IMPORT_FROM          (Photometry)
+              64 STORE_NAME           (Photometry)
+              66 IMPORT_FROM          (gain_tile)
+              68 STORE_NAME           (gain_tile)
+              70 POP_TOP
+
+  7:          72 LOAD_CONST           (1)
+              74 LOAD_CONST           (('PairPolicy',))
+              76 IMPORT_NAME          (regions)
+              78 IMPORT_FROM          (PairPolicy)
+              80 STORE_NAME           (PairPolicy)
+              82 POP_TOP
+
+  8:          84 LOAD_CONST           (1)
+              86 LOAD_CONST           (('confirm',))
+              88 IMPORT_NAME          (chroma)
+              90 IMPORT_FROM          (confirm)
+              92 STORE_NAME           (confirm)
+              94 POP_TOP
+
+  9:          96 LOAD_CONST           (1)
+              98 LOAD_CONST           (('CensoredShape',))
+             100 IMPORT_NAME          (censored)
+             102 IMPORT_FROM          (CensoredShape)
+             104 STORE_NAME           (CensoredShape)
+             106 POP_TOP
+
+ 11:         108 LOAD_CONST           (<Code310 code object tiles at 0x106b168d0, file v15_2\scene_consistency\detector.py>, line 11)
+             110 LOAD_CONST           ("tiles")
+             112 MAKE_FUNCTION        (No arguments)
+             114 STORE_NAME           (tiles)
+
+ 37:         116 LOAD_CONST           (None)
+             118 LOAD_CONST           (False)
+             120 LOAD_CONST           (None)
+             122 LOAD_CONST           (('progress', 'resident', 'diagnostic_dir'))
+             124 BUILD_CONST_KEY_MAP  3
+             126 LOAD_CONST           (<Code310 code object build_rejection at 0x10694f7a0, file v15_2\scene_consistency\detector.py>, line 37)
+             128 LOAD_CONST           ("build_rejection")
+             130 MAKE_FUNCTION        (keyword-only)
+             132 STORE_NAME           (build_rejection)
+             134 LOAD_CONST           (None)
+             136 RETURN_VALUE
+
+
+# Method Name:       tiles
+# Filename:          v15_2\scene_consistency\detector.py
+# Argument count:    6
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  44
+# Stack size:        12
+# Flags:             0x00000063 (NOFREE | GENERATOR | NEWLOCALS | OPTIMIZED)
+# First Line:        11
+# Constants:
+#    0: None
+#    1: 'h'
+#    2: 'w'
+#    3: 1
+#    4: 0
+#    5: 2
+#    6: 0.5
+#    7: -1
+#    8: 3
+#    9: (Ellipsis, 0)
+#   10: (Ellipsis, 1)
+#   11: 'Nonfinite geometry'
+#   12: (0, 1, 2)
+#   13: 40
+#   14: 64
+#   15: 7
+#   16: 'raws'
+#   17: 'entries'
+#   18: 'valid'
+# Names:
+#    0: range
+#    1: min
+#    2: max
+#    3: np
+#    4: asarray
+#    5: copy
+#    6: mgrid
+#    7: astype
+#    8: float32
+#    9: stack
+#   10: transpose
+#   11: isfinite
+#   12: all
+#   13: ValueError
+#   14: floor
+#   15: int
+#   16: ceil
+#   17: map
+#   18: tolist
+#   19: zeros
+#   20: enumerate
+#   21: zip
+#   22: upload
+#   23: array
+#   24: release_external
+# Varnames:
+#	rt, data, flows, H, stride, tile, h, w, qh, qw, y, x, x1, y1, xa, ya, xb, yb, step, ff, yy, xx, base, q, den, estimate, lo, hi, ox, oy, sw, sh, bank, sx, sy, ex, ey, k, raw, e, bankv, fv, origin, v
+# Positional arguments:
+#	rt, data, flows, H, stride, tile
+# Local variables:
+#    6: h
+#    7: w
+#    8: qh
+#    9: qw
+#   10: y
+#   11: x
+#   12: x1
+#   13: y1
+#   14: xa
+#   15: ya
+#   16: xb
+#   17: yb
+#   18: step
+#   19: ff
+#   20: yy
+#   21: xx
+#   22: base
+#   23: q
+#   24: den
+#   25: estimate
+#   26: lo
+#   27: hi
+#   28: ox
+#   29: oy
+#   30: sw
+#   31: sh
+#   32: bank
+#   33: sx
+#   34: sy
+#   35: ex
+#   36: ey
+#   37: k
+#   38: raw
+#   39: e
+#   40: bankv
+#   41: fv
+#   42: origin
+#   43: v
+               0 GEN_START            0
+
+ 12:           2 LOAD_FAST            (data)
+               4 LOAD_CONST           ("h")
+               6 BINARY_SUBSCR
+               8 LOAD_FAST            (data)
+              10 LOAD_CONST           ("w")
+              12 BINARY_SUBSCR
+              14 ROT_TWO
+              16 STORE_FAST           (h)
+              18 STORE_FAST           (w)
+              20 LOAD_FAST            (h)
+              22 LOAD_CONST           (1)
+              24 BINARY_SUBTRACT
+              26 LOAD_FAST            (stride)
+              28 BINARY_FLOOR_DIVIDE
+              30 LOAD_CONST           (1)
+              32 BINARY_ADD
+              34 LOAD_FAST            (w)
+              36 LOAD_CONST           (1)
+              38 BINARY_SUBTRACT
+              40 LOAD_FAST            (stride)
+              42 BINARY_FLOOR_DIVIDE
+              44 LOAD_CONST           (1)
+              46 BINARY_ADD
+              48 ROT_TWO
+              50 STORE_FAST           (qh)
+              52 STORE_FAST           (qw)
+
+ 13:          54 LOAD_GLOBAL          (range)
+              56 LOAD_CONST           (0)
+              58 LOAD_FAST            (qh)
+              60 LOAD_FAST            (tile)
+              62 CALL_FUNCTION        (3 positional arguments)
+              64 GET_ITER
+         >>   66 EXTENDED_ARG         (512)
+              68 FOR_ITER             (to 1184)
+              70 STORE_FAST           (y)
+
+ 14:          72 LOAD_GLOBAL          (range)
+              74 LOAD_CONST           (0)
+              76 LOAD_FAST            (qw)
+              78 LOAD_FAST            (tile)
+              80 CALL_FUNCTION        (3 positional arguments)
+              82 GET_ITER
+         >>   84 EXTENDED_ARG         (512)
+              86 FOR_ITER             (to 1182)
+              88 STORE_FAST           (x)
+
+ 15:          90 LOAD_GLOBAL          (min)
+              92 LOAD_FAST            (qw)
+              94 LOAD_FAST            (x)
+              96 LOAD_FAST            (tile)
+              98 BINARY_ADD
+             100 CALL_FUNCTION        (2 positional arguments)
+             102 LOAD_GLOBAL          (min)
+             104 LOAD_FAST            (qh)
+             106 LOAD_FAST            (y)
+             108 LOAD_FAST            (tile)
+             110 BINARY_ADD
+             112 CALL_FUNCTION        (2 positional arguments)
+             114 ROT_TWO
+             116 STORE_FAST           (x1)
+             118 STORE_FAST           (y1)
+
+ 16:         120 LOAD_GLOBAL          (max)
+             122 LOAD_CONST           (0)
+             124 LOAD_FAST            (x)
+             126 LOAD_CONST           (1)
+             128 BINARY_SUBTRACT
+             130 CALL_FUNCTION        (2 positional arguments)
+             132 LOAD_GLOBAL          (max)
+             134 LOAD_CONST           (0)
+             136 LOAD_FAST            (y)
+             138 LOAD_CONST           (1)
+             140 BINARY_SUBTRACT
+             142 CALL_FUNCTION        (2 positional arguments)
+             144 LOAD_GLOBAL          (min)
+             146 LOAD_FAST            (qw)
+             148 LOAD_FAST            (x1)
+             150 LOAD_CONST           (1)
+             152 BINARY_ADD
+             154 CALL_FUNCTION        (2 positional arguments)
+             156 LOAD_GLOBAL          (min)
+             158 LOAD_FAST            (qh)
+             160 LOAD_FAST            (y1)
+             162 LOAD_CONST           (1)
+             164 BINARY_ADD
+             166 CALL_FUNCTION        (2 positional arguments)
+             168 BUILD_TUPLE          4
+             170 UNPACK_SEQUENCE      4
+             172 STORE_FAST           (xa)
+             174 STORE_FAST           (ya)
+             176 STORE_FAST           (xb)
+             178 STORE_FAST           (yb)
+
+ 17:         180 LOAD_FAST            (stride)
+             182 LOAD_CONST           (2)
+             184 BINARY_FLOOR_DIVIDE
+             186 STORE_FAST           (step)
+             188 LOAD_GLOBAL          (np)
+             190 LOAD_METHOD          (asarray)
+             192 LOAD_FAST            (flows)
+             194 LOAD_CONST           (None)
+             196 LOAD_CONST           (None)
+             198 BUILD_SLICE          2
+             200 LOAD_CONST           (None)
+             202 LOAD_CONST           (None)
+             204 BUILD_SLICE          2
+             206 LOAD_FAST            (step)
+             208 LOAD_FAST            (ya)
+             210 BINARY_MULTIPLY
+             212 LOAD_FAST            (step)
+             214 LOAD_FAST            (yb)
+             216 BINARY_MULTIPLY
+             218 LOAD_FAST            (step)
+             220 BUILD_SLICE          3
+             222 LOAD_FAST            (step)
+             224 LOAD_FAST            (xa)
+             226 BINARY_MULTIPLY
+             228 LOAD_FAST            (step)
+             230 LOAD_FAST            (xb)
+             232 BINARY_MULTIPLY
+             234 LOAD_FAST            (step)
+             236 BUILD_SLICE          3
+             238 BUILD_TUPLE          4
+             240 BINARY_SUBSCR
+             242 CALL_METHOD          (1 positional argument)
+             244 LOAD_METHOD          (copy)
+             246 CALL_METHOD          (0 positional arguments)
+             248 STORE_FAST           (ff)
+
+ 18:         250 LOAD_GLOBAL          (np)
+             252 LOAD_ATTR            (mgrid)
+             254 LOAD_FAST            (ya)
+             256 LOAD_FAST            (yb)
+             258 BUILD_SLICE          2
+             260 LOAD_FAST            (xa)
+             262 LOAD_FAST            (xb)
+             264 BUILD_SLICE          2
+             266 BUILD_TUPLE          2
+             268 BINARY_SUBSCR
+             270 LOAD_METHOD          (astype)
+             272 LOAD_GLOBAL          (np)
+             274 LOAD_ATTR            (float32)
+             276 CALL_METHOD          (1 positional argument)
+             278 UNPACK_SEQUENCE      2
+             280 STORE_FAST           (yy)
+             282 STORE_FAST           (xx)
+             284 LOAD_GLOBAL          (np)
+             286 LOAD_METHOD          (stack)
+             288 LOAD_FAST            (xx)
+             290 LOAD_FAST            (stride)
+             292 BINARY_MULTIPLY
+             294 LOAD_CONST           (0.5)
+             296 BINARY_ADD
+             298 LOAD_FAST            (yy)
+             300 LOAD_FAST            (stride)
+             302 BINARY_MULTIPLY
+             304 LOAD_CONST           (0.5)
+             306 BINARY_ADD
+             308 BUILD_TUPLE          2
+             310 LOAD_CONST           (-1)
+             312 CALL_METHOD          (2 positional arguments)
+             314 STORE_FAST           (base)
+
+ 19:         316 LOAD_FAST            (base)
+             318 LOAD_CONST           (None)
+             320 BINARY_SUBSCR
+             322 LOAD_CONST           (2)
+             324 LOAD_FAST            (ff)
+             326 LOAD_METHOD          (transpose)
+             328 LOAD_CONST           (0)
+             330 LOAD_CONST           (2)
+             332 LOAD_CONST           (3)
+             334 LOAD_CONST           (1)
+             336 CALL_METHOD          (4 positional arguments)
+             338 BINARY_MULTIPLY
+             340 BINARY_ADD
+             342 STORE_FAST           (q)
+
+ 20:         344 LOAD_FAST            (H)
+             346 LOAD_CONST           (None)
+             348 LOAD_CONST           (None)
+             350 BUILD_SLICE          2
+             352 LOAD_CONST           (None)
+             354 LOAD_CONST           (None)
+             356 LOAD_CONST           (2)
+             358 LOAD_CONST           (0)
+             360 BUILD_TUPLE          5
+             362 BINARY_SUBSCR
+             364 LOAD_FAST            (q)
+             366 LOAD_CONST           ((Ellipsis, 0))
+             368 BINARY_SUBSCR
+             370 BINARY_MULTIPLY
+             372 LOAD_FAST            (H)
+             374 LOAD_CONST           (None)
+             376 LOAD_CONST           (None)
+             378 BUILD_SLICE          2
+             380 LOAD_CONST           (None)
+             382 LOAD_CONST           (None)
+             384 LOAD_CONST           (2)
+             386 LOAD_CONST           (1)
+             388 BUILD_TUPLE          5
+             390 BINARY_SUBSCR
+             392 LOAD_FAST            (q)
+             394 LOAD_CONST           ((Ellipsis, 1))
+             396 BINARY_SUBSCR
+             398 BINARY_MULTIPLY
+             400 BINARY_ADD
+             402 LOAD_FAST            (H)
+             404 LOAD_CONST           (None)
+             406 LOAD_CONST           (None)
+             408 BUILD_SLICE          2
+             410 LOAD_CONST           (None)
+             412 LOAD_CONST           (None)
+             414 LOAD_CONST           (2)
+             416 LOAD_CONST           (2)
+             418 BUILD_TUPLE          5
+             420 BINARY_SUBSCR
+             422 BINARY_ADD
+             424 STORE_FAST           (den)
+
+ 21:         426 LOAD_GLOBAL          (np)
+             428 LOAD_METHOD          (stack)
+             430 LOAD_FAST            (H)
+             432 LOAD_CONST           (None)
+             434 LOAD_CONST           (None)
+             436 BUILD_SLICE          2
+             438 LOAD_CONST           (None)
+             440 LOAD_CONST           (None)
+             442 LOAD_CONST           (0)
+             444 LOAD_CONST           (0)
+             446 BUILD_TUPLE          5
+             448 BINARY_SUBSCR
+             450 LOAD_FAST            (q)
+             452 LOAD_CONST           ((Ellipsis, 0))
+             454 BINARY_SUBSCR
+             456 BINARY_MULTIPLY
+             458 LOAD_FAST            (H)
+             460 LOAD_CONST           (None)
+             462 LOAD_CONST           (None)
+             464 BUILD_SLICE          2
+             466 LOAD_CONST           (None)
+             468 LOAD_CONST           (None)
+             470 LOAD_CONST           (0)
+             472 LOAD_CONST           (1)
+             474 BUILD_TUPLE          5
+             476 BINARY_SUBSCR
+             478 LOAD_FAST            (q)
+             480 LOAD_CONST           ((Ellipsis, 1))
+             482 BINARY_SUBSCR
+             484 BINARY_MULTIPLY
+             486 BINARY_ADD
+             488 LOAD_FAST            (H)
+             490 LOAD_CONST           (None)
+             492 LOAD_CONST           (None)
+             494 BUILD_SLICE          2
+             496 LOAD_CONST           (None)
+             498 LOAD_CONST           (None)
+             500 LOAD_CONST           (0)
+             502 LOAD_CONST           (2)
+             504 BUILD_TUPLE          5
+             506 BINARY_SUBSCR
+             508 BINARY_ADD
+             510 LOAD_FAST            (den)
+             512 BINARY_TRUE_DIVIDE
+
+ 22:         514 LOAD_FAST            (H)
+             516 LOAD_CONST           (None)
+             518 LOAD_CONST           (None)
+             520 BUILD_SLICE          2
+             522 LOAD_CONST           (None)
+             524 LOAD_CONST           (None)
+             526 LOAD_CONST           (1)
+             528 LOAD_CONST           (0)
+             530 BUILD_TUPLE          5
+             532 BINARY_SUBSCR
+             534 LOAD_FAST            (q)
+             536 LOAD_CONST           ((Ellipsis, 0))
+             538 BINARY_SUBSCR
+             540 BINARY_MULTIPLY
+             542 LOAD_FAST            (H)
+             544 LOAD_CONST           (None)
+             546 LOAD_CONST           (None)
+             548 BUILD_SLICE          2
+             550 LOAD_CONST           (None)
+             552 LOAD_CONST           (None)
+             554 LOAD_CONST           (1)
+             556 LOAD_CONST           (1)
+             558 BUILD_TUPLE          5
+             560 BINARY_SUBSCR
+             562 LOAD_FAST            (q)
+             564 LOAD_CONST           ((Ellipsis, 1))
+             566 BINARY_SUBSCR
+             568 BINARY_MULTIPLY
+             570 BINARY_ADD
+             572 LOAD_FAST            (H)
+             574 LOAD_CONST           (None)
+             576 LOAD_CONST           (None)
+             578 BUILD_SLICE          2
+             580 LOAD_CONST           (None)
+             582 LOAD_CONST           (None)
+             584 LOAD_CONST           (1)
+             586 LOAD_CONST           (2)
+             588 BUILD_TUPLE          5
+             590 BINARY_SUBSCR
+             592 BINARY_ADD
+             594 LOAD_FAST            (den)
+             596 BINARY_TRUE_DIVIDE
+
+ 21:         598 BUILD_TUPLE          2
+
+ 22:         600 LOAD_CONST           (-1)
+
+ 21:         602 CALL_METHOD          (2 positional arguments)
+             604 STORE_FAST           (estimate)
+
+ 23:         606 LOAD_GLOBAL          (np)
+             608 LOAD_METHOD          (isfinite)
+             610 LOAD_FAST            (estimate)
+             612 CALL_METHOD          (1 positional argument)
+             614 LOAD_METHOD          (all)
+             616 CALL_METHOD          (0 positional arguments)
+             618 EXTENDED_ARG         (256)
+             620 POP_JUMP_IF_TRUE     (to 630)
+             622 LOAD_GLOBAL          (ValueError)
+             624 LOAD_CONST           ("Nonfinite geometry")
+             626 CALL_FUNCTION        (1 positional argument)
+             628 RAISE_VARARGS        (exception instance)
+
+ 24:     >>  630 LOAD_GLOBAL          (np)
+             632 LOAD_METHOD          (floor)
+             634 LOAD_FAST            (estimate)
+             636 LOAD_METHOD          (min)
+             638 LOAD_CONST           ((0, 1, 2))
+             640 CALL_METHOD          (1 positional argument)
+             642 LOAD_CONST           (40)
+             644 BINARY_SUBTRACT
+             646 LOAD_CONST           (2)
+             648 BINARY_TRUE_DIVIDE
+             650 CALL_METHOD          (1 positional argument)
+             652 LOAD_METHOD          (astype)
+             654 LOAD_GLOBAL          (int)
+             656 CALL_METHOD          (1 positional argument)
+             658 LOAD_CONST           (2)
+             660 BINARY_MULTIPLY
+             662 STORE_FAST           (lo)
+
+ 25:         664 LOAD_GLOBAL          (np)
+             666 LOAD_METHOD          (ceil)
+             668 LOAD_FAST            (estimate)
+             670 LOAD_METHOD          (max)
+             672 LOAD_CONST           ((0, 1, 2))
+             674 CALL_METHOD          (1 positional argument)
+             676 LOAD_CONST           (40)
+             678 BINARY_ADD
+             680 LOAD_CONST           (2)
+             682 BINARY_TRUE_DIVIDE
+             684 CALL_METHOD          (1 positional argument)
+             686 LOAD_METHOD          (astype)
+             688 LOAD_GLOBAL          (int)
+             690 CALL_METHOD          (1 positional argument)
+             692 LOAD_CONST           (2)
+             694 BINARY_MULTIPLY
+             696 STORE_FAST           (hi)
+
+ 26:         698 LOAD_GLOBAL          (map)
+             700 LOAD_GLOBAL          (int)
+             702 LOAD_FAST            (lo)
+             704 CALL_FUNCTION        (2 positional arguments)
+             706 UNPACK_SEQUENCE      2
+             708 STORE_FAST           (ox)
+             710 STORE_FAST           (oy)
+             712 LOAD_GLOBAL          (np)
+             714 LOAD_METHOD          (ceil)
+             716 LOAD_FAST            (hi)
+             718 LOAD_FAST            (lo)
+             720 BINARY_SUBTRACT
+             722 LOAD_CONST           (64)
+             724 BINARY_TRUE_DIVIDE
+             726 CALL_METHOD          (1 positional argument)
+             728 LOAD_METHOD          (astype)
+             730 LOAD_GLOBAL          (int)
+             732 CALL_METHOD          (1 positional argument)
+             734 LOAD_CONST           (64)
+             736 BINARY_MULTIPLY
+             738 LOAD_METHOD          (tolist)
+             740 CALL_METHOD          (0 positional arguments)
+             742 UNPACK_SEQUENCE      2
+             744 STORE_FAST           (sw)
+             746 STORE_FAST           (sh)
+
+ 27:         748 LOAD_GLOBAL          (np)
+             750 LOAD_METHOD          (zeros)
+             752 LOAD_CONST           (2)
+             754 LOAD_CONST           (7)
+             756 LOAD_FAST            (sh)
+             758 LOAD_FAST            (sw)
+             760 BUILD_TUPLE          4
+             762 LOAD_GLOBAL          (np)
+             764 LOAD_ATTR            (float32)
+             766 CALL_METHOD          (2 positional arguments)
+             768 STORE_FAST           (bank)
+             770 LOAD_GLOBAL          (max)
+             772 LOAD_CONST           (0)
+             774 LOAD_FAST            (ox)
+             776 CALL_FUNCTION        (2 positional arguments)
+             778 LOAD_GLOBAL          (max)
+             780 LOAD_CONST           (0)
+             782 LOAD_FAST            (oy)
+             784 CALL_FUNCTION        (2 positional arguments)
+             786 ROT_TWO
+             788 STORE_FAST           (sx)
+             790 STORE_FAST           (sy)
+             792 LOAD_GLOBAL          (min)
+             794 LOAD_FAST            (w)
+             796 LOAD_FAST            (ox)
+             798 LOAD_FAST            (sw)
+             800 BINARY_ADD
+             802 CALL_FUNCTION        (2 positional arguments)
+             804 LOAD_GLOBAL          (min)
+             806 LOAD_FAST            (h)
+             808 LOAD_FAST            (oy)
+             810 LOAD_FAST            (sh)
+             812 BINARY_ADD
+             814 CALL_FUNCTION        (2 positional arguments)
+             816 ROT_TWO
+             818 STORE_FAST           (ex)
+             820 STORE_FAST           (ey)
+
+ 28:         822 LOAD_FAST            (ex)
+             824 LOAD_FAST            (sx)
+             826 COMPARE_OP           (>)
+             828 EXTENDED_ARG         (256)
+             830 POP_JUMP_IF_FALSE    (to 1014)
+             832 LOAD_FAST            (ey)
+             834 LOAD_FAST            (sy)
+             836 COMPARE_OP           (>)
+             838 EXTENDED_ARG         (256)
+             840 POP_JUMP_IF_FALSE    (to 1014)
+
+ 29:         842 LOAD_GLOBAL          (enumerate)
+             844 LOAD_GLOBAL          (zip)
+             846 LOAD_FAST            (data)
+             848 LOAD_CONST           ("raws")
+             850 BINARY_SUBSCR
+             852 LOAD_FAST            (data)
+             854 LOAD_CONST           ("entries")
+             856 BINARY_SUBSCR
+             858 CALL_FUNCTION        (2 positional arguments)
+             860 CALL_FUNCTION        (1 positional argument)
+             862 GET_ITER
+         >>  864 FOR_ITER             (to 1014)
+             866 UNPACK_SEQUENCE      2
+             868 STORE_FAST           (k)
+             870 UNPACK_SEQUENCE      2
+             872 STORE_FAST           (raw)
+             874 STORE_FAST           (e)
+
+ 30:         876 LOAD_FAST            (raw)
+             878 LOAD_FAST            (sy)
+             880 LOAD_FAST            (ey)
+             882 BUILD_SLICE          2
+             884 LOAD_FAST            (sx)
+             886 LOAD_FAST            (ex)
+             888 BUILD_SLICE          2
+             890 BUILD_TUPLE          2
+             892 BINARY_SUBSCR
+             894 LOAD_FAST            (bank)
+             896 LOAD_CONST           (0)
+             898 LOAD_FAST            (k)
+             900 LOAD_FAST            (sy)
+             902 LOAD_FAST            (oy)
+             904 BINARY_SUBTRACT
+             906 LOAD_FAST            (ey)
+             908 LOAD_FAST            (oy)
+             910 BINARY_SUBTRACT
+             912 BUILD_SLICE          2
+             914 LOAD_FAST            (sx)
+             916 LOAD_FAST            (ox)
+             918 BINARY_SUBTRACT
+             920 LOAD_FAST            (ex)
+             922 LOAD_FAST            (ox)
+             924 BINARY_SUBTRACT
+             926 BUILD_SLICE          2
+             928 BUILD_TUPLE          4
+             930 STORE_SUBSCR
+
+ 31:         932 LOAD_FAST            (e)
+             934 LOAD_CONST           ("valid")
+             936 BINARY_SUBSCR
+             938 LOAD_CONST           (None)
+             940 IS_OP                (is)
+             942 EXTENDED_ARG         (256)
+             944 POP_JUMP_IF_FALSE    (to 950)
+             946 LOAD_CONST           (1)
+             948 JUMP_FORWARD         (to 972)
+         >>  950 LOAD_FAST            (e)
+             952 LOAD_CONST           ("valid")
+             954 BINARY_SUBSCR
+             956 LOAD_FAST            (sy)
+             958 LOAD_FAST            (ey)
+             960 BUILD_SLICE          2
+             962 LOAD_FAST            (sx)
+             964 LOAD_FAST            (ex)
+             966 BUILD_SLICE          2
+             968 BUILD_TUPLE          2
+             970 BINARY_SUBSCR
+         >>  972 LOAD_FAST            (bank)
+             974 LOAD_CONST           (1)
+             976 LOAD_FAST            (k)
+             978 LOAD_FAST            (sy)
+             980 LOAD_FAST            (oy)
+             982 BINARY_SUBTRACT
+             984 LOAD_FAST            (ey)
+             986 LOAD_FAST            (oy)
+             988 BINARY_SUBTRACT
+             990 BUILD_SLICE          2
+             992 LOAD_FAST            (sx)
+             994 LOAD_FAST            (ox)
+             996 BINARY_SUBTRACT
+             998 LOAD_FAST            (ex)
+            1000 LOAD_FAST            (ox)
+            1002 BINARY_SUBTRACT
+            1004 BUILD_SLICE          2
+            1006 BUILD_TUPLE          4
+            1008 STORE_SUBSCR
+            1010 EXTENDED_ARG         (256)
+            1012 JUMP_ABSOLUTE        (to 864)
+
+ 32:     >> 1014 LOAD_FAST            (rt)
+            1016 LOAD_METHOD          (upload)
+            1018 LOAD_FAST            (bank)
+            1020 CALL_METHOD          (1 positional argument)
+            1022 STORE_FAST           (bankv)
+            1024 LOAD_FAST            (rt)
+            1026 LOAD_METHOD          (upload)
+            1028 LOAD_FAST            (ff)
+            1030 CALL_METHOD          (1 positional argument)
+            1032 STORE_FAST           (fv)
+            1034 LOAD_FAST            (rt)
+            1036 LOAD_METHOD          (upload)
+            1038 LOAD_GLOBAL          (np)
+            1040 LOAD_METHOD          (array)
+            1042 LOAD_FAST            (xa)
+            1044 LOAD_FAST            (stride)
+            1046 BINARY_MULTIPLY
+            1048 LOAD_FAST            (ya)
+            1050 LOAD_FAST            (stride)
+            1052 BINARY_MULTIPLY
+            1054 LOAD_FAST            (ox)
+            1056 LOAD_FAST            (oy)
+            1058 BUILD_LIST           4
+            1060 LOAD_GLOBAL          (np)
+            1062 LOAD_ATTR            (float32)
+            1064 CALL_METHOD          (2 positional arguments)
+            1066 CALL_METHOD          (1 positional argument)
+            1068 STORE_FAST           (origin)
+
+ 33:        1070 SETUP_FINALLY        (to 1152)
+            1072 LOAD_FAST            (bankv)
+            1074 LOAD_FAST            (fv)
+            1076 LOAD_FAST            (origin)
+            1078 LOAD_FAST            (x)
+            1080 LOAD_FAST            (y)
+            1082 LOAD_FAST            (x1)
+            1084 LOAD_FAST            (x)
+            1086 BINARY_SUBTRACT
+            1088 LOAD_FAST            (y1)
+            1090 LOAD_FAST            (y)
+            1092 BINARY_SUBTRACT
+            1094 LOAD_FAST            (x)
+            1096 LOAD_FAST            (xa)
+            1098 BINARY_SUBTRACT
+            1100 LOAD_FAST            (y)
+            1102 LOAD_FAST            (ya)
+            1104 BINARY_SUBTRACT
+            1106 BUILD_TUPLE          6
+            1108 LOAD_FAST            (ya)
+            1110 LOAD_FAST            (xa)
+            1112 BUILD_TUPLE          2
+            1114 BUILD_TUPLE          5
+            1116 YIELD_VALUE
+            1118 POP_TOP
+            1120 POP_BLOCK
+
+ 35:        1122 LOAD_FAST            (bankv)
+            1124 LOAD_FAST            (fv)
+            1126 LOAD_FAST            (origin)
+            1128 BUILD_TUPLE          3
+            1130 GET_ITER
+         >> 1132 FOR_ITER             (to 1150)
+            1134 STORE_FAST           (v)
+            1136 LOAD_FAST            (rt)
+            1138 LOAD_METHOD          (release_external)
+            1140 LOAD_FAST            (v)
+            1142 CALL_METHOD          (1 positional argument)
+            1144 POP_TOP
+            1146 EXTENDED_ARG         (512)
+            1148 JUMP_ABSOLUTE        (to 1132)
+         >> 1150 JUMP_ABSOLUTE        (to 84)
+         >> 1152 LOAD_FAST            (bankv)
+            1154 LOAD_FAST            (fv)
+            1156 LOAD_FAST            (origin)
+            1158 BUILD_TUPLE          3
+            1160 GET_ITER
+         >> 1162 FOR_ITER             (to 1180)
+            1164 STORE_FAST           (v)
+            1166 LOAD_FAST            (rt)
+            1168 LOAD_METHOD          (release_external)
+            1170 LOAD_FAST            (v)
+            1172 CALL_METHOD          (1 positional argument)
+            1174 POP_TOP
+            1176 EXTENDED_ARG         (512)
+            1178 JUMP_ABSOLUTE        (to 1162)
+         >> 1180 RERAISE              0
+
+ 14:     >> 1182 JUMP_ABSOLUTE        (to 66)
+
+ 13:     >> 1184 LOAD_CONST           (None)
+            1186 RETURN_VALUE
+
+
+# Method Name:       build_rejection
+# Filename:          v15_2\scene_consistency\detector.py
+# Argument count:    4
+# Position-only argument count: 0
+# Keyword-only arguments: 3
+# Number of locals:  50
+# Stack size:        12
+# Flags:             0x00000003 (NEWLOCALS | OPTIMIZED)
+# First Line:        37
+# Constants:
+#    0: None
+#    1: 'lca'
+#    2: 'No-LCA contract required'
+#    3: 'h'
+#    4: 'w'
+#    5: 4
+#    6: 'raws'
+#    7: 7
+#    8: 'K7/divisible-by4 contract'
+#    9: 2
+#   10: (7, 3, 3)
+#   11: 'Invalid geometry'
+#   12: 'manifest'
+#   13: 'raw_records'
+#   14: <Code310 code object <listcomp> at 0x10694f5c0, file v15_2\scene_consistency\detector.py>, line 43
+#   15: 'build_rejection.<locals>.<listcomp>'
+#   16: 'order'
+#   17: 'entries'
+#   18: 0
+#   19: 'Invalid ranges'
+#   20: <Code310 code object <listcomp> at 0x10694f680, file v15_2\scene_consistency\detector.py>, line 45
+#   21: 1
+#   22: 32
+#   23: 6.0
+#   24: 'field.npy'
+#   25: 'WGPU bounded photometry complete'
+#   26: <Code310 code object <listcomp> at 0x10694f860, file v15_2\scene_consistency\detector.py>, line 56
+#   27: 14
+#   28: 3
+#   29: 128
+#   30: -2
+#   31: 4.0
+#   32: 40
+#   33: 'WGPU pair evidence '
+#   34: 'base.npy'
+#   35: 'uint8'
+#   36: 'censored.npy'
+#   37: 'pair_band.npy'
+#   38: 'pair_budget.npy'
+#   39: 'censored_shapes'
+#   40: (7,)
+#   41: '@group(0) @binding(0) var<storage,read> mask:array<f32>;\n@group(0) @binding(1) var<storage,read_write> counts:array<atomic<u32>>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let i=g.x+g.y*4194304u;if(i>='
+#   42: 'u){return;}let f=i/'
+#   43: 'u;let p=i%'
+#   44: 'u;var reject=false;for(var c=0u;c<4u;c++){reject=reject||mask[(f*4u+c)*'
+#   45: 'u+p]>.5;}if(reject){atomicAdd(&counts[f],1u);}}'
+#   46: 'final_rejection_counts'
+#   47: ('a', 'w')
+#   48: 'float64'
+#   49: 'output_any'
+#   50: 'contract'
+#   51: 'physical_scene_consistency_v9_continuation'
+#   52: 'average before decision, variance=(var_Gr+var_Gb)/4'
+#   53: 'Exclude raw strong discrepancies from nuisance fit used by weak continuation; conservative strong discovery unchanged'
+#   54: 'After unchanged conservative region and temporal decisions, two-scale half-budget multi-RGB support can extend an existing per-frame region; cannot seed or change temporal votes; never undo previous rejection'
+#   55: '2-native local Taylor allowance: source/reference mean gradient and Gaussian-footprint Hessian spectral norm; uncertainty model, not measured EPE or a rigorous global bound'
+#   56: 'sigma24-native signed field bounded to 8% shared scene brightness; existing witnesses only'
+#   57: 'signed lowpass sigma12; common RGB brightness floor; two channels or >2x coherent single-colour evidence'
+#   58: 'pairwise common ceiling .94*min(white/effective_exposure)'
+#   59: 'boundary witnesses + centroid proposal >1.25native + actual shifted-boundary L1 improves >25%'
+#   60: False
+#   61: ('version', 'green', 'continuation_illumination', 'continuation', 'geometry_uncertainty', 'mild_colour_illumination', 'chroma_only', 'sensor_censoring', 'censored_component_motion', 'hard_CFA_bypass')
+#   62: 'pairwise common observable ceiling before CFA lowpass; noise is conservative'
+#   63: ('photometry', 'photometry_seconds', 'evidence_seconds', 'region_seconds', 'seconds', 'contract_physics', 'source_modified', 'exposure_modified')
+# Names:
+#    0: get
+#    1: ValueError
+#    2: len
+#    3: tuple
+#    4: shape
+#    5: np
+#    6: stack
+#    7: zip
+#    8: astype
+#    9: float32
+#   10: isfinite
+#   11: all
+#   12: any
+#   13: upload
+#   14: concatenate
+#   15: asarray
+#   16: time
+#   17: perf_counter
+#   18: SparseEvidence
+#   19: empty
+#   20: tiles
+#   21: compose
+#   22: stats
+#   23: collect
+#   24: free
+#   25: Photometry
+#   26: estimate
+#   27: release_external
+#   28: save
+#   29: read
+#   30: PairEvidence
+#   31: gain_tile
+#   32: spec
+#   33: gains
+#   34: compose_coarse
+#   35: decide
+#   36: scatter
+#   37: scatter_censored
+#   38: confirm
+#   39: PairPolicy
+#   40: CensoredShape
+#   41: apply
+#   42: _u32
+#   43: _clear_u32
+#   44: _dispatch
+#   45: buffer
+#   46: _read_u32
+#   47: tolist
+#   48: update
+# Varnames:
+#	rt, data, flows, H, progress, resident, diagnostic_dir, h, w, qh, qw, black, md, hv, bv, start, sparse, sh, sw, samples, bank, fv, origin, box, _, G, stats, field, photo, photo_seconds, outputs, censored, op, counter, t, ya, xa, s4, s6, dec, v, evidence_seconds, raw_candidates, confirmed, result, report, counts, n, code, host
+# Positional arguments:
+#	rt, data, flows, H
+# Local variables:
+#    4: progress
+#    5: resident
+#    6: diagnostic_dir
+#    7: h
+#    8: w
+#    9: qh
+#   10: qw
+#   11: black
+#   12: md
+#   13: hv
+#   14: bv
+#   15: start
+#   16: sparse
+#   17: sh
+#   18: sw
+#   19: samples
+#   20: bank
+#   21: fv
+#   22: origin
+#   23: box
+#   24: _
+#   25: G
+#   26: stats
+#   27: field
+#   28: photo
+#   29: photo_seconds
+#   30: outputs
+#   31: censored
+#   32: op
+#   33: counter
+#   34: t
+#   35: ya
+#   36: xa
+#   37: s4
+#   38: s6
+#   39: dec
+#   40: v
+#   41: evidence_seconds
+#   42: raw_candidates
+#   43: confirmed
+#   44: result
+#   45: report
+#   46: counts
+#   47: n
+#   48: code
+#   49: host
+# Free variables:
+#    0: records
+#    1: rt
+
+ 38:           0 LOAD_FAST            (data)
+               2 LOAD_METHOD          (get)
+               4 LOAD_CONST           ("lca")
+               6 CALL_METHOD          (1 positional argument)
+               8 LOAD_CONST           (None)
+              10 IS_OP                (is not)
+              12 POP_JUMP_IF_FALSE    (to 22)
+              14 LOAD_GLOBAL          (ValueError)
+              16 LOAD_CONST           ("No-LCA contract required")
+              18 CALL_FUNCTION        (1 positional argument)
+              20 RAISE_VARARGS        (exception instance)
+
+ 39:     >>   22 LOAD_FAST            (data)
+              24 LOAD_CONST           ("h")
+              26 BINARY_SUBSCR
+              28 LOAD_FAST            (data)
+              30 LOAD_CONST           ("w")
+              32 BINARY_SUBSCR
+              34 ROT_TWO
+              36 STORE_FAST           (h)
+              38 STORE_FAST           (w)
+              40 LOAD_FAST            (h)
+              42 LOAD_CONST           (4)
+              44 BINARY_FLOOR_DIVIDE
+              46 LOAD_FAST            (w)
+              48 LOAD_CONST           (4)
+              50 BINARY_FLOOR_DIVIDE
+              52 ROT_TWO
+              54 STORE_FAST           (qh)
+              56 STORE_FAST           (qw)
+
+ 40:          58 LOAD_FAST            (h)
+              60 LOAD_CONST           (4)
+              62 BINARY_MODULO
+              64 POP_JUMP_IF_TRUE     (to 90)
+              66 LOAD_FAST            (w)
+              68 LOAD_CONST           (4)
+              70 BINARY_MODULO
+              72 POP_JUMP_IF_TRUE     (to 90)
+              74 LOAD_GLOBAL          (len)
+              76 LOAD_FAST            (data)
+              78 LOAD_CONST           ("raws")
+              80 BINARY_SUBSCR
+              82 CALL_FUNCTION        (1 positional argument)
+              84 LOAD_CONST           (7)
+              86 COMPARE_OP           (!=)
+              88 POP_JUMP_IF_FALSE    (to 98)
+         >>   90 LOAD_GLOBAL          (ValueError)
+              92 LOAD_CONST           ("K7/divisible-by4 contract")
+              94 CALL_FUNCTION        (1 positional argument)
+              96 RAISE_VARARGS        (exception instance)
+
+ 41:     >>   98 LOAD_GLOBAL          (tuple)
+             100 LOAD_FAST            (flows)
+             102 LOAD_ATTR            (shape)
+             104 CALL_FUNCTION        (1 positional argument)
+             106 LOAD_CONST           (7)
+             108 LOAD_CONST           (2)
+             110 LOAD_FAST            (h)
+             112 LOAD_CONST           (2)
+             114 BINARY_FLOOR_DIVIDE
+             116 LOAD_FAST            (w)
+             118 LOAD_CONST           (2)
+             120 BINARY_FLOOR_DIVIDE
+             122 BUILD_TUPLE          4
+             124 COMPARE_OP           (!=)
+             126 POP_JUMP_IF_TRUE     (to 142)
+             128 LOAD_GLOBAL          (np)
+             130 LOAD_METHOD          (shape)
+             132 LOAD_FAST            (H)
+             134 CALL_METHOD          (1 positional argument)
+             136 LOAD_CONST           ((7, 3, 3))
+             138 COMPARE_OP           (!=)
+             140 POP_JUMP_IF_FALSE    (to 150)
+         >>  142 LOAD_GLOBAL          (ValueError)
+             144 LOAD_CONST           ("Invalid geometry")
+             146 CALL_FUNCTION        (1 positional argument)
+             148 RAISE_VARARGS        (exception instance)
+
+ 42:     >>  150 LOAD_FAST            (data)
+             152 LOAD_CONST           ("manifest")
+             154 BINARY_SUBSCR
+             156 LOAD_CONST           ("raw_records")
+             158 BINARY_SUBSCR
+             160 STORE_DEREF          (records)
+
+ 43:         162 LOAD_GLOBAL          (np)
+             164 LOAD_METHOD          (stack)
+             166 LOAD_CLOSURE         (records)
+             168 BUILD_TUPLE          1
+             170 LOAD_CONST           (<Code310 code object <listcomp> at 0x10694f5c0, file v15_2\scene_consistency\detector.py>, line 43)
+             172 LOAD_CONST           ("build_rejection.<locals>.<listcomp>")
+             174 MAKE_FUNCTION        (closure)
+             176 LOAD_GLOBAL          (zip)
+             178 LOAD_FAST            (data)
+             180 LOAD_CONST           ("order")
+             182 BINARY_SUBSCR
+             184 LOAD_FAST            (data)
+             186 LOAD_CONST           ("entries")
+             188 BINARY_SUBSCR
+             190 CALL_FUNCTION        (2 positional arguments)
+             192 GET_ITER
+             194 CALL_FUNCTION        (1 positional argument)
+             196 CALL_METHOD          (1 positional argument)
+             198 LOAD_METHOD          (astype)
+             200 LOAD_GLOBAL          (np)
+             202 LOAD_ATTR            (float32)
+             204 CALL_METHOD          (1 positional argument)
+             206 STORE_FAST           (black)
+
+ 44:         208 LOAD_GLOBAL          (np)
+             210 LOAD_METHOD          (isfinite)
+             212 LOAD_FAST            (black)
+             214 CALL_METHOD          (1 positional argument)
+             216 LOAD_METHOD          (all)
+             218 CALL_METHOD          (0 positional arguments)
+             220 POP_JUMP_IF_FALSE    (to 234)
+             222 LOAD_FAST            (black)
+             224 LOAD_CONST           (0)
+             226 COMPARE_OP           (<=)
+             228 LOAD_METHOD          (any)
+             230 CALL_METHOD          (0 positional arguments)
+             232 POP_JUMP_IF_FALSE    (to 242)
+         >>  234 LOAD_GLOBAL          (ValueError)
+             236 LOAD_CONST           ("Invalid ranges")
+             238 CALL_FUNCTION        (1 positional argument)
+             240 RAISE_VARARGS        (exception instance)
+
+ 45:     >>  242 LOAD_DEREF           (rt)
+             244 LOAD_METHOD          (upload)
+             246 LOAD_GLOBAL          (np)
+             248 LOAD_METHOD          (concatenate)
+             250 LOAD_CONST           (<Code310 code object <listcomp> at 0x10694f680, file v15_2\scene_consistency\detector.py>, line 45)
+             252 LOAD_CONST           ("build_rejection.<locals>.<listcomp>")
+             254 MAKE_FUNCTION        (No arguments)
+             256 LOAD_FAST            (data)
+             258 LOAD_CONST           ("entries")
+             260 BINARY_SUBSCR
+             262 GET_ITER
+             264 CALL_FUNCTION        (1 positional argument)
+             266 CALL_METHOD          (1 positional argument)
+             268 CALL_METHOD          (1 positional argument)
+             270 STORE_FAST           (md)
+             272 LOAD_DEREF           (rt)
+             274 LOAD_METHOD          (upload)
+             276 LOAD_GLOBAL          (np)
+             278 LOAD_METHOD          (asarray)
+             280 LOAD_FAST            (H)
+             282 LOAD_GLOBAL          (np)
+             284 LOAD_ATTR            (float32)
+             286 CALL_METHOD          (2 positional arguments)
+             288 CALL_METHOD          (1 positional argument)
+             290 STORE_FAST           (hv)
+             292 LOAD_DEREF           (rt)
+             294 LOAD_METHOD          (upload)
+             296 LOAD_FAST            (black)
+             298 CALL_METHOD          (1 positional argument)
+             300 STORE_FAST           (bv)
+
+ 46:         302 LOAD_GLOBAL          (time)
+             304 LOAD_METHOD          (perf_counter)
+             306 CALL_METHOD          (0 positional arguments)
+             308 STORE_FAST           (start)
+             310 LOAD_GLOBAL          (SparseEvidence)
+             312 LOAD_DEREF           (rt)
+             314 CALL_FUNCTION        (1 positional argument)
+             316 STORE_FAST           (sparse)
+             318 LOAD_FAST            (h)
+             320 LOAD_CONST           (1)
+             322 BINARY_SUBTRACT
+             324 LOAD_CONST           (32)
+             326 BINARY_FLOOR_DIVIDE
+             328 LOAD_CONST           (1)
+             330 BINARY_ADD
+             332 LOAD_FAST            (w)
+             334 LOAD_CONST           (1)
+             336 BINARY_SUBTRACT
+             338 LOAD_CONST           (32)
+             340 BINARY_FLOOR_DIVIDE
+             342 LOAD_CONST           (1)
+             344 BINARY_ADD
+             346 ROT_TWO
+             348 STORE_FAST           (sh)
+             350 STORE_FAST           (sw)
+             352 LOAD_DEREF           (rt)
+             354 LOAD_METHOD          (empty)
+             356 LOAD_CONST           (7)
+             358 LOAD_CONST           (2)
+             360 LOAD_FAST            (sh)
+             362 LOAD_FAST            (sw)
+             364 BUILD_TUPLE          4
+             366 CALL_METHOD          (1 positional argument)
+             368 STORE_FAST           (samples)
+
+ 47:         370 EXTENDED_ARG         (512)
+             372 SETUP_FINALLY        (to 1526)
+
+ 48:         374 LOAD_GLOBAL          (tiles)
+             376 LOAD_DEREF           (rt)
+             378 LOAD_FAST            (data)
+             380 LOAD_FAST            (flows)
+             382 LOAD_FAST            (H)
+             384 LOAD_CONST           (32)
+             386 LOAD_CONST           (32)
+             388 CALL_FUNCTION        (6 positional arguments)
+             390 GET_ITER
+         >>  392 FOR_ITER             (to 474)
+             394 UNPACK_SEQUENCE      5
+             396 STORE_FAST           (bank)
+             398 STORE_FAST           (fv)
+             400 STORE_FAST           (origin)
+             402 STORE_FAST           (box)
+             404 STORE_FAST           (_)
+
+ 49:         406 LOAD_FAST            (sparse)
+             408 LOAD_METHOD          (compose)
+             410 LOAD_FAST            (fv)
+             412 LOAD_FAST            (hv)
+             414 LOAD_FAST            (origin)
+             416 CALL_METHOD          (3 positional arguments)
+             418 STORE_FAST           (G)
+             420 LOAD_FAST            (sparse)
+             422 LOAD_METHOD          (stats)
+             424 LOAD_FAST            (bank)
+             426 LOAD_FAST            (G)
+             428 LOAD_FAST            (md)
+             430 LOAD_CONST           (6.0)
+             432 LOAD_CONST           (32)
+             434 CALL_METHOD          (5 positional arguments)
+             436 STORE_FAST           (stats)
+             438 LOAD_FAST            (sparse)
+             440 LOAD_METHOD          (collect)
+             442 LOAD_FAST            (stats)
+             444 LOAD_FAST            (samples)
+             446 LOAD_FAST            (box)
+             448 CALL_METHOD          (3 positional arguments)
+             450 POP_TOP
+
+ 50:         452 LOAD_DEREF           (rt)
+             454 LOAD_METHOD          (free)
+             456 LOAD_FAST            (G)
+             458 CALL_METHOD          (1 positional argument)
+             460 POP_TOP
+             462 LOAD_DEREF           (rt)
+             464 LOAD_METHOD          (free)
+             466 LOAD_FAST            (stats)
+             468 CALL_METHOD          (1 positional argument)
+             470 POP_TOP
+             472 JUMP_ABSOLUTE        (to 392)
+
+ 51:     >>  474 LOAD_GLOBAL          (Photometry)
+             476 LOAD_DEREF           (rt)
+             478 CALL_FUNCTION        (1 positional argument)
+             480 LOAD_METHOD          (estimate)
+             482 LOAD_FAST            (samples)
+             484 CALL_METHOD          (1 positional argument)
+             486 UNPACK_SEQUENCE      2
+             488 STORE_FAST           (field)
+             490 STORE_FAST           (photo)
+             492 LOAD_DEREF           (rt)
+             494 LOAD_METHOD          (release_external)
+             496 LOAD_FAST            (samples)
+             498 CALL_METHOD          (1 positional argument)
+             500 POP_TOP
+
+ 52:         502 LOAD_FAST            (diagnostic_dir)
+             504 LOAD_CONST           (None)
+             506 IS_OP                (is not)
+             508 EXTENDED_ARG         (256)
+             510 POP_JUMP_IF_FALSE    (to 534)
+
+ 53:         512 LOAD_GLOBAL          (np)
+             514 LOAD_METHOD          (save)
+             516 LOAD_FAST            (diagnostic_dir)
+             518 LOAD_CONST           ("field.npy")
+             520 BINARY_TRUE_DIVIDE
+             522 LOAD_DEREF           (rt)
+             524 LOAD_METHOD          (read)
+             526 LOAD_FAST            (field)
+             528 CALL_METHOD          (1 positional argument)
+             530 CALL_METHOD          (2 positional arguments)
+             532 POP_TOP
+
+ 54:     >>  534 LOAD_GLOBAL          (time)
+             536 LOAD_METHOD          (perf_counter)
+             538 CALL_METHOD          (0 positional arguments)
+             540 LOAD_FAST            (start)
+             542 BINARY_SUBTRACT
+             544 STORE_FAST           (photo_seconds)
+
+ 55:         546 LOAD_FAST            (progress)
+             548 EXTENDED_ARG         (256)
+             550 POP_JUMP_IF_FALSE    (to 560)
+             552 LOAD_FAST            (progress)
+             554 LOAD_CONST           ("WGPU bounded photometry complete")
+             556 CALL_FUNCTION        (1 positional argument)
+             558 POP_TOP
+
+ 56:     >>  560 LOAD_CLOSURE         (rt)
+             562 BUILD_TUPLE          1
+             564 LOAD_CONST           (<Code310 code object <listcomp> at 0x10694f860, file v15_2\scene_consistency\detector.py>, line 56)
+             566 LOAD_CONST           ("build_rejection.<locals>.<listcomp>")
+             568 MAKE_FUNCTION        (closure)
+             570 LOAD_CONST           (7)
+             572 LOAD_CONST           (4)
+             574 LOAD_FAST            (qh)
+             576 LOAD_FAST            (qw)
+             578 BUILD_TUPLE          4
+             580 LOAD_CONST           (14)
+             582 LOAD_CONST           (3)
+             584 LOAD_FAST            (qh)
+             586 LOAD_FAST            (qw)
+             588 BUILD_TUPLE          4
+             590 LOAD_CONST           (7)
+             592 LOAD_CONST           (3)
+             594 LOAD_FAST            (qh)
+             596 LOAD_FAST            (qw)
+             598 BUILD_TUPLE          4
+             600 LOAD_CONST           (7)
+             602 LOAD_FAST            (qh)
+             604 LOAD_FAST            (qw)
+             606 BUILD_TUPLE          3
+             608 BUILD_TUPLE          4
+             610 GET_ITER
+             612 CALL_FUNCTION        (1 positional argument)
+             614 STORE_FAST           (outputs)
+
+ 57:         616 LOAD_DEREF           (rt)
+             618 LOAD_METHOD          (empty)
+             620 LOAD_CONST           (7)
+             622 LOAD_CONST           (3)
+             624 LOAD_FAST            (qh)
+             626 LOAD_FAST            (qw)
+             628 BUILD_TUPLE          4
+             630 CALL_METHOD          (1 positional argument)
+             632 STORE_FAST           (censored)
+             634 LOAD_GLOBAL          (PairEvidence)
+             636 LOAD_DEREF           (rt)
+             638 LOAD_CONST           (None)
+             640 CALL_FUNCTION        (2 positional arguments)
+             642 STORE_FAST           (op)
+             644 LOAD_CONST           (0)
+             646 STORE_FAST           (counter)
+             648 LOAD_GLOBAL          (time)
+             650 LOAD_METHOD          (perf_counter)
+             652 CALL_METHOD          (0 positional arguments)
+             654 STORE_FAST           (t)
+
+ 58:         656 LOAD_GLOBAL          (tiles)
+             658 LOAD_DEREF           (rt)
+             660 LOAD_FAST            (data)
+             662 LOAD_FAST            (flows)
+             664 LOAD_FAST            (H)
+             666 LOAD_CONST           (4)
+             668 LOAD_CONST           (128)
+             670 CALL_FUNCTION        (6 positional arguments)
+             672 GET_ITER
+         >>  674 FOR_ITER             (to 910)
+             676 UNPACK_SEQUENCE      5
+             678 STORE_FAST           (bank)
+             680 STORE_FAST           (fv)
+             682 STORE_FAST           (origin)
+             684 STORE_FAST           (box)
+             686 UNPACK_SEQUENCE      2
+             688 STORE_FAST           (ya)
+             690 STORE_FAST           (xa)
+
+ 59:         692 LOAD_GLOBAL          (gain_tile)
+             694 LOAD_DEREF           (rt)
+             696 LOAD_FAST            (field)
+             698 LOAD_FAST            (fv)
+             700 LOAD_ATTR            (spec)
+             702 LOAD_ATTR            (shape)
+             704 LOAD_CONST           (-2)
+             706 LOAD_CONST           (None)
+             708 BUILD_SLICE          2
+             710 BINARY_SUBSCR
+             712 LOAD_FAST            (xa)
+             714 LOAD_FAST            (ya)
+             716 BUILD_TUPLE          2
+             718 LOAD_FAST            (qh)
+             720 LOAD_FAST            (qw)
+             722 BUILD_TUPLE          2
+             724 CALL_FUNCTION        (5 positional arguments)
+             726 LOAD_FAST            (op)
+             728 STORE_ATTR           (gains)
+
+ 60:         730 LOAD_FAST            (op)
+             732 LOAD_METHOD          (compose_coarse)
+             734 LOAD_FAST            (fv)
+             736 LOAD_FAST            (hv)
+             738 LOAD_FAST            (origin)
+             740 CALL_METHOD          (3 positional arguments)
+             742 STORE_FAST           (G)
+             744 LOAD_FAST            (op)
+             746 LOAD_METHOD          (stats)
+             748 LOAD_FAST            (bank)
+             750 LOAD_FAST            (G)
+             752 LOAD_FAST            (md)
+             754 LOAD_CONST           (4.0)
+             756 LOAD_CONST           (4)
+             758 CALL_METHOD          (5 positional arguments)
+             760 STORE_FAST           (s4)
+             762 LOAD_FAST            (op)
+             764 LOAD_METHOD          (stats)
+             766 LOAD_FAST            (bank)
+             768 LOAD_FAST            (G)
+             770 LOAD_FAST            (md)
+             772 LOAD_CONST           (6.0)
+             774 LOAD_CONST           (4)
+             776 CALL_METHOD          (5 positional arguments)
+             778 STORE_FAST           (s6)
+
+ 61:         780 LOAD_FAST            (op)
+             782 LOAD_METHOD          (decide)
+             784 LOAD_FAST            (s4)
+             786 LOAD_FAST            (s6)
+             788 LOAD_FAST            (bv)
+             790 CALL_METHOD          (3 positional arguments)
+             792 STORE_FAST           (dec)
+             794 LOAD_FAST            (op)
+             796 LOAD_METHOD          (scatter)
+             798 LOAD_FAST            (s4)
+             800 LOAD_FAST            (s6)
+             802 LOAD_FAST            (dec)
+             804 LOAD_FAST            (bv)
+             806 LOAD_FAST            (outputs)
+             808 LOAD_FAST            (box)
+             810 CALL_METHOD          (6 positional arguments)
+             812 POP_TOP
+             814 LOAD_FAST            (op)
+             816 LOAD_METHOD          (scatter_censored)
+             818 LOAD_FAST            (s4)
+             820 LOAD_FAST            (s6)
+             822 LOAD_FAST            (censored)
+             824 LOAD_FAST            (box)
+             826 CALL_METHOD          (4 positional arguments)
+             828 POP_TOP
+
+ 62:         830 LOAD_FAST            (G)
+             832 LOAD_FAST            (s4)
+             834 LOAD_FAST            (s6)
+             836 LOAD_FAST            (dec)
+             838 LOAD_FAST            (op)
+             840 LOAD_ATTR            (gains)
+             842 BUILD_TUPLE          5
+             844 GET_ITER
+         >>  846 FOR_ITER             (to 864)
+             848 STORE_FAST           (v)
+             850 LOAD_DEREF           (rt)
+             852 LOAD_METHOD          (free)
+             854 LOAD_FAST            (v)
+             856 CALL_METHOD          (1 positional argument)
+             858 POP_TOP
+             860 EXTENDED_ARG         (256)
+             862 JUMP_ABSOLUTE        (to 846)
+
+ 63:     >>  864 LOAD_FAST            (counter)
+             866 LOAD_CONST           (1)
+             868 INPLACE_ADD
+             870 STORE_FAST           (counter)
+
+ 64:         872 LOAD_FAST            (progress)
+             874 EXTENDED_ARG         (256)
+             876 POP_JUMP_IF_FALSE    (to 906)
+             878 LOAD_FAST            (counter)
+             880 LOAD_CONST           (40)
+             882 BINARY_MODULO
+             884 LOAD_CONST           (0)
+             886 COMPARE_OP           (==)
+             888 EXTENDED_ARG         (256)
+             890 POP_JUMP_IF_FALSE    (to 906)
+             892 LOAD_FAST            (progress)
+             894 LOAD_CONST           ("WGPU pair evidence ")
+             896 LOAD_FAST            (counter)
+             898 FORMAT_VALUE         0
+             900 BUILD_STRING         2
+             902 CALL_FUNCTION        (1 positional argument)
+             904 POP_TOP
+         >>  906 EXTENDED_ARG         (256)
+             908 JUMP_ABSOLUTE        (to 674)
+
+ 65:     >>  910 LOAD_GLOBAL          (time)
+             912 LOAD_METHOD          (perf_counter)
+             914 CALL_METHOD          (0 positional arguments)
+             916 LOAD_FAST            (t)
+             918 BINARY_SUBTRACT
+             920 STORE_FAST           (evidence_seconds)
+             922 LOAD_DEREF           (rt)
+             924 LOAD_METHOD          (free)
+             926 LOAD_FAST            (field)
+             928 CALL_METHOD          (1 positional argument)
+             930 POP_TOP
+
+ 66:         932 LOAD_FAST            (diagnostic_dir)
+             934 LOAD_CONST           (None)
+             936 IS_OP                (is not)
+             938 EXTENDED_ARG         (512)
+             940 POP_JUMP_IF_FALSE    (to 1048)
+
+ 67:         942 LOAD_GLOBAL          (np)
+             944 LOAD_METHOD          (save)
+             946 LOAD_FAST            (diagnostic_dir)
+             948 LOAD_CONST           ("base.npy")
+             950 BINARY_TRUE_DIVIDE
+             952 LOAD_DEREF           (rt)
+             954 LOAD_METHOD          (read)
+             956 LOAD_FAST            (outputs)
+             958 LOAD_CONST           (0)
+             960 BINARY_SUBSCR
+             962 CALL_METHOD          (1 positional argument)
+             964 LOAD_METHOD          (astype)
+             966 LOAD_CONST           ("uint8")
+             968 CALL_METHOD          (1 positional argument)
+             970 CALL_METHOD          (2 positional arguments)
+             972 POP_TOP
+
+ 68:         974 LOAD_GLOBAL          (np)
+             976 LOAD_METHOD          (save)
+             978 LOAD_FAST            (diagnostic_dir)
+             980 LOAD_CONST           ("censored.npy")
+             982 BINARY_TRUE_DIVIDE
+             984 LOAD_DEREF           (rt)
+             986 LOAD_METHOD          (read)
+             988 LOAD_FAST            (censored)
+             990 CALL_METHOD          (1 positional argument)
+             992 CALL_METHOD          (2 positional arguments)
+             994 POP_TOP
+
+ 69:         996 LOAD_GLOBAL          (np)
+             998 LOAD_METHOD          (save)
+            1000 LOAD_FAST            (diagnostic_dir)
+            1002 LOAD_CONST           ("pair_band.npy")
+            1004 BINARY_TRUE_DIVIDE
+            1006 LOAD_DEREF           (rt)
+            1008 LOAD_METHOD          (read)
+            1010 LOAD_FAST            (outputs)
+            1012 LOAD_CONST           (1)
+            1014 BINARY_SUBSCR
+            1016 CALL_METHOD          (1 positional argument)
+            1018 CALL_METHOD          (2 positional arguments)
+            1020 POP_TOP
+
+ 70:        1022 LOAD_GLOBAL          (np)
+            1024 LOAD_METHOD          (save)
+            1026 LOAD_FAST            (diagnostic_dir)
+            1028 LOAD_CONST           ("pair_budget.npy")
+            1030 BINARY_TRUE_DIVIDE
+            1032 LOAD_DEREF           (rt)
+            1034 LOAD_METHOD          (read)
+            1036 LOAD_FAST            (outputs)
+            1038 LOAD_CONST           (2)
+            1040 BINARY_SUBSCR
+            1042 CALL_METHOD          (1 positional argument)
+            1044 CALL_METHOD          (2 positional arguments)
+            1046 POP_TOP
+
+ 71:     >> 1048 LOAD_GLOBAL          (time)
+            1050 LOAD_METHOD          (perf_counter)
+            1052 CALL_METHOD          (0 positional arguments)
+            1054 STORE_FAST           (t)
+            1056 LOAD_FAST            (outputs)
+            1058 LOAD_CONST           (0)
+            1060 BINARY_SUBSCR
+            1062 STORE_FAST           (raw_candidates)
+            1064 LOAD_GLOBAL          (confirm)
+            1066 LOAD_DEREF           (rt)
+            1068 BUILD_LIST           1
+            1070 LOAD_FAST            (outputs)
+            1072 LOAD_CONST           (None)
+            1074 LOAD_CONST           (3)
+            1076 BUILD_SLICE          2
+            1078 BINARY_SUBSCR
+            1080 LIST_EXTEND          1
+            1082 LIST_TO_TUPLE
+            1084 CALL_FUNCTION_EX     (positional arguments only)
+            1086 STORE_FAST           (confirmed)
+            1088 LOAD_FAST            (confirmed)
+            1090 LOAD_FAST            (outputs)
+            1092 LOAD_CONST           (0)
+            1094 STORE_SUBSCR
+
+ 72:        1096 LOAD_GLOBAL          (PairPolicy)
+            1098 LOAD_DEREF           (rt)
+            1100 CALL_FUNCTION        (1 positional argument)
+            1102 LOAD_ATTR            (decide)
+            1104 LOAD_FAST            (outputs)
+            1106 CALL_FUNCTION_EX     (positional arguments only)
+            1108 UNPACK_SEQUENCE      2
+            1110 STORE_FAST           (result)
+            1112 STORE_FAST           (report)
+
+ 73:        1114 LOAD_FAST            (outputs)
+            1116 LOAD_CONST           (1)
+            1118 LOAD_CONST           (None)
+            1120 BUILD_SLICE          2
+            1122 BINARY_SUBSCR
+            1124 GET_ITER
+         >> 1126 FOR_ITER             (to 1144)
+            1128 STORE_FAST           (v)
+            1130 LOAD_DEREF           (rt)
+            1132 LOAD_METHOD          (release_external)
+            1134 LOAD_FAST            (v)
+            1136 CALL_METHOD          (1 positional argument)
+            1138 POP_TOP
+            1140 EXTENDED_ARG         (512)
+            1142 JUMP_ABSOLUTE        (to 1126)
+
+ 74:     >> 1144 LOAD_GLOBAL          (CensoredShape)
+            1146 LOAD_DEREF           (rt)
+            1148 CALL_FUNCTION        (1 positional argument)
+            1150 LOAD_METHOD          (apply)
+            1152 LOAD_FAST            (result)
+            1154 LOAD_FAST            (raw_candidates)
+            1156 LOAD_FAST            (censored)
+            1158 CALL_METHOD          (3 positional arguments)
+            1160 LOAD_FAST            (report)
+            1162 LOAD_CONST           ("censored_shapes")
+            1164 STORE_SUBSCR
+
+ 75:        1166 LOAD_DEREF           (rt)
+            1168 LOAD_METHOD          (release_external)
+            1170 LOAD_FAST            (raw_candidates)
+            1172 CALL_METHOD          (1 positional argument)
+            1174 POP_TOP
+
+ 76:        1176 LOAD_DEREF           (rt)
+            1178 LOAD_METHOD          (free)
+            1180 LOAD_FAST            (confirmed)
+            1182 CALL_METHOD          (1 positional argument)
+            1184 POP_TOP
+
+ 77:        1186 LOAD_DEREF           (rt)
+            1188 LOAD_METHOD          (release_external)
+            1190 LOAD_FAST            (censored)
+            1192 CALL_METHOD          (1 positional argument)
+            1194 POP_TOP
+
+ 78:        1196 LOAD_GLOBAL          (PairPolicy)
+            1198 LOAD_DEREF           (rt)
+            1200 CALL_FUNCTION        (1 positional argument)
+            1202 STORE_FAST           (counter)
+            1204 LOAD_FAST            (counter)
+            1206 LOAD_METHOD          (_u32)
+            1208 LOAD_CONST           ((7,))
+            1210 CALL_METHOD          (1 positional argument)
+            1212 STORE_FAST           (counts)
+            1214 LOAD_FAST            (counter)
+            1216 LOAD_METHOD          (_clear_u32)
+            1218 LOAD_FAST            (counts)
+            1220 CALL_METHOD          (1 positional argument)
+            1222 POP_TOP
+            1224 LOAD_FAST            (qh)
+            1226 LOAD_FAST            (qw)
+            1228 BINARY_MULTIPLY
+            1230 STORE_FAST           (n)
+
+ 79:        1232 LOAD_CONST           ("@group(0) @binding(0) var<storage,read> mask:array<f32>;\n@group(0) @binding(1) var<storage,read_write> counts:array<atomic<u32>>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let i=g.x+g.y*4194304u;if(i>=")
+
+ 81:        1234 LOAD_CONST           (7)
+            1236 LOAD_FAST            (n)
+            1238 BINARY_MULTIPLY
+
+ 79:        1240 FORMAT_VALUE         0
+            1242 LOAD_CONST           ("u){return;}let f=i/")
+
+ 81:        1244 LOAD_FAST            (n)
+
+ 79:        1246 FORMAT_VALUE         0
+            1248 LOAD_CONST           ("u;let p=i%")
+
+ 81:        1250 LOAD_FAST            (n)
+
+ 79:        1252 FORMAT_VALUE         0
+            1254 LOAD_CONST           ("u;var reject=false;for(var c=0u;c<4u;c++){reject=reject||mask[(f*4u+c)*")
+
+ 81:        1256 LOAD_FAST            (n)
+
+ 79:        1258 FORMAT_VALUE         0
+            1260 LOAD_CONST           ("u+p]>.5;}if(reject){atomicAdd(&counts[f],1u);}}")
+            1262 BUILD_STRING         9
+            1264 STORE_FAST           (code)
+
+ 82:        1266 LOAD_FAST            (counter)
+            1268 LOAD_METHOD          (_dispatch)
+            1270 LOAD_CONST           ("final_rejection_counts")
+            1272 LOAD_FAST            (qh)
+            1274 LOAD_FAST            (qw)
+            1276 BUILD_TUPLE          3
+            1278 LOAD_FAST            (code)
+            1280 LOAD_CONST           (('a', 'w'))
+            1282 LOAD_FAST            (result)
+            1284 LOAD_ATTR            (buffer)
+            1286 LOAD_FAST            (counts)
+            1288 LOAD_ATTR            (buffer)
+            1290 BUILD_LIST           2
+            1292 LOAD_CONST           (7)
+            1294 LOAD_FAST            (n)
+            1296 BINARY_MULTIPLY
+            1298 LOAD_CONST           ("final_rejection_counts")
+            1300 CALL_METHOD          (6 positional arguments)
+            1302 POP_TOP
+
+ 83:        1304 LOAD_FAST            (counter)
+            1306 LOAD_METHOD          (_read_u32)
+            1308 LOAD_FAST            (counts)
+            1310 CALL_METHOD          (1 positional argument)
+            1312 LOAD_METHOD          (astype)
+            1314 LOAD_CONST           ("float64")
+            1316 CALL_METHOD          (1 positional argument)
+            1318 LOAD_FAST            (n)
+            1320 BINARY_TRUE_DIVIDE
+            1322 LOAD_METHOD          (tolist)
+            1324 CALL_METHOD          (0 positional arguments)
+            1326 LOAD_FAST            (report)
+            1328 LOAD_CONST           ("output_any")
+            1330 STORE_SUBSCR
+            1332 LOAD_DEREF           (rt)
+            1334 LOAD_METHOD          (release_external)
+            1336 LOAD_FAST            (counts)
+            1338 CALL_METHOD          (1 positional argument)
+            1340 POP_TOP
+
+ 84:        1342 LOAD_FAST            (report)
+            1344 LOAD_CONST           ("contract")
+            1346 BINARY_SUBSCR
+            1348 LOAD_ATTR            (update)
+            1350 LOAD_CONST           ("physical_scene_consistency_v9_continuation")
+            1352 LOAD_CONST           ("average before decision, variance=(var_Gr+var_Gb)/4")
+
+ 85:        1354 LOAD_CONST           ("Exclude raw strong discrepancies from nuisance fit used by weak continuation; conservative strong discovery unchanged")
+
+ 86:        1356 LOAD_CONST           ("After unchanged conservative region and temporal decisions, two-scale half-budget multi-RGB support can extend an existing per-frame region; cannot seed or change temporal votes; never undo previous rejection")
+
+ 87:        1358 LOAD_CONST           ("2-native local Taylor allowance: source/reference mean gradient and Gaussian-footprint Hessian spectral norm; uncertainty model, not measured EPE or a rigorous global bound")
+
+ 88:        1360 LOAD_CONST           ("sigma24-native signed field bounded to 8% shared scene brightness; existing witnesses only")
+
+ 89:        1362 LOAD_CONST           ("signed lowpass sigma12; common RGB brightness floor; two channels or >2x coherent single-colour evidence")
+
+ 90:        1364 LOAD_CONST           ("pairwise common ceiling .94*min(white/effective_exposure)")
+
+ 91:        1366 LOAD_CONST           ("boundary witnesses + centroid proposal >1.25native + actual shifted-boundary L1 improves >25%")
+
+ 92:        1368 LOAD_CONST           (False)
+
+ 84:        1370 LOAD_CONST           (('version', 'green', 'continuation_illumination', 'continuation', 'geometry_uncertainty', 'mild_colour_illumination', 'chroma_only', 'sensor_censoring', 'censored_component_motion', 'hard_CFA_bypass'))
+            1372 CALL_FUNCTION_KW     (10 total positional and keyword args)
+            1374 POP_TOP
+
+ 93:        1376 LOAD_FAST            (report)
+            1378 LOAD_ATTR            (update)
+            1380 LOAD_FAST            (photo)
+            1382 LOAD_FAST            (photo_seconds)
+            1384 LOAD_FAST            (evidence_seconds)
+
+ 94:        1386 LOAD_GLOBAL          (time)
+            1388 LOAD_METHOD          (perf_counter)
+            1390 CALL_METHOD          (0 positional arguments)
+            1392 LOAD_FAST            (t)
+            1394 BINARY_SUBTRACT
+            1396 LOAD_GLOBAL          (time)
+            1398 LOAD_METHOD          (perf_counter)
+            1400 CALL_METHOD          (0 positional arguments)
+            1402 LOAD_FAST            (start)
+            1404 BINARY_SUBTRACT
+
+ 95:        1406 LOAD_CONST           ("pairwise common observable ceiling before CFA lowpass; noise is conservative")
+
+ 96:        1408 LOAD_CONST           (False)
+            1410 LOAD_CONST           (False)
+
+ 93:        1412 LOAD_CONST           (('photometry', 'photometry_seconds', 'evidence_seconds', 'region_seconds', 'seconds', 'contract_physics', 'source_modified', 'exposure_modified'))
+            1414 CALL_FUNCTION_KW     (8 total positional and keyword args)
+            1416 POP_TOP
+
+ 97:        1418 LOAD_FAST            (resident)
+            1420 EXTENDED_ARG         (512)
+            1422 POP_JUMP_IF_FALSE    (to 1462)
+            1424 LOAD_FAST            (result)
+            1426 LOAD_FAST            (report)
+            1428 BUILD_TUPLE          2
+            1430 POP_BLOCK
+
+100:        1432 LOAD_FAST            (md)
+            1434 LOAD_FAST            (hv)
+            1436 LOAD_FAST            (bv)
+            1438 BUILD_TUPLE          3
+            1440 GET_ITER
+         >> 1442 FOR_ITER             (to 1460)
+            1444 STORE_FAST           (v)
+            1446 LOAD_DEREF           (rt)
+            1448 LOAD_METHOD          (release_external)
+            1450 LOAD_FAST            (v)
+            1452 CALL_METHOD          (1 positional argument)
+            1454 POP_TOP
+            1456 EXTENDED_ARG         (512)
+            1458 JUMP_ABSOLUTE        (to 1442)
+         >> 1460 RETURN_VALUE
+
+ 98:     >> 1462 LOAD_DEREF           (rt)
+            1464 LOAD_METHOD          (read)
+            1466 LOAD_FAST            (result)
+            1468 CALL_METHOD          (1 positional argument)
+            1470 LOAD_METHOD          (astype)
+            1472 LOAD_CONST           ("uint8")
+            1474 CALL_METHOD          (1 positional argument)
+            1476 STORE_FAST           (host)
+            1478 LOAD_DEREF           (rt)
+            1480 LOAD_METHOD          (free)
+            1482 LOAD_FAST            (result)
+            1484 CALL_METHOD          (1 positional argument)
+            1486 POP_TOP
+            1488 LOAD_FAST            (host)
+            1490 LOAD_FAST            (report)
+            1492 BUILD_TUPLE          2
+            1494 POP_BLOCK
+
+100:        1496 LOAD_FAST            (md)
+            1498 LOAD_FAST            (hv)
+            1500 LOAD_FAST            (bv)
+            1502 BUILD_TUPLE          3
+            1504 GET_ITER
+         >> 1506 FOR_ITER             (to 1524)
+            1508 STORE_FAST           (v)
+            1510 LOAD_DEREF           (rt)
+            1512 LOAD_METHOD          (release_external)
+            1514 LOAD_FAST            (v)
+            1516 CALL_METHOD          (1 positional argument)
+            1518 POP_TOP
+            1520 EXTENDED_ARG         (512)
+            1522 JUMP_ABSOLUTE        (to 1506)
+         >> 1524 RETURN_VALUE
+         >> 1526 LOAD_FAST            (md)
+            1528 LOAD_FAST            (hv)
+            1530 LOAD_FAST            (bv)
+            1532 BUILD_TUPLE          3
+            1534 GET_ITER
+         >> 1536 FOR_ITER             (to 1554)
+            1538 STORE_FAST           (v)
+            1540 LOAD_DEREF           (rt)
+            1542 LOAD_METHOD          (release_external)
+            1544 LOAD_FAST            (v)
+            1546 CALL_METHOD          (1 positional argument)
+            1548 POP_TOP
+            1550 EXTENDED_ARG         (768)
+            1552 JUMP_ABSOLUTE        (to 1536)
+         >> 1554 RERAISE              0
+
+
+# Method Name:       <listcomp>
+# Filename:          v15_2\scene_consistency\detector.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  3
+# Stack size:        7
+# Flags:             0x00000013 (NESTED | NEWLOCALS | OPTIMIZED)
+# First Line:        43
+# Constants:
+#    0: 2.0
+#    1: 'denominator'
+#    2: 'index'
+#    3: 'exposure'
+# Names:
+#    0: np
+#    1: asarray
+#    2: ravel
+# Varnames:
+#	.0, i, e
+# Positional arguments:
+#	.0
+# Local variables:
+#    1: i
+#    2: e
+# Cell variables:
+#    0: records
+
+ 43:           0 BUILD_LIST           0
+               2 LOAD_FAST            (.0)
+         >>    4 FOR_ITER             (to 56)
+               6 UNPACK_SEQUENCE      2
+               8 STORE_FAST           (i)
+              10 STORE_FAST           (e)
+              12 LOAD_CONST           (2.0)
+              14 LOAD_GLOBAL          (np)
+              16 LOAD_METHOD          (asarray)
+              18 LOAD_DEREF           (records)
+              20 LOAD_FAST            (i)
+              22 BINARY_SUBSCR
+              24 LOAD_CONST           ("denominator")
+              26 BINARY_SUBSCR
+              28 CALL_METHOD          (1 positional argument)
+              30 LOAD_METHOD          (ravel)
+              32 CALL_METHOD          (0 positional arguments)
+              34 LOAD_FAST            (e)
+              36 LOAD_CONST           ("index")
+              38 BINARY_SUBSCR
+              40 BINARY_SUBSCR
+              42 BINARY_TRUE_DIVIDE
+              44 LOAD_FAST            (e)
+              46 LOAD_CONST           ("exposure")
+              48 BINARY_SUBSCR
+              50 BINARY_TRUE_DIVIDE
+              52 LIST_APPEND          2
+              54 JUMP_ABSOLUTE        (to 4)
+         >>   56 RETURN_VALUE
+
+
+# Method Name:       <listcomp>
+# Filename:          v15_2\scene_consistency\detector.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        4
+# Flags:             0x00000053 (NOFREE | NESTED | NEWLOCALS | OPTIMIZED)
+# First Line:        45
+# Names:
+#    0: frame_meta
+# Varnames:
+#	.0, e
+# Positional arguments:
+#	.0
+# Local variables:
+#    1: e
+
+ 45:           0 BUILD_LIST           0
+               2 LOAD_FAST            (.0)
+         >>    4 FOR_ITER             (to 18)
+               6 STORE_FAST           (e)
+               8 LOAD_GLOBAL          (frame_meta)
+              10 LOAD_FAST            (e)
+              12 CALL_FUNCTION        (1 positional argument)
+              14 LIST_APPEND          2
+              16 JUMP_ABSOLUTE        (to 4)
+         >>   18 RETURN_VALUE
+
+
+# Method Name:       <listcomp>
+# Filename:          v15_2\scene_consistency\detector.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        5
+# Flags:             0x00000013 (NESTED | NEWLOCALS | OPTIMIZED)
+# First Line:        56
+# Names:
+#    0: empty
+# Varnames:
+#	.0, shape
+# Positional arguments:
+#	.0
+# Local variables:
+#    1: shape
+# Cell variables:
+#    0: rt
+
+ 56:           0 BUILD_LIST           0
+               2 LOAD_FAST            (.0)
+         >>    4 FOR_ITER             (to 20)
+               6 STORE_FAST           (shape)
+               8 LOAD_DEREF           (rt)
+              10 LOAD_METHOD          (empty)
+              12 LOAD_FAST            (shape)
+              14 CALL_METHOD          (1 positional argument)
+              16 LIST_APPEND          2
+              18 JUMP_ABSOLUTE        (to 4)
+         >>   20 RETURN_VALUE
+

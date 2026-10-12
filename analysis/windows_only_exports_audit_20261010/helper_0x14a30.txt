@@ -1,0 +1,172 @@
+
+analysis/sources/tether_windows_2_12/Lmxptpif.dll:	file format coff-x86-64
+
+Disassembly of section .text:
+
+0000000180014730 <LMX_func_api_GPS_Set_GPS_Data_Info>:
+180014a30: 48 89 5c 24 10              	movq	%rbx, 0x10(%rsp)
+180014a35: 55                          	pushq	%rbp
+180014a36: 56                          	pushq	%rsi
+180014a37: 57                          	pushq	%rdi
+180014a38: 41 54                       	pushq	%r12
+180014a3a: 41 55                       	pushq	%r13
+180014a3c: 41 56                       	pushq	%r14
+180014a3e: 41 57                       	pushq	%r15
+180014a40: 48 81 ec a0 00 00 00        	subq	$0xa0, %rsp
+180014a47: 48 8b 05 22 48 24 00        	movq	0x244822(%rip), %rax    # 0x180259270
+180014a4e: 48 33 c4                    	xorq	%rsp, %rax
+180014a51: 48 89 84 24 90 00 00 00     	movq	%rax, 0x90(%rsp)
+180014a59: 45 33 ed                    	xorl	%r13d, %r13d
+180014a5c: c7 44 24 66 01 00 00 00     	movl	$0x1, 0x66(%rsp)
+180014a64: 48 8b f9                    	movq	%rcx, %rdi
+180014a67: 44 89 6c 24 44              	movl	%r13d, 0x44(%rsp)
+180014a6c: 0f 57 c0                    	xorps	%xmm0, %xmm0
+180014a6f: 44 89 6c 24 40              	movl	%r13d, 0x40(%rsp)
+180014a74: b8 02 94 ff ff              	movl	$0xffff9402, %eax       # imm = 0xFFFF9402
+180014a79: 4c 89 6c 24 4a              	movq	%r13, 0x4a(%rsp)
+180014a7e: 41 8b f5                    	movl	%r13d, %esi
+180014a81: 66 89 44 24 48              	movw	%ax, 0x48(%rsp)
+180014a86: b9 02 94 00 00              	movl	$0x9402, %ecx           # imm = 0x9402
+180014a8b: 40 88 74 24 6e              	movb	%sil, 0x6e(%rsp)
+180014a90: 48 8d 54 24 40              	leaq	0x40(%rsp), %rdx
+180014a95: c7 44 24 52 e0 01 00 02     	movl	$0x20001e0, 0x52(%rsp)  # imm = 0x20001E0
+180014a9d: 4d 8b e0                    	movq	%r8, %r12
+180014aa0: f3 0f 7f 44 24 56           	movdqu	%xmm0, 0x56(%rsp)
+180014aa6: e8 e5 28 02 00              	callq	0x180037390 <LMX_func_api_WB_Ctrl_WBSET+0xc10>
+180014aab: 84 c0                       	testb	%al, %al
+180014aad: 0f 84 ec 00 00 00           	je	0x180014b9f <LMX_func_api_GPS_Set_GPS_Data_Info+0x46f>
+180014ab3: 8b 44 24 40                 	movl	0x40(%rsp), %eax
+180014ab7: 89 44 24 6a                 	movl	%eax, 0x6a(%rsp)
+180014abb: 83 f8 03                    	cmpl	$0x3, %eax
+180014abe: 75 32                       	jne	0x180014af2 <LMX_func_api_GPS_Set_GPS_Data_Info+0x3c2>
+180014ac0: 41 be 1e 00 10 00           	movl	$0x10001e, %r14d        # imm = 0x10001E
+180014ac6: 8d 48 3f                    	leal	0x3f(%rax), %ecx
+180014ac9: 41 8b d6                    	movl	%r14d, %edx
+180014acc: 41 8b ed                    	movl	%r13d, %ebp
+180014acf: 45 8b fd                    	movl	%r13d, %r15d
+180014ad2: ff 15 18 d8 18 00           	callq	*0x18d818(%rip)         # 0x1801a22f0
+180014ad8: 48 8b f0                    	movq	%rax, %rsi
+180014adb: 48 85 c0                    	testq	%rax, %rax
+180014ade: 0f 84 bb 00 00 00           	je	0x180014b9f <LMX_func_api_GPS_Set_GPS_Data_Info+0x46f>
+180014ae4: 48 8b c8                    	movq	%rax, %rcx
+180014ae7: ff 15 f3 d7 18 00           	callq	*0x18d7f3(%rip)         # 0x1801a22e0
+180014aed: 48 8b d8                    	movq	%rax, %rbx
+180014af0: eb 3b                       	jmp	0x180014b2d <LMX_func_api_GPS_Set_GPS_Data_Info+0x3fd>
+180014af2: 83 f8 05                    	cmpl	$0x5, %eax
+180014af5: 75 08                       	jne	0x180014aff <LMX_func_api_GPS_Set_GPS_Data_Info+0x3cf>
+180014af7: 41 8b ed                    	movl	%r13d, %ebp
+180014afa: 4d 8b fd                    	movq	%r13, %r15
+180014afd: eb 28                       	jmp	0x180014b27 <LMX_func_api_GPS_Set_GPS_Data_Info+0x3f7>
+180014aff: bd 1e 00 00 00              	movl	$0x1e, %ebp
+180014b04: 8b d5                       	movl	%ebp, %edx
+180014b06: 8d 4d 24                    	leal	0x24(%rbp), %ecx
+180014b09: ff 15 e1 d7 18 00           	callq	*0x18d7e1(%rip)         # 0x1801a22f0
+180014b0f: 48 8b f0                    	movq	%rax, %rsi
+180014b12: 48 85 c0                    	testq	%rax, %rax
+180014b15: 0f 84 84 00 00 00           	je	0x180014b9f <LMX_func_api_GPS_Set_GPS_Data_Info+0x46f>
+180014b1b: 48 8b c8                    	movq	%rax, %rcx
+180014b1e: ff 15 bc d7 18 00           	callq	*0x18d7bc(%rip)         # 0x1801a22e0
+180014b24: 4c 8b f8                    	movq	%rax, %r15
+180014b27: 49 8b dd                    	movq	%r13, %rbx
+180014b2a: 45 8b f5                    	movl	%r13d, %r14d
+180014b2d: 33 c0                       	xorl	%eax, %eax
+180014b2f: 4c 89 64 24 38              	movq	%r12, 0x38(%rsp)
+180014b34: 48 89 84 24 80 00 00 00     	movq	%rax, 0x80(%rsp)
+180014b3c: 4c 8d 4c 24 70              	leaq	0x70(%rsp), %r9
+180014b41: 89 84 24 88 00 00 00        	movl	%eax, 0x88(%rsp)
+180014b48: 48 8d 4c 24 48              	leaq	0x48(%rsp), %rcx
+180014b4d: 66 89 84 24 8c 00 00 00     	movw	%ax, 0x8c(%rsp)
+180014b55: 0f 57 c0                    	xorps	%xmm0, %xmm0
+180014b58: 88 84 24 8e 00 00 00        	movb	%al, 0x8e(%rsp)
+180014b5f: 4d 8b c7                    	movq	%r15, %r8
+180014b62: 48 8d 44 24 44              	leaq	0x44(%rsp), %rax
+180014b67: 8b d5                       	movl	%ebp, %edx
+180014b69: 48 89 44 24 30              	movq	%rax, 0x30(%rsp)
+180014b6e: 48 89 5c 24 28              	movq	%rbx, 0x28(%rsp)
+180014b73: 44 89 74 24 20              	movl	%r14d, 0x20(%rsp)
+180014b78: 0f 11 44 24 70              	movups	%xmm0, 0x70(%rsp)
+180014b7d: e8 fe d3 03 00              	callq	0x180051f80 <LMX_func_api_ptpip_UpdateCer+0x44e0>
+180014b82: 8b e8                       	movl	%eax, %ebp
+180014b84: 84 c0                       	testb	%al, %al
+180014b86: 75 44                       	jne	0x180014bcc <LMX_func_api_GPS_Set_GPS_Data_Info+0x49c>
+180014b88: 48 85 f6                    	testq	%rsi, %rsi
+180014b8b: 74 12                       	je	0x180014b9f <LMX_func_api_GPS_Set_GPS_Data_Info+0x46f>
+180014b8d: 48 8b ce                    	movq	%rsi, %rcx
+180014b90: ff 15 42 d7 18 00           	callq	*0x18d742(%rip)         # 0x1801a22d8
+180014b96: 48 8b ce                    	movq	%rsi, %rcx
+180014b99: ff 15 49 d7 18 00           	callq	*0x18d749(%rip)         # 0x1801a22e8
+180014b9f: 32 c0                       	xorb	%al, %al
+180014ba1: 48 8b 8c 24 90 00 00 00     	movq	0x90(%rsp), %rcx
+180014ba9: 48 33 cc                    	xorq	%rsp, %rcx
+180014bac: e8 4f 66 18 00              	callq	0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>
+180014bb1: 48 8b 9c 24 e8 00 00 00     	movq	0xe8(%rsp), %rbx
+180014bb9: 48 81 c4 a0 00 00 00        	addq	$0xa0, %rsp
+180014bc0: 41 5f                       	popq	%r15
+180014bc2: 41 5e                       	popq	%r14
+180014bc4: 41 5d                       	popq	%r13
+180014bc6: 41 5c                       	popq	%r12
+180014bc8: 5f                          	popq	%rdi
+180014bc9: 5e                          	popq	%rsi
+180014bca: 5d                          	popq	%rbp
+180014bcb: c3                          	retq
+180014bcc: 8b 54 24 44                 	movl	0x44(%rsp), %edx
+180014bd0: 85 d2                       	testl	%edx, %edx
+180014bd2: 0f 84 98 00 00 00           	je	0x180014c70 <LMX_func_api_GPS_Set_GPS_Data_Info+0x540>
+180014bd8: 0f 1f 84 00 00 00 00 00     	nopl	(%rax,%rax)
+180014be0: 8b 0b                       	movl	(%rbx), %ecx
+180014be2: 81 e9 e1 01 00 02           	subl	$0x20001e1, %ecx        # imm = 0x20001E1
+180014be8: 74 4b                       	je	0x180014c35 <LMX_func_api_GPS_Set_GPS_Data_Info+0x505>
+180014bea: 83 e9 01                    	subl	$0x1, %ecx
+180014bed: 74 32                       	je	0x180014c21 <LMX_func_api_GPS_Set_GPS_Data_Info+0x4f1>
+180014bef: 83 f9 01                    	cmpl	$0x1, %ecx
+180014bf2: 75 79                       	jne	0x180014c6d <LMX_func_api_GPS_Set_GPS_Data_Info+0x53d>
+180014bf4: 48 8d 4f 14                 	leaq	0x14(%rdi), %rcx
+180014bf8: 41 8b c5                    	movl	%r13d, %eax
+180014bfb: 48 85 c9                    	testq	%rcx, %rcx
+180014bfe: 74 5c                       	je	0x180014c5c <LMX_func_api_GPS_Set_GPS_Data_Info+0x52c>
+180014c00: c7 01 e3 01 00 02           	movl	$0x20001e3, (%rcx)      # imm = 0x20001E3
+180014c06: 44 8b 43 04                 	movl	0x4(%rbx), %r8d
+180014c0a: 44 89 41 04                 	movl	%r8d, 0x4(%rcx)
+180014c0e: 45 85 c0                    	testl	%r8d, %r8d
+180014c11: 74 49                       	je	0x180014c5c <LMX_func_api_GPS_Set_GPS_Data_Info+0x52c>
+180014c13: 0f b7 43 08                 	movzwl	0x8(%rbx), %eax
+180014c17: 66 89 41 08                 	movw	%ax, 0x8(%rcx)
+180014c1b: 41 8d 40 08                 	leal	0x8(%r8), %eax
+180014c1f: eb 37                       	jmp	0x180014c58 <LMX_func_api_GPS_Set_GPS_Data_Info+0x528>
+180014c21: 48 8d 4f 0a                 	leaq	0xa(%rdi), %rcx
+180014c25: 41 8b c5                    	movl	%r13d, %eax
+180014c28: 48 85 c9                    	testq	%rcx, %rcx
+180014c2b: 74 2f                       	je	0x180014c5c <LMX_func_api_GPS_Set_GPS_Data_Info+0x52c>
+180014c2d: c7 01 e2 01 00 02           	movl	$0x20001e2, (%rcx)      # imm = 0x20001E2
+180014c33: eb d1                       	jmp	0x180014c06 <LMX_func_api_GPS_Set_GPS_Data_Info+0x4d6>
+180014c35: 41 8b c5                    	movl	%r13d, %eax
+180014c38: 48 85 ff                    	testq	%rdi, %rdi
+180014c3b: 74 1f                       	je	0x180014c5c <LMX_func_api_GPS_Set_GPS_Data_Info+0x52c>
+180014c3d: c7 07 e1 01 00 02           	movl	$0x20001e1, (%rdi)      # imm = 0x20001E1
+180014c43: 8b 4b 04                    	movl	0x4(%rbx), %ecx
+180014c46: 89 4f 04                    	movl	%ecx, 0x4(%rdi)
+180014c49: 85 c9                       	testl	%ecx, %ecx
+180014c4b: 74 0f                       	je	0x180014c5c <LMX_func_api_GPS_Set_GPS_Data_Info+0x52c>
+180014c4d: 0f b7 43 08                 	movzwl	0x8(%rbx), %eax
+180014c51: 66 89 47 08                 	movw	%ax, 0x8(%rdi)
+180014c55: 8d 41 08                    	leal	0x8(%rcx), %eax
+180014c58: 3b d0                       	cmpl	%eax, %edx
+180014c5a: 72 11                       	jb	0x180014c6d <LMX_func_api_GPS_Set_GPS_Data_Info+0x53d>
+180014c5c: 8b c8                       	movl	%eax, %ecx
+180014c5e: 2b d0                       	subl	%eax, %edx
+180014c60: 48 03 d9                    	addq	%rcx, %rbx
+180014c63: 85 d2                       	testl	%edx, %edx
+180014c65: 0f 85 75 ff ff ff           	jne	0x180014be0 <LMX_func_api_GPS_Set_GPS_Data_Info+0x4b0>
+180014c6b: eb 03                       	jmp	0x180014c70 <LMX_func_api_GPS_Set_GPS_Data_Info+0x540>
+180014c6d: 40 32 ed                    	xorb	%bpl, %bpl
+180014c70: 48 8b ce                    	movq	%rsi, %rcx
+180014c73: ff 15 5f d6 18 00           	callq	*0x18d65f(%rip)         # 0x1801a22d8
+180014c79: 48 8b ce                    	movq	%rsi, %rcx
+180014c7c: ff 15 66 d6 18 00           	callq	*0x18d666(%rip)         # 0x1801a22e8
+180014c82: 40 0f b6 c5                 	movzbl	%bpl, %eax
+180014c86: e9 16 ff ff ff              	jmp	0x180014ba1 <LMX_func_api_GPS_Set_GPS_Data_Info+0x471>
+180014c8b: cc                          	int3
+180014c8c: cc                          	int3
+180014c8d: cc                          	int3
+180014c8e: cc                          	int3
+180014c8f: cc                          	int3

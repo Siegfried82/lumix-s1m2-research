@@ -151727,7 +151727,7 @@ _CTLOG_STORE_load_default_file:
 00000000000942dc	add	x0, x0, #0x34b ; literal pool for: "CTLOG_FILE"
 00000000000942e0	bl	_ossl_safe_getenv
 00000000000942e4	adrp	x8, 377 ; 0x20d000
-00000000000942e8	add	x8, x8, #0x356 ; literal pool for: "//Users/avcmms/Documents/Work/openssl-1.1.1w/ssl/ct_log_list.cnf"
+00000000000942e8	add	x8, x8, #0x356 ; literal pool for: "/<LOCAL_USER>/Documents/Work/openssl-1.1.1w/ssl/ct_log_list.cnf"
 00000000000942ec	cmp	x0, #0x0
 00000000000942f0	csel	x1, x8, x0, eq
 00000000000942f4	mov	x0, x19
@@ -209388,7 +209388,7 @@ _ENGINE_by_id:
 00000000000cbb5c	add	x0, x0, #0xd1c ; literal pool for: "OPENSSL_ENGINES"
 00000000000cbb60	bl	_ossl_safe_getenv
 00000000000cbb64	adrp	x8, 325 ; 0x210000
-00000000000cbb68	add	x8, x8, #0xd2c ; literal pool for: "/Users/avcmms/Documents/Work/openssl-1.1.1w/install/lib/engines-1.1"
+00000000000cbb68	add	x8, x8, #0xd2c ; literal pool for: "<LOCAL_USER>/Documents/Work/openssl-1.1.1w/install/lib/engines-1.1"
 00000000000cbb6c	cmp	x0, #0x0
 00000000000cbb70	csel	x21, x8, x0, eq
 00000000000cbb74	adrp	x0, 325 ; 0x210000
@@ -319883,19 +319883,19 @@ _X509_STORE_load_locations:
 00000000001356c0	ldp	x22, x21, [sp], #0x30
 00000000001356c4	ret
 _X509_get_default_private_dir:
-00000000001356c8	adr	x0, #953115 ; literal pool for: "//Users/avcmms/Documents/Work/openssl-1.1.1w/ssl/private"
+00000000001356c8	adr	x0, #953115 ; literal pool for: "/<LOCAL_USER>/Documents/Work/openssl-1.1.1w/ssl/private"
 00000000001356cc	nop
 00000000001356d0	ret
 _X509_get_default_cert_area:
-00000000001356d4	adr	x0, #953160 ; literal pool for: "//Users/avcmms/Documents/Work/openssl-1.1.1w/ssl"
+00000000001356d4	adr	x0, #953160 ; literal pool for: "/<LOCAL_USER>/Documents/Work/openssl-1.1.1w/ssl"
 00000000001356d8	nop
 00000000001356dc	ret
 _X509_get_default_cert_dir:
-00000000001356e0	adr	x0, #953197 ; literal pool for: "//Users/avcmms/Documents/Work/openssl-1.1.1w/ssl/certs"
+00000000001356e0	adr	x0, #953197 ; literal pool for: "/<LOCAL_USER>/Documents/Work/openssl-1.1.1w/ssl/certs"
 00000000001356e4	nop
 00000000001356e8	ret
 _X509_get_default_cert_file:
-00000000001356ec	adr	x0, #953240 ; literal pool for: "//Users/avcmms/Documents/Work/openssl-1.1.1w/ssl/cert.pem"
+00000000001356ec	adr	x0, #953240 ; literal pool for: "/<LOCAL_USER>/Documents/Work/openssl-1.1.1w/ssl/cert.pem"
 00000000001356f0	nop
 00000000001356f4	ret
 _X509_get_default_cert_dir_env:

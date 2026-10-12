@@ -1,0 +1,101 @@
+{
+  "app_disassembly_sha256": "ccdf024ece6c12440fb79b85174fe1e0c0ddbffa81302867a5e37313b8fd293e",
+  "library_disassembly_sha256": "f0beab04bef63508de6492cf263f62199548bda97911ab5852b371474537af1d",
+  "opcode": "0x9416",
+  "packing": "Rec_Ctrl_with_data",
+  "callers": [
+    {
+      "name": "Start_Menu",
+      "tag": "0x09000021",
+      "value_count": 0,
+      "table_entry": {
+        "index": 48,
+        "tag": "0x9000021",
+        "payload_size": 0,
+        "serializer_pointer_raw": "0x44230",
+        "serializer_kind": "none",
+        "value_width_bytes": 0,
+        "expected_value_count": 0,
+        "serializer_evidence_lines": [
+          68383,
+          68384
+        ]
+      },
+      "source_lines": [
+        147396,
+        147455
+      ],
+      "evidence": "__ZN11lumixtether13DeviceAdapter41adp_LMX_func_api_Rec_Ctrl_Menu_Start_MenuEv:\n0000000100097e40\tstp\tx24, x23, [sp, #-0x40]!\n0000000100097e44\tstp\tx22, x21, [sp, #0x10]\n0000000100097e48\tstp\tx20, x19, [sp, #0x20]\n0000000100097e4c\tstp\tx29, x30, [sp, #0x30]\n0000000100097e50\tadd\tx29, sp, #0x30\n0000000100097e54\tsub\tsp, sp, #0x860\n0000000100097e58\tmov\tx20, x0\n0000000100097e5c\tadd\tx8, sp, #0x50\n0000000100097e60\torr\tx0, x8, #0x4\n0000000100097e64\tmov\tw1, #0x808\n0000000100097e68\tbl\t0x10013100c ; symbol stub for: _bzero\n0000000100097e6c\tmov\tw8, #0x21\n0000000100097e70\tmovk\tw8, #0x900, lsl #16\n0000000100097e74\tstr\tw8, [sp, #0x50]\n0000000100097e78\tldr\tx8, [x20, #0x460]\n0000000100097e7c\tadd\tx8, x8, #0x4b, lsl #12\n0000000100097e80\tadd\tx8, x8, #0x288\n0000000100097e84\tldp\tx19, x21, [x8]\n0000000100097e88\tldr\tx22, [x8, #0x10]\n0000000100097e8c\tcbz\tx19, 0x100097ea8\n0000000100097e90\tmov\tw8, #0x1\n0000000100097e94\tldaddal\tw8, w9, [x19]\n0000000100097e98\tstp\tx19, x21, [sp, #0x38]\n0000000100097e9c\tstr\tx22, [sp, #0x48]\n0000000100097ea0\tldaddal\tw8, w8, [x19]\n0000000100097ea4\tb\t0x100097eb0\n0000000100097ea8\tstp\txzr, x21, [sp, #0x38]\n0000000100097eac\tstr\tx22, [sp, #0x48]\n0000000100097eb0\tadd\tx1, sp, #0x38\n0000000100097eb4\tmov\tx0, x20\n0000000100097eb8\tbl\t__ZN11lumixtether13DeviceAdapter14dev_mutex_lockE7QString\n0000000100097ebc\tldr\tx8, [sp, #0x38]\n0000000100097ec0\tcbz\tx8, 0x100097ee4\n0000000100097ec4\tmov\tw9, #-0x1\n0000000100097ec8\tldaddal\tw9, w8, [x8]\n0000000100097ecc\tcmp\tw8, #0x1\n0000000100097ed0\tb.ne\t0x100097ee4\n0000000100097ed4\tldr\tx0, [sp, #0x38]\n0000000100097ed8\tmov\tw1, #0x2\n0000000100097edc\tmov\tw2, #0x8\n0000000100097ee0\tbl\t0x10012f7dc ; symbol stub for: __ZN10QArrayData10deallocateEPS_xx\n0000000100097ee4\tadd\tx8, sp, #0x20\n0000000100097ee8\tmov\tx0, x21\n0000000100097eec\tmov\tx1, x22\n0000000100097ef0\tbl\t0x1001303dc ; symbol stub for: __ZN7QString18toLocal8Bit_helperEPK5QCharx\n0000000100097ef4\tldr\tx8, [sp, #0x20]\n0000000100097ef8\tcbz\tx8, 0x100097f08\n0000000100097efc\tldr\tw8, [x8]\n0000000100097f00\tcmp\tw8, #0x2\n0000000100097f04\tb.lt\t0x100097f18\n0000000100097f08\tldr\tx1, [sp, #0x30]\n0000000100097f0c\tadd\tx0, sp, #0x20\n0000000100097f10\tmov\tw2, #0x1\n0000000100097f14\tbl\t0x10012f818 ; symbol stub for: __ZN10QByteArray11reallocDataExN10QArrayData16AllocationOptionE\n0000000100097f18\tldr\tx1, [sp, #0x28]\n0000000100097f1c\tadd\tx0, sp, #0x50\n0000000100097f20\tmov\tx2, #0x0\n0000000100097f24\tbl\t0x10012ec30 ; symbol stub for: __Z26LMX_func_api_Rec_Ctrl_MenuP24_tag_LMX_STRUCT_REC_CTRLPcPj\n0000000100097f28\tmov\tx23, x0"
+    },
+    {
+      "name": "End_Menu",
+      "tag": "0x09000022",
+      "value_count": 0,
+      "table_entry": {
+        "index": 49,
+        "tag": "0x9000022",
+        "payload_size": 0,
+        "serializer_pointer_raw": "0x44230",
+        "serializer_kind": "none",
+        "value_width_bytes": 0,
+        "expected_value_count": 0,
+        "serializer_evidence_lines": [
+          68383,
+          68384
+        ]
+      },
+      "source_lines": [
+        147544,
+        147611
+      ],
+      "evidence": "__ZN11lumixtether13DeviceAdapter39adp_LMX_func_api_Rec_Ctrl_Menu_End_MenuE7QString:\n000000010009808c\tstp\tx22, x21, [sp, #-0x30]!\n0000000100098090\tstp\tx20, x19, [sp, #0x10]\n0000000100098094\tstp\tx29, x30, [sp, #0x20]\n0000000100098098\tadd\tx29, sp, #0x20\n000000010009809c\tsub\tsp, sp, #0x860\n00000001000980a0\tmov\tx20, x1\n00000001000980a4\tmov\tx19, x0\n00000001000980a8\tadd\tx8, sp, #0x50\n00000001000980ac\torr\tx0, x8, #0x4\n00000001000980b0\tmov\tw1, #0x808\n00000001000980b4\tbl\t0x10013100c ; symbol stub for: _bzero\n00000001000980b8\tmov\tw8, #0x22\n00000001000980bc\tmovk\tw8, #0x900, lsl #16\n00000001000980c0\tstr\tw8, [sp, #0x50]\n00000001000980c4\tadrp\tx8, 2380 ; 0x1009e4000\n00000001000980c8\tldr\tx8, [x8, #0x300] ; literal pool symbol address: __ZN7QString6_emptyE\n00000001000980cc\tldp\tx9, x1, [x20, #0x8]\n00000001000980d0\tcmp\tx9, #0x0\n00000001000980d4\tcsel\tx0, x8, x9, eq\n00000001000980d8\tadr\tx2, #697794 ; literal pool for: \"\"\n00000001000980dc\tnop\n00000001000980e0\tmov\tx3, #-0x1\n00000001000980e4\tmov\tw4, #0x1\n00000001000980e8\tbl\t0x1001303a0 ; symbol stub for: __ZN7QString14compare_helperEPK5QCharxPKcxN2Qt15CaseSensitivityE\n00000001000980ec\tcbnz\tw0, 0x100098104\n00000001000980f0\tldr\tx8, [x19, #0x460]\n00000001000980f4\tadd\tx8, x8, #0x4b, lsl #12\n00000001000980f8\tadd\tx1, x8, #0x288\n00000001000980fc\tmov\tx0, x20\n0000000100098100\tbl\t0x100130478 ; symbol stub for: __ZN7QStringaSERKS_\n0000000100098104\tldp\tx8, x9, [x20]\n0000000100098108\tstp\tx8, x9, [sp, #0x38]\n000000010009810c\tldr\tx9, [x20, #0x10]\n0000000100098110\tstr\tx9, [sp, #0x48]\n0000000100098114\tcbz\tx8, 0x100098120\n0000000100098118\tmov\tw9, #0x1\n000000010009811c\tldaddal\tw9, w8, [x8]\n0000000100098120\tadd\tx1, sp, #0x38\n0000000100098124\tmov\tx0, x19\n0000000100098128\tbl\t__ZN11lumixtether13DeviceAdapter14dev_mutex_lockE7QString\n000000010009812c\tldr\tx8, [sp, #0x38]\n0000000100098130\tcbz\tx8, 0x100098154\n0000000100098134\tmov\tw9, #-0x1\n0000000100098138\tldaddal\tw9, w8, [x8]\n000000010009813c\tcmp\tw8, #0x1\n0000000100098140\tb.ne\t0x100098154\n0000000100098144\tldr\tx0, [sp, #0x38]\n0000000100098148\tmov\tw1, #0x2\n000000010009814c\tmov\tw2, #0x8\n0000000100098150\tbl\t0x10012f7dc ; symbol stub for: __ZN10QArrayData10deallocateEPS_xx\n0000000100098154\tldp\tx0, x1, [x20, #0x8]\n0000000100098158\tadd\tx8, sp, #0x20\n000000010009815c\tbl\t0x1001303dc ; symbol stub for: __ZN7QString18toLocal8Bit_helperEPK5QCharx\n0000000100098160\tldr\tx8, [sp, #0x20]\n0000000100098164\tcbz\tx8, 0x100098174\n0000000100098168\tldr\tw8, [x8]\n000000010009816c\tcmp\tw8, #0x2\n0000000100098170\tb.lt\t0x100098184\n0000000100098174\tldr\tx1, [sp, #0x30]\n0000000100098178\tadd\tx0, sp, #0x20\n000000010009817c\tmov\tw2, #0x1\n0000000100098180\tbl\t0x10012f818 ; symbol stub for: __ZN10QByteArray11reallocDataExN10QArrayData16AllocationOptionE\n0000000100098184\tldr\tx1, [sp, #0x28]\n0000000100098188\tadd\tx0, sp, #0x50\n000000010009818c\tmov\tx2, #0x0\n0000000100098190\tbl\t0x10012ec30 ; symbol stub for: __Z26LMX_func_api_Rec_Ctrl_MenuP24_tag_LMX_STRUCT_REC_CTRLPcPj\n0000000100098194\tmov\tx21, x0"
+    },
+    {
+      "name": "Touch_Down_Menu",
+      "tag": "0x09000023",
+      "value_count": 2,
+      "table_entry": {
+        "index": 50,
+        "tag": "0x9000023",
+        "payload_size": 4,
+        "serializer_pointer_raw": "0x44204",
+        "serializer_kind": "u16_le",
+        "value_width_bytes": 2,
+        "expected_value_count": 2,
+        "serializer_evidence_lines": [
+          68371,
+          68382
+        ]
+      },
+      "source_lines": [
+        147678,
+        147746
+      ],
+      "evidence": "__ZN11lumixtether13DeviceAdapter46adp_LMX_func_api_Rec_Ctrl_Menu_Touch_Down_MenuEii:\n00000001000982a0\tstp\tx24, x23, [sp, #-0x40]!\n00000001000982a4\tstp\tx22, x21, [sp, #0x10]\n00000001000982a8\tstp\tx20, x19, [sp, #0x20]\n00000001000982ac\tstp\tx29, x30, [sp, #0x30]\n00000001000982b0\tadd\tx29, sp, #0x30\n00000001000982b4\tsub\tsp, sp, #0x860\n00000001000982b8\tmov\tw21, #0x0\n00000001000982bc\tcmp\tw1, #0x3e7\n00000001000982c0\tb.hi\t0x10009844c\n00000001000982c4\tmov\tx19, x2\n00000001000982c8\ttbnz\tw2, #0x1f, 0x10009844c\n00000001000982cc\tmov\tx22, x1\n00000001000982d0\tmov\tx20, x0\n00000001000982d4\tadd\tx8, sp, #0x50\n00000001000982d8\torr\tx0, x8, #0x4\n00000001000982dc\tmov\tw1, #0x808\n00000001000982e0\tbl\t0x10013100c ; symbol stub for: _bzero\n00000001000982e4\tmov\tw8, #0x23\n00000001000982e8\tmovk\tw8, #0x900, lsl #16\n00000001000982ec\tstr\tw8, [sp, #0x50]\n00000001000982f0\tmov\tw8, #0x2\n00000001000982f4\tstrh\tw8, [sp, #0x54]\n00000001000982f8\tstp\tw22, w19, [sp, #0x58]\n00000001000982fc\tldr\tx8, [x20, #0x460]\n0000000100098300\tadd\tx8, x8, #0x4b, lsl #12\n0000000100098304\tadd\tx8, x8, #0x288\n0000000100098308\tldp\tx19, x21, [x8]\n000000010009830c\tldr\tx22, [x8, #0x10]\n0000000100098310\tcbz\tx19, 0x10009832c\n0000000100098314\tmov\tw8, #0x1\n0000000100098318\tldaddal\tw8, w9, [x19]\n000000010009831c\tstp\tx19, x21, [sp, #0x38]\n0000000100098320\tstr\tx22, [sp, #0x48]\n0000000100098324\tldaddal\tw8, w8, [x19]\n0000000100098328\tb\t0x100098334\n000000010009832c\tstp\txzr, x21, [sp, #0x38]\n0000000100098330\tstr\tx22, [sp, #0x48]\n0000000100098334\tadd\tx1, sp, #0x38\n0000000100098338\tmov\tx0, x20\n000000010009833c\tbl\t__ZN11lumixtether13DeviceAdapter14dev_mutex_lockE7QString\n0000000100098340\tldr\tx8, [sp, #0x38]\n0000000100098344\tcbz\tx8, 0x100098368\n0000000100098348\tmov\tw9, #-0x1\n000000010009834c\tldaddal\tw9, w8, [x8]\n0000000100098350\tcmp\tw8, #0x1\n0000000100098354\tb.ne\t0x100098368\n0000000100098358\tldr\tx0, [sp, #0x38]\n000000010009835c\tmov\tw1, #0x2\n0000000100098360\tmov\tw2, #0x8\n0000000100098364\tbl\t0x10012f7dc ; symbol stub for: __ZN10QArrayData10deallocateEPS_xx\n0000000100098368\tadd\tx8, sp, #0x20\n000000010009836c\tmov\tx0, x21\n0000000100098370\tmov\tx1, x22\n0000000100098374\tbl\t0x1001303dc ; symbol stub for: __ZN7QString18toLocal8Bit_helperEPK5QCharx\n0000000100098378\tldr\tx8, [sp, #0x20]\n000000010009837c\tcbz\tx8, 0x10009838c\n0000000100098380\tldr\tw8, [x8]\n0000000100098384\tcmp\tw8, #0x2\n0000000100098388\tb.lt\t0x10009839c\n000000010009838c\tldr\tx1, [sp, #0x30]\n0000000100098390\tadd\tx0, sp, #0x20\n0000000100098394\tmov\tw2, #0x1\n0000000100098398\tbl\t0x10012f818 ; symbol stub for: __ZN10QByteArray11reallocDataExN10QArrayData16AllocationOptionE\n000000010009839c\tldr\tx1, [sp, #0x28]\n00000001000983a0\tadd\tx0, sp, #0x50\n00000001000983a4\tmov\tx2, #0x0\n00000001000983a8\tbl\t0x10012ec30 ; symbol stub for: __Z26LMX_func_api_Rec_Ctrl_MenuP24_tag_LMX_STRUCT_REC_CTRLPcPj\n00000001000983ac\tmov\tx23, x0"
+    },
+    {
+      "name": "Touch_Up_Menu",
+      "tag": "0x09000024",
+      "value_count": 2,
+      "table_entry": {
+        "index": 51,
+        "tag": "0x9000024",
+        "payload_size": 4,
+        "serializer_pointer_raw": "0x44204",
+        "serializer_kind": "u16_le",
+        "value_width_bytes": 2,
+        "expected_value_count": 2,
+        "serializer_evidence_lines": [
+          68371,
+          68382
+        ]
+      },
+      "source_lines": [
+        147836,
+        147904
+      ],
+      "evidence": "__ZN11lumixtether13DeviceAdapter44adp_LMX_func_api_Rec_Ctrl_Menu_Touch_Up_MenuEii:\n0000000100098514\tstp\tx24, x23, [sp, #-0x40]!\n0000000100098518\tstp\tx22, x21, [sp, #0x10]\n000000010009851c\tstp\tx20, x19, [sp, #0x20]\n0000000100098520\tstp\tx29, x30, [sp, #0x30]\n0000000100098524\tadd\tx29, sp, #0x30\n0000000100098528\tsub\tsp, sp, #0x860\n000000010009852c\tmov\tw21, #0x0\n0000000100098530\tcmp\tw1, #0x3e7\n0000000100098534\tb.hi\t0x1000986c0\n0000000100098538\tmov\tx19, x2\n000000010009853c\ttbnz\tw2, #0x1f, 0x1000986c0\n0000000100098540\tmov\tx22, x1\n0000000100098544\tmov\tx20, x0\n0000000100098548\tadd\tx8, sp, #0x50\n000000010009854c\torr\tx0, x8, #0x4\n0000000100098550\tmov\tw1, #0x808\n0000000100098554\tbl\t0x10013100c ; symbol stub for: _bzero\n0000000100098558\tmov\tw8, #0x24\n000000010009855c\tmovk\tw8, #0x900, lsl #16\n0000000100098560\tstr\tw8, [sp, #0x50]\n0000000100098564\tmov\tw8, #0x2\n0000000100098568\tstrh\tw8, [sp, #0x54]\n000000010009856c\tstp\tw22, w19, [sp, #0x58]\n0000000100098570\tldr\tx8, [x20, #0x460]\n0000000100098574\tadd\tx8, x8, #0x4b, lsl #12\n0000000100098578\tadd\tx8, x8, #0x288\n000000010009857c\tldp\tx19, x21, [x8]\n0000000100098580\tldr\tx22, [x8, #0x10]\n0000000100098584\tcbz\tx19, 0x1000985a0\n0000000100098588\tmov\tw8, #0x1\n000000010009858c\tldaddal\tw8, w9, [x19]\n0000000100098590\tstp\tx19, x21, [sp, #0x38]\n0000000100098594\tstr\tx22, [sp, #0x48]\n0000000100098598\tldaddal\tw8, w8, [x19]\n000000010009859c\tb\t0x1000985a8\n00000001000985a0\tstp\txzr, x21, [sp, #0x38]\n00000001000985a4\tstr\tx22, [sp, #0x48]\n00000001000985a8\tadd\tx1, sp, #0x38\n00000001000985ac\tmov\tx0, x20\n00000001000985b0\tbl\t__ZN11lumixtether13DeviceAdapter14dev_mutex_lockE7QString\n00000001000985b4\tldr\tx8, [sp, #0x38]\n00000001000985b8\tcbz\tx8, 0x1000985dc\n00000001000985bc\tmov\tw9, #-0x1\n00000001000985c0\tldaddal\tw9, w8, [x8]\n00000001000985c4\tcmp\tw8, #0x1\n00000001000985c8\tb.ne\t0x1000985dc\n00000001000985cc\tldr\tx0, [sp, #0x38]\n00000001000985d0\tmov\tw1, #0x2\n00000001000985d4\tmov\tw2, #0x8\n00000001000985d8\tbl\t0x10012f7dc ; symbol stub for: __ZN10QArrayData10deallocateEPS_xx\n00000001000985dc\tadd\tx8, sp, #0x20\n00000001000985e0\tmov\tx0, x21\n00000001000985e4\tmov\tx1, x22\n00000001000985e8\tbl\t0x1001303dc ; symbol stub for: __ZN7QString18toLocal8Bit_helperEPK5QCharx\n00000001000985ec\tldr\tx8, [sp, #0x20]\n00000001000985f0\tcbz\tx8, 0x100098600\n00000001000985f4\tldr\tw8, [x8]\n00000001000985f8\tcmp\tw8, #0x2\n00000001000985fc\tb.lt\t0x100098610\n0000000100098600\tldr\tx1, [sp, #0x30]\n0000000100098604\tadd\tx0, sp, #0x20\n0000000100098608\tmov\tw2, #0x1\n000000010009860c\tbl\t0x10012f818 ; symbol stub for: __ZN10QByteArray11reallocDataExN10QArrayData16AllocationOptionE\n0000000100098610\tldr\tx1, [sp, #0x28]\n0000000100098614\tadd\tx0, sp, #0x50\n0000000100098618\tmov\tx2, #0x0\n000000010009861c\tbl\t0x10012ec30 ; symbol stub for: __Z26LMX_func_api_Rec_Ctrl_MenuP24_tag_LMX_STRUCT_REC_CTRLPcPj\n0000000100098620\tmov\tx23, x0"
+    }
+  ],
+  "device_execution": false
+}

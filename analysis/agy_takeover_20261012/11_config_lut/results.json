@@ -1,0 +1,3698 @@
+{
+  "task_id": "11_config_lut",
+  "generated_by": "analysis/agy_takeover_20261012/11_config_lut/verify_config_lut.py",
+  "input_files_s1m2": {
+    "config_1.DAT": {
+      "path": "analysis/baseline_20261008_01/config_1.DAT",
+      "size": 9197409,
+      "sha256": "ca848c6889b222a2d7e0039aee945e9afe522cda0997e8053b1a3537820304e2"
+    },
+    "config_2.DAT": {
+      "path": "analysis/baseline_20261008_01/config_2.DAT",
+      "size": 9197409,
+      "sha256": "ca848c6889b222a2d7e0039aee945e9afe522cda0997e8053b1a3537820304e2"
+    },
+    "HIRES_1ST_ON.DAT": {
+      "path": "analysis/highres_20261008_02/config_1.DAT",
+      "size": 9197409,
+      "sha256": "ca848c6889b222a2d7e0039aee945e9afe522cda0997e8053b1a3537820304e2"
+    },
+    "HIRES_1ST_OFF.DAT": {
+      "path": "analysis/highres_firstnormal_off_20261008_03/config_1.DAT",
+      "size": 9197409,
+      "sha256": "3bac47236253971c597980af339d7de5489e89a77d62a672639284a754fa7025"
+    },
+    "HIRES_1ST_ON_FAN.DAT": {
+      "path": "analysis/highres_firstnormal_on_fan_20261008_04/config_1.DAT",
+      "size": 9197409,
+      "sha256": "7ce284f173a793bf22d3852fc42f652c9268134570c39cde1379d33e13a38aba"
+    },
+    "HIRES_1ST_OFF_FAN.DAT": {
+      "path": "analysis/highres_firstnormal_off_fan_20261008_05/config_1.DAT",
+      "size": 9197409,
+      "sha256": "fe2cec28a5c105f590718034583af998d61f9ee8cc045169629539915705b11f"
+    },
+    "device_inventory_06.DAT": {
+      "path": "analysis/device_inventory_20261008_06/config_1.DAT",
+      "size": 9197409,
+      "sha256": "caf0fc191ce18bd5f0dc276647595f8d778e370afb8cdafb187f8ba7a80e10f7"
+    },
+    "final_baseline_13.DAT": {
+      "path": "analysis/inventory_final_baseline_20261008_13/config_1.DAT",
+      "size": 9197409,
+      "sha256": "caf0fc191ce18bd5f0dc276647595f8d778e370afb8cdafb187f8ba7a80e10f7"
+    },
+    "s1m2_0x9421_inner.DAT": {
+      "path": "analysis/s1m2_config_0x9421.bin[12:]",
+      "size": 9197409,
+      "sha256": "591684cc382742686d019320e71c752bb99b7afd9d306243644d7c14ad4d5f4c"
+    }
+  },
+  "s1m2_raw_ptp_0x9421_capture": {
+    "path": "analysis/s1m2_config_0x9421.bin",
+    "raw_size": 9197421,
+    "raw_sha256": "92599a7c5604752040f9b4b6806f6684ad2bc899663c6666501a5c30d7735ee0",
+    "wrapper_tag_hex": "0x080000a2",
+    "wrapper_outer_len": 9197413,
+    "wrapper_inner_len": 9197409,
+    "inner_dat_sha256": "591684cc382742686d019320e71c752bb99b7afd9d306243644d7c14ad4d5f4c",
+    "inner_matches_config_1_dat": false,
+    "diff_count_vs_config_1_dat": 10
+  },
+  "binary_provenance": {
+    "com.panasonic.jp.lumixlab.apk": {
+      "path": "analysis/sources/lumix_lab_codex_static/com.panasonic.jp.lumixlab.apk",
+      "size": 189845077,
+      "sha256": "6ba873110d201675a905f7dac39bcda3291674e7440a484d6d5bd1a78447115f"
+    },
+    "config.arm64_v8a.apk": {
+      "path": "analysis/sources/lumix_lab_codex_static/config.arm64_v8a.apk",
+      "size": 42944168,
+      "sha256": "4e1a4fcbb9321bacfce69b6719146b5f8b249d5d9dded72044d23b99903fcdb4"
+    },
+    "libllc_static.so": {
+      "path": "analysis/lab_lut_protocol_20261010/libllc_static.so",
+      "size": 104008,
+      "sha256": "7433d705215bb92e7a87b9005277127e5851c7a4638ca8f6a3db17d2a00927df"
+    },
+    "libcube_merge_static.so": {
+      "path": "analysis/lab_lut_protocol_20261010/libcube_merge_static.so",
+      "size": 11976,
+      "sha256": "91c35f56413f0e6fd8108000104a4270b6beee64121bfd954ada56e510c03d2f"
+    },
+    "libLmxptpif.dylib": {
+      "path": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/Frameworks/libLmxptpif.dylib",
+      "size": 6870784,
+      "sha256": "b767e5680676eefdc05d02a4772c4120a45916e246169b79393356499c07ec97"
+    }
+  },
+  "s1m2_container_schema": {
+    "file_size": 9197409,
+    "sha256": "ca848c6889b222a2d7e0039aee945e9afe522cda0997e8053b1a3537820304e2",
+    "magic_hex": "50616e61736f6e6963000000000000000000",
+    "model": "DC-S1M2",
+    "declared_len_0x2c": 9197360,
+    "declared_len_plus_49_matches_size": true,
+    "header_size_bytes": 84,
+    "header_u32_0x30_0x53": [
+      387,
+      1,
+      4,
+      14,
+      1,
+      49,
+      9,
+      41,
+      215628
+    ],
+    "record_stream_start_hex": "0x000054",
+    "record_stream_end_hex": "0x8c575c",
+    "exact_stream_coverage": true,
+    "total_records": 3076,
+    "three_slot_tag_count": 1024,
+    "single_slot_records": [
+      {
+        "tag_hex": "0x02f4",
+        "offset_hex": "0x00f69c",
+        "slot": 0,
+        "rlen": 31832,
+        "flags_hex": "0x0000000a"
+      },
+      {
+        "tag_hex": "0x034a",
+        "offset_hex": "0x019d24",
+        "slot": 0,
+        "rlen": 144,
+        "flags_hex": "0x00000009"
+      },
+      {
+        "tag_hex": "0x051f",
+        "offset_hex": "0x04ae88",
+        "slot": 0,
+        "rlen": 8840924,
+        "flags_hex": "0x0000000c"
+      },
+      {
+        "tag_hex": "0x056a",
+        "offset_hex": "0x8c3ed8",
+        "slot": 0,
+        "rlen": 1764,
+        "flags_hex": "0x0000000d"
+      }
+    ],
+    "trailer_hex": "ffff0000e5",
+    "checksum_sum_mod_256": 0
+  },
+  "s5_family_comparison": {
+    "files": {
+      "S5II.DAT": {
+        "raw_file_size": 2252861,
+        "raw_file_sha256": "cdba85c6e0064de4f52e4de4d040dd7716332310bcb32da70a93e9e6b2c819f5",
+        "dat_size": 2252861,
+        "dat_sha256": "cdba85c6e0064de4f52e4de4d040dd7716332310bcb32da70a93e9e6b2c819f5",
+        "ptp_wrapper": null,
+        "magic_hex": "50616e61736f6e6963000000000000000000",
+        "model": "DC-S5M2",
+        "family_byte_0x11": 0,
+        "declared_len_0x2c": 2252812,
+        "declared_len_plus_49_matches_size": true,
+        "header_word_0x30_hex": "0x00000400",
+        "record_stream_start_hex": "0x000034",
+        "record_stream_end_hex": "0x226038",
+        "expected_record_stream_end_hex": "0x226038",
+        "exact_stream_coverage": true,
+        "total_records": 966,
+        "small_6b_records": 838,
+        "large_12b_records": 128,
+        "large_records_over_500b": [
+          {
+            "index": 33,
+            "offset_hex": "0x0002d8",
+            "tag": "0x0043",
+            "rlen": 628,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 34,
+            "offset_hex": "0x00054c",
+            "tag": "0x0044",
+            "rlen": 628,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 189,
+            "offset_hex": "0x001568",
+            "tag": "0x011b",
+            "rlen": 1020,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 245,
+            "offset_hex": "0x002210",
+            "tag": "0x0163",
+            "rlen": 1020,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 249,
+            "offset_hex": "0x002648",
+            "tag": "0x0167",
+            "rlen": 1356,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 464,
+            "offset_hex": "0x0043c0",
+            "tag": "0x02f5",
+            "rlen": 5156,
+            "flags_hex": "0x00000000"
+          },
+          {
+            "index": 542,
+            "offset_hex": "0x006598",
+            "tag": "0x0351",
+            "rlen": 628,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 691,
+            "offset_hex": "0x00767c",
+            "tag": "0x03f0",
+            "rlen": 740,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 692,
+            "offset_hex": "0x007960",
+            "tag": "0x03f1",
+            "rlen": 5892,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 702,
+            "offset_hex": "0x009bf8",
+            "tag": "0x03fb",
+            "rlen": 7180,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 703,
+            "offset_hex": "0x00b804",
+            "tag": "0x03fc",
+            "rlen": 1468,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 750,
+            "offset_hex": "0x00d218",
+            "tag": "0x042c",
+            "rlen": 5892,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 760,
+            "offset_hex": "0x00f4b0",
+            "tag": "0x0436",
+            "rlen": 1356,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 761,
+            "offset_hex": "0x00f9fc",
+            "tag": "0x0437",
+            "rlen": 1468,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 805,
+            "offset_hex": "0x011cd0",
+            "tag": "0x0468",
+            "rlen": 1748,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 927,
+            "offset_hex": "0x013b6c",
+            "tag": "0x050b",
+            "rlen": 1356,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 946,
+            "offset_hex": "0x0148f0",
+            "tag": "0x0520",
+            "rlen": 2156292,
+            "flags_hex": "0x00000000"
+          },
+          {
+            "index": 956,
+            "offset_hex": "0x223264",
+            "tag": "0x052a",
+            "rlen": 8064,
+            "flags_hex": "0x00000000"
+          },
+          {
+            "index": 957,
+            "offset_hex": "0x2251e4",
+            "tag": "0x052b",
+            "rlen": 3476,
+            "flags_hex": "0x00000000"
+          }
+        ],
+        "trailer_hex": "ffff000063",
+        "checksum_sum_mod_256": 0
+      },
+      "S5IIX.DAT": {
+        "raw_file_size": 2253165,
+        "raw_file_sha256": "d4ba0335936386ddcaaef76f323f6e3077457ffc5e0f55f52ada4a13bccdfa59",
+        "dat_size": 2253165,
+        "dat_sha256": "d4ba0335936386ddcaaef76f323f6e3077457ffc5e0f55f52ada4a13bccdfa59",
+        "ptp_wrapper": null,
+        "magic_hex": "50616e61736f6e6963000000000000000000",
+        "model": "DC-S5M2X",
+        "family_byte_0x11": 0,
+        "declared_len_0x2c": 2253116,
+        "declared_len_plus_49_matches_size": true,
+        "header_word_0x30_hex": "0x00000500",
+        "record_stream_start_hex": "0x000034",
+        "record_stream_end_hex": "0x226168",
+        "expected_record_stream_end_hex": "0x226168",
+        "exact_stream_coverage": true,
+        "total_records": 978,
+        "small_6b_records": 850,
+        "large_12b_records": 128,
+        "large_records_over_500b": [
+          {
+            "index": 33,
+            "offset_hex": "0x0002d8",
+            "tag": "0x0043",
+            "rlen": 628,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 34,
+            "offset_hex": "0x00054c",
+            "tag": "0x0044",
+            "rlen": 628,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 189,
+            "offset_hex": "0x001568",
+            "tag": "0x011b",
+            "rlen": 1020,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 245,
+            "offset_hex": "0x002210",
+            "tag": "0x0163",
+            "rlen": 1020,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 249,
+            "offset_hex": "0x002648",
+            "tag": "0x0167",
+            "rlen": 1356,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 464,
+            "offset_hex": "0x0043c0",
+            "tag": "0x02f5",
+            "rlen": 5156,
+            "flags_hex": "0x00000000"
+          },
+          {
+            "index": 542,
+            "offset_hex": "0x006598",
+            "tag": "0x0351",
+            "rlen": 628,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 691,
+            "offset_hex": "0x00767c",
+            "tag": "0x03f0",
+            "rlen": 740,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 692,
+            "offset_hex": "0x007960",
+            "tag": "0x03f1",
+            "rlen": 5892,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 702,
+            "offset_hex": "0x009bf8",
+            "tag": "0x03fb",
+            "rlen": 7180,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 703,
+            "offset_hex": "0x00b804",
+            "tag": "0x03fc",
+            "rlen": 1468,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 750,
+            "offset_hex": "0x00d218",
+            "tag": "0x042c",
+            "rlen": 5892,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 760,
+            "offset_hex": "0x00f4b0",
+            "tag": "0x0436",
+            "rlen": 1356,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 761,
+            "offset_hex": "0x00f9fc",
+            "tag": "0x0437",
+            "rlen": 1468,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 805,
+            "offset_hex": "0x011cd0",
+            "tag": "0x0468",
+            "rlen": 1748,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 927,
+            "offset_hex": "0x013b6c",
+            "tag": "0x050b",
+            "rlen": 1356,
+            "flags_hex": "0x00000001"
+          },
+          {
+            "index": 946,
+            "offset_hex": "0x0148f0",
+            "tag": "0x0520",
+            "rlen": 2156292,
+            "flags_hex": "0x00000000"
+          },
+          {
+            "index": 956,
+            "offset_hex": "0x223264",
+            "tag": "0x052a",
+            "rlen": 8064,
+            "flags_hex": "0x00000000"
+          },
+          {
+            "index": 957,
+            "offset_hex": "0x2251e4",
+            "tag": "0x052b",
+            "rlen": 3476,
+            "flags_hex": "0x00000000"
+          }
+        ],
+        "trailer_hex": "ffff000001",
+        "checksum_sum_mod_256": 0
+      },
+      "S5_PTP_0x9421_v2.9.bin": {
+        "raw_file_size": 65545,
+        "raw_file_sha256": "e808a6b899173a5a7ee8ef7a790c5ca24ba450d64b80ea3fe731db10123f20ab",
+        "dat_size": 65533,
+        "dat_sha256": "7ea14e645ffeefdbc508ec5038fc279dd347c8d4169aea773b217bd58da058ef",
+        "ptp_wrapper": {
+          "tag_hex": "0x080000a2",
+          "outer_len": 65537,
+          "inner_len": 65533,
+          "outer_equals_inner_plus_4": true,
+          "inner_equals_remaining_bytes": true
+        },
+        "magic_hex": "50616e61736f6e6963000000000000000000",
+        "model": "DC-S5",
+        "family_byte_0x11": 0,
+        "declared_len_0x2c": 65484,
+        "declared_len_plus_49_matches_size": true,
+        "header_word_0x30_hex": "0x00000300",
+        "record_stream_start_hex": "0x000034",
+        "record_stream_end_hex": "0x00fff8",
+        "expected_record_stream_end_hex": "0x00fff8",
+        "exact_stream_coverage": true,
+        "total_records": 831,
+        "small_6b_records": 831,
+        "large_12b_records": 0,
+        "large_records_over_500b": [],
+        "trailer_hex": "ffff0000bd",
+        "checksum_sum_mod_256": 0
+      }
+    }
+  },
+  "audit_of_prior_scripts": {
+    "read_s1m2_known_setting_false_containers": {
+      "claimed_0x000114": {
+        "old_script_claim": "Top-level Container Record 0x001c (len=0x10000)",
+        "actual_enclosing_record_index": 5,
+        "actual_enclosing_record_offset_hex": "0x000110",
+        "actual_tag_hex": "0x0004",
+        "actual_slot": 2,
+        "actual_rlen": 28,
+        "actual_flags_hex": "0x00010000",
+        "explanation": "0x000114 is +4 bytes inside Record #5 (tag=0x0004, slot=2 at 0x000110); the old script misread rlen=0x0000001c (28) and flags=0x00010000 as a 12-byte record header."
+      },
+      "claimed_0x0102cc": {
+        "old_script_claim": "Container Record 0x0004 (len=0x50004)",
+        "actual_enclosing_record_index": 1320,
+        "actual_enclosing_record_offset_hex": "0x00f69c",
+        "actual_tag_hex": "0x02f4",
+        "actual_slot": 0,
+        "actual_rlen": 31832,
+        "actual_flags_hex": "0x0000000a",
+        "explanation": "0x0102cc is +3120 bytes inside Record #1320 (tag=0x02f4 LUT metadata table at 0x00f69c); it lands on Entry 04 ('Earth') header bytes (w0=4, w1=0, w2=4, w3=5 -> 04 00 00 00 04 00 05 00)."
+      }
+    },
+    "s1m2_setting_diffs_vs_config_1": {
+      "config_2.DAT": {
+        "total_changed_bytes_including_checksum": 0,
+        "checksum_before_hex": "0xe5",
+        "checksum_after_hex": "0xe5",
+        "changed_tags": {}
+      },
+      "HIRES_1ST_ON.DAT": {
+        "total_changed_bytes_including_checksum": 0,
+        "checksum_before_hex": "0xe5",
+        "checksum_after_hex": "0xe5",
+        "changed_tags": {}
+      },
+      "HIRES_1ST_OFF.DAT": {
+        "total_changed_bytes_including_checksum": 7,
+        "checksum_before_hex": "0xe5",
+        "checksum_after_hex": "0xd9",
+        "changed_tags": {
+          "0x030f": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x017be8",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01010101010101010101010101010100",
+              "after_hex": "02010101010101010101010101010100"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x017c04",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01010101010101010101010101010100",
+              "after_hex": "02010101010101010101010101010100"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x017c20",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01010101010101010101010101010100",
+              "after_hex": "02010101010101010101010101010100"
+            }
+          ],
+          "0x045d": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x03fe0c",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060601060600",
+              "after_hex": "04060606060606060606060601060600"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x03fe28",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060101010600",
+              "after_hex": "04060606060606060606060101010600"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x03fe44",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060606060600",
+              "after_hex": "04060606060606060606060606060600"
+            }
+          ]
+        }
+      },
+      "HIRES_1ST_ON_FAN.DAT": {
+        "total_changed_bytes_including_checksum": 7,
+        "checksum_before_hex": "0xe5",
+        "checksum_after_hex": "0xd9",
+        "changed_tags": {
+          "0x0291": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x00ebbc",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "01000000000000000000000000000000",
+              "after_hex": "02000000000000000000000000000000"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x00ebd8",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "01000000000000000000000000000000",
+              "after_hex": "02000000000000000000000000000000"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x00ebf4",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "01000000000000000000000000000000",
+              "after_hex": "02000000000000000000000000000000"
+            }
+          ],
+          "0x045d": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x03fe0c",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060601060600",
+              "after_hex": "04060606060606060606060601060600"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x03fe28",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060101010600",
+              "after_hex": "04060606060606060606060101010600"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x03fe44",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060606060600",
+              "after_hex": "04060606060606060606060606060600"
+            }
+          ]
+        }
+      },
+      "HIRES_1ST_OFF_FAN.DAT": {
+        "total_changed_bytes_including_checksum": 10,
+        "checksum_before_hex": "0xe5",
+        "checksum_after_hex": "0xd6",
+        "changed_tags": {
+          "0x0291": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x00ebbc",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "01000000000000000000000000000000",
+              "after_hex": "02000000000000000000000000000000"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x00ebd8",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "01000000000000000000000000000000",
+              "after_hex": "02000000000000000000000000000000"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x00ebf4",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "01000000000000000000000000000000",
+              "after_hex": "02000000000000000000000000000000"
+            }
+          ],
+          "0x030f": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x017be8",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01010101010101010101010101010100",
+              "after_hex": "02010101010101010101010101010100"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x017c04",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01010101010101010101010101010100",
+              "after_hex": "02010101010101010101010101010100"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x017c20",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01010101010101010101010101010100",
+              "after_hex": "02010101010101010101010101010100"
+            }
+          ],
+          "0x045d": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x03fe0c",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060601060600",
+              "after_hex": "04060606060606060606060601060600"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x03fe28",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060101010600",
+              "after_hex": "04060606060606060606060101010600"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x03fe44",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060606060600",
+              "after_hex": "04060606060606060606060606060600"
+            }
+          ]
+        }
+      },
+      "device_inventory_06.DAT": {
+        "total_changed_bytes_including_checksum": 19,
+        "checksum_before_hex": "0xe5",
+        "checksum_after_hex": "0xc7",
+        "changed_tags": {
+          "0x01d6": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x00ce58",
+              "rlen": 44,
+              "flags_hex": "0x00010003",
+              "before_hex": "56030008000800080008000800080008000800080008ab085608ab0900080000",
+              "after_hex": "56080008000800080008000800080008000800080008ab085608ab0900080000"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x00ce84",
+              "rlen": 44,
+              "flags_hex": "0x00010003",
+              "before_hex": "5603000800080008000800080008000800080008000856fe56fe56fe00080000",
+              "after_hex": "5608000800080008000800080008000800080008000856fe56fe56fe00080000"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x00ceb0",
+              "rlen": 44,
+              "flags_hex": "0x00010003",
+              "before_hex": "5603000800080008000800080008000800080008000800080008000800080000",
+              "after_hex": "5608000800080008000800080008000800080008000800080008000800080000"
+            }
+          ],
+          "0x01fb": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x00d440",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "02000000000000000000000000000000",
+              "after_hex": "01000000000000000000000000000000"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x00d45c",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "02000000000000000000000000000000",
+              "after_hex": "01000000000000000000000000000000"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x00d478",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "02000000000000000000000000000000",
+              "after_hex": "01000000000000000000000000000000"
+            }
+          ],
+          "0x01fc": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x00d494",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "08000000000000000000000000000000",
+              "after_hex": "09000000000000000000000000000000"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x00d4b0",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "08000000000000000000000000000000",
+              "after_hex": "09000000000000000000000000000000"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x00d4cc",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "08000000000000000000000000000000",
+              "after_hex": "09000000000000000000000000000000"
+            }
+          ],
+          "0x0291": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x00ebbc",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "01000000000000000000000000000000",
+              "after_hex": "02000000000000000000000000000000"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x00ebd8",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "01000000000000000000000000000000",
+              "after_hex": "02000000000000000000000000000000"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x00ebf4",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "01000000000000000000000000000000",
+              "after_hex": "02000000000000000000000000000000"
+            }
+          ],
+          "0x030f": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x017be8",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01010101010101010101010101010100",
+              "after_hex": "02010101010101010101010101010100"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x017c04",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01010101010101010101010101010100",
+              "after_hex": "02010101010101010101010101010100"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x017c20",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01010101010101010101010101010100",
+              "after_hex": "02010101010101010101010101010100"
+            }
+          ],
+          "0x045d": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x03fe0c",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060601060600",
+              "after_hex": "04060606060606060606060601060600"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x03fe28",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060101010600",
+              "after_hex": "04060606060606060606060101010600"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x03fe44",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060606060600",
+              "after_hex": "04060606060606060606060606060600"
+            }
+          ]
+        }
+      },
+      "final_baseline_13.DAT": {
+        "total_changed_bytes_including_checksum": 19,
+        "checksum_before_hex": "0xe5",
+        "checksum_after_hex": "0xc7",
+        "changed_tags": {
+          "0x01d6": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x00ce58",
+              "rlen": 44,
+              "flags_hex": "0x00010003",
+              "before_hex": "56030008000800080008000800080008000800080008ab085608ab0900080000",
+              "after_hex": "56080008000800080008000800080008000800080008ab085608ab0900080000"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x00ce84",
+              "rlen": 44,
+              "flags_hex": "0x00010003",
+              "before_hex": "5603000800080008000800080008000800080008000856fe56fe56fe00080000",
+              "after_hex": "5608000800080008000800080008000800080008000856fe56fe56fe00080000"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x00ceb0",
+              "rlen": 44,
+              "flags_hex": "0x00010003",
+              "before_hex": "5603000800080008000800080008000800080008000800080008000800080000",
+              "after_hex": "5608000800080008000800080008000800080008000800080008000800080000"
+            }
+          ],
+          "0x01fb": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x00d440",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "02000000000000000000000000000000",
+              "after_hex": "01000000000000000000000000000000"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x00d45c",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "02000000000000000000000000000000",
+              "after_hex": "01000000000000000000000000000000"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x00d478",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "02000000000000000000000000000000",
+              "after_hex": "01000000000000000000000000000000"
+            }
+          ],
+          "0x01fc": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x00d494",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "08000000000000000000000000000000",
+              "after_hex": "09000000000000000000000000000000"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x00d4b0",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "08000000000000000000000000000000",
+              "after_hex": "09000000000000000000000000000000"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x00d4cc",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "08000000000000000000000000000000",
+              "after_hex": "09000000000000000000000000000000"
+            }
+          ],
+          "0x0291": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x00ebbc",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "01000000000000000000000000000000",
+              "after_hex": "02000000000000000000000000000000"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x00ebd8",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "01000000000000000000000000000000",
+              "after_hex": "02000000000000000000000000000000"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x00ebf4",
+              "rlen": 28,
+              "flags_hex": "0x00000000",
+              "before_hex": "01000000000000000000000000000000",
+              "after_hex": "02000000000000000000000000000000"
+            }
+          ],
+          "0x030f": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x017be8",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01010101010101010101010101010100",
+              "after_hex": "02010101010101010101010101010100"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x017c04",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01010101010101010101010101010100",
+              "after_hex": "02010101010101010101010101010100"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x017c20",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01010101010101010101010101010100",
+              "after_hex": "02010101010101010101010101010100"
+            }
+          ],
+          "0x045d": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x03fe0c",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060601060600",
+              "after_hex": "04060606060606060606060601060600"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x03fe28",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060101010600",
+              "after_hex": "04060606060606060606060101010600"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x03fe44",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "01060606060606060606060606060600",
+              "after_hex": "04060606060606060606060606060600"
+            }
+          ]
+        }
+      },
+      "s1m2_0x9421_inner.DAT": {
+        "total_changed_bytes_including_checksum": 10,
+        "checksum_before_hex": "0xe5",
+        "checksum_after_hex": "0xe6",
+        "changed_tags": {
+          "0x0052": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x002034",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "04010101010101010101010505050100",
+              "after_hex": "05010101010101010101010505050100"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x002050",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "04010101010101010101010505050100",
+              "after_hex": "05010101010101010101010505050100"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x00206c",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "04010101010101010101010101010100",
+              "after_hex": "05010101010101010101010101010100"
+            }
+          ],
+          "0x0570": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x002088",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "03010101010101010101010202020100",
+              "after_hex": "02010101010101010101010202020100"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x0020a4",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "03010101010101010101010202020100",
+              "after_hex": "02010101010101010101010202020100"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x0020c0",
+              "rlen": 28,
+              "flags_hex": "0x00010000",
+              "before_hex": "03010101010101010101010101010100",
+              "after_hex": "02010101010101010101010101010100"
+            }
+          ],
+          "0x01d6": [
+            {
+              "slot": 0,
+              "record_offset_hex": "0x00ce58",
+              "rlen": 44,
+              "flags_hex": "0x00010003",
+              "before_hex": "56030008000800080008000800080008000800080008ab085608ab0900080000",
+              "after_hex": "ab030008000800080008000800080008000800080008ab085608ab0900080000"
+            },
+            {
+              "slot": 1,
+              "record_offset_hex": "0x00ce84",
+              "rlen": 44,
+              "flags_hex": "0x00010003",
+              "before_hex": "5603000800080008000800080008000800080008000856fe56fe56fe00080000",
+              "after_hex": "ab03000800080008000800080008000800080008000856fe56fe56fe00080000"
+            },
+            {
+              "slot": 2,
+              "record_offset_hex": "0x00ceb0",
+              "rlen": 44,
+              "flags_hex": "0x00010003",
+              "before_hex": "5603000800080008000800080008000800080008000800080008000800080000",
+              "after_hex": "ab03000800080008000800080008000800080008000800080008000800080000"
+            }
+          ]
+        }
+      }
+    },
+    "lut_numeric_review_off_by_2_bytes_bug": {
+      "old_base_formula": "o = 0x04ae88 + 8 + k * 215632",
+      "old_table_slice": "o + 10 : o + 10 + 215622 (which is s + 6, starting at u16 pstyle!)",
+      "true_slot_formula": "s = 0x04ae88 + 12 + k * 215632",
+      "true_table_slice": "s + 8 : s + 8 + 215622 (which is o + 12)",
+      "effect_on_axis_derivatives": "Starting 2 bytes early at s+6 shifts every RGB triple by 1 uint16 to (B_{i-1}, R_i, G_i), causing false dominant axis order [1, 2, 0] (39/40 slots) instead of true [0, 1, 2] (40/40 active slots: R fastest, G middle, B slowest).",
+      "effect_on_origin_sensitivity_py": "origin_sensitivity.py only swept origin in 0..10 relative to o, stopping 2 bytes short of o+12 (s+8)."
+    }
+  },
+  "s1m2_lut_metadata_and_storage": {
+    "record_02f4": {
+      "offset_hex": "0x00f69c",
+      "tag_hex": "0x02f4",
+      "slot": 0,
+      "rlen": 31832,
+      "flags_hex": "0x0000000a",
+      "sub_len": 31816,
+      "entry_count": 41,
+      "entries": [
+        {
+          "entry_index": 0,
+          "offset_hex": "0x00f6ac",
+          "w0": 0,
+          "w1": 0,
+          "w2_1based_slot": 0,
+          "w3_pstyle": 10,
+          "name": "Vlog_709",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 1,
+          "offset_hex": "0x00f9b4",
+          "w0": 1,
+          "w1": 0,
+          "w2_1based_slot": 1,
+          "w3_pstyle": 37,
+          "name": "ARRI 709",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 2,
+          "offset_hex": "0x00fcbc",
+          "w0": 2,
+          "w1": 0,
+          "w2_1based_slot": 5,
+          "w3_pstyle": 10,
+          "name": "Himalayas-V",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 3,
+          "offset_hex": "0x00ffc4",
+          "w0": 3,
+          "w1": 0,
+          "w2_1based_slot": 2,
+          "w3_pstyle": 10,
+          "name": "Daydream",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 4,
+          "offset_hex": "0x0102cc",
+          "w0": 4,
+          "w1": 0,
+          "w2_1based_slot": 4,
+          "w3_pstyle": 5,
+          "name": "Earth",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 5,
+          "offset_hex": "0x0105d4",
+          "w0": 5,
+          "w1": 0,
+          "w2_1based_slot": 6,
+          "w3_pstyle": 2,
+          "name": "Moody Blues",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 6,
+          "offset_hex": "0x0108dc",
+          "w0": 6,
+          "w1": 0,
+          "w2_1based_slot": 7,
+          "w3_pstyle": 0,
+          "name": "Clear-S",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 7,
+          "offset_hex": "0x010be4",
+          "w0": 7,
+          "w1": 0,
+          "w2_1based_slot": 8,
+          "w3_pstyle": 10,
+          "name": "Zell Am See",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 8,
+          "offset_hex": "0x010eec",
+          "w0": 8,
+          "w1": 0,
+          "w2_1based_slot": 23,
+          "w3_pstyle": 0,
+          "name": "warm skin",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 9,
+          "offset_hex": "0x0111f4",
+          "w0": 9,
+          "w1": 0,
+          "w2_1based_slot": 9,
+          "w3_pstyle": 10,
+          "name": "Utopia_33x",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 10,
+          "offset_hex": "0x0114fc",
+          "w0": 10,
+          "w1": 0,
+          "w2_1based_slot": 10,
+          "w3_pstyle": 10,
+          "name": "Neutral_33x",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 11,
+          "offset_hex": "0x011804",
+          "w0": 11,
+          "w1": 0,
+          "w2_1based_slot": 11,
+          "w3_pstyle": 10,
+          "name": "Jamaica_33x",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 12,
+          "offset_hex": "0x011b0c",
+          "w0": 12,
+          "w1": 0,
+          "w2_1based_slot": 12,
+          "w3_pstyle": 10,
+          "name": "IceBlue_33x",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 13,
+          "offset_hex": "0x011e14",
+          "w0": 13,
+          "w1": 0,
+          "w2_1based_slot": 13,
+          "w3_pstyle": 10,
+          "name": "BUTTERY_Eterna",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 14,
+          "offset_hex": "0x01211c",
+          "w0": 14,
+          "w1": 0,
+          "w2_1based_slot": 14,
+          "w3_pstyle": 10,
+          "name": "Vlog To 2383",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 15,
+          "offset_hex": "0x012424",
+          "w0": 15,
+          "w1": 0,
+          "w2_1based_slot": 15,
+          "w3_pstyle": 10,
+          "name": "Sunset Hour",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 16,
+          "offset_hex": "0x01272c",
+          "w0": 16,
+          "w1": 0,
+          "w2_1based_slot": 16,
+          "w3_pstyle": 18,
+          "name": "Fujifilm C200 HC",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 17,
+          "offset_hex": "0x012a34",
+          "w0": 17,
+          "w1": 0,
+          "w2_1based_slot": 17,
+          "w3_pstyle": 18,
+          "name": "Kodak Gold 2000",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 18,
+          "offset_hex": "0x012d3c",
+          "w0": 18,
+          "w1": 0,
+          "w2_1based_slot": 3,
+          "w3_pstyle": 0,
+          "name": "GR2 PositiveFilm",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 19,
+          "offset_hex": "0x013044",
+          "w0": 19,
+          "w1": 0,
+          "w2_1based_slot": 18,
+          "w3_pstyle": 0,
+          "name": "Portra 160",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 20,
+          "offset_hex": "0x01334c",
+          "w0": 20,
+          "w1": 0,
+          "w2_1based_slot": 36,
+          "w3_pstyle": 0,
+          "name": "Q Eternal-Plady",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 21,
+          "offset_hex": "0x013654",
+          "w0": 21,
+          "w1": 0,
+          "w2_1based_slot": 19,
+          "w3_pstyle": 0,
+          "name": "M Vivid-Plady",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 22,
+          "offset_hex": "0x01395c",
+          "w0": 22,
+          "w1": 0,
+          "w2_1based_slot": 29,
+          "w3_pstyle": 0,
+          "name": "MovusV2-Plady",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 23,
+          "offset_hex": "0x013c64",
+          "w0": 23,
+          "w1": 0,
+          "w2_1based_slot": 40,
+          "w3_pstyle": 0,
+          "name": "Loen",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 24,
+          "offset_hex": "0x013f6c",
+          "w0": 24,
+          "w1": 0,
+          "w2_1based_slot": 20,
+          "w3_pstyle": 10,
+          "name": "HSST1",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 25,
+          "offset_hex": "0x014274",
+          "w0": 25,
+          "w1": 0,
+          "w2_1based_slot": 21,
+          "w3_pstyle": 10,
+          "name": "HSST2",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 26,
+          "offset_hex": "0x01457c",
+          "w0": 26,
+          "w1": 0,
+          "w2_1based_slot": 22,
+          "w3_pstyle": 10,
+          "name": "HSST3",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 27,
+          "offset_hex": "0x014884",
+          "w0": 27,
+          "w1": 0,
+          "w2_1based_slot": 65535,
+          "w3_pstyle": 49,
+          "name": "",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 28,
+          "offset_hex": "0x014b8c",
+          "w0": 28,
+          "w1": 0,
+          "w2_1based_slot": 25,
+          "w3_pstyle": 10,
+          "name": "Vlog to FUJIFILM-3513",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 29,
+          "offset_hex": "0x014e94",
+          "w0": 29,
+          "w1": 0,
+          "w2_1based_slot": 26,
+          "w3_pstyle": 10,
+          "name": "kodak-5219",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 30,
+          "offset_hex": "0x01519c",
+          "w0": 30,
+          "w1": 0,
+          "w2_1based_slot": 28,
+          "w3_pstyle": 10,
+          "name": "Vintage Film",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 31,
+          "offset_hex": "0x0154a4",
+          "w0": 31,
+          "w1": 0,
+          "w2_1based_slot": 27,
+          "w3_pstyle": 10,
+          "name": "Natural LUMIX",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 32,
+          "offset_hex": "0x0157ac",
+          "w0": 32,
+          "w1": 0,
+          "w2_1based_slot": 31,
+          "w3_pstyle": 10,
+          "name": "500tclean",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 33,
+          "offset_hex": "0x015ab4",
+          "w0": 33,
+          "w1": 0,
+          "w2_1based_slot": 30,
+          "w3_pstyle": 10,
+          "name": "Film_Look",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 34,
+          "offset_hex": "0x015dbc",
+          "w0": 34,
+          "w1": 0,
+          "w2_1based_slot": 32,
+          "w3_pstyle": 10,
+          "name": "Natural_Rec709_v1",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 35,
+          "offset_hex": "0x0160c4",
+          "w0": 35,
+          "w1": 0,
+          "w2_1based_slot": 33,
+          "w3_pstyle": 10,
+          "name": "Bleach_33x",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 36,
+          "offset_hex": "0x0163cc",
+          "w0": 36,
+          "w1": 0,
+          "w2_1based_slot": 34,
+          "w3_pstyle": 10,
+          "name": "Eterna_33x",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 37,
+          "offset_hex": "0x0166d4",
+          "w0": 37,
+          "w1": 0,
+          "w2_1based_slot": 35,
+          "w3_pstyle": 10,
+          "name": "EastmanRM_33x",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 38,
+          "offset_hex": "0x0169dc",
+          "w0": 38,
+          "w1": 0,
+          "w2_1based_slot": 37,
+          "w3_pstyle": 10,
+          "name": "VisionTeal_33x",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 39,
+          "offset_hex": "0x016ce4",
+          "w0": 39,
+          "w1": 0,
+          "w2_1based_slot": 38,
+          "w3_pstyle": 10,
+          "name": "Vision_33x",
+          "tail_hex": "00ffffff"
+        },
+        {
+          "entry_index": 40,
+          "offset_hex": "0x016fec",
+          "w0": 40,
+          "w1": 0,
+          "w2_1based_slot": 39,
+          "w3_pstyle": 10,
+          "name": "709ArriLike",
+          "tail_hex": "00ffffff"
+        }
+      ]
+    },
+    "record_051f": {
+      "offset_hex": "0x04ae88",
+      "tag_hex": "0x051f",
+      "slot": 0,
+      "rlen": 8840924,
+      "flags_hex": "0x0000000c",
+      "slots_base_hex": "0x04ae94",
+      "slot_count": 41,
+      "active_slots_all_have_dominant_axes_0_1_2_at_s_plus_8": true,
+      "active_slots_buggy_s_plus_6_axes_1_2_0_count": 26,
+      "slots": [
+        {
+          "slot_index_0based": 0,
+          "slot_offset_hex": "0x04ae94",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 37,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x04ae9c",
+          "true_table_sha256": "1e0b554a02f5cd9ae65f860af5465fb674e80764ed52d31353169a1cdca06098",
+          "old_buggy_o_plus_10_offset_hex": "0x04ae9a",
+          "old_buggy_o_plus_10_sha256": "b524528dde14e6d626897e0ac87fb869321d67ea27e4551bd1350b1409763a6c",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 1,
+          "slot_offset_hex": "0x07f8e4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x07f8ec",
+          "true_table_sha256": "a554f1361f8c9f1e20fd7c84c45e84a59498914690b2c55a843a8f941591b03b",
+          "old_buggy_o_plus_10_offset_hex": "0x07f8ea",
+          "old_buggy_o_plus_10_sha256": "d8fcf9d60fb66c82fe8018de1805f95cb0527bcb879455963e3dbee7589692e8",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 2,
+          "slot_offset_hex": "0x0b4334",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 0,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x0b433c",
+          "true_table_sha256": "54b194fbdbf1eafbdc02c9e114a4634eeb62cfaf42fcafbc8e90642008107f90",
+          "old_buggy_o_plus_10_offset_hex": "0x0b433a",
+          "old_buggy_o_plus_10_sha256": "7f7e6bce72222b3f391df9e495d1c07921f3c110c4b9bfc24752bdc6cd54f463",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 3,
+          "slot_offset_hex": "0x0e8d84",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 5,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x0e8d8c",
+          "true_table_sha256": "12191cee94de3844e4a313adf103ddfad1c4827b7621439b0e62be12c2fe35c0",
+          "old_buggy_o_plus_10_offset_hex": "0x0e8d8a",
+          "old_buggy_o_plus_10_sha256": "9b3b0e4b1701c2b7fa9001767b528669a1655cf6acf717cd786b9a407bc5df65",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 4,
+          "slot_offset_hex": "0x11d7d4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x11d7dc",
+          "true_table_sha256": "871f90f316fb7f08037b3286d416346bceb5e19579b617aecacc1c8181ee58fc",
+          "old_buggy_o_plus_10_offset_hex": "0x11d7da",
+          "old_buggy_o_plus_10_sha256": "9b1d63b843ee351d719a4008d495a7d5dd145f0515bf0adafbe7ca24a0a6c412",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 5,
+          "slot_offset_hex": "0x152224",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 2,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x15222c",
+          "true_table_sha256": "85154518b4afce70715f5914a00e7e13c91cc37d03cbd69ea47ef0ffada96501",
+          "old_buggy_o_plus_10_offset_hex": "0x15222a",
+          "old_buggy_o_plus_10_sha256": "f3d45ab6919ed7bc980af88da4e84c59d5dfce5a06d2889f92c346efe69bbe84",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 6,
+          "slot_offset_hex": "0x186c74",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 0,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x186c7c",
+          "true_table_sha256": "69b72ec0818c073b1e23d2651d75d72c5d36fac503d83236393d38ea2daa13ad",
+          "old_buggy_o_plus_10_offset_hex": "0x186c7a",
+          "old_buggy_o_plus_10_sha256": "084c32d0278287742cff02de2828682b7ee295f61ede40b045d37c91ac867930",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 7,
+          "slot_offset_hex": "0x1bb6c4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x1bb6cc",
+          "true_table_sha256": "52320f42129ca879be277e7a367ed55cae9e1ad3a64e622d3bae60355ebcad0c",
+          "old_buggy_o_plus_10_offset_hex": "0x1bb6ca",
+          "old_buggy_o_plus_10_sha256": "0fbacba4921abfb8ce974364146fc8aa34e2a4809ed04a548c7b2ab6f08e4774",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 8,
+          "slot_offset_hex": "0x1f0114",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x1f011c",
+          "true_table_sha256": "5846ca3777ccf10b174a7a93af9e578539451cb8375c845ec1b01d418969193e",
+          "old_buggy_o_plus_10_offset_hex": "0x1f011a",
+          "old_buggy_o_plus_10_sha256": "0997e18df4eab62d7e5a59f97f4616e30248eee5c12fe76825c0044d32bcaa8a",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 9,
+          "slot_offset_hex": "0x224b64",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x224b6c",
+          "true_table_sha256": "bbcd00c710d5b3dd5162410efebeb1e03299a7dbd5538dcee7fb8cc4ec68fd6c",
+          "old_buggy_o_plus_10_offset_hex": "0x224b6a",
+          "old_buggy_o_plus_10_sha256": "68447dd92c1768b6a34dfdf60dbf2d1d65e6159fc7fb57d2bcd72da6760e7dce",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 10,
+          "slot_offset_hex": "0x2595b4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x2595bc",
+          "true_table_sha256": "e99e321eb73182d4d4d61cbc54ffab6ca8725edc337f4503b0ea647e5dc97a51",
+          "old_buggy_o_plus_10_offset_hex": "0x2595ba",
+          "old_buggy_o_plus_10_sha256": "b081831226933750f80de63f2dd885ad674e7012337e76ac40c0eb2376b7f620",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 11,
+          "slot_offset_hex": "0x28e004",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x28e00c",
+          "true_table_sha256": "9643fac6a5a21565b1c49be1446a4fa7dc0be7e3dd4c9ca878f1fb8ec8a699af",
+          "old_buggy_o_plus_10_offset_hex": "0x28e00a",
+          "old_buggy_o_plus_10_sha256": "f2edf71e73b04f17792d0bfccaec638e810b89af5454617522e1423e99f1913c",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 12,
+          "slot_offset_hex": "0x2c2a54",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x2c2a5c",
+          "true_table_sha256": "d5a60d3e15d855bb5c4d8f9f3634d2a5f8237a1c94a2d37c725ea57474c93122",
+          "old_buggy_o_plus_10_offset_hex": "0x2c2a5a",
+          "old_buggy_o_plus_10_sha256": "5411b75d125a13a33d1843c0ebf0d9b1070f46cde248d4d5c88f1b0719439423",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 13,
+          "slot_offset_hex": "0x2f74a4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x2f74ac",
+          "true_table_sha256": "cc228a16790ae4afbf2782fb55bfbe071154209601b90397a4068d315365cbe6",
+          "old_buggy_o_plus_10_offset_hex": "0x2f74aa",
+          "old_buggy_o_plus_10_sha256": "b2cd75c753a1579e261d934fc5e19dd4ca7db51c07dae152ca17913aa6344db3",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 14,
+          "slot_offset_hex": "0x32bef4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x32befc",
+          "true_table_sha256": "49ab350608faebebd62de31bf024964a26d51bffbf94dc2231386878dab05e74",
+          "old_buggy_o_plus_10_offset_hex": "0x32befa",
+          "old_buggy_o_plus_10_sha256": "a2db19e42b3c92c6e029e00526dd89a37fae41756812cec09f1b023007eab3d3",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 15,
+          "slot_offset_hex": "0x360944",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 18,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x36094c",
+          "true_table_sha256": "fd21e3e4049013cae5fe0a8f2dfaa9d851bcae0df1a5fef63354ae9191e72073",
+          "old_buggy_o_plus_10_offset_hex": "0x36094a",
+          "old_buggy_o_plus_10_sha256": "822fc34b2714f2879a4cf664f9f3c050f70c39b49687751ea7f2faf1542ec996",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 16,
+          "slot_offset_hex": "0x395394",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 18,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x39539c",
+          "true_table_sha256": "724465eaf1e75ce20273e618a80c1bba48afb41981bdda049e7bc77a60171825",
+          "old_buggy_o_plus_10_offset_hex": "0x39539a",
+          "old_buggy_o_plus_10_sha256": "a2bf62246c46b287d9528e4e32dc1f53baef628894bb1853c311494be378e5b7",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 17,
+          "slot_offset_hex": "0x3c9de4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 0,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x3c9dec",
+          "true_table_sha256": "b15e8bbe20fe7d3577b2e0a3ed277bcaab69741b5d5288bffe1d6ef949599559",
+          "old_buggy_o_plus_10_offset_hex": "0x3c9dea",
+          "old_buggy_o_plus_10_sha256": "b3b81a7b3eed4ccd2e7458367b177163cd03e402bbce28aa0b8bbd50224e8569",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 18,
+          "slot_offset_hex": "0x3fe834",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 0,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x3fe83c",
+          "true_table_sha256": "ff20979440373f373114b27fed1a6bdebe346c529f26144533144de19467c180",
+          "old_buggy_o_plus_10_offset_hex": "0x3fe83a",
+          "old_buggy_o_plus_10_sha256": "b5e4b99fe743f804c14f95822288ca3d9bf2db960ab869848f3450d71833e7e5",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 19,
+          "slot_offset_hex": "0x433284",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x43328c",
+          "true_table_sha256": "f810af4a82b204bca18aeb101746e3842401aff16cc2f66a12b020483e45ecec",
+          "old_buggy_o_plus_10_offset_hex": "0x43328a",
+          "old_buggy_o_plus_10_sha256": "9d5e24ba15ccabf072a59f59c04da68ce3dcb14b8e927fb8cf2c1afca62b6278",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 20,
+          "slot_offset_hex": "0x467cd4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x467cdc",
+          "true_table_sha256": "4a79c168a30c30d1ac248f163b0f5cb9d07d724d7a75fa484ea59e6f469d3b4d",
+          "old_buggy_o_plus_10_offset_hex": "0x467cda",
+          "old_buggy_o_plus_10_sha256": "6ac7e17811802bc4dd3286e71f6d7121eacbeb7840276fc567a694c48d1994a6",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 21,
+          "slot_offset_hex": "0x49c724",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x49c72c",
+          "true_table_sha256": "936596a7cd202e78cf87244fa9207e8b3a2b8a514c3a281d81a7b452893ac46c",
+          "old_buggy_o_plus_10_offset_hex": "0x49c72a",
+          "old_buggy_o_plus_10_sha256": "148826304fe0ce14b56064cdb6e9caf61c03d05b19381bc0a4bcf216dfe78c92",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 22,
+          "slot_offset_hex": "0x4d1174",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 0,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x4d117c",
+          "true_table_sha256": "d6cc7f790b059a99fd5a2b2c594047f57db9345edd1e5ae42498d312a47453d3",
+          "old_buggy_o_plus_10_offset_hex": "0x4d117a",
+          "old_buggy_o_plus_10_sha256": "5fe3625dc5f14357baf24c2e46a2ed40392c3236408677d7322f9773db69594c",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 23,
+          "slot_offset_hex": "0x505bc4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x505bcc",
+          "true_table_sha256": "cc228a16790ae4afbf2782fb55bfbe071154209601b90397a4068d315365cbe6",
+          "old_buggy_o_plus_10_offset_hex": "0x505bca",
+          "old_buggy_o_plus_10_sha256": "b2cd75c753a1579e261d934fc5e19dd4ca7db51c07dae152ca17913aa6344db3",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 24,
+          "slot_offset_hex": "0x53a614",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x53a61c",
+          "true_table_sha256": "eb0e3d2d1a92b05b6ca1bf9479141e0d4799a8a860c4d147da6f62fdb023fe89",
+          "old_buggy_o_plus_10_offset_hex": "0x53a61a",
+          "old_buggy_o_plus_10_sha256": "89f78916cf64d7efd09b094e90abbdf0945188b04e441163255dc67fa5c6a4b9",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 25,
+          "slot_offset_hex": "0x56f064",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x56f06c",
+          "true_table_sha256": "600f1d818ecc6327de1066ac0af7030d8557a1c3b730807e77eca3f98b89da7b",
+          "old_buggy_o_plus_10_offset_hex": "0x56f06a",
+          "old_buggy_o_plus_10_sha256": "a73f99ffe1b3fc534f63c0a2efb4212a0563a5abf664f8383832795c870a2109",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 26,
+          "slot_offset_hex": "0x5a3ab4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x5a3abc",
+          "true_table_sha256": "d0066a768462e8b85775eed1b5490fc4d249f4c36a6d81fc71b83648e0de3754",
+          "old_buggy_o_plus_10_offset_hex": "0x5a3aba",
+          "old_buggy_o_plus_10_sha256": "25c3426b3d48abd6bde0a38a50f5aac42e45bfc1beb5cd0f5d3748684a41af91",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 27,
+          "slot_offset_hex": "0x5d8504",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x5d850c",
+          "true_table_sha256": "e4f7afdcbd802009bb09acd50934d7a3a07bc1ba23f7c6ec99ed6b89ac2182de",
+          "old_buggy_o_plus_10_offset_hex": "0x5d850a",
+          "old_buggy_o_plus_10_sha256": "a0757dd9b26da3792d0517ebf489adfd775e15c4b3177bda2a2213f1bbd0862a",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 28,
+          "slot_offset_hex": "0x60cf54",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 0,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x60cf5c",
+          "true_table_sha256": "a714bf5557751b375204e5082ed2360142af8f11f638c2dad04aa0d95ef556b4",
+          "old_buggy_o_plus_10_offset_hex": "0x60cf5a",
+          "old_buggy_o_plus_10_sha256": "3ea30ed12dc3924b7566d5dd28b04b4fbdff19e5a6838765ab7af5305dadab79",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 29,
+          "slot_offset_hex": "0x6419a4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x6419ac",
+          "true_table_sha256": "ada6b3f0ac80c03a737152eab9dc51bb9eaf8629bd4c880136a9d52819075c0d",
+          "old_buggy_o_plus_10_offset_hex": "0x6419aa",
+          "old_buggy_o_plus_10_sha256": "8a51be71dc4751eb9cf9e16dae61b8fb643a7bfccc31d0ecd05d686c61040da6",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 30,
+          "slot_offset_hex": "0x6763f4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x6763fc",
+          "true_table_sha256": "8586db4078450e0224aba056043007b0966e7db732abe657d7f2918ecc25f15d",
+          "old_buggy_o_plus_10_offset_hex": "0x6763fa",
+          "old_buggy_o_plus_10_sha256": "89b83028dc296dd87fcf50938d8b5c5a8f72428308899a2d3d1e45a9324f3bfa",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 31,
+          "slot_offset_hex": "0x6aae44",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x6aae4c",
+          "true_table_sha256": "8f7727c05425329396138348cefa633965e5c689321d2dff06ef7fcc26cfd80f",
+          "old_buggy_o_plus_10_offset_hex": "0x6aae4a",
+          "old_buggy_o_plus_10_sha256": "9c470766a34f37af35aff895838186b05b6e820c78b4f14871cd1ad38cc151e6",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 32,
+          "slot_offset_hex": "0x6df894",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x6df89c",
+          "true_table_sha256": "b3921bc536ec816aef95d6343b58d3d229b3b863e6fd38fa7d1323e6a534ad8b",
+          "old_buggy_o_plus_10_offset_hex": "0x6df89a",
+          "old_buggy_o_plus_10_sha256": "5b7439d9b19e1f806e08035c61fb74f1760bc13da799bf89c9dc28b8fde36d9a",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 33,
+          "slot_offset_hex": "0x7142e4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x7142ec",
+          "true_table_sha256": "b8c484e63122e48d63c29e28017c6f945650939029bf9e563574b5a6f04602f0",
+          "old_buggy_o_plus_10_offset_hex": "0x7142ea",
+          "old_buggy_o_plus_10_sha256": "fa0845f1195698d449e2b4acc4c372ef4b87ca635924a766c679002085f21f0b",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 34,
+          "slot_offset_hex": "0x748d34",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x748d3c",
+          "true_table_sha256": "73372bc2257db639792c323fdfa3c0ddddab9c5369e4263e9f842cedb23fe488",
+          "old_buggy_o_plus_10_offset_hex": "0x748d3a",
+          "old_buggy_o_plus_10_sha256": "468ec7bd012ee7766a9ee1c0a68ddf48287b35350aefe4ff0c60388240b871ac",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 35,
+          "slot_offset_hex": "0x77d784",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 0,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x77d78c",
+          "true_table_sha256": "df2ac96267afa46d0ce0f7be0361b4495d4c64fc98a39a7e0634af8ceb6da821",
+          "old_buggy_o_plus_10_offset_hex": "0x77d78a",
+          "old_buggy_o_plus_10_sha256": "fb14bd7b3f28fc77bbf23eadd9faee215014481df649e05d9c33b3aa923a6624",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 36,
+          "slot_offset_hex": "0x7b21d4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x7b21dc",
+          "true_table_sha256": "a3279fd563c10caad9ad7bbda7336302d68870b80f9179d1b0d3d35e58a7b87f",
+          "old_buggy_o_plus_10_offset_hex": "0x7b21da",
+          "old_buggy_o_plus_10_sha256": "065ea15cac1fef7327aa225b844e97323d603cdecebcb100e901c03aad130b72",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 37,
+          "slot_offset_hex": "0x7e6c24",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x7e6c2c",
+          "true_table_sha256": "b836fcd2fd2f2699f3e793aa71191e15375521741ceecb8a87391968403a01e7",
+          "old_buggy_o_plus_10_offset_hex": "0x7e6c2a",
+          "old_buggy_o_plus_10_sha256": "178c506e80776337ea76d5a3b9a7148b3936c5fae841f83cf9fe967bf7afd600",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 38,
+          "slot_offset_hex": "0x81b674",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 10,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x81b67c",
+          "true_table_sha256": "a8725c3a503aeb78f2192d1adb7efa7e0cf64699c3c87368f5f3e90ec268dfdb",
+          "old_buggy_o_plus_10_offset_hex": "0x81b67a",
+          "old_buggy_o_plus_10_sha256": "f3d0057e0ce4a257af29c7b857edbf1340da60c4851514aab3631c0d857ba0cc",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 39,
+          "slot_offset_hex": "0x8500c4",
+          "rem_len_u32": 215628,
+          "grid_u16": 33,
+          "pstyle_u16": 0,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x8500cc",
+          "true_table_sha256": "6c22c6e4b2b8c9a3a499b04acae3d096508f44d1720e9a9e5997a08e45173bd4",
+          "old_buggy_o_plus_10_offset_hex": "0x8500ca",
+          "old_buggy_o_plus_10_sha256": "9108d656c5c7eae3791dbb9f43edc1e368e57e422df5d84111827f122af63f0e",
+          "dominant_axes_true_s_plus_8": [
+            0,
+            1,
+            2
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "slot_index_0based": 40,
+          "slot_offset_hex": "0x884b14",
+          "rem_len_u32": 215628,
+          "grid_u16": 0,
+          "pstyle_u16": 0,
+          "tail_u16": 0,
+          "true_table_offset_hex": "0x884b1c",
+          "true_table_sha256": "a558ecb2657df427e6e3f094623425f826133cea5fb6fb242773c7dadb44fc39",
+          "old_buggy_o_plus_10_offset_hex": "0x884b1a",
+          "old_buggy_o_plus_10_sha256": "a558ecb2657df427e6e3f094623425f826133cea5fb6fb242773c7dadb44fc39",
+          "dominant_axes_true_s_plus_8": [
+            null,
+            null,
+            null
+          ],
+          "dominant_axes_buggy_s_plus_6": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    "correlation_02f4_to_051f": {
+      "mapped_entries_count": 39,
+      "pstyle_match_count": 39,
+      "unreferenced_1based_w2_values": [
+        24
+      ],
+      "unreferenced_0based_051f_slots": [
+        23
+      ],
+      "slot_23_is_duplicate_of_slot_13_vlog_to_2383": true,
+      "mappings": [
+        {
+          "entry_02f4": 1,
+          "name": "ARRI 709",
+          "w2_1based": 1,
+          "slot_051f_0based": 0,
+          "w3_02f4": 37,
+          "pstyle_051f": 37,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 2,
+          "name": "Himalayas-V",
+          "w2_1based": 5,
+          "slot_051f_0based": 4,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 3,
+          "name": "Daydream",
+          "w2_1based": 2,
+          "slot_051f_0based": 1,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 4,
+          "name": "Earth",
+          "w2_1based": 4,
+          "slot_051f_0based": 3,
+          "w3_02f4": 5,
+          "pstyle_051f": 5,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 5,
+          "name": "Moody Blues",
+          "w2_1based": 6,
+          "slot_051f_0based": 5,
+          "w3_02f4": 2,
+          "pstyle_051f": 2,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 6,
+          "name": "Clear-S",
+          "w2_1based": 7,
+          "slot_051f_0based": 6,
+          "w3_02f4": 0,
+          "pstyle_051f": 0,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 7,
+          "name": "Zell Am See",
+          "w2_1based": 8,
+          "slot_051f_0based": 7,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 8,
+          "name": "warm skin",
+          "w2_1based": 23,
+          "slot_051f_0based": 22,
+          "w3_02f4": 0,
+          "pstyle_051f": 0,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 9,
+          "name": "Utopia_33x",
+          "w2_1based": 9,
+          "slot_051f_0based": 8,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 10,
+          "name": "Neutral_33x",
+          "w2_1based": 10,
+          "slot_051f_0based": 9,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 11,
+          "name": "Jamaica_33x",
+          "w2_1based": 11,
+          "slot_051f_0based": 10,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 12,
+          "name": "IceBlue_33x",
+          "w2_1based": 12,
+          "slot_051f_0based": 11,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 13,
+          "name": "BUTTERY_Eterna",
+          "w2_1based": 13,
+          "slot_051f_0based": 12,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 14,
+          "name": "Vlog To 2383",
+          "w2_1based": 14,
+          "slot_051f_0based": 13,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 15,
+          "name": "Sunset Hour",
+          "w2_1based": 15,
+          "slot_051f_0based": 14,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 16,
+          "name": "Fujifilm C200 HC",
+          "w2_1based": 16,
+          "slot_051f_0based": 15,
+          "w3_02f4": 18,
+          "pstyle_051f": 18,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 17,
+          "name": "Kodak Gold 2000",
+          "w2_1based": 17,
+          "slot_051f_0based": 16,
+          "w3_02f4": 18,
+          "pstyle_051f": 18,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 18,
+          "name": "GR2 PositiveFilm",
+          "w2_1based": 3,
+          "slot_051f_0based": 2,
+          "w3_02f4": 0,
+          "pstyle_051f": 0,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 19,
+          "name": "Portra 160",
+          "w2_1based": 18,
+          "slot_051f_0based": 17,
+          "w3_02f4": 0,
+          "pstyle_051f": 0,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 20,
+          "name": "Q Eternal-Plady",
+          "w2_1based": 36,
+          "slot_051f_0based": 35,
+          "w3_02f4": 0,
+          "pstyle_051f": 0,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 21,
+          "name": "M Vivid-Plady",
+          "w2_1based": 19,
+          "slot_051f_0based": 18,
+          "w3_02f4": 0,
+          "pstyle_051f": 0,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 22,
+          "name": "MovusV2-Plady",
+          "w2_1based": 29,
+          "slot_051f_0based": 28,
+          "w3_02f4": 0,
+          "pstyle_051f": 0,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 23,
+          "name": "Loen",
+          "w2_1based": 40,
+          "slot_051f_0based": 39,
+          "w3_02f4": 0,
+          "pstyle_051f": 0,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 24,
+          "name": "HSST1",
+          "w2_1based": 20,
+          "slot_051f_0based": 19,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 25,
+          "name": "HSST2",
+          "w2_1based": 21,
+          "slot_051f_0based": 20,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 26,
+          "name": "HSST3",
+          "w2_1based": 22,
+          "slot_051f_0based": 21,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 28,
+          "name": "Vlog to FUJIFILM-3513",
+          "w2_1based": 25,
+          "slot_051f_0based": 24,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 29,
+          "name": "kodak-5219",
+          "w2_1based": 26,
+          "slot_051f_0based": 25,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 30,
+          "name": "Vintage Film",
+          "w2_1based": 28,
+          "slot_051f_0based": 27,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 31,
+          "name": "Natural LUMIX",
+          "w2_1based": 27,
+          "slot_051f_0based": 26,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 32,
+          "name": "500tclean",
+          "w2_1based": 31,
+          "slot_051f_0based": 30,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 33,
+          "name": "Film_Look",
+          "w2_1based": 30,
+          "slot_051f_0based": 29,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 34,
+          "name": "Natural_Rec709_v1",
+          "w2_1based": 32,
+          "slot_051f_0based": 31,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 35,
+          "name": "Bleach_33x",
+          "w2_1based": 33,
+          "slot_051f_0based": 32,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 36,
+          "name": "Eterna_33x",
+          "w2_1based": 34,
+          "slot_051f_0based": 33,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 37,
+          "name": "EastmanRM_33x",
+          "w2_1based": 35,
+          "slot_051f_0based": 34,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 38,
+          "name": "VisionTeal_33x",
+          "w2_1based": 37,
+          "slot_051f_0based": 36,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 39,
+          "name": "Vision_33x",
+          "w2_1based": 38,
+          "slot_051f_0based": 37,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        },
+        {
+          "entry_02f4": 40,
+          "name": "709ArriLike",
+          "w2_1based": 39,
+          "slot_051f_0based": 38,
+          "w3_02f4": 10,
+          "pstyle_051f": 10,
+          "pstyle_exact_match": true
+        }
+      ]
+    },
+    "live_post_lut_info_cross_check": {
+      "path": "analysis/android_lab_live_20261012/lut_info_response.json",
+      "sha256": "3a15e86e835592606473c1fabbcfe204daa5246d11bdd4f6efef2ecc4e5702a9",
+      "slot_count": 41,
+      "exact_id_and_name_matches_with_02f4": 41,
+      "verified_w3_to_live_photostyle_mapping": {
+        "w3=10": {
+          "PhotoStyle": "VLOG",
+          "LutTypes": [
+            1,
+            3
+          ],
+          "count": 27
+        },
+        "w3=37": {
+          "PhotoStyle": "",
+          "LutTypes": [
+            2
+          ],
+          "count": 1
+        },
+        "w3=5": {
+          "PhotoStyle": "LAND",
+          "LutTypes": [
+            3
+          ],
+          "count": 1
+        },
+        "w3=2": {
+          "PhotoStyle": "NAT",
+          "LutTypes": [
+            3
+          ],
+          "count": 1
+        },
+        "w3=0": {
+          "PhotoStyle": "STD",
+          "LutTypes": [
+            3
+          ],
+          "count": 8
+        },
+        "w3=18": {
+          "PhotoStyle": "LCLASN",
+          "LutTypes": [
+            3
+          ],
+          "count": 2
+        },
+        "w3=49": {
+          "PhotoStyle": "",
+          "LutTypes": [
+            3
+          ],
+          "count": 1
+        }
+      }
+    }
+  },
+  "clear_s_himalayas_and_psl1_verification": {
+    "clear_s_asset": {
+      "apk_entry": "assets/Clear-S.cube",
+      "file_size": 905128,
+      "file_sha256": "b0e744a0963ff27224780b52fdb10b8c29bdfe311c69e2bc89b68f954154e132",
+      "title": "TITLE \"Generated by Resolve\"",
+      "photostyle": "STD",
+      "lut_3d_size": 33,
+      "float_count": 107811,
+      "quantized_round_65535_sha256": "69b72ec0818c073b1e23d2651d75d72c5d36fac503d83236393d38ea2daa13ad",
+      "quantized_trunc_65535_sha256": "a8be6b25f4f13b38d2e1f64f308256e8de9be38811ed599b1310173abd336b32",
+      "quantized_round_65536_sha256": "4a093605f6d70be0b4114ed89d3925564a505be4babdb8d5f8d5775a4e5e2c4c",
+      "quantized_trunc_65536_sha256": "4f8a34f2602bfedef6e5f6c79ae26eb43593ce90c5cfc8605af6971e3eb13b45",
+      "s1m2_slot6_offset_hex": "0x186c74",
+      "s1m2_slot6_true_s_plus_8_offset_hex": "0x186c7c",
+      "s1m2_slot6_true_s_plus_8_sha256": "69b72ec0818c073b1e23d2651d75d72c5d36fac503d83236393d38ea2daa13ad",
+      "exact_215622_byte_match_at_s_plus_8": true,
+      "differing_u16_count_at_true_s_plus_8": 0,
+      "differing_u16_count_at_buggy_s_plus_6": 106083
+    },
+    "live_himalayas_v_slot2_bidirectional_closure": {
+      "live_cube_path": "analysis/lab_read_baseline_20261012/Himalayas-V_slot2.cube",
+      "live_cube_size": 956987,
+      "live_cube_sha256": "8d381f947eefee42312656057e8d4c181495ac0845f15cbae548f4588b47655c",
+      "lut_id_requested": 2,
+      "entry_02f4_index": 2,
+      "entry_02f4_w2_1based": 5,
+      "target_051f_slot_0based": 4,
+      "slot4_offset_hex": "0x11d7d4",
+      "slot4_true_table_offset_hex": "0x11d7dc",
+      "slot4_true_table_sha256": "871f90f316fb7f08037b3286d416346bceb5e19579b617aecacc1c8181ee58fc",
+      "forward_quantized_round_65535_sha256": "871f90f316fb7f08037b3286d416346bceb5e19579b617aecacc1c8181ee58fc",
+      "forward_exact_215622_byte_match": true,
+      "forward_differing_u16_count": 0,
+      "reverse_reconstructed_cube_size": 956987,
+      "reverse_reconstructed_cube_sha256": "8d381f947eefee42312656057e8d4c181495ac0845f15cbae548f4588b47655c",
+      "reverse_exact_956987_byte_match": true,
+      "reverse_formula": "q7 = (u * 10_000_000) // 65535; '0' if 0, '1' if 10_000_000, else f'0.{q7:07d}'.rstrip('0')"
+    },
+    "psl1_s1m2_recheck_at_true_s_plus_8": {
+      "tested_file_count": 57,
+      "tested_slot_count": 41,
+      "quantization_schemes": [
+        "round_65535",
+        "trunc_65535",
+        "round_65536",
+        "trunc_65536"
+      ],
+      "direct_sha256_matches": 0,
+      "multiset_sha256_matches": 0,
+      "files_sample_first_5": [
+        {
+          "asset": "assets/photoStyleLUT/S1M2/lut_709like.bin",
+          "size": 4184,
+          "body_size": 4096,
+          "sha256": "378f39f3b1d66df328c72796a6d21ccd9c66941133cf1653875f25d2b58d3253",
+          "magic": "PSL1",
+          "kind": 0,
+          "grid_dim": 2048,
+          "dtype": 1,
+          "quantized_shas": {}
+        },
+        {
+          "asset": "assets/photoStyleLUT/S1M2/lut_709like_high.bin",
+          "size": 215710,
+          "body_size": 215622,
+          "sha256": "6e749059c70ef20755a81e443b69d264da533002547461d0e00be82f63b71630",
+          "magic": "PSL1",
+          "kind": 1,
+          "grid_dim": 33,
+          "dtype": 1,
+          "quantized_shas": {
+            "round_65535_sha256": "abb5f356ea13dcbf2b514f14ef6e273395f903d642f6ff94e13d3f3504365098",
+            "trunc_65535_sha256": "3603b50e704559a2c821504c6cd79de7c25ce352655ad1685ed7ee1a3459c301",
+            "round_65536_sha256": "0ca7d9368f99c8b98660999a9a03358b177e34bb4981f951f5690beff7f97b53",
+            "trunc_65536_sha256": "7f347331928f0b58f66a367f423a2e83377a2c9ca23ad275745f7cbbaca5c277"
+          }
+        },
+        {
+          "asset": "assets/photoStyleLUT/S1M2/lut_709like_low.bin",
+          "size": 215710,
+          "body_size": 215622,
+          "sha256": "4558b0d442941e71772f9144b438a05140d9a15eefec62d9c6f33a2d58aa8bac",
+          "magic": "PSL1",
+          "kind": 1,
+          "grid_dim": 33,
+          "dtype": 1,
+          "quantized_shas": {
+            "round_65535_sha256": "7a27bad3e972b5104dee194ef8b33584ed5b5612be843ab2c0b946bba81e6388",
+            "trunc_65535_sha256": "d219609edc7b3bfcad3e86fb04e754a73d3c4ece266e941f5550683df8705183",
+            "round_65536_sha256": "990cf7d6aceca970fa9a0afeeaee741ce47d9219554abdfe61fc7bf8178f70f8",
+            "trunc_65536_sha256": "4fef939522d018eaa93c0c5f057cc0f87a5cc4c265fc8f712a4aabfcf2e28f12"
+          }
+        },
+        {
+          "asset": "assets/photoStyleLUT/S1M2/lut_cinelike_a2.bin",
+          "size": 4184,
+          "body_size": 4096,
+          "sha256": "17caa73b659d77d896c1b516d762fdffe4b1c3dce771199da1c65a29fb190ad7",
+          "magic": "PSL1",
+          "kind": 0,
+          "grid_dim": 2048,
+          "dtype": 1,
+          "quantized_shas": {}
+        },
+        {
+          "asset": "assets/photoStyleLUT/S1M2/lut_cinelike_a2_high.bin",
+          "size": 215710,
+          "body_size": 215622,
+          "sha256": "4d30bb370577e27deffe532f8d1e7e944f50a8237fbe20718311df8b8e584870",
+          "magic": "PSL1",
+          "kind": 1,
+          "grid_dim": 33,
+          "dtype": 1,
+          "quantized_shas": {
+            "round_65535_sha256": "76cfa6c1201feec276e6e4cdfe00235eb20e1698d3a59c2723e8cdc1b07fdf1c",
+            "trunc_65535_sha256": "10bc524943e98b456bfc6b98ac14b7c59f488a2c3ca9baf84958eba560e6e495",
+            "round_65536_sha256": "e7ffe5e11a04c186fa3703f81f69b3cbe1f3ebb79579ee5240c00896fe45e986",
+            "trunc_65536_sha256": "dcf4ac7c5b15e707e4ae66e2ea0387bf0ea85245f935ffa399ce59aff2b0eeaa"
+          }
+        }
+      ]
+    }
+  },
+  "controlled_lut_closure_20261012": {
+    "backup_38_user_luts_bidirectional_verification": {
+      "tested_cube_count": 38,
+      "forward_round_65535_exact_matches": 38,
+      "reverse_text_reconstruction_exact_matches": 38,
+      "all_38_forward_and_reverse_exact": true,
+      "slots": [
+        {
+          "lut_id": 2,
+          "name": "Himalayas-V",
+          "w2_1based_slot": 5,
+          "slot_051f_0based": 4,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 956987,
+          "cube_sha256": "8d381f947eefee42312656057e8d4c181495ac0845f15cbae548f4588b47655c",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 3,
+          "name": "Daydream",
+          "w2_1based_slot": 2,
+          "slot_051f_0based": 1,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 957326,
+          "cube_sha256": "f241832de87aa2c17610e9ef4639ec43e0d0ce27169330605657d1c3388d3a3f",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 4,
+          "name": "Earth",
+          "w2_1based_slot": 4,
+          "slot_051f_0based": 3,
+          "w3_pstyle": 5,
+          "photostyle_str": "LAND",
+          "cube_size": 1062712,
+          "cube_sha256": "e803ab32ac716b0ccb0c26c222923005fd79eaf2060a93b272c00ebe71ad7ad2",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 5,
+          "name": "Moody Blues",
+          "w2_1based_slot": 6,
+          "slot_051f_0based": 5,
+          "w3_pstyle": 2,
+          "photostyle_str": "NAT",
+          "cube_size": 1015959,
+          "cube_sha256": "6644f91a85c77465401c291bc4dcf4d8bac0533ef6c36e30d8efe5dfeb702568",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 6,
+          "name": "Clear-S",
+          "w2_1based_slot": 7,
+          "slot_051f_0based": 6,
+          "w3_pstyle": 0,
+          "photostyle_str": "STD",
+          "cube_size": 956658,
+          "cube_sha256": "441b6b7645513cff55991846bc2c9dd79a68e62dcc9b8fb05189332490801d0c",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 7,
+          "name": "Zell Am See",
+          "w2_1based_slot": 8,
+          "slot_051f_0based": 7,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 489869,
+          "cube_sha256": "268aeb42b6f03d6d425dffd0b21a3dcfa9aaeb2c08c16a8be6bf0971a72f3237",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 8,
+          "name": "warm skin",
+          "w2_1based_slot": 23,
+          "slot_051f_0based": 22,
+          "w3_pstyle": 0,
+          "photostyle_str": "STD",
+          "cube_size": 1023269,
+          "cube_sha256": "112bf99c72613e16c45165477fae8f5d7d0bf09f401413febac3bdeaa71cd2ce",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 9,
+          "name": "Utopia_33x",
+          "w2_1based_slot": 9,
+          "slot_051f_0based": 8,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 1013212,
+          "cube_sha256": "80887ec7be29f55874b553608d48b710cb8e3e4e95e100dd498e0c6b850030ef",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 10,
+          "name": "Neutral_33x",
+          "w2_1based_slot": 10,
+          "slot_051f_0based": 9,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 1033903,
+          "cube_sha256": "a8f3b825bd182b3ef789fb4105699df4af776ec4fa5878e5f54c92cf092b8e02",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 11,
+          "name": "Jamaica_33x",
+          "w2_1based_slot": 11,
+          "slot_051f_0based": 10,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 1061963,
+          "cube_sha256": "f06e0b1196d65092e63f474df17ab7edeb8a2d2028d7597a4c9dd4c3af7eb2ca",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 12,
+          "name": "IceBlue_33x",
+          "w2_1based_slot": 12,
+          "slot_051f_0based": 11,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 1066013,
+          "cube_sha256": "93e45344cce281f37f8c235b53856d80897af7c33f5bfd27148147d35005566d",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 13,
+          "name": "BUTTERY_Eterna",
+          "w2_1based_slot": 13,
+          "slot_051f_0based": 12,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 719350,
+          "cube_sha256": "7eb13ab4cb2f732811d594281fc6394190e266f86e9942354f4b0c9f86434345",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 14,
+          "name": "Vlog To 2383",
+          "w2_1based_slot": 14,
+          "slot_051f_0based": 13,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 837861,
+          "cube_sha256": "1b882eb0a089baa718a0f2eb30d6f11d479b839913803a7263eb50943c93e7cc",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 15,
+          "name": "Sunset Hour",
+          "w2_1based_slot": 15,
+          "slot_051f_0based": 14,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 1033654,
+          "cube_sha256": "66ce3238cc82090f723d95ce891d10b7d2a6ddc356376b00694c69fab4f1725e",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 16,
+          "name": "Fujifilm C200 HC",
+          "w2_1based_slot": 16,
+          "slot_051f_0based": 15,
+          "w3_pstyle": 18,
+          "photostyle_str": "LCLASN",
+          "cube_size": 1066103,
+          "cube_sha256": "7b4e60ad5ced526286605bdbf564411c11854e156c4c5a9beac77b9426b3c4f0",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 17,
+          "name": "Kodak Gold 2000",
+          "w2_1based_slot": 17,
+          "slot_051f_0based": 16,
+          "w3_pstyle": 18,
+          "photostyle_str": "LCLASN",
+          "cube_size": 1065104,
+          "cube_sha256": "8254935f1b4116114b01ae9a571ffd76c14fca59c3d97498de8ef9a9c6ce254a",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 18,
+          "name": "GR2 PositiveFilm",
+          "w2_1based_slot": 3,
+          "slot_051f_0based": 2,
+          "w3_pstyle": 0,
+          "photostyle_str": "STD",
+          "cube_size": 1035468,
+          "cube_sha256": "38fcaad7c7556ccb29f21b3017c1f34e0862848616248799f58dc0f412169548",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 19,
+          "name": "Portra 160",
+          "w2_1based_slot": 18,
+          "slot_051f_0based": 17,
+          "w3_pstyle": 0,
+          "photostyle_str": "STD",
+          "cube_size": 1066027,
+          "cube_sha256": "94a0f7d97fed28ffa2ff4c41cf37867c6303869043270ac31fdbc3e193570af6",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 20,
+          "name": "Q Eternal-Plady",
+          "w2_1based_slot": 36,
+          "slot_051f_0based": 35,
+          "w3_pstyle": 0,
+          "photostyle_str": "STD",
+          "cube_size": 867966,
+          "cube_sha256": "685111fe592c26121f67077e824c2f3f9f3842ad802b52f2e36986796025e8c3",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 21,
+          "name": "M Vivid-Plady",
+          "w2_1based_slot": 19,
+          "slot_051f_0based": 18,
+          "w3_pstyle": 0,
+          "photostyle_str": "STD",
+          "cube_size": 875581,
+          "cube_sha256": "1a03d8b2526056a22f6918c2c070b1e92d9b3d397cbe651cb2af93ce59a49b47",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 22,
+          "name": "MovusV2-Plady",
+          "w2_1based_slot": 29,
+          "slot_051f_0based": 28,
+          "w3_pstyle": 0,
+          "photostyle_str": "STD",
+          "cube_size": 1021213,
+          "cube_sha256": "081f6fdd3f2c6e5d744de2b46e159449c8b4c30206214d75c134d5a1a8322bf0",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 23,
+          "name": "Loen",
+          "w2_1based_slot": 40,
+          "slot_051f_0based": 39,
+          "w3_pstyle": 0,
+          "photostyle_str": "STD",
+          "cube_size": 1066109,
+          "cube_sha256": "aa620a0151fb499fdd0221517340c11c9f98dee8b884068c1f482ccca2de147a",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 24,
+          "name": "HSST1",
+          "w2_1based_slot": 20,
+          "slot_051f_0based": 19,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 782122,
+          "cube_sha256": "d1b06e31179acb3a86c8be028efafbe4f9caee485ee7c68761f0eaf1e1a61e69",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 25,
+          "name": "HSST2",
+          "w2_1based_slot": 21,
+          "slot_051f_0based": 20,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 960569,
+          "cube_sha256": "262ad4c6a681f05f93a4bef1073987981c1639851816d062fe6e13bacd5b7ff1",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 26,
+          "name": "HSST3",
+          "w2_1based_slot": 22,
+          "slot_051f_0based": 21,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 578326,
+          "cube_sha256": "81b38bf56dfae7b5332e82fbbdbfc8d9375f3ce315a9385f3dcc289eb2726095",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 28,
+          "name": "Vlog to FUJIFILM-3513",
+          "w2_1based_slot": 25,
+          "slot_051f_0based": 24,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 811155,
+          "cube_sha256": "cdbc0260370416bd9f18097e838d127b4305dd1b9b82a9141f0ce364f89b00cd",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 29,
+          "name": "kodak-5219",
+          "w2_1based_slot": 26,
+          "slot_051f_0based": 25,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 1065793,
+          "cube_sha256": "824e461b1d0a0a1725e6a2121457d73bccf9e9dec65844cb7fbdeaccfd3c7d05",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 30,
+          "name": "Vintage Film",
+          "w2_1based_slot": 28,
+          "slot_051f_0based": 27,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 888641,
+          "cube_sha256": "9255f2bad5cd9a974a4883ad29ad418d779d7712ab142b50754f2b44f2b2f3a8",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 31,
+          "name": "Natural LUMIX",
+          "w2_1based_slot": 27,
+          "slot_051f_0based": 26,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 553033,
+          "cube_sha256": "ebe636d697ff5b87f4a123ef81dff09886b9d3c4f0d1ae2980b85e4f206914d2",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 32,
+          "name": "500tclean",
+          "w2_1based_slot": 31,
+          "slot_051f_0based": 30,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 987418,
+          "cube_sha256": "1fb2cea6fe652517e10bba09b606b32e0576863f8aaf8e2e8b690ae98ffa4a59",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 33,
+          "name": "Film_Look",
+          "w2_1based_slot": 30,
+          "slot_051f_0based": 29,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 891135,
+          "cube_sha256": "db61ef3cea548c980e9baa4481ed8c12c0f066d07da7746953d845359f47c88d",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 34,
+          "name": "Natural_Rec709_v1",
+          "w2_1based_slot": 32,
+          "slot_051f_0based": 31,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 898498,
+          "cube_sha256": "9f52df0013c28c7e6335c6b21d20f590e4c164e71e176b7b70d4d1c175fc9d0a",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 35,
+          "name": "Bleach_33x",
+          "w2_1based_slot": 33,
+          "slot_051f_0based": 32,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 1066151,
+          "cube_sha256": "7d5051e72d67f54d60f0cda412bba9fa7d0807229d6bd9adc3f7c5ef02fab390",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 36,
+          "name": "Eterna_33x",
+          "w2_1based_slot": 34,
+          "slot_051f_0based": 33,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 1066147,
+          "cube_sha256": "5301be377f5540a876d62bc712ce12c8725ae17dec2b9938ffb30a53d4205d03",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 37,
+          "name": "EastmanRM_33x",
+          "w2_1based_slot": 35,
+          "slot_051f_0based": 34,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 1066517,
+          "cube_sha256": "64c1b0720b21b8b5b45f818aa60dfb3a72c65d2cb0cb9c14bcf0d44308fc0cfa",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 38,
+          "name": "VisionTeal_33x",
+          "w2_1based_slot": 37,
+          "slot_051f_0based": 36,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 1064655,
+          "cube_sha256": "89d6afe3b05c063b8f3be064067f03abdafb6cd478ed555f01a66614d0d70885",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 39,
+          "name": "Vision_33x",
+          "w2_1based_slot": 38,
+          "slot_051f_0based": 37,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 1066335,
+          "cube_sha256": "c66c6e6923821dcf8983716161d6b2c8ff799b39d99822af655630a0a1b691a7",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        },
+        {
+          "lut_id": 40,
+          "name": "709ArriLike",
+          "w2_1based_slot": 39,
+          "slot_051f_0based": 38,
+          "w3_pstyle": 10,
+          "photostyle_str": "VLOG",
+          "cube_size": 1027468,
+          "cube_sha256": "4bdf0cf87d658ab9766c197981c70cf328f64afefeedcbb3ec5289372ee4b879",
+          "forward_round_65535_exact_match": true,
+          "reverse_text_exact_match": true
+        }
+      ]
+    },
+    "controlled_import_and_reboot_20261012": {
+      "before_raw_sha256": "72dc943004475f8923132e587392b84f31f294e689109a14361a2b4811b0207e",
+      "blank_raw_sha256": "72dc943004475f8923132e587392b84f31f294e689109a14361a2b4811b0207e",
+      "before_equals_blank_exact": true,
+      "after_raw_sha256": "0a4dba992f1a971914387fb0fa6398b516fa3f73a6b6efd3a44c199a16ceb7bf",
+      "reboot_raw_sha256": "0a4dba992f1a971914387fb0fa6398b516fa3f73a6b6efd3a44c199a16ceb7bf",
+      "after_equals_reboot_exact": true,
+      "blank_to_after_diff": {
+        "before_raw_wrapper": {
+          "raw_size": 9197421,
+          "raw_sha256": "72dc943004475f8923132e587392b84f31f294e689109a14361a2b4811b0207e",
+          "wrapper_tag_hex": "0x080000a2",
+          "wrapper_outer_len": 9197413,
+          "wrapper_inner_len": 9197409
+        },
+        "after_raw_wrapper": {
+          "raw_size": 9197421,
+          "raw_sha256": "0a4dba992f1a971914387fb0fa6398b516fa3f73a6b6efd3a44c199a16ceb7bf",
+          "wrapper_tag_hex": "0x080000a2",
+          "wrapper_outer_len": 9197413,
+          "wrapper_inner_len": 9197409
+        },
+        "before_dat_sha256": "361af1699f6ba6706bc859f32e438f124be9d61a401ef70689126ada6c19509e",
+        "after_dat_sha256": "d3619b4d04f9a16cec67f782b03b46dbcc7fc8154a07df5ffee3bcb036e84e63",
+        "before_checksum_hex": "de",
+        "after_checksum_hex": "69",
+        "after_checksum_sum_mod_256": 0,
+        "changed_records": [
+          {
+            "tag_hex": "0x02f4",
+            "slot": 0,
+            "dat_offset_hex": "0x00f69c",
+            "rlen": 31832,
+            "changed_body_bytes": 14
+          },
+          {
+            "tag_hex": "0x051f",
+            "slot": 0,
+            "dat_offset_hex": "0x04ae88",
+            "rlen": 8840924,
+            "changed_body_bytes": 195621
+          }
+        ],
+        "changed_02f4_entries": [
+          {
+            "entry_index": 27,
+            "before": {
+              "entry_index": 27,
+              "offset_hex": "0x014884",
+              "w0": 27,
+              "w1": 0,
+              "w2_1based_slot": 65535,
+              "w3_pstyle": 49,
+              "name": "",
+              "tail_hex": "00ffffff"
+            },
+            "after": {
+              "entry_index": 27,
+              "offset_hex": "0x014884",
+              "w0": 27,
+              "w1": 0,
+              "w2_1based_slot": 24,
+              "w3_pstyle": 10,
+              "name": "Himalayas-V",
+              "tail_hex": "00ffffff"
+            }
+          }
+        ],
+        "changed_051f_slots": [
+          {
+            "slot_index_0based": 23,
+            "before": {
+              "slot_index_0based": 23,
+              "slot_offset_hex": "0x505bc4",
+              "rem_len_u32": 215628,
+              "grid_u16": 33,
+              "pstyle_u16": 10,
+              "tail_u16": 0,
+              "true_table_offset_hex": "0x505bcc",
+              "true_table_sha256": "cc228a16790ae4afbf2782fb55bfbe071154209601b90397a4068d315365cbe6",
+              "old_buggy_o_plus_10_offset_hex": "0x505bca",
+              "old_buggy_o_plus_10_sha256": "b2cd75c753a1579e261d934fc5e19dd4ca7db51c07dae152ca17913aa6344db3",
+              "dominant_axes_true_s_plus_8": [
+                0,
+                1,
+                2
+              ],
+              "dominant_axes_buggy_s_plus_6": [
+                1,
+                2,
+                0
+              ]
+            },
+            "after": {
+              "slot_index_0based": 23,
+              "slot_offset_hex": "0x505bc4",
+              "rem_len_u32": 215628,
+              "grid_u16": 33,
+              "pstyle_u16": 10,
+              "tail_u16": 0,
+              "true_table_offset_hex": "0x505bcc",
+              "true_table_sha256": "871f90f316fb7f08037b3286d416346bceb5e19579b617aecacc1c8181ee58fc",
+              "old_buggy_o_plus_10_offset_hex": "0x505bca",
+              "old_buggy_o_plus_10_sha256": "9b1d63b843ee351d719a4008d495a7d5dd145f0515bf0adafbe7ca24a0a6c412",
+              "dominant_axes_true_s_plus_8": [
+                0,
+                1,
+                2
+              ],
+              "dominant_axes_buggy_s_plus_6": [
+                1,
+                2,
+                0
+              ]
+            }
+          }
+        ],
+        "cube_verification": {
+          "cube_path": "analysis/lab_lut_backup_20261012/slot_02.cube",
+          "cube_sha256": "8d381f947eefee42312656057e8d4c181495ac0845f15cbae548f4588b47655c",
+          "quantized_round_65535_sha256": "871f90f316fb7f08037b3286d416346bceb5e19579b617aecacc1c8181ee58fc",
+          "matched_051f_slots_at_s_plus_8": [
+            4,
+            23
+          ]
+        }
+      }
+    }
+  },
+  "haldclut_33cube_png_verification": {
+    "apk_entry": "assets/33cube.png",
+    "file_size": 499,
+    "file_sha256": "a97fcc80c8e007802b981717c508018862e2d0a493afd802a66aecfc7b7a0041",
+    "width": 2178,
+    "height": 33,
+    "bit_depth": 8,
+    "color_type": 6,
+    "half_width": 1089,
+    "pixels_per_half": 35937,
+    "left_half_equals_right_half": true,
+    "matches_33cube_identity_lattice_trunc_i_255_div_32": true,
+    "distinct_channel_levels": [
+      0,
+      7,
+      15,
+      23,
+      31,
+      39,
+      47,
+      55,
+      63,
+      71,
+      79,
+      87,
+      95,
+      103,
+      111,
+      119,
+      127,
+      135,
+      143,
+      151,
+      159,
+      167,
+      175,
+      183,
+      191,
+      199,
+      207,
+      215,
+      223,
+      231,
+      239,
+      247,
+      255
+    ]
+  },
+  "consumer_call_chains": {
+    "lumix_tether_libLmxptpif_dylib": {
+      "LMX_func_api_SetupFilesConfigSetting_Get_Data": "0x26380",
+      "Lmx_lib_ptpif_LmxExt_Get_SetupFilesConfigSet_Info": "0x26570 (opcode 0x9421, param 0x080000a2)",
+      "LmxExt_Get_SetupFilesConfigSet_Data_from_Buf": "0x26ab0 (strips 12B wrapper at +0xc)",
+      "LMX_func_api_SetupFilesConfigSetting_Set_Name": "0x26760 (param 0x080000a1 -> opcode 0x9423)",
+      "LMX_func_api_SetupFilesConfigSetting_Set_Data": "0x2698c (wraps .DAT with 0x080000a2 -> opcode 0x9422)",
+      "Lmx_lib_ptpif_LmxExt_SetSetupFilesConfigSetInfo": "0x26b20 (selects 0x9423 for 0x080000a1, 0x9422 for 0x080000a2)"
+    },
+    "lumix_lab_java_and_native": {
+      "ptp_config_opcodes_unreferenced_in_lab": "p183q6/A.java:86-88 (0x9421/0x9422/0x9423 have 0 callers in Lab)",
+      "https_rest_lut_endpoints": "p084h6/a.java & Y5/D.java: POST /auth (a.F/a.p), POST /lut/info (a.W), POST /lut/file (a.X, JSON {'LutId': id}), POST /lut/send-prepare (a.l), POST /lut/send (a.E), POST /lut/abort-send (a.n), POST /lut/rename (a.N), POST /lut/delete (a.L), POST /lut/rearrange (a.e0), POST /lut/set-display-setting (a.Y)",
+      "usb_ptp_lut_commands": "A6/r.java & p183q6/A.java & p183q6/o.java: r.M (0x9414+0x53000011 GetLutInfo -> p205s6/L.java), r.L (0x9921+0x53000012 GetLUTFile -> p205s6/K.java), r.O (0x9922 LumixLutStartFileData, 256B name), r.N (0x9924 LumixLutSendFileData, raw .cube bytes), r.H (0x9415+0x53000014 DeleteLUTFile), r.I (0x9414/0x9415+0x53000016 DisplaySetting -> p205s6/J.java), r.J (0x9415+0x53000013 RenameLUTFile), r.K (0x9415+0x53000015 SortLUTFile)",
+      "psl1_decoder": "com/panasonic/jp/lumixlab/util/p1.java:1350-1393 & F0.java:63-204 -> ImageFilter.setPhotoStyleLUT",
+      "haldclut_to_cube_jni": "EditActivity.java:1903-1904 (assets/33cube.png) -> RunnableC1879c.java:108-156 -> Java_com_panasonic_jp_lumixlab_LlcApplication_convertToCube (0x11560 in libllc_static.so) -> createCubeFile (0xb8fc, divides RGBA by 255.0)",
+      "ai_magic_lut_and_merge": "CallableC1821k.java + C1417x.c (PI_3D_LUT_v1.0.0_model_B_fp16.ort) -> Java_com_panasonic_jp_lumixlab_LlcApplication_mergeCubeFiles (0x122ac in libllc_static.so) -> cube_merge_files (0x51d0 in libcube_merge_static.so, outputs %.7f %.7f %.7f text .cube)",
+      "exif_makernote_lut_reader": "Java_com_panasonic_jp_lumixlab_LlcApplication_getJpegExifLutInfo (0x13504 -> getExifLutInfo 0xd64c in libllc_static.so): reads Panasonic MakerNote 0x0089 (photoStyle), 0x00f1 (lut1), 0x00f3 (lut1Value), 0x00f4 (lut2), 0x00f5 (lut2Value) for 8 gated models including DC-S1M2"
+    }
+  }
+}

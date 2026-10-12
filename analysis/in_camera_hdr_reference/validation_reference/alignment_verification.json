@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "bilinear_equation": true,
+    "clamp_border": true,
+    "proxy_signal": true,
+    "green_variance_quarter_sum": true,
+    "proxy_gamma": true,
+    "proxy_extra_shape": true,
+    "robust_translation": true,
+    "tiled_matches_full": true,
+    "finite_flow": true
+  },
+  "all_passed": true,
+  "tile_max_difference": 5.364418029785156e-07,
+  "global_model": "translation",
+  "mps_flow_max_difference": 1.0728836059570312e-06,
+  "mps_flow_parity": true,
+  "proxy_max_difference": 0.0
+}

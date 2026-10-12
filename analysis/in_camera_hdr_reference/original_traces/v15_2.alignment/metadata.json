@@ -1,0 +1,271 @@
+{
+  "module": "v15_2.alignment",
+  "filename": "v15_2\\alignment.py",
+  "sha256": "347465de0d745aec2d084019edbdb01b3d4ec232384eea79fdb1b25dabe40933",
+  "functions": [
+    {
+      "scope": "v15_2.alignment",
+      "name": "<module>",
+      "line": 1,
+      "args": [],
+      "names": [
+        "__doc__",
+        "math",
+        "numpy",
+        "np",
+        "ops",
+        "Ops",
+        "bilinear",
+        "physical",
+        "Physical",
+        "Proxy",
+        "SPyNet"
+      ],
+      "imports": [
+        "math",
+        "numpy",
+        "ops",
+        "physical"
+      ]
+    },
+    {
+      "scope": "v15_2.alignment.Proxy",
+      "name": "Proxy",
+      "line": 7,
+      "args": [],
+      "names": [
+        "__name__",
+        "__module__",
+        "__qualname__",
+        "components",
+        "normalize",
+        "homography_warp"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.alignment.Proxy.components",
+      "name": "components",
+      "line": 8,
+      "args": [
+        "self",
+        "bank",
+        "meta",
+        "h",
+        "w",
+        "lca",
+        "origin",
+        "sample_stride"
+      ],
+      "names": [
+        "math",
+        "ceil",
+        "dict",
+        "Physical",
+        "rt",
+        "helpers",
+        "spec",
+        "numel",
+        "join",
+        "float",
+        "emit",
+        "free"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.alignment.Proxy.components.<genexpr>",
+      "name": "<genexpr>",
+      "line": 17,
+      "args": [
+        ".0"
+      ],
+      "names": [
+        "str",
+        "float"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.alignment.Proxy.normalize",
+      "name": "normalize",
+      "line": 31,
+      "args": [
+        "self",
+        "components",
+        "meta",
+        "scale"
+      ],
+      "names": [
+        "spec",
+        "shape",
+        "float",
+        "emit",
+        "rt",
+        "free"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.alignment.Proxy.homography_warp",
+      "name": "homography_warp",
+      "line": 41,
+      "args": [
+        "self",
+        "value",
+        "H"
+      ],
+      "names": [
+        "spec",
+        "shape",
+        "rt",
+        "upload",
+        "np",
+        "asarray",
+        "float32",
+        "reshape",
+        "emit",
+        "bilinear",
+        "release_external"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.alignment.SPyNet",
+      "name": "SPyNet",
+      "line": 48,
+      "args": [],
+      "names": [
+        "__name__",
+        "__module__",
+        "__qualname__",
+        "__init__",
+        "predict",
+        "level_tile",
+        "__classcell__"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.alignment.SPyNet.__init__",
+      "name": "__init__",
+      "line": 49,
+      "args": [
+        "self",
+        "rt",
+        "weights_path",
+        "core"
+      ],
+      "names": [
+        "super",
+        "__init__",
+        "core",
+        "np",
+        "load",
+        "files",
+        "weights",
+        "upload",
+        "zeros",
+        "float32",
+        "origin"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.alignment.SPyNet.__init__.<dictcomp>",
+      "name": "<dictcomp>",
+      "line": 51,
+      "args": [
+        ".0"
+      ],
+      "names": [
+        "upload"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.alignment.SPyNet.predict",
+      "name": "predict",
+      "line": 54,
+      "args": [
+        "self",
+        "ref",
+        "src",
+        "ref_hdr",
+        "src_hdr"
+      ],
+      "names": [
+        "spec",
+        "shape",
+        "math",
+        "ceil",
+        "enumerate",
+        "resize",
+        "emit",
+        "rt",
+        "free",
+        "range",
+        "append",
+        "pool2",
+        "core",
+        "level_tile",
+        "min",
+        "float"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.alignment.SPyNet.predict.<listcomp>",
+      "name": "<listcomp>",
+      "line": 67,
+      "args": [
+        ".0"
+      ],
+      "names": [],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.alignment.SPyNet.level_tile",
+      "name": "level_tile",
+      "line": 81,
+      "args": [
+        "self",
+        "level",
+        "ref",
+        "src",
+        "rc",
+        "sc",
+        "flow",
+        "out",
+        "x",
+        "y",
+        "cw",
+        "ch"
+      ],
+      "names": [
+        "spec",
+        "shape",
+        "origin",
+        "rt",
+        "update",
+        "np",
+        "array",
+        "float32",
+        "bilinear",
+        "emit",
+        "range",
+        "conv",
+        "weights",
+        "free"
+      ],
+      "imports": []
+    }
+  ],
+  "imports": [
+    "math",
+    "numpy",
+    "ops",
+    "physical"
+  ],
+  "shaders": []
+}

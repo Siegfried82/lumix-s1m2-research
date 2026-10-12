@@ -1,0 +1,299 @@
+{
+  "task_id": "16_adversarial",
+  "title": "全局反证与遗漏路线审查",
+  "date": "2026-10-11",
+  "strictly_read_inputs": [
+    {
+      "file": "AGENTS.md",
+      "lines": "1-15",
+      "size_bytes": 2019,
+      "sha256": "d74dd362ec163f7e0ca867646ccb368090d844a3c9128f5a2c1a7dac49e358d0"
+    },
+    {
+      "file": "S1M2研究当前状态.md",
+      "lines": "1-24",
+      "size_bytes": 3866,
+      "sha256": "24d543682da231b7af54a0e3fb70bd3ea0dad49c24688b6ea1e1762e220c1ac9"
+    },
+    {
+      "file": "研究推进_20261011_Ultra.md",
+      "lines": "1-120",
+      "size_bytes": 16081,
+      "sha256": "6059f78caf90686d271501dfbc369406904c7964bbd15a76644501ab0be187b7"
+    },
+    {
+      "file": "项目当前进度_20261010.md",
+      "lines": "1-6891",
+      "size_bytes": 591386,
+      "sha256": "8d8a8317e6a27f6e84a7272b0198f7eda5ad64520bda8b4857ce553219d32b3e"
+    },
+    {
+      "file": "analysis/agy_breakthrough_batch_20261011/tasks.json",
+      "lines": "1-119",
+      "size_bytes": 4655,
+      "sha256": "f0b402ee5a10dc8d3ffd53b57bbe0117f59818b68093e3c4606df28e70a20a87"
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "C1_v14_flash_linear_topology_and_loader23_hole",
+      "epistemic_status": "已确认（本轮静态数学闭合新发现）",
+      "category": ["边界未知", "运行消费者缺失"],
+      "summary": "独立解析 S1m2_V14.bin 全部 62 个目录项（保留 index 0..61）证实：文件内偏移 61 次相邻过渡 100% 连续无空洞（0x1a00 起，总载荷 171,860,992 B，终点 0xa3e7e00 = 171,867,648 B 与文件长度逐字节吻合）；destination_field 严格单调非递减（0x0..0xa4e0000，跨度 172,883,968 B），61 次过渡中 54 次为 0 字节紧邻衔接，仅有的 7 处非零间隔（总和 1,022,976 B = 0xf9c00 B）中 6 处为小组件（index 19/20 eep_act_a/b 512B、index 21/22 eep_exp_a/b 12KB、index 34 hr_c_prog 64KB、index 37 pzm_data 64KB）向 0x20000（128KB Flash 擦除块）对齐的扇区留白；唯一真正的非对齐留白空洞是 [0x20000, 0x80000)（384KB = 0x60000），恰好对应 index 2 (loader2) 与 index 3 (loader3) 两个 size=0, flags=2 的占位目录项。这证明 V1.4 更新包未下发二级/三级引导器载荷，单靠 V1.4 的 index 1 (loader1, [0x0, 0x20000)) 无法在包内直接闭合到 index 5 (program, 0x80000) 的启动调用链。",
+      "evidence": [
+        "项目当前进度_20261010.md:296",
+        "项目当前进度_20261010.md:307-370",
+        "研究推进_20261011_Ultra.md:96",
+        "analysis/agy_breakthrough_batch_20261011/16_adversarial/machine_audit_metrics.json:35-242"
+      ]
+    },
+    {
+      "id": "C2_postboot_dual_bank_and_erased_ff_partitions",
+      "epistemic_status": "已确认（结构事实）+ 推断（开源镜像锚点映射）",
+      "category": ["边界未知", "摘要语义未知", "运行消费者缺失"],
+      "summary": "62 个目录项中存在 5 组同名重复组件（postboot1_r [index 7, 12]、postboot3_r [index 9, 13]、postboot5_r [index 11, 14]、dsp_eisldc_ [index 42, 43]、dsp_fstack_ [index 44, 45]）。其中 index 7..11 构成紧邻的 Postboot Bank A（[0x3d40000, 0x4dc0000)，共 17,301,504 B = 16.5 MiB），index 12..14 构成紧邻的 Postboot Bank B（[0x4dc0000, 0x54e0000)，共 7,471,104 B = 7.125 MiB）。候选全 FF 摘要的 index 8 (postboot2_r, 128KB, 0x43e0000) 与 index 10 (postboot4_r, 128KB, 0x4be0000) 仅存在于 Bank A 中，位于 postboot1_r/3_r/5_r 之间，符合未使用的 128KB Flash 擦除块（全 0xFF）或固定槽位填充特征，而 Bank B 直接省略了 postboot2_r 与 postboot4_r。",
+      "evidence": [
+        "项目当前进度_20261010.md:316-323",
+        "研究推进_20261011_Ultra.md:70-71",
+        "analysis/agy_breakthrough_batch_20261011/16_adversarial/machine_audit_metrics.json:242-425"
+      ]
+    },
+    {
+      "id": "C3_uniform_plaintext_and_cross_version_differential_gaps",
+      "epistemic_status": "已确认（既有排除边界审计）",
+      "category": ["算法未知", "边界未知", "摘要语义未知", "key未知"],
+      "summary": "既有针对 7 个全 00/FF 目录摘要候选实例的 ECB/CBC/CTR/CFB128/CFB8/OFB 阴性结果（含新增 35 对/105 项检查）同时受 5 项未独立验证的前提约束：(1) 目录摘要直接计算在解密后未压缩原始字节上（尚未用同包 9 个非空 flags=2 明文组件展示完整闭合表）；(2) 组件加密前未经 RLE/LZ/gzip 压缩或稀疏封装；(3) 加密从组件 +0x0 字节对齐起算，无明文/半明文子头；(4) 无每块偏移/地址白化（tweak/whitening）；(5) 直接复用 5 个旧 16B AES 原始 key 且无 KDF。尤其遗漏了无需猜 Key 的跨实例/跨版本密文差分（S1M2 V1.3/V1.4 共 4 个 131KB 全 FF 实例两两 XOR、以及 V1.3 vs V1.4 的 37 对同摘要异密文组件在 92B 目录项中的变化字段协方差分析）。",
+      "evidence": [
+        "研究推进_20261011_Ultra.md:70-79",
+        "项目当前进度_20261010.md:154-160",
+        "项目当前进度_20261010.md:309-370"
+      ]
+    },
+    {
+      "id": "C4_bootstrapping_paradox_and_omitted_branches",
+      "epistemic_status": "已确认（全局路线盲区）",
+      "category": ["运行消费者缺失", "边界未知"],
+      "summary": "对照历史 32 条实验路线、Ultra 轮 12 项工作与本轮 tasks.json 的 15 个并行子任务，发现两处结构性遗漏：(1) 寻找 0x200/selector3 消费者陷入『已解密 0x101 旧主程序只含 0x101 分支，而 0x200 主程序自身被 selector3 锁死』的循环，遗漏了对 S1M2 包内 9 个非空 flags=2 未加密组件（共 20,316,160 B，含 wifi_info/xtk/mbr_dummy_d 等）及旧明文中镜头固件（lens_fw）更新分支的排查；(2) 项目当前进度_20261010.md 第 4 节列为首要下一步的 FunctionFS (PR #5, f_fs.c/composite.c) 内核配置启用性及 get_alt 负值丢弃边界核查，在本轮 tasks.json 的 15 个并行分支中被完全遗漏。",
+      "evidence": [
+        "S1M2研究当前状态.md:7-11",
+        "S1M2研究当前状态.md:19",
+        "研究推进_20261011_Ultra.md:54-65",
+        "项目当前进度_20261010.md:137",
+        "项目当前进度_20261010.md:202-206",
+        "analysis/agy_breakthrough_batch_20261011/tasks.json:4-117"
+      ]
+    },
+    {
+      "id": "C5_in_camera_feature_hard_dependency_gate",
+      "epistemic_status": "已确认（架构约束反证）",
+      "category": ["运行消费者缺失", "边界未知"],
+      "summary": "主目标中的机械快门高分辨率、全部输入 RAW 导出、机内手持 HDR，其执行消费者与算法载体（05_program 46.9MB、34_hr_c_prog 64KB、35_hr_d_prog 512KB、36_hr_c_ddr 512KB、44/45_dsp_fstack_ 各 64KB、46_fstack_c_ex 512KB）在 V1.4 中 100% 属于 flags=3 不透明编码组件。且受控实验已证实单张 vs 高分辨率下 4 份 0x9421 .DAT 哈希完全相同（驱动状态不进入 .DAT），录像质量 114 vs 80 的 34 条差集存在 1 分 55 秒采集时间差及 S&Q/频率/画幅等未控状态门。因此，在未取得 flags=3 明文与重签/RAM 执行入口前，仅靠 .DAT 配置修改或客户端显示层枚举过滤无法实现机内新算法注入或硬件管线重编程。",
+      "evidence": [
+        "S1M2研究当前状态.md:15-18",
+        "研究推进_20261011_Ultra.md:102-104",
+        "项目当前进度_20261010.md:9",
+        "项目当前进度_20261010.md:128-136",
+        "项目当前进度_20261010.md:171-174",
+        "项目当前进度_20261010.md:313-355"
+      ]
+    }
+  ],
+  "evidence": [
+    "AGENTS.md:1-15",
+    "S1M2研究当前状态.md:1-24",
+    "研究推进_20261011_Ultra.md:1-120",
+    "项目当前进度_20261010.md:9,25,88-96,108-206,296,307-370,6633-6891",
+    "analysis/agy_breakthrough_batch_20261011/tasks.json:1-119",
+    "analysis/agy_breakthrough_batch_20261011/16_adversarial/machine_audit_metrics.json:1-788"
+  ],
+  "experiments": [
+    {
+      "name": "授权只读输入完整性与 SHA-256 独立复算",
+      "script": "analysis/agy_breakthrough_batch_20261011/16_adversarial/audit_premises.py",
+      "scope": "严格仅读取 AGENTS.md (2,019B)、S1M2研究当前状态.md (3,866B)、研究推进_20261011_Ultra.md (16,081B)、项目当前进度_20261010.md (591,386B, 6891行)、analysis/agy_breakthrough_batch_20261011/tasks.json (4,655B)，零设备通信、零网络请求、零越界文件读取。",
+      "result": "5 份输入完整 SHA-256 与行数已记录至 machine_audit_metrics.json。"
+    },
+    {
+      "name": "S1m2_V14.bin 全部 62 个目录项（保留 index 0..61）文件偏移与 destination_field 线性空间连续性数学审计",
+      "script": "analysis/agy_breakthrough_batch_20261011/16_adversarial/audit_premises.py",
+      "scope": "项目当前进度_20261010.md 第 11.1 节 (L307-370) 全部 62 个目录项的 file_offset、size_bytes、flags、destination_field 全量 61 次相邻过渡检验。",
+      "result": "证实 file_offset 0 断裂且末尾 0xa3e7e00 (171,867,648 B) 精确等于 S1m2_V14.bin 文件字节数；证实 destination_field 54 次过渡紧邻无隙，仅 7 处非零间隔（合计 1,022,976 B），其中 6 处为 0x20000 (128KB) 擦除块对齐填充，唯一真实分区空洞为 [0x20000, 0x80000) (384KB, 对应 size=0 的 index 2 loader2 与 index 3 loader3)；定位 5 组同名重复组件及 Postboot Bank A (index 7..11, 16.5MiB) / Bank B (index 12..14, 7.125MiB) 双分区非对称结构。"
+    },
+    {
+      "name": "历史 32 条实验路线 + Ultra 12 项工作 vs 本轮 15 个并行子任务的全局覆盖与反证交叉矩阵审计",
+      "script": "analysis/agy_breakthrough_batch_20261011/16_adversarial/audit_premises.py",
+      "scope": "项目当前进度_20261010.md 第 6 节 (L150-183, 32条路线)、第 12.5 节 (L6730-6836, 105份报告分级)、研究推进_20261011_Ultra.md 第 2 节 (L15-28, 12项工作) 与 tasks.json (L4-117, 16个任务)。",
+      "result": "识别出 10 条按可获得证据与主目标贡献度排序的未测前提与遗漏路线，包括 tasks.json 完全遗漏的 FunctionFS 静态配置/符号截断核查、flags=2 同包明文摘要基准对照、39_lut_data/28_menu_save 与 0x9421 .DAT 的直接映射、以及 4 份 131KB 全 FF 候选密文的无 Key 跨实例 XOR 检验。"
+    }
+  ],
+  "adversarial_routes_top10": [
+    {
+      "rank": 1,
+      "id": "R01_flash_topology_loader23_and_postboot_anchors",
+      "title": "V1.4 线性 Flash 分区拓扑闭合、[0x20000, 0x80000) loader2/3 空洞核查与 postboot 双 Bank 开源明文锚点对齐",
+      "uncertainty_types": ["边界未知", "运行消费者缺失", "摘要语义未知"],
+      "related_tasks": ["04_boot_producer", "14_oss_artifacts", "01_new_consumer", "15_hardware_plan"],
+      "untested_premise": "默认单凭 S1m2_V14.bin 内的 01_loader1 ([0x0, 0x20000)) 即可衔接 05_program (0x80000) 或 Linux slram，忽略了 loader2/loader3 (index 2/3) 在 V1.4 中 size=0 且占据 [0x20000, 0x80000) 384KB 物理空洞；同时未将 postboot Bank A/B 的精确分区尺寸与 U-Boot/Linux 源码中的 MTD/slram 分区及已知开源镜像头（uImage/gzip/DTB/SquashFS）做明文锚点匹配。",
+      "omitted_direction": "横向检查所有新格式包（S1M2 V1.3, S5, S5M2, SL3, GH3-GH5）中 index 0/2/3/4 (boot/loader2/loader3/storage) 是否存在非零载荷样本；在 u-boot 与 linux-4.19.124 源码中精确检索 postboot 分区尺寸常量（0x6a0000, 0x7e0000, 0x1c0000, 0x1e0000, 0x380000）及偏移（0x3d40000, 0x4dc0000），用开源构建产物提供比『全 FF』更强的非均匀已知明文前缀。",
+      "cheapest_discriminating_evidence": "读取本地既有各机型 inventory JSON 中 loader2/loader3 的 size 字段；在本地 U-Boot/Linux 源码树检索上述 5 个十六进制尺寸常量与分区表定义。",
+      "stopping_condition": "若所有本地新格式固件包中 loader2/loader3 均为 size=0，立即停止在单份升级包内拼接完整冷启动链，将 Flash [0x20000, 0x80000) 列为硬件/实机只读采集必取区间；若开源源码无匹配尺寸常量，则停止用默认 fstab/slram 猜测 postboot 偏移。",
+      "evidence_refs": [
+        "项目当前进度_20261010.md:307-323",
+        "研究推进_20261011_Ultra.md:96-98",
+        "analysis/agy_breakthrough_batch_20261011/16_adversarial/machine_audit_metrics.json:40-73,153-241,344-425"
+      ]
+    },
+    {
+      "rank": 2,
+      "id": "R02_flags2_plaintext_digest_baseline_and_framing",
+      "title": "同包 13 个 flags=2 未加密组件的 92B 目录摘要公式基准闭合与 flags=3 子头/偏移错位反证",
+      "uncertainty_types": ["摘要语义未知", "边界未知"],
+      "related_tasks": ["13_protection_semantics", "02_format_transition", "03_cross_model"],
+      "untested_premise": "假设 92B 目录项中的摘要直接等于组件 [file_offset, file_offset+size) 整段解密字节的散列，且加密严格从组件 +0x0 处按 16B 块对齐开始，但尚未在同包已有的 9 个非空 flags=2 明文组件（及 4 个 0B 组件）上给出 100% 闭合的目录字段计算验证表。",
+      "omitted_direction": "以同包 9 个非空 flags=2 明文组件（lens_hist, wifi_info, menu_save, kizu_data, vkizu_data, xtk, lut_data, dsh_adj, mbr_dummy_d，合计 20,316,160 B）为阳性基准，完整验证 92B 目录记录中摘要字段、尾 16B 字段与属性位在无加密时的精确生成规则；并排查 flags=3 组件首尾是否存在固定尺寸子头/签名块导致 16B 块对齐偏移错位。",
+      "cheapest_discriminating_evidence": "用本地 05_directory_table.bin 与 unpacked/components/ 下 13 个 flags=2 文件逐项核对 SHA-256/MD5/CRC 与尾字段数值分布。",
+      "stopping_condition": "若 13 个 flags=2 组件的目录摘要 100% 等于整段原始载荷散列且无附加头尾，则锁定目录摘要的字节覆盖范围；若任一 flags=2 组件摘要不等于整段散列，立即停止把 flags=3 的全 00/FF 摘要当作整段直接解密明文。",
+      "evidence_refs": [
+        "研究推进_20261011_Ultra.md:70-75",
+        "项目当前进度_20261010.md:307-370,6494-6501",
+        "analysis/agy_breakthrough_batch_20261011/16_adversarial/machine_audit_metrics.json:38-147"
+      ]
+    },
+    {
+      "rank": 3,
+      "id": "R03_keyless_cross_instance_xor_and_compression_check",
+      "title": "7 个全 00/FF 摘要实例与 37 对同摘要异密文组件的无 Key 跨实例差分及预压缩/位置白化反证",
+      "uncertainty_types": ["算法未知", "边界未知", "摘要语义未知"],
+      "related_tasks": ["03_cross_model", "13_protection_semantics", "02_format_transition"],
+      "untested_premise": "既有 ECB/CBC/CFB128/CFB8/OFB/CTR 测试均假设『全 00/FF 目录摘要意味着加密器输入直接为 131,072B 常数 0x00/0xFF』，未排除(a) 加密前先经压缩（RLE/LZ/gzip）而目录摘要记的是解压后镜像，或(b) 加密前后混入与块偏移/destination_field 相关的白化掩码；且未对同为 131KB 全 FF 摘要的 4 个 S1M2 实例（V1.3/V1.4 的 index 8 与 index 10）做跨文件 XOR 与滑窗自相关。",
+      "omitted_direction": "无需猜 Key，直接对 S1M2 V1.3/V1.4 的 index 8 与 index 10（4 份同长同全 FF 摘要密文）及 GH5 index 31/32、S5 index 33 做全尺寸两两 XOR、16B/64B/512B/4KB 块跨实例碰撞、固定步长 lag 自相关；同时对 V1.3 vs V1.4 的 37 对同摘要异密文组件做 92B 目录项逐字节差分，锁定唯一随密文变化而变化的目录字段（候选 per-component IV/tweak）并检查其在全语料库内是否碰撞。",
+      "cheapest_discriminating_evidence": "对本地已提取的 V1.3/V1.4 08_postboot2_r.bin 与 10_postboot4_r.bin 执行 6 对全文件 XOR 与块碰撞统计，并比对 37 对同摘要组件的 92B 目录项字节差异位图。",
+      "stopping_condition": "若 6 对全 FF 密文两两 XOR、步长自相关及全语料库目录尾字段均无碰撞且熵 >7.99 bits/B，则证伪『同密钥流复用/无 IV 固定位置白化』，停止不带 per-component IV 的密文直接线性相消。",
+      "evidence_refs": [
+        "研究推进_20261011_Ultra.md:70-79",
+        "项目当前进度_20261010.md:154,158-160"
+      ]
+    },
+    {
+      "rank": 4,
+      "id": "R04_break_consumer_deadlock_via_flags2_and_lens_fw",
+      "title": "打破 0x101/0x200 消费者循环死锁：排查 S1M2 flags=2 未加密组件内嵌代码与旧明文镜头固件 (lens_fw) / 地址别名分支",
+      "uncertainty_types": ["运行消费者缺失", "边界未知"],
+      "related_tasks": ["01_new_consumer", "02_format_transition", "14_oss_artifacts"],
+      "untested_premise": "在纯 0x101 老机身（GH2/TZ10/G3/GF2/GF3/GX1）的主固件更新入口找 0x200/selector3 自然未命中，而在 0x200 机身（GH3-S1M2）中主 program 又被 selector3 加密；未测试『S1M2/S5 自身 9 个非空 flags=2 未加密组件或 OSS 归档中是否含协处理器/Wi-Fi/MCU 可执行代码』，以及『旧明文固件在真实 RAM 分段映射下是否存在独立于机身 UPD 的镜头固件 (lens_fw) 或子模块更新消费者』。",
+      "omitted_direction": "(1) 扫描 S1M2 V1.4 全部 9 个非空 flags=2 组件（特别是 27_wifi_info 262KB、38_xtk 131KB、61_mbr_dummy_d 131KB、24_lens_hist 393KB）是否包含未加密指令流、函数序言或分区加载表；(2) 按已核实的 ROM→RAM 启动复制分段映射（而非文件偏移加常数），在 7 份旧明文及 official_firmware_list 中检索 lens_fw 更新路径及 AM33 目录索引/地址别名。",
+      "cheapest_discriminating_evidence": "对本地 9 个 flags=2 组件做非零段、字符串、ELF/固件头与架构指令特征扫描；在本地已解码的 G3/GF2/GF3/GX1/GH2 明文中检索第二个 header+0x08 / +0x34 比较点。",
+      "stopping_condition": "若 9 个 flags=2 组件确认为纯静态参数/校准表（0 可执行代码段），且旧明文在完整 RAM 映射下无第二更新器，则停止从现有旧机身明文和 flags=2 数据组件搜寻 0x200 解码器。",
+      "evidence_refs": [
+        "研究推进_20261011_Ultra.md:54-65",
+        "项目当前进度_20261010.md:187,333-370",
+        "AGENTS.md:9-10"
+      ]
+    },
+    {
+      "rank": 5,
+      "id": "R05_bounded_kdf_from_verified_legacy_keys_and_dir_fields",
+      "title": "基于松下既有原语（TZ10 双重 XOR 掩码 + 旧驻留 AES Key + MD5/SHA）与 92B 目录字段的有限确定性 KDF 判别",
+      "uncertainty_types": ["key未知", "算法未知"],
+      "related_tasks": ["02_format_transition", "13_protection_semantics"],
+      "untested_premise": "新增 35 对 CFB128/CFB8/OFB 及既有 CBC/CTR 阴性仅测试了『5 个旧 16B AES key 原封不动直接作为新格式组件密钥（无 KDF）』；但 TZ10 证实松下对驻留 seed 先做掩码 XOR 变换，且 V1.3/V1.4 同明文组件随目录尾字段改变而密文全变，尚未测试『旧驻留根密钥 + 92B 目录字段（尾 16B / 组件名 / destination_field）经 XOR/MD5/SHA256/AES-ECB 单步派生 per-component key』。",
+      "omitted_direction": "严格拒绝盲目暴力枚举，仅构造有代码先例的有限确定性派生集（5 个已验证旧 AES key × 4 类目录字段 [尾 16B、摘要前 16B、组件名、dest 字段] × 4 种松下既有变换 [XOR、MD5、SHA256前16B、AES-ECB单块加密]，共 80~160 组），在 7 个全 00/FF 候选实例的 128B 起点窗口上执行无 IV 模式恒等式验证（ECB/CBC第2块/CFB128/OFB）。",
+      "cheapest_discriminating_evidence": "复用研究推进_20261011_Ultra.md 第 8 节已有的 check_feedback_modes.py 环境，将上述 ≤160 个确定性派生 key 投入 7 个均匀摘要实例的 128B 窗口检验，耗时 <2 秒。",
+      "stopping_condition": "若这 ≤160 组基于旧驻留 key 与目录字段的确定性派生全部无命中，立即停止一切围绕旧 5 个 AES key 的变换猜测，确认新格式使用了独立根密钥或非 AES 标准块结构。",
+      "evidence_refs": [
+        "研究推进_20261011_Ultra.md:18,47,73-78",
+        "项目当前进度_20261010.md:156,176"
+      ]
+    },
+    {
+      "rank": 6,
+      "id": "R06_functionfs_kconfig_and_get_alt_sign_truncation",
+      "title": "本轮 15 分支完全遗漏项：FunctionFS (f_fs.c / composite.c) 内核配置启用性与 get_alt 负值丢弃/单字节截断静态闭合",
+      "uncertainty_types": ["运行消费者缺失", "边界未知"],
+      "related_tasks": [],
+      "untested_premise": "项目当前进度_20261010.md 第 4 节将『补足 FunctionFS 的运行版本和接口归属证据』列为第一优先级，但本轮 tasks.json 的 15 个子任务完全遗漏了该方向。未测前提包括：(1) 官方内核源码虽含 f_fs.c，但 S1M2 实际内核配置是否编译并绑定了 FunctionFS 接口；(2) composite.c 中 get_alt 返回 int，当越界读取的数组值为负（最高位为 1）时会被当作错误码丢弃（引发 stall 而非返回数据），且成功时仅写回最低 1 字节，绝非现成无损 RAM 读取器。",
+      "omitted_direction": "在完全离线、不接触相机的条件下，核查本地 linux-4.19.124.tar.gz / kernel_selected / oss_refresh_20261009 中的 defconfig/Kconfig 与 USB gadget 绑定代码，确认 S1M2 是否启用 CONFIG_USB_FUNCTIONFS；并从 composite.c 与 f_fs.c 静态推导 wIndex 越界时的精确结构体数组步长、可读偏移范围与非负返回值过滤条件。",
+      "cheapest_discriminating_evidence": "静态读取本地 analysis/new_pr_review_20261010/f_fs.c、composite.c、source_model_comparison.json 及 analysis/sources/kernel_scan.json。",
+      "stopping_condition": "若 S1M2 内核配置未启用 FunctionFS 或 USB PTP 由 RTOS 独立处理，则立即终止 PR #5 路线；若启用，则严格定性为『受符号位限制的单字节条件只读探测』，禁止任何带副作用的 set_alt 尝试。",
+      "evidence_refs": [
+        "S1M2研究当前状态.md:19",
+        "项目当前进度_20261010.md:25,88-96,137,182,202-206,300-301",
+        "analysis/agy_breakthrough_batch_20261011/tasks.json:4-117"
+      ]
+    },
+    {
+      "rank": 7,
+      "id": "R07_tether_event_address_readback_and_5_diff_maint_funcs",
+      "title": "Tether 机身准备事件缓存地址的读方向交叉引用与 AW 2.8 / 标准 2.12 五个差异维护函数的未覆盖分支核查",
+      "uncertainty_types": ["运行消费者缺失", "边界未知"],
+      "related_tasks": ["05_update_state", "06_service_reads"],
+      "untested_premise": "已确认 Tether 更新写入（0x960x）的目标地址来自机身准备事件缓存，且 0x9703 的 1MiB 缓冲仅为宿主分配；但尚未核查(1) 该机身准备事件返回的真实机身地址缓存是否被任何读方向/校验查询命令二次引用；(2) AW 2.8 与标准 2.12 的 12 个维护函数中保留差异的 5 个函数，以及 Windows 独有导出（LMX_func_api_*）中是否存在带可控子参数的状态/区域读取分支。",
+      "omitted_direction": "在本地已生成的 Tether 2.12 / AW 2.8 ARM64 反汇编与 Windows 导出反汇编中，枚举机身准备事件地址缓存槽位的所有读 XREFs，并逐基本块对比 5 个有差异的维护函数。",
+      "cheapest_discriminating_evidence": "检查本地 analysis/tether_update_path_comparison.json、maintenance_aw_standard_comparison_20261008.json 与 windows_only_exports_audit_20261010/ 下 26 个导出分析文件。",
+      "stopping_condition": "若机身准备事件地址缓存仅流入发送函数（无任何读操作码引用），且 5 个差异函数仅涉及缓冲区大小/日志/超时常量，则彻底停止从 Tether 宿主程序寻找 RAM 读取原语。",
+      "evidence_refs": [
+        "S1M2研究当前状态.md:7",
+        "研究推进_20261011_Ultra.md:26,86",
+        "项目当前进度_20261010.md:167-168,179,6662-6687"
+      ]
+    },
+    {
+      "rank": 8,
+      "id": "R08_video_quality_34_diff_confounders_and_24b_bitmasks",
+      "title": "录像质量 114 vs 80（34 条差集）的 1 分 55 秒采集时间差混杂与 24B 详情记录全列状态掩码反证",
+      "uncertainty_types": ["边界未知", "运行消费者缺失"],
+      "related_tasks": ["07_video_diff", "08_app_params"],
+      "untested_premise": "将 0x0600001A（114 条 24B 详情）与 0x06000013（80 个能力 ID）之间的 34 条差集当作潜在可解锁的『隐藏录像规格』，但仅排除了 SD/CFexpress 记录介质门，尚未排除 24B 结构中其余字节编码的 S&Q（慢快动作）、系统频率（59.94/50/24Hz）、画幅裁切（Full/APS-C/PIXEL）、VFR 等正常子模式过滤门，且两次采集相隔 1 分 55 秒（18:26:35 vs 18:28:30 UTC）。",
+      "omitted_direction": "对 114 条 24B 详情记录的全部 24 个字节列做『80 条在列 vs 34 条差集』的特征位判别分析，结合客户端已复核的 14 个消费函数，查明 34 条差集在非介质字节上的精确过滤条件，并核对同一采集批次内（video_status_inventory_20261008_12）其他关联属性的实时值。",
+      "cheapest_discriminating_evidence": "解析本地 analysis/video_status_inventory_20261008_12/ 下原始响应二进制与 capture_log.json，生成 114×24 字节矩阵的列差分表。",
+      "stopping_condition": "若 34 条差集在 24B 记录的其余状态位上精确对应 S&Q / 特定画幅 / VFR 等公开手册已有模式，则确认其为正常子模式枚举而非未公开隐藏规格，停止据此声称可解锁新视频编码模式。",
+      "evidence_refs": [
+        "S1M2研究当前状态.md:15-17",
+        "研究推进_20261011_Ultra.md:27,102-104",
+        "项目当前进度_20261010.md:6633-6660"
+      ]
+    },
+    {
+      "rank": 9,
+      "id": "R09_config_0x9421_coverage_and_flags2_menu_lut_mapping",
+      "title": "0x9421 (.DAT 9.2MB) 配置覆盖盲区反证：为何单张/高分 4 份 .DAT 完全相同，以及 .DAT 与 flags=2 组件 (menu_save / lut_data) 的真实映射",
+      "uncertainty_types": ["边界未知", "摘要语义未知", "运行消费者缺失"],
+      "related_tasks": ["09_config_format", "10_lut_storage", "12_sound_resource"],
+      "untested_premise": "隐含假设 0x9421 导出的 9.2MB .DAT 包含机身全部关键功能状态与 eep_* 分区内容；但受控实验已证明单张 vs 高分辨率下驱动响应从 0 变 10 而 4 份 .DAT 哈希丝毫未变（证伪驱动状态在 .DAT 中），且 V1.4 目录中 28_menu_save (512KB) 与 39_lut_data (8.78MB) 本身就是 flags=2 未加密组件（合计 9,306,112 B，与 9,197,409 B 的 .DAT 规模高度吻合），尚未直接验证 .DAT 的 3076 条 TLV 记录是否仅对应 menu_save + lut_data 而根本不触及 flags=3 的 eep_adj/fix/act/exp（独立位于 0x54e0000..0x55e0000）。",
+      "omitted_direction": "将本地 unpacked/components/28_menu_save.bin (524,288B, flags=2) 和 39_lut_data.bin (8,781,824B, flags=2) 直接与 s1m2_config_0x9421.bin 的 3076 条 TLV 记录（特别是 0x051f 的 8,840,924B 41 槽结构）做字节/槽位级对照，并汇总全部 7 组历史采集目录中 .DAT 的跨组差异。",
+      "cheapest_discriminating_evidence": "对比本地 39_lut_data.bin (8,781,824B = 40.72 × 215,632B) 与 0x9421 中 0x051f 记录 (8,840,924B) 的块结构与内容重合度，以及 28_menu_save.bin 与其余 3075 条小 TLV 记录的对应关系。",
+      "stopping_condition": "若证实 0x9421 .DAT 仅序列化用户菜单设置 (menu_save) 与 LUT 槽 (lut_data)，完全不含工厂/激活 EEPROM (eep_*) 与实时驱动状态机，则立即停止用 .DAT 滑窗匹配 eep_* 组件或试图用 .DAT 修改高分辨率快门状态。",
+      "evidence_refs": [
+        "项目当前进度_20261010.md:161-162,170-174,197-200,324-348",
+        "analysis/agy_breakthrough_batch_20261011/16_adversarial/machine_audit_metrics.json:92-98,124-130,168-214"
+      ]
+    },
+    {
+      "rank": 10,
+      "id": "R10_core_feature_code_dependency_and_s1rm2_cross_check",
+      "title": "机内核心目标（机械快门高分 / 全部输入 RAW / 机内手持 HDR）对专有代码解密的硬依赖门控与 S1RM2 跨机证据前置条件",
+      "uncertainty_types": ["运行消费者缺失", "边界未知", "算法未知"],
+      "related_tasks": ["11_hdr_frames", "15_hardware_plan"],
+      "untested_premise": "假设不解开 flags=3 专有程序（05_program 46.9MB、34_hr_c_prog 64KB、35_hr_d_prog 512KB、44/45_dsp_fstack_ 64KB），仅靠 PTP 属性或『保存首张普通照片（0x030f）』配置位就能扩展出『机械快门高分 / 全部 8 张中间 RAW 输出 / 机内手持 HDR 融合』；或假设拆机 S1RM2 的硬件提取物可直接当作 S1M2 事实使用。",
+      "omitted_direction": "(1) 核查本地已解码的 26 份机身能力响应（144 个子标签、185 个参数）中，高分辨率与快门/RAW 子标签的合法枚举集合是否仅含既有公开选项（证伪『协议层已有全帧 RAW / 机械快门高分枚举但被 UI 隐藏』）；(2) 制定 S1RM2 材料进入主分支的前置校验门：必须先完成型号标识（MC8243 等）、62 项分区表与同名组件目录摘要重合率核验。",
+      "cheapest_discriminating_evidence": "检索本地 analysis/acquired_capabilities_decoded_20261008.json 中 drivemode / highres / shutter / raw 相关子标签的全部枚举定义。",
+      "stopping_condition": "若机身能力表中不存在对应枚举 ID，则明确判定『机械快门高分 / 全部输入 RAW / 机内手持 HDR』100% 依赖 05_program 与 34/35_hr_*_prog 明文逆向及加载校验突破；在专有代码解密前，停止一切不修改机身代码而声称能落地机内新算法的设计。",
+      "evidence_refs": [
+        "研究推进_20261011_Ultra.md:98",
+        "项目当前进度_20261010.md:9,108-124,128-136,286,313-355"
+      ]
+    }
+  ],
+  "unknowns": [
+    "key未知：S1M2 (0x200 / selector 3) 的根密钥或组件密钥尚未取得，且尚未知其是否由每组件 92B 目录尾字段参与 KDF 派生。",
+    "算法未知：selector 3 的具体分组/流变换结构、是否存在块偏移白化（tweak/whitening）或加密前预压缩（RLE/LZ/gzip）尚未确定。",
+    "边界未知：flags=3 组件内部是否含明文/半明文帧头或尾部校验块、V1.4 中 size=0 的 loader2/loader3 ([0x20000, 0x80000)) 在其他更新包或实机 Flash 中的实际内容尚未取得。",
+    "摘要语义未知：92B 目录项中的摘要与尾字段在同包 13 个 flags=2 明文组件上的完整字节覆盖公式尚未正式列明闭合表；02_security_header (160B) 与 03_signature_64b (64B) 的验算函数与公钥尚未定位。",
+    "运行消费者缺失：实际接受 header 版本 0x200 及 selector 3 的代码消费者、将解密后固件写入 Linux slram/IPCU 区域的生产者、以及 S1M2 运行态 USB 是否实际绑定 FunctionFS (f_fs.c) 尚未取得直接证据。"
+  ],
+  "next_steps": [
+    "立即在本地现存文件中执行零成本判别实验（路线 1/2/3/9）：(1) 用同包 13 个 flags=2 组件闭合 92B 目录摘要公式，并将 28_menu_save.bin / 39_lut_data.bin 与 s1m2_config_0x9421.bin 对齐；(2) 对 V1.3/V1.4 的 4 个 131KB 全 FF 摘要实例做跨实例 XOR 与滑窗自相关，并提取 37 对同摘要组件在 92B 目录项中的变化字段位图；(3) 在各机型更新包与 U-Boot/Linux 源码中核查 [0x20000, 0x80000) loader2/3 空洞与 postboot Bank A/B 分区尺寸常量。",
+    "补齐 tasks.json 遗漏的 FunctionFS 静态配置核查（路线 6）：在本地 linux-4.19.124 源码与配置中确认 CONFIG_USB_FUNCTIONFS 是否启用，以及 composite_setup 对 get_alt 负返回值的丢弃边界。",
+    "严格执行停止条件门控：在上述判别实验给出阳性证据前，禁止盲目扩大无依据密钥枚举，禁止把客户端 UI 差集或 .DAT 配置直接宣称为机内新算法实现。"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "positive_control": "MT19937 four-word seed: full624-word future prediction passed; deliberate corrupted word rejected",
+  "assumptions": "Uniform plaintext, little-endian 32-bit output XOR; no additional transformations or skipped words in inspected segment; feedback skipping is absent on all00/allFF words because both have even parity",
+  "tests": [
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "name": "apu0_code_e",
+      "skip": 0,
+      "expected_byte": 255,
+      "next624_words_match": false,
+      "matched_words": 0
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 31,
+      "name": "apu0_code_e",
+      "skip": 512,
+      "expected_byte": 255,
+      "next624_words_match": false,
+      "matched_words": 0
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "name": "ipu_data",
+      "skip": 0,
+      "expected_byte": 0,
+      "next624_words_match": false,
+      "matched_words": 0
+    },
+    {
+      "file": "GH5__V28.bin",
+      "index": 32,
+      "name": "ipu_data",
+      "skip": 512,
+      "expected_byte": 0,
+      "next624_words_match": false,
+      "matched_words": 0
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "name": "ipu_data",
+      "skip": 0,
+      "expected_byte": 0,
+      "next624_words_match": false,
+      "matched_words": 0
+    },
+    {
+      "file": "S5___V28.bin",
+      "index": 33,
+      "name": "ipu_data",
+      "skip": 512,
+      "expected_byte": 0,
+      "next624_words_match": false,
+      "matched_words": 0
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "name": "postboot2_r",
+      "skip": 0,
+      "expected_byte": 255,
+      "next624_words_match": false,
+      "matched_words": 0
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 8,
+      "name": "postboot2_r",
+      "skip": 512,
+      "expected_byte": 255,
+      "next624_words_match": false,
+      "matched_words": 0
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "name": "postboot4_r",
+      "skip": 0,
+      "expected_byte": 255,
+      "next624_words_match": false,
+      "matched_words": 0
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "index": 10,
+      "name": "postboot4_r",
+      "skip": 512,
+      "expected_byte": 255,
+      "next624_words_match": false,
+      "matched_words": 0
+    }
+  ]
+}

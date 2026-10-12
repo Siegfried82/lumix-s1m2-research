@@ -1,0 +1,24 @@
+--- linux-4.19.124/drivers/usb/gadget/composite.c
++++ composite.c.patched
+@@ -2053,6 +2053,21 @@
+ 	return value;
+ }
+ 
++/*
++ * QEMU SANDBOX ONLY (Lumix S1RM2 RE project, CONFIG_QEMU_OOB):
++ * exported wrapper so the sandbox fake-UDC module (qemu_oob_sandbox.c)
++ * can invoke the stock composite_setup() with crafted control requests.
++ * Not compiled in production builds.
++ */
++#ifdef CONFIG_QEMU_OOB
++int composite_sandbox_setup(struct usb_gadget *gadget,
++			    const struct usb_ctrlrequest *ctrl)
++{
++	return composite_setup(gadget, ctrl);
++}
++EXPORT_SYMBOL_GPL(composite_sandbox_setup);
++#endif
++
+ void composite_disconnect(struct usb_gadget *gadget)
+ {
+ 	struct usb_composite_dev	*cdev = get_gadget_data(gadget);

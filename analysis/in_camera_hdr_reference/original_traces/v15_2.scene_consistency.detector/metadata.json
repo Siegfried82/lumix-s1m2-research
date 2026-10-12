@@ -1,0 +1,203 @@
+{
+  "module": "v15_2.scene_consistency.detector",
+  "filename": "v15_2\\scene_consistency\\detector.py",
+  "sha256": "b35eeab5da8b13e50bac98527b9e4af4aa8f22a9a6bb63047a488e67c106393c",
+  "functions": [
+    {
+      "scope": "v15_2.scene_consistency.detector",
+      "name": "<module>",
+      "line": 1,
+      "args": [],
+      "names": [
+        "__doc__",
+        "time",
+        "math",
+        "numpy",
+        "np",
+        "pipeline",
+        "frame_meta",
+        "evidence",
+        "PairEvidence",
+        "radiometry",
+        "SparseEvidence",
+        "Photometry",
+        "gain_tile",
+        "regions",
+        "PairPolicy",
+        "chroma",
+        "confirm",
+        "censored",
+        "CensoredShape",
+        "tiles",
+        "build_rejection"
+      ],
+      "imports": [
+        "time",
+        "math",
+        "numpy",
+        "pipeline",
+        "evidence",
+        "radiometry",
+        "regions",
+        "chroma",
+        "censored"
+      ]
+    },
+    {
+      "scope": "v15_2.scene_consistency.detector.tiles",
+      "name": "tiles",
+      "line": 11,
+      "args": [
+        "rt",
+        "data",
+        "flows",
+        "H",
+        "stride",
+        "tile"
+      ],
+      "names": [
+        "range",
+        "min",
+        "max",
+        "np",
+        "asarray",
+        "copy",
+        "mgrid",
+        "astype",
+        "float32",
+        "stack",
+        "transpose",
+        "isfinite",
+        "all",
+        "ValueError",
+        "floor",
+        "int",
+        "ceil",
+        "map",
+        "tolist",
+        "zeros",
+        "enumerate",
+        "zip",
+        "upload",
+        "array",
+        "release_external"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.detector.build_rejection",
+      "name": "build_rejection",
+      "line": 37,
+      "args": [
+        "rt",
+        "data",
+        "flows",
+        "H"
+      ],
+      "names": [
+        "get",
+        "ValueError",
+        "len",
+        "tuple",
+        "shape",
+        "np",
+        "stack",
+        "zip",
+        "astype",
+        "float32",
+        "isfinite",
+        "all",
+        "any",
+        "upload",
+        "concatenate",
+        "asarray",
+        "time",
+        "perf_counter",
+        "SparseEvidence",
+        "empty",
+        "tiles",
+        "compose",
+        "stats",
+        "collect",
+        "free",
+        "Photometry",
+        "estimate",
+        "release_external",
+        "save",
+        "read",
+        "PairEvidence",
+        "gain_tile",
+        "spec",
+        "gains",
+        "compose_coarse",
+        "decide",
+        "scatter",
+        "scatter_censored",
+        "confirm",
+        "PairPolicy",
+        "CensoredShape",
+        "apply",
+        "_u32",
+        "_clear_u32",
+        "_dispatch",
+        "buffer",
+        "_read_u32",
+        "tolist",
+        "update"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.detector.build_rejection.<listcomp>",
+      "name": "<listcomp>",
+      "line": 43,
+      "args": [
+        ".0"
+      ],
+      "names": [
+        "np",
+        "asarray",
+        "ravel"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.detector.build_rejection.<listcomp>",
+      "name": "<listcomp>",
+      "line": 45,
+      "args": [
+        ".0"
+      ],
+      "names": [
+        "frame_meta"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.detector.build_rejection.<listcomp>",
+      "name": "<listcomp>",
+      "line": 56,
+      "args": [
+        ".0"
+      ],
+      "names": [
+        "empty"
+      ],
+      "imports": []
+    }
+  ],
+  "imports": [
+    "censored",
+    "chroma",
+    "evidence",
+    "math",
+    "numpy",
+    "pipeline",
+    "radiometry",
+    "regions",
+    "time"
+  ],
+  "shaders": [
+    "carchive/jsr_backend/trace/v15_2.scene_consistency.detector/shader_000.wgsl"
+  ]
+}

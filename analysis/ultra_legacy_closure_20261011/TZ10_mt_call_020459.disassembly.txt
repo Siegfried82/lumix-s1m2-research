@@ -1,0 +1,128 @@
+
+<LOCAL_WORKSPACE>/analysis/method2_review_20261011/decoded/TZ10_V12.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+7789be09 <.data+0x20409>:
+7789be09:	5c 2c       	mov	(44,sp),a0
+7789be0b:	dd 23 87 00 	call	0x778a452e,[d2,d3,a2,a3],24
+7789be0f:	00 f0 18 
+7789be12:	a0 00       	cmp	0,d0
+7789be14:	c9 0b       	bne	0x7789be1f
+7789be16:	fc cc 02 00 	mov	-1073741822,d0
+7789be1a:	00 c0 
+7789be1c:	df f0 28    	ret	[d2,d3,a2,a3],40
+7789be1f:	73          	mov	(a3),d0
+7789be20:	f1 e8       	mov	d2,a0
+7789be22:	f8 12 04    	mov	d0,(4,a2)
+7789be25:	70          	mov	(a0),d0
+7789be26:	f8 c4 10    	lsr	16,d0
+7789be29:	f8 ec 80    	btst	128,d0
+7789be2c:	c8 20       	beq	0x7789be4c
+7789be2e:	95 08       	mov	8,a1
+7789be30:	f1 6d       	add	d3,a1
+7789be32:	f8 01 04    	mov	(4,a1),d0
+7789be35:	90 08       	mov	8,a0
+7789be37:	f1 78       	add	a2,a0
+7789be39:	f8 10 04    	mov	d0,(4,a0)
+7789be3c:	9f 10       	mov	16,a3
+7789be3e:	f1 6f       	add	d3,a3
+7789be40:	f8 03 04    	mov	(4,a3),d0
+7789be43:	22 10       	add	16,a2
+7789be45:	f8 12 04    	mov	d0,(4,a2)
+7789be48:	71          	mov	(a1),d0
+7789be49:	60          	mov	d0,(a0)
+7789be4a:	73          	mov	(a3),d0
+7789be4b:	62          	mov	d0,(a2)
+7789be4c:	5a 2c       	mov	(44,sp),d2
+7789be4e:	58 08       	mov	(8,sp),d0
+7789be50:	2a 34       	add	52,d2
+7789be52:	f1 e8       	mov	d2,a0
+7789be54:	60          	mov	d0,(a0)
+7789be55:	5c 04       	mov	(4,sp),a0
+7789be57:	5d 2c       	mov	(44,sp),a1
+7789be59:	cd 27 fc f0 	call	0x7789ba80,[d2,d3,a2,a3],32
+7789be5d:	20 
+7789be5e:	a0 00       	cmp	0,d0
+7789be60:	c9 0b       	bne	0x7789be6b
+7789be62:	fc cc 02 00 	mov	-1073741822,d0
+7789be66:	00 c0 
+7789be68:	df f0 28    	ret	[d2,d3,a2,a3],40
+7789be6b:	58 08       	mov	(8,sp),d0
+7789be6d:	f8 ec 02    	btst	2,d0
+7789be70:	c8 1d       	beq	0x7789be8d
+7789be72:	5c 2c       	mov	(44,sp),a0
+7789be74:	00          	clr	d0
+7789be75:	20 24       	add	36,a0
+7789be77:	f8 10 04    	mov	d0,(4,a0)
+7789be7a:	60          	mov	d0,(a0)
+7789be7b:	5d 2c       	mov	(44,sp),a1
+7789be7d:	85 01       	mov	1,d1
+7789be7f:	71          	mov	(a1),d0
+7789be80:	f1 04       	sub	d1,d0
+7789be82:	f8 10 08    	mov	d0,(8,a0)
+7789be85:	5d 0c       	mov	(12,sp),a1
+7789be87:	71          	mov	(a1),d0
+7789be88:	f1 04       	sub	d1,d0
+7789be8a:	f8 10 0c    	mov	d0,(12,a0)
+7789be8d:	5c 04       	mov	(4,sp),a0
+7789be8f:	70          	mov	(a0),d0
+7789be90:	a0 24       	cmp	36,d0
+7789be92:	c4 7c       	bcs	0x7789bf0e
+7789be94:	5c 2c       	mov	(44,sp),a0
+7789be96:	70          	mov	(a0),d0
+7789be97:	92          	mov	a0,a2
+7789be98:	22 48       	add	72,a2
+7789be9a:	62          	mov	d0,(a2)
+7789be9b:	5c 0c       	mov	(12,sp),a0
+7789be9d:	9b          	mov	a2,a3
+7789be9e:	70          	mov	(a0),d0
+7789be9f:	53          	inc4	a3
+7789bea0:	63          	mov	d0,(a3)
+7789bea1:	58 08       	mov	(8,sp),d0
+7789bea3:	f8 ec 01    	btst	1,d0
+7789bea6:	c8 42       	beq	0x7789bee8
+7789bea8:	5c 04       	mov	(4,sp),a0
+7789beaa:	70          	mov	(a0),d0
+7789beab:	a0 40       	cmp	64,d0
+7789bead:	c4 12       	bcs	0x7789bebf
+7789beaf:	20 2c       	add	44,a0
+7789beb1:	70          	mov	(a0),d0
+7789beb2:	a0 00       	cmp	0,d0
+7789beb4:	c8 1d       	beq	0x7789bed1
+7789beb6:	91          	mov	a0,a1
+7789beb7:	51          	inc4	a1
+7789beb8:	71          	mov	(a1),d0
+7789beb9:	a0 00       	cmp	0,d0
+7789bebb:	c8 16       	beq	0x7789bed1
+7789bebd:	ca 10       	bra	0x7789becd
+7789bebf:	20 1c       	add	28,a0
+7789bec1:	70          	mov	(a0),d0
+7789bec2:	a0 00       	cmp	0,d0
+7789bec4:	c8 0d       	beq	0x7789bed1
+7789bec6:	91          	mov	a0,a1
+7789bec7:	51          	inc4	a1
+7789bec8:	71          	mov	(a1),d0
+7789bec9:	a0 00       	cmp	0,d0
+7789becb:	c8 06       	beq	0x7789bed1
+7789becd:	70          	mov	(a0),d0
+7789bece:	62          	mov	d0,(a2)
+7789becf:	71          	mov	(a1),d0
+7789bed0:	63          	mov	d0,(a3)
+7789bed1:	5c 2c       	mov	(44,sp),a0
+7789bed3:	76          	mov	(a2),d1
+7789bed4:	70          	mov	(a0),d0
+7789bed5:	a1          	cmp	d0,d1
+7789bed6:	c9 09       	bne	0x7789bedf
+7789bed8:	5c 0c       	mov	(12,sp),a0
+7789beda:	77          	mov	(a3),d1
+7789bedb:	70          	mov	(a0),d0
+7789bedc:	a1          	cmp	d0,d1
+7789bedd:	c8 31       	beq	0x7789bf0e
+7789bedf:	f1 e8       	mov	d2,a0
+7789bee1:	70          	mov	(a0),d0
+7789bee2:	f8 e4 04    	or	4,d0
+7789bee5:	60          	mov	d0,(a0)
+7789bee6:	ca 28       	bra	0x7789bf0e
+7789bee8:	f8      	btst	2,d0

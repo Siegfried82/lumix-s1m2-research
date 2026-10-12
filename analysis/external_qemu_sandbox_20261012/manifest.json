@@ -1,0 +1,67 @@
+[
+  {
+    "path": "qemu_sandbox/Image",
+    "bytes": 14379016,
+    "sha256": "7476c24106ec3a031a496d22da9d070dc9d7f92c2ad0a5c43a5813be11af82d4"
+  },
+  {
+    "path": "qemu_sandbox/System.map",
+    "bytes": 3135121,
+    "sha256": "dc186fcf52f3a31085d8cf8335bdb86625e6c64b0df66d0eebf46d00010a262b"
+  },
+  {
+    "path": "qemu_sandbox/kernel.config",
+    "bytes": 115116,
+    "sha256": "db02370689aa06126b9637a050eb412cedd9cde62379dfd8bc7a4c617616ec22"
+  },
+  {
+    "path": "qemu_sandbox/initramfs.cpio.gz",
+    "bytes": 1622360,
+    "sha256": "fcf731f690c01b3d3468cc709fbc6f368f026472eea7b52a6fec88ea0d435764"
+  },
+  {
+    "path": "qemu_sandbox/run_qemu.sh",
+    "bytes": 1209,
+    "sha256": "052c564c316f4c49ed8a24aa854b2015fc7d8f510b9d110587bd006db4837ad5"
+  },
+  {
+    "path": "qemu_sandbox/run_qemu.ps1",
+    "bytes": 912,
+    "sha256": "e359af4712508e0225b682ba5fb46c059e3ca0941e61a704dfbf281edb62c736"
+  },
+  {
+    "path": "qemu_sandbox/build.sh",
+    "bytes": 2088,
+    "sha256": "4fb9db70af0fa0e0f2aedea43a75b7f448b488f843ae06eb40d81b69eb8cc266"
+  },
+  {
+    "path": "qemu_sandbox/README.md",
+    "bytes": 7476,
+    "sha256": "2fc5357bcf89ed9e5db6990b0f1d44efdf3402ec869a8122de4598de35f3a86d"
+  },
+  {
+    "path": "qemu_sandbox/sbox.c",
+    "bytes": 5098,
+    "sha256": "e8a0a302ac1a1fa105d8349c61f150b37b85fd5deee3f2aab42f0e278082f791"
+  },
+  {
+    "path": "qemu_sandbox/ffs_min.c",
+    "bytes": 2592,
+    "sha256": "5e173353fc26e514ca87562b3d459b059a9a3f02ce60d4910f717a8ea26158d3"
+  },
+  {
+    "path": "qemu_sandbox/qemu_oob.c",
+    "bytes": 14762,
+    "sha256": "13afb068289a9de3389eb42b60937ec67f4f0dbe0d05df119a48e7d7fa56b0c0"
+  },
+  {
+    "path": "qemu_sandbox/patches/irq-gic.c.patched",
+    "bytes": 46824,
+    "sha256": "7f4a8e14755003bc7514d22cb7555898fc76ee5c60bf6ec1253f3ad203c199a0"
+  },
+  {
+    "path": "qemu_sandbox/patches/composite.c.patched",
+    "bytes": 69083,
+    "sha256": "3ead359acaad71197d370d430bde273cfab47dba8b86bcd5b8b1378fe18777c6"
+  }
+]

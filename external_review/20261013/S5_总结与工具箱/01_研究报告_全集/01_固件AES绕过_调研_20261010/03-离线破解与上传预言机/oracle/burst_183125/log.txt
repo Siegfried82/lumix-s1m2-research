@@ -1,0 +1,26 @@
+=== BURST start 18:31:25 ===
+--- [1] getinfo&type=camsetting (raw) ---
+bytes=   65533 | head: 00000000: 5061 6e61 736f 6e69 6300 0000 0000 0000  Panasonic.......
+00000010: 0000 4443 2d53 3500 0000 0000 0000 0000  ..DC-S5.........
+00000020: 0000 0000 0000 0000 0000 0000 ccff 0000  ................
+--- [2] fw_update_mode value=V2.90 ---
+<?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>err_param</result></camrply>
+--- [2] fw_update_mode value=V3.00 ---
+<?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>err_param</result></camrply>
+--- [2] fw_update_mode value=V2.00 ---
+<?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>err_param</result></camrply>
+--- [2] fw_update_mode value=V9.99 ---
+<?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>err_param</result></camrply>
+--- [3] startsenddata&type=fw&value=0 ---
+<?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>err_param</result></camrply>
+--- [3b] endsenddata ---
+<?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>error</result></camrply>
+--- [4] getstate post-burst ---
+<?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>ok</result><state><batt>5/5</batt><batt_per>-1</batt_per><cammode>play</cammode><sdcardstatus>write_enable</sdcardstatus><sd_memory>unset</sd_memory><version>VD4.30</version><play>stop</play><temperature>low</temperature><sd_access>off</sd_access><lens>normal</lens><add_location_data>off</add_location_data><sd2_cardstatus>write_enable</sd2_cardstatus><sd2_memory>set</sd2_memory><sd2_access>off</sd2_access><current_sd>sd2</current_sd><batt_grip>-1/0</batt_grip><batt_per_grip>-1</batt_per_grip><sd_full>false</sd_full><sd2_full>false</sd2_full></state></camrply>=== BURST done 18:31:31 ===

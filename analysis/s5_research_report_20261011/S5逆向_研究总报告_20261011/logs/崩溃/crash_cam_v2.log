@@ -1,0 +1,89 @@
+[16:26:57] S5 Camera Crash Test v2 - KA-based
+[16:26:57] WARNING: This will stress the camera. Power cycle may be needed.
+[16:26:57] Ensure camera is on AC power.
+[16:26:57] Target: 192.168.1.131
+[16:26:57] Loading firmware...
+[16:26:57]   90238464 bytes loaded
+[16:26:57] Camera confirmed: ?
+[16:26:57] 
+============================================================
+[16:26:57] CRASH CYCLE 1
+[16:26:57] ============================================================
+[16:26:57]   Opening gate...
+[16:26:57]     gate: b'<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>ok</result></camrply>'
+[16:26:57]   Starting upload (startsenddata)...
+[16:26:57]     start: b'<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply>\r\n<result>ok</result>\r\n<method>separate</method>\r\n<bufsize>61460</bufsi'
+[16:26:57]   chunk 1: ok (109ms)
+[16:26:57]   sync: ok
+[16:26:57]   chunk 2: b'<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_critical</result></camrply>'
+[16:26:57]   Chunk send failed, aborting cycle
+[16:26:57] Camera appears crashed. Waiting for recovery...
+[16:27:02] 
+Waiting for camera to recover (max 120s)...
+[16:27:02] Camera back after 0s
+[16:27:02] 
+============================================================
+[16:27:02] CRASH CYCLE 2
+[16:27:02] ============================================================
+[16:27:02]   Opening gate...
+[16:27:02]     gate: b'<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>ok</result></camrply>'
+[16:27:02]   Starting upload (startsenddata)...
+[16:27:02]     start: b'<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply>\r\n<result>ok</result>\r\n<method>separate</method>\r\n<bufsize>61460</bufsi'
+[16:27:02]   chunk 1: ok (71ms)
+[16:27:02]   sync: ok
+[16:28:07]   chunk 2: b'<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_critical</result></camrply>'
+[16:28:07]   Chunk send failed, aborting cycle
+[16:28:07] Camera appears crashed. Waiting for recovery...
+[16:28:13] 
+Waiting for camera to recover (max 120s)...
+[16:28:13] Camera back after 0s
+[16:28:13] 
+============================================================
+[16:28:13] CRASH CYCLE 3
+[16:28:13] ============================================================
+[16:28:13]   Opening gate...
+[16:28:13]     gate: b'<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_critical</result></camrply>'
+[16:28:13]     GATE FAILED
+[16:28:13]   Setup failed, trying recovery...
+[16:28:18]   Opening gate...
+[16:28:18]     gate: b'<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>ok</result></camrply>'
+[16:28:18]   Starting upload (startsenddata)...
+[16:28:18]     start: b'<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply>\r\n<result>ok</result>\r\n<method>separate</method>\r\n<bufsize>61460</bufsi'
+[16:28:18]   chunk 1: ok (50ms)
+[16:28:18]   sync: ok
+[16:28:18]   chunk 2: ok (51ms)
+[16:28:18]   sync: ok
+[16:28:18]   final chunk sent (39ms) -> b'<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>ok</result></camrply>'
+[16:28:18] 
+  [A] endsenddata (confuse state machine)...
+[16:28:19]     -> b'<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>ok</result></camrply>' (11ms)
+[16:28:19] 
+  [B] New startsenddata + oversized chunk...
+[16:28:19]     new session: b'<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_critical</result></camrply>'
+[16:28:20]     oversized (122KB): b'<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_critical</result></camrply>' (771ms)
+[16:28:21]     huge (100KB): b'<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_critical</result></camrply>' (868ms)
+[16:28:21] 
+  [C] 20 concurrent connections, 10 mixed requests each...
+[16:28:26]     done: 20/20 threads completed
+[16:28:26] 
+  [D] Raw TCP garbage...
+[16:28:31]     garbage 1: timeout
+[16:28:36]     garbage 2: timeout
+[16:28:41]     garbage 3: timeout
+[16:28:47]     garbage 4: timeout
+[16:28:52]     garbage 5: timeout
+[16:28:57]     garbage 6: timeout
+[16:29:02]     garbage 7: timeout
+[16:29:07]     garbage 8: timeout
+[16:29:15]   [status] Camera NOT responding (possible crash)
+[16:29:15]   [E] Skipping (camera not responding)
+[16:29:22]   [status] Camera NOT responding (possible crash)
+[16:29:22] Camera appears crashed. Waiting for recovery...
+[16:29:27] 
+Waiting for camera to recover (max 120s)...
+[16:29:42] Camera back after 15s
+[16:29:42] 
+============================================================
+[16:29:42] ALL CYCLES COMPLETE
+[16:29:42] ============================================================
+[16:29:42] Final state: result=ok version=? batt=?

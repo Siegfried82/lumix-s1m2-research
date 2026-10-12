@@ -1,0 +1,287 @@
+{
+  "scope": "offline data comparison, no camera communication or supplied code execution",
+  "source": {
+    "url": "https://pastebin.com/raw/mHG1T5Ph",
+    "bytes": 4347,
+    "sha256": "74a293fa97fd0bf14c5673991773d620f7d386e4742abea0f77ecdd25a1b285a",
+    "author_model_claim": "GX9 FW 1.5, unverified here"
+  },
+  "menu_source": {
+    "local_git_ref": "refs/review/split-pr1",
+    "commit": "c330ae6b8b56ea591cc6cedf90eb64f6d831d49c",
+    "archive_sha256": "7b9ae57bf96645f262911ed3bccedd46704f99e89bda50bae4718dc4a414b286",
+    "xml_path": "camera_api/lumix_allmenu.xml",
+    "bytes": 307714,
+    "sha256": "2cf69074d41ac134e9a65ca631cf4842cefc5c49d24cc855ac2094fdbd1e857c",
+    "model_labels": [
+      {
+        "tag": "menuset",
+        "model": "S5"
+      },
+      {
+        "tag": "titlelist",
+        "model": "S5"
+      }
+    ],
+    "command_items": 666,
+    "videoquality_items": 88,
+    "unique_videoquality_values": 44
+  },
+  "source_commands_as_data": [
+    {
+      "line": 60,
+      "parameters": {
+        "mode": "accctrl",
+        "type": "req_acc",
+        "value": "4D454930-0100-1000-8001-020000025AD6",
+        "value2": "iPhone"
+      }
+    },
+    {
+      "line": 62,
+      "parameters": {
+        "mode": "accctrl",
+        "type": "req_acc",
+        "value": "4D454930-0100-1000-8001-020000025AD6",
+        "value2": "iPhone"
+      }
+    },
+    {
+      "line": 64,
+      "parameters": {
+        "mode": "camcmd",
+        "type": "",
+        "value": "recmode",
+        "value2": ""
+      }
+    },
+    {
+      "line": 82,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_25p_100mbps_4k",
+        "value2": ""
+      }
+    },
+    {
+      "line": 83,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_50p_50mbps",
+        "value2": ""
+      }
+    },
+    {
+      "line": 84,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_50p_100mbps",
+        "value2": ""
+      }
+    },
+    {
+      "line": 85,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_50p_200mbps",
+        "value2": ""
+      }
+    },
+    {
+      "line": 87,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_24p_100mbps_4k",
+        "value2": ""
+      }
+    },
+    {
+      "line": 88,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_60p_50mbps",
+        "value2": ""
+      }
+    },
+    {
+      "line": 89,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_60p_100mbps",
+        "value2": ""
+      }
+    },
+    {
+      "line": 90,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_60p_200mbps",
+        "value2": ""
+      }
+    }
+  ],
+  "videoquality_comparison": [
+    {
+      "line": 82,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_25p_100mbps_4k",
+        "value2": ""
+      },
+      "s5_allmenu_matches": [
+        {
+          "id": "menu_item_id_v_quality_mov_25p_100mbps_4k",
+          "title_id": "title_v_quality_mov_25p_100mbps_4k_q",
+          "img": "mnu_mov_4k_25p_420_8l",
+          "img_type": "svg",
+          "cmd_mode": "setsetting",
+          "cmd_type": "videoquality",
+          "cmd_value": "mov_25p_100mbps_4k"
+        },
+        {
+          "id": "menu_item_id_v_quality_mov_25p_100mbps_4k",
+          "title_id": "title_v_quality_mov_25p_100mbps_4k",
+          "cmd_mode": "setsetting",
+          "cmd_type": "videoquality",
+          "cmd_value": "mov_25p_100mbps_4k"
+        }
+      ]
+    },
+    {
+      "line": 83,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_50p_50mbps",
+        "value2": ""
+      },
+      "s5_allmenu_matches": []
+    },
+    {
+      "line": 84,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_50p_100mbps",
+        "value2": ""
+      },
+      "s5_allmenu_matches": [
+        {
+          "id": "menu_item_id_v_quality_mov_50p_100mbps",
+          "title_id": "title_v_quality_mov_50p_100mbps_q",
+          "img": "mnu_mov_fhd_50p_420_8l",
+          "img_type": "svg",
+          "cmd_mode": "setsetting",
+          "cmd_type": "videoquality",
+          "cmd_value": "mov_50p_100mbps"
+        },
+        {
+          "id": "menu_item_id_v_quality_mov_50p_100mbps",
+          "title_id": "title_v_quality_mov_50p_100mbps",
+          "cmd_mode": "setsetting",
+          "cmd_type": "videoquality",
+          "cmd_value": "mov_50p_100mbps"
+        }
+      ]
+    },
+    {
+      "line": 85,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_50p_200mbps",
+        "value2": ""
+      },
+      "s5_allmenu_matches": []
+    },
+    {
+      "line": 87,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_24p_100mbps_4k",
+        "value2": ""
+      },
+      "s5_allmenu_matches": [
+        {
+          "id": "menu_item_id_v_quality_mov_24p_100mbps_4k",
+          "title_id": "title_v_quality_mov_24p_100mbps_4k_q",
+          "img": "mnu_mov_4k_24p_420_8l",
+          "img_type": "svg",
+          "cmd_mode": "setsetting",
+          "cmd_type": "videoquality",
+          "cmd_value": "mov_24p_100mbps_4k"
+        },
+        {
+          "id": "menu_item_id_v_quality_mov_24p_100mbps_4k",
+          "title_id": "title_v_quality_mov_24p_100mbps_4k",
+          "cmd_mode": "setsetting",
+          "cmd_type": "videoquality",
+          "cmd_value": "mov_24p_100mbps_4k"
+        }
+      ]
+    },
+    {
+      "line": 88,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_60p_50mbps",
+        "value2": ""
+      },
+      "s5_allmenu_matches": []
+    },
+    {
+      "line": 89,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_60p_100mbps",
+        "value2": ""
+      },
+      "s5_allmenu_matches": [
+        {
+          "id": "menu_item_id_v_quality_mov_60p_100mbps",
+          "title_id": "title_v_quality_mov_60p_100mbps_q",
+          "img": "mnu_mov_fhd_60p_420_8l",
+          "img_type": "svg",
+          "cmd_mode": "setsetting",
+          "cmd_type": "videoquality",
+          "cmd_value": "mov_60p_100mbps"
+        },
+        {
+          "id": "menu_item_id_v_quality_mov_60p_100mbps",
+          "title_id": "title_v_quality_mov_60p_100mbps",
+          "cmd_mode": "setsetting",
+          "cmd_type": "videoquality",
+          "cmd_value": "mov_60p_100mbps"
+        }
+      ]
+    },
+    {
+      "line": 90,
+      "parameters": {
+        "mode": "setsetting",
+        "type": "videoquality",
+        "value": "mov_60p_200mbps",
+        "value2": ""
+      },
+      "s5_allmenu_matches": []
+    }
+  ],
+  "exact_matches": 4,
+  "comparison_boundary": [
+    "A matching S5 menu entry validates its presence in that saved sample only.",
+    "An absent entry does not establish absence from the S5 firmware implementation.",
+    "Neither matches nor absences prove GX9 effects or S1M2 compatibility."
+  ]
+}

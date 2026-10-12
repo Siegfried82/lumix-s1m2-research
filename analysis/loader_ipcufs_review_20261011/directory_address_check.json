@@ -1,0 +1,811 @@
+{
+  "source_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+  "entry_field_width": 32,
+  "entries": [
+    {
+      "index": 0,
+      "name": "boot",
+      "source_offset": 6144,
+      "stored_size": 0,
+      "field_0x14": 0,
+      "type": 2
+    },
+    {
+      "index": 1,
+      "name": "loader1",
+      "source_offset": 6144,
+      "stored_size": 131072,
+      "field_0x14": 0,
+      "type": 3
+    },
+    {
+      "index": 2,
+      "name": "loader2",
+      "source_offset": 137216,
+      "stored_size": 0,
+      "field_0x14": 131072,
+      "type": 2
+    },
+    {
+      "index": 3,
+      "name": "loader3",
+      "source_offset": 137216,
+      "stored_size": 0,
+      "field_0x14": 131072,
+      "type": 2
+    },
+    {
+      "index": 4,
+      "name": "storage",
+      "source_offset": 137216,
+      "stored_size": 0,
+      "field_0x14": 524288,
+      "type": 2
+    },
+    {
+      "index": 5,
+      "name": "program",
+      "source_offset": 137216,
+      "stored_size": 46923776,
+      "field_0x14": 524288,
+      "type": 3
+    },
+    {
+      "index": 6,
+      "name": "compress_pr",
+      "source_offset": 47060992,
+      "stored_size": 16777216,
+      "field_0x14": 47448064,
+      "type": 3
+    },
+    {
+      "index": 7,
+      "name": "postboot1_r",
+      "source_offset": 63838208,
+      "stored_size": 6946816,
+      "field_0x14": 64225280,
+      "type": 3
+    },
+    {
+      "index": 8,
+      "name": "postboot2_r",
+      "source_offset": 70785024,
+      "stored_size": 131072,
+      "field_0x14": 71172096,
+      "type": 3
+    },
+    {
+      "index": 9,
+      "name": "postboot3_r",
+      "source_offset": 70916096,
+      "stored_size": 8257536,
+      "field_0x14": 71303168,
+      "type": 3
+    },
+    {
+      "index": 10,
+      "name": "postboot4_r",
+      "source_offset": 79173632,
+      "stored_size": 131072,
+      "field_0x14": 79560704,
+      "type": 3
+    },
+    {
+      "index": 11,
+      "name": "postboot5_r",
+      "source_offset": 79304704,
+      "stored_size": 1835008,
+      "field_0x14": 79691776,
+      "type": 3
+    },
+    {
+      "index": 12,
+      "name": "postboot1_r",
+      "source_offset": 81139712,
+      "stored_size": 1966080,
+      "field_0x14": 81526784,
+      "type": 3
+    },
+    {
+      "index": 13,
+      "name": "postboot3_r",
+      "source_offset": 83105792,
+      "stored_size": 3670016,
+      "field_0x14": 83492864,
+      "type": 3
+    },
+    {
+      "index": 14,
+      "name": "postboot5_r",
+      "source_offset": 86775808,
+      "stored_size": 1835008,
+      "field_0x14": 87162880,
+      "type": 3
+    },
+    {
+      "index": 15,
+      "name": "eep_ow_a",
+      "source_offset": 88610816,
+      "stored_size": 131072,
+      "field_0x14": 88997888,
+      "type": 3
+    },
+    {
+      "index": 16,
+      "name": "eep_ow_b",
+      "source_offset": 88741888,
+      "stored_size": 131072,
+      "field_0x14": 89128960,
+      "type": 3
+    },
+    {
+      "index": 17,
+      "name": "eep_adj",
+      "source_offset": 88872960,
+      "stored_size": 131072,
+      "field_0x14": 89260032,
+      "type": 3
+    },
+    {
+      "index": 18,
+      "name": "eep_fix",
+      "source_offset": 89004032,
+      "stored_size": 131072,
+      "field_0x14": 89391104,
+      "type": 3
+    },
+    {
+      "index": 19,
+      "name": "eep_act_a",
+      "source_offset": 89135104,
+      "stored_size": 512,
+      "field_0x14": 89522176,
+      "type": 3
+    },
+    {
+      "index": 20,
+      "name": "eep_act_b",
+      "source_offset": 89135616,
+      "stored_size": 512,
+      "field_0x14": 89653248,
+      "type": 3
+    },
+    {
+      "index": 21,
+      "name": "eep_exp_a",
+      "source_offset": 89136128,
+      "stored_size": 12288,
+      "field_0x14": 89784320,
+      "type": 3
+    },
+    {
+      "index": 22,
+      "name": "eep_exp_b",
+      "source_offset": 89148416,
+      "stored_size": 12288,
+      "field_0x14": 89915392,
+      "type": 3
+    },
+    {
+      "index": 23,
+      "name": "history",
+      "source_offset": 89160704,
+      "stored_size": 262144,
+      "field_0x14": 90046464,
+      "type": 3
+    },
+    {
+      "index": 24,
+      "name": "lens_hist",
+      "source_offset": 89422848,
+      "stored_size": 393216,
+      "field_0x14": 90308608,
+      "type": 2
+    },
+    {
+      "index": 25,
+      "name": "osdover",
+      "source_offset": 89816064,
+      "stored_size": 17301504,
+      "field_0x14": 90701824,
+      "type": 3
+    },
+    {
+      "index": 26,
+      "name": "osddata",
+      "source_offset": 107117568,
+      "stored_size": 20316160,
+      "field_0x14": 108003328,
+      "type": 3
+    },
+    {
+      "index": 27,
+      "name": "wifi_info",
+      "source_offset": 127433728,
+      "stored_size": 262144,
+      "field_0x14": 128319488,
+      "type": 2
+    },
+    {
+      "index": 28,
+      "name": "menu_save",
+      "source_offset": 127695872,
+      "stored_size": 524288,
+      "field_0x14": 128581632,
+      "type": 2
+    },
+    {
+      "index": 29,
+      "name": "kizu_data",
+      "source_offset": 128220160,
+      "stored_size": 524288,
+      "field_0x14": 129105920,
+      "type": 2
+    },
+    {
+      "index": 30,
+      "name": "vkizu_data",
+      "source_offset": 128744448,
+      "stored_size": 9437184,
+      "field_0x14": 129630208,
+      "type": 2
+    },
+    {
+      "index": 31,
+      "name": "usbcharge",
+      "source_offset": 138181632,
+      "stored_size": 131072,
+      "field_0x14": 139067392,
+      "type": 3
+    },
+    {
+      "index": 32,
+      "name": "hm_c_ddr",
+      "source_offset": 138312704,
+      "stored_size": 3145728,
+      "field_0x14": 139198464,
+      "type": 3
+    },
+    {
+      "index": 33,
+      "name": "hm_d_ddr",
+      "source_offset": 141458432,
+      "stored_size": 1048576,
+      "field_0x14": 142344192,
+      "type": 3
+    },
+    {
+      "index": 34,
+      "name": "hr_c_prog",
+      "source_offset": 142507008,
+      "stored_size": 65536,
+      "field_0x14": 143392768,
+      "type": 3
+    },
+    {
+      "index": 35,
+      "name": "hr_d_prog",
+      "source_offset": 142572544,
+      "stored_size": 524288,
+      "field_0x14": 143523840,
+      "type": 3
+    },
+    {
+      "index": 36,
+      "name": "hr_c_ddr",
+      "source_offset": 143096832,
+      "stored_size": 524288,
+      "field_0x14": 144048128,
+      "type": 3
+    },
+    {
+      "index": 37,
+      "name": "pzm_data",
+      "source_offset": 143621120,
+      "stored_size": 65536,
+      "field_0x14": 144572416,
+      "type": 3
+    },
+    {
+      "index": 38,
+      "name": "xtk",
+      "source_offset": 143686656,
+      "stored_size": 131072,
+      "field_0x14": 144703488,
+      "type": 2
+    },
+    {
+      "index": 39,
+      "name": "lut_data",
+      "source_offset": 143817728,
+      "stored_size": 8781824,
+      "field_0x14": 144834560,
+      "type": 2
+    },
+    {
+      "index": 40,
+      "name": "dsp_kizu_c",
+      "source_offset": 152599552,
+      "stored_size": 65536,
+      "field_0x14": 153616384,
+      "type": 3
+    },
+    {
+      "index": 41,
+      "name": "dsp_kizu_d",
+      "source_offset": 152665088,
+      "stored_size": 65536,
+      "field_0x14": 153681920,
+      "type": 3
+    },
+    {
+      "index": 42,
+      "name": "dsp_eisldc_",
+      "source_offset": 152730624,
+      "stored_size": 65536,
+      "field_0x14": 153747456,
+      "type": 3
+    },
+    {
+      "index": 43,
+      "name": "dsp_eisldc_",
+      "source_offset": 152796160,
+      "stored_size": 65536,
+      "field_0x14": 153812992,
+      "type": 3
+    },
+    {
+      "index": 44,
+      "name": "dsp_fstack_",
+      "source_offset": 152861696,
+      "stored_size": 65536,
+      "field_0x14": 153878528,
+      "type": 3
+    },
+    {
+      "index": 45,
+      "name": "dsp_fstack_",
+      "source_offset": 152927232,
+      "stored_size": 65536,
+      "field_0x14": 153944064,
+      "type": 3
+    },
+    {
+      "index": 46,
+      "name": "fstack_c_ex",
+      "source_offset": 152992768,
+      "stored_size": 524288,
+      "field_0x14": 154009600,
+      "type": 3
+    },
+    {
+      "index": 47,
+      "name": "raw_kizu_c",
+      "source_offset": 153517056,
+      "stored_size": 65536,
+      "field_0x14": 154533888,
+      "type": 3
+    },
+    {
+      "index": 48,
+      "name": "raw_kizu_d",
+      "source_offset": 153582592,
+      "stored_size": 65536,
+      "field_0x14": 154599424,
+      "type": 3
+    },
+    {
+      "index": 49,
+      "name": "dsh_adj",
+      "source_offset": 153648128,
+      "stored_size": 131072,
+      "field_0x14": 154664960,
+      "type": 2
+    },
+    {
+      "index": 50,
+      "name": "hm_d_nw_1st",
+      "source_offset": 153779200,
+      "stored_size": 1441792,
+      "field_0x14": 154796032,
+      "type": 3
+    },
+    {
+      "index": 51,
+      "name": "hm_d_nw_2nd",
+      "source_offset": 155220992,
+      "stored_size": 1441792,
+      "field_0x14": 156237824,
+      "type": 3
+    },
+    {
+      "index": 52,
+      "name": "hm_d_nw_3rd",
+      "source_offset": 156662784,
+      "stored_size": 1441792,
+      "field_0x14": 157679616,
+      "type": 3
+    },
+    {
+      "index": 53,
+      "name": "hm_d_nw_4th",
+      "source_offset": 158104576,
+      "stored_size": 1441792,
+      "field_0x14": 159121408,
+      "type": 3
+    },
+    {
+      "index": 54,
+      "name": "hm_d_nw_5th",
+      "source_offset": 159546368,
+      "stored_size": 1441792,
+      "field_0x14": 160563200,
+      "type": 3
+    },
+    {
+      "index": 55,
+      "name": "hm_d_nw_6th",
+      "source_offset": 160988160,
+      "stored_size": 1441792,
+      "field_0x14": 162004992,
+      "type": 3
+    },
+    {
+      "index": 56,
+      "name": "hm_d_nw_7th",
+      "source_offset": 162429952,
+      "stored_size": 1441792,
+      "field_0x14": 163446784,
+      "type": 3
+    },
+    {
+      "index": 57,
+      "name": "hm_d_nw_8th",
+      "source_offset": 163871744,
+      "stored_size": 1441792,
+      "field_0x14": 164888576,
+      "type": 3
+    },
+    {
+      "index": 58,
+      "name": "hm_d_nw_9th",
+      "source_offset": 165313536,
+      "stored_size": 1441792,
+      "field_0x14": 166330368,
+      "type": 3
+    },
+    {
+      "index": 59,
+      "name": "hm_d_reid",
+      "source_offset": 166755328,
+      "stored_size": 3145728,
+      "field_0x14": 167772160,
+      "type": 3
+    },
+    {
+      "index": 60,
+      "name": "ai_awb_data",
+      "source_offset": 169901056,
+      "stored_size": 1835008,
+      "field_0x14": 170917888,
+      "type": 3
+    },
+    {
+      "index": 61,
+      "name": "mbr_dummy_d",
+      "source_offset": 171736064,
+      "stored_size": 131072,
+      "field_0x14": 172752896,
+      "type": 2
+    }
+  ],
+  "adjacent_count": 54,
+  "pairs": [
+    {
+      "first": 0,
+      "second": 1,
+      "gap": 0
+    },
+    {
+      "first": 1,
+      "second": 2,
+      "gap": 0
+    },
+    {
+      "first": 2,
+      "second": 3,
+      "gap": 0
+    },
+    {
+      "first": 3,
+      "second": 4,
+      "gap": 393216
+    },
+    {
+      "first": 4,
+      "second": 5,
+      "gap": 0
+    },
+    {
+      "first": 5,
+      "second": 6,
+      "gap": 0
+    },
+    {
+      "first": 6,
+      "second": 7,
+      "gap": 0
+    },
+    {
+      "first": 7,
+      "second": 8,
+      "gap": 0
+    },
+    {
+      "first": 8,
+      "second": 9,
+      "gap": 0
+    },
+    {
+      "first": 9,
+      "second": 10,
+      "gap": 0
+    },
+    {
+      "first": 10,
+      "second": 11,
+      "gap": 0
+    },
+    {
+      "first": 11,
+      "second": 12,
+      "gap": 0
+    },
+    {
+      "first": 12,
+      "second": 13,
+      "gap": 0
+    },
+    {
+      "first": 13,
+      "second": 14,
+      "gap": 0
+    },
+    {
+      "first": 14,
+      "second": 15,
+      "gap": 0
+    },
+    {
+      "first": 15,
+      "second": 16,
+      "gap": 0
+    },
+    {
+      "first": 16,
+      "second": 17,
+      "gap": 0
+    },
+    {
+      "first": 17,
+      "second": 18,
+      "gap": 0
+    },
+    {
+      "first": 18,
+      "second": 19,
+      "gap": 0
+    },
+    {
+      "first": 19,
+      "second": 20,
+      "gap": 130560
+    },
+    {
+      "first": 20,
+      "second": 21,
+      "gap": 130560
+    },
+    {
+      "first": 21,
+      "second": 22,
+      "gap": 118784
+    },
+    {
+      "first": 22,
+      "second": 23,
+      "gap": 118784
+    },
+    {
+      "first": 23,
+      "second": 24,
+      "gap": 0
+    },
+    {
+      "first": 24,
+      "second": 25,
+      "gap": 0
+    },
+    {
+      "first": 25,
+      "second": 26,
+      "gap": 0
+    },
+    {
+      "first": 26,
+      "second": 27,
+      "gap": 0
+    },
+    {
+      "first": 27,
+      "second": 28,
+      "gap": 0
+    },
+    {
+      "first": 28,
+      "second": 29,
+      "gap": 0
+    },
+    {
+      "first": 29,
+      "second": 30,
+      "gap": 0
+    },
+    {
+      "first": 30,
+      "second": 31,
+      "gap": 0
+    },
+    {
+      "first": 31,
+      "second": 32,
+      "gap": 0
+    },
+    {
+      "first": 32,
+      "second": 33,
+      "gap": 0
+    },
+    {
+      "first": 33,
+      "second": 34,
+      "gap": 0
+    },
+    {
+      "first": 34,
+      "second": 35,
+      "gap": 65536
+    },
+    {
+      "first": 35,
+      "second": 36,
+      "gap": 0
+    },
+    {
+      "first": 36,
+      "second": 37,
+      "gap": 0
+    },
+    {
+      "first": 37,
+      "second": 38,
+      "gap": 65536
+    },
+    {
+      "first": 38,
+      "second": 39,
+      "gap": 0
+    },
+    {
+      "first": 39,
+      "second": 40,
+      "gap": 0
+    },
+    {
+      "first": 40,
+      "second": 41,
+      "gap": 0
+    },
+    {
+      "first": 41,
+      "second": 42,
+      "gap": 0
+    },
+    {
+      "first": 42,
+      "second": 43,
+      "gap": 0
+    },
+    {
+      "first": 43,
+      "second": 44,
+      "gap": 0
+    },
+    {
+      "first": 44,
+      "second": 45,
+      "gap": 0
+    },
+    {
+      "first": 45,
+      "second": 46,
+      "gap": 0
+    },
+    {
+      "first": 46,
+      "second": 47,
+      "gap": 0
+    },
+    {
+      "first": 47,
+      "second": 48,
+      "gap": 0
+    },
+    {
+      "first": 48,
+      "second": 49,
+      "gap": 0
+    },
+    {
+      "first": 49,
+      "second": 50,
+      "gap": 0
+    },
+    {
+      "first": 50,
+      "second": 51,
+      "gap": 0
+    },
+    {
+      "first": 51,
+      "second": 52,
+      "gap": 0
+    },
+    {
+      "first": 52,
+      "second": 53,
+      "gap": 0
+    },
+    {
+      "first": 53,
+      "second": 54,
+      "gap": 0
+    },
+    {
+      "first": 54,
+      "second": 55,
+      "gap": 0
+    },
+    {
+      "first": 55,
+      "second": 56,
+      "gap": 0
+    },
+    {
+      "first": 56,
+      "second": 57,
+      "gap": 0
+    },
+    {
+      "first": 57,
+      "second": 58,
+      "gap": 0
+    },
+    {
+      "first": 58,
+      "second": 59,
+      "gap": 0
+    },
+    {
+      "first": 59,
+      "second": 60,
+      "gap": 0
+    },
+    {
+      "first": 60,
+      "second": 61,
+      "gap": 0
+    }
+  ],
+  "limits": "Adjacency supports storage-layout interpretation but does not establish destination hardware, units or rootfs location. 32-bit field cannot directly represent declared 0x4xxxxxxxx RAM addresses."
+}

@@ -1,0 +1,55 @@
+* Milbeaut AHB DMA Controller
+
+Milbeaut AHB DMA controller has transfer capability bellow.
+ - memory to memory transfer
+ - device to memory transfer
+ - memory to device transfer
+
+Required property:
+- compatible:       Should be  "socionext,milbeaut_hdmac" for M10V
+                    Should be  "socionext,milbeaut_m20v_hdmac" for M20V
+- reg:              Should contain DMA registers location and length.
+- interrupts:       Should contain all of the per-channel DMA interrupts.
+- #dma-cells:       Should be 1.
+- clocks:           Phandle to the clock used by the HDMAC module.
+
+Optional properties:
+- priority-rotate:  The priority of all DMA channels is rotated.
+
+Example:
+
+	hdmac1: hdmac@1e110000 {
+		compatible = "socionext,milbeaut_hdmac";
+		reg = <0x1e110000 0x10000>;
+		interrupts = <0 132 4>,
+			     <0 133 4>,
+			     <0 134 4>,
+			     <0 135 4>,
+			     <0 136 4>,
+			     <0 137 4>,
+			     <0 138 4>,
+			     <0 139 4>;
+		#dma-cells = <1>;
+		priority-rotate;
+		clocks = <&dummy_clk>;
+	};
+
+* DMA client
+
+Clients have to specify the DMA requests with phandles in a list.
+
+Required properties:
+- dmas:             List of one or more DMA request specifiers. One DMA request specifier
+                    consists of a phandle to the DMA controller followed by the integer
+                    specifying the request line.
+- dma-names:        List of string identifiers for the DMA requests. For the correct
+                    names, have a look at the specific client driver.
+
+Example:
+
+	sni_spi1: spi@1e800100 {
+		...
+		dmas = <&hdmac1 22>, <&hdmac1 21>;
+		dma-names = "tx", "rx";
+		...
+	};

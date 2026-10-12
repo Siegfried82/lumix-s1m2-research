@@ -1,0 +1,48 @@
+{
+  "mode": "simulation_no_device",
+  "cases": [
+    {
+      "case": "success",
+      "passed": true,
+      "requests": 24,
+      "chunks": 20
+    },
+    {
+      "case": "delayed",
+      "passed": true,
+      "requests": 25,
+      "chunks": 20
+    },
+    {
+      "case": "occupied",
+      "passed": true,
+      "requests": 1,
+      "chunks": 0
+    },
+    {
+      "case": "prepare",
+      "passed": true,
+      "requests": 2,
+      "chunks": 0
+    },
+    {
+      "case": "chunk",
+      "passed": true,
+      "requests": 4,
+      "chunks": 2
+    },
+    {
+      "case": "other_slot",
+      "passed": true,
+      "requests": 23,
+      "chunks": 20
+    },
+    {
+      "case": "readback",
+      "passed": true,
+      "requests": 24,
+      "chunks": 20
+    }
+  ],
+  "invalid_buffer_cases": 4
+}

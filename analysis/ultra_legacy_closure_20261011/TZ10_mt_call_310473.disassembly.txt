@@ -1,0 +1,108 @@
+
+<LOCAL_WORKSPACE>/analysis/method2_review_20261011/decoded/TZ10_V12.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+77b8be23 <.data+0x310423>:
+77b8be23:	64          	mov	d1,(a0)
+77b8be24:	5d 60       	mov	(96,sp),a1
+77b8be26:	dd 68 c0 da 	call	0x77937e8e,[d2,d3,a2,a3],152
+77b8be2a:	ff f0 98 
+77b8be2d:	5c 64       	mov	(100,sp),a0
+77b8be2f:	b0 00       	cmp	0,a0
+77b8be31:	c8 09       	beq	0x77b8be3a
+77b8be33:	dd 74 9b ed 	call	0x77a659a7,[d2,d3,a2,a3],28
+77b8be37:	ff f0 1c 
+77b8be3a:	5c 5c       	mov	(92,sp),a0
+77b8be3c:	3d          	mov	sp,a1
+77b8be3d:	21 58       	add	88,a1
+77b8be3f:	59 60       	mov	(96,sp),d1
+77b8be41:	80 01       	mov	1,d0
+77b8be43:	dd cd 9c ee 	call	0x77a75b10,[d2,d3,a2,a3],40
+77b8be47:	ff f0 28 
+77b8be4a:	1c          	exthu	d0
+77b8be4b:	a0 00       	cmp	0,d0
+77b8be4d:	c8 05       	beq	0x77b8be52
+77b8be4f:	cc bc 07    	jmp	0x77b8c60b
+77b8be52:	5c 58       	mov	(88,sp),a0
+77b8be54:	fc dd 00 00 	mov	-1262747648,a1
+77b8be58:	bc b4 
+77b8be5a:	2c 00 02    	mov	512,d0
+77b8be5d:	cd d7 07 20 	call	0x77b8c634,[a2],20
+77b8be61:	14 
+77b8be62:	8f 03       	mov	3,d3
+77b8be64:	a0 44       	cmp	68,d0
+77b8be66:	c6 05       	bcc	0x77b8be6b
+77b8be68:	cc a3 07    	jmp	0x77b8c60b
+77b8be6b:	fc dc 00 00 	mov	-1262747648,a0
+77b8be6f:	bc b4 
+77b8be71:	5d 18       	mov	(24,sp),a1
+77b8be73:	cd db 07 30 	call	0x77b8c64e,[a2,a3],12
+77b8be77:	0c 
+77b8be78:	83          	mov	d0,d3
+77b8be79:	a0 00       	cmp	0,d0
+77b8be7b:	c8 05       	beq	0x77b8be80
+77b8be7d:	cc 8e 07    	jmp	0x77b8c60b
+77b8be80:	fc df 3c 00 	mov	-1262747588,a3
+77b8be84:	bc b4 
+77b8be86:	73          	mov	(a3),d0
+77b8be87:	8f 04       	mov	4,d3
+77b8be89:	fc c8 00 fe 	cmp	45874688,d0
+77b8be8d:	bb 02 
+77b8be8f:	c7 05       	bls	0x77b8be94
+77b8be91:	cc 7a 07    	jmp	0x77b8c60b
+77b8be94:	fc a4 38 00 	mov	(0xb4bc0038),d0
+77b8be98:	bc b4 
+77b8be9a:	5c 58       	mov	(88,sp),a0
+77b8be9c:	85 01       	mov	1,d1
+77b8be9e:	dd 18 f4 ee 	call	0x77a7b2b6,[d2,d3,a2,a3],32
+77b8bea2:	ff f0 20 
+77b8bea5:	8f 03       	mov	3,d3
+77b8bea7:	1c          	exthu	d0
+77b8bea8:	a0 00       	cmp	0,d0
+77b8beaa:	c8 05       	beq	0x77b8beaf
+77b8beac:	cc 5f 07    	jmp	0x77b8c60b
+77b8beaf:	fc de 00 02 	mov	-1262747136,a2
+77b8beb3:	bc b4 
+77b8beb5:	7b          	mov	(a3),d2
+77b8beb6:	0c          	clr	d3
+77b8beb7:	ae          	cmp	d3,d2
+77b8beb8:	c3 3b       	ble	0x77b8bef3
+77b8beba:	fc cc 00 00 	mov	65536,d0
+77b8bebe:	01 00 
+77b8bec0:	a2          	cmp	d0,d2
+77b8bec1:	c2 03       	bge	0x77b8bec4
+77b8bec3:	88          	mov	d2,d0
+77b8bec4:	81          	mov	d0,d1
+77b8bec5:	ed          	add	d3,d1
+77b8bec6:	fc c9 00 fe 	cmp	45874688,d1
+77b8beca:	bb 02 
+77b8becc:	c7 07       	bls	0x77b8bed3
+77b8bece:	8f 05       	mov	5,d3
+77b8bed0:	cc 3b 07    	jmp	0x77b8c60b
+77b8bed3:	5c 58       	mov	(88,sp),a0
+77b8bed5:	99          	mov	a2,a1
+77b8bed6:	cd 5e 07 20 	call	0x77b8c634,[a2],20
+77b8beda:	14 
+77b8bedb:	a0 00       	cmp	0,d0
+77b8bedd:	c9 07       	bne	0x77b8bee4
+77b8bedf:	8f 03       	mov	3,d3
+77b8bee1:	cc 2a 07    	jmp	0x77b8c60b
+77b8bee4:	f1 62       	add	d0,a2
+77b8bee6:	e3          	add	d0,d3
+77b8bee7:	a2          	cmp	d0,d2
+77b8bee8:	c0 06       	blt	0x77b8beee
+77b8beea:	f1 02       	sub	d0,d2
+77b8beec:	ca 03       	bra	0x77b8beef
+77b8beee:	08          	clr	d2
+77b8beef:	aa 00       	cmp	0,d2
+77b8bef1:	c1 c9       	bgt	0x77b8beba
+77b8bef3:	5c 58       	mov	(88,sp),a0
+77b8bef5:	95 00       	mov	0,a1
+77b8bef7:	dd d3 9c ed 	call	0x77a65bca,[d2,d3,a2,a3],48
+77b8befb:	ff f0 30 
+77b8befe:	00          	clr	d0
+77b8beff:	42 58       	mov	d0,(88,sp)
+77b8bf01:	fc a4   	mov	(0xb4bc0034),d0
+77b8bf05:	  

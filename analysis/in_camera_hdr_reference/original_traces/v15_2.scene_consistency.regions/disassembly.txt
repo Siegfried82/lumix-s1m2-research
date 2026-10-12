@@ -1,0 +1,422 @@
+# pydisasm version 6.3.0
+# CPython Python bytecode 3.10 (3439)
+#   Disassembled from CPython Python 3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]
+# Timestamp in code: 0 (1970-01-01 03:00:00)
+# Method Name:       <module>
+# Filename:          v15_2\scene_consistency\regions.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        4
+# Flags:             0x00000040 (NOFREE)
+# First Line:        1
+# Constants:
+#    0: 'Conservative scene policy followed by per-frame weak continuation.'
+#    1: 2
+#    2: ('ScenePolicyWGPU',)
+#    3: <Code310 code object PairPolicy at 0x106b205f0, file v15_2\scene_consistency\regions.py>, line 4
+#    4: 'PairPolicy'
+#    5: None
+# Names:
+#    0: __doc__
+#    1: scene_policy_wgpu
+#    2: ScenePolicyWGPU
+#    3: PairPolicy
+
+  1:           0 LOAD_CONST           ("Conservative scene policy followed by per-frame weak continuation.")
+               2 STORE_NAME           (__doc__)
+
+  2:           4 LOAD_CONST           (2)
+               6 LOAD_CONST           (('ScenePolicyWGPU',))
+               8 IMPORT_NAME          (scene_policy_wgpu)
+              10 IMPORT_FROM          (ScenePolicyWGPU)
+              12 STORE_NAME           (ScenePolicyWGPU)
+              14 POP_TOP
+
+  4:          16 LOAD_BUILD_CLASS
+              18 LOAD_CONST           (<Code310 code object PairPolicy at 0x106b205f0, file v15_2\scene_consistency\regions.py>, line 4)
+              20 LOAD_CONST           ("PairPolicy")
+              22 MAKE_FUNCTION        (No arguments)
+              24 LOAD_CONST           ("PairPolicy")
+              26 LOAD_NAME            (ScenePolicyWGPU)
+              28 CALL_FUNCTION        (3 positional arguments)
+              30 STORE_NAME           (PairPolicy)
+              32 LOAD_CONST           (None)
+              34 RETURN_VALUE
+
+
+# Method Name:       PairPolicy
+# Filename:          v15_2\scene_consistency\regions.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        3
+# Flags:             0x00000000 (0x0)
+# First Line:        4
+# Constants:
+#    0: 'PairPolicy'
+#    1: <Code310 code object __init__ at 0x106b23290, file v15_2\scene_consistency\regions.py>, line 5
+#    2: 'PairPolicy.__init__'
+#    3: <Code310 code object decide at 0x106b215e0, file v15_2\scene_consistency\regions.py>, line 8
+#    4: 'PairPolicy.decide'
+#    5: <Code310 code object _continue_existing at 0x1069a0590, file v15_2\scene_consistency\regions.py>, line 15
+#    6: 'PairPolicy._continue_existing'
+# Names:
+#    0: __name__
+#    1: __module__
+#    2: __qualname__
+#    3: __init__
+#    4: decide
+#    5: _continue_existing
+#    6: __classcell__
+# Free variables:
+#    0: __class__
+
+  4:           0 LOAD_NAME            (__name__)
+               2 STORE_NAME           (__module__)
+               4 LOAD_CONST           ("PairPolicy")
+               6 STORE_NAME           (__qualname__)
+
+  5:           8 LOAD_CLOSURE         (__class__)
+              10 BUILD_TUPLE          1
+              12 LOAD_CONST           (<Code310 code object __init__ at 0x106b23290, file v15_2\scene_consistency\regions.py>, line 5)
+              14 LOAD_CONST           ("PairPolicy.__init__")
+              16 MAKE_FUNCTION        (closure)
+              18 STORE_NAME           (__init__)
+
+  8:          20 LOAD_CLOSURE         (__class__)
+              22 BUILD_TUPLE          1
+              24 LOAD_CONST           (<Code310 code object decide at 0x106b215e0, file v15_2\scene_consistency\regions.py>, line 8)
+              26 LOAD_CONST           ("PairPolicy.decide")
+              28 MAKE_FUNCTION        (closure)
+              30 STORE_NAME           (decide)
+
+ 15:          32 LOAD_CONST           (<Code310 code object _continue_existing at 0x1069a0590, file v15_2\scene_consistency\regions.py>, line 15)
+              34 LOAD_CONST           ("PairPolicy._continue_existing")
+              36 MAKE_FUNCTION        (No arguments)
+              38 STORE_NAME           (_continue_existing)
+              40 LOAD_CLOSURE         (__class__)
+              42 DUP_TOP
+              44 STORE_NAME           (__classcell__)
+              46 RETURN_VALUE
+
+
+# Method Name:       __init__
+# Filename:          v15_2\scene_consistency\regions.py
+# Argument count:    2
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        6
+# Flags:             0x00000003 (NEWLOCALS | OPTIMIZED)
+# First Line:        5
+# Constants:
+#    0: None
+#    1: True
+#    2: ('pairwise_reference', 'scene_only', 'chromatic_witness')
+# Names:
+#    0: super
+#    1: __init__
+# Varnames:
+#	self, runtime
+# Positional arguments:
+#	self, runtime
+# Cell variables:
+#    0: __class__
+
+  6:           0 LOAD_GLOBAL          (super)
+               2 CALL_FUNCTION        (0 positional arguments)
+               4 LOAD_ATTR            (__init__)
+               6 LOAD_FAST            (runtime)
+               8 LOAD_CONST           (True)
+              10 LOAD_CONST           (True)
+              12 LOAD_CONST           (True)
+              14 LOAD_CONST           (('pairwise_reference', 'scene_only', 'chromatic_witness'))
+              16 CALL_FUNCTION_KW     (4 total positional and keyword args)
+              18 POP_TOP
+              20 LOAD_CONST           (None)
+              22 RETURN_VALUE
+
+
+# Method Name:       decide
+# Filename:          v15_2\scene_consistency\regions.py
+# Argument count:    5
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  11
+# Stack size:        7
+# Flags:             0x00000003 (NEWLOCALS | OPTIMIZED)
+# First Line:        8
+# Constants:
+#    0: None
+#    1: 'output_any'
+#    2: 'conservative_output_any'
+# Names:
+#    0: super
+#    1: decide
+#    2: pop
+#    3: spec
+#    4: shape
+#    5: _continue_existing
+# Varnames:
+#	self, base, band, budget, ok, result, report, k, _, h, w
+# Positional arguments:
+#	self, base, band, budget, ok
+# Local variables:
+#    5: result
+#    6: report
+#    7: k
+#    8: _
+#    9: h
+#   10: w
+# Cell variables:
+#    0: __class__
+
+  9:           0 LOAD_GLOBAL          (super)
+               2 CALL_FUNCTION        (0 positional arguments)
+               4 LOAD_METHOD          (decide)
+               6 LOAD_FAST            (base)
+               8 LOAD_FAST            (band)
+              10 LOAD_FAST            (budget)
+              12 LOAD_FAST            (ok)
+              14 CALL_METHOD          (4 positional arguments)
+              16 UNPACK_SEQUENCE      2
+              18 STORE_FAST           (result)
+              20 STORE_FAST           (report)
+
+ 10:          22 LOAD_FAST            (report)
+              24 LOAD_METHOD          (pop)
+              26 LOAD_CONST           ("output_any")
+              28 CALL_METHOD          (1 positional argument)
+              30 LOAD_FAST            (report)
+              32 LOAD_CONST           ("conservative_output_any")
+              34 STORE_SUBSCR
+
+ 11:          36 LOAD_FAST            (base)
+              38 LOAD_ATTR            (spec)
+              40 LOAD_ATTR            (shape)
+              42 UNPACK_SEQUENCE      4
+              44 STORE_FAST           (k)
+              46 STORE_FAST           (_)
+              48 STORE_FAST           (h)
+              50 STORE_FAST           (w)
+
+ 12:          52 LOAD_FAST            (self)
+              54 LOAD_METHOD          (_continue_existing)
+              56 LOAD_FAST            (result)
+              58 LOAD_FAST            (base)
+              60 LOAD_FAST            (k)
+              62 LOAD_FAST            (h)
+              64 LOAD_FAST            (w)
+              66 CALL_METHOD          (5 positional arguments)
+              68 POP_TOP
+
+ 13:          70 LOAD_FAST            (result)
+              72 LOAD_FAST            (report)
+              74 BUILD_TUPLE          2
+              76 RETURN_VALUE
+
+
+# Method Name:       _continue_existing
+# Filename:          v15_2\scene_consistency\regions.py
+# Argument count:    6
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  12
+# Stack size:        9
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        15
+# Constants:
+#    0: 'Per-frame hysteresis after conservative temporal decisions.\n\n        Weak witnesses never change temporal votes or undo an existing reject.\n        They can only extend a component anchored in an already confirmed\n        region. Unknown observations cannot create the connecting support.\n        '
+#    1: '@group(0) @binding(0) var<storage,read> mask:array<f32>;\n@group(0) @binding(1) var<storage,read> evidence:array<f32>;\n@group(0) @binding(2) var<storage,read_write> seed:array<u32>;\n@group(0) @binding(3) var<storage,read_write> support:array<u32>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) gid:vec3<u32>){let i=gid.x+gid.y*4194304u;if(i>='
+#    2: 'u){return;}let p=i%'
+#    3: 'u;let f=i/'
+#    4: 'u;var prior=false;var weak=false;\nfor(var c=0u;c<4u;c++){let j=(f*4u+c)*'
+#    5: 'u+p;prior=prior||mask[j]>.5;weak=weak||evidence[j]>0.;}\nseed[i]=select(0u,1u,f!=0u&&prior);support[i]=select(0u,1u,f!=0u&&(prior||weak));}'
+#    6: 'continuation_support'
+#    7: ('a', 'a', 'w', 'w')
+#    8: 'scene_continuation_support'
+#    9: 'continuation'
+#   10: '@group(0) @binding(0) var<storage,read> extended:array<u32>;\n@group(0) @binding(1) var<storage,read_write> mask:array<f32>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) gid:vec3<u32>){let i=gid.x+gid.y*4194304u;if(i>='
+#   11: 4
+#   12: 'u;if(f!=0u&&extended[f*'
+#   13: 'u+p]>0u){mask[i]=1.;}}'
+#   14: 'continuation_apply'
+#   15: ('a', 'w')
+#   16: 'scene_continuation_apply'
+#   17: None
+# Names:
+#    0: _u32
+#    1: _dispatch
+#    2: buffer
+#    3: _complete_components
+#    4: rt
+#    5: release_external
+# Varnames:
+#	self, result, base, k, h, w, n, seed, support, code, extended, v
+# Positional arguments:
+#	self, result, base, k, h, w
+# Local variables:
+#    6: n
+#    7: seed
+#    8: support
+#    9: code
+#   10: extended
+#   11: v
+
+ 22:           0 LOAD_FAST            (h)
+               2 LOAD_FAST            (w)
+               4 BINARY_MULTIPLY
+               6 STORE_FAST           (n)
+               8 LOAD_FAST            (self)
+              10 LOAD_METHOD          (_u32)
+              12 LOAD_FAST            (k)
+              14 LOAD_FAST            (h)
+              16 LOAD_FAST            (w)
+              18 BUILD_TUPLE          3
+              20 CALL_METHOD          (1 positional argument)
+              22 STORE_FAST           (seed)
+              24 LOAD_FAST            (self)
+              26 LOAD_METHOD          (_u32)
+              28 LOAD_FAST            (k)
+              30 LOAD_FAST            (h)
+              32 LOAD_FAST            (w)
+              34 BUILD_TUPLE          3
+              36 CALL_METHOD          (1 positional argument)
+              38 STORE_FAST           (support)
+
+ 23:          40 LOAD_CONST           ("@group(0) @binding(0) var<storage,read> mask:array<f32>;\n@group(0) @binding(1) var<storage,read> evidence:array<f32>;\n@group(0) @binding(2) var<storage,read_write> seed:array<u32>;\n@group(0) @binding(3) var<storage,read_write> support:array<u32>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) gid:vec3<u32>){let i=gid.x+gid.y*4194304u;if(i>=")
+
+ 27:          42 LOAD_FAST            (k)
+              44 LOAD_FAST            (n)
+              46 BINARY_MULTIPLY
+
+ 23:          48 FORMAT_VALUE         0
+              50 LOAD_CONST           ("u){return;}let p=i%")
+
+ 27:          52 LOAD_FAST            (n)
+
+ 23:          54 FORMAT_VALUE         0
+              56 LOAD_CONST           ("u;let f=i/")
+
+ 27:          58 LOAD_FAST            (n)
+
+ 23:          60 FORMAT_VALUE         0
+              62 LOAD_CONST           ("u;var prior=false;var weak=false;\nfor(var c=0u;c<4u;c++){let j=(f*4u+c)*")
+
+ 28:          64 LOAD_FAST            (n)
+
+ 23:          66 FORMAT_VALUE         0
+              68 LOAD_CONST           ("u+p;prior=prior||mask[j]>.5;weak=weak||evidence[j]>0.;}\nseed[i]=select(0u,1u,f!=0u&&prior);support[i]=select(0u,1u,f!=0u&&(prior||weak));}")
+              70 BUILD_STRING         9
+              72 STORE_FAST           (code)
+
+ 30:          74 LOAD_FAST            (self)
+              76 LOAD_METHOD          (_dispatch)
+              78 LOAD_CONST           ("continuation_support")
+              80 LOAD_FAST            (k)
+              82 LOAD_FAST            (h)
+              84 LOAD_FAST            (w)
+              86 BUILD_TUPLE          4
+              88 LOAD_FAST            (code)
+              90 LOAD_CONST           (('a', 'a', 'w', 'w'))
+              92 LOAD_FAST            (result)
+              94 LOAD_ATTR            (buffer)
+              96 LOAD_FAST            (base)
+              98 LOAD_ATTR            (buffer)
+             100 LOAD_FAST            (seed)
+             102 LOAD_ATTR            (buffer)
+             104 LOAD_FAST            (support)
+             106 LOAD_ATTR            (buffer)
+             108 BUILD_LIST           4
+             110 LOAD_FAST            (k)
+             112 LOAD_FAST            (n)
+             114 BINARY_MULTIPLY
+             116 LOAD_CONST           ("scene_continuation_support")
+             118 CALL_METHOD          (6 positional arguments)
+             120 POP_TOP
+
+ 31:         122 LOAD_FAST            (self)
+             124 LOAD_METHOD          (_complete_components)
+             126 LOAD_FAST            (support)
+             128 LOAD_FAST            (seed)
+             130 LOAD_FAST            (seed)
+             132 LOAD_FAST            (k)
+             134 LOAD_FAST            (h)
+             136 LOAD_FAST            (w)
+             138 LOAD_CONST           ("continuation")
+             140 CALL_METHOD          (7 positional arguments)
+             142 STORE_FAST           (extended)
+
+ 32:         144 LOAD_CONST           ("@group(0) @binding(0) var<storage,read> extended:array<u32>;\n@group(0) @binding(1) var<storage,read_write> mask:array<f32>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) gid:vec3<u32>){let i=gid.x+gid.y*4194304u;if(i>=")
+
+ 34:         146 LOAD_CONST           (4)
+             148 LOAD_FAST            (k)
+             150 BINARY_MULTIPLY
+             152 LOAD_FAST            (n)
+             154 BINARY_MULTIPLY
+
+ 32:         156 FORMAT_VALUE         0
+             158 LOAD_CONST           ("u){return;}let p=i%")
+
+ 34:         160 LOAD_FAST            (n)
+
+ 32:         162 FORMAT_VALUE         0
+             164 LOAD_CONST           ("u;let f=i/")
+
+ 34:         166 LOAD_CONST           (4)
+             168 LOAD_FAST            (n)
+             170 BINARY_MULTIPLY
+
+ 32:         172 FORMAT_VALUE         0
+             174 LOAD_CONST           ("u;if(f!=0u&&extended[f*")
+
+ 34:         176 LOAD_FAST            (n)
+
+ 32:         178 FORMAT_VALUE         0
+             180 LOAD_CONST           ("u+p]>0u){mask[i]=1.;}}")
+             182 BUILD_STRING         9
+             184 STORE_FAST           (code)
+
+ 35:         186 LOAD_FAST            (self)
+             188 LOAD_METHOD          (_dispatch)
+             190 LOAD_CONST           ("continuation_apply")
+             192 LOAD_FAST            (k)
+             194 LOAD_FAST            (h)
+             196 LOAD_FAST            (w)
+             198 BUILD_TUPLE          4
+             200 LOAD_FAST            (code)
+             202 LOAD_CONST           (('a', 'w'))
+             204 LOAD_FAST            (extended)
+             206 LOAD_ATTR            (buffer)
+             208 LOAD_FAST            (result)
+             210 LOAD_ATTR            (buffer)
+             212 BUILD_LIST           2
+             214 LOAD_CONST           (4)
+             216 LOAD_FAST            (k)
+             218 BINARY_MULTIPLY
+             220 LOAD_FAST            (n)
+             222 BINARY_MULTIPLY
+             224 LOAD_CONST           ("scene_continuation_apply")
+             226 CALL_METHOD          (6 positional arguments)
+             228 POP_TOP
+
+ 36:         230 LOAD_FAST            (seed)
+             232 LOAD_FAST            (support)
+             234 LOAD_FAST            (extended)
+             236 BUILD_TUPLE          3
+             238 GET_ITER
+         >>  240 FOR_ITER             (to 258)
+             242 STORE_FAST           (v)
+             244 LOAD_FAST            (self)
+             246 LOAD_ATTR            (rt)
+             248 LOAD_METHOD          (release_external)
+             250 LOAD_FAST            (v)
+             252 CALL_METHOD          (1 positional argument)
+             254 POP_TOP
+             256 JUMP_ABSOLUTE        (to 240)
+         >>  258 LOAD_CONST           (None)
+             260 RETURN_VALUE
+

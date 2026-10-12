@@ -1,0 +1,902 @@
+# pydisasm version 6.3.0
+# CPython Python bytecode 3.10 (3439)
+#   Disassembled from CPython Python 3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]
+# Timestamp in code: 0 (1970-01-01 03:00:00)
+# Method Name:       <module>
+# Filename:          v15_2\scene_consistency\chroma.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        2
+# Flags:             0x00000040 (NOFREE)
+# First Line:        1
+# Constants:
+#    0: 'CFA chroma-only changes need coherent signed evidence at lower bandwidth.\n\nGreen-supported scene edges retain the existing fine detector. This prevents\nred/blue sampling beats on otherwise invariant green structure from becoming\nindependent motion witnesses. No image identity or ROI enters the operation.\n'
+#    1: 0
+#    2: None
+#    3: 2
+#    4: ('Ops',)
+#    5: <Code310 code object residual_after_illumination at 0x106b16000, file v15_2\scene_consistency\chroma.py>, line 10
+#    6: 'residual_after_illumination'
+#    7: <Code310 code object confirm at 0x106b163f0, file v15_2\scene_consistency\chroma.py>, line 48
+#    8: 'confirm'
+# Names:
+#    0: __doc__
+#    1: numpy
+#    2: np
+#    3: ops
+#    4: Ops
+#    5: residual_after_illumination
+#    6: confirm
+
+  1:           0 LOAD_CONST           ("CFA chroma-only changes need coherent signed evidence at lower bandwidth.\n\nGreen-supported scene edges retain the existing fine detector. This prevents\nred/blue sampling beats on otherwise invariant green structure from becoming\nindependent motion witnesses. No image identity or ROI enters the operation.\n")
+               2 STORE_NAME           (__doc__)
+
+  7:           4 LOAD_CONST           (0)
+               6 LOAD_CONST           (None)
+               8 IMPORT_NAME          (numpy)
+              10 STORE_NAME           (np)
+
+  8:          12 LOAD_CONST           (2)
+              14 LOAD_CONST           (('Ops',))
+              16 IMPORT_NAME          (ops)
+              18 IMPORT_FROM          (Ops)
+              20 STORE_NAME           (Ops)
+              22 POP_TOP
+
+ 10:          24 LOAD_CONST           (<Code310 code object residual_after_illumination at 0x106b16000, file v15_2\scene_consistency\chroma.py>, line 10)
+              26 LOAD_CONST           ("residual_after_illumination")
+              28 MAKE_FUNCTION        (No arguments)
+              30 STORE_NAME           (residual_after_illumination)
+
+ 48:          32 LOAD_CONST           (<Code310 code object confirm at 0x106b163f0, file v15_2\scene_consistency\chroma.py>, line 48)
+              34 LOAD_CONST           ("confirm")
+              36 MAKE_FUNCTION        (No arguments)
+              38 STORE_NAME           (confirm)
+              40 LOAD_CONST           (None)
+              42 RETURN_VALUE
+
+
+# Method Name:       residual_after_illumination
+# Filename:          v15_2\scene_consistency\chroma.py
+# Argument count:    4
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  15
+# Stack size:        29
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        10
+# Constants:
+#    0: 'Bounded diffuse colour nuisance; never an arbitrary pixel correction.\n\n    Sigma24-native models weak illumination/veiling. Per-channel amplitude is\n    limited to 8% of shared scene brightness. Only existing two-scale witnesses\n    can survive; no new scene seeds can be created here.\n    '
+#    1: -0.5
+#    2: -18
+#    3: 19
+#    4: ('dtype',)
+#    5: 6.0
+#    6: 2
+#    7: 'const weights=array<f32,37>('
+#    8: ','
+#    9: <Code310 code object <genexpr> at 0x10694deb0, file v15_2\scene_consistency\chroma.py>, line 19
+#   10: 'residual_after_illumination.<locals>.<genexpr>'
+#   11: ');\n'
+#   12: 'fn refl(x:i32,n:i32)->u32{return u32(clamp(select(select(x,2*n-2-x,x>=n),-x,x<0),0,n-1));}'
+#   13: 'let p=i%'
+#   14: 'u;let c=(i/'
+#   15: 'u)%8u;let f=i/'
+#   16: 8
+#   17: 'u;let x=i32(p%'
+#   18: 'u);let y=p/'
+#   19: 'u;var value=0.;\nfor(var j=0u;j<37u;j++){let q=y*'
+#   20: 'u+refl(x+i32(j)-18,'
+#   21: ');var v=0.;\nif(c<3u){v=a0[(f*3u+c)*'
+#   22: 'u+q]-a0[((f+7u)*3u+c)*'
+#   23: 'u+q];}else if(c==3u){for(var cc=0u;cc<3u;cc++){v=max(v,max(abs(a0[(f*3u+cc)*'
+#   24: 'u+q]),abs(a0[((f+7u)*3u+cc)*'
+#   25: 'u+q])));}}else{\nvar trusted=true;for(var cc=0u;cc<4u;cc++){trusted=trusted&&a1[(f*4u+cc)*'
+#   26: 'u+q]<=.5;}\nlet weight=select(0.,1.,trusted);v=weight;\nif(c<7u){let rgb=c-4u;v*=a0[(f*3u+rgb)*'
+#   27: 'u+q]-a0[((f+7u)*3u+rgb)*'
+#   28: 'u+q];}}\nvalue+=weights[j]*v;}dst[i]=value;'
+#   29: 'illumination_field_x_robust_continuation'
+#   30: 7
+#   31: 'u)%3u;let f=i/'
+#   32: 3
+#   33: 'u;var value=a1[i];\nif(f<7u){let x=p%'
+#   34: 'u;let y=i32(p/'
+#   35: 'u);var delta=0.;var brightness=0.;\nfor(var j=0u;j<37u;j++){let q=refl(y+i32(j)-18,'
+#   36: ')*'
+#   37: 'u+x;delta+=weights[j]*a0[(f*8u+c)*'
+#   38: 'u+q];brightness+=weights[j]*a0[(f*8u+3u)*'
+#   39: 'u+q];}\nvalue-=clamp(delta,-.08*brightness,.08*brightness);}dst[i]=value;'
+#   40: 'illumination_residual'
+#   41: 'u)%4u;let f=i/'
+#   42: 4
+#   43: 'u;let rgb=select(select(c,1u,c==2u),2u,c==3u);let s=(f*3u+rgb)*'
+#   44: 'u+p;let r=((f+7u)*3u+rgb)*'
+#   45: 'u+p;\nlet residual=abs(a1[s]-a1[r]);\n// Weak observations are continuation candidates only. Preserve the former\n// strong criterion exactly; never turn a vetoed observation into a new seed.\n// A confidently different object must not explain its faint parts as diffuse\n// illumination. Fit the continuation nuisance from trusted surroundings only.\nvar weak=0.;if(a0[i]>0.){let x=p%'
+#   46: 'u);var delta=0.;var weight=0.;var brightness=0.;\nfor(var j=0u;j<37u;j++){let q=refl(y+i32(j)-18,'
+#   47: 'u+x;delta+=weights[j]*a3[(f*8u+4u+rgb)*'
+#   48: 'u+q];weight+=weights[j]*a3[(f*8u+7u)*'
+#   49: 'u+q];brightness+=weights[j]*a3[(f*8u+3u)*'
+#   50: 'u+q];}\nlet nuisance=clamp(delta/max(weight,1e-6),-.08*brightness,.08*brightness);\nlet unexplained=abs(a4[s]-a4[r]-nuisance);weak=select(0.,.25,unexplained>.5*a2[s]);}\ndst[i]=select(weak,a0[i],residual>a2[s]);'
+#   51: 'illumination_confirm_existing_robust_weak'
+# Names:
+#    0: spec
+#    1: shape
+#    2: Ops
+#    3: np
+#    4: exp
+#    5: arange
+#    6: float32
+#    7: sum
+#    8: join
+#    9: emit
+#   10: free
+# Varnames:
+#	rt, base, band, budget, _, h, w, n, op, weights, helper, body, tmp, adjusted, eligible
+# Positional arguments:
+#	rt, base, band, budget
+# Local variables:
+#    4: _
+#    5: h
+#    6: w
+#    7: n
+#    8: op
+#    9: weights
+#   10: helper
+#   11: body
+#   12: tmp
+#   13: adjusted
+#   14: eligible
+
+ 17:           0 LOAD_FAST            (base)
+               2 LOAD_ATTR            (spec)
+               4 LOAD_ATTR            (shape)
+               6 UNPACK_SEQUENCE      4
+               8 STORE_FAST           (_)
+              10 STORE_FAST           (_)
+              12 STORE_FAST           (h)
+              14 STORE_FAST           (w)
+              16 LOAD_FAST            (h)
+              18 LOAD_FAST            (w)
+              20 BINARY_MULTIPLY
+              22 STORE_FAST           (n)
+              24 LOAD_GLOBAL          (Ops)
+              26 LOAD_FAST            (rt)
+              28 CALL_FUNCTION        (1 positional argument)
+              30 STORE_FAST           (op)
+
+ 18:          32 LOAD_GLOBAL          (np)
+              34 LOAD_METHOD          (exp)
+              36 LOAD_CONST           (-0.5)
+              38 LOAD_GLOBAL          (np)
+              40 LOAD_ATTR            (arange)
+              42 LOAD_CONST           (-18)
+              44 LOAD_CONST           (19)
+              46 LOAD_GLOBAL          (np)
+              48 LOAD_ATTR            (float32)
+              50 LOAD_CONST           (('dtype',))
+              52 CALL_FUNCTION_KW     (3 total positional and keyword args)
+              54 LOAD_CONST           (6.0)
+              56 BINARY_TRUE_DIVIDE
+              58 LOAD_CONST           (2)
+              60 BINARY_POWER
+              62 BINARY_MULTIPLY
+              64 CALL_METHOD          (1 positional argument)
+              66 STORE_FAST           (weights)
+              68 LOAD_FAST            (weights)
+              70 LOAD_FAST            (weights)
+              72 LOAD_METHOD          (sum)
+              74 CALL_METHOD          (0 positional arguments)
+              76 INPLACE_TRUE_DIVIDE
+              78 STORE_FAST           (weights)
+
+ 19:          80 LOAD_CONST           ("const weights=array<f32,37>(")
+              82 LOAD_CONST           (",")
+              84 LOAD_METHOD          (join)
+              86 LOAD_CONST           (<Code310 code object <genexpr> at 0x10694deb0, file v15_2\scene_consistency\chroma.py>, line 19)
+              88 LOAD_CONST           ("residual_after_illumination.<locals>.<genexpr>")
+              90 MAKE_FUNCTION        (No arguments)
+              92 LOAD_FAST            (weights)
+              94 GET_ITER
+              96 CALL_FUNCTION        (1 positional argument)
+              98 CALL_METHOD          (1 positional argument)
+             100 BINARY_ADD
+             102 LOAD_CONST           (");\n")
+             104 BINARY_ADD
+             106 STORE_FAST           (helper)
+
+ 20:         108 LOAD_FAST            (helper)
+             110 LOAD_CONST           ("fn refl(x:i32,n:i32)->u32{return u32(clamp(select(select(x,2*n-2-x,x>=n),-x,x<0),0,n-1));}")
+             112 INPLACE_ADD
+             114 STORE_FAST           (helper)
+
+ 21:         116 LOAD_CONST           ("let p=i%")
+             118 LOAD_FAST            (n)
+             120 FORMAT_VALUE         0
+             122 LOAD_CONST           ("u;let c=(i/")
+             124 LOAD_FAST            (n)
+             126 FORMAT_VALUE         0
+             128 LOAD_CONST           ("u)%8u;let f=i/")
+             130 LOAD_CONST           (8)
+             132 LOAD_FAST            (n)
+             134 BINARY_MULTIPLY
+             136 FORMAT_VALUE         0
+             138 LOAD_CONST           ("u;let x=i32(p%")
+             140 LOAD_FAST            (w)
+             142 FORMAT_VALUE         0
+             144 LOAD_CONST           ("u);let y=p/")
+             146 LOAD_FAST            (w)
+             148 FORMAT_VALUE         0
+             150 LOAD_CONST           ("u;var value=0.;\nfor(var j=0u;j<37u;j++){let q=y*")
+
+ 22:         152 LOAD_FAST            (w)
+
+ 21:         154 FORMAT_VALUE         0
+             156 LOAD_CONST           ("u+refl(x+i32(j)-18,")
+
+ 22:         158 LOAD_FAST            (w)
+
+ 21:         160 FORMAT_VALUE         0
+             162 LOAD_CONST           (");var v=0.;\nif(c<3u){v=a0[(f*3u+c)*")
+
+ 23:         164 LOAD_FAST            (n)
+
+ 21:         166 FORMAT_VALUE         0
+             168 LOAD_CONST           ("u+q]-a0[((f+7u)*3u+c)*")
+
+ 23:         170 LOAD_FAST            (n)
+
+ 21:         172 FORMAT_VALUE         0
+             174 LOAD_CONST           ("u+q];}else if(c==3u){for(var cc=0u;cc<3u;cc++){v=max(v,max(abs(a0[(f*3u+cc)*")
+
+ 23:         176 LOAD_FAST            (n)
+
+ 21:         178 FORMAT_VALUE         0
+             180 LOAD_CONST           ("u+q]),abs(a0[((f+7u)*3u+cc)*")
+
+ 23:         182 LOAD_FAST            (n)
+
+ 21:         184 FORMAT_VALUE         0
+             186 LOAD_CONST           ("u+q])));}}else{\nvar trusted=true;for(var cc=0u;cc<4u;cc++){trusted=trusted&&a1[(f*4u+cc)*")
+
+ 24:         188 LOAD_FAST            (n)
+
+ 21:         190 FORMAT_VALUE         0
+             192 LOAD_CONST           ("u+q]<=.5;}\nlet weight=select(0.,1.,trusted);v=weight;\nif(c<7u){let rgb=c-4u;v*=a0[(f*3u+rgb)*")
+
+ 26:         194 LOAD_FAST            (n)
+
+ 21:         196 FORMAT_VALUE         0
+             198 LOAD_CONST           ("u+q]-a0[((f+7u)*3u+rgb)*")
+
+ 26:         200 LOAD_FAST            (n)
+
+ 21:         202 FORMAT_VALUE         0
+             204 LOAD_CONST           ("u+q];}}\nvalue+=weights[j]*v;}dst[i]=value;")
+             206 BUILD_STRING         29
+             208 STORE_FAST           (body)
+
+ 28:         210 LOAD_FAST            (op)
+             212 LOAD_METHOD          (emit)
+             214 LOAD_CONST           ("illumination_field_x_robust_continuation")
+             216 LOAD_FAST            (band)
+             218 LOAD_FAST            (base)
+             220 BUILD_LIST           2
+             222 LOAD_CONST           (7)
+             224 LOAD_CONST           (8)
+             226 LOAD_FAST            (h)
+             228 LOAD_FAST            (w)
+             230 BUILD_TUPLE          4
+             232 LOAD_FAST            (body)
+             234 LOAD_FAST            (helper)
+             236 CALL_METHOD          (5 positional arguments)
+             238 STORE_FAST           (tmp)
+
+ 29:         240 LOAD_CONST           ("let p=i%")
+             242 LOAD_FAST            (n)
+             244 FORMAT_VALUE         0
+             246 LOAD_CONST           ("u;let c=(i/")
+             248 LOAD_FAST            (n)
+             250 FORMAT_VALUE         0
+             252 LOAD_CONST           ("u)%3u;let f=i/")
+             254 LOAD_CONST           (3)
+             256 LOAD_FAST            (n)
+             258 BINARY_MULTIPLY
+             260 FORMAT_VALUE         0
+             262 LOAD_CONST           ("u;var value=a1[i];\nif(f<7u){let x=p%")
+
+ 30:         264 LOAD_FAST            (w)
+
+ 29:         266 FORMAT_VALUE         0
+             268 LOAD_CONST           ("u;let y=i32(p/")
+
+ 30:         270 LOAD_FAST            (w)
+
+ 29:         272 FORMAT_VALUE         0
+             274 LOAD_CONST           ("u);var delta=0.;var brightness=0.;\nfor(var j=0u;j<37u;j++){let q=refl(y+i32(j)-18,")
+
+ 31:         276 LOAD_FAST            (h)
+
+ 29:         278 FORMAT_VALUE         0
+             280 LOAD_CONST           (")*")
+
+ 31:         282 LOAD_FAST            (w)
+
+ 29:         284 FORMAT_VALUE         0
+             286 LOAD_CONST           ("u+x;delta+=weights[j]*a0[(f*8u+c)*")
+
+ 31:         288 LOAD_FAST            (n)
+
+ 29:         290 FORMAT_VALUE         0
+             292 LOAD_CONST           ("u+q];brightness+=weights[j]*a0[(f*8u+3u)*")
+
+ 31:         294 LOAD_FAST            (n)
+
+ 29:         296 FORMAT_VALUE         0
+             298 LOAD_CONST           ("u+q];}\nvalue-=clamp(delta,-.08*brightness,.08*brightness);}dst[i]=value;")
+             300 BUILD_STRING         19
+             302 STORE_FAST           (body)
+
+ 33:         304 LOAD_FAST            (op)
+             306 LOAD_METHOD          (emit)
+             308 LOAD_CONST           ("illumination_residual")
+             310 LOAD_FAST            (tmp)
+             312 LOAD_FAST            (band)
+             314 BUILD_LIST           2
+             316 LOAD_FAST            (band)
+             318 LOAD_ATTR            (spec)
+             320 LOAD_ATTR            (shape)
+             322 LOAD_FAST            (body)
+             324 LOAD_FAST            (helper)
+             326 CALL_METHOD          (5 positional arguments)
+             328 STORE_FAST           (adjusted)
+
+ 34:         330 LOAD_CONST           ("let p=i%")
+             332 LOAD_FAST            (n)
+             334 FORMAT_VALUE         0
+             336 LOAD_CONST           ("u;let c=(i/")
+             338 LOAD_FAST            (n)
+             340 FORMAT_VALUE         0
+             342 LOAD_CONST           ("u)%4u;let f=i/")
+             344 LOAD_CONST           (4)
+             346 LOAD_FAST            (n)
+             348 BINARY_MULTIPLY
+             350 FORMAT_VALUE         0
+             352 LOAD_CONST           ("u;let rgb=select(select(c,1u,c==2u),2u,c==3u);let s=(f*3u+rgb)*")
+             354 LOAD_FAST            (n)
+             356 FORMAT_VALUE         0
+             358 LOAD_CONST           ("u+p;let r=((f+7u)*3u+rgb)*")
+             360 LOAD_FAST            (n)
+             362 FORMAT_VALUE         0
+             364 LOAD_CONST           ("u+p;\nlet residual=abs(a1[s]-a1[r]);\n// Weak observations are continuation candidates only. Preserve the former\n// strong criterion exactly; never turn a vetoed observation into a new seed.\n// A confidently different object must not explain its faint parts as diffuse\n// illumination. Fit the continuation nuisance from trusted surroundings only.\nvar weak=0.;if(a0[i]>0.){let x=p%")
+
+ 40:         366 LOAD_FAST            (w)
+
+ 34:         368 FORMAT_VALUE         0
+             370 LOAD_CONST           ("u;let y=i32(p/")
+
+ 40:         372 LOAD_FAST            (w)
+
+ 34:         374 FORMAT_VALUE         0
+             376 LOAD_CONST           ("u);var delta=0.;var weight=0.;var brightness=0.;\nfor(var j=0u;j<37u;j++){let q=refl(y+i32(j)-18,")
+
+ 41:         378 LOAD_FAST            (h)
+
+ 34:         380 FORMAT_VALUE         0
+             382 LOAD_CONST           (")*")
+
+ 41:         384 LOAD_FAST            (w)
+
+ 34:         386 FORMAT_VALUE         0
+             388 LOAD_CONST           ("u+x;delta+=weights[j]*a3[(f*8u+4u+rgb)*")
+
+ 41:         390 LOAD_FAST            (n)
+
+ 34:         392 FORMAT_VALUE         0
+             394 LOAD_CONST           ("u+q];weight+=weights[j]*a3[(f*8u+7u)*")
+
+ 41:         396 LOAD_FAST            (n)
+
+ 34:         398 FORMAT_VALUE         0
+             400 LOAD_CONST           ("u+q];brightness+=weights[j]*a3[(f*8u+3u)*")
+
+ 41:         402 LOAD_FAST            (n)
+
+ 34:         404 FORMAT_VALUE         0
+             406 LOAD_CONST           ("u+q];}\nlet nuisance=clamp(delta/max(weight,1e-6),-.08*brightness,.08*brightness);\nlet unexplained=abs(a4[s]-a4[r]-nuisance);weak=select(0.,.25,unexplained>.5*a2[s]);}\ndst[i]=select(weak,a0[i],residual>a2[s]);")
+             408 BUILD_STRING         25
+             410 STORE_FAST           (body)
+
+ 45:         412 LOAD_FAST            (op)
+             414 LOAD_METHOD          (emit)
+             416 LOAD_CONST           ("illumination_confirm_existing_robust_weak")
+             418 LOAD_FAST            (base)
+             420 LOAD_FAST            (adjusted)
+             422 LOAD_FAST            (budget)
+             424 LOAD_FAST            (tmp)
+             426 LOAD_FAST            (band)
+             428 BUILD_LIST           5
+             430 LOAD_FAST            (base)
+             432 LOAD_ATTR            (spec)
+             434 LOAD_ATTR            (shape)
+             436 LOAD_FAST            (body)
+             438 LOAD_FAST            (helper)
+             440 CALL_METHOD          (5 positional arguments)
+             442 STORE_FAST           (eligible)
+             444 LOAD_FAST            (rt)
+             446 LOAD_METHOD          (free)
+             448 LOAD_FAST            (tmp)
+             450 CALL_METHOD          (1 positional argument)
+             452 POP_TOP
+
+ 46:         454 LOAD_FAST            (eligible)
+             456 LOAD_FAST            (adjusted)
+             458 BUILD_TUPLE          2
+             460 RETURN_VALUE
+
+
+# Method Name:       confirm
+# Filename:          v15_2\scene_consistency\chroma.py
+# Argument count:    4
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  14
+# Stack size:        27
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        48
+# Constants:
+#    0: None
+#    1: -0.5
+#    2: -9
+#    3: 10
+#    4: ('dtype',)
+#    5: 2.828427
+#    6: 2
+#    7: 'const weights=array<f32,19>('
+#    8: ','
+#    9: <Code310 code object <genexpr> at 0x10694dca0, file v15_2\scene_consistency\chroma.py>, line 52
+#   10: 'confirm.<locals>.<genexpr>'
+#   11: ');\n'
+#   12: 'fn refl(x:i32,n:i32)->u32{return u32(clamp(select(select(x,2*n-2-x,x>=n),-x,x<0),0,n-1));}'
+#   13: 'let p=i%'
+#   14: 'u;let c=(i/'
+#   15: 'u)%2u;let f=i/'
+#   16: 'u;let rgb=c*2u;let x=i32(p%'
+#   17: 'u);let y=p/'
+#   18: 'u;var d=0.;var t=0.;\nfor(var j=0u;j<19u;j++){let q=y*'
+#   19: 'u+refl(x+i32(j)-9,'
+#   20: ');let s=(f*3u+rgb)*'
+#   21: 'u+q;let r=((f+7u)*3u+rgb)*'
+#   22: 'u+q;\nvar brightness=0.;for(var cc=0u;cc<3u;cc++){brightness=max(brightness,max(abs(a0[(f*3u+cc)*'
+#   23: 'u+q]),abs(a0[((f+7u)*3u+cc)*'
+#   24: 'u+q])));}\nd+=weights[j]*(a0[s]-a0[r]);t+=weights[j]*max(a1[s],.08*brightness);}\ndst[(f*4u+c*2u)*'
+#   25: 'u+p]=d;dst[(f*4u+c*2u+1u)*'
+#   26: 'u+p]=t;'
+#   27: 'chroma_signed_horizontal'
+#   28: 7
+#   29: 4
+#   30: 14
+#   31: ('count',)
+#   32: ''
+#   33: 'u;let f=i/'
+#   34: 'u;let x=p%'
+#   35: 'u;let y=i32(p/'
+#   36: 'u);var both=true;var strength:array<f32,2>;\nfor(var c=0u;c<2u;c++){var d=0.;var t=0.;for(var j=0u;j<19u;j++){let q=refl(y+i32(j)-9,'
+#   37: ')*'
+#   38: 'u+x;d+=weights[j]*a0[(f*4u+c*2u)*'
+#   39: 'u+q];t+=weights[j]*a0[(f*4u+c*2u+1u)*'
+#   40: 'u+q];}strength[c]=abs(d)/max(t,1e-12);both=both&&strength[c]>1.;}\nlet green=a1[(f*4u+1u)*'
+#   41: 'u+p]>.5&&a1[(f*4u+2u)*'
+#   42: 'u+p]>.5;\nlet wr=a1[(f*4u)*'
+#   43: 'u+p]>0.;let wg=a1[(f*4u+1u)*'
+#   44: 'u+p]>0.&&a1[(f*4u+2u)*'
+#   45: 'u+p]>0.;let wb=a1[(f*4u+3u)*'
+#   46: 'u+p]>0.;\nlet weak_groups=select(0u,1u,wr)+select(0u,1u,wg)+select(0u,1u,wb);\nlet continuation=weak_groups>=2u&&(wg||(strength[0]>.5&&strength[1]>.5));\nfor(var c=0u;c<4u;c++){let j=(f*4u+c)*'
+#   47: 'u+p;let strong=(c==0u&&strength[0]>2.)||(c==3u&&strength[1]>2.);\nlet seed_value=select(select(0.,a1[j],green||both),2.,strong&&a1[j]>.5);\ndst[j]=max(seed_value,select(0.,.25,continuation&&a1[j]>0.));}'
+#   48: 'chroma_witness'
+# Names:
+#    0: residual_after_illumination
+#    1: spec
+#    2: shape
+#    3: Ops
+#    4: np
+#    5: exp
+#    6: arange
+#    7: float32
+#    8: sum
+#    9: join
+#   10: emit
+#   11: free
+# Varnames:
+#	rt, base, band, budget, _, h, w, n, op, weights, helper, body, tmp, out
+# Positional arguments:
+#	rt, base, band, budget
+# Local variables:
+#    4: _
+#    5: h
+#    6: w
+#    7: n
+#    8: op
+#    9: weights
+#   10: helper
+#   11: body
+#   12: tmp
+#   13: out
+
+ 49:           0 LOAD_GLOBAL          (residual_after_illumination)
+               2 LOAD_FAST            (rt)
+               4 LOAD_FAST            (base)
+               6 LOAD_FAST            (band)
+               8 LOAD_FAST            (budget)
+              10 CALL_FUNCTION        (4 positional arguments)
+              12 UNPACK_SEQUENCE      2
+              14 STORE_FAST           (base)
+              16 STORE_FAST           (band)
+
+ 50:          18 LOAD_FAST            (base)
+              20 LOAD_ATTR            (spec)
+              22 LOAD_ATTR            (shape)
+              24 UNPACK_SEQUENCE      4
+              26 STORE_FAST           (_)
+              28 STORE_FAST           (_)
+              30 STORE_FAST           (h)
+              32 STORE_FAST           (w)
+              34 LOAD_FAST            (h)
+              36 LOAD_FAST            (w)
+              38 BINARY_MULTIPLY
+              40 STORE_FAST           (n)
+              42 LOAD_GLOBAL          (Ops)
+              44 LOAD_FAST            (rt)
+              46 CALL_FUNCTION        (1 positional argument)
+              48 STORE_FAST           (op)
+
+ 51:          50 LOAD_GLOBAL          (np)
+              52 LOAD_METHOD          (exp)
+              54 LOAD_CONST           (-0.5)
+              56 LOAD_GLOBAL          (np)
+              58 LOAD_ATTR            (arange)
+              60 LOAD_CONST           (-9)
+              62 LOAD_CONST           (10)
+              64 LOAD_GLOBAL          (np)
+              66 LOAD_ATTR            (float32)
+              68 LOAD_CONST           (('dtype',))
+              70 CALL_FUNCTION_KW     (3 total positional and keyword args)
+              72 LOAD_GLOBAL          (np)
+              74 LOAD_METHOD          (float32)
+              76 LOAD_CONST           (2.828427)
+              78 CALL_METHOD          (1 positional argument)
+              80 BINARY_TRUE_DIVIDE
+              82 LOAD_CONST           (2)
+              84 BINARY_POWER
+              86 BINARY_MULTIPLY
+              88 CALL_METHOD          (1 positional argument)
+              90 STORE_FAST           (weights)
+              92 LOAD_FAST            (weights)
+              94 LOAD_FAST            (weights)
+              96 LOAD_METHOD          (sum)
+              98 CALL_METHOD          (0 positional arguments)
+             100 INPLACE_TRUE_DIVIDE
+             102 STORE_FAST           (weights)
+
+ 52:         104 LOAD_CONST           ("const weights=array<f32,19>(")
+             106 LOAD_CONST           (",")
+             108 LOAD_METHOD          (join)
+             110 LOAD_CONST           (<Code310 code object <genexpr> at 0x10694dca0, file v15_2\scene_consistency\chroma.py>, line 52)
+             112 LOAD_CONST           ("confirm.<locals>.<genexpr>")
+             114 MAKE_FUNCTION        (No arguments)
+             116 LOAD_FAST            (weights)
+             118 GET_ITER
+             120 CALL_FUNCTION        (1 positional argument)
+             122 CALL_METHOD          (1 positional argument)
+             124 BINARY_ADD
+             126 LOAD_CONST           (");\n")
+             128 BINARY_ADD
+             130 STORE_FAST           (helper)
+
+ 53:         132 LOAD_FAST            (helper)
+             134 LOAD_CONST           ("fn refl(x:i32,n:i32)->u32{return u32(clamp(select(select(x,2*n-2-x,x>=n),-x,x<0),0,n-1));}")
+             136 INPLACE_ADD
+             138 STORE_FAST           (helper)
+
+ 54:         140 LOAD_CONST           ("let p=i%")
+             142 LOAD_FAST            (n)
+             144 FORMAT_VALUE         0
+             146 LOAD_CONST           ("u;let c=(i/")
+             148 LOAD_FAST            (n)
+             150 FORMAT_VALUE         0
+             152 LOAD_CONST           ("u)%2u;let f=i/")
+             154 LOAD_CONST           (2)
+             156 LOAD_FAST            (n)
+             158 BINARY_MULTIPLY
+             160 FORMAT_VALUE         0
+             162 LOAD_CONST           ("u;let rgb=c*2u;let x=i32(p%")
+             164 LOAD_FAST            (w)
+             166 FORMAT_VALUE         0
+             168 LOAD_CONST           ("u);let y=p/")
+             170 LOAD_FAST            (w)
+             172 FORMAT_VALUE         0
+             174 LOAD_CONST           ("u;var d=0.;var t=0.;\nfor(var j=0u;j<19u;j++){let q=y*")
+
+ 55:         176 LOAD_FAST            (w)
+
+ 54:         178 FORMAT_VALUE         0
+             180 LOAD_CONST           ("u+refl(x+i32(j)-9,")
+
+ 55:         182 LOAD_FAST            (w)
+
+ 54:         184 FORMAT_VALUE         0
+             186 LOAD_CONST           (");let s=(f*3u+rgb)*")
+
+ 55:         188 LOAD_FAST            (n)
+
+ 54:         190 FORMAT_VALUE         0
+             192 LOAD_CONST           ("u+q;let r=((f+7u)*3u+rgb)*")
+
+ 55:         194 LOAD_FAST            (n)
+
+ 54:         196 FORMAT_VALUE         0
+             198 LOAD_CONST           ("u+q;\nvar brightness=0.;for(var cc=0u;cc<3u;cc++){brightness=max(brightness,max(abs(a0[(f*3u+cc)*")
+
+ 56:         200 LOAD_FAST            (n)
+
+ 54:         202 FORMAT_VALUE         0
+             204 LOAD_CONST           ("u+q]),abs(a0[((f+7u)*3u+cc)*")
+
+ 56:         206 LOAD_FAST            (n)
+
+ 54:         208 FORMAT_VALUE         0
+             210 LOAD_CONST           ("u+q])));}\nd+=weights[j]*(a0[s]-a0[r]);t+=weights[j]*max(a1[s],.08*brightness);}\ndst[(f*4u+c*2u)*")
+
+ 58:         212 LOAD_FAST            (n)
+
+ 54:         214 FORMAT_VALUE         0
+             216 LOAD_CONST           ("u+p]=d;dst[(f*4u+c*2u+1u)*")
+
+ 58:         218 LOAD_FAST            (n)
+
+ 54:         220 FORMAT_VALUE         0
+             222 LOAD_CONST           ("u+p]=t;")
+             224 BUILD_STRING         27
+             226 STORE_FAST           (body)
+
+ 59:         228 LOAD_FAST            (op)
+             230 LOAD_ATTR            (emit)
+             232 LOAD_CONST           ("chroma_signed_horizontal")
+             234 LOAD_FAST            (band)
+             236 LOAD_FAST            (budget)
+             238 BUILD_LIST           2
+             240 LOAD_CONST           (7)
+             242 LOAD_CONST           (4)
+             244 LOAD_FAST            (h)
+             246 LOAD_FAST            (w)
+             248 BUILD_TUPLE          4
+             250 LOAD_FAST            (body)
+             252 LOAD_FAST            (helper)
+             254 LOAD_CONST           (14)
+             256 LOAD_FAST            (n)
+             258 BINARY_MULTIPLY
+             260 LOAD_CONST           (('count',))
+             262 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             264 STORE_FAST           (tmp)
+
+ 60:         266 LOAD_CONST           ("")
+             268 LOAD_METHOD          (join)
+             270 BUILD_LIST           0
+             272 LOAD_CONST           ("let p=i%")
+             274 LIST_APPEND          1
+             276 LOAD_FAST            (n)
+             278 FORMAT_VALUE         0
+             280 LIST_APPEND          1
+             282 LOAD_CONST           ("u;let f=i/")
+             284 LIST_APPEND          1
+             286 LOAD_FAST            (n)
+             288 FORMAT_VALUE         0
+             290 LIST_APPEND          1
+             292 LOAD_CONST           ("u;let x=p%")
+             294 LIST_APPEND          1
+             296 LOAD_FAST            (w)
+             298 FORMAT_VALUE         0
+             300 LIST_APPEND          1
+             302 LOAD_CONST           ("u;let y=i32(p/")
+             304 LIST_APPEND          1
+             306 LOAD_FAST            (w)
+             308 FORMAT_VALUE         0
+             310 LIST_APPEND          1
+             312 LOAD_CONST           ("u);var both=true;var strength:array<f32,2>;\nfor(var c=0u;c<2u;c++){var d=0.;var t=0.;for(var j=0u;j<19u;j++){let q=refl(y+i32(j)-9,")
+             314 LIST_APPEND          1
+
+ 61:         316 LOAD_FAST            (h)
+
+ 60:         318 FORMAT_VALUE         0
+             320 LIST_APPEND          1
+             322 LOAD_CONST           (")*")
+             324 LIST_APPEND          1
+
+ 61:         326 LOAD_FAST            (w)
+
+ 60:         328 FORMAT_VALUE         0
+             330 LIST_APPEND          1
+             332 LOAD_CONST           ("u+x;d+=weights[j]*a0[(f*4u+c*2u)*")
+             334 LIST_APPEND          1
+
+ 61:         336 LOAD_FAST            (n)
+
+ 60:         338 FORMAT_VALUE         0
+             340 LIST_APPEND          1
+             342 LOAD_CONST           ("u+q];t+=weights[j]*a0[(f*4u+c*2u+1u)*")
+             344 LIST_APPEND          1
+
+ 61:         346 LOAD_FAST            (n)
+
+ 60:         348 FORMAT_VALUE         0
+             350 LIST_APPEND          1
+             352 LOAD_CONST           ("u+q];}strength[c]=abs(d)/max(t,1e-12);both=both&&strength[c]>1.;}\nlet green=a1[(f*4u+1u)*")
+             354 LIST_APPEND          1
+
+ 62:         356 LOAD_FAST            (n)
+
+ 60:         358 FORMAT_VALUE         0
+             360 LIST_APPEND          1
+             362 LOAD_CONST           ("u+p]>.5&&a1[(f*4u+2u)*")
+             364 LIST_APPEND          1
+
+ 62:         366 LOAD_FAST            (n)
+
+ 60:         368 FORMAT_VALUE         0
+             370 LIST_APPEND          1
+             372 LOAD_CONST           ("u+p]>.5;\nlet wr=a1[(f*4u)*")
+             374 LIST_APPEND          1
+
+ 63:         376 LOAD_FAST            (n)
+
+ 60:         378 FORMAT_VALUE         0
+             380 LIST_APPEND          1
+             382 LOAD_CONST           ("u+p]>0.;let wg=a1[(f*4u+1u)*")
+             384 LIST_APPEND          1
+
+ 63:         386 LOAD_FAST            (n)
+
+ 60:         388 FORMAT_VALUE         0
+             390 LIST_APPEND          1
+             392 LOAD_CONST           ("u+p]>0.&&a1[(f*4u+2u)*")
+             394 LIST_APPEND          1
+
+ 63:         396 LOAD_FAST            (n)
+
+ 60:         398 FORMAT_VALUE         0
+             400 LIST_APPEND          1
+             402 LOAD_CONST           ("u+p]>0.;let wb=a1[(f*4u+3u)*")
+             404 LIST_APPEND          1
+
+ 63:         406 LOAD_FAST            (n)
+
+ 60:         408 FORMAT_VALUE         0
+             410 LIST_APPEND          1
+             412 LOAD_CONST           ("u+p]>0.;\nlet weak_groups=select(0u,1u,wr)+select(0u,1u,wg)+select(0u,1u,wb);\nlet continuation=weak_groups>=2u&&(wg||(strength[0]>.5&&strength[1]>.5));\nfor(var c=0u;c<4u;c++){let j=(f*4u+c)*")
+             414 LIST_APPEND          1
+
+ 66:         416 LOAD_FAST            (n)
+
+ 60:         418 FORMAT_VALUE         0
+             420 LIST_APPEND          1
+             422 LOAD_CONST           ("u+p;let strong=(c==0u&&strength[0]>2.)||(c==3u&&strength[1]>2.);\nlet seed_value=select(select(0.,a1[j],green||both),2.,strong&&a1[j]>.5);\ndst[j]=max(seed_value,select(0.,.25,continuation&&a1[j]>0.));}")
+             424 LIST_APPEND          1
+             426 CALL_METHOD          (1 positional argument)
+             428 STORE_FAST           (body)
+
+ 69:         430 LOAD_FAST            (op)
+             432 LOAD_ATTR            (emit)
+             434 LOAD_CONST           ("chroma_witness")
+             436 LOAD_FAST            (tmp)
+             438 LOAD_FAST            (base)
+             440 BUILD_LIST           2
+             442 LOAD_FAST            (base)
+             444 LOAD_ATTR            (spec)
+             446 LOAD_ATTR            (shape)
+             448 LOAD_FAST            (body)
+             450 LOAD_FAST            (helper)
+             452 LOAD_CONST           (7)
+             454 LOAD_FAST            (n)
+             456 BINARY_MULTIPLY
+             458 LOAD_CONST           (('count',))
+             460 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             462 STORE_FAST           (out)
+             464 LOAD_FAST            (rt)
+             466 LOAD_METHOD          (free)
+             468 LOAD_FAST            (tmp)
+             470 CALL_METHOD          (1 positional argument)
+             472 POP_TOP
+
+ 70:         474 LOAD_FAST            (rt)
+             476 LOAD_METHOD          (free)
+             478 LOAD_FAST            (base)
+             480 CALL_METHOD          (1 positional argument)
+             482 POP_TOP
+             484 LOAD_FAST            (rt)
+             486 LOAD_METHOD          (free)
+             488 LOAD_FAST            (band)
+             490 CALL_METHOD          (1 positional argument)
+             492 POP_TOP
+
+ 71:         494 LOAD_FAST            (out)
+             496 RETURN_VALUE
+
+
+# Method Name:       <genexpr>
+# Filename:          v15_2\scene_consistency\chroma.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        4
+# Flags:             0x00000073 (NOFREE | GENERATOR | NESTED | NEWLOCALS | OPTIMIZED)
+# First Line:        19
+# Constants:
+#    0: '.10g'
+#    1: None
+# Names:
+#    0: format
+#    1: float
+# Varnames:
+#	.0, v
+# Positional arguments:
+#	.0
+# Local variables:
+#    1: v
+               0 GEN_START            0
+
+ 19:           2 LOAD_FAST            (.0)
+         >>    4 FOR_ITER             (to 26)
+               6 STORE_FAST           (v)
+               8 LOAD_GLOBAL          (format)
+              10 LOAD_GLOBAL          (float)
+              12 LOAD_FAST            (v)
+              14 CALL_FUNCTION        (1 positional argument)
+              16 LOAD_CONST           (".10g")
+              18 CALL_FUNCTION        (2 positional arguments)
+              20 YIELD_VALUE
+              22 POP_TOP
+              24 JUMP_ABSOLUTE        (to 4)
+         >>   26 LOAD_CONST           (None)
+              28 RETURN_VALUE
+
+
+# Method Name:       <genexpr>
+# Filename:          v15_2\scene_consistency\chroma.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        4
+# Flags:             0x00000073 (NOFREE | GENERATOR | NESTED | NEWLOCALS | OPTIMIZED)
+# First Line:        52
+# Constants:
+#    0: '.10g'
+#    1: None
+# Names:
+#    0: format
+#    1: float
+# Varnames:
+#	.0, z
+# Positional arguments:
+#	.0
+# Local variables:
+#    1: z
+               0 GEN_START            0
+
+ 52:           2 LOAD_FAST            (.0)
+         >>    4 FOR_ITER             (to 26)
+               6 STORE_FAST           (z)
+               8 LOAD_GLOBAL          (format)
+              10 LOAD_GLOBAL          (float)
+              12 LOAD_FAST            (z)
+              14 CALL_FUNCTION        (1 positional argument)
+              16 LOAD_CONST           (".10g")
+              18 CALL_FUNCTION        (2 positional arguments)
+              20 YIELD_VALUE
+              22 POP_TOP
+              24 JUMP_ABSOLUTE        (to 4)
+         >>   26 LOAD_CONST           (None)
+              28 RETURN_VALUE
+

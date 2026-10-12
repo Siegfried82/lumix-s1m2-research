@@ -1,0 +1,457 @@
+
+analysis/sources/tether_windows_2_12/Lmxptpif.dll:	file format coff-x86-64
+
+Disassembly of section .text:
+
+0000000180034880 <LMX_func_api_Get_Tag_CapabilityInfo>:
+180034880: 40 53                       	pushq	%rbx
+180034882: 48 83 ec 30                 	subq	$0x30, %rsp
+180034886: 49 8b d9                    	movq	%r9, %rbx
+180034889: 48 85 d2                    	testq	%rdx, %rdx
+18003488c: 74 42                       	je	0x1800348d0 <LMX_func_api_Get_Tag_CapabilityInfo+0x50>
+18003488e: 48 85 db                    	testq	%rbx, %rbx
+180034891: 74 3d                       	je	0x1800348d0 <LMX_func_api_Get_Tag_CapabilityInfo+0x50>
+180034893: 48 8b 44 24 60              	movq	0x60(%rsp), %rax
+180034898: 45 8b c8                    	movl	%r8d, %r9d
+18003489b: 48 89 44 24 28              	movq	%rax, 0x28(%rsp)
+1800348a0: 4c 8b c2                    	movq	%rdx, %r8
+1800348a3: 48 8d 44 24 48              	leaq	0x48(%rsp), %rax
+1800348a8: c7 44 24 48 00 00 00 00     	movl	$0x0, 0x48(%rsp)
+1800348b0: 48 89 44 24 20              	movq	%rax, 0x20(%rsp)
+1800348b5: e8 26 02 00 00              	callq	0x180034ae0 <LMX_func_api_Get_Tag_CapabilityInfo+0x260>
+1800348ba: 0f b6 c8                    	movzbl	%al, %ecx
+1800348bd: 84 c0                       	testb	%al, %al
+1800348bf: 74 11                       	je	0x1800348d2 <LMX_func_api_Get_Tag_CapabilityInfo+0x52>
+1800348c1: 8b 44 24 48                 	movl	0x48(%rsp), %eax
+1800348c5: 89 03                       	movl	%eax, (%rbx)
+1800348c7: 0f b6 c1                    	movzbl	%cl, %eax
+1800348ca: 48 83 c4 30                 	addq	$0x30, %rsp
+1800348ce: 5b                          	popq	%rbx
+1800348cf: c3                          	retq
+1800348d0: 32 c0                       	xorb	%al, %al
+1800348d2: 48 83 c4 30                 	addq	$0x30, %rsp
+1800348d6: 5b                          	popq	%rbx
+1800348d7: c3                          	retq
+1800348d8: cc                          	int3
+1800348d9: cc                          	int3
+1800348da: cc                          	int3
+1800348db: cc                          	int3
+1800348dc: cc                          	int3
+1800348dd: cc                          	int3
+1800348de: cc                          	int3
+1800348df: cc                          	int3
+1800348e0: 48 89 5c 24 10              	movq	%rbx, 0x10(%rsp)
+1800348e5: 55                          	pushq	%rbp
+1800348e6: 56                          	pushq	%rsi
+1800348e7: 57                          	pushq	%rdi
+1800348e8: 41 54                       	pushq	%r12
+1800348ea: 41 55                       	pushq	%r13
+1800348ec: 41 56                       	pushq	%r14
+1800348ee: 41 57                       	pushq	%r15
+1800348f0: 48 8d 6c 24 e9              	leaq	-0x17(%rsp), %rbp
+1800348f5: 48 81 ec b0 00 00 00        	subq	$0xb0, %rsp
+1800348fc: 48 8b 05 6d 49 22 00        	movq	0x22496d(%rip), %rax    # 0x180259270
+180034903: 48 33 c4                    	xorq	%rsp, %rax
+180034906: 48 89 45 0f                 	movq	%rax, 0xf(%rbp)
+18003490a: 4c 8b 6d 77                 	movq	0x77(%rbp), %r13
+18003490e: 45 33 f6                    	xorl	%r14d, %r14d
+180034911: 8b c1                       	movl	%ecx, %eax
+180034913: 89 4d af                    	movl	%ecx, -0x51(%rbp)
+180034916: 48 8b 4d 7f                 	movq	0x7f(%rbp), %rcx
+18003491a: 41 8b de                    	movl	%r14d, %ebx
+18003491d: 48 89 4d b7                 	movq	%rcx, -0x49(%rbp)
+180034921: 4c 89 45 bf                 	movq	%r8, -0x41(%rbp)
+180034925: 44 89 75 ab                 	movl	%r14d, -0x55(%rbp)
+180034929: 44 89 75 a7                 	movl	%r14d, -0x59(%rbp)
+18003492d: 85 c0                       	testl	%eax, %eax
+18003492f: 0f 84 21 01 00 00           	je	0x180034a56 <LMX_func_api_Get_Tag_CapabilityInfo+0x1d6>
+180034935: 4d 85 c0                    	testq	%r8, %r8
+180034938: 0f 84 18 01 00 00           	je	0x180034a56 <LMX_func_api_Get_Tag_CapabilityInfo+0x1d6>
+18003493e: 4d 85 ed                    	testq	%r13, %r13
+180034941: 0f 84 0f 01 00 00           	je	0x180034a56 <LMX_func_api_Get_Tag_CapabilityInfo+0x1d6>
+180034947: b9 07 91 ff ff              	movl	$0xffff9107, %ecx       # imm = 0xFFFF9107
+18003494c: 4c 89 75 dd                 	movq	%r14, -0x23(%rbp)
+180034950: 66 89 4d c7                 	movw	%cx, -0x39(%rbp)
+180034954: 48 8d 55 a7                 	leaq	-0x59(%rbp), %rdx
+180034958: b9 07 91 00 00              	movl	$0x9107, %ecx           # imm = 0x9107
+18003495d: 88 5d ed                    	movb	%bl, -0x13(%rbp)
+180034960: 4c 89 75 c9                 	movq	%r14, -0x37(%rbp)
+180034964: c7 45 e5 03 00 00 00        	movl	$0x3, -0x1b(%rbp)
+18003496b: 89 45 d1                    	movl	%eax, -0x2f(%rbp)
+18003496e: 4c 89 75 d5                 	movq	%r14, -0x2b(%rbp)
+180034972: e8 19 2a 00 00              	callq	0x180037390 <LMX_func_api_WB_Ctrl_WBSET+0xc10>
+180034977: 84 c0                       	testb	%al, %al
+180034979: 0f 84 d7 00 00 00           	je	0x180034a56 <LMX_func_api_Get_Tag_CapabilityInfo+0x1d6>
+18003497f: 8b 45 a7                    	movl	-0x59(%rbp), %eax
+180034982: bf 00 02 00 00              	movl	$0x200, %edi            # imm = 0x200
+180034987: 89 45 e9                    	movl	%eax, -0x17(%rbp)
+18003498a: 83 f8 03                    	cmpl	$0x3, %eax
+18003498d: 75 30                       	jne	0x1800349bf <LMX_func_api_Get_Tag_CapabilityInfo+0x13f>
+18003498f: be 00 02 10 00              	movl	$0x100200, %esi         # imm = 0x100200
+180034994: 8d 48 3f                    	leal	0x3f(%rax), %ecx
+180034997: 8b d6                       	movl	%esi, %edx
+180034999: 45 8b e6                    	movl	%r14d, %r12d
+18003499c: 45 8b fe                    	movl	%r14d, %r15d
+18003499f: ff 15 4b d9 16 00           	callq	*0x16d94b(%rip)         # 0x1801a22f0
+1800349a5: 48 8b d8                    	movq	%rax, %rbx
+1800349a8: 48 85 c0                    	testq	%rax, %rax
+1800349ab: 0f 84 a5 00 00 00           	je	0x180034a56 <LMX_func_api_Get_Tag_CapabilityInfo+0x1d6>
+1800349b1: 48 8b c8                    	movq	%rax, %rcx
+1800349b4: ff 15 26 d9 16 00           	callq	*0x16d926(%rip)         # 0x1801a22e0
+1800349ba: 4c 8b f0                    	movq	%rax, %r14
+1800349bd: eb 35                       	jmp	0x1800349f4 <LMX_func_api_Get_Tag_CapabilityInfo+0x174>
+1800349bf: 83 f8 05                    	cmpl	$0x5, %eax
+1800349c2: 75 08                       	jne	0x1800349cc <LMX_func_api_Get_Tag_CapabilityInfo+0x14c>
+1800349c4: 45 8b e6                    	movl	%r14d, %r12d
+1800349c7: 4d 8b fe                    	movq	%r14, %r15
+1800349ca: eb 25                       	jmp	0x1800349f1 <LMX_func_api_Get_Tag_CapabilityInfo+0x171>
+1800349cc: 48 8b d7                    	movq	%rdi, %rdx
+1800349cf: b9 42 00 00 00              	movl	$0x42, %ecx
+1800349d4: 44 8b e7                    	movl	%edi, %r12d
+1800349d7: ff 15 13 d9 16 00           	callq	*0x16d913(%rip)         # 0x1801a22f0
+1800349dd: 48 8b d8                    	movq	%rax, %rbx
+1800349e0: 48 85 c0                    	testq	%rax, %rax
+1800349e3: 74 71                       	je	0x180034a56 <LMX_func_api_Get_Tag_CapabilityInfo+0x1d6>
+1800349e5: 48 8b c8                    	movq	%rax, %rcx
+1800349e8: ff 15 f2 d8 16 00           	callq	*0x16d8f2(%rip)         # 0x1801a22e0
+1800349ee: 4c 8b f8                    	movq	%rax, %r15
+1800349f1: 41 8b f6                    	movl	%r14d, %esi
+1800349f4: 33 c0                       	xorl	%eax, %eax
+1800349f6: 4c 8d 4d ef                 	leaq	-0x11(%rbp), %r9
+1800349fa: 48 89 45 ff                 	movq	%rax, -0x1(%rbp)
+1800349fe: 48 8d 4d c7                 	leaq	-0x39(%rbp), %rcx
+180034a02: 89 45 07                    	movl	%eax, 0x7(%rbp)
+180034a05: 0f 57 c0                    	xorps	%xmm0, %xmm0
+180034a08: 66 89 45 0b                 	movw	%ax, 0xb(%rbp)
+180034a0c: 4d 8b c7                    	movq	%r15, %r8
+180034a0f: 88 45 0d                    	movb	%al, 0xd(%rbp)
+180034a12: 41 8b d4                    	movl	%r12d, %edx
+180034a15: 48 8b 45 b7                 	movq	-0x49(%rbp), %rax
+180034a19: 48 89 44 24 38              	movq	%rax, 0x38(%rsp)
+180034a1e: 48 8d 45 ab                 	leaq	-0x55(%rbp), %rax
+180034a22: 48 89 44 24 30              	movq	%rax, 0x30(%rsp)
+180034a27: 4c 89 74 24 28              	movq	%r14, 0x28(%rsp)
+180034a2c: 89 74 24 20                 	movl	%esi, 0x20(%rsp)
+180034a30: 0f 11 45 ef                 	movups	%xmm0, -0x11(%rbp)
+180034a34: e8 47 d5 01 00              	callq	0x180051f80 <LMX_func_api_ptpip_UpdateCer+0x44e0>
+180034a39: 8b f0                       	movl	%eax, %esi
+180034a3b: 84 c0                       	testb	%al, %al
+180034a3d: 75 40                       	jne	0x180034a7f <LMX_func_api_Get_Tag_CapabilityInfo+0x1ff>
+180034a3f: 48 85 db                    	testq	%rbx, %rbx
+180034a42: 74 12                       	je	0x180034a56 <LMX_func_api_Get_Tag_CapabilityInfo+0x1d6>
+180034a44: 48 8b cb                    	movq	%rbx, %rcx
+180034a47: ff 15 8b d8 16 00           	callq	*0x16d88b(%rip)         # 0x1801a22d8
+180034a4d: 48 8b cb                    	movq	%rbx, %rcx
+180034a50: ff 15 92 d8 16 00           	callq	*0x16d892(%rip)         # 0x1801a22e8
+180034a56: 32 c0                       	xorb	%al, %al
+180034a58: 48 8b 4d 0f                 	movq	0xf(%rbp), %rcx
+180034a5c: 48 33 cc                    	xorq	%rsp, %rcx
+180034a5f: e8 9c 67 16 00              	callq	0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>
+180034a64: 48 8b 9c 24 f8 00 00 00     	movq	0xf8(%rsp), %rbx
+180034a6c: 48 81 c4 b0 00 00 00        	addq	$0xb0, %rsp
+180034a73: 41 5f                       	popq	%r15
+180034a75: 41 5e                       	popq	%r14
+180034a77: 41 5d                       	popq	%r13
+180034a79: 41 5c                       	popq	%r12
+180034a7b: 5f                          	popq	%rdi
+180034a7c: 5e                          	popq	%rsi
+180034a7d: 5d                          	popq	%rbp
+180034a7e: c3                          	retq
+180034a7f: b8 01 20 00 00              	movl	$0x2001, %eax           # imm = 0x2001
+180034a84: 66 39 45 ef                 	cmpw	%ax, -0x11(%rbp)
+180034a88: 75 31                       	jne	0x180034abb <LMX_func_api_Get_Tag_CapabilityInfo+0x23b>
+180034a8a: 39 7d ab                    	cmpl	%edi, -0x55(%rbp)
+180034a8d: 49 8b d6                    	movq	%r14, %rdx
+180034a90: 48 8b 4d bf                 	movq	-0x41(%rbp), %rcx
+180034a94: 0f 42 7d ab                 	cmovbl	-0x55(%rbp), %edi
+180034a98: 44 8b c7                    	movl	%edi, %r8d
+180034a9b: e8 5e 78 16 00              	callq	0x18019c2fe <LMX_func_api_ptpip_UpdateCer+0x14e85e>
+180034aa0: 8b 55 af                    	movl	-0x51(%rbp), %edx
+180034aa3: 4c 8d 0d 26 51 1f 00        	leaq	0x1f5126(%rip), %r9     # 0x180229bd0
+180034aaa: 45 33 c0                    	xorl	%r8d, %r8d
+180034aad: 48 8d 0d dc 50 1f 00        	leaq	0x1f50dc(%rip), %rcx    # 0x180229b90
+180034ab4: e8 17 1f 00 00              	callq	0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>
+180034ab9: eb 02                       	jmp	0x180034abd <LMX_func_api_Get_Tag_CapabilityInfo+0x23d>
+180034abb: 33 ff                       	xorl	%edi, %edi
+180034abd: 48 8b cb                    	movq	%rbx, %rcx
+180034ac0: 41 89 7d 00                 	movl	%edi, (%r13)
+180034ac4: ff 15 0e d8 16 00           	callq	*0x16d80e(%rip)         # 0x1801a22d8
+180034aca: 48 8b cb                    	movq	%rbx, %rcx
+180034acd: ff 15 15 d8 16 00           	callq	*0x16d815(%rip)         # 0x1801a22e8
+180034ad3: 40 0f b6 c6                 	movzbl	%sil, %eax
+180034ad7: e9 7c ff ff ff              	jmp	0x180034a58 <LMX_func_api_Get_Tag_CapabilityInfo+0x1d8>
+180034adc: cc                          	int3
+180034add: cc                          	int3
+180034ade: cc                          	int3
+180034adf: cc                          	int3
+180034ae0: 48 89 5c 24 08              	movq	%rbx, 0x8(%rsp)
+180034ae5: 55                          	pushq	%rbp
+180034ae6: 56                          	pushq	%rsi
+180034ae7: 57                          	pushq	%rdi
+180034ae8: 41 54                       	pushq	%r12
+180034aea: 41 55                       	pushq	%r13
+180034aec: 41 56                       	pushq	%r14
+180034aee: 41 57                       	pushq	%r15
+180034af0: 48 8d 6c 24 e9              	leaq	-0x17(%rsp), %rbp
+180034af5: 48 81 ec b0 00 00 00        	subq	$0xb0, %rsp
+180034afc: 48 8b 05 6d 47 22 00        	movq	0x22476d(%rip), %rax    # 0x180259270
+180034b03: 48 33 c4                    	xorq	%rsp, %rax
+180034b06: 48 89 45 07                 	movq	%rax, 0x7(%rbp)
+180034b0a: 48 8b 55 7f                 	movq	0x7f(%rbp), %rdx
+180034b0e: 33 f6                       	xorl	%esi, %esi
+180034b10: 4c 8b 6d 77                 	movq	0x77(%rbp), %r13
+180034b14: 49 8b c0                    	movq	%r8, %rax
+180034b17: 41 8b f9                    	movl	%r9d, %edi
+180034b1a: 8b de                       	movl	%esi, %ebx
+180034b1c: 48 89 45 b7                 	movq	%rax, -0x49(%rbp)
+180034b20: 48 89 55 af                 	movq	%rdx, -0x51(%rbp)
+180034b24: 89 75 ab                    	movl	%esi, -0x55(%rbp)
+180034b27: 89 75 a7                    	movl	%esi, -0x59(%rbp)
+180034b2a: 85 c9                       	testl	%ecx, %ecx
+180034b2c: 0f 84 2a 01 00 00           	je	0x180034c5c <LMX_func_api_Get_Tag_CapabilityInfo+0x3dc>
+180034b32: 48 85 c0                    	testq	%rax, %rax
+180034b35: 0f 84 21 01 00 00           	je	0x180034c5c <LMX_func_api_Get_Tag_CapabilityInfo+0x3dc>
+180034b3b: 4d 85 ed                    	testq	%r13, %r13
+180034b3e: 0f 84 18 01 00 00           	je	0x180034c5c <LMX_func_api_Get_Tag_CapabilityInfo+0x3dc>
+180034b44: 45 85 c9                    	testl	%r9d, %r9d
+180034b47: 0f 84 0f 01 00 00           	je	0x180034c5c <LMX_func_api_Get_Tag_CapabilityInfo+0x3dc>
+180034b4d: b8 08 91 ff ff              	movl	$0xffff9108, %eax       # imm = 0xFFFF9108
+180034b52: 89 4d c9                    	movl	%ecx, -0x37(%rbp)
+180034b55: b9 08 91 00 00              	movl	$0x9108, %ecx           # imm = 0x9108
+180034b5a: 66 89 45 bf                 	movw	%ax, -0x41(%rbp)
+180034b5e: 48 8d 55 a7                 	leaq	-0x59(%rbp), %rdx
+180034b62: 48 89 75 d5                 	movq	%rsi, -0x2b(%rbp)
+180034b66: 88 5d e5                    	movb	%bl, -0x1b(%rbp)
+180034b69: 48 89 75 c1                 	movq	%rsi, -0x3f(%rbp)
+180034b6d: c7 45 dd 03 00 00 00        	movl	$0x3, -0x23(%rbp)
+180034b74: 48 89 75 cd                 	movq	%rsi, -0x33(%rbp)
+180034b78: e8 13 28 00 00              	callq	0x180037390 <LMX_func_api_WB_Ctrl_WBSET+0xc10>
+180034b7d: 84 c0                       	testb	%al, %al
+180034b7f: 0f 84 d7 00 00 00           	je	0x180034c5c <LMX_func_api_Get_Tag_CapabilityInfo+0x3dc>
+180034b85: 8b 45 a7                    	movl	-0x59(%rbp), %eax
+180034b88: 89 45 e1                    	movl	%eax, -0x1f(%rbp)
+180034b8b: 83 f8 03                    	cmpl	$0x3, %eax
+180034b8e: 75 33                       	jne	0x180034bc3 <LMX_func_api_Get_Tag_CapabilityInfo+0x343>
+180034b90: 44 8d b7 00 00 10 00        	leal	0x100000(%rdi), %r14d
+180034b97: 44 8b e6                    	movl	%esi, %r12d
+180034b9a: 41 8b d6                    	movl	%r14d, %edx
+180034b9d: 8d 4e 42                    	leal	0x42(%rsi), %ecx
+180034ba0: 44 8b fe                    	movl	%esi, %r15d
+180034ba3: ff 15 47 d7 16 00           	callq	*0x16d747(%rip)         # 0x1801a22f0
+180034ba9: 48 8b d8                    	movq	%rax, %rbx
+180034bac: 48 85 c0                    	testq	%rax, %rax
+180034baf: 0f 84 a7 00 00 00           	je	0x180034c5c <LMX_func_api_Get_Tag_CapabilityInfo+0x3dc>
+180034bb5: 48 8b c8                    	movq	%rax, %rcx
+180034bb8: ff 15 22 d7 16 00           	callq	*0x16d722(%rip)         # 0x1801a22e0
+180034bbe: 48 8b f0                    	movq	%rax, %rsi
+180034bc1: eb 35                       	jmp	0x180034bf8 <LMX_func_api_Get_Tag_CapabilityInfo+0x378>
+180034bc3: 83 f8 05                    	cmpl	$0x5, %eax
+180034bc6: 75 08                       	jne	0x180034bd0 <LMX_func_api_Get_Tag_CapabilityInfo+0x350>
+180034bc8: 44 8b e6                    	movl	%esi, %r12d
+180034bcb: 4c 8b fe                    	movq	%rsi, %r15
+180034bce: eb 25                       	jmp	0x180034bf5 <LMX_func_api_Get_Tag_CapabilityInfo+0x375>
+180034bd0: 48 8b d7                    	movq	%rdi, %rdx
+180034bd3: b9 42 00 00 00              	movl	$0x42, %ecx
+180034bd8: 44 8b e7                    	movl	%edi, %r12d
+180034bdb: ff 15 0f d7 16 00           	callq	*0x16d70f(%rip)         # 0x1801a22f0
+180034be1: 48 8b d8                    	movq	%rax, %rbx
+180034be4: 48 85 c0                    	testq	%rax, %rax
+180034be7: 74 73                       	je	0x180034c5c <LMX_func_api_Get_Tag_CapabilityInfo+0x3dc>
+180034be9: 48 8b c8                    	movq	%rax, %rcx
+180034bec: ff 15 ee d6 16 00           	callq	*0x16d6ee(%rip)         # 0x1801a22e0
+180034bf2: 4c 8b f8                    	movq	%rax, %r15
+180034bf5: 44 8b f6                    	movl	%esi, %r14d
+180034bf8: 33 c0                       	xorl	%eax, %eax
+180034bfa: 4c 8d 4d e7                 	leaq	-0x19(%rbp), %r9
+180034bfe: 48 89 45 f7                 	movq	%rax, -0x9(%rbp)
+180034c02: 48 8d 4d bf                 	leaq	-0x41(%rbp), %rcx
+180034c06: 89 45 ff                    	movl	%eax, -0x1(%rbp)
+180034c09: 0f 57 c0                    	xorps	%xmm0, %xmm0
+180034c0c: 66 89 45 03                 	movw	%ax, 0x3(%rbp)
+180034c10: 4d 8b c7                    	movq	%r15, %r8
+180034c13: 88 45 05                    	movb	%al, 0x5(%rbp)
+180034c16: 41 8b d4                    	movl	%r12d, %edx
+180034c19: 48 8b 45 af                 	movq	-0x51(%rbp), %rax
+180034c1d: 48 89 44 24 38              	movq	%rax, 0x38(%rsp)
+180034c22: 48 8d 45 ab                 	leaq	-0x55(%rbp), %rax
+180034c26: 48 89 44 24 30              	movq	%rax, 0x30(%rsp)
+180034c2b: 48 89 74 24 28              	movq	%rsi, 0x28(%rsp)
+180034c30: 44 89 74 24 20              	movl	%r14d, 0x20(%rsp)
+180034c35: 0f 11 45 e7                 	movups	%xmm0, -0x19(%rbp)
+180034c39: e8 42 d3 01 00              	callq	0x180051f80 <LMX_func_api_ptpip_UpdateCer+0x44e0>
+180034c3e: 44 8b f0                    	movl	%eax, %r14d
+180034c41: 84 c0                       	testb	%al, %al
+180034c43: 75 40                       	jne	0x180034c85 <LMX_func_api_Get_Tag_CapabilityInfo+0x405>
+180034c45: 48 85 db                    	testq	%rbx, %rbx
+180034c48: 74 12                       	je	0x180034c5c <LMX_func_api_Get_Tag_CapabilityInfo+0x3dc>
+180034c4a: 48 8b cb                    	movq	%rbx, %rcx
+180034c4d: ff 15 85 d6 16 00           	callq	*0x16d685(%rip)         # 0x1801a22d8
+180034c53: 48 8b cb                    	movq	%rbx, %rcx
+180034c56: ff 15 8c d6 16 00           	callq	*0x16d68c(%rip)         # 0x1801a22e8
+180034c5c: 32 c0                       	xorb	%al, %al
+180034c5e: 48 8b 4d 07                 	movq	0x7(%rbp), %rcx
+180034c62: 48 33 cc                    	xorq	%rsp, %rcx
+180034c65: e8 96 65 16 00              	callq	0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>
+180034c6a: 48 8b 9c 24 f0 00 00 00     	movq	0xf0(%rsp), %rbx
+180034c72: 48 81 c4 b0 00 00 00        	addq	$0xb0, %rsp
+180034c79: 41 5f                       	popq	%r15
+180034c7b: 41 5e                       	popq	%r14
+180034c7d: 41 5d                       	popq	%r13
+180034c7f: 41 5c                       	popq	%r12
+180034c81: 5f                          	popq	%rdi
+180034c82: 5e                          	popq	%rsi
+180034c83: 5d                          	popq	%rbp
+180034c84: c3                          	retq
+180034c85: b8 01 20 00 00              	movl	$0x2001, %eax           # imm = 0x2001
+180034c8a: 66 39 45 e7                 	cmpw	%ax, -0x19(%rbp)
+180034c8e: 75 18                       	jne	0x180034ca8 <LMX_func_api_Get_Tag_CapabilityInfo+0x428>
+180034c90: 3b 7d ab                    	cmpl	-0x55(%rbp), %edi
+180034c93: 48 8b d6                    	movq	%rsi, %rdx
+180034c96: 48 8b 4d b7                 	movq	-0x49(%rbp), %rcx
+180034c9a: 0f 47 7d ab                 	cmoval	-0x55(%rbp), %edi
+180034c9e: 44 8b c7                    	movl	%edi, %r8d
+180034ca1: e8 58 76 16 00              	callq	0x18019c2fe <LMX_func_api_ptpip_UpdateCer+0x14e85e>
+180034ca6: eb 02                       	jmp	0x180034caa <LMX_func_api_Get_Tag_CapabilityInfo+0x42a>
+180034ca8: 33 ff                       	xorl	%edi, %edi
+180034caa: 48 8b cb                    	movq	%rbx, %rcx
+180034cad: 41 89 7d 00                 	movl	%edi, (%r13)
+180034cb1: ff 15 21 d6 16 00           	callq	*0x16d621(%rip)         # 0x1801a22d8
+180034cb7: 48 8b cb                    	movq	%rbx, %rcx
+180034cba: ff 15 28 d6 16 00           	callq	*0x16d628(%rip)         # 0x1801a22e8
+180034cc0: 41 0f b6 c6                 	movzbl	%r14b, %eax
+180034cc4: eb 98                       	jmp	0x180034c5e <LMX_func_api_Get_Tag_CapabilityInfo+0x3de>
+180034cc6: cc                          	int3
+180034cc7: cc                          	int3
+180034cc8: cc                          	int3
+180034cc9: cc                          	int3
+180034cca: cc                          	int3
+180034ccb: cc                          	int3
+180034ccc: cc                          	int3
+180034ccd: cc                          	int3
+180034cce: cc                          	int3
+180034ccf: cc                          	int3
+180034cd0: 40 53                       	pushq	%rbx
+180034cd2: 48 81 ec 90 00 00 00        	subq	$0x90, %rsp
+180034cd9: 45 8b d0                    	movl	%r8d, %r10d
+180034cdc: 49 8b d9                    	movq	%r9, %rbx
+180034cdf: 4c 8b c2                    	movq	%rdx, %r8
+180034ce2: 4c 8d 4c 24 20              	leaq	0x20(%rsp), %r9
+180034ce7: 41 8b d2                    	movl	%r10d, %edx
+180034cea: e8 91 f7 ff ff              	callq	0x180034480 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x450>
+180034cef: 84 c0                       	testb	%al, %al
+180034cf1: 75 0c                       	jne	0x180034cff <LMX_func_api_Get_Tag_CapabilityInfo+0x47f>
+180034cf3: 48 8d 0d 0e b4 1e 00        	leaq	0x1eb40e(%rip), %rcx    # 0x180220108
+180034cfa: e9 fb 00 00 00              	jmp	0x180034dfa <LMX_func_api_Get_Tag_CapabilityInfo+0x57a>
+180034cff: 48 8b 4c 24 20              	movq	0x20(%rsp), %rcx
+180034d04: 48 85 c9                    	testq	%rcx, %rcx
+180034d07: 0f 84 e6 00 00 00           	je	0x180034df3 <LMX_func_api_Get_Tag_CapabilityInfo+0x573>
+180034d0d: 8b 01                       	movl	(%rcx), %eax
+180034d0f: 4c 8d 4c 24 50              	leaq	0x50(%rsp), %r9
+180034d14: 89 44 24 28                 	movl	%eax, 0x28(%rsp)
+180034d18: 48 8d 54 24 28              	leaq	0x28(%rsp), %rdx
+180034d1d: 8b 41 04                    	movl	0x4(%rcx), %eax
+180034d20: 41 b8 01 00 00 00           	movl	$0x1, %r8d
+180034d26: 89 44 24 2c                 	movl	%eax, 0x2c(%rsp)
+180034d2a: 8b 41 08                    	movl	0x8(%rcx), %eax
+180034d2d: 89 44 24 30                 	movl	%eax, 0x30(%rsp)
+180034d31: 8b 41 0c                    	movl	0xc(%rcx), %eax
+180034d34: 89 44 24 34                 	movl	%eax, 0x34(%rsp)
+180034d38: 8b 41 10                    	movl	0x10(%rcx), %eax
+180034d3b: 89 44 24 38                 	movl	%eax, 0x38(%rsp)
+180034d3f: 8b 41 14                    	movl	0x14(%rcx), %eax
+180034d42: 89 44 24 3c                 	movl	%eax, 0x3c(%rsp)
+180034d46: 8b 41 18                    	movl	0x18(%rcx), %eax
+180034d49: 89 44 24 40                 	movl	%eax, 0x40(%rsp)
+180034d4d: e8 0e f8 ff ff              	callq	0x180034560 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x530>
+180034d52: 84 c0                       	testb	%al, %al
+180034d54: 75 0c                       	jne	0x180034d62 <LMX_func_api_Get_Tag_CapabilityInfo+0x4e2>
+180034d56: 48 8d 0d bb b3 1e 00        	leaq	0x1eb3bb(%rip), %rcx    # 0x180220118
+180034d5d: e9 98 00 00 00              	jmp	0x180034dfa <LMX_func_api_Get_Tag_CapabilityInfo+0x57a>
+180034d62: 8b 44 24 68                 	movl	0x68(%rsp), %eax
+180034d66: 83 f8 04                    	cmpl	$0x4, %eax
+180034d69: 74 48                       	je	0x180034db3 <LMX_func_api_Get_Tag_CapabilityInfo+0x533>
+180034d6b: 83 f8 06                    	cmpl	$0x6, %eax
+180034d6e: 75 78                       	jne	0x180034de8 <LMX_func_api_Get_Tag_CapabilityInfo+0x568>
+180034d70: 8b 4c 24 74                 	movl	0x74(%rsp), %ecx
+180034d74: 33 c0                       	xorl	%eax, %eax
+180034d76: 4c 8b 44 24 78              	movq	0x78(%rsp), %r8
+180034d7b: 66 89 0b                    	movw	%cx, (%rbx)
+180034d7e: 66 3b c1                    	cmpw	%cx, %ax
+180034d81: 73 65                       	jae	0x180034de8 <LMX_func_api_Get_Tag_CapabilityInfo+0x568>
+180034d83: 0f 1f 40 00                 	nopl	(%rax)
+180034d87: 66 0f 1f 84 00 00 00 00 00  	nopw	(%rax,%rax)
+180034d90: 41 0f b7 08                 	movzwl	(%r8), %ecx
+180034d94: 4d 8d 40 04                 	leaq	0x4(%r8), %r8
+180034d98: 0f b7 d0                    	movzwl	%ax, %edx
+180034d9b: 66 ff c0                    	incw	%ax
+180034d9e: 66 89 4c 53 02              	movw	%cx, 0x2(%rbx,%rdx,2)
+180034da3: 66 3b 03                    	cmpw	(%rbx), %ax
+180034da6: 72 e8                       	jb	0x180034d90 <LMX_func_api_Get_Tag_CapabilityInfo+0x510>
+180034da8: b0 01                       	movb	$0x1, %al
+180034daa: 48 81 c4 90 00 00 00        	addq	$0x90, %rsp
+180034db1: 5b                          	popq	%rbx
+180034db2: c3                          	retq
+180034db3: 8b 4c 24 74                 	movl	0x74(%rsp), %ecx
+180034db7: 33 c0                       	xorl	%eax, %eax
+180034db9: 4c 8b 44 24 78              	movq	0x78(%rsp), %r8
+180034dbe: 66 89 0b                    	movw	%cx, (%rbx)
+180034dc1: 66 3b c1                    	cmpw	%cx, %ax
+180034dc4: 73 22                       	jae	0x180034de8 <LMX_func_api_Get_Tag_CapabilityInfo+0x568>
+180034dc6: 66 66 0f 1f 84 00 00 00 00 00       	nopw	(%rax,%rax)
+180034dd0: 41 0f b7 08                 	movzwl	(%r8), %ecx
+180034dd4: 4d 8d 40 02                 	leaq	0x2(%r8), %r8
+180034dd8: 0f b7 d0                    	movzwl	%ax, %edx
+180034ddb: 66 ff c0                    	incw	%ax
+180034dde: 66 89 4c 53 02              	movw	%cx, 0x2(%rbx,%rdx,2)
+180034de3: 66 3b 03                    	cmpw	(%rbx), %ax
+180034de6: 72 e8                       	jb	0x180034dd0 <LMX_func_api_Get_Tag_CapabilityInfo+0x550>
+180034de8: b0 01                       	movb	$0x1, %al
+180034dea: 48 81 c4 90 00 00 00        	addq	$0x90, %rsp
+180034df1: 5b                          	popq	%rbx
+180034df2: c3                          	retq
+180034df3: 48 8d 0d ee b3 1e 00        	leaq	0x1eb3ee(%rip), %rcx    # 0x1802201e8
+180034dfa: 48 8d 15 27 4e 1f 00        	leaq	0x1f4e27(%rip), %rdx    # 0x180229c28
+180034e01: e8 ca 1b 00 00              	callq	0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>
+180034e06: 32 c0                       	xorb	%al, %al
+180034e08: 48 81 c4 90 00 00 00        	addq	$0x90, %rsp
+180034e0f: 5b                          	popq	%rbx
+180034e10: c3                          	retq
+180034e11: cc                          	int3
+180034e12: cc                          	int3
+180034e13: cc                          	int3
+180034e14: cc                          	int3
+180034e15: cc                          	int3
+180034e16: cc                          	int3
+180034e17: cc                          	int3
+180034e18: cc                          	int3
+180034e19: cc                          	int3
+180034e1a: cc                          	int3
+180034e1b: cc                          	int3
+180034e1c: cc                          	int3
+180034e1d: cc                          	int3
+180034e1e: cc                          	int3
+180034e1f: cc                          	int3
+180034e20: 40 53                       	pushq	%rbx
+180034e22: 48 81 ec 90 00 00 00        	subq	$0x90, %rsp
+180034e29: 45 8b d0                    	movl	%r8d, %r10d
+180034e2c: 49 8b d9                    	movq	%r9, %rbx
+180034e2f: 4c 8b c2                    	movq	%rdx, %r8
+180034e32: 4c 8d 4c 24 20              	leaq	0x20(%rsp), %r9
+180034e37: 41 8b d2                    	movl	%r10d, %edx
+180034e3a: e8 41 f6 ff ff              	callq	0x180034480 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x450>
+180034e3f: 84 c0                       	testb	%al, %al
+180034e41: 75 0c                       	jne	0x180034e4f <LMX_func_api_Get_Tag_CapabilityInfo+0x5cf>
+180034e43: 48 8d 0d be b2 1e 00        	leaq	0x1eb2be(%rip), %rcx    # 0x180220108
+180034e4a: e9 9b 00 00 00              	jmp	0x180034eea <LMX_func_api_Get_Tag_CapabilityInfo+0x66a>
+180034e4f: 48 8b 4c 24 20              	movq	0x20(%rsp), %rcx
+180034e54: 48 85 c9                    	testq	%rcx, %rcx
+180034e57: 0f 84 86 00 00 00           	je	0x180034ee3 <LMX_func_api_Get_Tag_CapabilityInfo+0x663>
+180034e5d: 8b 01                       	movl	(%rcx), %eax
+180034e5f: 4c 8d 4c 24 50              	leaq	0x50(%rsp), %r9
+180034e64: 89 44 24 28                 	movl	%eax, 0x28(%rsp)
+180034e68: 48 8d 54 24 28              	leaq	0x28(%rsp), %rdx
+180034e6d: 8b 41 04                    	movl	0x4(%rcx), %eax
+180034e70: 41 b8 01 00 00 00           	movl	$0x1, %r8d
+180034e76: 89 44 24 2c                 	movl	%eax, 0x2c(%rsp)
+180034e7a: 8b 41 08                    	movl	0x8(%rcx), %eax
+180034e7d: 89 44 24 30                 	movl	%eax, 0x30(%rsp)

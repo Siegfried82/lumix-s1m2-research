@@ -1,0 +1,2355 @@
+{
+  "apk_path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/com.panasonic.jp.lumixlab.apk",
+  "apk_sha256": "6ba873110d201675a905f7dac39bcda3291674e7440a484d6d5bd1a78447115f",
+  "dex_name": "classes2.dex",
+  "dex_sha256": "4147c194d9814bac0f83e2120705b6e03524a3425d2492eafdbf547898736552",
+  "dex_size_bytes": 5047724,
+  "source_file_sha256": {
+    "H5/a.java": "8deb8c0d986ad1f3f2671f11834bd767f42b30d2c9f3f72de3a763c5022e75cc",
+    "H5/c.java": "b72a75213cd74ea2ce9a6fba3c290e0e53236623a1269b6959ab400544cd7fd1",
+    "H5/d.java": "84c644f0b4d20a4e452cc8dcfdb743f976b43fbd5aabb727e87f2f635c142725",
+    "H5/g.java": "e36bd2fe21619ce2ca1fe0c0e0efe394ad9f813916e53949c215fd886e1ebbeb",
+    "H5/h.java": "f0998a8d04e3646af86e4ec0123d83b960c8db05e4a156fa96a47675d054db7f",
+    "H5/j.java": "6402356521e7f5b9afdf12bc0ae37889d00ad6de6e53141b03bba6ca31905257",
+    "I5/a.java": "bc74398d984039e41f94bd80fe96e71d4d4c3e3576de73d49f88254ab83ff156",
+    "I5/b.java": "845ea67409a39a667657fd41c484781d80f4ca89d9321cada1bfbd5fb840bcdc",
+    "I5/c.java": "f31e474820e771cb0d9ddbfc21e37260cd9da2db26c92be1d7110bffdc8e1ccc",
+    "I5/d.java": "914d4b3527d94c30446ff9caff9fede1192860ccf96c0eca36ab86e1a3b95095",
+    "I5/e.java": "fbba8f0acc70b165d879e1c947a1c6e02a40c49ca97b58aa8c2aaed2d0ba0cfd",
+    "K5/C0643o.java": "31f6bad476f540bb5047661e56fb2c7d2b4b0619686432183ad9dbc46e74fde5",
+    "N6/c.java": "a8d7d89af2f6e9919d3a3a30921a48d9244cdcd9df26dbf5917cf5d5483bc22a",
+    "G5/e.java": "67de38d4442fce4aa0929f5c6ea222deb776ec992007cb6537e29962e3df2203",
+    "com/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment.java": "d31c5a650e61c2fb3a79c214ea50c38690e5783bfedf868e2b7de98425c2058e",
+    "com/panasonic/jp/lumixlab/controller/fragment/CameraFragment.java": "f7ca6569b339d334aa2d86f8cb20358fbc9efb4854073c2a1f00fbf66cb7b419",
+    "p051e5/C1584x.java": "a01e44996b7f4b13064e704649f576c6cca1ffcba1b4a7a8208ddcf46d323729",
+    "p051e5/ViewOnClickListenerC1537l.java": "731db20c9b7047ccb8d10fc7b2d6707981a317578a7ebcc9a477f48d37354019",
+    "p062f5/C.java": "8ed61061ca446ebc7c8941a3f1d4ffaae13db73f56e5e79de34247e154d27428",
+    "p062f5/C1704l1.java": "67d0951e3deafcd10daebb2929313dbd2ea2e75ad04da8277d197e682023effc",
+    "p062f5/Z3.java": "d2d1dc4b802631779c5ebbdc5f54ede01a11ef10ebedd74770b5ef7dfef59a1b",
+    "p281z5/C2438a2.java": "afbfb288da98bcb640d933ab54ef576bffaa3d95f6af1194372cc674672f628c",
+    "p281z5/C2458c2.java": "223eb91992599a4689495f237790078b8b153c9efb0a46e542a0996917aa1412",
+    "p281z5/C2468d2.java": "2971e8d1c95e9fe5d6f925aee0cd3d88102016e8fea8d725778d405d5ec9768f",
+    "p281z5/C2478e2.java": "f7757f95c6965b0e953045fb02512d4fe4c31656fd347abbc617aa3d73a905c6",
+    "p281z5/C2516i0.java": "0f930ea6496386f74cc34c7dcc3a6cb1a9abd7435075ad52b869f82d2eeb70a7",
+    "p281z5/C2518i2.java": "e0e2477890fecbae4df06d2a952fcfaadcf148212d6a9236fe3562d14ee12694",
+    "p281z5/C2537k1.java": "85663633b42a04763d36ff4112556a47106c928e16ec0ca8ef7959caacc70c7c",
+    "p281z5/C2538k2.java": "79322ad693be6ec455cd86f7ece85491a36824f6e1acd9fd19778e1b53566dca",
+    "p281z5/C2568n2.java": "67400fcdc2fa63cde2ddaf51ffbdbfb0b1fd54e1b9d51a20d276d21cac224ece",
+    "p281z5/C2588p2.java": "0139d4865247aa44d92758f62457e56daa73385f6da41bfdbb46fc87efb23020",
+    "p281z5/C2598q2.java": "12e55866cff2ccec213a11683632d6f2eb766b501564dbd0f15628320fe180c5",
+    "p281z5/C2607r2.java": "6d48e998c70f1548fa7eba4734e3c22089392b7f8258d191ec242752d615c1bf",
+    "p281z5/C2614s.java": "7c7b780db6b8d8f84b93e3b356c1047852eaef6f2ef902bf1cb030fe3d86de4f",
+    "p281z5/C2617s2.java": "22e717e1283f107f4ca7ca486b1201e55a24698d09453ee241375bc3aec7ae5f",
+    "p281z5/C2626t1.java": "ebcc7ffb0feaf72e1a52259de32b65b2178aae2efe05f9c816a1252a89ee23be",
+    "p281z5/C2636u1.java": "4654ffff7bc9172724981bf05d705aff62ca9d4e265c2164606259d3feb18ea0",
+    "p281z5/C2646v1.java": "f7e7274ce0ef96c094f41249f30d061ac83f67f2e3443c68b057d96c9df50e8e",
+    "p281z5/C2656w1.java": "1c949f37b86effa1d77dc5af40bc31c3265192e0e074741e8f5ef83fba29ab4d",
+    "p281z5/C2657w2.java": "5c280d894d550cdb4fc85b7f72493fe549786dc95d9784849a81f6854738777b",
+    "p281z5/C2665x0.java": "c9ac0f6e59fc8c86ae88a17e0254e12bb0b16df59e22d00ba7cff14276aef3bb",
+    "p281z5/C2666x1.java": "4794d055f3adf41bdb75374bc6094d9af3b7f81735c815c7ae4b02159083f166",
+    "p281z5/C2674y.java": "bb22b777414d228038265234dc8dd7e5e632d2c375dc384f7fa7d2c9a911eff6",
+    "p281z5/C2686z1.java": "5965eeb5a209a71a261584924909c360e636bb3470cd6f4a68b62e86ac1320f0",
+    "p281z5/D.java": "1c67f2de2a7f66231ca795bcbbd04e3aab29be19ab57896117478c5eae1f837b",
+    "p281z5/D1.java": "fd55810f6de75bc47c3e193c8247998d38bb72c664a68e83c88ef1f8521a90b6",
+    "p281z5/F1.java": "37dd4bb8c9279d24c544b38ecfcd0f4bf642a65d6c3ac987f78470737dedd80d",
+    "p281z5/G1.java": "8d1678c79005cca03e820813722ad2bfde362ca04666520b8ec9ef8f7c27f67c",
+    "p281z5/H1.java": "2d98ad6152822a3e0cfa787066bf5784b0ab7d8d316ec4c0b3c502ddd08bdc0e",
+    "p281z5/I1.java": "2725155af504cb0cd8e1574b89cbe7dc0982822eda6a44d809f6f9237d803332",
+    "p281z5/K1.java": "4fc12e693645006c4a5318f97636afb61adaf777d6e6293dc43d9198a52f9846",
+    "p281z5/L1.java": "ad71e337a7ea2a17b1c85e8ee9a7d9637185c793c50b8b801cbd49f50eb33917",
+    "p281z5/M1.java": "5dfceec97e14b6d5b1f1eb8bf0d8eefb6301d541b657ce7c55a99e808506244e",
+    "p281z5/N1.java": "e71634ee4a41c4617d4f69d81d607592c8c4e3e298402f2b6e3dd1fd0b244898",
+    "p281z5/Q1.java": "6a588f26ba993d5dac9c4583088654c817cb3aaa75647a592a3ffe93c3d8481d",
+    "p281z5/RunnableC2527j1.java": "8f7c70a5a7f6d83b55b8f31e26bf2df47678c89ae55eac53317decec51232036",
+    "p281z5/RunnableC2548l2.java": "932cd11eb758e50743a92d00f745296bd4fea6647aa70a6b351e326c31600b40",
+    "p281z5/RunnableC2577o1.java": "c8ad02446a4ef746f85dc5d4925b34846001001041fee318f80d688edcaaa982",
+    "p281z5/RunnableC2616s1.java": "f2c8f0fe7bfd9175810c91543fea04fe617cfb9b5633570c28415598ba942fb6",
+    "p281z5/RunnableC2627t2.java": "13517aae81b40451753be791b174d479441fa35eb6ae3607566927462a2676a1",
+    "p281z5/RunnableC2667x2.java": "ceabf1164cde4d0483a5637a2a14fde19561be066a653538cebd7503e5fa33e7",
+    "p281z5/S1.java": "a03dc837b9709cc0780bba30cc3a3624392d55e179f674fd7d86d9b444cd315f",
+    "p281z5/T1.java": "5af8ef4ab0ab66226cce3a33a9a853b6e061558a8da4e267c9eabaa1b9dd7b5c",
+    "p281z5/U1.java": "d47b4a73995a7d91bb849731019cda82e8d863d02c9ef4b6c652562c1043c4aa",
+    "p281z5/V1.java": "fc1edccff9a7f3210003517d9dabb27be85e62aa809868974df653f825740b65",
+    "p281z5/W1.java": "fa7b6ee95e7cd533f3e82da2ad8f7fb4f6e76cfbf13514dc9d8e790e0ca42fd4",
+    "p281z5/X1.java": "214a541ba6d1d3fc4f2ca702ff0d6940fc6bd4d7d6c85fc3b6f2f95cc63dfb05",
+    "p281z5/Z1.java": "c9be4667e96394f8e305952fe0352011f9fa7c96fc98d57766931c4cfa3ea48d",
+    "p281z5/q9.java": "bd820d64ba2e94e58b9cf7ffebc19e043fabe74b5af08d2b30b0baccb827c7c5"
+  },
+  "crypto_roundtrip_test": {
+    "key_hex": "12345678",
+    "plaintext": "LumixPass123",
+    "framed_hex": "0c4c756d697850617373313233000000ffffffff",
+    "obfuscated_hex": "7f411a7473642e112005250b1234564bedcba987",
+    "deobfuscated_raw_hex": "0c4c756d697850617373313233000000ffffffff",
+    "recovered_plaintext": "LumixPass123",
+    "symmetric_inverse_verified": true
+  },
+  "dex_spot_checks": {
+    "LH5/g;->onScanResult": {
+      "registers_size": 22,
+      "ins_size": 3,
+      "outs_size": 8,
+      "insns_units": 539,
+      "events": [
+        {
+          "pc": 3,
+          "op": "invoke_0x75",
+          "method": "Landroid/bluetooth/le/ScanCallback;->onScanResult(ILandroid/bluetooth/le/ScanResult;)V"
+        },
+        {
+          "pc": 6,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 10,
+          "op": "invoke_0x71",
+          "method": "Ljava/time/Instant;->now()Ljava/time/Instant;"
+        },
+        {
+          "pc": 14,
+          "op": "invoke_0x6e",
+          "method": "Ljava/time/Instant;->toEpochMilli()J"
+        },
+        {
+          "pc": 18,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->setBluetoothScanCallbackTimestamp(J)V"
+        },
+        {
+          "pc": 23,
+          "op": "invoke_0x74",
+          "method": "Landroid/bluetooth/le/ScanResult;->getDevice()Landroid/bluetooth/BluetoothDevice;"
+        },
+        {
+          "pc": 29,
+          "op": "invoke_0x74",
+          "method": "Landroid/bluetooth/le/ScanResult;->getScanRecord()Landroid/bluetooth/le/ScanRecord;"
+        },
+        {
+          "pc": 35,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 39,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->isAllowBleScanning()Z"
+        },
+        {
+          "pc": 47,
+          "op": "invoke_0x74",
+          "method": "Landroid/bluetooth/le/ScanResult;->getScanRecord()Landroid/bluetooth/le/ScanRecord;"
+        },
+        {
+          "pc": 51,
+          "op": "invoke_0x6e",
+          "method": "Landroid/bluetooth/le/ScanRecord;->getDeviceName()Ljava/lang/String;"
+        },
+        {
+          "pc": 55,
+          "op": "invoke_0x71",
+          "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+        },
+        {
+          "pc": 62,
+          "op": "type_op_0x1c",
+          "type": "Lcom/panasonic/jp/lumixlab/util/G0;"
+        },
+        {
+          "pc": 66,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/String;->getBytes()[B"
+        },
+        {
+          "pc": 82,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/util/J0;->a(B)Ljava/lang/String;"
+        },
+        {
+          "pc": 90,
+          "op": "invoke_0x71",
+          "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+        },
+        {
+          "pc": 96,
+          "op": "invoke_0x74",
+          "method": "Landroid/bluetooth/le/ScanResult;->getScanRecord()Landroid/bluetooth/le/ScanRecord;"
+        },
+        {
+          "pc": 100,
+          "op": "invoke_0x6e",
+          "method": "Landroid/bluetooth/le/ScanRecord;->getManufacturerSpecificData()Landroid/util/SparseArray;"
+        },
+        {
+          "pc": 104,
+          "op": "invoke_0x74",
+          "method": "Landroid/bluetooth/le/ScanResult;->getScanRecord()Landroid/bluetooth/le/ScanRecord;"
+        },
+        {
+          "pc": 108,
+          "op": "invoke_0x6e",
+          "method": "Landroid/bluetooth/le/ScanRecord;->getServiceUuids()Ljava/util/List;"
+        },
+        {
+          "pc": 112,
+          "op": "sget/sput_0x62",
+          "field": "Lcom/panasonic/jp/lumixlab/util/v;->a:Ljava/lang/Boolean;"
+        },
+        {
+          "pc": 116,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/List;->isEmpty()Z"
+        },
+        {
+          "pc": 122,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/List;->iterator()Ljava/util/Iterator;"
+        },
+        {
+          "pc": 126,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/Iterator;->hasNext()Z"
+        },
+        {
+          "pc": 132,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+        },
+        {
+          "pc": 136,
+          "op": "type_op_0x1f",
+          "type": "Landroid/os/ParcelUuid;"
+        },
+        {
+          "pc": 140,
+          "op": "invoke_0x6e",
+          "method": "Landroid/os/ParcelUuid;->getUuid()Ljava/util/UUID;"
+        },
+        {
+          "pc": 146,
+          "op": "invoke_0x6e",
+          "method": "Landroid/os/ParcelUuid;->getUuid()Ljava/util/UUID;"
+        },
+        {
+          "pc": 150,
+          "op": "invoke_0x6e",
+          "method": "Ljava/util/UUID;->toString()Ljava/lang/String;"
+        },
+        {
+          "pc": 154,
+          "op": "invoke_0x71",
+          "method": "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+        },
+        {
+          "pc": 160,
+          "op": "invoke_0x6e",
+          "method": "Landroid/os/ParcelUuid;->getUuid()Ljava/util/UUID;"
+        },
+        {
+          "pc": 164,
+          "op": "invoke_0x6e",
+          "method": "Ljava/util/UUID;->toString()Ljava/lang/String;"
+        },
+        {
+          "pc": 168,
+          "op": "const-string",
+          "val": "-"
+        },
+        {
+          "pc": 170,
+          "op": "const-string",
+          "val": ""
+        },
+        {
+          "pc": 172,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;"
+        },
+        {
+          "pc": 176,
+          "op": "const-string",
+          "val": "054ac620321411e6ac0d0002a5d5c51b"
+        },
+        {
+          "pc": 178,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+        },
+        {
+          "pc": 186,
+          "op": "invoke_0x6e",
+          "method": "Landroid/util/SparseArray;->size()I"
+        },
+        {
+          "pc": 195,
+          "op": "invoke_0x6e",
+          "method": "Landroid/util/SparseArray;->size()I"
+        },
+        {
+          "pc": 201,
+          "op": "invoke_0x6e",
+          "method": "Landroid/util/SparseArray;->keyAt(I)I"
+        },
+        {
+          "pc": 209,
+          "op": "invoke_0x6e",
+          "method": "Landroid/util/SparseArray;->get(I)Ljava/lang/Object;"
+        },
+        {
+          "pc": 213,
+          "op": "type_op_0x1f",
+          "type": "[B"
+        },
+        {
+          "pc": 252,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 256,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->isAllowBleScanning()Z"
+        },
+        {
+          "pc": 262,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 266,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->setAllowBleScanning(Z)V"
+        },
+        {
+          "pc": 269,
+          "op": "iget/iput_0x54",
+          "field": "LH5/g;->c:LH5/j;"
+        },
+        {
+          "pc": 271,
+          "op": "iget/iput_0x55",
+          "field": "LH5/g;->a:Z"
+        },
+        {
+          "pc": 273,
+          "op": "iget/iput_0x55",
+          "field": "LH5/g;->b:Z"
+        },
+        {
+          "pc": 280,
+          "op": "invoke_0x74",
+          "method": "Landroid/bluetooth/le/ScanResult;->getDevice()Landroid/bluetooth/BluetoothDevice;"
+        },
+        {
+          "pc": 284,
+          "op": "iget/iput_0x54",
+          "field": "LH5/j;->l0:[B"
+        },
+        {
+          "pc": 286,
+          "op": "invoke_0x71",
+          "method": "LI5/d;->b([B)Ljava/lang/String;"
+        },
+        {
+          "pc": 289,
+          "op": "type_op_0x1c",
+          "type": "Lcom/panasonic/jp/lumixlab/util/G0;"
+        },
+        {
+          "pc": 296,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/String;->substring(II)Ljava/lang/String;"
+        },
+        {
+          "pc": 300,
+          "op": "type_op_0x23",
+          "type": "[B"
+        },
+        {
+          "pc": 302,
+          "op": "iget/iput_0x5b",
+          "field": "LH5/j;->l0:[B"
+        },
+        {
+          "pc": 304,
+          "op": "invoke_0x71",
+          "method": "Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V"
+        },
+        {
+          "pc": 307,
+          "op": "iget/iput_0x54",
+          "field": "LH5/j;->l0:[B"
+        },
+        {
+          "pc": 309,
+          "op": "invoke_0x71",
+          "method": "LI5/d;->b([B)Ljava/lang/String;"
+        },
+        {
+          "pc": 315,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 319,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getPtpCameraPublicBTAddress()[B"
+        },
+        {
+          "pc": 323,
+          "op": "invoke_0x71",
+          "method": "LI5/d;->b([B)Ljava/lang/String;"
+        },
+        {
+          "pc": 327,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+        },
+        {
+          "pc": 333,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 337,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->setAllowBleScanning(Z)V"
+        },
+        {
+          "pc": 341,
+          "op": "sget/sput_0x62",
+          "field": "Lcom/panasonic/jp/lumixlab/LlcApplication;->executor:Ljava/util/concurrent/ExecutorService;"
+        },
+        {
+          "pc": 343,
+          "op": "type_op_0x22",
+          "type": "LH5/h;"
+        },
+        {
+          "pc": 357,
+          "op": "invoke_0x76",
+          "method": "LH5/h;-><init>(LH5/j;Ljava/lang/String;ZZLandroid/bluetooth/BluetoothDevice;Ljava/lang/String;Ljava/lang/String;)V"
+        },
+        {
+          "pc": 360,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V"
+        },
+        {
+          "pc": 371,
+          "op": "type_op_0x1c",
+          "type": "Lcom/panasonic/jp/lumixlab/util/G0;"
+        },
+        {
+          "pc": 375,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 379,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->setAllowBleScanning(Z)V"
+        },
+        {
+          "pc": 383,
+          "op": "type_op_0x23",
+          "type": "[B"
+        },
+        {
+          "pc": 385,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/String;->substring(II)Ljava/lang/String;"
+        },
+        {
+          "pc": 390,
+          "op": "invoke_0x71",
+          "method": "Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V"
+        },
+        {
+          "pc": 395,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 399,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getTargetCameraPublicBTAddress()[B"
+        },
+        {
+          "pc": 408,
+          "op": "iget/iput_0x54",
+          "field": "LH5/j;->g0:Ljava/util/HashSet;"
+        },
+        {
+          "pc": 410,
+          "op": "invoke_0x6e",
+          "method": "Ljava/util/HashSet;->clear()V"
+        },
+        {
+          "pc": 413,
+          "op": "iget/iput_0x54",
+          "field": "LH5/j;->g0:Ljava/util/HashSet;"
+        },
+        {
+          "pc": 415,
+          "op": "invoke_0x6e",
+          "method": "Ljava/util/HashSet;->add(Ljava/lang/Object;)Z"
+        },
+        {
+          "pc": 418,
+          "op": "iget/iput_0x54",
+          "field": "LH5/j;->g0:Ljava/util/HashSet;"
+        },
+        {
+          "pc": 420,
+          "op": "invoke_0x6e",
+          "method": "Ljava/util/HashSet;->iterator()Ljava/util/Iterator;"
+        },
+        {
+          "pc": 424,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/Iterator;->hasNext()Z"
+        },
+        {
+          "pc": 430,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+        },
+        {
+          "pc": 434,
+          "op": "type_op_0x1f",
+          "type": "[B"
+        },
+        {
+          "pc": 436,
+          "op": "invoke_0x71",
+          "method": "Ljava/util/Arrays;->equals([B[B)Z"
+        },
+        {
+          "pc": 442,
+          "op": "iget/iput_0x54",
+          "field": "LH5/j;->X:LH5/n;"
+        },
+        {
+          "pc": 446,
+          "op": "iget/iput_0x54",
+          "field": "LH5/j;->g0:Ljava/util/HashSet;"
+        },
+        {
+          "pc": 448,
+          "op": "invoke_0x6e",
+          "method": "Ljava/util/HashSet;->clear()V"
+        },
+        {
+          "pc": 451,
+          "op": "iget/iput_0x54",
+          "field": "LH5/j;->X:LH5/n;"
+        },
+        {
+          "pc": 462,
+          "op": "invoke_0x78",
+          "method": "LH5/n;->a(ZZ[BLandroid/bluetooth/BluetoothDevice;Ljava/lang/String;Ljava/lang/String;)V"
+        },
+        {
+          "pc": 468,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 472,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->setAllowBleScanning(Z)V"
+        },
+        {
+          "pc": 478,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 482,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getPtpCameraPublicBTAddress()[B"
+        },
+        {
+          "pc": 486,
+          "op": "invoke_0x71",
+          "method": "LI5/d;->b([B)Ljava/lang/String;"
+        },
+        {
+          "pc": 490,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->equals(Ljava/lang/Object;)Z"
+        },
+        {
+          "pc": 496,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 500,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->setAllowBleScanning(Z)V"
+        },
+        {
+          "pc": 504,
+          "op": "iget/iput_0x54",
+          "field": "LH5/j;->X:LH5/n;"
+        },
+        {
+          "pc": 506,
+          "op": "iget/iput_0x54",
+          "field": "LH5/j;->l0:[B"
+        },
+        {
+          "pc": 513,
+          "op": "invoke_0x78",
+          "method": "LH5/n;->a(ZZ[BLandroid/bluetooth/BluetoothDevice;Ljava/lang/String;Ljava/lang/String;)V"
+        }
+      ]
+    },
+    "Lz5/k2;->d": {
+      "registers_size": 7,
+      "ins_size": 2,
+      "outs_size": 5,
+      "insns_units": 54,
+      "events": [
+        {
+          "pc": 0,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+        },
+        {
+          "pc": 29,
+          "op": "type_op_0x23",
+          "type": "[B"
+        },
+        {
+          "pc": 31,
+          "op": "type_op_0x23",
+          "type": "[B"
+        },
+        {
+          "pc": 33,
+          "op": "invoke_0x71",
+          "method": "Ljava/util/Arrays;->fill([BB)V"
+        },
+        {
+          "pc": 37,
+          "op": "invoke_0x71",
+          "method": "Ljava/util/Arrays;->fill([BB)V"
+        },
+        {
+          "pc": 45,
+          "op": "invoke_0x71",
+          "method": "Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V"
+        },
+        {
+          "pc": 50,
+          "op": "invoke_0x71",
+          "method": "Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V"
+        }
+      ]
+    },
+    "Lz5/k2;->e": {
+      "registers_size": 11,
+      "ins_size": 3,
+      "outs_size": 1,
+      "insns_units": 89,
+      "events": [
+        {
+          "pc": 0,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+        },
+        {
+          "pc": 10,
+          "op": "invoke_0x71",
+          "method": "LI5/d;->b([B)Ljava/lang/String;"
+        },
+        {
+          "pc": 13,
+          "op": "type_op_0x1c",
+          "type": "Lcom/panasonic/jp/lumixlab/util/G0;"
+        },
+        {
+          "pc": 17,
+          "op": "invoke_0x71",
+          "method": "LI5/d;->b([B)Ljava/lang/String;"
+        },
+        {
+          "pc": 20,
+          "op": "type_op_0x1c",
+          "type": "Lcom/panasonic/jp/lumixlab/util/G0;"
+        },
+        {
+          "pc": 26,
+          "op": "type_op_0x23",
+          "type": "[B"
+        },
+        {
+          "pc": 44,
+          "op": "arith_bit_0xb7"
+        },
+        {
+          "pc": 57,
+          "op": "arith_bit_0xb7"
+        },
+        {
+          "pc": 66,
+          "op": "arith_bit_0xb7"
+        },
+        {
+          "pc": 75,
+          "op": "arith_bit_0xb7"
+        },
+        {
+          "pc": 81,
+          "op": "invoke_0x71",
+          "method": "LI5/d;->b([B)Ljava/lang/String;"
+        },
+        {
+          "pc": 84,
+          "op": "type_op_0x1c",
+          "type": "Lcom/panasonic/jp/lumixlab/util/G0;"
+        }
+      ]
+    },
+    "LI5/c;->b": {
+      "registers_size": 6,
+      "ins_size": 4,
+      "outs_size": 4,
+      "insns_units": 210,
+      "events": [
+        {
+          "pc": 0,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+        },
+        {
+          "pc": 3,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+        },
+        {
+          "pc": 6,
+          "op": "type_op_0x1c",
+          "type": "Lcom/panasonic/jp/lumixlab/util/G0;"
+        },
+        {
+          "pc": 10,
+          "op": "sget/sput_0x62",
+          "field": "LI5/c;->a:Landroid/net/ConnectivityManager;"
+        },
+        {
+          "pc": 14,
+          "op": "sget/sput_0x62",
+          "field": "LI5/c;->b:Lz5/s2;"
+        },
+        {
+          "pc": 18,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/ConnectivityManager;->unregisterNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V"
+        },
+        {
+          "pc": 22,
+          "op": "type_op_0x1c",
+          "type": "Lcom/panasonic/jp/lumixlab/util/G0;"
+        },
+        {
+          "pc": 26,
+          "op": "sget/sput_0x69",
+          "field": "LI5/c;->b:Lz5/s2;"
+        },
+        {
+          "pc": 28,
+          "op": "sget/sput_0x62",
+          "field": "LI5/c;->c:Landroid/net/wifi/WifiManager;"
+        },
+        {
+          "pc": 32,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 36,
+          "op": "const-string",
+          "val": "wifi"
+        },
+        {
+          "pc": 38,
+          "op": "invoke_0x6e",
+          "method": "Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;"
+        },
+        {
+          "pc": 42,
+          "op": "type_op_0x1f",
+          "type": "Landroid/net/wifi/WifiManager;"
+        },
+        {
+          "pc": 44,
+          "op": "sget/sput_0x69",
+          "field": "LI5/c;->c:Landroid/net/wifi/WifiManager;"
+        },
+        {
+          "pc": 46,
+          "op": "sget/sput_0x62",
+          "field": "LI5/c;->c:Landroid/net/wifi/WifiManager;"
+        },
+        {
+          "pc": 48,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/wifi/WifiManager;->isWifiEnabled()Z"
+        },
+        {
+          "pc": 55,
+          "op": "sget/sput_0x62",
+          "field": "LI5/c;->b:Lz5/s2;"
+        },
+        {
+          "pc": 57,
+          "op": "iget/iput_0x54",
+          "field": "Lz5/s2;->a:Lz5/t2;"
+        },
+        {
+          "pc": 59,
+          "op": "iget/iput_0x54",
+          "field": "Lz5/t2;->q:Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;"
+        },
+        {
+          "pc": 61,
+          "op": "iget/iput_0x5c",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->t0:Z"
+        },
+        {
+          "pc": 63,
+          "op": "iget/iput_0x5c",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->q0:Z"
+        },
+        {
+          "pc": 65,
+          "op": "iget/iput_0x55",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->b0:Z"
+        },
+        {
+          "pc": 69,
+          "op": "type_op_0x22",
+          "type": "Landroid/content/Intent;"
+        },
+        {
+          "pc": 71,
+          "op": "const-string",
+          "val": "android.settings.panel.action.INTERNET_CONNECTIVITY"
+        },
+        {
+          "pc": 73,
+          "op": "invoke_0x70",
+          "method": "Landroid/content/Intent;-><init>(Ljava/lang/String;)V"
+        },
+        {
+          "pc": 76,
+          "op": "iget/iput_0x54",
+          "field": "Lz5/t2;->q:Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;"
+        },
+        {
+          "pc": 78,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->l0:Ld/d;"
+        },
+        {
+          "pc": 81,
+          "op": "invoke_0x6e",
+          "method": "Ld/d;->a(Ljava/lang/Object;LF/i;)V"
+        },
+        {
+          "pc": 85,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/util/v;->R0()Z"
+        },
+        {
+          "pc": 92,
+          "op": "invoke_0x71",
+          "method": "LI5/c;->f()Ljava/lang/Boolean;"
+        },
+        {
+          "pc": 96,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Boolean;->booleanValue()Z"
+        },
+        {
+          "pc": 103,
+          "op": "invoke_0x71",
+          "method": "LI5/c;->g(Landroidx/fragment/app/T;Z)V"
+        },
+        {
+          "pc": 106,
+          "op": "invoke_0x71",
+          "method": "LI5/c;->a(Landroidx/fragment/app/T;Ljava/lang/String;Ljava/lang/String;Z)V"
+        },
+        {
+          "pc": 109,
+          "op": "type_op_0x22",
+          "type": "Landroid/net/wifi/WifiNetworkSpecifier$Builder;"
+        },
+        {
+          "pc": 111,
+          "op": "invoke_0x70",
+          "method": "Landroid/net/wifi/WifiNetworkSpecifier$Builder;-><init>()V"
+        },
+        {
+          "pc": 114,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/wifi/WifiNetworkSpecifier$Builder;->setSsid(Ljava/lang/String;)Landroid/net/wifi/WifiNetworkSpecifier$Builder;"
+        },
+        {
+          "pc": 118,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/wifi/WifiNetworkSpecifier$Builder;->setWpa3Passphrase(Ljava/lang/String;)Landroid/net/wifi/WifiNetworkSpecifier$Builder;"
+        },
+        {
+          "pc": 122,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/wifi/WifiNetworkSpecifier$Builder;->build()Landroid/net/wifi/WifiNetworkSpecifier;"
+        },
+        {
+          "pc": 127,
+          "op": "invoke_0x71",
+          "method": "LI5/c;->g(Landroidx/fragment/app/T;Z)V"
+        },
+        {
+          "pc": 130,
+          "op": "invoke_0x71",
+          "method": "LI5/c;->a(Landroidx/fragment/app/T;Ljava/lang/String;Ljava/lang/String;Z)V"
+        },
+        {
+          "pc": 133,
+          "op": "type_op_0x22",
+          "type": "Landroid/net/wifi/WifiNetworkSpecifier$Builder;"
+        },
+        {
+          "pc": 135,
+          "op": "invoke_0x70",
+          "method": "Landroid/net/wifi/WifiNetworkSpecifier$Builder;-><init>()V"
+        },
+        {
+          "pc": 138,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/wifi/WifiNetworkSpecifier$Builder;->setSsid(Ljava/lang/String;)Landroid/net/wifi/WifiNetworkSpecifier$Builder;"
+        },
+        {
+          "pc": 142,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/wifi/WifiNetworkSpecifier$Builder;->setWpa2Passphrase(Ljava/lang/String;)Landroid/net/wifi/WifiNetworkSpecifier$Builder;"
+        },
+        {
+          "pc": 146,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/wifi/WifiNetworkSpecifier$Builder;->build()Landroid/net/wifi/WifiNetworkSpecifier;"
+        },
+        {
+          "pc": 150,
+          "op": "type_op_0x22",
+          "type": "Landroid/net/NetworkRequest$Builder;"
+        },
+        {
+          "pc": 152,
+          "op": "invoke_0x70",
+          "method": "Landroid/net/NetworkRequest$Builder;-><init>()V"
+        },
+        {
+          "pc": 155,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/NetworkRequest$Builder;->addTransportType(I)Landroid/net/NetworkRequest$Builder;"
+        },
+        {
+          "pc": 161,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/NetworkRequest$Builder;->removeCapability(I)Landroid/net/NetworkRequest$Builder;"
+        },
+        {
+          "pc": 165,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/NetworkRequest$Builder;->setNetworkSpecifier(Landroid/net/NetworkSpecifier;)Landroid/net/NetworkRequest$Builder;"
+        },
+        {
+          "pc": 169,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/NetworkRequest$Builder;->build()Landroid/net/NetworkRequest;"
+        },
+        {
+          "pc": 175,
+          "op": "sget/sput_0x60",
+          "field": "Lcom/panasonic/jp/lumixlab/LlcApplication;->connectWifiTimeDelay:I"
+        },
+        {
+          "pc": 180,
+          "op": "sget/sput_0x62",
+          "field": "LI5/c;->a:Landroid/net/ConnectivityManager;"
+        },
+        {
+          "pc": 184,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 188,
+          "op": "const-string",
+          "val": "connectivity"
+        },
+        {
+          "pc": 190,
+          "op": "invoke_0x6e",
+          "method": "Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;"
+        },
+        {
+          "pc": 194,
+          "op": "type_op_0x1f",
+          "type": "Landroid/net/ConnectivityManager;"
+        },
+        {
+          "pc": 196,
+          "op": "sget/sput_0x69",
+          "field": "LI5/c;->a:Landroid/net/ConnectivityManager;"
+        },
+        {
+          "pc": 198,
+          "op": "sget/sput_0x62",
+          "field": "LI5/c;->a:Landroid/net/ConnectivityManager;"
+        },
+        {
+          "pc": 200,
+          "op": "sget/sput_0x62",
+          "field": "LI5/c;->b:Lz5/s2;"
+        },
+        {
+          "pc": 202,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/ConnectivityManager;->requestNetwork(Landroid/net/NetworkRequest;Landroid/net/ConnectivityManager$NetworkCallback;)V"
+        },
+        {
+          "pc": 205,
+          "op": "type_op_0x1c",
+          "type": "Lcom/panasonic/jp/lumixlab/util/G0;"
+        }
+      ]
+    },
+    "LI5/c;->c": {
+      "registers_size": 2,
+      "ins_size": 0,
+      "outs_size": 2,
+      "insns_units": 43,
+      "events": [
+        {
+          "pc": 0,
+          "op": "type_op_0x1c",
+          "type": "Lcom/panasonic/jp/lumixlab/util/G0;"
+        },
+        {
+          "pc": 4,
+          "op": "sget/sput_0x62",
+          "field": "LI5/c;->a:Landroid/net/ConnectivityManager;"
+        },
+        {
+          "pc": 8,
+          "op": "sget/sput_0x62",
+          "field": "LI5/c;->b:Lz5/s2;"
+        },
+        {
+          "pc": 13,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/ConnectivityManager;->bindProcessToNetwork(Landroid/net/Network;)Z"
+        },
+        {
+          "pc": 16,
+          "op": "sget/sput_0x62",
+          "field": "LI5/c;->a:Landroid/net/ConnectivityManager;"
+        },
+        {
+          "pc": 18,
+          "op": "sget/sput_0x62",
+          "field": "LI5/c;->b:Lz5/s2;"
+        },
+        {
+          "pc": 20,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/ConnectivityManager;->unregisterNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V"
+        },
+        {
+          "pc": 23,
+          "op": "sget/sput_0x62",
+          "field": "LI5/c;->b:Lz5/s2;"
+        },
+        {
+          "pc": 25,
+          "op": "invoke_0x6e",
+          "method": "Lz5/s2;->a()V"
+        },
+        {
+          "pc": 31,
+          "op": "type_op_0x1c",
+          "type": "Lcom/panasonic/jp/lumixlab/util/G0;"
+        },
+        {
+          "pc": 36,
+          "op": "sget/sput_0x62",
+          "field": "LI5/c;->b:Lz5/s2;"
+        },
+        {
+          "pc": 38,
+          "op": "invoke_0x6e",
+          "method": "Lz5/s2;->a()V"
+        }
+      ]
+    },
+    "LI5/c;->d": {
+      "registers_size": 10,
+      "ins_size": 0,
+      "outs_size": 2,
+      "insns_units": 70,
+      "events": [
+        {
+          "pc": 5,
+          "op": "const-string",
+          "val": ""
+        },
+        {
+          "pc": 7,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 11,
+          "op": "const-string",
+          "val": "wifi"
+        },
+        {
+          "pc": 13,
+          "op": "invoke_0x6e",
+          "method": "Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;"
+        },
+        {
+          "pc": 17,
+          "op": "type_op_0x1f",
+          "type": "Landroid/net/wifi/WifiManager;"
+        },
+        {
+          "pc": 19,
+          "op": "invoke_0x6e",
+          "method": "Landroid/net/wifi/WifiManager;->getDhcpInfo()Landroid/net/DhcpInfo;"
+        },
+        {
+          "pc": 23,
+          "op": "iget/iput_0x52",
+          "field": "Landroid/net/DhcpInfo;->gateway:I"
+        },
+        {
+          "pc": 26,
+          "op": "invoke_0x71",
+          "method": "Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;"
+        },
+        {
+          "pc": 30,
+          "op": "invoke_0x6e",
+          "method": "Ljava/math/BigInteger;->toByteArray()[B"
+        },
+        {
+          "pc": 46,
+          "op": "type_op_0x23",
+          "type": "[B"
+        },
+        {
+          "pc": 56,
+          "op": "invoke_0x71",
+          "method": "Ljava/net/InetAddress;->getByAddress([B)Ljava/net/InetAddress;"
+        },
+        {
+          "pc": 60,
+          "op": "invoke_0x6e",
+          "method": "Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;"
+        },
+        {
+          "pc": 65,
+          "op": "type_op_0x1c",
+          "type": "Lcom/panasonic/jp/lumixlab/util/G0;"
+        }
+      ]
+    },
+    "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->onViewCreated": {
+      "registers_size": 11,
+      "ins_size": 3,
+      "outs_size": 6,
+      "insns_units": 381,
+      "events": [
+        {
+          "pc": 1,
+          "op": "invoke_0x6f",
+          "method": "Landroidx/fragment/app/N;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V"
+        },
+        {
+          "pc": 4,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/fragment/app/N;->getActivity()Landroidx/fragment/app/T;"
+        },
+        {
+          "pc": 11,
+          "op": "type_op_0x22",
+          "type": "Landroid/content/IntentFilter;"
+        },
+        {
+          "pc": 13,
+          "op": "invoke_0x70",
+          "method": "Landroid/content/IntentFilter;-><init>()V"
+        },
+        {
+          "pc": 16,
+          "op": "const-string",
+          "val": "android.net.wifi.WIFI_STATE_CHANGED"
+        },
+        {
+          "pc": 18,
+          "op": "invoke_0x6e",
+          "method": "Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V"
+        },
+        {
+          "pc": 21,
+          "op": "const-string",
+          "val": "android.net.wifi.NETWORK_IDS_CHANGED"
+        },
+        {
+          "pc": 23,
+          "op": "invoke_0x6e",
+          "method": "Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V"
+        },
+        {
+          "pc": 26,
+          "op": "const-string",
+          "val": "android.net.wifi.STATE_CHANGE"
+        },
+        {
+          "pc": 28,
+          "op": "invoke_0x6e",
+          "method": "Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V"
+        },
+        {
+          "pc": 31,
+          "op": "sget/sput_0x60",
+          "field": "Landroid/os/Build$VERSION;->SDK_INT:I"
+        },
+        {
+          "pc": 38,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/fragment/app/N;->getActivity()Landroidx/fragment/app/T;"
+        },
+        {
+          "pc": 42,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->u0:Lz5/A2;"
+        },
+        {
+          "pc": 44,
+          "op": "invoke_0x6e",
+          "method": "Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;"
+        },
+        {
+          "pc": 48,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/fragment/app/N;->getActivity()Landroidx/fragment/app/T;"
+        },
+        {
+          "pc": 52,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->u0:Lz5/A2;"
+        },
+        {
+          "pc": 54,
+          "op": "invoke_0x71",
+          "method": "LG/h;->registerReceiver(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;"
+        },
+        {
+          "pc": 57,
+          "op": "iget/iput_0x5c",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->v0:Z"
+        },
+        {
+          "pc": 59,
+          "op": "type_op_0x22",
+          "type": "Lz5/u2;"
+        },
+        {
+          "pc": 61,
+          "op": "invoke_0x70",
+          "method": "Lz5/u2;-><init>(Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;Z)V"
+        },
+        {
+          "pc": 64,
+          "op": "iget/iput_0x5b",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->s:Lz5/u2;"
+        },
+        {
+          "pc": 66,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/fragment/app/N;->getActivity()Landroidx/fragment/app/T;"
+        },
+        {
+          "pc": 72,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/fragment/app/N;->getActivity()Landroidx/fragment/app/T;"
+        },
+        {
+          "pc": 76,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/activity/s;->getOnBackPressedDispatcher()Landroidx/activity/J;"
+        },
+        {
+          "pc": 80,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/fragment/app/N;->getViewLifecycleOwner()Landroidx/lifecycle/A;"
+        },
+        {
+          "pc": 84,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->s:Lz5/u2;"
+        },
+        {
+          "pc": 86,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/activity/J;->a(Landroidx/lifecycle/A;Landroidx/activity/v;)V"
+        },
+        {
+          "pc": 89,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 93,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getCameraGalleryInfoMap()Ljava/util/Map;"
+        },
+        {
+          "pc": 97,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/Map;->clear()V"
+        },
+        {
+          "pc": 100,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 104,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getCameraGalleryInfoPagingRequestParamMap()Ljava/util/Map;"
+        },
+        {
+          "pc": 108,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/Map;->clear()V"
+        },
+        {
+          "pc": 111,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 115,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getCameraGalleryFilterRatingMap()Ljava/util/Map;"
+        },
+        {
+          "pc": 119,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/Map;->clear()V"
+        },
+        {
+          "pc": 122,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 127,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->setRemoteShootingModeAutoTransferGalleryInfoEntityList(ZLcom/panasonic/jp/lumixlab/database/entity/GalleryInfoEntity;)V"
+        },
+        {
+          "pc": 130,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 134,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getRemoteShootingModeAutoTransferBitmapDrawableMap()Ljava/util/Map;"
+        },
+        {
+          "pc": 138,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/Map;->clear()V"
+        },
+        {
+          "pc": 141,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 145,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->setRequestCameraTransferData(Ljava/lang/Boolean;)V"
+        },
+        {
+          "pc": 148,
+          "op": "type_op_0x22",
+          "type": "LI5/e;"
+        },
+        {
+          "pc": 150,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/fragment/app/N;->requireContext()Landroid/content/Context;"
+        },
+        {
+          "pc": 154,
+          "op": "invoke_0x70",
+          "method": "LI5/e;-><init>(Landroid/content/Context;)V"
+        },
+        {
+          "pc": 157,
+          "op": "iget/iput_0x5b",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->d0:LI5/e;"
+        },
+        {
+          "pc": 159,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->x:Lz5/k2;"
+        },
+        {
+          "pc": 163,
+          "op": "iget/iput_0x52",
+          "field": "Lz5/k2;->E:I"
+        },
+        {
+          "pc": 165,
+          "op": "sget/sput_0x62",
+          "field": "Lz5/k2;->S:Landroidx/lifecycle/M;"
+        },
+        {
+          "pc": 167,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/lifecycle/K;->d()Ljava/lang/Object;"
+        },
+        {
+          "pc": 173,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->x:Lz5/k2;"
+        },
+        {
+          "pc": 175,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+        },
+        {
+          "pc": 178,
+          "op": "sget/sput_0x62",
+          "field": "Lz5/k2;->S:Landroidx/lifecycle/M;"
+        },
+        {
+          "pc": 180,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/lifecycle/K;->d()Ljava/lang/Object;"
+        },
+        {
+          "pc": 184,
+          "op": "type_op_0x1f",
+          "type": "Ljava/util/List;"
+        },
+        {
+          "pc": 188,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/List;->isEmpty()Z"
+        },
+        {
+          "pc": 194,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/List;->size()I"
+        },
+        {
+          "pc": 200,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+        },
+        {
+          "pc": 204,
+          "op": "type_op_0x1f",
+          "type": "LK5/o;"
+        },
+        {
+          "pc": 208,
+          "op": "iget/iput_0x54",
+          "field": "LK5/o;->b:Ljava/lang/String;"
+        },
+        {
+          "pc": 210,
+          "op": "iget/iput_0x5b",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->e0:Ljava/lang/String;"
+        },
+        {
+          "pc": 212,
+          "op": "iget/iput_0x54",
+          "field": "LK5/o;->c:Ljava/lang/String;"
+        },
+        {
+          "pc": 214,
+          "op": "iget/iput_0x5b",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->f0:Ljava/lang/String;"
+        },
+        {
+          "pc": 217,
+          "op": "iget/iput_0x56",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->Z:B"
+        },
+        {
+          "pc": 221,
+          "op": "sget/sput_0x62",
+          "field": "Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;"
+        },
+        {
+          "pc": 223,
+          "op": "invoke_0x6e",
+          "method": "LK5/o;->a(Ljava/lang/Boolean;)V"
+        },
+        {
+          "pc": 226,
+          "op": "iget/iput_0x5b",
+          "field": "LK5/o;->H:Ljava/lang/Boolean;"
+        },
+        {
+          "pc": 228,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->x:Lz5/k2;"
+        },
+        {
+          "pc": 230,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+        },
+        {
+          "pc": 233,
+          "op": "sget/sput_0x62",
+          "field": "Lz5/k2;->S:Landroidx/lifecycle/M;"
+        },
+        {
+          "pc": 235,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->x:Lz5/k2;"
+        },
+        {
+          "pc": 237,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+        },
+        {
+          "pc": 240,
+          "op": "sget/sput_0x62",
+          "field": "Lz5/k2;->S:Landroidx/lifecycle/M;"
+        },
+        {
+          "pc": 242,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/lifecycle/K;->d()Ljava/lang/Object;"
+        },
+        {
+          "pc": 246,
+          "op": "type_op_0x1f",
+          "type": "Ljava/util/ArrayList;"
+        },
+        {
+          "pc": 248,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/lifecycle/M;->k(Ljava/lang/Object;)V"
+        },
+        {
+          "pc": 251,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->q:LD5/x1;"
+        },
+        {
+          "pc": 253,
+          "op": "iget/iput_0x54",
+          "field": "LD5/x1;->b:Landroid/widget/Button;"
+        },
+        {
+          "pc": 255,
+          "op": "type_op_0x22",
+          "type": "Ll4/C;"
+        },
+        {
+          "pc": 259,
+          "op": "invoke_0x70",
+          "method": "Ll4/C;-><init>(Ljava/lang/Object;I)V"
+        },
+        {
+          "pc": 262,
+          "op": "invoke_0x6e",
+          "method": "Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V"
+        },
+        {
+          "pc": 265,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->x:Lz5/k2;"
+        },
+        {
+          "pc": 267,
+          "op": "iget/iput_0x54",
+          "field": "Lz5/k2;->w:LH5/j;"
+        },
+        {
+          "pc": 269,
+          "op": "iget/iput_0x56",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->Z:B"
+        },
+        {
+          "pc": 271,
+          "op": "type_op_0x23",
+          "type": "[B"
+        },
+        {
+          "pc": 275,
+          "op": "type_op_0x22",
+          "type": "Lu1/F;"
+        },
+        {
+          "pc": 279,
+          "op": "invoke_0x70",
+          "method": "Lu1/F;-><init>(I)V"
+        },
+        {
+          "pc": 282,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+        },
+        {
+          "pc": 285,
+          "op": "invoke_0x71",
+          "method": "LI5/d;->b([B)Ljava/lang/String;"
+        },
+        {
+          "pc": 288,
+          "op": "type_op_0x1c",
+          "type": "Lcom/panasonic/jp/lumixlab/util/G0;"
+        },
+        {
+          "pc": 294,
+          "op": "iget/iput_0x5d",
+          "field": "LH5/j;->c0:B"
+        },
+        {
+          "pc": 296,
+          "op": "iget/iput_0x54",
+          "field": "LH5/j;->h:Landroid/bluetooth/BluetoothGattCharacteristic;"
+        },
+        {
+          "pc": 301,
+          "op": "invoke_0x6e",
+          "method": "Landroid/bluetooth/BluetoothGattCharacteristic;->setWriteType(I)V"
+        },
+        {
+          "pc": 304,
+          "op": "type_op_0x22",
+          "type": "LH5/i;"
+        },
+        {
+          "pc": 306,
+          "op": "iget/iput_0x54",
+          "field": "LH5/j;->h:Landroid/bluetooth/BluetoothGattCharacteristic;"
+        },
+        {
+          "pc": 311,
+          "op": "invoke_0x76",
+          "method": "LH5/i;-><init>([BILandroid/bluetooth/BluetoothGattCharacteristic;LH5/m;LH5/l;)V"
+        },
+        {
+          "pc": 314,
+          "op": "iget/iput_0x54",
+          "field": "LH5/j;->f0:Ljava/util/LinkedList;"
+        },
+        {
+          "pc": 316,
+          "op": "invoke_0x6e",
+          "method": "Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z"
+        },
+        {
+          "pc": 319,
+          "op": "iget/iput_0x54",
+          "field": "LH5/j;->f0:Ljava/util/LinkedList;"
+        },
+        {
+          "pc": 321,
+          "op": "invoke_0x6e",
+          "method": "Ljava/util/LinkedList;->size()I"
+        },
+        {
+          "pc": 327,
+          "op": "invoke_0x6e",
+          "method": "LH5/j;->b()V"
+        },
+        {
+          "pc": 330,
+          "op": "iget/iput_0x5c",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->b0:Z"
+        },
+        {
+          "pc": 332,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->x:Lz5/k2;"
+        },
+        {
+          "pc": 334,
+          "op": "iget/iput_0x54",
+          "field": "Lz5/k2;->r:Landroidx/lifecycle/M;"
+        },
+        {
+          "pc": 336,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/fragment/app/N;->getViewLifecycleOwner()Landroidx/lifecycle/A;"
+        },
+        {
+          "pc": 340,
+          "op": "type_op_0x22",
+          "type": "Lz5/o2;"
+        },
+        {
+          "pc": 342,
+          "op": "invoke_0x70",
+          "method": "Lz5/o2;-><init>(Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;I)V"
+        },
+        {
+          "pc": 345,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/lifecycle/K;->e(Landroidx/lifecycle/A;Landroidx/lifecycle/N;)V"
+        },
+        {
+          "pc": 348,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->x:Lz5/k2;"
+        },
+        {
+          "pc": 350,
+          "op": "iget/iput_0x54",
+          "field": "Lz5/k2;->p:Landroidx/lifecycle/M;"
+        },
+        {
+          "pc": 352,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/fragment/app/N;->getViewLifecycleOwner()Landroidx/lifecycle/A;"
+        },
+        {
+          "pc": 356,
+          "op": "type_op_0x22",
+          "type": "Lz5/o2;"
+        },
+        {
+          "pc": 358,
+          "op": "invoke_0x70",
+          "method": "Lz5/o2;-><init>(Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;I)V"
+        },
+        {
+          "pc": 361,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/lifecycle/K;->e(Landroidx/lifecycle/A;Landroidx/lifecycle/N;)V"
+        },
+        {
+          "pc": 364,
+          "op": "type_op_0x22",
+          "type": "Le/q;"
+        },
+        {
+          "pc": 366,
+          "op": "invoke_0x70",
+          "method": "Le/q;-><init>()V"
+        },
+        {
+          "pc": 369,
+          "op": "type_op_0x22",
+          "type": "Lz5/n2;"
+        },
+        {
+          "pc": 371,
+          "op": "invoke_0x70",
+          "method": "Lz5/n2;-><init>(Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;I)V"
+        },
+        {
+          "pc": 374,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/fragment/app/N;->registerForActivityResult(Le/b;Ld/c;)Ld/d;"
+        },
+        {
+          "pc": 378,
+          "op": "iget/iput_0x5b",
+          "field": "Lcom/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment;->l0:Ld/d;"
+        }
+      ]
+    },
+    "Lz5/D;->j0": {
+      "registers_size": 9,
+      "ins_size": 2,
+      "outs_size": 2,
+      "insns_units": 155,
+      "events": [
+        {
+          "pc": 0,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 4,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/LlcApplication;->cameraViewModel:Lz5/k2;"
+        },
+        {
+          "pc": 8,
+          "op": "iget/iput_0x52",
+          "field": "Lz5/k2;->E:I"
+        },
+        {
+          "pc": 10,
+          "op": "sget/sput_0x62",
+          "field": "Lz5/k2;->S:Landroidx/lifecycle/M;"
+        },
+        {
+          "pc": 12,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/lifecycle/K;->d()Ljava/lang/Object;"
+        },
+        {
+          "pc": 18,
+          "op": "sget/sput_0x62",
+          "field": "Lz5/k2;->S:Landroidx/lifecycle/M;"
+        },
+        {
+          "pc": 20,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/lifecycle/K;->d()Ljava/lang/Object;"
+        },
+        {
+          "pc": 24,
+          "op": "type_op_0x1f",
+          "type": "Ljava/util/List;"
+        },
+        {
+          "pc": 28,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/List;->isEmpty()Z"
+        },
+        {
+          "pc": 34,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/List;->size()I"
+        },
+        {
+          "pc": 40,
+          "op": "invoke_0x72",
+          "method": "Ljava/util/List;->get(I)Ljava/lang/Object;"
+        },
+        {
+          "pc": 44,
+          "op": "type_op_0x1f",
+          "type": "LK5/o;"
+        },
+        {
+          "pc": 49,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/util/j0;->a(I)Z"
+        },
+        {
+          "pc": 55,
+          "op": "iget/iput_0x54",
+          "field": "LK5/o;->e:Ljava/lang/Boolean;"
+        },
+        {
+          "pc": 57,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Boolean;->booleanValue()Z"
+        },
+        {
+          "pc": 66,
+          "op": "sget/sput_0x62",
+          "field": "LK5/g;->BLE_STATE_CONNECTED:LK5/g;"
+        },
+        {
+          "pc": 68,
+          "op": "iget/iput_0x54",
+          "field": "LK5/o;->i:LK5/g;"
+        },
+        {
+          "pc": 70,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->equals(Ljava/lang/Object;)Z"
+        },
+        {
+          "pc": 76,
+          "op": "iget/iput_0x59",
+          "field": "Lz5/k2;->I:I"
+        },
+        {
+          "pc": 79,
+          "op": "invoke_0x71",
+          "method": "Lz5/D;->n0(B)V"
+        },
+        {
+          "pc": 83,
+          "op": "sget/sput_0x62",
+          "field": "LK5/n;->WIFI_CONNECTED:LK5/n;"
+        },
+        {
+          "pc": 85,
+          "op": "iget/iput_0x54",
+          "field": "LK5/o;->l:LK5/n;"
+        },
+        {
+          "pc": 87,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->equals(Ljava/lang/Object;)Z"
+        },
+        {
+          "pc": 96,
+          "op": "invoke_0x6e",
+          "method": "Lz5/D;->b0(Z)V"
+        },
+        {
+          "pc": 100,
+          "op": "invoke_0x6e",
+          "method": "Lz5/D;->L()V"
+        },
+        {
+          "pc": 104,
+          "op": "sget/sput_0x62",
+          "field": "LK5/n;->WIFI_CONNECTED:LK5/n;"
+        },
+        {
+          "pc": 106,
+          "op": "iget/iput_0x54",
+          "field": "LK5/o;->l:LK5/n;"
+        },
+        {
+          "pc": 108,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->equals(Ljava/lang/Object;)Z"
+        },
+        {
+          "pc": 117,
+          "op": "invoke_0x6e",
+          "method": "Lz5/D;->b0(Z)V"
+        },
+        {
+          "pc": 121,
+          "op": "invoke_0x6e",
+          "method": "Lz5/D;->L()V"
+        },
+        {
+          "pc": 125,
+          "op": "sget/sput_0x62",
+          "field": "LK5/n;->WIFI_CONNECTED:LK5/n;"
+        },
+        {
+          "pc": 127,
+          "op": "iget/iput_0x54",
+          "field": "LK5/o;->l:LK5/n;"
+        },
+        {
+          "pc": 129,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->equals(Ljava/lang/Object;)Z"
+        },
+        {
+          "pc": 135,
+          "op": "invoke_0x6e",
+          "method": "Lz5/D;->L()V"
+        },
+        {
+          "pc": 139,
+          "op": "invoke_0x6e",
+          "method": "Lz5/D;->L()V"
+        },
+        {
+          "pc": 143,
+          "op": "invoke_0x6e",
+          "method": "Lz5/D;->L()V"
+        },
+        {
+          "pc": 147,
+          "op": "invoke_0x6e",
+          "method": "Lz5/D;->L()V"
+        },
+        {
+          "pc": 151,
+          "op": "invoke_0x6e",
+          "method": "Lz5/D;->L()V"
+        }
+      ]
+    },
+    "Lz5/D;->b0": {
+      "registers_size": 6,
+      "ins_size": 2,
+      "outs_size": 3,
+      "insns_units": 102,
+      "events": [
+        {
+          "pc": 0,
+          "op": "invoke_0x6e",
+          "method": "Lz5/D;->f0(Z)V"
+        },
+        {
+          "pc": 3,
+          "op": "iget/iput_0x54",
+          "field": "Lz5/D;->q:LG5/f;"
+        },
+        {
+          "pc": 7,
+          "op": "type_op_0x22",
+          "type": "LG5/f;"
+        },
+        {
+          "pc": 9,
+          "op": "invoke_0x70",
+          "method": "LG5/f;-><init>()V"
+        },
+        {
+          "pc": 12,
+          "op": "iget/iput_0x5b",
+          "field": "Lz5/D;->q:LG5/f;"
+        },
+        {
+          "pc": 14,
+          "op": "iget/iput_0x54",
+          "field": "Lz5/D;->q:LG5/f;"
+        },
+        {
+          "pc": 16,
+          "op": "type_op_0x22",
+          "type": "Lz5/s;"
+        },
+        {
+          "pc": 18,
+          "op": "invoke_0x70",
+          "method": "Lz5/s;-><init>(Lz5/D;)V"
+        },
+        {
+          "pc": 21,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+        },
+        {
+          "pc": 24,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 28,
+          "op": "invoke_0x6e",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getAuthToken()Ljava/lang/String;"
+        },
+        {
+          "pc": 32,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/util/v;->J(Ljava/lang/String;)Ljava/lang/String;"
+        },
+        {
+          "pc": 36,
+          "op": "type_op_0x22",
+          "type": "Lorg/json/JSONObject;"
+        },
+        {
+          "pc": 38,
+          "op": "invoke_0x70",
+          "method": "Lorg/json/JSONObject;-><init>()V"
+        },
+        {
+          "pc": 41,
+          "op": "const-string",
+          "val": "Command"
+        },
+        {
+          "pc": 43,
+          "op": "const-string",
+          "val": "wifioff"
+        },
+        {
+          "pc": 45,
+          "op": "invoke_0x6e",
+          "method": "Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"
+        },
+        {
+          "pc": 48,
+          "op": "invoke_0x71",
+          "method": "Lh6/h;->a()Lh6/h;"
+        },
+        {
+          "pc": 52,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+        },
+        {
+          "pc": 55,
+          "op": "invoke_0x71",
+          "method": "Lh6/h;->l()Loa/v0;"
+        },
+        {
+          "pc": 59,
+          "op": "invoke_0x6e",
+          "method": "Loa/v0;->b()Ljava/lang/Object;"
+        },
+        {
+          "pc": 63,
+          "op": "type_op_0x1f",
+          "type": "Lh6/a;"
+        },
+        {
+          "pc": 65,
+          "op": "invoke_0x6e",
+          "method": "Lorg/json/JSONObject;->toString()Ljava/lang/String;"
+        },
+        {
+          "pc": 69,
+          "op": "invoke_0x72",
+          "method": "Lh6/a;->b(Ljava/lang/String;Ljava/lang/String;)LY6/l;"
+        },
+        {
+          "pc": 73,
+          "op": "sget/sput_0x62",
+          "field": "Lq7/i;->b:LY6/r;"
+        },
+        {
+          "pc": 75,
+          "op": "invoke_0x6e",
+          "method": "LY6/l;->i(LY6/r;)Lh7/B;"
+        },
+        {
+          "pc": 79,
+          "op": "invoke_0x71",
+          "method": "LX6/b;->a()LY6/r;"
+        },
+        {
+          "pc": 83,
+          "op": "invoke_0x6e",
+          "method": "LY6/l;->f(LY6/r;)Lh7/n;"
+        },
+        {
+          "pc": 87,
+          "op": "type_op_0x22",
+          "type": "LG5/e;"
+        },
+        {
+          "pc": 89,
+          "op": "invoke_0x70",
+          "method": "LG5/e;-><init>(LG5/f;LG5/d;)V"
+        },
+        {
+          "pc": 92,
+          "op": "invoke_0x6e",
+          "method": "LY6/l;->d(LY6/o;)V"
+        },
+        {
+          "pc": 96,
+          "op": "iget/iput_0x54",
+          "field": "Lz5/s;->a:Lz5/D;"
+        },
+        {
+          "pc": 98,
+          "op": "invoke_0x6e",
+          "method": "Lz5/D;->L()V"
+        }
+      ]
+    },
+    "Lz5/D;->M": {
+      "registers_size": 3,
+      "ins_size": 2,
+      "outs_size": 2,
+      "insns_units": 124,
+      "events": [
+        {
+          "pc": 2,
+          "op": "sget/sput_0x62",
+          "field": "Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;"
+        },
+        {
+          "pc": 4,
+          "op": "iget/iput_0x5b",
+          "field": "LK5/o;->f:Ljava/lang/Boolean;"
+        },
+        {
+          "pc": 6,
+          "op": "iget/iput_0x5b",
+          "field": "LK5/o;->H:Ljava/lang/Boolean;"
+        },
+        {
+          "pc": 8,
+          "op": "sget/sput_0x62",
+          "field": "LK5/n;->WIFI_UNCONNECTED:LK5/n;"
+        },
+        {
+          "pc": 10,
+          "op": "invoke_0x6e",
+          "method": "LK5/o;->c(LK5/n;)V"
+        },
+        {
+          "pc": 13,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 17,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/LlcApplication;->cameraViewModel:Lz5/k2;"
+        },
+        {
+          "pc": 21,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 25,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/LlcApplication;->cameraViewModel:Lz5/k2;"
+        },
+        {
+          "pc": 27,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+        },
+        {
+          "pc": 30,
+          "op": "sget/sput_0x62",
+          "field": "Lz5/k2;->S:Landroidx/lifecycle/M;"
+        },
+        {
+          "pc": 34,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 38,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/LlcApplication;->cameraViewModel:Lz5/k2;"
+        },
+        {
+          "pc": 40,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+        },
+        {
+          "pc": 43,
+          "op": "sget/sput_0x62",
+          "field": "Lz5/k2;->S:Landroidx/lifecycle/M;"
+        },
+        {
+          "pc": 45,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/lifecycle/K;->d()Ljava/lang/Object;"
+        },
+        {
+          "pc": 51,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 55,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/LlcApplication;->cameraViewModel:Lz5/k2;"
+        },
+        {
+          "pc": 57,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+        },
+        {
+          "pc": 60,
+          "op": "sget/sput_0x62",
+          "field": "Lz5/k2;->S:Landroidx/lifecycle/M;"
+        },
+        {
+          "pc": 62,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 66,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/LlcApplication;->cameraViewModel:Lz5/k2;"
+        },
+        {
+          "pc": 68,
+          "op": "invoke_0x6e",
+          "method": "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+        },
+        {
+          "pc": 71,
+          "op": "sget/sput_0x62",
+          "field": "Lz5/k2;->S:Landroidx/lifecycle/M;"
+        },
+        {
+          "pc": 73,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/lifecycle/K;->d()Ljava/lang/Object;"
+        },
+        {
+          "pc": 77,
+          "op": "type_op_0x1f",
+          "type": "Ljava/util/ArrayList;"
+        },
+        {
+          "pc": 79,
+          "op": "invoke_0x6e",
+          "method": "Landroidx/lifecycle/M;->k(Ljava/lang/Object;)V"
+        },
+        {
+          "pc": 82,
+          "op": "invoke_0x71",
+          "method": "LI5/c;->c()V"
+        },
+        {
+          "pc": 85,
+          "op": "invoke_0x71",
+          "method": "LI5/e;->a()V"
+        },
+        {
+          "pc": 89,
+          "op": "invoke_0x6e",
+          "method": "Lz5/D;->f0(Z)V"
+        },
+        {
+          "pc": 92,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 96,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/LlcApplication;->cameraViewModel:Lz5/k2;"
+        },
+        {
+          "pc": 100,
+          "op": "invoke_0x71",
+          "method": "Lcom/panasonic/jp/lumixlab/LlcApplication;->getContext()Lcom/panasonic/jp/lumixlab/LlcApplication;"
+        },
+        {
+          "pc": 104,
+          "op": "iget/iput_0x54",
+          "field": "Lcom/panasonic/jp/lumixlab/LlcApplication;->cameraViewModel:Lz5/k2;"
+        },
+        {
+          "pc": 106,
+          "op": "iget/iput_0x52",
+          "field": "Lz5/k2;->I:I"
+        },
+        {
+          "pc": 116,
+          "op": "invoke_0x6e",
+          "method": "Lz5/D;->g0()V"
+        },
+        {
+          "pc": 120,
+          "op": "invoke_0x6e",
+          "method": "Lz5/D;->h0()V"
+        }
+      ]
+    }
+  }
+}

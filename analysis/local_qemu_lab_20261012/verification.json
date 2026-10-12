@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "original_13_files_unchanged": true,
+    "linux_shell_probe_completed": true,
+    "ordinary_linux_demo_completed": true,
+    "ordinary_virtual_usb_baseline": true,
+    "gzip_file_hash_matches": true,
+    "full_guest_ram_size": true,
+    "uncompressed_ram_hash_matches": true,
+    "guest_proof_in_actual_ram": true,
+    "physical_memory_map_matches": true,
+    "guest_shutdown_event_and_process_exit": true,
+    "fresh_ram_after_restart": true
+  },
+  "all_passed": true,
+  "snapshot": "<LOCAL_WORKSPACE>/analysis/local_qemu_lab_20261012/runs/20261012-165728-ca21e15d9176/ram-f1a6547c.bin.gz",
+  "raw_bytes": 1073741824,
+  "proof_occurrences": 6,
+  "evidence_run": "<LOCAL_WORKSPACE>/analysis/local_qemu_lab_20261012/runs/20261012-165728-ca21e15d9176",
+  "camera_ram": false,
+  "scope": "Modified public Linux guest and synthetic initramfs, not proprietary camera OS"
+}

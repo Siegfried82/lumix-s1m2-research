@@ -1,0 +1,131 @@
+{
+  "positive_control": {
+    "ctr_reused_keystream_detected": true,
+    "cbc_permutation_verified": true,
+    "positive_control_passed": true
+  },
+  "twin_pairs": [
+    {
+      "label": "V1.4_postboot2_r_vs_postboot4_r_all_FF",
+      "length": 131072,
+      "zero_byte_count": 532,
+      "expected_zero_count": 512.0,
+      "hamming_distance_bits": 524631,
+      "total_bits": 1048576,
+      "bit_flip_rate": 0.50033,
+      "common_16b_blocks": 0,
+      "same_index_identical_16b_blocks": 0,
+      "xor_autocorrelation_max_abs": 0.02744
+    },
+    {
+      "label": "V1.4_eep_ow_a_vs_eep_ow_b",
+      "length": 131072,
+      "zero_byte_count": 509,
+      "expected_zero_count": 512.0,
+      "hamming_distance_bits": 523855,
+      "total_bits": 1048576,
+      "bit_flip_rate": 0.49959,
+      "common_16b_blocks": 0,
+      "same_index_identical_16b_blocks": 0,
+      "xor_autocorrelation_max_abs": 0.02638
+    },
+    {
+      "label": "V1.4_eep_act_a_vs_eep_act_b",
+      "length": 512,
+      "zero_byte_count": 7,
+      "expected_zero_count": 2.0,
+      "hamming_distance_bits": 2073,
+      "total_bits": 4096,
+      "bit_flip_rate": 0.5061,
+      "common_16b_blocks": 0,
+      "same_index_identical_16b_blocks": 0,
+      "xor_autocorrelation_max_abs": 0.06618
+    },
+    {
+      "label": "V1.4_eep_exp_a_vs_eep_exp_b",
+      "length": 12288,
+      "zero_byte_count": 48,
+      "expected_zero_count": 48.0,
+      "hamming_distance_bits": 48945,
+      "total_bits": 98304,
+      "bit_flip_rate": 0.49789,
+      "common_16b_blocks": 0,
+      "same_index_identical_16b_blocks": 0,
+      "xor_autocorrelation_max_abs": 0.03206
+    }
+  ],
+  "cross_version_identical_hash_count": 37,
+  "cross_version_samples": [
+    {
+      "label": "V13_vs_V14_08_postboot2_r",
+      "length": 131072,
+      "zero_byte_count": 503,
+      "expected_zero_count": 512.0,
+      "hamming_distance_bits": 524490,
+      "total_bits": 1048576,
+      "bit_flip_rate": 0.50019,
+      "common_16b_blocks": 0,
+      "same_index_identical_16b_blocks": 0,
+      "xor_autocorrelation_max_abs": 0.03284
+    },
+    {
+      "label": "V13_vs_V14_10_postboot4_r",
+      "length": 131072,
+      "zero_byte_count": 482,
+      "expected_zero_count": 512.0,
+      "hamming_distance_bits": 524489,
+      "total_bits": 1048576,
+      "bit_flip_rate": 0.50019,
+      "common_16b_blocks": 0,
+      "same_index_identical_16b_blocks": 0,
+      "xor_autocorrelation_max_abs": 0.03504
+    },
+    {
+      "label": "V13_vs_V14_15_eep_ow_a",
+      "length": 131072,
+      "zero_byte_count": 538,
+      "expected_zero_count": 512.0,
+      "hamming_distance_bits": 523773,
+      "total_bits": 1048576,
+      "bit_flip_rate": 0.49951,
+      "common_16b_blocks": 0,
+      "same_index_identical_16b_blocks": 0,
+      "xor_autocorrelation_max_abs": 0.03554
+    },
+    {
+      "label": "V13_vs_V14_16_eep_ow_b",
+      "length": 131072,
+      "zero_byte_count": 528,
+      "expected_zero_count": 512.0,
+      "hamming_distance_bits": 523750,
+      "total_bits": 1048576,
+      "bit_flip_rate": 0.49949,
+      "common_16b_blocks": 0,
+      "same_index_identical_16b_blocks": 0,
+      "xor_autocorrelation_max_abs": 0.02123
+    },
+    {
+      "label": "V13_vs_V14_17_eep_adj",
+      "length": 131072,
+      "zero_byte_count": 541,
+      "expected_zero_count": 512.0,
+      "hamming_distance_bits": 524594,
+      "total_bits": 1048576,
+      "bit_flip_rate": 0.50029,
+      "common_16b_blocks": 0,
+      "same_index_identical_16b_blocks": 0,
+      "xor_autocorrelation_max_abs": 0.02191
+    }
+  ],
+  "cross_version_summary": {
+    "avg_bit_flip_rate": 0.49971,
+    "max_common_blocks": 0,
+    "max_same_pos_blocks": 0
+  },
+  "conclusions": {
+    "stream_cipher_keystream_reuse": false,
+    "ecb_mode": false,
+    "block_level_keystream_alignment": false,
+    "interpretation": "Bit flip rates strictly conform to ~50% (0.499-0.501) with zero block collisions. The transformation behaves as a cryptographically strong pseudorandom permutation (PRP) or pseudorandom function (PRF) with unique per-component nonce/IV."
+  }
+}

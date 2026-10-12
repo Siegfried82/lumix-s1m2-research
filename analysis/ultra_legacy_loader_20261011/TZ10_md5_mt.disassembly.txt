@@ -1,0 +1,1586 @@
+
+<LOCAL_WORKSPACE>/analysis/method2_review_20261011/decoded/TZ10_V12.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+00019300 <.data+0x19300>:
+   19300:	0a 00 30    	movbu	d2,(0x3000)
+   19303:	08          	clr	d2
+   19304:	00          	clr	d0
+   19305:	df f0 14    	ret	[d2,d3,a2,a3],20
+   19308:	93          	mov	a0,a3
+   19309:	47 04       	mov	a1,(4,sp)
+   1930b:	8a 10       	mov	16,d2
+   1930d:	f1 5e       	add	a3,d2
+   1930f:	f1 e8       	mov	d2,a0
+   19311:	70          	mov	(a0),d0
+   19312:	9a 18       	mov	24,a2
+   19314:	f8 c4 03    	lsr	3,d0
+   19317:	f8 e0 3f    	and	63,d0
+   1931a:	f1 7e       	add	a3,a2
+   1931c:	98          	mov	a2,a0
+   1931d:	f1 60       	add	d0,a0
+   1931f:	2d 80 00    	mov	128,d1
+   19322:	f0 54       	movbu	d1,(a0)
+   19324:	41          	inc	a0
+   19325:	85 3f       	mov	63,d1
+   19327:	f1 01       	sub	d0,d1
+   19329:	a5 08       	cmp	8,d1
+   1932b:	c6 16       	bcc	0x19341
+   1932d:	00          	clr	d0
+   1932e:	dd 0d 0a 0a 	call	0xb9d3b,[a2],4
+   19332:	00 20 04 
+   19335:	9c          	mov	a3,a0
+   19336:	cd 39 00 f0 	call	0x1936f,[d2,d3,a2,a3],144
+   1933a:	90 
+   1933b:	98          	mov	a2,a0
+   1933c:	00          	clr	d0
+   1933d:	85 38       	mov	56,d1
+   1933f:	ca 07       	bra	0x19346
+   19341:	00          	clr	d0
+   19342:	8f 08       	mov	8,d3
+   19344:	f1 0d       	sub	d3,d1
+   19346:	dd f5 09 0a 	call	0xb9d3b,[a2],4
+   1934a:	00 20 04 
+   1934d:	f1 e8       	mov	d2,a0
+   1934f:	70          	mov	(a0),d0
+   19350:	f8 12 38    	mov	d0,(56,a2)
+   19353:	f8 00 04    	mov	(4,a0),d0
+   19356:	9c          	mov	a3,a0
+   19357:	f8 12 3c    	mov	d0,(60,a2)
+   1935a:	cd 15 00 f0 	call	0x1936f,[d2,d3,a2,a3],144
+   1935e:	90 
+   1935f:	5c 04       	mov	(4,sp),a0
+   19361:	9d          	mov	a3,a1
+   19362:	80 10       	mov	16,d0
+   19364:	dd 97 09 0a 	call	0xb9cfb,[a2,a3],8
+   19368:	00 30 08 
+   1936b:	00          	clr	d0
+   1936c:	df f0 18    	ret	[d2,d3,a2,a3],24
+   1936f:	43 0c       	mov	a0,(12,sp)
+   19371:	f1 d0       	mov	a0,d0
+   19373:	28 18       	add	24,d0
+   19375:	42 04       	mov	d0,(4,sp)
+   19377:	78          	mov	(a0),d2
+   19378:	f1 d0       	mov	a0,d0
+   1937a:	28 04       	add	4,d0
+   1937c:	42 2c       	mov	d0,(44,sp)
+   1937e:	f1 e0       	mov	d0,a0
+   19380:	f0 00       	mov	(a0),a0
+   19382:	58 0c       	mov	(12,sp),d0
+   19384:	28 08       	add	8,d0
+   19386:	42 24       	mov	d0,(36,sp)
+   19388:	f1 e1       	mov	d0,a1
+   1938a:	f0 09       	mov	(a1),a2
+   1938c:	58 0c       	mov	(12,sp),d0
+   1938e:	28 0c       	add	12,d0
+   19390:	42 28       	mov	d0,(40,sp)
+   19392:	f1 e1       	mov	d0,a1
+   19394:	7d          	mov	(a1),d3
+   19395:	5d 04       	mov	(4,sp),a1
+   19397:	f1 d8       	mov	a2,d0
+   19399:	75          	mov	(a1),d1
+   1939a:	4a 54       	mov	d2,(84,sp)
+   1939c:	f2 2c       	xor	d3,d0
+   1939e:	f1 d2       	mov	a0,d2
+   193a0:	f2 08       	and	d2,d0
+   193a2:	5a 54       	mov	(84,sp),d2
+   193a4:	f2 2c       	xor	d3,d0
+   193a6:	e1          	add	d0,d1
+   193a7:	58 04       	mov	(4,sp),d0
+   193a9:	e9          	add	d2,d1
+   193aa:	28 04       	add	4,d0
+   193ac:	42 44       	mov	d0,(68,sp)
+   193ae:	f1 e3       	mov	d0,a3
+   193b0:	58 04       	mov	(4,sp),d0
+   193b2:	fc c1 78 a4 	add	-680876936,d1
+   193b6:	6a d7 
+   193b8:	28 08       	add	8,d0
+   193ba:	86          	mov	d1,d2
+   193bb:	f8 c2 07    	asl	7,d2
+   193be:	f8 c5 19    	lsr	25,d1
+   193c1:	f2 16       	or	d1,d2
+   193c3:	77          	mov	(a3),d1
+   193c4:	42 50       	mov	d0,(80,sp)
+   193c6:	f1 e3       	mov	d0,a3
+   193c8:	91          	mov	a0,a1
+   193c9:	f1 69       	add	d2,a1
+   193cb:	f1 d8       	mov	a2,d0
+   193cd:	f1 d2       	mov	a0,d2
+   193cf:	f2 28       	xor	d2,d0
+   193d1:	f1 d6       	mov	a1,d2
+   193d3:	f2 08       	and	d2,d0
+   193d5:	f1 da       	mov	a2,d2
+   193d7:	f2 28       	xor	d2,d0
+   193d9:	e1          	add	d0,d1
+   193da:	ed          	add	d3,d1
+   193db:	fc c1 56 b7 	add	-389564586,d1
+   193df:	c7 e8 
+   193e1:	86          	mov	d1,d2
+   193e2:	f8 c2 0c    	asl	12,d2
+   193e5:	f8 c5 14    	lsr	20,d1
+   193e8:	f2 16       	or	d1,d2
+   193ea:	77          	mov	(a3),d1
+   193eb:	f1 56       	add	a1,d2
+   193ed:	f1 d7       	mov	a1,d3
+   193ef:	f1 d0       	mov	a0,d0
+   193f1:	f2 2c       	xor	d3,d0
+   193f3:	f2 08       	and	d2,d0
+   193f5:	f1 d3       	mov	a0,d3
+   193f7:	f2 2c       	xor	d3,d0
+   193f9:	e4          	add	d1,d0
+   193fa:	f1 db       	mov	a2,d3
+   193fc:	e3          	add	d0,d3
+   193fd:	58 04       	mov	(4,sp),d0
+   193ff:	fc c3 db 70 	add	606105819,d3
+   19403:	20 24 
+   19405:	28 0c       	add	12,d0
+   19407:	42 34       	mov	d0,(52,sp)
+   19409:	f1 e2       	mov	d0,a2
+   1940b:	58 04       	mov	(4,sp),d0
+   1940d:	8d          	mov	d3,d1
+   1940e:	28 10       	add	16,d0
+   19410:	f8 c1 11    	asl	17,d1
+   19413:	f8 c7 0f    	lsr	15,d3
+   19416:	f2 1d       	or	d3,d1
+   19418:	e9          	add	d2,d1
+   19419:	f1 e7       	mov	d1,a3
+   1941b:	76          	mov	(a2),d1
+   1941c:	42 3c       	mov	d0,(60,sp)
+   1941e:	f1 e2       	mov	d0,a2
+   19420:	f1 d4       	mov	a1,d0
+   19422:	f2 28       	xor	d2,d0
+   19424:	f1 df       	mov	a3,d3
+   19426:	f2 0c       	and	d3,d0
+   19428:	f1 d7       	mov	a1,d3
+   1942a:	f2 2c       	xor	d3,d0
+   1942c:	87          	mov	d1,d3
+   1942d:	e3          	add	d0,d3
+   1942e:	f1 53       	add	a0,d3
+   19430:	fc c3 ee ce 	add	-1044525330,d3
+   19434:	bd c1 
+   19436:	8d          	mov	d3,d1
+   19437:	f8 c1 16    	asl	22,d1
+   1943a:	f8 c7 0a    	lsr	10,d3
+   1943d:	f2 1d       	or	d3,d1
+   1943f:	9c          	mov	a3,a0
+   19440:	f1 64       	add	d1,a0
+   19442:	76          	mov	(a2),d1
+   19443:	f1 dc       	mov	a3,d0
+   19445:	f2 28       	xor	d2,d0
+   19447:	f1 d3       	mov	a0,d3
+   19449:	f2 0c       	and	d3,d0
+   1944b:	f2 28       	xor	d2,d0
+   1944d:	87          	mov	d1,d3
+   1944e:	e3          	add	d0,d3
+   1944f:	58 04       	mov	(4,sp),d0
+   19451:	f1 57       	add	a1,d3
+   19453:	28 14       	add	20,d0
+   19455:	42 4c       	mov	d0,(76,sp)
+   19457:	f1 e1       	mov	d0,a1
+   19459:	58 04       	mov	(4,sp),d0
+   1945b:	fc c3 af 0f 	add	-176418897,d3
+   1945f:	7c f5 
+   19461:	8d          	mov	d3,d1
+   19462:	f8 c1 07    	asl	7,d1
+   19465:	f8 c7 19    	lsr	25,d3
+   19468:	f2 1d       	or	d3,d1
+   1946a:	f1 d3       	mov	a0,d3
+   1946c:	28 18       	add	24,d0
+   1946e:	92          	mov	a0,a2
+   1946f:	f1 66       	add	d1,a2
+   19471:	75          	mov	(a1),d1
+   19472:	42 48       	mov	d0,(72,sp)
+   19474:	f1 e1       	mov	d0,a1
+   19476:	f1 dc       	mov	a3,d0
+   19478:	f2 2c       	xor	d3,d0
+   1947a:	f1 db       	mov	a2,d3
+   1947c:	f2 03       	and	d0,d3
+   1947e:	f1 dc       	mov	a3,d0
+   19480:	f2 23       	xor	d0,d3
+   19482:	e7          	add	d1,d3
+   19483:	75          	mov	(a1),d1
+   19484:	eb          	add	d2,d3
+   19485:	fc c3 2a c6 	add	1200080426,d3
+   19489:	87 47 
+   1948b:	8e          	mov	d3,d2
+   1948c:	f8 c2 0c    	asl	12,d2
+   1948f:	f8 c7 14    	lsr	20,d3
+   19492:	f2 1e       	or	d3,d2
+   19494:	f1 5a       	add	a2,d2
+   19496:	f1 d0       	mov	a0,d0
+   19498:	f1 db       	mov	a2,d3
+   1949a:	f2 2c       	xor	d3,d0
+   1949c:	f2 08       	and	d2,d0
+   1949e:	f1 d3       	mov	a0,d3
+   194a0:	f2 23       	xor	d0,d3
+   194a2:	58 04       	mov	(4,sp),d0
+   194a4:	e7          	add	d1,d3
+   194a5:	28 1c       	add	28,d0
+   194a7:	42 10       	mov	d0,(16,sp)
+   194a9:	f1 5f       	add	a3,d3
+   194ab:	f1 e3       	mov	d0,a3
+   194ad:	58 04       	mov	(4,sp),d0
+   194af:	fc c3 13 46 	add	-1473231341,d3
+   194b3:	30 a8 
+   194b5:	28 20       	add	32,d0
+   194b7:	8d          	mov	d3,d1
+   194b8:	f8 c1 11    	asl	17,d1
+   194bb:	f8 c7 0f    	lsr	15,d3
+   194be:	f2 1d       	or	d3,d1
+   194c0:	e9          	add	d2,d1
+   194c1:	f1 e5       	mov	d1,a1
+   194c3:	77          	mov	(a3),d1
+   194c4:	42 40       	mov	d0,(64,sp)
+   194c6:	f1 e3       	mov	d0,a3
+   194c8:	f1 d8       	mov	a2,d0
+   194ca:	f2 28       	xor	d2,d0
+   194cc:	f1 d7       	mov	a1,d3
+   194ce:	f2 03       	and	d0,d3
+   194d0:	f1 d8       	mov	a2,d0
+   194d2:	f2 23       	xor	d0,d3
+   194d4:	e7          	add	d1,d3
+   194d5:	f1 53       	add	a0,d3
+   194d7:	fc c3 01 95 	add	-45705983,d3
+   194db:	46 fd 
+   194dd:	8d          	mov	d3,d1
+   194de:	f8 c1 16    	asl	22,d1
+   194e1:	f8 c7 0a    	lsr	10,d3
+   194e4:	f2 1d       	or	d3,d1
+   194e6:	94          	mov	a1,a0
+   194e7:	f1 64       	add	d1,a0
+   194e9:	77          	mov	(a3),d1
+   194ea:	f1 d4       	mov	a1,d0
+   194ec:	f2 28       	xor	d2,d0
+   194ee:	f1 d3       	mov	a0,d3
+   194f0:	f2 0c       	and	d3,d0
+   194f2:	f2 28       	xor	d2,d0
+   194f4:	87          	mov	d1,d3
+   194f5:	e3          	add	d0,d3
+   194f6:	58 04       	mov	(4,sp),d0
+   194f8:	f1 5b       	add	a2,d3
+   194fa:	28 24       	add	36,d0
+   194fc:	42 38       	mov	d0,(56,sp)
+   194fe:	f1 e2       	mov	d0,a2
+   19500:	fc c3 d8 98 	add	1770035416,d3
+   19504:	80 69 
+   19506:	8d          	mov	d3,d1
+   19507:	f8 c1 07    	asl	7,d1
+   1950a:	f8 c7 19    	lsr	25,d3
+   1950d:	f2 17       	or	d1,d3
+   1950f:	76          	mov	(a2),d1
+   19510:	f1 53       	add	a0,d3
+   19512:	4a 58       	mov	d2,(88,sp)
+   19514:	f1 d2       	mov	a0,d2
+   19516:	f1 d4       	mov	a1,d0
+   19518:	f2 28       	xor	d2,d0
+   1951a:	5a 58       	mov	(88,sp),d2
+   1951c:	4e 5c       	mov	d3,(92,sp)
+   1951e:	f2 0c       	and	d3,d0
+   19520:	f1 d7       	mov	a1,d3
+   19522:	f2 2c       	xor	d3,d0
+   19524:	5b 5c       	mov	(92,sp),d3
+   19526:	e4          	add	d1,d0
+   19527:	e2          	add	d0,d2
+   19528:	58 04       	mov	(4,sp),d0
+   1952a:	fc c2 af f7 	add	-1958414417,d2
+   1952e:	44 8b 
+   19530:	28 28       	add	40,d0
+   19532:	42 08       	mov	d0,(8,sp)
+   19534:	f1 e3       	mov	d0,a3
+   19536:	58 04       	mov	(4,sp),d0
+   19538:	89          	mov	d2,d1
+   19539:	28 2c       	add	44,d0
+   1953b:	f8 c1 0c    	asl	12,d1
+   1953e:	f8 c6 14    	lsr	20,d2
+   19541:	f2 19       	or	d2,d1
+   19543:	ed          	add	d3,d1
+   19544:	f1 e6       	mov	d1,a2
+   19546:	77          	mov	(a3),d1
+   19547:	42 30       	mov	d0,(48,sp)
+   19549:	f1 e3       	mov	d0,a3
+   1954b:	f1 d0       	mov	a0,d0
+   1954d:	f2 2c       	xor	d3,d0
+   1954f:	f1 da       	mov	a2,d2
+   19551:	f2 08       	and	d2,d0
+   19553:	f1 d2       	mov	a0,d2
+   19555:	f2 28       	xor	d2,d0
+   19557:	e4          	add	d1,d0
+   19558:	f1 d6       	mov	a1,d2
+   1955a:	e2          	add	d0,d2
+   1955b:	fc c2 b1 5b 	add	-42063,d2
+   1955f:	ff ff 
+   19561:	89          	mov	d2,d1
+   19562:	f8 c1 11    	asl	17,d1
+   19565:	f8 c6 0f    	lsr	15,d2
+   19568:	f2 19       	or	d2,d1
+   1956a:	99          	mov	a2,a1
+   1956b:	f1 65       	add	d1,a1
+   1956d:	77          	mov	(a3),d1
+   1956e:	f1 d6       	mov	a1,d2
+   19570:	f1 d8       	mov	a2,d0
+   19572:	f2 2c       	xor	d3,d0
+   19574:	f2 08       	and	d2,d0
+   19576:	f2 2c       	xor	d3,d0
+   19578:	e4          	add	d1,d0
+   19579:	f1 d2       	mov	a0,d2
+   1957b:	e2          	add	d0,d2
+   1957c:	58 04       	mov	(4,sp),d0
+   1957e:	fc c2 be d7 	add	-1990404162,d2
+   19582:	5c 89 
+   19584:	28 30       	add	48,d0
+   19586:	42 18       	mov	d0,(24,sp)
+   19588:	f1 e3       	mov	d0,a3
+   1958a:	89          	mov	d2,d1
+   1958b:	f8 c1 16    	asl	22,d1
+   1958e:	f1 d8       	mov	a2,d0
+   19590:	f8 c6 0a    	lsr	10,d2
+   19593:	f2 19       	or	d2,d1
+   19595:	94          	mov	a1,a0
+   19596:	f1 64       	add	d1,a0
+   19598:	77          	mov	(a3),d1
+   19599:	f1 d6       	mov	a1,d2
+   1959b:	f2 28       	xor	d2,d0
+   1959d:	f1 d2       	mov	a0,d2
+   1959f:	f2 08       	and	d2,d0
+   195a1:	f1 da       	mov	a2,d2
+   195a3:	f2 28       	xor	d2,d0
+   195a5:	e4          	add	d1,d0
+   195a6:	8d          	mov	d3,d1
+   195a7:	e1          	add	d0,d1
+   195a8:	58 04       	mov	(4,sp),d0
+   195aa:	fc c1 22 11 	add	1804603682,d1
+   195ae:	90 6b 
+   195b0:	28 34       	add	52,d0
+   195b2:	42 20       	mov	d0,(32,sp)
+   195b4:	4a 60       	mov	d2,(96,sp)
+   195b6:	f1 e2       	mov	d0,a2
+   195b8:	87          	mov	d1,d3
+   195b9:	f8 c3 07    	asl	7,d3
+   195bc:	f8 c5 19    	lsr	25,d1
+   195bf:	f2 17       	or	d1,d3
+   195c1:	76          	mov	(a2),d1
+   195c2:	93          	mov	a0,a3
+   195c3:	f1 6f       	add	d3,a3
+   195c5:	f1 ea       	mov	d2,a2
+   195c7:	f1 d4       	mov	a1,d0
+   195c9:	f1 d2       	mov	a0,d2
+   195cb:	f2 28       	xor	d2,d0
+   195cd:	f1 de       	mov	a3,d2
+   195cf:	f2 08       	and	d2,d0
+   195d1:	f1 d6       	mov	a1,d2
+   195d3:	f2 28       	xor	d2,d0
+   195d5:	e1          	add	d0,d1
+   195d6:	58 04       	mov	(4,sp),d0
+   195d8:	f1 59       	add	a2,d1
+   195da:	28 38       	add	56,d0
+   195dc:	42 1c       	mov	d0,(28,sp)
+   195de:	47 64       	mov	a1,(100,sp)
+   195e0:	f1 e1       	mov	d0,a1
+   195e2:	fc c1 93 71 	add	-40341101,d1
+   195e6:	98 fd 
+   195e8:	86          	mov	d1,d2
+   195e9:	f8 c2 0c    	asl	12,d2
+   195ec:	f8 c5 14    	lsr	20,d1
+   195ef:	f2 16       	or	d1,d2
+   195f1:	75          	mov	(a1),d1
+   195f2:	5d 64       	mov	(100,sp),a1
+   195f4:	9e          	mov	a3,a2
+   195f5:	f1 6a       	add	d2,a2
+   195f7:	f1 d0       	mov	a0,d0
+   195f9:	f1 de       	mov	a3,d2
+   195fb:	f2 28       	xor	d2,d0
+   195fd:	f1 da       	mov	a2,d2
+   195ff:	f2 08       	and	d2,d0
+   19601:	f1 d2       	mov	a0,d2
+   19603:	f2 28       	xor	d2,d0
+   19605:	86          	mov	d1,d2
+   19606:	e2          	add	d0,d2
+   19607:	58 04       	mov	(4,sp),d0
+   19609:	f1 56       	add	a1,d2
+   1960b:	28 3c       	add	60,d0
+   1960d:	42 14       	mov	d0,(20,sp)
+   1960f:	f1 e1       	mov	d0,a1
+   19611:	fc c2 8e 43 	add	-1502002290,d2
+   19615:	79 a6 
+   19617:	89          	mov	d2,d1
+   19618:	f8 c1 11    	asl	17,d1
+   1961b:	f8 c6 0f    	lsr	15,d2
+   1961e:	f2 19       	or	d2,d1
+   19620:	79          	mov	(a1),d2
+   19621:	f1 59       	add	a2,d1
+   19623:	f1 db       	mov	a2,d3
+   19625:	f1 dc       	mov	a3,d0
+   19627:	f2 2c       	xor	d3,d0
+   19629:	f2 04       	and	d1,d0
+   1962b:	f1 df       	mov	a3,d3
+   1962d:	f2 2c       	xor	d3,d0
+   1962f:	e8          	add	d2,d0
+   19630:	f1 d3       	mov	a0,d3
+   19632:	5c 44       	mov	(68,sp),a0
+   19634:	e3          	add	d0,d3
+   19635:	fc c3 21 08 	add	1236535329,d3
+   19639:	b4 49 
+   1963b:	8e          	mov	d3,d2
+   1963c:	f8 c2 16    	asl	22,d2
+   1963f:	f8 c7 0a    	lsr	10,d3
+   19642:	f2 1e       	or	d3,d2
+   19644:	e6          	add	d1,d2
+   19645:	f1 e9       	mov	d2,a1
+   19647:	78          	mov	(a0),d2
+   19648:	5c 48       	mov	(72,sp),a0
+   1964a:	f1 d4       	mov	a1,d0
+   1964c:	f2 24       	xor	d1,d0
+   1964e:	f1 db       	mov	a2,d3
+   19650:	f2 0c       	and	d3,d0
+   19652:	f2 24       	xor	d1,d0
+   19654:	e8          	add	d2,d0
+   19655:	f1 df       	mov	a3,d3
+   19657:	e3          	add	d0,d3
+   19658:	97          	mov	a1,a3
+   19659:	70          	mov	(a0),d0
+   1965a:	fc c3 62 25 	add	-165796510,d3
+   1965e:	1e f6 
+   19660:	8e          	mov	d3,d2
+   19661:	f8 c2 05    	asl	5,d2
+   19664:	f8 c7 1b    	lsr	27,d3
+   19667:	f2 1e       	or	d3,d2
+   19669:	f1 6b       	add	d2,a3
+   1966b:	f1 de       	mov	a3,d2
+   1966d:	f1 d7       	mov	a1,d3
+   1966f:	f2 2b       	xor	d2,d3
+   19671:	f2 07       	and	d1,d3
+   19673:	f1 d6       	mov	a1,d2
+   19675:	f2 2b       	xor	d2,d3
+   19677:	e3          	add	d0,d3
+   19678:	f1 5b       	add	a2,d3
+   1967a:	5e 30       	mov	(48,sp),a2
+   1967c:	fc c3 40 b3 	add	-1069501632,d3
+   19680:	40 c0 
+   19682:	8e          	mov	d3,d2
+   19683:	f8 c2 09    	asl	9,d2
+   19686:	8c          	mov	d3,d0
+   19687:	f8 c4 17    	lsr	23,d0
+   1968a:	f2 12       	or	d0,d2
+   1968c:	9c          	mov	a3,a0
+   1968d:	f1 68       	add	d2,a0
+   1968f:	7a          	mov	(a2),d2
+   19690:	5e 04       	mov	(4,sp),a2
+   19692:	f1 d3       	mov	a0,d3
+   19694:	f1 dc       	mov	a3,d0
+   19696:	f2 2c       	xor	d3,d0
+   19698:	f1 d7       	mov	a1,d3
+   1969a:	f2 0c       	and	d3,d0
+   1969c:	f1 df       	mov	a3,d3
+   1969e:	f2 2c       	xor	d3,d0
+   196a0:	e8          	add	d2,d0
+   196a1:	e1          	add	d0,d1
+   196a2:	fc c1 51 5a 	add	643717713,d1
+   196a6:	5e 26 
+   196a8:	87          	mov	d1,d3
+   196a9:	f8 c3 0e    	asl	14,d3
+   196ac:	f8 c5 12    	lsr	18,d1
+   196af:	f2 17       	or	d1,d3
+   196b1:	76          	mov	(a2),d1
+   196b2:	f1 53       	add	a0,d3
+   196b4:	f1 d0       	mov	a0,d0
+   196b6:	f2 2c       	xor	d3,d0
+   196b8:	f1 de       	mov	a3,d2
+   196ba:	f2 08       	and	d2,d0
+   196bc:	f1 d2       	mov	a0,d2
+   196be:	f2 28       	xor	d2,d0
+   196c0:	e1          	add	d0,d1
+   196c1:	f1 55       	add	a1,d1
+   196c3:	5d 4c       	mov	(76,sp),a1
+   196c5:	fc c1 aa c7 	add	-373897302,d1
+   196c9:	b6 e9 
+   196cb:	86          	mov	d1,d2
+   196cc:	f8 c2 14    	asl	20,d2
+   196cf:	f8 c5 0c    	lsr	12,d1
+   196d2:	f2 16       	or	d1,d2
+   196d4:	75          	mov	(a1),d1
+   196d5:	ee          	add	d3,d2
+   196d6:	f1 ea       	mov	d2,a2
+   196d8:	88          	mov	d2,d0
+   196d9:	f2 2c       	xor	d3,d0
+   196db:	f1 d2       	mov	a0,d2
+   196dd:	f2 08       	and	d2,d0
+   196df:	f2 2c       	xor	d3,d0
+   196e1:	e1          	add	d0,d1
+   196e2:	f1 5d       	add	a3,d1
+   196e4:	5f 08       	mov	(8,sp),a3
+   196e6:	fc c1 5d 10 	add	-701558691,d1
+   196ea:	2f d6 
+   196ec:	86          	mov	d1,d2
+   196ed:	f8 c2 05    	asl	5,d2
+   196f0:	f8 c5 1b    	lsr	27,d1
+   196f3:	f2 16       	or	d1,d2
+   196f5:	77          	mov	(a3),d1
+   196f6:	5f 14       	mov	(20,sp),a3
+   196f8:	99          	mov	a2,a1
+   196f9:	f1 69       	add	d2,a1
+   196fb:	f1 d6       	mov	a1,d2
+   196fd:	f1 d8       	mov	a2,d0
+   196ff:	f2 28       	xor	d2,d0
+   19701:	f2 0c       	and	d3,d0
+   19703:	f1 da       	mov	a2,d2
+   19705:	f2 28       	xor	d2,d0
+   19707:	e1          	add	d0,d1
+   19708:	f1 51       	add	a0,d1
+   1970a:	fc c1 53 14 	add	38016083,d1
+   1970e:	44 02 
+   19710:	86          	mov	d1,d2
+   19711:	f8 c2 09    	asl	9,d2
+   19714:	f8 c5 17    	lsr	23,d1
+   19717:	f2 16       	or	d1,d2
+   19719:	77          	mov	(a3),d1
+   1971a:	5f 3c       	mov	(60,sp),a3
+   1971c:	94          	mov	a1,a0
+   1971d:	f1 68       	add	d2,a0
+   1971f:	f1 d2       	mov	a0,d2
+   19721:	f1 d4       	mov	a1,d0
+   19723:	f2 28       	xor	d2,d0
+   19725:	f1 da       	mov	a2,d2
+   19727:	f2 08       	and	d2,d0
+   19729:	f1 d6       	mov	a1,d2
+   1972b:	f2 28       	xor	d2,d0
+   1972d:	e4          	add	d1,d0
+   1972e:	8d          	mov	d3,d1
+   1972f:	e1          	add	d0,d1
+   19730:	fc c1 81 e6 	add	-660478335,d1
+   19734:	a1 d8 
+   19736:	87          	mov	d1,d3
+   19737:	f8 c3 0e    	asl	14,d3
+   1973a:	f8 c5 12    	lsr	18,d1
+   1973d:	f2 17       	or	d1,d3
+   1973f:	77          	mov	(a3),d1
+   19740:	5f 38       	mov	(56,sp),a3
+   19742:	f1 53       	add	a0,d3
+   19744:	f1 d0       	mov	a0,d0
+   19746:	f2 2c       	xor	d3,d0
+   19748:	f2 08       	and	d2,d0
+   1974a:	f1 d2       	mov	a0,d2
+   1974c:	f2 28       	xor	d2,d0
+   1974e:	86          	mov	d1,d2
+   1974f:	e2          	add	d0,d2
+   19750:	f1 5a       	add	a2,d2
+   19752:	fc c2 c8 fb 	add	-405537848,d2
+   19756:	d3 e7 
+   19758:	89          	mov	d2,d1
+   19759:	f8 c1 14    	asl	20,d1
+   1975c:	f8 c6 0c    	lsr	12,d2
+   1975f:	f2 19       	or	d2,d1
+   19761:	7b          	mov	(a3),d2
+   19762:	5f 1c       	mov	(28,sp),a3
+   19764:	ed          	add	d3,d1
+   19765:	f1 e6       	mov	d1,a2
+   19767:	84          	mov	d1,d0
+   19768:	f2 2c       	xor	d3,d0
+   1976a:	f1 d1       	mov	a0,d1
+   1976c:	f2 04       	and	d1,d0
+   1976e:	f2 2c       	xor	d3,d0
+   19770:	89          	mov	d2,d1
+   19771:	e1          	add	d0,d1
+   19772:	f1 55       	add	a1,d1
+   19774:	fc c1 e6 cd 	add	568446438,d1
+   19778:	e1 21 
+   1977a:	86          	mov	d1,d2
+   1977b:	f8 c2 05    	asl	5,d2
+   1977e:	f8 c5 1b    	lsr	27,d1
+   19781:	f2 16       	or	d1,d2
+   19783:	77          	mov	(a3),d1
+   19784:	5f 34       	mov	(52,sp),a3
+   19786:	99          	mov	a2,a1
+   19787:	f1 69       	add	d2,a1
+   19789:	f1 d6       	mov	a1,d2
+   1978b:	f1 d8       	mov	a2,d0
+   1978d:	f2 28       	xor	d2,d0
+   1978f:	f2 0c       	and	d3,d0
+   19791:	f1 da       	mov	a2,d2
+   19793:	f2 28       	xor	d2,d0
+   19795:	e1          	add	d0,d1
+   19796:	f1 51       	add	a0,d1
+   19798:	fc c1 d6 07 	add	-1019803690,d1
+   1979c:	37 c3 
+   1979e:	86          	mov	d1,d2
+   1979f:	f8 c2 09    	asl	9,d2
+   197a2:	f8 c5 17    	lsr	23,d1
+   197a5:	f2 16       	or	d1,d2
+   197a7:	77          	mov	(a3),d1
+   197a8:	94          	mov	a1,a0
+   197a9:	f1 68       	add	d2,a0
+   197ab:	f1 d2       	mov	a0,d2
+   197ad:	f1 d4       	mov	a1,d0
+   197af:	f2 28       	xor	d2,d0
+   197b1:	f1 da       	mov	a2,d2
+   197b3:	f2 08       	and	d2,d0
+   197b5:	5f 40       	mov	(64,sp),a3
+   197b7:	f1 d6       	mov	a1,d2
+   197b9:	f2 28       	xor	d2,d0
+   197bb:	e1          	add	d0,d1
+   197bc:	ed          	add	d3,d1
+   197bd:	fc c1 87 0d 	add	-187363961,d1
+   197c1:	d5 f4 
+   197c3:	87          	mov	d1,d3
+   197c4:	f8 c3 0e    	asl	14,d3
+   197c7:	f8 c5 12    	lsr	18,d1
+   197ca:	f2 17       	or	d1,d3
+   197cc:	77          	mov	(a3),d1
+   197cd:	5f 20       	mov	(32,sp),a3
+   197cf:	f1 53       	add	a0,d3
+   197d1:	f1 d0       	mov	a0,d0
+   197d3:	f2 2c       	xor	d3,d0
+   197d5:	f2 08       	and	d2,d0
+   197d7:	f1 d2       	mov	a0,d2
+   197d9:	f2 28       	xor	d2,d0
+   197db:	e1          	add	d0,d1
+   197dc:	73          	mov	(a3),d0
+   197dd:	5f 50       	mov	(80,sp),a3
+   197df:	f1 59       	add	a2,d1
+   197e1:	fc c1 ed 14 	add	1163531501,d1
+   197e5:	5a 45 
+   197e7:	86          	mov	d1,d2
+   197e8:	f8 c2 14    	asl	20,d2
+   197eb:	f8 c5 0c    	lsr	12,d1
+   197ee:	f2 16       	or	d1,d2
+   197f0:	ee          	add	d3,d2
+   197f1:	f1 ea       	mov	d2,a2
+   197f3:	89          	mov	d2,d1
+   197f4:	f2 2d       	xor	d3,d1
+   197f6:	f1 d2       	mov	a0,d2
+   197f8:	f2 09       	and	d2,d1
+   197fa:	f2 2d       	xor	d3,d1
+   197fc:	e1          	add	d0,d1
+   197fd:	f1 55       	add	a1,d1
+   197ff:	fc c1 05 e9 	add	-1444681467,d1
+   19803:	e3 a9 
+   19805:	84          	mov	d1,d0
+   19806:	f8 c4 1b    	lsr	27,d0
+   19809:	86          	mov	d1,d2
+   1980a:	f1 d9       	mov	a2,d1
+   1980c:	f8 c2 05    	asl	5,d2
+   1980f:	f2 12       	or	d0,d2
+   19811:	73          	mov	(a3),d0
+   19812:	99          	mov	a2,a1
+   19813:	f1 69       	add	d2,a1
+   19815:	f1 d6       	mov	a1,d2
+   19817:	f2 29       	xor	d2,d1
+   19819:	f2 0d       	and	d3,d1
+   1981b:	f1 da       	mov	a2,d2
+   1981d:	f2 29       	xor	d2,d1
+   1981f:	e1          	add	d0,d1
+   19820:	f1 51       	add	a0,d1
+   19822:	5c 10       	mov	(16,sp),a0
+   19824:	fc c1 f8 a3 	add	-51403784,d1
+   19828:	ef fc 
+   1982a:	86          	mov	d1,d2
+   1982b:	f8 c2 09    	asl	9,d2
+   1982e:	84          	mov	d1,d0
+   1982f:	f8 c4 17    	lsr	23,d0
+   19832:	f2 12       	or	d0,d2
+   19834:	70          	mov	(a0),d0
+   19835:	f1 56       	add	a1,d2
+   19837:	4a 68       	mov	d2,(104,sp)
+   19839:	f1 d5       	mov	a1,d1
+   1983b:	f2 29       	xor	d2,d1
+   1983d:	f1 da       	mov	a2,d2
+   1983f:	f2 09       	and	d2,d1
+   19841:	f1 d6       	mov	a1,d2
+   19843:	f2 29       	xor	d2,d1
+   19845:	5a 68       	mov	(104,sp),d2
+   19847:	e1          	add	d0,d1
+   19848:	ed          	add	d3,d1
+   19849:	fc c1 d9 02 	add	1735328473,d1
+   1984d:	6f 67 
+   1984f:	87          	mov	d1,d3
+   19850:	f8 c3 0e    	asl	14,d3
+   19853:	84          	mov	d1,d0
+   19854:	f8 c4 12    	lsr	18,d0
+   19857:	f2 13       	or	d0,d3
+   19859:	eb          	add	d2,d3
+   1985a:	4e 00       	mov	d3,(sp)
+   1985c:	5c 18       	mov	(24,sp),a0
+   1985e:	8d          	mov	d3,d1
+   1985f:	70          	mov	(a0),d0
+   19860:	5c 00       	mov	(sp),a0
+   19862:	f2 29       	xor	d2,d1
+   19864:	f1 d7       	mov	a1,d3
+   19866:	f2 0d       	and	d3,d1
+   19868:	f2 29       	xor	d2,d1
+   1986a:	e1          	add	d0,d1
+   1986b:	f1 59       	add	a2,d1
+   1986d:	5e 4c       	mov	(76,sp),a2
+   1986f:	fc c1 8a 4c 	add	-1926607734,d1
+   19873:	2a 8d 
+   19875:	87          	mov	d1,d3
+   19876:	f8 c3 14    	asl	20,d3
+   19879:	84          	mov	d1,d0
+   1987a:	76          	mov	(a2),d1
+   1987b:	f8 c4 0c    	lsr	12,d0
+   1987e:	f2 13       	or	d0,d3
+   19880:	58 00       	mov	(sp),d0
+   19882:	f1 6c       	add	d3,a0
+   19884:	f1 d3       	mov	a0,d3
+   19886:	f2 2c       	xor	d3,d0
+   19888:	f2 28       	xor	d2,d0
+   1988a:	e1          	add	d0,d1
+   1988b:	f1 55       	add	a1,d1
+   1988d:	fc c1 42 39 	add	-378558,d1
+   19891:	fa ff 
+   19893:	87          	mov	d1,d3
+   19894:	f8 c3 04    	asl	4,d3
+   19897:	f8 c5 1c    	lsr	28,d1
+   1989a:	f2 17       	or	d1,d3
+   1989c:	5d 40       	mov	(64,sp),a1
+   1989e:	93          	mov	a0,a3
+   1989f:	f1 6f       	add	d3,a3
+   198a1:	75          	mov	(a1),d1
+   198a2:	f1 df       	mov	a3,d3
+   198a4:	f1 d0       	mov	a0,d0
+   198a6:	f2 2c       	xor	d3,d0
+   198a8:	5d 30       	mov	(48,sp),a1
+   198aa:	5b 00       	mov	(sp),d3
+   198ac:	f2 2c       	xor	d3,d0
+   198ae:	e1          	add	d0,d1
+   198af:	e9          	add	d2,d1
+   198b0:	f1 dc       	mov	a3,d0
+   198b2:	fc c1 81 f6 	add	-2022574463,d1
+   198b6:	71 87 
+   198b8:	86          	mov	d1,d2
+   198b9:	f8 c2 0b    	asl	11,d2
+   198bc:	f8 c5 15    	lsr	21,d1
+   198bf:	f2 16       	or	d1,d2
+   198c1:	75          	mov	(a1),d1
+   198c2:	5d 1c       	mov	(28,sp),a1
+   198c4:	f1 5e       	add	a3,d2
+   198c6:	f2 28       	xor	d2,d0
+   198c8:	f1 d3       	mov	a0,d3
+   198ca:	f2 2c       	xor	d3,d0
+   198cc:	e1          	add	d0,d1
+   198cd:	58 00       	mov	(sp),d0
+   198cf:	e1          	add	d0,d1
+   198d0:	fc c1 22 61 	add	1839030562,d1
+   198d4:	9d 6d 
+   198d6:	87          	mov	d1,d3
+   198d7:	f8 c3 10    	asl	16,d3
+   198da:	f8 c5 10    	lsr	16,d1
+   198dd:	f2 17       	or	d1,d3
+   198df:	75          	mov	(a1),d1
+   198e0:	eb          	add	d2,d3
+   198e1:	f1 ee       	mov	d3,a2
+   198e3:	8c          	mov	d3,d0
+   198e4:	f2 28       	xor	d2,d0
+   198e6:	f1 df       	mov	a3,d3
+   198e8:	f2 2c       	xor	d3,d0
+   198ea:	e1          	add	d0,d1
+   198eb:	f1 51       	add	a0,d1
+   198ed:	5c 44       	mov	(68,sp),a0
+   198ef:	fc c1 0c 38 	add	-35309556,d1
+   198f3:	e5 fd 
+   198f5:	87          	mov	d1,d3
+   198f6:	f8 c3 17    	asl	23,d3
+   198f9:	f8 c5 09    	lsr	9,d1
+   198fc:	f2 17       	or	d1,d3
+   198fe:	74          	mov	(a0),d1
+   198ff:	99          	mov	a2,a1
+   19900:	f1 6d       	add	d3,a1
+   19902:	f1 d7       	mov	a1,d3
+   19904:	f1 d8       	mov	a2,d0
+   19906:	f2 2c       	xor	d3,d0
+   19908:	f2 28       	xor	d2,d0
+   1990a:	e4          	add	d1,d0
+   1990b:	f1 df       	mov	a3,d3
+   1990d:	5f 3c       	mov	(60,sp),a3
+   1990f:	e3          	add	d0,d3
+   19910:	fc c3 44 ea 	add	-1530992060,d3
+   19914:	be a4 
+   19916:	8d          	mov	d3,d1
+   19917:	f8 c1 04    	asl	4,d1
+   1991a:	f8 c7 1c    	lsr	28,d3
+   1991d:	f2 1d       	or	d3,d1
+   1991f:	94          	mov	a1,a0
+   19920:	f1 64       	add	d1,a0
+   19922:	77          	mov	(a3),d1
+   19923:	f1 d3       	mov	a0,d3
+   19925:	4b 6c       	mov	a2,(108,sp)
+   19927:	f1 d4       	mov	a1,d0
+   19929:	f2 2c       	xor	d3,d0
+   1992b:	f1 db       	mov	a2,d3
+   1992d:	5e 10       	mov	(16,sp),a2
+   1992f:	f2 2c       	xor	d3,d0
+   19931:	e4          	add	d1,d0
+   19932:	76          	mov	(a2),d1
+   19933:	5e 08       	mov	(8,sp),a2
+   19935:	8b          	mov	d2,d3
+   19936:	e3          	add	d0,d3
+   19937:	fc c3 a9 cf 	add	1272893353,d3
+   1993b:	de 4b 
+   1993d:	8e          	mov	d3,d2
+   1993e:	f8 c2 0b    	asl	11,d2
+   19941:	f8 c7 15    	lsr	21,d3
+   19944:	f2 1e       	or	d3,d2
+   19946:	93          	mov	a0,a3
+   19947:	f1 6b       	add	d2,a3
+   19949:	f1 dc       	mov	a3,d0
+   1994b:	f1 d3       	mov	a0,d3
+   1994d:	f2 23       	xor	d0,d3
+   1994f:	f1 d4       	mov	a1,d0
+   19951:	f2 23       	xor	d0,d3
+   19953:	e7          	add	d1,d3
+   19954:	76          	mov	(a2),d1
+   19955:	5e 6c       	mov	(108,sp),a2
+   19957:	f1 d0       	mov	a0,d0
+   19959:	f1 5b       	add	a2,d3
+   1995b:	5e 20       	mov	(32,sp),a2
+   1995d:	fc c3 60 4b 	add	-155497632,d3
+   19961:	bb f6 
+   19963:	8e          	mov	d3,d2
+   19964:	f8 c2 10    	asl	16,d2
+   19967:	f8 c7 10    	lsr	16,d3
+   1996a:	f2 1e       	or	d3,d2
+   1996c:	f1 5e       	add	a3,d2
+   1996e:	f1 df       	mov	a3,d3
+   19970:	f2 2b       	xor	d2,d3
+   19972:	f2 23       	xor	d0,d3
+   19974:	e7          	add	d1,d3
+   19975:	f1 57       	add	a1,d3
+   19977:	fc c3 70 bc 	add	-1094730640,d3
+   1997b:	bf be 
+   1997d:	8d          	mov	d3,d1
+   1997e:	f8 c1 17    	asl	23,d1
+   19981:	8c          	mov	d3,d0
+   19982:	f8 c4 09    	lsr	9,d0
+   19985:	f2 11       	or	d0,d1
+   19987:	e9          	add	d2,d1
+   19988:	f1 e5       	mov	d1,a1
+   1998a:	76          	mov	(a2),d1
+   1998b:	f1 d4       	mov	a1,d0
+   1998d:	f2 28       	xor	d2,d0
+   1998f:	f1 df       	mov	a3,d3
+   19991:	f2 2c       	xor	d3,d0
+   19993:	e4          	add	d1,d0
+   19994:	f1 d1       	mov	a0,d1
+   19996:	e1          	add	d0,d1
+   19997:	fc c1 c6 7e 	add	681279174,d1
+   1999b:	9b 28 
+   1999d:	87          	mov	d1,d3
+   1999e:	f8 c3 04    	asl	4,d3
+   199a1:	f8 c5 1c    	lsr	28,d1
+   199a4:	f2 17       	or	d1,d3
+   199a6:	f1 57       	add	a1,d3
+   199a8:	4e 00       	mov	d3,(sp)
+   199aa:	5c 04       	mov	(4,sp),a0
+   199ac:	5e 00       	mov	(sp),a2
+   199ae:	74          	mov	(a0),d1
+   199af:	5c 34       	mov	(52,sp),a0
+   199b1:	8c          	mov	d3,d0
+   199b2:	f1 d7       	mov	a1,d3
+   199b4:	f2 2c       	xor	d3,d0
+   199b6:	f2 28       	xor	d2,d0
+   199b8:	e1          	add	d0,d1
+   199b9:	58 00       	mov	(sp),d0
+   199bb:	f1 5d       	add	a3,d1
+   199bd:	5f 18       	mov	(24,sp),a3
+   199bf:	fc c1 fa 27 	add	-358537222,d1
+   199c3:	a1 ea 
+   199c5:	87          	mov	d1,d3
+   199c6:	f8 c3 0b    	asl	11,d3
+   199c9:	f8 c5 15    	lsr	21,d1
+   199cc:	f2 17       	or	d1,d3
+   199ce:	74          	mov	(a0),d1
+   199cf:	5c 48       	mov	(72,sp),a0
+   199d1:	f1 6e       	add	d3,a2
+   199d3:	f1 db       	mov	a2,d3
+   199d5:	f2 2c       	xor	d3,d0
+   199d7:	f1 d7       	mov	a1,d3
+   199d9:	f2 2c       	xor	d3,d0
+   199db:	5b 00       	mov	(sp),d3
+   199dd:	e1          	add	d0,d1
+   199de:	e9          	add	d2,d1
+   199df:	fc c1 85 30 	add	-722521979,d1
+   199e3:	ef d4 
+   199e5:	86          	mov	d1,d2
+   199e6:	f8 c2 10    	asl	16,d2
+   199e9:	f8 c5 10    	lsr	16,d1
+   199ec:	f2 16       	or	d1,d2
+   199ee:	f1 d8       	mov	a2,d0
+   199f0:	e8          	add	d2,d0
+   199f1:	78          	mov	(a0),d2
+   199f2:	f1 d9       	mov	a2,d1
+   199f4:	f2 21       	xor	d0,d1
+   199f6:	f2 2d       	xor	d3,d1
+   199f8:	e9          	add	d2,d1
+   199f9:	f1 d7       	mov	a1,d3
+   199fb:	5d 38       	mov	(56,sp),a1
+   199fd:	e7          	add	d1,d3
+   199fe:	fc c3 05 1d 	add	76029189,d3
+   19a02:	88 04 
+   19a04:	8e          	mov	d3,d2
+   19a05:	f8 c2 17    	asl	23,d2
+   19a08:	f8 c7 09    	lsr	9,d3
+   19a0b:	f2 1e       	or	d3,d2
+   19a0d:	e2          	add	d0,d2
+   19a0e:	f1 e8       	mov	d2,a0
+   19a10:	79          	mov	(a1),d2
+   19a11:	f1 db       	mov	a2,d3
+   19a13:	f1 d1       	mov	a0,d1
+   19a15:	f2 21       	xor	d0,d1
+   19a17:	f2 2d       	xor	d3,d1
+   19a19:	e9          	add	d2,d1
+   19a1a:	5b 00       	mov	(sp),d3
+   19a1c:	91          	mov	a0,a1
+   19a1d:	e7          	add	d1,d3
+   19a1e:	fc c3 39 d0 	add	-640364487,d3
+   19a22:	d4 d9 
+   19a24:	8e          	mov	d3,d2
+   19a25:	f8 c2 04    	asl	4,d2
+   19a28:	f8 c7 1c    	lsr	28,d3
+   19a2b:	f2 1e       	or	d3,d2
+   19a2d:	f1 69       	add	d2,a1
+   19a2f:	7b          	mov	(a3),d2
+   19a30:	f1 d7       	mov	a1,d3
+   19a32:	f1 d1       	mov	a0,d1
+   19a34:	f2 2d       	xor	d3,d1
+   19a36:	f2 21       	xor	d0,d1
+   19a38:	e6          	add	d1,d2
+   19a39:	f1 5a       	add	a2,d2
+   19a3b:	5e 14       	mov	(20,sp),a2
+   19a3d:	fc c2 e5 99 	add	-421815835,d2
+   19a41:	db e6 
+   19a43:	8b          	mov	d2,d3
+   19a44:	f8 c3 0b    	asl	11,d3
+   19a47:	f8 c6 15    	lsr	21,d2
+   19a4a:	f2 1b       	or	d2,d3
+   19a4c:	7a          	mov	(a2),d2
+   19a4d:	f1 57       	add	a1,d3
+   19a4f:	4e 70       	mov	d3,(112,sp)
+   19a51:	5f 50       	mov	(80,sp),a3
+   19a53:	f1 d5       	mov	a1,d1
+   19a55:	f2 2d       	xor	d3,d1
+   19a57:	f1 d3       	mov	a0,d3
+   19a59:	f2 2d       	xor	d3,d1
+   19a5b:	5b 70       	mov	(112,sp),d3
+   19a5d:	e9          	add	d2,d1
+   19a5e:	e1          	add	d0,d1
+   19a5f:	f1 d6       	mov	a1,d2
+   19a61:	fc cc f8 7c 	mov	530742520,d0
+   19a65:	a2 1f 
+   19a67:	e4          	add	d1,d0
+   19a68:	81          	mov	d0,d1
+   19a69:	f8 c1 10    	asl	16,d1
+   19a6c:	f8 c4 10    	lsr	16,d0
+   19a6f:	f2 11       	or	d0,d1
+   19a71:	ed          	add	d3,d1
+   19a72:	f1 e6       	mov	d1,a2
+   19a74:	77          	mov	(a3),d1
+   19a75:	5f 04       	mov	(4,sp),a3
+   19a77:	f1 d8       	mov	a2,d0
+   19a79:	f2 2c       	xor	d3,d0
+   19a7b:	f2 28       	xor	d2,d0
+   19a7d:	86          	mov	d1,d2
+   19a7e:	e2          	add	d0,d2
+   19a7f:	f1 52       	add	a0,d2
+   19a81:	fc c2 65 56 	add	-995338651,d2
+   19a85:	ac c4 
+   19a87:	89          	mov	d2,d1
+   19a88:	f8 c1 17    	asl	23,d1
+   19a8b:	f8 c6 09    	lsr	9,d2
+   19a8e:	f2 19       	or	d2,d1
+   19a90:	98          	mov	a2,a0
+   19a91:	f1 64       	add	d1,a0
+   19a93:	77          	mov	(a3),d1
+   19a94:	5f 10       	mov	(16,sp),a3
+   19a96:	8c          	mov	d3,d0
+   19a97:	f2 30       	not	d0
+   19a99:	f1 d2       	mov	a0,d2
+   19a9b:	f2 18       	or	d2,d0
+   19a9d:	f1 da       	mov	a2,d2
+   19a9f:	f2 28       	xor	d2,d0
+   19aa1:	e4          	add	d1,d0
+   19aa2:	f1 d6       	mov	a1,d2
+   19aa4:	e2          	add	d0,d2
+   19aa5:	91          	mov	a0,a1
+   19aa6:	73          	mov	(a3),d0
+   19aa7:	5f 1c       	mov	(28,sp),a3
+   19aa9:	fc c2 44 22 	add	-198630844,d2
+   19aad:	29 f4 
+   19aaf:	89          	mov	d2,d1
+   19ab0:	f8 c1 06    	asl	6,d1
+   19ab3:	f8 c6 1a    	lsr	26,d2
+   19ab6:	f2 19       	or	d2,d1
+   19ab8:	f1 65       	add	d1,a1
+   19aba:	f1 da       	mov	a2,d2
+   19abc:	f2 32       	not	d2
+   19abe:	f1 d5       	mov	a1,d1
+   19ac0:	f2 16       	or	d1,d2
+   19ac2:	f1 d1       	mov	a0,d1
+   19ac4:	f2 26       	xor	d1,d2
+   19ac6:	e2          	add	d0,d2
+   19ac7:	ee          	add	d3,d2
+   19ac8:	fc c2 97 ff 	add	1126891415,d2
+   19acc:	2a 43 
+   19ace:	8b          	mov	d2,d3
+   19acf:	f8 c3 0a    	asl	10,d3
+   19ad2:	88          	mov	d2,d0
+   19ad3:	f8 c4 16    	lsr	22,d0
+   19ad6:	f2 13       	or	d0,d3
+   19ad8:	73          	mov	(a3),d0
+   19ad9:	5f 4c       	mov	(76,sp),a3
+   19adb:	f1 57       	add	a1,d3
+   19add:	86          	mov	d1,d2
+   19ade:	f2 32       	not	d2
+   19ae0:	f2 1e       	or	d3,d2
+   19ae2:	f1 d5       	mov	a1,d1
+   19ae4:	f2 26       	xor	d1,d2
+   19ae6:	e2          	add	d0,d2
+   19ae7:	f1 5a       	add	a2,d2
+   19ae9:	fc c2 a7 23 	add	-1416354905,d2
+   19aed:	94 ab 
+   19aef:	88          	mov	d2,d0
+   19af0:	f8 c4 11    	lsr	17,d0
+   19af3:	89          	mov	d2,d1
+   19af4:	f1 d6       	mov	a1,d2
+   19af6:	f2 32       	not	d2
+   19af8:	f8 c1 0f    	asl	15,d1
+   19afb:	f2 11       	or	d0,d1
+   19afd:	73          	mov	(a3),d0
+   19afe:	5f 18       	mov	(24,sp),a3
+   19b00:	ed          	add	d3,d1
+   19b01:	f1 e6       	mov	d1,a2
+   19b03:	f2 16       	or	d1,d2
+   19b05:	f2 2e       	xor	d3,d2
+   19b07:	e2          	add	d0,d2
+   19b08:	f1 52       	add	a0,d2
+   19b0a:	fc c2 39 a0 	add	-57434055,d2
+   19b0e:	93 fc 
+   19b10:	89          	mov	d2,d1
+   19b11:	f8 c5 0b    	lsr	11,d1
+   19b14:	88          	mov	d2,d0
+   19b15:	f8 c0 15    	asl	21,d0
+   19b18:	98          	mov	a2,a0
+   19b19:	f2 14       	or	d1,d0
+   19b1b:	77          	mov	(a3),d1
+   19b1c:	f1 60       	add	d0,a0
+   19b1e:	f1 d2       	mov	a0,d2
+   19b20:	8c          	mov	d3,d0
+   19b21:	f2 30       	not	d0
+   19b23:	f2 18       	or	d2,d0
+   19b25:	f1 da       	mov	a2,d2
+   19b27:	f2 28       	xor	d2,d0
+   19b29:	86          	mov	d1,d2
+   19b2a:	e2          	add	d0,d2
+   19b2b:	f1 56       	add	a1,d2
+   19b2d:	5d 34       	mov	(52,sp),a1
+   19b2f:	fc c2 c3 59 	add	1700485571,d2
+   19b33:	5b 65 
+   19b35:	89          	mov	d2,d1
+   19b36:	f8 c1 06    	asl	6,d1
+   19b39:	f8 c6 1a    	lsr	26,d2
+   19b3c:	f2 19       	or	d2,d1
+   19b3e:	79          	mov	(a1),d2
+   19b3f:	f1 51       	add	a0,d1
+   19b41:	46 74       	mov	d1,(116,sp)
+   19b43:	5f 08       	mov	(8,sp),a3
+   19b45:	f1 d8       	mov	a2,d0
+   19b47:	f2 30       	not	d0
+   19b49:	f2 14       	or	d1,d0
+   19b4b:	f1 d1       	mov	a0,d1
+   19b4d:	f2 24       	xor	d1,d0
+   19b4f:	59 74       	mov	(116,sp),d1
+   19b51:	e8          	add	d2,d0
+   19b52:	8e          	mov	d3,d2
+   19b53:	e2          	add	d0,d2
+   19b54:	73          	mov	(a3),d0
+   19b55:	fc c2 92 cc 	add	-1894986606,d2
+   19b59:	0c 8f 
+   19b5b:	8b          	mov	d2,d3
+   19b5c:	f8 c3 0a    	asl	10,d3
+   19b5f:	f8 c6 16    	lsr	22,d2
+   19b62:	f2 1b       	or	d2,d3
+   19b64:	e7          	add	d1,d3
+   19b65:	f1 ed       	mov	d3,a1
+   19b67:	f1 d3       	mov	a0,d3
+   19b69:	f2 33       	not	d3
+   19b6b:	f1 d6       	mov	a1,d2
+   19b6d:	f2 1b       	or	d2,d3
+   19b6f:	f2 27       	xor	d1,d3
+   19b71:	e3          	add	d0,d3
+   19b72:	f1 5b       	add	a2,d3
+   19b74:	5e 44       	mov	(68,sp),a2
+   19b76:	fc c3 7d f4 	add	-1051523,d3
+   19b7a:	ef ff 
+   19b7c:	8e          	mov	d3,d2
+   19b7d:	f8 c2 0f    	asl	15,d2
+   19b80:	8c          	mov	d3,d0
+   19b81:	f8 c4 11    	lsr	17,d0
+   19b84:	f2 12       	or	d0,d2
+   19b86:	97          	mov	a1,a3
+   19b87:	f1 6b       	add	d2,a3
+   19b89:	7a          	mov	(a2),d2
+   19b8a:	f1 df       	mov	a3,d3
+   19b8c:	84          	mov	d1,d0
+   19b8d:	f2 30       	not	d0
+   19b8f:	f2 1c       	or	d3,d0
+   19b91:	f1 d7       	mov	a1,d3
+   19b93:	f2 2c       	xor	d3,d0
+   19b95:	e8          	add	d2,d0
+   19b96:	f1 d2       	mov	a0,d2
+   19b98:	5c 40       	mov	(64,sp),a0
+   19b9a:	e2          	add	d0,d2
+   19b9b:	fc c2 d1 5d 	add	-2054922799,d2
+   19b9f:	84 85 
+   19ba1:	8b          	mov	d2,d3
+   19ba2:	f8 c3 15    	asl	21,d3
+   19ba5:	f8 c6 0b    	lsr	11,d2
+   19ba8:	f2 1b       	or	d2,d3
+   19baa:	78          	mov	(a0),d2
+   19bab:	47 78       	mov	a1,(120,sp)
+   19bad:	9e          	mov	a3,a2
+   19bae:	f1 6e       	add	d3,a2
+   19bb0:	f1 d4       	mov	a1,d0
+   19bb2:	f2 30       	not	d0
+   19bb4:	f1 db       	mov	a2,d3
+   19bb6:	f2 1c       	or	d3,d0
+   19bb8:	f1 df       	mov	a3,d3
+   19bba:	f2 2c       	xor	d3,d0
+   19bbc:	e8          	add	d2,d0
+   19bbd:	e1          	add	d0,d1
+   19bbe:	fc c1 4f 7e 	add	1873313359,d1
+   19bc2:	a8 6f 
+   19bc4:	86          	mov	d1,d2
+   19bc5:	f8 c2 06    	asl	6,d2
+   19bc8:	f8 c5 1a    	lsr	26,d1
+   19bcb:	f2 16       	or	d1,d2
+   19bcd:	5d 14       	mov	(20,sp),a1
+   19bcf:	98          	mov	a2,a0
+   19bd0:	f1 68       	add	d2,a0
+   19bd2:	75          	mov	(a1),d1
+   19bd3:	5d 78       	mov	(120,sp),a1
+   19bd5:	8c          	mov	d3,d0
+   19bd6:	f2 30       	not	d0
+   19bd8:	f1 d2       	mov	a0,d2
+   19bda:	f2 18       	or	d2,d0
+   19bdc:	f1 da       	mov	a2,d2
+   19bde:	f2 28       	xor	d2,d0
+   19be0:	86          	mov	d1,d2
+   19be1:	e2          	add	d0,d2
+   19be2:	f1 56       	add	a1,d2
+   19be4:	5d 48       	mov	(72,sp),a1
+   19be6:	fc c2 e0 e6 	add	-30611744,d2
+   19bea:	2c fe 
+   19bec:	89          	mov	d2,d1
+   19bed:	f8 c1 0a    	asl	10,d1
+   19bf0:	f8 c6 16    	lsr	22,d2
+   19bf3:	f2 19       	or	d2,d1
+   19bf5:	79          	mov	(a1),d2
+   19bf6:	5d 20       	mov	(32,sp),a1
+   19bf8:	f1 51       	add	a0,d1
+   19bfa:	f1 d8       	mov	a2,d0
+   19bfc:	f2 30       	not	d0
+   19bfe:	f2 14       	or	d1,d0
+   19c00:	f1 d3       	mov	a0,d3
+   19c02:	f2 2c       	xor	d3,d0
+   19c04:	e8          	add	d2,d0
+   19c05:	f1 de       	mov	a3,d2
+   19c07:	e2          	add	d0,d2
+   19c08:	fc c2 14 43 	add	-1560198380,d2
+   19c0c:	01 a3 
+   19c0e:	8b          	mov	d2,d3
+   19c0f:	f8 c3 0f    	asl	15,d3
+   19c12:	f8 c6 11    	lsr	17,d2
+   19c15:	f2 1b       	or	d2,d3
+   19c17:	e7          	add	d1,d3
+   19c18:	f1 ef       	mov	d3,a3
+   19c1a:	7d          	mov	(a1),d3
+   19c1b:	5d 3c       	mov	(60,sp),a1
+   19c1d:	f1 d2       	mov	a0,d2
+   19c1f:	f2 32       	not	d2
+   19c21:	f1 dc       	mov	a3,d0
+   19c23:	f2 12       	or	d0,d2
+   19c25:	f2 26       	xor	d1,d2
+   19c27:	ee          	add	d3,d2
+   19c28:	f1 5a       	add	a2,d2
+   19c2a:	fc c2 a1 11 	add	1309151649,d2
+   19c2e:	08 4e 
+   19c30:	88          	mov	d2,d0
+   19c31:	f8 c4 0b    	lsr	11,d0
+   19c34:	8b          	mov	d2,d3
+   19c35:	86          	mov	d1,d2
+   19c36:	f2 32       	not	d2
+   19c38:	f8 c3 15    	asl	21,d3
+   19c3b:	f2 13       	or	d0,d3
+   19c3d:	71          	mov	(a1),d0
+   19c3e:	9e          	mov	a3,a2
+   19c3f:	f1 6e       	add	d3,a2
+   19c41:	f1 db       	mov	a2,d3
+   19c43:	f2 1e       	or	d3,d2
+   19c45:	f1 df       	mov	a3,d3
+   19c47:	f2 2e       	xor	d3,d2
+   19c49:	e2          	add	d0,d2
+   19c4a:	f1 52       	add	a0,d2
+   19c4c:	5c 30       	mov	(48,sp),a0
+   19c4e:	fc c2 82 7e 	add	-145523070,d2
+   19c52:	53 f7 
+   19c54:	8b          	mov	d2,d3
+   19c55:	88          	mov	d2,d0
+   19c56:	f8 c4 1a    	lsr	26,d0
+   19c59:	f8 c3 06    	asl	6,d3
+   19c5c:	f2 13       	or	d0,d3
+   19c5e:	70          	mov	(a0),d0
+   19c5f:	4f 7c       	mov	a3,(124,sp)
+   19c61:	99          	mov	a2,a1
+   19c62:	f1 6d       	add	d3,a1
+   19c64:	f1 de       	mov	a3,d2
+   19c66:	5f 50       	mov	(80,sp),a3
+   19c68:	f2 32       	not	d2
+   19c6a:	f1 d7       	mov	a1,d3
+   19c6c:	f2 1e       	or	d3,d2
+   19c6e:	f1 db       	mov	a2,d3
+   19c70:	f2 2e       	xor	d3,d2
+   19c72:	e2          	add	d0,d2
+   19c73:	e6          	add	d1,d2
+   19c74:	77          	mov	(a3),d1
+   19c75:	5f 7c       	mov	(124,sp),a3
+   19c77:	fc c2 35 f2 	add	-1120210379,d2
+   19c7b:	3a bd 
+   19c7d:	8b          	mov	d2,d3
+   19c7e:	f8 c3 0a    	asl	10,d3
+   19c81:	88          	mov	d2,d0
+   19c82:	f8 c4 16    	lsr	22,d0
+   19c85:	f2 13       	or	d0,d3
+   19c87:	94          	mov	a1,a0
+   19c88:	f1 6c       	add	d3,a0
+   19c8a:	f1 d8       	mov	a2,d0
+   19c8c:	f2 30       	not	d0
+   19c8e:	f1 d2       	mov	a0,d2
+   19c90:	f2 18       	or	d2,d0
+   19c92:	f1 d6       	mov	a1,d2
+   19c94:	f2 28       	xor	d2,d0
+   19c96:	e1          	add	d0,d1
+   19c97:	f1 5d       	add	a3,d1
+   19c99:	5f 38       	mov	(56,sp),a3
+   19c9b:	fc c1 bb d2 	add	718787259,d1
+   19c9f:	d7 2a 
+   19ca1:	86          	mov	d1,d2
+   19ca2:	f8 c2 0f    	asl	15,d2
+   19ca5:	f8 c5 11    	lsr	17,d1
+   19ca8:	f2 16       	or	d1,d2
+   19caa:	77          	mov	(a3),d1
+   19cab:	f1 52       	add	a0,d2
+   19cad:	f1 d4       	mov	a1,d0
+   19caf:	f2 30       	not	d0
+   19cb1:	f2 18       	or	d2,d0
+   19cb3:	f1 d3       	mov	a0,d3
+   19cb5:	f2 2c       	xor	d3,d0
+   19cb7:	e4          	add	d1,d0
+   19cb8:	f1 58       	add	a2,d0
+   19cba:	5e 0c       	mov	(12,sp),a2
+   19cbc:	fc c0 91 d3 	add	-343485551,d0
+   19cc0:	86 eb 
+   19cc2:	76          	mov	(a2),d1
+   19cc3:	f1 55       	add	a1,d1
+   19cc5:	66          	mov	d1,(a2)
+   19cc6:	5d 2c       	mov	(44,sp),a1
+   19cc8:	81          	mov	d0,d1
+   19cc9:	7d          	mov	(a1),d3
+   19cca:	f8 c1 15    	asl	21,d1
+   19ccd:	f8 c4 0b    	lsr	11,d0
+   19cd0:	f2 11       	or	d0,d1
+   19cd2:	ed          	add	d3,d1
+   19cd3:	88          	mov	d2,d0
+   19cd4:	e4          	add	d1,d0
+   19cd5:	61          	mov	d0,(a1)
+   19cd6:	5d 24       	mov	(36,sp),a1
+   19cd8:	71          	mov	(a1),d0
+   19cd9:	e8          	add	d2,d0
+   19cda:	61          	mov	d0,(a1)
+   19cdb:	5d 28       	mov	(40,sp),a1
+   19cdd:	71          	mov	(a1),d0
+   19cde:	f1 50       	add	a0,d0
+   19ce0:	61          	mov	d0,(a1)
+   19ce1:	de f0 90    	retf	[d2,d3,a2,a3],144
+   19ce4:	47 10       	mov	a1,(16,sp)
+   19ce6:	42 0c       	mov	d0,(12,sp)
+   19ce8:	43 08       	mov	a0,(8,sp)
+   19cea:	fc cc aa d6 	mov	19650218,d0
+   19cee:	2b 01 
+   19cf0:	cd a9 00 a0 	call	0x19d99,[d2,a2],8
+   19cf4:	08 
+   19cf5:	58 0c       	mov	(12,sp),d0
+   19cf7:	95 01       	mov	1,a1
+   19cf9:	9a 00       	mov	0,a2
+   19cfb:	2f 70 02    	mov	624,d3
+   19cfe:	a3          	cmp	d0,d3
+   19cff:	c1 03       	bgt	0x19d02
+   19d01:	83          	mov	d0,d3
+   19d02:	4e 04       	mov	d3,(4,sp)
+   19d04:	af 00       	cmp	0,d3
+   19d06:	c8 4e       	beq	0x19d54
+   19d08:	db          	setlb	
+   19d09:	5f 08       	mov	(8,sp),a3
+   19d0b:	f1 d4       	mov	a1,d0
+   19d0d:	54          	asl2	d0
+   19d0e:	f1 63       	add	d0,a3
+   19d10:	fc dc fc ff 	mov	-4,a0
+   19d14:	ff ff 
+   19d16:	f1 7c       	add	a3,a0
+   19d18:	74          	mov	(a0),d1
+   19d19:	78          	mov	(a0),d2
+   19d1a:	5c 10       	mov	(16,sp),a0
+   19d1c:	7f          	mov	(a3),d3
+   19d1d:	f1 d8       	mov	a2,d0
+   19d1f:	54          	asl2	d0
+   19d20:	f3 80       	mov	(d0,a0),a0
+   19d22:	f8 c6 1e    	lsr	30,d2
+   19d25:	f2 29       	xor	d2,d1
+   19d27:	fd 15 0d 66 	udfu01	1664525,d1
+   19d2b:	19 00 
+   19d2d:	f2 2d       	xor	d3,d1
+   19d2f:	f1 59       	add	a2,d1
+   19d31:	f1 51       	add	a0,d1
+   19d33:	67          	mov	d1,(a3)
+   19d34:	45          	inc	a1
+   19d35:	49          	inc	a2
+   19d36:	fa d9 70 02 	cmp	624,a1
+   19d3a:	c0 0b       	blt	0x19d45
+   19d3c:	5c 08       	mov	(8,sp),a0
+   19d3e:	95 01       	mov	1,a1
+   19d40:	fa 00 bc 09 	mov	(2492,a0),d0
+   19d44:	60          	mov	d0,(a0)
+   19d45:	58 0c       	mov	(12,sp),d0
+   19d47:	f1 a2       	cmp	d0,a2
+   19d49:	c0 04       	blt	0x19d4d
+   19d4b:	9a 00       	mov	0,a2
+   19d4d:	58 04       	mov	(4,sp),d0
+   19d4f:	28 ff       	add	-1,d0
+   19d51:	42 04       	mov	d0,(4,sp)
+   19d53:	d9          	lne	
+   19d54:	2f 6f 02    	mov	623,d3
+   19d57:	db          	setlb	
+   19d58:	5e 08       	mov	(8,sp),a2
+   19d5a:	f1 d4       	mov	a1,d0
+   19d5c:	54          	asl2	d0
+   19d5d:	f1 62       	add	d0,a2
+   19d5f:	fc dc fc ff 	mov	-4,a0
+   19d63:	ff ff 
+   19d65:	f1 78       	add	a2,a0
+   19d67:	74          	mov	(a0),d1
+   19d68:	70          	mov	(a0),d0
+   19d69:	7a          	mov	(a2),d2
+   19d6a:	f8 c4 1e    	lsr	30,d0
+   19d6d:	f2 21       	xor	d0,d1
+   19d6f:	fd 15 65 8b 	udfu01	1566083941,d1
+   19d73:	58 5d 
+   19d75:	f2 29       	xor	d2,d1
+   19d77:	f1 15       	sub	a1,d1
+   19d79:	66          	mov	d1,(a2)
+   19d7a:	45          	inc	a1
+   19d7b:	fa d9 70 02 	cmp	624,a1
+   19d7f:	c0 0b       	blt	0x19d8a
+   19d81:	5c 08       	mov	(8,sp),a0
+   19d83:	95 01       	mov	1,a1
+   19d85:	fa 00 bc 09 	mov	(2492,a0),d0
+   19d89:	60          	mov	d0,(a0)
+   19d8a:	2b ff       	add	-1,d3
+   19d8c:	d9          	lne	
+   19d8d:	5c 08       	mov	(8,sp),a0
+   19d8f:	fc cc 00 00 	mov	-2147483648,d0
+   19d93:	00 80 
+   19d95:	60          	mov	d0,(a0)
+   19d96:	df f0 24    	ret	[d2,d3,a2,a3],36
+   19d99:	04          	clr	d1
+   19d9a:	fc 85 98 1c 	mov	d1,(0x74001c98)
+   19d9e:	00 74 
+   19da0:	fc cd df b0 	mov	-1727483681,d1
+   19da4:	08 99 
+   19da6:	fc 85 9c 1c 	mov	d1,(0x74001c9c)
+   19daa:	00 74 
+   19dac:	60          	mov	d0,(a0)
+   19dad:	8a 01       	mov	1,d2
+   19daf:	92          	mov	a0,a2
+   19db0:	52          	inc4	a2
+   19db1:	db          	setlb	
+   19db2:	fc dd fc ff 	mov	-4,a1
+   19db6:	ff ff 
+   19db8:	f1 79       	add	a2,a1
+   19dba:	75          	mov	(a1),d1
+   19dbb:	71          	mov	(a1),d0
+   19dbc:	f8 c4 1e    	lsr	30,d0
+   19dbf:	f2 21       	xor	d0,d1
+   19dc1:	84          	mov	d1,d0
+   19dc2:	fd 14 65 89 	udfu01	1812433253,d0
+   19dc6:	07 6c 
+   19dc8:	e8          	add	d2,d0
+   19dc9:	62          	mov	d0,(a2)
+   19dca:	48          	inc	d2
+   19dcb:	52          	inc4	a2
+   19dcc:	fa ca 70 02 	cmp	624,d2
+   19dd0:	d0          	llt	
+   19dd1:	fa 18 c0 09 	mov	d2,(2496,a0)
+   19dd5:	de a0 08    	retf	[d2,a2],8
+   19dd8:	92          	mov	a0,a2
+   19dd9:	27 c0 09    	mov	2496,a3
+   19ddc:	f1 7b       	add	a2,a3
+   19dde:	7b          	mov	(a3),d2
+   19ddf:	fa ca 70 02 	cmp	624,d2
+   19de3:	c2 05       	bge	0x19de8
+   19de5:	cc b7 00    	jmp	0x19e9c
+   19de8:	fa ca 71 02 	cmp	625,d2
+   19dec:	c9 0a       	bne	0x19df6
+   19dee:	2c 71 15    	mov	5489,d0
+   19df1:	cd a8 ff a0 	call	0x19d99,[d2,a2],8
+   19df5:	08 
+   19df6:	0c          	clr	d3
+   19df7:	98          	mov	a2,a0
+   19df8:	fc dd 98 1c 	mov	1946164376,a1
+   19dfc:	00 74 
+   19dfe:	db          	setlb	
+   19dff:	70          	mov	(a0),d0
+   19e00:	f8 04 04    	mov	(4,a0),d1
+   19e03:	fc e0 00 00 	and	-2147483648,d0
+   19e07:	00 80 
+   19e09:	fc e1 ff ff 	and	2147483647,d1
+   19e0d:	ff 7f 
+   19e0f:	f2 14       	or	d1,d0
+   19e11:	fa 08 34 06 	mov	(1588,a0),d2
+   19e15:	85 01       	mov	1,d1
+   19e17:	f2 01       	and	d0,d1
+   19e19:	55          	asl2	d1
+   19e1a:	f3 15       	mov	(d1,a1),d1
+   19e1c:	f8 c4 01    	lsr	1,d0
+   19e1f:	f2 26       	xor	d1,d2
+   19e21:	89          	mov	d2,d1
+   19e22:	f2 21       	xor	d0,d1
+   19e24:	64          	mov	d1,(a0)
+   19e25:	4c          	inc	d3
+   19e26:	50          	inc4	a0
+   19e27:	fa cb e3 00 	cmp	227,d3
+   19e2b:	d0          	llt	
+   19e2c:	25 6f 02    	mov	623,a1
+   19e2f:	f1 97       	cmp	a1,d3
+   19e31:	c2 3c       	bge	0x19e6d
+   19e33:	8c          	mov	d3,d0
+   19e34:	54          	asl2	d0
+   19e35:	98          	mov	a2,a0
+   19e36:	f1 60       	add	d0,a0
+   19e38:	db          	setlb	
+   19e39:	74          	mov	(a0),d1
+   19e3a:	f8 00 04    	mov	(4,a0),d0
+   19e3d:	fc e1 00 00 	and	-2147483648,d1
+   19e41:	00 80 
+   19e43:	fc e0 ff ff 	and	2147483647,d0
+   19e47:	ff 7f 
+   19e49:	f2 11       	or	d0,d1
+   19e4b:	fa 00 74 fc 	mov	(-908,a0),d0
+   19e4f:	8a 01       	mov	1,d2
+   19e51:	f2 06       	and	d1,d2
+   19e53:	56          	asl2	d2
+   19e54:	4b 04       	mov	a2,(4,sp)
+   19e56:	fc de 98 1c 	mov	1946164376,a2
+   19e5a:	00 74 
+   19e5c:	f3 2a       	mov	(d2,a2),d2
+   19e5e:	5e 04       	mov	(4,sp),a2
+   19e60:	f2 28       	xor	d2,d0
+   19e62:	f8 c5 01    	lsr	1,d1
+   19e65:	f2 24       	xor	d1,d0
+   19e67:	60          	mov	d0,(a0)
+   19e68:	4c          	inc	d3
+   19e69:	50          	inc4	a0
+   19e6a:	f1 97       	cmp	a1,d3
+   19e6c:	d0          	llt	
+   19e6d:	72          	mov	(a2),d0
+   19e6e:	24 bc 09    	mov	2492,a0
+   19e71:	f1 78       	add	a2,a0
+   19e73:	74          	mov	(a0),d1
+   19e74:	fc e0 ff ff 	and	2147483647,d0
+   19e78:	ff 7f 
+   19e7a:	fc e1 00 00 	and	-2147483648,d1
+   19e7e:	00 80 
+   19e80:	f2 11       	or	d0,d1
+   19e82:	80 01       	mov	1,d0
+   19e84:	f2 04       	and	d1,d0
+   19e86:	54          	asl2	d0
+   19e87:	fc dd 98 1c 	mov	1946164376,a1
+   19e8b:	00 74 
+   19e8d:	f3 21       	mov	(d0,a1),d2
+   19e8f:	fa 02 30 06 	mov	(1584,a2),d0
+   19e93:	f8 c5 01    	lsr	1,d1
+   19e96:	f2 22       	xor	d0,d2
+   19e98:	f2 26       	xor	d1,d2
+   19e9a:	68          	mov	d2,(a0)
+   19e9b:	08          	clr	d2
+   19e9c:	89          	mov	d2,d1
+   19e9d:	55          	asl2	d1
+   19e9e:	f3 36       	mov	(d1,a2),d3
+   19ea0:	48          	inc	d2
+   19ea1:	8d          	mov	d3,d1
+   19ea2:	f8 c5 0b    	lsr	11,d1
+   19ea5:	f2 27       	xor	d1,d3
+   19ea7:	8d          	mov	d3,d1
+   19ea8:	f8 c1 07    	asl	7,d1
+   19eab:	fc e1 80 56 	and	-1658038656,d1
+   19eaf:	2c 9d 
+   19eb1:	f2 27       	xor	d1,d3
+   19eb3:	8d          	mov	d3,d1
+   19eb4:	f8 c1 0f    	asl	15,d1
+   19eb7:	fc e1 00 00 	and	-272236544,d1
+   19ebb:	c6 ef 
+   19ebd:	f2 27       	xor	d1,d3
+   19ebf:	6b          	mov	d2,(a3)
+   19ec0:	8c          	mov	d3,d0
+   19ec1:	f8 c4 12    	lsr	18,d0
+   19ec4:	f2 2c       	xor	d3,d0
+   19ec6:	df f0 18    	ret	[d2,d3,a2,a3],24
+   19ec9:	00          	clr	d0
+   19eca:	dd 74 59 2f 	call	0x30f83e,[d2,a2],12
+   19ece:	00 a0 0c 
+   19ed1:	00          	clr	d0
+   19ed2:	03 40 80    	movhu	d0,(0x8040)
+   19ed5:	01 00 85    	mov	d0,(0x8500)
+   19ed8:	01 04 85    	mov	d0,(0x8504)
+   19edb:	01 08 85    	mov	d0,(0x8508)
+   19ede:	03 0c 85    	movhu	d0,(0x850c)
+   19ee1:	02 0e 85    	movbu	d0,(0x850e)
+   19ee4:	fc 82 0c 50 	movbu	d0,(0x9c00500c)
+   19ee8:	00 9c 
+   19eea:	2c 80 00    	mov	128,d0
+   19eed:	fc 82 1c 50 	movbu	d0,(0x9c00501c)
+   19ef1:	00 9c 
+   19ef3:	fc 82 2c 50 	movbu	d0,(0x9c00502c)
+   19ef7:	00 9c 
+   19ef9:	fc 82 3c 50 	movbu	d0,(0x9c00503c)
+   19efd:	00 9c 
+   19eff:	80 07       	mov	7,d0
+   19f01:	03 00 89    	movhu	d0,(0x8900)
+   19f04:	2d 00 60    	mov	24576,d1
+   19f07:	07 08 89    	movhu	d1,(0x8908)
+   19f0a:	07 0c 89    	movhu	d1,(0x890c)
+   19f0d:	07 10 89    	movhu	d1,(0x8910)
+   19f10:	07 14 89    	movhu	d1,(0x8914)
+   19f13:	07 18 89    	movhu	d1,(0x8918)
+   19f16:	07 1c 89    	movhu	d1,(0x891c)
+   19f19:	07 20 89    	movhu	d1,(0x8920)
+   19f1c:	07 24 89    	movhu	d1,(0x8924)
+   19f1f:	07 28 89    	movhu	d1,(0x8928)
+   19f22:	07 2c 89    	movhu	d1,(0x892c)
+   19f25:	07 34 89    	movhu	d1,(0x8934)
+   19f28:	07 3c 89    	movhu	d1,(0x893c)
+   19f2b:	07 40 89    	movhu	d1,(0x8940)
+   19f2e:	07 44 89    	movhu	d1,(0x8944)
+   19f31:	07 48 89    	movhu	d1,(0x8948)
+   19f34:	07 4c 89    	movhu	d1,(0x894c)
+   19f37:	07 50 89    	movhu	d1,(0x8950)
+   19f3a:	07 54 89    	movhu	d1,(0x8954)
+   19f3d:	07 58 89    	movhu	d1,(0x8958)
+   19f40:	07 5c 89    	movhu	d1,(0x895c)
+   19f43:	07 60 89    	movhu	d1,(0x8960)
+   19f46:	07 64 89    	movhu	d1,(0x8964)
+   19f49:	07 68 89    	movhu	d1,(0x8968)
+   19f4c:	07 6c 89    	movhu	d1,(0x896c)
+   19f4f:	07 70 89    	movhu	d1,(0x8970)
+   19f52:	2c 00 30    	mov	12288,d0
+   19f55:	03 78 89    	movhu	d0,(0x8978)
+   19f58:	07 80 89    	movhu	d1,(0x8980)
+   19f5b:	07 84 89    	movhu	d1,(0x8984)
+   19f5e:	07 88     	movhu	d1,(0x8988)

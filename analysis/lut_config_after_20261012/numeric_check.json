@@ -1,0 +1,55 @@
+{
+  "offset": 5266392,
+  "numeric_bytes": 215622,
+  "models": {
+    "65535_round": {
+      "exact": 107811,
+      "total": 107811,
+      "max_error": 0,
+      "mean_error": 0.0
+    },
+    "65535_floor": {
+      "exact": 13853,
+      "total": 107811,
+      "max_error": 1,
+      "mean_error": 0.8715066180630919
+    },
+    "65536_round": {
+      "exact": 60885,
+      "total": 107811,
+      "max_error": 1,
+      "mean_error": 0.43526170798898073
+    },
+    "65536_floor": {
+      "exact": 105085,
+      "total": 107811,
+      "max_error": 1,
+      "mean_error": 0.025284989472317297
+    },
+    "4095_round": {
+      "exact": 6030,
+      "total": 107811,
+      "max_error": 61440,
+      "mean_error": 31505.082876515382
+    },
+    "4095_floor": {
+      "exact": 6030,
+      "total": 107811,
+      "max_error": 61440,
+      "mean_error": 31505.517155021287
+    },
+    "4096_round": {
+      "exact": 6030,
+      "total": 107811,
+      "max_error": 61439,
+      "mean_error": 31504.571175483023
+    },
+    "4096_floor": {
+      "exact": 6030,
+      "total": 107811,
+      "max_error": 61439,
+      "mean_error": 31505.007049373442
+    }
+  },
+  "source_utf16_name_offset": 64720
+}

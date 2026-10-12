@@ -1,0 +1,65 @@
+{
+  "scope": "Static generated-LUT branch; native implementation not yet resolved",
+  "sources": [
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/util/C1417x.java",
+      "sha256": "fee90f69deb0385214d1d42d17fd8358644f762b63d0472bfebafb16ad58371f",
+      "lines": {
+        "public static String c(": [
+          96
+        ],
+        "LUT_3D_SIZE 33": [
+          110
+        ],
+        "%.6f %.6f %.6f": [
+          115
+        ],
+        "LUMIXPHOTOSTYLE": [
+          77,
+          84,
+          87
+        ]
+      }
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p073g5/CallableC1821k.java",
+      "sha256": "a7cec18932a3706ce9a1bbc5d356f0c8a30e91f6ef5496e6011384293981eeb6",
+      "lines": {
+        "OnnxTensor.createTensor": [
+          353
+        ],
+        "C1417x.c(": [
+          357
+        ],
+        "mergeCubeFiles(": [
+          400
+        ],
+        "C1417x.d(": [
+          406
+        ]
+      }
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/LlcApplication.java",
+      "sha256": "4ea806f8bda2af3af6a249233936746b1465dc7de94c7f9c950260f493c7f602",
+      "lines": {
+        "native int mergeCubeFiles": [
+          1209
+        ],
+        "native boolean convertToCube": [
+          748
+        ]
+      }
+    }
+  ],
+  "facts": [
+    "ONNX input [1,3,224,224]. Model result passes to text writer C1417x.c.",
+    "Writer loops three 33-wide axes and emits 3 channels per row, six decimal places with Locale.US.",
+    "Some style branches call native mergeCubeFiles before adding #LUMIXPHOTOSTYLE comment."
+  ],
+  "unknowns": [
+    "Axis RGB semantic mapping is not established by loop variable names.",
+    "Native merge operation math and format handling remain unverified.",
+    "No direct mapping to S1M2 DAT integer blocks or firmware plaintext."
+  ]
+}

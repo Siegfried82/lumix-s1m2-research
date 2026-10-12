@@ -1,0 +1,53 @@
+48:         WifiNetworkSpecifier wifiNetworkSpecifierBuild;
+49:         C2617s2 c2617s3;
+50:         str.getClass();
+51:         str2.getClass();
+52:         synchronized (G0.class) {
+53:         }
+54:         try {
+55:             ConnectivityManager connectivityManager = f7221a;
+56:             if (connectivityManager != null && (c2617s3 = f7222b) != null) {
+57:                 connectivityManager.unregisterNetworkCallback(c2617s3);
+58:             }
+59:         } catch (Exception unused) {
+60:             synchronized (G0.class) {
+61:             }
+62:         }
+63:         f7222b = c2617s2;
+64:         if (f7223c == null) {
+65:             f7223c = (WifiManager) LlcApplication.getContext().getSystemService("wifi");
+66:         }
+67:         if (!f7223c.isWifiEnabled()) {
+68:             RunnableC2627t2 runnableC2627t2 = f7222b.f31820a;
+69:             CameraWifiConnectFragment cameraWifiConnectFragment = runnableC2627t2.f31861q;
+70:             cameraWifiConnectFragment.f17591t0 = false;
+71:             cameraWifiConnectFragment.f17587q0 = false;
+72:             if (cameraWifiConnectFragment.f17571b0) {
+73:                 return;
+74:             }
+75:             runnableC2627t2.f31861q.f17581l0.a(new Intent("android.settings.panel.action.INTERNET_CONNECTIVITY"), null);
+76:             return;
+77:         }
+78:         if (C1410v.R0() || !f().booleanValue()) {
+79:             g(t10, true);
+80:             a(t10, str, str2, true);
+81:             wifiNetworkSpecifierBuild = new WifiNetworkSpecifier.Builder().setSsid(str).setWpa2Passphrase(str2).build();
+82:         } else {
+83:             g(t10, false);
+84:             a(t10, str, str2, false);
+85:             wifiNetworkSpecifierBuild = new WifiNetworkSpecifier.Builder().setSsid(str).setWpa3Passphrase(str2).build();
+86:         }
+87:         NetworkRequest networkRequestBuild = new NetworkRequest.Builder().addTransportType(1).removeCapability(12).setNetworkSpecifier(wifiNetworkSpecifierBuild).build();
+88:         if (5000 == LlcApplication.connectWifiTimeDelay) {
+89:             return;
+90:         }
+91:         if (f7221a == null) {
+92:             f7221a = (ConnectivityManager) LlcApplication.getContext().getSystemService("connectivity");
+93:         }
+94:         f7221a.requestNetwork(networkRequestBuild, f7222b);
+95:         synchronized (G0.class) {
+96:         }
+97:     }
+98: 
+99:     public static void c() {
+100:         synchronized (G0.class) {

@@ -1,0 +1,75 @@
+258:     private void T(String[] strArr) {
+259:         if (strArr == null || strArr.length < 5 || !strArr[0].equalsIgnoreCase("ok")) {
+260:             return;
+261:         }
+262:         String strReplace = strArr[4];
+263:         if (strReplace.contains("\r\n")) {
+264:             strReplace = strReplace.replace("\r\n", YouTube.DEFAULT_SERVICE_PATH);
+265:         }
+266:         p126p5.b.c();
+267:         m.m(strReplace);
+268:     }
+
+660:         this.f19414j = false;
+661:         this.f19415k = false;
+662:         this.f19416l = false;
+663:         this.f19426v.g();
+664:     }
+665: 
+666:     @Override // com.panasonic.jp.service.d
+667:     public void c(String str) {
+668:         synchronized (this.f19417m) {
+669:             this.f19408d.m(new StringBuffer(), "req_acc_can", str, null);
+670:         }
+671:     }
+672: 
+673:     @Override // com.panasonic.jp.service.d
+674:     public boolean d() {
+675:         return this.f19416l | this.f19415k;
+676:     }
+677: 
+678:     @Override // com.panasonic.jp.service.d
+679:     public boolean e() {
+680:         return this.f19425u;
+681:     }
+682: 
+683:     @Override // com.panasonic.jp.service.d
+684:     public String[] f(p166u5.c cVar, String str, String str2, com.panasonic.jp.service.d.a aVar) {
+685:         StringBuffer stringBuffer = new StringBuffer();
+686:         this.f19408d.m(stringBuffer, aVar == com.panasonic.jp.service.d.a.Encrypt ? "req_acc_e" : "req_acc", str, str2);
+687:         if (stringBuffer.length() <= 0) {
+688:             return new String[]{"ret_empty"};
+689:         }
+690:         String[] strArrA0 = this.f19408d.a0(stringBuffer.toString(), cVar.f29281e);
+691:         if (strArrA0 != null && strArrA0.length >= 4 && (strArrA0[2].equalsIgnoreCase("upload") || strArrA0[2].equalsIgnoreCase("upload_bt") || strArrA0[2].equalsIgnoreCase("transfer") || strArrA0[0].equalsIgnoreCase("ok") || strArrA0[0].equalsIgnoreCase("err_param") || strArrA0[0].equalsIgnoreCase("err_reject") || strArrA0[0].equalsIgnoreCase("err_non_support"))) {
+692:             if (strArrA0[2].equalsIgnoreCase("transfer")) {
+693:                 this.f19424t = true;
+694:             }
+695:             T(strArrA0);
+696:         }
+697:         return strArrA0;
+698:     }
+699: 
+700:     @Override // com.panasonic.jp.service.d
+
+823:     @Override // com.panasonic.jp.service.d
+824:     public String[] u(p166u5.c cVar, com.panasonic.jp.service.d.a aVar) {
+825:         this.f19424t = false;
+826:         String string = this.f19405a.getSharedPreferences("com.panasonic.jp.lumixsync.privatekey", 0).getString("LUMIXSync.Network.Name", Build.MODEL);
+827:         String strY = l.y(this.f19405a);
+828:         String strD0 = l.d0(string);
+829:         m.m(YouTube.DEFAULT_SERVICE_PATH);
+830:         if (cVar != null) {
+831:             this.f19408d = null;
+832:             this.f19408d = new B5.a(cVar.f29278b, cVar.e());
+833:         }
+834:         if (aVar == com.panasonic.jp.service.d.a.Encrypt) {
+835:             int iU = this.f19408d.U();
+836:             if (iU == -1) {
+837:                 return new String[]{"encrypt_key_failure"};
+838:             }
+839:             strY = N5.o.b(strY, iU);
+840:             strD0 = N5.o.b(string, iU);
+841:         }
+842:         return (strD0.isEmpty() || strY.isEmpty()) ? new String[]{"uuid_or_deviceName_empty"} : new String[]{strY, strD0};
+843:     }

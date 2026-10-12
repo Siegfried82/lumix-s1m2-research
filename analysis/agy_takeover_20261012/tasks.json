@@ -1,0 +1,76 @@
+{
+  "tasks": [
+    {
+      "id": "01_diff_review",
+      "name": "差分独立复核",
+      "prompt": "analysis/agy_takeover_20261012/01_diff_review/prompt.txt",
+      "output": "analysis/agy_takeover_20261012/01_diff_review"
+    },
+    {
+      "id": "02_modern_consumer",
+      "name": "新格式消费者",
+      "prompt": "analysis/agy_takeover_20261012/02_modern_consumer/prompt.txt",
+      "output": "analysis/agy_takeover_20261012/02_modern_consumer"
+    },
+    {
+      "id": "03_small_loader",
+      "name": "4KiB loader共同候选",
+      "prompt": "analysis/agy_takeover_20261012/03_small_loader/prompt.txt",
+      "output": "analysis/agy_takeover_20261012/03_small_loader"
+    },
+    {
+      "id": "04_legacy_versions",
+      "name": "旧格式跨版本",
+      "prompt": "analysis/agy_takeover_20261012/04_legacy_versions/prompt.txt",
+      "output": "analysis/agy_takeover_20261012/04_legacy_versions"
+    },
+    {
+      "id": "05_boot_producer",
+      "name": "启动RAM生产者",
+      "prompt": "analysis/agy_takeover_20261012/05_boot_producer/prompt.txt",
+      "output": "analysis/agy_takeover_20261012/05_boot_producer"
+    },
+    {
+      "id": "06_lab_control",
+      "name": "Lab主控制与认证",
+      "prompt": "analysis/agy_takeover_20261012/06_lab_control/prompt.txt",
+      "output": "analysis/agy_takeover_20261012/06_lab_control"
+    },
+    {
+      "id": "07_lab_bluetooth",
+      "name": "Lab蓝牙状态机",
+      "prompt": "analysis/agy_takeover_20261012/07_lab_bluetooth/prompt.txt",
+      "output": "analysis/agy_takeover_20261012/07_lab_bluetooth"
+    },
+    {
+      "id": "08_lab_preview",
+      "name": "Lab预览端口",
+      "prompt": "analysis/agy_takeover_20261012/08_lab_preview/prompt.txt",
+      "output": "analysis/agy_takeover_20261012/08_lab_preview"
+    },
+    {
+      "id": "09_tether_wireless",
+      "name": "Tether无线支持矛盾",
+      "prompt": "analysis/agy_takeover_20261012/09_tether_wireless/prompt.txt",
+      "output": "analysis/agy_takeover_20261012/09_tether_wireless"
+    },
+    {
+      "id": "10_video_filter",
+      "name": "录像格式差集",
+      "prompt": "analysis/agy_takeover_20261012/10_video_filter/prompt.txt",
+      "output": "analysis/agy_takeover_20261012/10_video_filter"
+    },
+    {
+      "id": "11_config_lut",
+      "name": "配置与LUT消费者",
+      "prompt": "analysis/agy_takeover_20261012/11_config_lut/prompt.txt",
+      "output": "analysis/agy_takeover_20261012/11_config_lut"
+    },
+    {
+      "id": "12_handoff",
+      "name": "研究完整交接",
+      "prompt": "analysis/agy_takeover_20261012/12_handoff/prompt.txt",
+      "output": "analysis/agy_takeover_20261012/12_handoff"
+    }
+  ]
+}

@@ -1,0 +1,1786 @@
+# pydisasm version 6.3.0
+# CPython Python bytecode 3.10 (3439)
+#   Disassembled from CPython Python 3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]
+# Timestamp in code: 0 (1970-01-01 03:00:00)
+# Method Name:       <module>
+# Filename:          v15_2\scene_consistency\evidence.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        4
+# Flags:             0x00000040 (NOFREE)
+# First Line:        1
+# Constants:
+#    0: 'Pairwise censored CFA footprints with physical registration uncertainty.'
+#    1: 0
+#    2: None
+#    3: 2
+#    4: ('SceneEvidence',)
+#    5: <Code310 code object PairEvidence at 0x106b20d10, file v15_2\scene_consistency\evidence.py>, line 6
+#    6: 'PairEvidence'
+# Names:
+#    0: __doc__
+#    1: math
+#    2: numpy
+#    3: np
+#    4: scene_evidence
+#    5: SceneEvidence
+#    6: PairEvidence
+
+  1:           0 LOAD_CONST           ("Pairwise censored CFA footprints with physical registration uncertainty.")
+               2 STORE_NAME           (__doc__)
+
+  2:           4 LOAD_CONST           (0)
+               6 LOAD_CONST           (None)
+               8 IMPORT_NAME          (math)
+              10 STORE_NAME           (math)
+
+  3:          12 LOAD_CONST           (0)
+              14 LOAD_CONST           (None)
+              16 IMPORT_NAME          (numpy)
+              18 STORE_NAME           (np)
+
+  4:          20 LOAD_CONST           (2)
+              22 LOAD_CONST           (('SceneEvidence',))
+              24 IMPORT_NAME          (scene_evidence)
+              26 IMPORT_FROM          (SceneEvidence)
+              28 STORE_NAME           (SceneEvidence)
+              30 POP_TOP
+
+  6:          32 LOAD_BUILD_CLASS
+              34 LOAD_CONST           (<Code310 code object PairEvidence at 0x106b20d10, file v15_2\scene_consistency\evidence.py>, line 6)
+              36 LOAD_CONST           ("PairEvidence")
+              38 MAKE_FUNCTION        (No arguments)
+              40 LOAD_CONST           ("PairEvidence")
+              42 LOAD_NAME            (SceneEvidence)
+              44 CALL_FUNCTION        (3 positional arguments)
+              46 STORE_NAME           (PairEvidence)
+              48 LOAD_CONST           (None)
+              50 RETURN_VALUE
+
+
+# Method Name:       PairEvidence
+# Filename:          v15_2\scene_consistency\evidence.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        3
+# Flags:             0x00000000 (0x0)
+# First Line:        6
+# Constants:
+#    0: 'PairEvidence'
+#    1: <Code310 code object __init__ at 0x106b3ad50, file v15_2\scene_consistency\evidence.py>, line 7
+#    2: 'PairEvidence.__init__'
+#    3: <Code310 code object stats at 0x106b3a9c0, file v15_2\scene_consistency\evidence.py>, line 10
+#    4: 'PairEvidence.stats'
+#    5: <Code310 code object decide at 0x106b39f70, file v15_2\scene_consistency\evidence.py>, line 62
+#    6: 'PairEvidence.decide'
+#    7: <Code310 code object scatter at 0x106929d60, file v15_2\scene_consistency\evidence.py>, line 93
+#    8: 'PairEvidence.scatter'
+#    9: <Code310 code object scatter_censored at 0x106952270, file v15_2\scene_consistency\evidence.py>, line 131
+#   10: 'PairEvidence.scatter_censored'
+# Names:
+#    0: __name__
+#    1: __module__
+#    2: __qualname__
+#    3: __init__
+#    4: stats
+#    5: decide
+#    6: scatter
+#    7: scatter_censored
+#    8: __classcell__
+# Free variables:
+#    0: __class__
+
+  6:           0 LOAD_NAME            (__name__)
+               2 STORE_NAME           (__module__)
+               4 LOAD_CONST           ("PairEvidence")
+               6 STORE_NAME           (__qualname__)
+
+  7:           8 LOAD_CLOSURE         (__class__)
+              10 BUILD_TUPLE          1
+              12 LOAD_CONST           (<Code310 code object __init__ at 0x106b3ad50, file v15_2\scene_consistency\evidence.py>, line 7)
+              14 LOAD_CONST           ("PairEvidence.__init__")
+              16 MAKE_FUNCTION        (closure)
+              18 STORE_NAME           (__init__)
+
+ 10:          20 LOAD_CONST           (<Code310 code object stats at 0x106b3a9c0, file v15_2\scene_consistency\evidence.py>, line 10)
+              22 LOAD_CONST           ("PairEvidence.stats")
+              24 MAKE_FUNCTION        (No arguments)
+              26 STORE_NAME           (stats)
+
+ 62:          28 LOAD_CONST           (<Code310 code object decide at 0x106b39f70, file v15_2\scene_consistency\evidence.py>, line 62)
+              30 LOAD_CONST           ("PairEvidence.decide")
+              32 MAKE_FUNCTION        (No arguments)
+              34 STORE_NAME           (decide)
+
+ 93:          36 LOAD_CONST           (<Code310 code object scatter at 0x106929d60, file v15_2\scene_consistency\evidence.py>, line 93)
+              38 LOAD_CONST           ("PairEvidence.scatter")
+              40 MAKE_FUNCTION        (No arguments)
+              42 STORE_NAME           (scatter)
+
+131:          44 LOAD_CONST           (<Code310 code object scatter_censored at 0x106952270, file v15_2\scene_consistency\evidence.py>, line 131)
+              46 LOAD_CONST           ("PairEvidence.scatter_censored")
+              48 MAKE_FUNCTION        (No arguments)
+              50 STORE_NAME           (scatter_censored)
+              52 LOAD_CLOSURE         (__class__)
+              54 DUP_TOP
+              56 STORE_NAME           (__classcell__)
+              58 RETURN_VALUE
+
+
+# Method Name:       __init__
+# Filename:          v15_2\scene_consistency\evidence.py
+# Argument count:    3
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  3
+# Stack size:        3
+# Flags:             0x00000003 (NEWLOCALS | OPTIMIZED)
+# First Line:        7
+# Constants:
+#    0: None
+# Names:
+#    0: super
+#    1: __init__
+#    2: gains
+# Varnames:
+#	self, rt, gains
+# Positional arguments:
+#	self, rt, gains
+# Cell variables:
+#    0: __class__
+
+  8:           0 LOAD_GLOBAL          (super)
+               2 CALL_FUNCTION        (0 positional arguments)
+               4 LOAD_METHOD          (__init__)
+               6 LOAD_FAST            (rt)
+               8 CALL_METHOD          (1 positional argument)
+              10 POP_TOP
+              12 LOAD_FAST            (gains)
+              14 LOAD_FAST            (self)
+              16 STORE_ATTR           (gains)
+              18 LOAD_CONST           (None)
+              20 RETURN_VALUE
+
+
+# Method Name:       stats
+# Filename:          v15_2\scene_consistency\evidence.py
+# Argument count:    6
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  20
+# Stack size:        15
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        10
+# Constants:
+#    0: "Integrate both members of each pair on their actual sensor samples.\n\n        Row 0..6 is the peer; row 7..13 is the same reference observed under\n        each pair's common censoring ceiling. Field 4 is gradient magnitude\n        plus Hessian spectral norm, for the local 2-native Taylor allowance.\n        This is a local uncertainty model, not a global displacement bound.\n        "
+#    1: 3
+#    2: 1.5
+#    3: 2
+#    4: 1
+#    5: '\nfn sample(k:u32,c:u32,x:i32,y:i32,field:u32)->f32{\n let phase=u32(a2[k*17u+1u+c]);let xx=x*2+i32(phase%2u);let yy=y*2+i32(phase/2u);\n if(xx<0||yy<0||xx>='
+#    6: '||yy>='
+#    7: '){return 0.;}\n return a0[(field*'
+#    8: 'u+k)*'
+#    9: 'u+u32(yy)*'
+#   10: 'u+u32(xx)];}\nfn g(k:u32,c:u32,x:u32,y:u32)->vec2<f32>{let i=((k*4u+c)*'
+#   11: 'u+y*'
+#   12: 'u+x)*2u;return vec2<f32>(a1[i],a1[i+1u]);}\n'
+#   13: ''
+#   14: '\nlet p=i%'
+#   15: 'u;let c=(i/'
+#   16: 'u)%4u;let pair=i/'
+#   17: 4
+#   18: 'u;let other=pair%7u;let k=select(0u,other,pair<7u);let j=k*17u;let x=p%'
+#   19: 'u;let y=p/'
+#   20: 'u;\nlet xl=select(x-1u,0u,x==0u);let xr=min(x+1u,'
+#   21: 'u);let yl=select(y-1u,0u,y==0u);let yr=min(y+1u,'
+#   22: 'u);\nlet jx=(g(k,c,xr,y)-g(k,c,xl,y))/(f32(xr-xl)*'
+#   23: '.);\nlet jy=(g(k,c,x,yr)-g(k,c,x,yl))/(f32(yr-yl)*'
+#   24: '.);\nlet det=jx.x*jy.y-jy.x*jx.y;\nlet reliable=det>.5&&det<2.&&length(jx)<1.5&&length(jy)<1.5&&length(vec2<f32>(jx.x,jy.x))<1.5&&length(vec2<f32>(jx.y,jy.y))<1.5;\nlet inv=mat2x2<f32>(vec2<f32>(jy.y,-jx.y),vec2<f32>(-jy.x,jx.x))*(1./max(det,.01));\nlet phase=u32(a2[j+1u+c]);let pos=g(k,c,x,y);let q=(pos-vec2<f32>(f32(phase%2u),f32(phase/2u)))*.5;\nlet cell=vec2<i32>(floor(q));let e=a2[j]*a3[k*'
+#   25: 'u+p];let white=a2[j+5u+c];let ceiling=.94*min(a2[5u+c]/(a2[0]*a3[p]),a2[other*17u+5u+c]/(a2[other*17u]*a3[other*'
+#   26: 'u+p]));\nvar hxx=0.;var hyy=0.;var hxy=0.;var dxx=0.;var dyy=0.;var dxy=0.;var den=0.;var full=0.;var value=0.;var variance=0.;var near=0.;var gx=0.;var gy=0.;var dxsum=0.;var dysum=0.;\nfor(var dy=-'
+#   27: ';dy<='
+#   28: ';dy++){for(var dx=-'
+#   29: ';dx<='
+#   30: ';dx++){\n let xy=cell+vec2<i32>(dx,dy);let d=inv*(2.*(vec2<f32>(xy)-q));\n if(dot(d,d)>'
+#   31: 9
+#   32: '){continue;}\n let weight=exp(-.5*dot(d,d)/'
+#   33: ');full+=weight;\n if(sample(k,c,xy.x,xy.y,1u)<.5){continue;}\n let raw=sample(k,c,xy.x,xy.y,0u);let vv=max(raw,0.);\n let noise=a2[j+13u]*vv+a2[j+14u]+a2[j+15u]+a2[j+16u]*vv*vv;\n let rad=min(raw/e,ceiling);\n den+=weight;value+=weight*rad;variance+=weight*weight*noise/(e*e);\n near+=weight*select(0.,1.,raw+3.*sqrt(noise)>=.98*white);\n hxx+=weight*rad*d.x*d.x;hyy+=weight*rad*d.y*d.y;hxy+=weight*rad*d.x*d.y;dxx+=weight*d.x*d.x;dyy+=weight*d.y*d.y;dxy+=weight*d.x*d.y;gx+=weight*rad*d.x;gy+=weight*rad*d.y;dxsum+=weight*d.x;dysum+=weight*d.y;\n}}\nlet z=max(den,1e-12);let mean=value/z;\nlet grad=length(vec2<f32>(gx/z-mean*dxsum/z,gy/z-mean*dysum/z))/'
+#   34: ';\nlet gd=vec2<f32>(gx/z-mean*dxsum/z,gy/z-mean*dysum/z)/'
+#   35: ';\nlet hhxx=(hxx/z-mean*dxx/z)/'
+#   36: '-2.*gd.x*dxsum/z/'
+#   37: ';\nlet hhyy=(hyy/z-mean*dyy/z)/'
+#   38: '-2.*gd.y*dysum/z/'
+#   39: ';\nlet hhxy=(hxy/z-mean*dxy/z)/'
+#   40: '-(gd.x*dysum/z+gd.y*dxsum/z)/'
+#   41: ';\nlet hnorm=.5*(abs(hhxx+hhyy)+sqrt((hhxx-hhyy)*(hhxx-hhyy)+4.*hhxy*hhxy));\nlet vals=array<f32,6>(mean,variance/(z*z),near/z,den/max(full,1e-12),grad+hnorm,select(0.,1.,reliable));\nfor(var f=0u;f<6u;f++){dst[((pair*4u+c)*6u+f)*'
+#   42: 'u+p]=vals[f];}\n'
+#   43: 'pair_common_ceiling_taylor_explicit_v6'
+#   44: 14
+#   45: 6
+#   46: 56
+#   47: ('count',)
+# Names:
+#    0: spec
+#    1: shape
+#    2: math
+#    3: ceil
+#    4: float
+#    5: join
+#    6: emit
+#    7: gains
+# Varnames:
+#	self, bank, G, meta, sigma, stride, _, k, sh, sw, c, h, w, n, sn, radius, s2, s4, helper, body
+# Positional arguments:
+#	self, bank, G, meta, sigma, stride
+# Local variables:
+#    6: _
+#    7: k
+#    8: sh
+#    9: sw
+#   10: c
+#   11: h
+#   12: w
+#   13: n
+#   14: sn
+#   15: radius
+#   16: s2
+#   17: s4
+#   18: helper
+#   19: body
+
+ 18:           0 LOAD_FAST            (bank)
+               2 LOAD_ATTR            (spec)
+               4 LOAD_ATTR            (shape)
+               6 UNPACK_SEQUENCE      4
+               8 STORE_FAST           (_)
+              10 STORE_FAST           (k)
+              12 STORE_FAST           (sh)
+              14 STORE_FAST           (sw)
+              16 LOAD_FAST            (G)
+              18 LOAD_ATTR            (spec)
+              20 LOAD_ATTR            (shape)
+              22 UNPACK_SEQUENCE      5
+              24 STORE_FAST           (_)
+              26 STORE_FAST           (c)
+              28 STORE_FAST           (h)
+              30 STORE_FAST           (w)
+              32 STORE_FAST           (_)
+              34 LOAD_FAST            (h)
+              36 LOAD_FAST            (w)
+              38 BINARY_MULTIPLY
+              40 STORE_FAST           (n)
+              42 LOAD_FAST            (sh)
+              44 LOAD_FAST            (sw)
+              46 BINARY_MULTIPLY
+              48 STORE_FAST           (sn)
+
+ 19:          50 LOAD_GLOBAL          (math)
+              52 LOAD_METHOD          (ceil)
+              54 LOAD_CONST           (3)
+              56 LOAD_FAST            (sigma)
+              58 BINARY_MULTIPLY
+              60 LOAD_CONST           (1.5)
+              62 BINARY_MULTIPLY
+              64 LOAD_CONST           (2)
+              66 BINARY_TRUE_DIVIDE
+              68 CALL_METHOD          (1 positional argument)
+              70 LOAD_CONST           (1)
+              72 BINARY_ADD
+              74 STORE_FAST           (radius)
+              76 LOAD_GLOBAL          (float)
+              78 LOAD_FAST            (sigma)
+              80 LOAD_FAST            (sigma)
+              82 BINARY_MULTIPLY
+              84 CALL_FUNCTION        (1 positional argument)
+              86 STORE_FAST           (s2)
+              88 LOAD_FAST            (s2)
+              90 LOAD_FAST            (s2)
+              92 BINARY_MULTIPLY
+              94 STORE_FAST           (s4)
+
+ 20:          96 LOAD_CONST           ("\nfn sample(k:u32,c:u32,x:i32,y:i32,field:u32)->f32{\n let phase=u32(a2[k*17u+1u+c]);let xx=x*2+i32(phase%2u);let yy=y*2+i32(phase/2u);\n if(xx<0||yy<0||xx>=")
+
+ 23:          98 LOAD_FAST            (sw)
+
+ 20:         100 FORMAT_VALUE         0
+             102 LOAD_CONST           ("||yy>=")
+
+ 23:         104 LOAD_FAST            (sh)
+
+ 20:         106 FORMAT_VALUE         0
+             108 LOAD_CONST           ("){return 0.;}\n return a0[(field*")
+
+ 24:         110 LOAD_FAST            (k)
+
+ 20:         112 FORMAT_VALUE         0
+             114 LOAD_CONST           ("u+k)*")
+
+ 24:         116 LOAD_FAST            (sn)
+
+ 20:         118 FORMAT_VALUE         0
+             120 LOAD_CONST           ("u+u32(yy)*")
+
+ 24:         122 LOAD_FAST            (sw)
+
+ 20:         124 FORMAT_VALUE         0
+             126 LOAD_CONST           ("u+u32(xx)];}\nfn g(k:u32,c:u32,x:u32,y:u32)->vec2<f32>{let i=((k*4u+c)*")
+
+ 25:         128 LOAD_FAST            (n)
+
+ 20:         130 FORMAT_VALUE         0
+             132 LOAD_CONST           ("u+y*")
+
+ 25:         134 LOAD_FAST            (w)
+
+ 20:         136 FORMAT_VALUE         0
+             138 LOAD_CONST           ("u+x)*2u;return vec2<f32>(a1[i],a1[i+1u]);}\n")
+             140 BUILD_STRING         15
+             142 STORE_FAST           (helper)
+
+ 27:         144 LOAD_CONST           ("")
+             146 LOAD_METHOD          (join)
+             148 BUILD_LIST           0
+             150 LOAD_CONST           ("\nlet p=i%")
+             152 LIST_APPEND          1
+
+ 28:         154 LOAD_FAST            (n)
+
+ 27:         156 FORMAT_VALUE         0
+             158 LIST_APPEND          1
+             160 LOAD_CONST           ("u;let c=(i/")
+             162 LIST_APPEND          1
+
+ 28:         164 LOAD_FAST            (n)
+
+ 27:         166 FORMAT_VALUE         0
+             168 LIST_APPEND          1
+             170 LOAD_CONST           ("u)%4u;let pair=i/")
+             172 LIST_APPEND          1
+
+ 28:         174 LOAD_CONST           (4)
+             176 LOAD_FAST            (n)
+             178 BINARY_MULTIPLY
+
+ 27:         180 FORMAT_VALUE         0
+             182 LIST_APPEND          1
+             184 LOAD_CONST           ("u;let other=pair%7u;let k=select(0u,other,pair<7u);let j=k*17u;let x=p%")
+             186 LIST_APPEND          1
+
+ 28:         188 LOAD_FAST            (w)
+
+ 27:         190 FORMAT_VALUE         0
+             192 LIST_APPEND          1
+             194 LOAD_CONST           ("u;let y=p/")
+             196 LIST_APPEND          1
+
+ 28:         198 LOAD_FAST            (w)
+
+ 27:         200 FORMAT_VALUE         0
+             202 LIST_APPEND          1
+             204 LOAD_CONST           ("u;\nlet xl=select(x-1u,0u,x==0u);let xr=min(x+1u,")
+             206 LIST_APPEND          1
+
+ 29:         208 LOAD_FAST            (w)
+             210 LOAD_CONST           (1)
+             212 BINARY_SUBTRACT
+
+ 27:         214 FORMAT_VALUE         0
+             216 LIST_APPEND          1
+             218 LOAD_CONST           ("u);let yl=select(y-1u,0u,y==0u);let yr=min(y+1u,")
+             220 LIST_APPEND          1
+
+ 29:         222 LOAD_FAST            (h)
+             224 LOAD_CONST           (1)
+             226 BINARY_SUBTRACT
+
+ 27:         228 FORMAT_VALUE         0
+             230 LIST_APPEND          1
+             232 LOAD_CONST           ("u);\nlet jx=(g(k,c,xr,y)-g(k,c,xl,y))/(f32(xr-xl)*")
+             234 LIST_APPEND          1
+
+ 30:         236 LOAD_FAST            (stride)
+
+ 27:         238 FORMAT_VALUE         0
+             240 LIST_APPEND          1
+             242 LOAD_CONST           (".);\nlet jy=(g(k,c,x,yr)-g(k,c,x,yl))/(f32(yr-yl)*")
+             244 LIST_APPEND          1
+
+ 31:         246 LOAD_FAST            (stride)
+
+ 27:         248 FORMAT_VALUE         0
+             250 LIST_APPEND          1
+             252 LOAD_CONST           (".);\nlet det=jx.x*jy.y-jy.x*jx.y;\nlet reliable=det>.5&&det<2.&&length(jx)<1.5&&length(jy)<1.5&&length(vec2<f32>(jx.x,jy.x))<1.5&&length(vec2<f32>(jx.y,jy.y))<1.5;\nlet inv=mat2x2<f32>(vec2<f32>(jy.y,-jx.y),vec2<f32>(-jy.x,jx.x))*(1./max(det,.01));\nlet phase=u32(a2[j+1u+c]);let pos=g(k,c,x,y);let q=(pos-vec2<f32>(f32(phase%2u),f32(phase/2u)))*.5;\nlet cell=vec2<i32>(floor(q));let e=a2[j]*a3[k*")
+             254 LIST_APPEND          1
+
+ 36:         256 LOAD_FAST            (n)
+
+ 27:         258 FORMAT_VALUE         0
+             260 LIST_APPEND          1
+             262 LOAD_CONST           ("u+p];let white=a2[j+5u+c];let ceiling=.94*min(a2[5u+c]/(a2[0]*a3[p]),a2[other*17u+5u+c]/(a2[other*17u]*a3[other*")
+             264 LIST_APPEND          1
+
+ 36:         266 LOAD_FAST            (n)
+
+ 27:         268 FORMAT_VALUE         0
+             270 LIST_APPEND          1
+             272 LOAD_CONST           ("u+p]));\nvar hxx=0.;var hyy=0.;var hxy=0.;var dxx=0.;var dyy=0.;var dxy=0.;var den=0.;var full=0.;var value=0.;var variance=0.;var near=0.;var gx=0.;var gy=0.;var dxsum=0.;var dysum=0.;\nfor(var dy=-")
+             274 LIST_APPEND          1
+
+ 38:         276 LOAD_FAST            (radius)
+
+ 27:         278 FORMAT_VALUE         0
+             280 LIST_APPEND          1
+             282 LOAD_CONST           (";dy<=")
+             284 LIST_APPEND          1
+
+ 38:         286 LOAD_FAST            (radius)
+
+ 27:         288 FORMAT_VALUE         0
+             290 LIST_APPEND          1
+             292 LOAD_CONST           (";dy++){for(var dx=-")
+             294 LIST_APPEND          1
+
+ 38:         296 LOAD_FAST            (radius)
+
+ 27:         298 FORMAT_VALUE         0
+             300 LIST_APPEND          1
+             302 LOAD_CONST           (";dx<=")
+             304 LIST_APPEND          1
+
+ 38:         306 LOAD_FAST            (radius)
+
+ 27:         308 FORMAT_VALUE         0
+             310 LIST_APPEND          1
+             312 LOAD_CONST           (";dx++){\n let xy=cell+vec2<i32>(dx,dy);let d=inv*(2.*(vec2<f32>(xy)-q));\n if(dot(d,d)>")
+             314 LIST_APPEND          1
+
+ 40:         316 LOAD_CONST           (9)
+             318 LOAD_FAST            (sigma)
+             320 BINARY_MULTIPLY
+             322 LOAD_FAST            (sigma)
+             324 BINARY_MULTIPLY
+
+ 27:         326 FORMAT_VALUE         0
+             328 LIST_APPEND          1
+             330 LOAD_CONST           ("){continue;}\n let weight=exp(-.5*dot(d,d)/")
+             332 LIST_APPEND          1
+
+ 41:         334 LOAD_FAST            (sigma)
+             336 LOAD_FAST            (sigma)
+             338 BINARY_MULTIPLY
+
+ 27:         340 FORMAT_VALUE         0
+             342 LIST_APPEND          1
+             344 LOAD_CONST           (");full+=weight;\n if(sample(k,c,xy.x,xy.y,1u)<.5){continue;}\n let raw=sample(k,c,xy.x,xy.y,0u);let vv=max(raw,0.);\n let noise=a2[j+13u]*vv+a2[j+14u]+a2[j+15u]+a2[j+16u]*vv*vv;\n let rad=min(raw/e,ceiling);\n den+=weight;value+=weight*rad;variance+=weight*weight*noise/(e*e);\n near+=weight*select(0.,1.,raw+3.*sqrt(noise)>=.98*white);\n hxx+=weight*rad*d.x*d.x;hyy+=weight*rad*d.y*d.y;hxy+=weight*rad*d.x*d.y;dxx+=weight*d.x*d.x;dyy+=weight*d.y*d.y;dxy+=weight*d.x*d.y;gx+=weight*rad*d.x;gy+=weight*rad*d.y;dxsum+=weight*d.x;dysum+=weight*d.y;\n}}\nlet z=max(den,1e-12);let mean=value/z;\nlet grad=length(vec2<f32>(gx/z-mean*dxsum/z,gy/z-mean*dysum/z))/")
+             346 LIST_APPEND          1
+
+ 51:         348 LOAD_FAST            (sigma)
+             350 LOAD_FAST            (sigma)
+             352 BINARY_MULTIPLY
+
+ 27:         354 FORMAT_VALUE         0
+             356 LIST_APPEND          1
+             358 LOAD_CONST           (";\nlet gd=vec2<f32>(gx/z-mean*dxsum/z,gy/z-mean*dysum/z)/")
+             360 LIST_APPEND          1
+
+ 52:         362 LOAD_FAST            (s2)
+
+ 27:         364 FORMAT_VALUE         0
+             366 LIST_APPEND          1
+             368 LOAD_CONST           (";\nlet hhxx=(hxx/z-mean*dxx/z)/")
+             370 LIST_APPEND          1
+
+ 53:         372 LOAD_FAST            (s4)
+
+ 27:         374 FORMAT_VALUE         0
+             376 LIST_APPEND          1
+             378 LOAD_CONST           ("-2.*gd.x*dxsum/z/")
+             380 LIST_APPEND          1
+
+ 53:         382 LOAD_FAST            (s2)
+
+ 27:         384 FORMAT_VALUE         0
+             386 LIST_APPEND          1
+             388 LOAD_CONST           (";\nlet hhyy=(hyy/z-mean*dyy/z)/")
+             390 LIST_APPEND          1
+
+ 54:         392 LOAD_FAST            (s4)
+
+ 27:         394 FORMAT_VALUE         0
+             396 LIST_APPEND          1
+             398 LOAD_CONST           ("-2.*gd.y*dysum/z/")
+             400 LIST_APPEND          1
+
+ 54:         402 LOAD_FAST            (s2)
+
+ 27:         404 FORMAT_VALUE         0
+             406 LIST_APPEND          1
+             408 LOAD_CONST           (";\nlet hhxy=(hxy/z-mean*dxy/z)/")
+             410 LIST_APPEND          1
+
+ 55:         412 LOAD_FAST            (s4)
+
+ 27:         414 FORMAT_VALUE         0
+             416 LIST_APPEND          1
+             418 LOAD_CONST           ("-(gd.x*dysum/z+gd.y*dxsum/z)/")
+             420 LIST_APPEND          1
+
+ 55:         422 LOAD_FAST            (s2)
+
+ 27:         424 FORMAT_VALUE         0
+             426 LIST_APPEND          1
+             428 LOAD_CONST           (";\nlet hnorm=.5*(abs(hhxx+hhyy)+sqrt((hhxx-hhyy)*(hhxx-hhyy)+4.*hhxy*hhxy));\nlet vals=array<f32,6>(mean,variance/(z*z),near/z,den/max(full,1e-12),grad+hnorm,select(0.,1.,reliable));\nfor(var f=0u;f<6u;f++){dst[((pair*4u+c)*6u+f)*")
+             430 LIST_APPEND          1
+
+ 58:         432 LOAD_FAST            (n)
+
+ 27:         434 FORMAT_VALUE         0
+             436 LIST_APPEND          1
+             438 LOAD_CONST           ("u+p]=vals[f];}\n")
+             440 LIST_APPEND          1
+             442 CALL_METHOD          (1 positional argument)
+             444 STORE_FAST           (body)
+
+ 60:         446 LOAD_FAST            (self)
+             448 LOAD_ATTR            (emit)
+             450 LOAD_CONST           ("pair_common_ceiling_taylor_explicit_v6")
+             452 LOAD_FAST            (sigma)
+             454 LOAD_FAST            (stride)
+             456 LOAD_FAST            (sh)
+             458 LOAD_FAST            (sw)
+             460 LOAD_FAST            (h)
+             462 LOAD_FAST            (w)
+             464 BUILD_TUPLE          7
+             466 LOAD_FAST            (bank)
+             468 LOAD_FAST            (G)
+             470 LOAD_FAST            (meta)
+             472 LOAD_FAST            (self)
+             474 LOAD_ATTR            (gains)
+             476 BUILD_LIST           4
+             478 LOAD_CONST           (14)
+             480 LOAD_CONST           (4)
+             482 LOAD_CONST           (6)
+             484 LOAD_FAST            (h)
+             486 LOAD_FAST            (w)
+             488 BUILD_TUPLE          5
+             490 LOAD_FAST            (body)
+             492 LOAD_FAST            (helper)
+             494 LOAD_CONST           (56)
+             496 LOAD_FAST            (n)
+             498 BINARY_MULTIPLY
+             500 LOAD_CONST           (('count',))
+             502 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             504 RETURN_VALUE
+
+
+# Method Name:       decide
+# Filename:          v15_2\scene_consistency\evidence.py
+# Argument count:    4
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  20
+# Stack size:        11
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        62
+# Constants:
+#    0: None
+#    1: '\nfn score(m:f32,v:f32,sp:f32,grad:f32,jv:f32,mr:f32,vr:f32,sr:f32,gr:f32,jr:f32,b:f32)->vec3<f32>{\n let unknown=sp<=.999||sr<=.999||jv<.5||jr<.5;\n let tol=4.*sqrt(max(v+vr,0.))+b+.08*max(abs(m),abs(mr))+(grad+gr);\n return vec3<f32>(select(abs(m-mr)/max(tol,1e-12),0.,unknown),select(0.,1.,unknown),tol);}\n'
+#    2: (('a0', 's4'), ('a1', 's6'))
+#    3: ('jg', 'rg')
+#    4: ((0, 'mean'), (1, 'variance'), (3, 'min'), (4, 'mean'), (5, 'min'))
+#    5: '['
+#    6: '+'
+#    7: 'u]'
+#    8: 6
+#    9: 'min'
+#   10: 'min('
+#   11: ','
+#   12: ')'
+#   13: 'variance'
+#   14: 0.25
+#   15: 0.5
+#   16: '*('
+#   17: '=score('
+#   18: ',bg);'
+#   19: ''
+#   20: 'let p=i%'
+#   21: 'u;let c=(i/'
+#   22: 'u)%4u;let k=i/'
+#   23: 4
+#   24: 'u;let j=(k*4u+c)*6u*'
+#   25: 'u+p;let r=((k+7u)*4u+c)*6u*'
+#   26: 'u+p;let b=a2[k*4u+c]/a3[k*'
+#   27: 'u+p]+a2[c]/a3[p];\nvar s4=score(a0[j],a0[j+'
+#   28: 'u],a0[j+'
+#   29: 3
+#   30: 5
+#   31: 'u],a0[r],a0[r+'
+#   32: 'u],a0[r+'
+#   33: 'u],b);\nvar s6=score(a1[j],a1[j+'
+#   34: 'u],a1[j+'
+#   35: 'u],a1[r],a1[r+'
+#   36: 'u],a1[r+'
+#   37: 'u],b);\nvar d4=a0[j]-a0[r];var d6=a1[j]-a1[r];\nif(c==1u||c==2u){let jg=(k*4u+1u)*6u*'
+#   38: 'u+p;let rg=((k+7u)*4u+1u)*6u*'
+#   39: 'u+p;\nlet bg=.5*(a2[k*4u+1u]+a2[k*4u+2u])/a3[k*'
+#   40: 'u+p]+.5*(a2[1u]+a2[2u])/a3[p];\n'
+#   41: '\nd4=.5*(a0[jg]+a0[jg+'
+#   42: 'u]-a0[rg]-a0[rg+'
+#   43: 'u]);d6=.5*(a1[jg]+a1[jg+'
+#   44: 'u]-a1[rg]-a1[rg+'
+#   45: 'u]);}\nlet reject=k!=0u&&s4.x>1.&&s6.x>1.&&d4*d6>0.;\nlet weak=k!=0u&&s4.x>.5&&s6.x>.5&&d4*d6>0.;\ndst[(k*4u+c)*3u*'
+#   46: 'u+p]=select(select(0.,.25,weak),1.,reject);\ndst[((k*4u+c)*3u+1u)*'
+#   47: 'u+p]=s4.z;\ndst[((k*4u+c)*3u+2u)*'
+#   48: 'u+p]=select(0.,1.,k!=0u&&(s4.y>.5||s6.y>.5));'
+#   49: 'pair_common_decision_geometry2_v5'
+#   50: 7
+#   51: 28
+#   52: ('count',)
+# Names:
+#    0: spec
+#    1: shape
+#    2: append
+#    3: join
+#    4: emit
+#    5: gains
+# Varnames:
+#	self, s4, s6, black, _, c, h, w, n, helper, green, a, ss, terms, z, f, mode, v1, v2, body
+# Positional arguments:
+#	self, s4, s6, black
+# Local variables:
+#    4: _
+#    5: c
+#    6: h
+#    7: w
+#    8: n
+#    9: helper
+#   10: green
+#   11: a
+#   12: ss
+#   13: terms
+#   14: z
+#   15: f
+#   16: mode
+#   17: v1
+#   18: v2
+#   19: body
+
+ 63:           0 LOAD_FAST            (s4)
+               2 LOAD_ATTR            (spec)
+               4 LOAD_ATTR            (shape)
+               6 UNPACK_SEQUENCE      5
+               8 STORE_FAST           (_)
+              10 STORE_FAST           (c)
+              12 STORE_FAST           (_)
+              14 STORE_FAST           (h)
+              16 STORE_FAST           (w)
+              18 LOAD_FAST            (h)
+              20 LOAD_FAST            (w)
+              22 BINARY_MULTIPLY
+              24 STORE_FAST           (n)
+
+ 64:          26 LOAD_CONST           ("\nfn score(m:f32,v:f32,sp:f32,grad:f32,jv:f32,mr:f32,vr:f32,sr:f32,gr:f32,jr:f32,b:f32)->vec3<f32>{\n let unknown=sp<=.999||sr<=.999||jv<.5||jr<.5;\n let tol=4.*sqrt(max(v+vr,0.))+b+.08*max(abs(m),abs(mr))+(grad+gr);\n return vec3<f32>(select(abs(m-mr)/max(tol,1e-12),0.,unknown),select(0.,1.,unknown),tol);}\n")
+              28 STORE_FAST           (helper)
+
+ 70:          30 BUILD_LIST           0
+              32 STORE_FAST           (green)
+
+ 71:          34 LOAD_CONST           ((('a0', 's4'), ('a1', 's6')))
+              36 GET_ITER
+         >>   38 FOR_ITER             (to 228)
+              40 UNPACK_SEQUENCE      2
+              42 STORE_FAST           (a)
+              44 STORE_FAST           (ss)
+
+ 72:          46 BUILD_LIST           0
+              48 STORE_FAST           (terms)
+
+ 73:          50 LOAD_CONST           (('jg', 'rg'))
+              52 GET_ITER
+         >>   54 FOR_ITER             (to 196)
+              56 STORE_FAST           (z)
+
+ 74:          58 LOAD_CONST           (((0, 'mean'), (1, 'variance'), (3, 'min'), (4, 'mean'), (5, 'min')))
+              60 GET_ITER
+         >>   62 FOR_ITER             (to 194)
+              64 UNPACK_SEQUENCE      2
+              66 STORE_FAST           (f)
+              68 STORE_FAST           (mode)
+
+ 75:          70 LOAD_FAST            (a)
+              72 FORMAT_VALUE         0
+              74 LOAD_CONST           ("[")
+              76 LOAD_FAST            (z)
+              78 FORMAT_VALUE         0
+              80 LOAD_CONST           ("+")
+              82 LOAD_FAST            (f)
+              84 LOAD_FAST            (n)
+              86 BINARY_MULTIPLY
+              88 FORMAT_VALUE         0
+              90 LOAD_CONST           ("u]")
+              92 BUILD_STRING         6
+              94 STORE_FAST           (v1)
+              96 LOAD_FAST            (a)
+              98 FORMAT_VALUE         0
+             100 LOAD_CONST           ("[")
+             102 LOAD_FAST            (z)
+             104 FORMAT_VALUE         0
+             106 LOAD_CONST           ("+")
+             108 LOAD_CONST           (6)
+             110 LOAD_FAST            (f)
+             112 BINARY_ADD
+             114 LOAD_FAST            (n)
+             116 BINARY_MULTIPLY
+             118 FORMAT_VALUE         0
+             120 LOAD_CONST           ("u]")
+             122 BUILD_STRING         6
+             124 STORE_FAST           (v2)
+
+ 76:         126 LOAD_FAST            (terms)
+             128 LOAD_METHOD          (append)
+             130 LOAD_FAST            (mode)
+             132 LOAD_CONST           ("min")
+             134 COMPARE_OP           (==)
+             136 POP_JUMP_IF_FALSE    (to 156)
+             138 LOAD_CONST           ("min(")
+             140 LOAD_FAST            (v1)
+             142 FORMAT_VALUE         0
+             144 LOAD_CONST           (",")
+             146 LOAD_FAST            (v2)
+             148 FORMAT_VALUE         0
+             150 LOAD_CONST           (")")
+             152 BUILD_STRING         5
+             154 JUMP_FORWARD         (to 188)
+         >>  156 LOAD_FAST            (mode)
+             158 LOAD_CONST           ("variance")
+             160 COMPARE_OP           (==)
+             162 POP_JUMP_IF_FALSE    (to 168)
+             164 LOAD_CONST           (0.25)
+             166 JUMP_FORWARD         (to 170)
+         >>  168 LOAD_CONST           (0.5)
+         >>  170 FORMAT_VALUE         0
+             172 LOAD_CONST           ("*(")
+             174 LOAD_FAST            (v1)
+             176 FORMAT_VALUE         0
+             178 LOAD_CONST           ("+")
+             180 LOAD_FAST            (v2)
+             182 FORMAT_VALUE         0
+             184 LOAD_CONST           (")")
+             186 BUILD_STRING         6
+         >>  188 CALL_METHOD          (1 positional argument)
+             190 POP_TOP
+             192 JUMP_ABSOLUTE        (to 62)
+
+ 74:     >>  194 JUMP_ABSOLUTE        (to 54)
+
+ 77:     >>  196 LOAD_FAST            (green)
+             198 LOAD_METHOD          (append)
+             200 LOAD_FAST            (ss)
+             202 FORMAT_VALUE         0
+             204 LOAD_CONST           ("=score(")
+             206 BUILD_STRING         2
+             208 LOAD_CONST           (",")
+             210 LOAD_METHOD          (join)
+             212 LOAD_FAST            (terms)
+             214 CALL_METHOD          (1 positional argument)
+             216 BINARY_ADD
+             218 LOAD_CONST           (",bg);")
+             220 BINARY_ADD
+             222 CALL_METHOD          (1 positional argument)
+             224 POP_TOP
+             226 JUMP_ABSOLUTE        (to 38)
+
+ 78:     >>  228 LOAD_CONST           ("")
+             230 LOAD_METHOD          (join)
+             232 BUILD_LIST           0
+             234 LOAD_CONST           ("let p=i%")
+             236 LIST_APPEND          1
+             238 LOAD_FAST            (n)
+             240 FORMAT_VALUE         0
+             242 LIST_APPEND          1
+             244 LOAD_CONST           ("u;let c=(i/")
+             246 LIST_APPEND          1
+             248 LOAD_FAST            (n)
+             250 FORMAT_VALUE         0
+             252 LIST_APPEND          1
+             254 LOAD_CONST           ("u)%4u;let k=i/")
+             256 LIST_APPEND          1
+             258 LOAD_CONST           (4)
+             260 LOAD_FAST            (n)
+             262 BINARY_MULTIPLY
+             264 FORMAT_VALUE         0
+             266 LIST_APPEND          1
+             268 LOAD_CONST           ("u;let j=(k*4u+c)*6u*")
+             270 LIST_APPEND          1
+             272 LOAD_FAST            (n)
+             274 FORMAT_VALUE         0
+             276 LIST_APPEND          1
+             278 LOAD_CONST           ("u+p;let r=((k+7u)*4u+c)*6u*")
+             280 LIST_APPEND          1
+             282 LOAD_FAST            (n)
+             284 FORMAT_VALUE         0
+             286 LIST_APPEND          1
+             288 LOAD_CONST           ("u+p;let b=a2[k*4u+c]/a3[k*")
+             290 LIST_APPEND          1
+             292 LOAD_FAST            (n)
+             294 FORMAT_VALUE         0
+             296 LIST_APPEND          1
+             298 LOAD_CONST           ("u+p]+a2[c]/a3[p];\nvar s4=score(a0[j],a0[j+")
+             300 LIST_APPEND          1
+
+ 79:         302 LOAD_FAST            (n)
+
+ 78:         304 FORMAT_VALUE         0
+             306 LIST_APPEND          1
+             308 LOAD_CONST           ("u],a0[j+")
+             310 LIST_APPEND          1
+
+ 79:         312 LOAD_CONST           (3)
+             314 LOAD_FAST            (n)
+             316 BINARY_MULTIPLY
+
+ 78:         318 FORMAT_VALUE         0
+             320 LIST_APPEND          1
+             322 LOAD_CONST           ("u],a0[j+")
+             324 LIST_APPEND          1
+
+ 79:         326 LOAD_CONST           (4)
+             328 LOAD_FAST            (n)
+             330 BINARY_MULTIPLY
+
+ 78:         332 FORMAT_VALUE         0
+             334 LIST_APPEND          1
+             336 LOAD_CONST           ("u],a0[j+")
+             338 LIST_APPEND          1
+
+ 79:         340 LOAD_CONST           (5)
+             342 LOAD_FAST            (n)
+             344 BINARY_MULTIPLY
+
+ 78:         346 FORMAT_VALUE         0
+             348 LIST_APPEND          1
+             350 LOAD_CONST           ("u],a0[r],a0[r+")
+             352 LIST_APPEND          1
+
+ 79:         354 LOAD_FAST            (n)
+
+ 78:         356 FORMAT_VALUE         0
+             358 LIST_APPEND          1
+             360 LOAD_CONST           ("u],a0[r+")
+             362 LIST_APPEND          1
+
+ 79:         364 LOAD_CONST           (3)
+             366 LOAD_FAST            (n)
+             368 BINARY_MULTIPLY
+
+ 78:         370 FORMAT_VALUE         0
+             372 LIST_APPEND          1
+             374 LOAD_CONST           ("u],a0[r+")
+             376 LIST_APPEND          1
+
+ 79:         378 LOAD_CONST           (4)
+             380 LOAD_FAST            (n)
+             382 BINARY_MULTIPLY
+
+ 78:         384 FORMAT_VALUE         0
+             386 LIST_APPEND          1
+             388 LOAD_CONST           ("u],a0[r+")
+             390 LIST_APPEND          1
+
+ 79:         392 LOAD_CONST           (5)
+             394 LOAD_FAST            (n)
+             396 BINARY_MULTIPLY
+
+ 78:         398 FORMAT_VALUE         0
+             400 LIST_APPEND          1
+             402 LOAD_CONST           ("u],b);\nvar s6=score(a1[j],a1[j+")
+             404 LIST_APPEND          1
+
+ 80:         406 LOAD_FAST            (n)
+
+ 78:         408 FORMAT_VALUE         0
+             410 LIST_APPEND          1
+             412 LOAD_CONST           ("u],a1[j+")
+             414 LIST_APPEND          1
+
+ 80:         416 LOAD_CONST           (3)
+             418 LOAD_FAST            (n)
+             420 BINARY_MULTIPLY
+
+ 78:         422 FORMAT_VALUE         0
+             424 LIST_APPEND          1
+             426 LOAD_CONST           ("u],a1[j+")
+             428 LIST_APPEND          1
+
+ 80:         430 LOAD_CONST           (4)
+             432 LOAD_FAST            (n)
+             434 BINARY_MULTIPLY
+
+ 78:         436 FORMAT_VALUE         0
+             438 LIST_APPEND          1
+             440 LOAD_CONST           ("u],a1[j+")
+             442 LIST_APPEND          1
+
+ 80:         444 LOAD_CONST           (5)
+             446 LOAD_FAST            (n)
+             448 BINARY_MULTIPLY
+
+ 78:         450 FORMAT_VALUE         0
+             452 LIST_APPEND          1
+             454 LOAD_CONST           ("u],a1[r],a1[r+")
+             456 LIST_APPEND          1
+
+ 80:         458 LOAD_FAST            (n)
+
+ 78:         460 FORMAT_VALUE         0
+             462 LIST_APPEND          1
+             464 LOAD_CONST           ("u],a1[r+")
+             466 LIST_APPEND          1
+
+ 80:         468 LOAD_CONST           (3)
+             470 LOAD_FAST            (n)
+             472 BINARY_MULTIPLY
+
+ 78:         474 FORMAT_VALUE         0
+             476 LIST_APPEND          1
+             478 LOAD_CONST           ("u],a1[r+")
+             480 LIST_APPEND          1
+
+ 80:         482 LOAD_CONST           (4)
+             484 LOAD_FAST            (n)
+             486 BINARY_MULTIPLY
+
+ 78:         488 FORMAT_VALUE         0
+             490 LIST_APPEND          1
+             492 LOAD_CONST           ("u],a1[r+")
+             494 LIST_APPEND          1
+
+ 80:         496 LOAD_CONST           (5)
+             498 LOAD_FAST            (n)
+             500 BINARY_MULTIPLY
+
+ 78:         502 FORMAT_VALUE         0
+             504 LIST_APPEND          1
+             506 LOAD_CONST           ("u],b);\nvar d4=a0[j]-a0[r];var d6=a1[j]-a1[r];\nif(c==1u||c==2u){let jg=(k*4u+1u)*6u*")
+             508 LIST_APPEND          1
+
+ 82:         510 LOAD_FAST            (n)
+
+ 78:         512 FORMAT_VALUE         0
+             514 LIST_APPEND          1
+             516 LOAD_CONST           ("u+p;let rg=((k+7u)*4u+1u)*6u*")
+             518 LIST_APPEND          1
+
+ 82:         520 LOAD_FAST            (n)
+
+ 78:         522 FORMAT_VALUE         0
+             524 LIST_APPEND          1
+             526 LOAD_CONST           ("u+p;\nlet bg=.5*(a2[k*4u+1u]+a2[k*4u+2u])/a3[k*")
+             528 LIST_APPEND          1
+
+ 83:         530 LOAD_FAST            (n)
+
+ 78:         532 FORMAT_VALUE         0
+             534 LIST_APPEND          1
+             536 LOAD_CONST           ("u+p]+.5*(a2[1u]+a2[2u])/a3[p];\n")
+             538 LIST_APPEND          1
+
+ 84:         540 LOAD_CONST           ("")
+             542 LOAD_METHOD          (join)
+             544 LOAD_FAST            (green)
+             546 CALL_METHOD          (1 positional argument)
+
+ 78:         548 FORMAT_VALUE         0
+             550 LIST_APPEND          1
+             552 LOAD_CONST           ("\nd4=.5*(a0[jg]+a0[jg+")
+             554 LIST_APPEND          1
+
+ 85:         556 LOAD_CONST           (6)
+             558 LOAD_FAST            (n)
+             560 BINARY_MULTIPLY
+
+ 78:         562 FORMAT_VALUE         0
+             564 LIST_APPEND          1
+             566 LOAD_CONST           ("u]-a0[rg]-a0[rg+")
+             568 LIST_APPEND          1
+
+ 85:         570 LOAD_CONST           (6)
+             572 LOAD_FAST            (n)
+             574 BINARY_MULTIPLY
+
+ 78:         576 FORMAT_VALUE         0
+             578 LIST_APPEND          1
+             580 LOAD_CONST           ("u]);d6=.5*(a1[jg]+a1[jg+")
+             582 LIST_APPEND          1
+
+ 85:         584 LOAD_CONST           (6)
+             586 LOAD_FAST            (n)
+             588 BINARY_MULTIPLY
+
+ 78:         590 FORMAT_VALUE         0
+             592 LIST_APPEND          1
+             594 LOAD_CONST           ("u]-a1[rg]-a1[rg+")
+             596 LIST_APPEND          1
+
+ 85:         598 LOAD_CONST           (6)
+             600 LOAD_FAST            (n)
+             602 BINARY_MULTIPLY
+
+ 78:         604 FORMAT_VALUE         0
+             606 LIST_APPEND          1
+             608 LOAD_CONST           ("u]);}\nlet reject=k!=0u&&s4.x>1.&&s6.x>1.&&d4*d6>0.;\nlet weak=k!=0u&&s4.x>.5&&s6.x>.5&&d4*d6>0.;\ndst[(k*4u+c)*3u*")
+             610 LIST_APPEND          1
+
+ 88:         612 LOAD_FAST            (n)
+
+ 78:         614 FORMAT_VALUE         0
+             616 LIST_APPEND          1
+             618 LOAD_CONST           ("u+p]=select(select(0.,.25,weak),1.,reject);\ndst[((k*4u+c)*3u+1u)*")
+             620 LIST_APPEND          1
+
+ 89:         622 LOAD_FAST            (n)
+
+ 78:         624 FORMAT_VALUE         0
+             626 LIST_APPEND          1
+             628 LOAD_CONST           ("u+p]=s4.z;\ndst[((k*4u+c)*3u+2u)*")
+             630 LIST_APPEND          1
+
+ 90:         632 LOAD_FAST            (n)
+
+ 78:         634 FORMAT_VALUE         0
+             636 LIST_APPEND          1
+             638 LOAD_CONST           ("u+p]=select(0.,1.,k!=0u&&(s4.y>.5||s6.y>.5));")
+             640 LIST_APPEND          1
+             642 CALL_METHOD          (1 positional argument)
+             644 STORE_FAST           (body)
+
+ 91:         646 LOAD_FAST            (self)
+             648 LOAD_ATTR            (emit)
+             650 LOAD_CONST           ("pair_common_decision_geometry2_v5")
+             652 LOAD_FAST            (s4)
+             654 LOAD_FAST            (s6)
+             656 LOAD_FAST            (black)
+             658 LOAD_FAST            (self)
+             660 LOAD_ATTR            (gains)
+             662 BUILD_LIST           4
+             664 LOAD_CONST           (7)
+             666 LOAD_CONST           (4)
+             668 LOAD_CONST           (3)
+             670 LOAD_FAST            (h)
+             672 LOAD_FAST            (w)
+             674 BUILD_TUPLE          5
+             676 LOAD_FAST            (body)
+             678 LOAD_FAST            (helper)
+             680 LOAD_CONST           (28)
+             682 LOAD_FAST            (n)
+             684 BINARY_MULTIPLY
+             686 LOAD_CONST           (('count',))
+             688 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             690 RETURN_VALUE
+
+
+# Method Name:       scatter
+# Filename:          v15_2\scene_consistency\evidence.py
+# Argument count:    7
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  30
+# Stack size:        13
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        93
+# Constants:
+#    0: None
+#    1: 0
+#    2: ('grid_for',)
+#    3: 'pair_box'
+#    4: ''
+#    5: '@group(0) @binding(0) var<storage,read> s4:array<f32>;\n@group(0) @binding(1) var<storage,read> s6:array<f32>;\n@group(0) @binding(2) var<storage,read> dec:array<f32>;\n@group(0) @binding(3) var<storage,read> black:array<f32>;\n@group(0) @binding(4) var<storage,read_write> base:array<f32>;\n@group(0) @binding(5) var<storage,read_write> band:array<f32>;\n@group(0) @binding(6) var<storage,read_write> budget:array<f32>;\n@group(0) @binding(7) var<storage,read_write> comp:array<f32>;\nstruct Box{xy:vec2<u32>,size:vec2<u32>,delta:vec2<u32>,pad:vec2<u32>};\n@group(0) @binding(8) var<uniform> box:Box;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){\nlet i=g.x+g.y*4194304u;let count=box.size.x*box.size.y;if(i>=7u*count){return;}\nlet f=i/count;let p=i%count;let x=p%box.size.x;let y=p/box.size.x;\nlet src=(y+box.delta.y)*'
+#    6: 'u+x+box.delta.x;let dst=(y+box.xy.y)*'
+#    7: 'u+x+box.xy.x;\nvar means:array<f32,4>;var refs:array<f32,4>;var tols:array<f32,4>;var ok=true;\nfor(var c=0u;c<4u;c++){let j=(f*4u+c)*6u*'
+#    8: 'u+src;let r=((f+7u)*4u+c)*6u*'
+#    9: 'u+src;\nlet m=s4[j];let mr=s4[r];means[c]=m;refs[c]=mr;\ntols[c]=dec[((f*4u+c)*3u+1u)*'
+#   10: 'u+src];\nok=ok&&s4[j+'
+#   11: 3
+#   12: 'u]>.999&&s4[r+'
+#   13: 'u]>.999&&s4[j+'
+#   14: 5
+#   15: 'u]>.5&&s4[r+'
+#   16: 'u]>.5\n&&s6[j+'
+#   17: 'u]>.999&&s6[r+'
+#   18: 'u]>.999&&s6[j+'
+#   19: 'u]>.5&&s6[r+'
+#   20: 'u]>.5;\nbase[(f*4u+c)*'
+#   21: 'u+dst]=dec[(f*4u+c)*3u*'
+#   22: 'u+src];}\nlet rgb=array<f32,3>(means[0],.5*(means[1]+means[2]),means[3]);\nlet ref_rgb=array<f32,3>(refs[0],.5*(refs[1]+refs[2]),refs[3]);\nlet tol=array<f32,3>(tols[0],.5*(tols[1]+tols[2]),tols[3]);\nfor(var c=0u;c<3u;c++){band[(f*3u+c)*'
+#   23: 'u+dst]=rgb[c];band[((f+7u)*3u+c)*'
+#   24: 'u+dst]=ref_rgb[c];budget[(f*3u+c)*'
+#   25: 'u+dst]=tol[c];}\ncomp[f*'
+#   26: 'u+dst]=select(0.,1.,ok);}'
+#   27: 'pair_scatter'
+#   28: ('a', 'a', 'a', 'a', 'w', 'w', 'w', 'w', 'u')
+#   29: <Code310 code object <listcomp> at 0x1069088f0, file v15_2\scene_consistency\evidence.py>, line 128
+#   30: 'PairEvidence.scatter.<locals>.<listcomp>'
+#   31: 7
+#   32: 128
+#   33: ('tag',)
+# Names:
+#    0: v15_1.kernels
+#    1: grid_for
+#    2: spec
+#    3: shape
+#    4: rt
+#    5: stream
+#    6: uniform_buffer
+#    7: np
+#    8: array
+#    9: uint32
+#   10: join
+#   11: pipeline
+#   12: bind_group
+#   13: dispatch
+# Varnames:
+#	self, s4, s6, decision, black, outputs, box, grid_for, base, band, budget, comp, _, h, w, n, th, tw, tn, x, y, cw, ch, dx, dy, params, code, key, pipe, group
+# Positional arguments:
+#	self, s4, s6, decision, black, outputs, box
+# Local variables:
+#    7: grid_for
+#    8: base
+#    9: band
+#   10: budget
+#   11: comp
+#   12: _
+#   13: h
+#   14: w
+#   15: n
+#   16: th
+#   17: tw
+#   18: tn
+#   19: x
+#   20: y
+#   21: cw
+#   22: ch
+#   23: dx
+#   24: dy
+#   25: params
+#   26: code
+#   27: key
+#   28: pipe
+#   29: group
+
+ 94:           0 LOAD_CONST           (0)
+               2 LOAD_CONST           (('grid_for',))
+               4 IMPORT_NAME          (v15_1.kernels)
+               6 IMPORT_FROM          (grid_for)
+               8 STORE_FAST           (grid_for)
+              10 POP_TOP
+
+ 95:          12 LOAD_FAST            (outputs)
+              14 UNPACK_SEQUENCE      4
+              16 STORE_FAST           (base)
+              18 STORE_FAST           (band)
+              20 STORE_FAST           (budget)
+              22 STORE_FAST           (comp)
+              24 LOAD_FAST            (base)
+              26 LOAD_ATTR            (spec)
+              28 LOAD_ATTR            (shape)
+              30 UNPACK_SEQUENCE      4
+              32 STORE_FAST           (_)
+              34 STORE_FAST           (_)
+              36 STORE_FAST           (h)
+              38 STORE_FAST           (w)
+              40 LOAD_FAST            (h)
+              42 LOAD_FAST            (w)
+              44 BINARY_MULTIPLY
+              46 STORE_FAST           (n)
+
+ 96:          48 LOAD_FAST            (s4)
+              50 LOAD_ATTR            (spec)
+              52 LOAD_ATTR            (shape)
+              54 UNPACK_SEQUENCE      5
+              56 STORE_FAST           (_)
+              58 STORE_FAST           (_)
+              60 STORE_FAST           (_)
+              62 STORE_FAST           (th)
+              64 STORE_FAST           (tw)
+              66 LOAD_FAST            (th)
+              68 LOAD_FAST            (tw)
+              70 BINARY_MULTIPLY
+              72 STORE_FAST           (tn)
+
+ 97:          74 LOAD_FAST            (box)
+              76 UNPACK_SEQUENCE      6
+              78 STORE_FAST           (x)
+              80 STORE_FAST           (y)
+              82 STORE_FAST           (cw)
+              84 STORE_FAST           (ch)
+              86 STORE_FAST           (dx)
+              88 STORE_FAST           (dy)
+
+ 98:          90 LOAD_FAST            (self)
+              92 LOAD_ATTR            (rt)
+              94 LOAD_ATTR            (stream)
+              96 LOAD_METHOD          (uniform_buffer)
+              98 LOAD_CONST           ("pair_box")
+             100 LOAD_FAST            (box)
+             102 BUILD_TUPLE          2
+             104 LOAD_GLOBAL          (np)
+             106 LOAD_METHOD          (array)
+             108 LOAD_FAST            (x)
+             110 LOAD_FAST            (y)
+             112 LOAD_FAST            (cw)
+             114 LOAD_FAST            (ch)
+             116 LOAD_FAST            (dx)
+             118 LOAD_FAST            (dy)
+             120 LOAD_CONST           (0)
+             122 LOAD_CONST           (0)
+             124 BUILD_LIST           8
+             126 LOAD_GLOBAL          (np)
+             128 LOAD_ATTR            (uint32)
+             130 CALL_METHOD          (2 positional arguments)
+             132 CALL_METHOD          (2 positional arguments)
+             134 STORE_FAST           (params)
+
+101:         136 LOAD_CONST           ("")
+             138 LOAD_METHOD          (join)
+             140 BUILD_LIST           0
+             142 LOAD_CONST           ("@group(0) @binding(0) var<storage,read> s4:array<f32>;\n@group(0) @binding(1) var<storage,read> s6:array<f32>;\n@group(0) @binding(2) var<storage,read> dec:array<f32>;\n@group(0) @binding(3) var<storage,read> black:array<f32>;\n@group(0) @binding(4) var<storage,read_write> base:array<f32>;\n@group(0) @binding(5) var<storage,read_write> band:array<f32>;\n@group(0) @binding(6) var<storage,read_write> budget:array<f32>;\n@group(0) @binding(7) var<storage,read_write> comp:array<f32>;\nstruct Box{xy:vec2<u32>,size:vec2<u32>,delta:vec2<u32>,pad:vec2<u32>};\n@group(0) @binding(8) var<uniform> box:Box;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){\nlet i=g.x+g.y*4194304u;let count=box.size.x*box.size.y;if(i>=7u*count){return;}\nlet f=i/count;let p=i%count;let x=p%box.size.x;let y=p/box.size.x;\nlet src=(y+box.delta.y)*")
+             144 LIST_APPEND          1
+
+114:         146 LOAD_FAST            (tw)
+
+101:         148 FORMAT_VALUE         0
+             150 LIST_APPEND          1
+             152 LOAD_CONST           ("u+x+box.delta.x;let dst=(y+box.xy.y)*")
+             154 LIST_APPEND          1
+
+114:         156 LOAD_FAST            (w)
+
+101:         158 FORMAT_VALUE         0
+             160 LIST_APPEND          1
+             162 LOAD_CONST           ("u+x+box.xy.x;\nvar means:array<f32,4>;var refs:array<f32,4>;var tols:array<f32,4>;var ok=true;\nfor(var c=0u;c<4u;c++){let j=(f*4u+c)*6u*")
+             164 LIST_APPEND          1
+
+116:         166 LOAD_FAST            (tn)
+
+101:         168 FORMAT_VALUE         0
+             170 LIST_APPEND          1
+             172 LOAD_CONST           ("u+src;let r=((f+7u)*4u+c)*6u*")
+             174 LIST_APPEND          1
+
+116:         176 LOAD_FAST            (tn)
+
+101:         178 FORMAT_VALUE         0
+             180 LIST_APPEND          1
+             182 LOAD_CONST           ("u+src;\nlet m=s4[j];let mr=s4[r];means[c]=m;refs[c]=mr;\ntols[c]=dec[((f*4u+c)*3u+1u)*")
+             184 LIST_APPEND          1
+
+118:         186 LOAD_FAST            (tn)
+
+101:         188 FORMAT_VALUE         0
+             190 LIST_APPEND          1
+             192 LOAD_CONST           ("u+src];\nok=ok&&s4[j+")
+             194 LIST_APPEND          1
+
+119:         196 LOAD_CONST           (3)
+             198 LOAD_FAST            (tn)
+             200 BINARY_MULTIPLY
+
+101:         202 FORMAT_VALUE         0
+             204 LIST_APPEND          1
+             206 LOAD_CONST           ("u]>.999&&s4[r+")
+             208 LIST_APPEND          1
+
+119:         210 LOAD_CONST           (3)
+             212 LOAD_FAST            (tn)
+             214 BINARY_MULTIPLY
+
+101:         216 FORMAT_VALUE         0
+             218 LIST_APPEND          1
+             220 LOAD_CONST           ("u]>.999&&s4[j+")
+             222 LIST_APPEND          1
+
+119:         224 LOAD_CONST           (5)
+             226 LOAD_FAST            (tn)
+             228 BINARY_MULTIPLY
+
+101:         230 FORMAT_VALUE         0
+             232 LIST_APPEND          1
+             234 LOAD_CONST           ("u]>.5&&s4[r+")
+             236 LIST_APPEND          1
+
+119:         238 LOAD_CONST           (5)
+             240 LOAD_FAST            (tn)
+             242 BINARY_MULTIPLY
+
+101:         244 FORMAT_VALUE         0
+             246 LIST_APPEND          1
+             248 LOAD_CONST           ("u]>.5\n&&s6[j+")
+             250 LIST_APPEND          1
+
+120:         252 LOAD_CONST           (3)
+             254 LOAD_FAST            (tn)
+             256 BINARY_MULTIPLY
+
+101:         258 FORMAT_VALUE         0
+             260 LIST_APPEND          1
+             262 LOAD_CONST           ("u]>.999&&s6[r+")
+             264 LIST_APPEND          1
+
+120:         266 LOAD_CONST           (3)
+             268 LOAD_FAST            (tn)
+             270 BINARY_MULTIPLY
+
+101:         272 FORMAT_VALUE         0
+             274 LIST_APPEND          1
+             276 LOAD_CONST           ("u]>.999&&s6[j+")
+             278 LIST_APPEND          1
+
+120:         280 LOAD_CONST           (5)
+             282 LOAD_FAST            (tn)
+             284 BINARY_MULTIPLY
+
+101:         286 FORMAT_VALUE         0
+             288 LIST_APPEND          1
+             290 LOAD_CONST           ("u]>.5&&s6[r+")
+             292 LIST_APPEND          1
+
+120:         294 LOAD_CONST           (5)
+             296 LOAD_FAST            (tn)
+             298 BINARY_MULTIPLY
+
+101:         300 FORMAT_VALUE         0
+             302 LIST_APPEND          1
+             304 LOAD_CONST           ("u]>.5;\nbase[(f*4u+c)*")
+             306 LIST_APPEND          1
+
+121:         308 LOAD_FAST            (n)
+
+101:         310 FORMAT_VALUE         0
+             312 LIST_APPEND          1
+             314 LOAD_CONST           ("u+dst]=dec[(f*4u+c)*3u*")
+             316 LIST_APPEND          1
+
+121:         318 LOAD_FAST            (tn)
+
+101:         320 FORMAT_VALUE         0
+             322 LIST_APPEND          1
+             324 LOAD_CONST           ("u+src];}\nlet rgb=array<f32,3>(means[0],.5*(means[1]+means[2]),means[3]);\nlet ref_rgb=array<f32,3>(refs[0],.5*(refs[1]+refs[2]),refs[3]);\nlet tol=array<f32,3>(tols[0],.5*(tols[1]+tols[2]),tols[3]);\nfor(var c=0u;c<3u;c++){band[(f*3u+c)*")
+             326 LIST_APPEND          1
+
+125:         328 LOAD_FAST            (n)
+
+101:         330 FORMAT_VALUE         0
+             332 LIST_APPEND          1
+             334 LOAD_CONST           ("u+dst]=rgb[c];band[((f+7u)*3u+c)*")
+             336 LIST_APPEND          1
+
+125:         338 LOAD_FAST            (n)
+
+101:         340 FORMAT_VALUE         0
+             342 LIST_APPEND          1
+             344 LOAD_CONST           ("u+dst]=ref_rgb[c];budget[(f*3u+c)*")
+             346 LIST_APPEND          1
+
+125:         348 LOAD_FAST            (n)
+
+101:         350 FORMAT_VALUE         0
+             352 LIST_APPEND          1
+             354 LOAD_CONST           ("u+dst]=tol[c];}\ncomp[f*")
+             356 LIST_APPEND          1
+
+126:         358 LOAD_FAST            (n)
+
+101:         360 FORMAT_VALUE         0
+             362 LIST_APPEND          1
+             364 LOAD_CONST           ("u+dst]=select(0.,1.,ok);}")
+             366 LIST_APPEND          1
+             368 CALL_METHOD          (1 positional argument)
+             370 STORE_FAST           (code)
+
+127:         372 LOAD_CONST           ("pair_scatter")
+             374 LOAD_FAST            (h)
+             376 LOAD_FAST            (w)
+             378 LOAD_FAST            (th)
+             380 LOAD_FAST            (tw)
+             382 BUILD_TUPLE          5
+             384 STORE_FAST           (key)
+             386 LOAD_FAST            (self)
+             388 LOAD_ATTR            (rt)
+             390 LOAD_ATTR            (stream)
+             392 LOAD_METHOD          (pipeline)
+             394 LOAD_FAST            (key)
+             396 LOAD_FAST            (code)
+             398 LOAD_CONST           (('a', 'a', 'a', 'a', 'w', 'w', 'w', 'w', 'u'))
+             400 CALL_METHOD          (3 positional arguments)
+             402 STORE_FAST           (pipe)
+
+128:         404 LOAD_FAST            (self)
+             406 LOAD_ATTR            (rt)
+             408 LOAD_ATTR            (stream)
+             410 LOAD_METHOD          (bind_group)
+             412 LOAD_FAST            (key)
+             414 LOAD_FAST            (pipe)
+             416 LOAD_CONST           (<Code310 code object <listcomp> at 0x1069088f0, file v15_2\scene_consistency\evidence.py>, line 128)
+             418 LOAD_CONST           ("PairEvidence.scatter.<locals>.<listcomp>")
+             420 MAKE_FUNCTION        (No arguments)
+             422 LOAD_FAST            (s4)
+             424 LOAD_FAST            (s6)
+             426 LOAD_FAST            (decision)
+             428 LOAD_FAST            (black)
+             430 BUILD_LIST           4
+             432 LOAD_FAST            (outputs)
+             434 LIST_EXTEND          1
+             436 LIST_TO_TUPLE
+             438 GET_ITER
+             440 CALL_FUNCTION        (1 positional argument)
+             442 LOAD_FAST            (params)
+             444 BUILD_LIST           1
+             446 BINARY_ADD
+             448 CALL_METHOD          (3 positional arguments)
+             450 STORE_FAST           (group)
+
+129:         452 LOAD_FAST            (self)
+             454 LOAD_ATTR            (rt)
+             456 LOAD_ATTR            (stream)
+             458 LOAD_ATTR            (dispatch)
+             460 LOAD_FAST            (pipe)
+             462 LOAD_FAST            (group)
+             464 LOAD_FAST            (grid_for)
+             466 LOAD_CONST           (7)
+             468 LOAD_FAST            (cw)
+             470 BINARY_MULTIPLY
+             472 LOAD_FAST            (ch)
+             474 BINARY_MULTIPLY
+             476 LOAD_CONST           (128)
+             478 CALL_FUNCTION        (2 positional arguments)
+             480 LOAD_CONST           ("pair_scatter")
+             482 LOAD_CONST           (('tag',))
+             484 CALL_FUNCTION_KW     (4 total positional and keyword args)
+             486 POP_TOP
+             488 LOAD_CONST           (None)
+             490 RETURN_VALUE
+
+
+# Method Name:       scatter_censored
+# Filename:          v15_2\scene_consistency\evidence.py
+# Argument count:    5
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  20
+# Stack size:        8
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        131
+# Constants:
+#    0: None
+#    1: ''
+#    2: 'let f=i/'
+#    3: 'u;let p=i%'
+#    4: 'u;let x=p%'
+#    5: 'u;let y=p/'
+#    6: 'u;\nlet src=(y+'
+#    7: 'u)*'
+#    8: 'u+x+'
+#    9: 'u;let dest=(y+'
+#   10: 1
+#   11: 0
+#   12: 'u;\nvar near=0.;var valid=true;var sm=0.;var rm=0.;\nfor(var c=0u;c<4u;c++){let j=(f*4u+c)*6u*'
+#   13: 'u+src;let r=((f+7u)*4u+c)*6u*'
+#   14: 'u+src;\nnear=max(near,max(a0[j+'
+#   15: 2
+#   16: 'u],a0[r+'
+#   17: 'u]));\nvalid=valid&&a0[j+'
+#   18: 3
+#   19: 'u]>.999&&a0[r+'
+#   20: 'u]>.999&&a0[j+'
+#   21: 5
+#   22: 'u]>.5&&a0[r+'
+#   23: 'u]>.5;\nif(c==1u||c==2u){sm+=.5*a0[j];rm+=.5*a0[r];}}\ndst[(f*3u)*'
+#   24: 'u+dest]=select(0.,1.,valid&&near>.001);\ndst[(f*3u+1u)*'
+#   25: 'u+dest]=max(rm,0.);dst[(f*3u+2u)*'
+#   26: 'u+dest]=max(sm,0.);'
+#   27: 'censored_scatter'
+#   28: 7
+#   29: ('count', 'out')
+# Names:
+#    0: spec
+#    1: shape
+#    2: join
+#    3: emit
+# Varnames:
+#	self, s4, s6, output, box, _, h, w, n, th, tw, tn, x, y, cw, ch, dx, dy, count, body
+# Positional arguments:
+#	self, s4, s6, output, box
+# Local variables:
+#    5: _
+#    6: h
+#    7: w
+#    8: n
+#    9: th
+#   10: tw
+#   11: tn
+#   12: x
+#   13: y
+#   14: cw
+#   15: ch
+#   16: dx
+#   17: dy
+#   18: count
+#   19: body
+
+132:           0 LOAD_FAST            (output)
+               2 LOAD_ATTR            (spec)
+               4 LOAD_ATTR            (shape)
+               6 UNPACK_SEQUENCE      4
+               8 STORE_FAST           (_)
+              10 STORE_FAST           (_)
+              12 STORE_FAST           (h)
+              14 STORE_FAST           (w)
+              16 LOAD_FAST            (h)
+              18 LOAD_FAST            (w)
+              20 BINARY_MULTIPLY
+              22 STORE_FAST           (n)
+              24 LOAD_FAST            (s4)
+              26 LOAD_ATTR            (spec)
+              28 LOAD_ATTR            (shape)
+              30 UNPACK_SEQUENCE      5
+              32 STORE_FAST           (_)
+              34 STORE_FAST           (_)
+              36 STORE_FAST           (_)
+              38 STORE_FAST           (th)
+              40 STORE_FAST           (tw)
+              42 LOAD_FAST            (th)
+              44 LOAD_FAST            (tw)
+              46 BINARY_MULTIPLY
+              48 STORE_FAST           (tn)
+
+133:          50 LOAD_FAST            (box)
+              52 UNPACK_SEQUENCE      6
+              54 STORE_FAST           (x)
+              56 STORE_FAST           (y)
+              58 STORE_FAST           (cw)
+              60 STORE_FAST           (ch)
+              62 STORE_FAST           (dx)
+              64 STORE_FAST           (dy)
+              66 LOAD_FAST            (cw)
+              68 LOAD_FAST            (ch)
+              70 BINARY_MULTIPLY
+              72 STORE_FAST           (count)
+
+134:          74 LOAD_CONST           ("")
+              76 LOAD_METHOD          (join)
+              78 BUILD_LIST           0
+              80 LOAD_CONST           ("let f=i/")
+              82 LIST_APPEND          1
+              84 LOAD_FAST            (count)
+              86 FORMAT_VALUE         0
+              88 LIST_APPEND          1
+              90 LOAD_CONST           ("u;let p=i%")
+              92 LIST_APPEND          1
+              94 LOAD_FAST            (count)
+              96 FORMAT_VALUE         0
+              98 LIST_APPEND          1
+             100 LOAD_CONST           ("u;let x=p%")
+             102 LIST_APPEND          1
+             104 LOAD_FAST            (cw)
+             106 FORMAT_VALUE         0
+             108 LIST_APPEND          1
+             110 LOAD_CONST           ("u;let y=p/")
+             112 LIST_APPEND          1
+             114 LOAD_FAST            (cw)
+             116 FORMAT_VALUE         0
+             118 LIST_APPEND          1
+             120 LOAD_CONST           ("u;\nlet src=(y+")
+             122 LIST_APPEND          1
+
+135:         124 LOAD_FAST            (dy)
+
+134:         126 FORMAT_VALUE         0
+             128 LIST_APPEND          1
+             130 LOAD_CONST           ("u)*")
+             132 LIST_APPEND          1
+
+135:         134 LOAD_FAST            (tw)
+
+134:         136 FORMAT_VALUE         0
+             138 LIST_APPEND          1
+             140 LOAD_CONST           ("u+x+")
+             142 LIST_APPEND          1
+
+135:         144 LOAD_FAST            (dx)
+
+134:         146 FORMAT_VALUE         0
+             148 LIST_APPEND          1
+             150 LOAD_CONST           ("u;let dest=(y+")
+             152 LIST_APPEND          1
+
+135:         154 LOAD_FAST            (box)
+             156 LOAD_CONST           (1)
+             158 BINARY_SUBSCR
+
+134:         160 FORMAT_VALUE         0
+             162 LIST_APPEND          1
+             164 LOAD_CONST           ("u)*")
+             166 LIST_APPEND          1
+
+135:         168 LOAD_FAST            (w)
+
+134:         170 FORMAT_VALUE         0
+             172 LIST_APPEND          1
+             174 LOAD_CONST           ("u+x+")
+             176 LIST_APPEND          1
+
+135:         178 LOAD_FAST            (box)
+             180 LOAD_CONST           (0)
+             182 BINARY_SUBSCR
+
+134:         184 FORMAT_VALUE         0
+             186 LIST_APPEND          1
+             188 LOAD_CONST           ("u;\nvar near=0.;var valid=true;var sm=0.;var rm=0.;\nfor(var c=0u;c<4u;c++){let j=(f*4u+c)*6u*")
+             190 LIST_APPEND          1
+
+137:         192 LOAD_FAST            (tn)
+
+134:         194 FORMAT_VALUE         0
+             196 LIST_APPEND          1
+             198 LOAD_CONST           ("u+src;let r=((f+7u)*4u+c)*6u*")
+             200 LIST_APPEND          1
+
+137:         202 LOAD_FAST            (tn)
+
+134:         204 FORMAT_VALUE         0
+             206 LIST_APPEND          1
+             208 LOAD_CONST           ("u+src;\nnear=max(near,max(a0[j+")
+             210 LIST_APPEND          1
+
+138:         212 LOAD_CONST           (2)
+             214 LOAD_FAST            (tn)
+             216 BINARY_MULTIPLY
+
+134:         218 FORMAT_VALUE         0
+             220 LIST_APPEND          1
+             222 LOAD_CONST           ("u],a0[r+")
+             224 LIST_APPEND          1
+
+138:         226 LOAD_CONST           (2)
+             228 LOAD_FAST            (tn)
+             230 BINARY_MULTIPLY
+
+134:         232 FORMAT_VALUE         0
+             234 LIST_APPEND          1
+             236 LOAD_CONST           ("u]));\nvalid=valid&&a0[j+")
+             238 LIST_APPEND          1
+
+139:         240 LOAD_CONST           (3)
+             242 LOAD_FAST            (tn)
+             244 BINARY_MULTIPLY
+
+134:         246 FORMAT_VALUE         0
+             248 LIST_APPEND          1
+             250 LOAD_CONST           ("u]>.999&&a0[r+")
+             252 LIST_APPEND          1
+
+139:         254 LOAD_CONST           (3)
+             256 LOAD_FAST            (tn)
+             258 BINARY_MULTIPLY
+
+134:         260 FORMAT_VALUE         0
+             262 LIST_APPEND          1
+             264 LOAD_CONST           ("u]>.999&&a0[j+")
+             266 LIST_APPEND          1
+
+139:         268 LOAD_CONST           (5)
+             270 LOAD_FAST            (tn)
+             272 BINARY_MULTIPLY
+
+134:         274 FORMAT_VALUE         0
+             276 LIST_APPEND          1
+             278 LOAD_CONST           ("u]>.5&&a0[r+")
+             280 LIST_APPEND          1
+
+139:         282 LOAD_CONST           (5)
+             284 LOAD_FAST            (tn)
+             286 BINARY_MULTIPLY
+
+134:         288 FORMAT_VALUE         0
+             290 LIST_APPEND          1
+             292 LOAD_CONST           ("u]>.5;\nif(c==1u||c==2u){sm+=.5*a0[j];rm+=.5*a0[r];}}\ndst[(f*3u)*")
+             294 LIST_APPEND          1
+
+141:         296 LOAD_FAST            (n)
+
+134:         298 FORMAT_VALUE         0
+             300 LIST_APPEND          1
+             302 LOAD_CONST           ("u+dest]=select(0.,1.,valid&&near>.001);\ndst[(f*3u+1u)*")
+             304 LIST_APPEND          1
+
+142:         306 LOAD_FAST            (n)
+
+134:         308 FORMAT_VALUE         0
+             310 LIST_APPEND          1
+             312 LOAD_CONST           ("u+dest]=max(rm,0.);dst[(f*3u+2u)*")
+             314 LIST_APPEND          1
+
+142:         316 LOAD_FAST            (n)
+
+134:         318 FORMAT_VALUE         0
+             320 LIST_APPEND          1
+             322 LOAD_CONST           ("u+dest]=max(sm,0.);")
+             324 LIST_APPEND          1
+             326 CALL_METHOD          (1 positional argument)
+             328 STORE_FAST           (body)
+
+143:         330 LOAD_FAST            (self)
+             332 LOAD_ATTR            (emit)
+             334 LOAD_CONST           ("censored_scatter")
+             336 LOAD_FAST            (box)
+             338 LOAD_FAST            (th)
+             340 LOAD_FAST            (tw)
+             342 BUILD_TUPLE          4
+             344 LOAD_FAST            (s4)
+             346 BUILD_LIST           1
+             348 LOAD_FAST            (output)
+             350 LOAD_ATTR            (spec)
+             352 LOAD_ATTR            (shape)
+             354 LOAD_FAST            (body)
+             356 LOAD_CONST           (7)
+             358 LOAD_FAST            (count)
+             360 BINARY_MULTIPLY
+             362 LOAD_FAST            (output)
+             364 LOAD_CONST           (('count', 'out'))
+             366 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             368 RETURN_VALUE
+
+
+# Method Name:       <listcomp>
+# Filename:          v15_2\scene_consistency\evidence.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        3
+# Flags:             0x00000053 (NOFREE | NESTED | NEWLOCALS | OPTIMIZED)
+# First Line:        128
+# Names:
+#    0: buffer
+# Varnames:
+#	.0, v
+# Positional arguments:
+#	.0
+# Local variables:
+#    1: v
+
+128:           0 BUILD_LIST           0
+               2 LOAD_FAST            (.0)
+         >>    4 FOR_ITER             (to 16)
+               6 STORE_FAST           (v)
+               8 LOAD_FAST            (v)
+              10 LOAD_ATTR            (buffer)
+              12 LIST_APPEND          2
+              14 JUMP_ABSOLUTE        (to 4)
+         >>   16 RETURN_VALUE
+

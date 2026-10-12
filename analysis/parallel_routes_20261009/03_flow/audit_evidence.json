@@ -1,0 +1,362 @@
+{
+  "samples": {
+    "lumix_lab_apk": {
+      "exists": true,
+      "path": "analysis/sources/lumix_lab_android/com.panasonic.jp.lumixlab.apk",
+      "size": 189845077,
+      "sha256": "6ba873110d201675a905f7dac39bcda3291674e7440a484d6d5bd1a78447115f"
+    },
+    "lumix_lab_decompiled": {
+      "exists": true,
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources"
+    },
+    "lumix_sync_local": {
+      "apk_found": false,
+      "matches": []
+    },
+    "lumix_flow_local": {
+      "apk_found": false,
+      "matches": []
+    }
+  },
+  "bearer_verification": {
+    "v_java_match": true,
+    "v_java_line": 301,
+    "snippet": "return AbstractC0105t.o(\"'Bearer \", str, \"'\");",
+    "t_java_line": 88,
+    "t_snippet": "public static String o(String str, String str2, String str3) {"
+  },
+  "endpoints": {
+    "total_endpoints": 57,
+    "categorized_counts": {
+      "remote_control": 9,
+      "lut_management": 9,
+      "photostyle": 12,
+      "media_transfer": 12,
+      "firmware_update": 3,
+      "auth": 2,
+      "cloud_community": 10,
+      "diagnostic_read": 0
+    },
+    "categories": {
+      "remote_control": [
+        {
+          "verb": "POST",
+          "path": "remote/get-state",
+          "signature": "InterfaceC2118h<C0630h0> H(@i(\"Authorization\") String str)"
+        },
+        {
+          "verb": "POST",
+          "path": "remote/get-setting",
+          "signature": "InterfaceC2118h<C0624e0> M(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "remote/get-lvport",
+          "signature": "InterfaceC2118h<B> S(@i(\"Authorization\") String str)"
+        },
+        {
+          "verb": "POST",
+          "path": "remote/set-setting",
+          "signature": "InterfaceC2118h<T0> T(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "remote/camctrl",
+          "signature": "InterfaceC2118h<C0625f> U(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "remote/camcmd",
+          "signature": "l<C0619c> b(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "remote/camcmd",
+          "signature": "InterfaceC2118h<C0619c> e(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "remote/stop-stream",
+          "signature": "InterfaceC2118h<Z0> f(@i(\"Authorization\") String str)"
+        },
+        {
+          "verb": "POST",
+          "path": "remote/start-stream",
+          "signature": "InterfaceC2118h<W0> y(@i(\"Authorization\") String str, @sa.a String str2)"
+        }
+      ],
+      "lut_management": [
+        {
+          "verb": "POST",
+          "path": "lut/send",
+          "signature": "InterfaceC2118h<LutDataBean> E(@i(\"Authorization\") String str, @i(\"Content-Length\") String str2, @i(\"transID\") String str3, @i(\"Content-Type\") String str4, @sa.a A0 a8)"
+        },
+        {
+          "verb": "POST",
+          "path": "lut/delete",
+          "signature": "InterfaceC2118h<LutDataBean> L(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)"
+        },
+        {
+          "verb": "POST",
+          "path": "lut/rename",
+          "signature": "InterfaceC2118h<LutDataBean> N(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)"
+        },
+        {
+          "verb": "POST",
+          "path": "lut/info",
+          "signature": "InterfaceC2118h<LutCameraBean> W(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)"
+        },
+        {
+          "verb": "POST",
+          "path": "lut/file",
+          "signature": "l<G0> X(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "lut/set-display-setting",
+          "signature": "InterfaceC2118h<LutDataBean> Y(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)"
+        },
+        {
+          "verb": "POST",
+          "path": "lut/rearrange",
+          "signature": "InterfaceC2118h<LutDataBean> e0(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)"
+        },
+        {
+          "verb": "POST",
+          "path": "lut/send-prepare",
+          "signature": "InterfaceC2118h<LutDataBean> l(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)"
+        },
+        {
+          "verb": "POST",
+          "path": "lut/abort-send",
+          "signature": "InterfaceC2118h<LutDataBean> n(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)"
+        }
+      ],
+      "photostyle": [
+        {
+          "verb": "POST",
+          "path": "photostyle/get-setting",
+          "signature": "InterfaceC2118h<C0624e0> D(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "photostyle/start-stream",
+          "signature": "InterfaceC2118h<T0> G(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "photostyle/set-myphotostyle-setting",
+          "signature": "InterfaceC2118h<T0> K(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "photostyle/get-myphotostyle-setting",
+          "signature": "InterfaceC2118h<E> O(@i(\"Authorization\") String str)"
+        },
+        {
+          "verb": "POST",
+          "path": "photostyle/restore-to-default",
+          "signature": "InterfaceC2118h<T0> R(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "photostyle/change",
+          "signature": "InterfaceC2118h<T0> f0(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "photostyle/rename",
+          "signature": "InterfaceC2118h<T0> g0(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "photostyle/save-current-setting",
+          "signature": "InterfaceC2118h<T0> j(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "photostyle/get-display-setting",
+          "signature": "InterfaceC2118h<C0662y> k(@i(\"Authorization\") String str)"
+        },
+        {
+          "verb": "POST",
+          "path": "photostyle/set-display-setting",
+          "signature": "InterfaceC2118h<T0> r(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "photostyle/rearrange",
+          "signature": "InterfaceC2118h<T0> t(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "photostyle/load-preset-setting",
+          "signature": "InterfaceC2118h<T0> u(@i(\"Authorization\") String str, @sa.a String str2)"
+        }
+      ],
+      "media_transfer": [
+        {
+          "verb": "POST",
+          "path": "media/gallery/count",
+          "signature": "l<GalleryCountResponseBean> C(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "media/gallery/current-sd",
+          "signature": "l<GalleryCurrentSdResponseBean> Q(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "media/transfer/count",
+          "signature": "InterfaceC2118h<CameraImageTransferCountResponseBean> Z(@i(\"Authorization\") String str)"
+        },
+        {
+          "verb": "POST",
+          "path": "auto-transfer/get-content-info",
+          "signature": "l<G0> a(@i(\"Authorization\") String str)"
+        },
+        {
+          "verb": "POST",
+          "path": "media/gallery/count",
+          "signature": "l<GalleryCountResponseBean> c0(@i(\"Authorization\") String str)"
+        },
+        {
+          "verb": "POST",
+          "path": "media/image",
+          "signature": "InterfaceC2118h<G0> d(@i(\"Authorization\") String str, @i(\"Range\") String str2, @sa.a String str3)"
+        },
+        {
+          "verb": "POST",
+          "path": "media/transfer/info",
+          "signature": "InterfaceC2118h<CameraImageTransferInfoResponseBean> d0(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "media/gallery/thumbnail",
+          "signature": "l<G0> h(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "media/image",
+          "signature": "InterfaceC2118h<G0> o(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "media/burst/info",
+          "signature": "l<BurstInfoResponseBean> q(@i(\"Authorization\") String str, @sa.a BurstInfoRequestBean burstInfoRequestBean)"
+        },
+        {
+          "verb": "POST",
+          "path": "media/gallery/info",
+          "signature": "l<GalleryInfoResponseBean> s(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "media/transfer/notify",
+          "signature": "InterfaceC2118h<G0> z(@i(\"Authorization\") String str, @sa.a String str2)"
+        }
+      ],
+      "firmware_update": [
+        {
+          "verb": "POST",
+          "path": "firmware/send",
+          "signature": "InterfaceC2118h<LutDataBean> A(@i(\"Authorization\") String str, @i(\"Content-Length\") String str2, @i(\"transID\") String str3, @sa.a A0 a8)"
+        },
+        {
+          "verb": "POST",
+          "path": "firmware/send-prepare",
+          "signature": "InterfaceC2118h<LutDataBean> B(@i(\"Authorization\") String str, @sa.a String str2)"
+        },
+        {
+          "verb": "POST",
+          "path": "firmware/abort-send",
+          "signature": "InterfaceC2118h<LutDataBean> g(@i(\"Authorization\") String str)"
+        }
+      ],
+      "auth": [
+        {
+          "verb": "POST",
+          "path": "auth",
+          "signature": "l<AuthResponseBean> F(@sa.a AuthRequestBean authRequestBean)"
+        },
+        {
+          "verb": "POST",
+          "path": "auth",
+          "signature": "InterfaceC2118h<AuthResponseBean> p(@sa.a AuthRequestBean authRequestBean)"
+        }
+      ],
+      "cloud_community": [
+        {
+          "verb": "POST",
+          "path": "community/lut",
+          "signature": "InterfaceC2118h<CommunityDownloadBean> I(@sa.a CommunityGenresPostBean communityGenresPostBean)"
+        },
+        {
+          "verb": "GET",
+          "path": "app_version.json",
+          "signature": "l<AppVersionResponseBean> J()"
+        },
+        {
+          "verb": "POST",
+          "path": "community/creators",
+          "signature": "InterfaceC2118h<CommunityCreatorListBean> P(@sa.a CommunityCreatorsPostBean communityCreatorsPostBean)"
+        },
+        {
+          "verb": "POST",
+          "path": "community/luts/top",
+          "signature": "InterfaceC2118h<CommunityLutsTopBean> a0(@sa.a CommunityLutTopPostBean communityLutTopPostBean)"
+        },
+        {
+          "verb": "POST",
+          "path": "community/genres",
+          "signature": "InterfaceC2118h<CommunityGenresBean> b0()"
+        },
+        {
+          "verb": "GET",
+          "path": "firmware_list.json",
+          "signature": "l<FirmListResponseBean> i()"
+        },
+        {
+          "verb": "POST",
+          "path": "community/luts/download",
+          "signature": "l<G0> m(@sa.a CommunityDownloadPostBean communityDownloadPostBean)"
+        },
+        {
+          "verb": "POST",
+          "path": "community/luts/filter",
+          "signature": "InterfaceC2118h<CommunityFilterBean> v(@sa.a CommunityListPostBean communityListPostBean)"
+        },
+        {
+          "verb": "POST",
+          "path": "community/creator",
+          "signature": "l<CommunityCreatorResponseBean> w(@sa.a CommunityGenresPostBean communityGenresPostBean)"
+        },
+        {
+          "verb": "POST",
+          "path": "community/creators/countries",
+          "signature": "InterfaceC2118h<CommunityCreatorsCountriesBean> x(@sa.a CommunityCreatorsCountriesPostBean communityCreatorsCountriesPostBean)"
+        }
+      ],
+      "diagnostic_read": []
+    }
+  },
+  "models": {
+    "DC-S9": "MC8259",
+    "DC-GH7": "MC5231",
+    "DC-S5M2": "MC8223",
+    "DC-S5M2X": "MC8223X",
+    "DC-G9M2": "MC5229",
+    "DC-S1M2ES": "MC8241",
+    "DC-S1M2": "MC8243",
+    "DC-S1RM2": "MC8244",
+    "DC-L10": "DC3261",
+    "DC-S1M2NT": "MC8266"
+  },
+  "ssl_trust": {
+    "f_implements_x509": true,
+    "empty_check_server_trusted": true,
+    "f_code": "package p084h6;\n\nimport java.security.cert.X509Certificate;\nimport javax.net.ssl.X509TrustManager;\n\n/* JADX INFO: loaded from: classes2.dex */\npublic final class f implements X509TrustManager {\n    public f(g gVar) {\n    }\n\n    @Override // javax.net.ssl.X509TrustManager\n    public final void checkClientTrusted(X509Certificate[] x509CertificateArr, String str) {\n    }\n\n    @Override // javax.net.ssl.X509TrustManager\n    public final void checkServerTrusted(X509Certificate[] x509CertificateArr, String str) {\n    }\n\n    @Override // javax.net.ssl.X509TrustManager\n    public final X509Certificate[] getAcceptedIssuers() {\n        return new X509Certificate[0];\n    }\n}",
+    "default_base_url": "https://192.168.54.1/"
+  }
+}

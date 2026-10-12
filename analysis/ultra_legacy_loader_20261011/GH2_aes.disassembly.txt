@@ -1,0 +1,960 @@
+
+<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GH2__V11.bin.plaintext:     file format binary
+
+
+Disassembly of section .data:
+
+00060c90 <.data+0x60c90>:
+   60c90:	4a 00       	mov	d2,(sp)
+   60c92:	f8 08 08    	mov	(8,a0),d2
+   60c95:	f8 02 08    	mov	(8,a2),d0
+   60c98:	f2 22       	xor	d0,d2
+   60c9a:	4a 04       	mov	d2,(4,sp)
+   60c9c:	f8 08 0c    	mov	(12,a0),d2
+   60c9f:	f8 02 0c    	mov	(12,a2),d0
+   60ca2:	46 10       	mov	d1,(16,sp)
+   60ca4:	f2 22       	xor	d0,d2
+   60ca6:	f1 e9       	mov	d2,a1
+   60ca8:	f1 d8       	mov	a2,d0
+   60caa:	28 10       	add	16,d0
+   60cac:	42 54       	mov	d0,(84,sp)
+   60cae:	db          	setlb	
+   60caf:	58 08       	mov	(8,sp),d0
+   60cb1:	5a 00       	mov	(sp),d2
+   60cb3:	fc de 88 b5 	mov	1075885448,a2
+   60cb7:	20 40 
+   60cb9:	f8 e0 ff    	and	255,d0
+   60cbc:	54          	asl2	d0
+   60cbd:	f8 c6 08    	lsr	8,d2
+   60cc0:	f8 e2 ff    	and	255,d2
+   60cc3:	56          	asl2	d2
+   60cc4:	fc dc 88 b1 	mov	1075884424,a0
+   60cc8:	20 40 
+   60cca:	f3 80       	mov	(d0,a0),a0
+   60ccc:	f3 0a       	mov	(d2,a2),d0
+   60cce:	5a 04       	mov	(4,sp),d2
+   60cd0:	fc de 88 b9 	mov	1075886472,a2
+   60cd4:	20 40 
+   60cd6:	f8 c6 10    	lsr	16,d2
+   60cd9:	f8 e2 ff    	and	255,d2
+   60cdc:	56          	asl2	d2
+   60cdd:	f3 3a       	mov	(d2,a2),d3
+   60cdf:	fc de 88 bd 	mov	1075887496,a2
+   60ce3:	20 40 
+   60ce5:	f1 d6       	mov	a1,d2
+   60ce7:	f8 c6 18    	lsr	24,d2
+   60cea:	56          	asl2	d2
+   60ceb:	f3 2a       	mov	(d2,a2),d2
+   60ced:	5e 54       	mov	(84,sp),a2
+   60cef:	f1 d1       	mov	a0,d1
+   60cf1:	f2 24       	xor	d1,d0
+   60cf3:	76          	mov	(a2),d1
+   60cf4:	f2 2c       	xor	d3,d0
+   60cf6:	46 1c       	mov	d1,(28,sp)
+   60cf8:	59 1c       	mov	(28,sp),d1
+   60cfa:	f2 28       	xor	d2,d0
+   60cfc:	f2 24       	xor	d1,d0
+   60cfe:	42 14       	mov	d0,(20,sp)
+   60d00:	58 00       	mov	(sp),d0
+   60d02:	5a 04       	mov	(4,sp),d2
+   60d04:	f8 e0 ff    	and	255,d0
+   60d07:	54          	asl2	d0
+   60d08:	f8 c6 08    	lsr	8,d2
+   60d0b:	f8 e2 ff    	and	255,d2
+   60d0e:	56          	asl2	d2
+   60d0f:	fc dc 88 b1 	mov	1075884424,a0
+   60d13:	20 40 
+   60d15:	f3 80       	mov	(d0,a0),a0
+   60d17:	fc df 88 b5 	mov	1075885448,a3
+   60d1b:	20 40 
+   60d1d:	f3 0b       	mov	(d2,a3),d0
+   60d1f:	5a 08       	mov	(8,sp),d2
+   60d21:	fc df 88 bd 	mov	1075887496,a3
+   60d25:	20 40 
+   60d27:	f8 c6 18    	lsr	24,d2
+   60d2a:	56          	asl2	d2
+   60d2b:	f3 1b       	mov	(d2,a3),d1
+   60d2d:	f1 d6       	mov	a1,d2
+   60d2f:	f8 c6 10    	lsr	16,d2
+   60d32:	f8 e2 ff    	and	255,d2
+   60d35:	56          	asl2	d2
+   60d36:	fc df 88 b9 	mov	1075886472,a3
+   60d3a:	20 40 
+   60d3c:	f3 3b       	mov	(d2,a3),d3
+   60d3e:	f8 0a 04    	mov	(4,a2),d2
+   60d41:	fc df 88 b5 	mov	1075885448,a3
+   60d45:	20 40 
+   60d47:	4a 20       	mov	d2,(32,sp)
+   60d49:	f1 d2       	mov	a0,d2
+   60d4b:	f2 28       	xor	d2,d0
+   60d4d:	5a 20       	mov	(32,sp),d2
+   60d4f:	f2 2c       	xor	d3,d0
+   60d51:	f2 24       	xor	d1,d0
+   60d53:	f2 28       	xor	d2,d0
+   60d55:	42 0c       	mov	d0,(12,sp)
+   60d57:	58 04       	mov	(4,sp),d0
+   60d59:	fc dc 88 b1 	mov	1075884424,a0
+   60d5d:	20 40 
+   60d5f:	f8 e0 ff    	and	255,d0
+   60d62:	54          	asl2	d0
+   60d63:	f3 80       	mov	(d0,a0),a0
+   60d65:	f1 d4       	mov	a1,d0
+   60d67:	f8 c4 08    	lsr	8,d0
+   60d6a:	f8 e0 ff    	and	255,d0
+   60d6d:	54          	asl2	d0
+   60d6e:	f3 23       	mov	(d0,a3),d2
+   60d70:	58 08       	mov	(8,sp),d0
+   60d72:	fc df 88 b9 	mov	1075886472,a3
+   60d76:	20 40 
+   60d78:	f8 c4 10    	lsr	16,d0
+   60d7b:	f8 e0 ff    	and	255,d0
+   60d7e:	54          	asl2	d0
+   60d7f:	f3 33       	mov	(d0,a3),d3
+   60d81:	58 00       	mov	(sp),d0
+   60d83:	fc df 88 bd 	mov	1075887496,a3
+   60d87:	20 40 
+   60d89:	f8 c4 18    	lsr	24,d0
+   60d8c:	54          	asl2	d0
+   60d8d:	f3 13       	mov	(d0,a3),d1
+   60d8f:	f8 02 08    	mov	(8,a2),d0
+   60d92:	42 24       	mov	d0,(36,sp)
+   60d94:	f1 d0       	mov	a0,d0
+   60d96:	fc dc 88 b1 	mov	1075884424,a0
+   60d9a:	20 40 
+   60d9c:	f2 22       	xor	d0,d2
+   60d9e:	58 24       	mov	(36,sp),d0
+   60da0:	f2 2e       	xor	d3,d2
+   60da2:	f1 d7       	mov	a1,d3
+   60da4:	f8 e3 ff    	and	255,d3
+   60da7:	57          	asl2	d3
+   60da8:	f3 8c       	mov	(d3,a0),a0
+   60daa:	f2 26       	xor	d1,d2
+   60dac:	59 08       	mov	(8,sp),d1
+   60dae:	f2 22       	xor	d0,d2
+   60db0:	f1 eb       	mov	d2,a3
+   60db2:	fc dd 88 b5 	mov	1075885448,a1
+   60db6:	20 40 
+   60db8:	5b 00       	mov	(sp),d3
+   60dba:	f8 c5 08    	lsr	8,d1
+   60dbd:	f8 e1 ff    	and	255,d1
+   60dc0:	58 04       	mov	(4,sp),d0
+   60dc2:	55          	asl2	d1
+   60dc3:	f3 25       	mov	(d1,a1),d2
+   60dc5:	f8 06 0c    	mov	(12,a2),d1
+   60dc8:	f8 c7 10    	lsr	16,d3
+   60dcb:	f8 e3 ff    	and	255,d3
+   60dce:	57          	asl2	d3
+   60dcf:	f8 c4 18    	lsr	24,d0
+   60dd2:	54          	asl2	d0
+   60dd3:	fc dd 88 b9 	mov	1075886472,a1
+   60dd7:	20 40 
+   60dd9:	f3 3d       	mov	(d3,a1),d3
+   60ddb:	fc dd 88 bd 	mov	1075887496,a1
+   60ddf:	20 40 
+   60de1:	f3 01       	mov	(d0,a1),d0
+   60de3:	5d 14       	mov	(20,sp),a1
+   60de5:	46 28       	mov	d1,(40,sp)
+   60de7:	47 08       	mov	a1,(8,sp)
+   60de9:	5d 0c       	mov	(12,sp),a1
+   60deb:	f1 d1       	mov	a0,d1
+   60ded:	47 00       	mov	a1,(sp)
+   60def:	f2 26       	xor	d1,d2
+   60df1:	59 28       	mov	(40,sp),d1
+   60df3:	4f 04       	mov	a3,(4,sp)
+   60df5:	f2 2e       	xor	d3,d2
+   60df7:	f2 22       	xor	d0,d2
+   60df9:	f2 26       	xor	d1,d2
+   60dfb:	f1 d8       	mov	a2,d0
+   60dfd:	28 10       	add	16,d0
+   60dff:	42 54       	mov	d0,(84,sp)
+   60e01:	58 10       	mov	(16,sp),d0
+   60e03:	f1 e9       	mov	d2,a1
+   60e05:	28 ff       	add	-1,d0
+   60e07:	42 10       	mov	d0,(16,sp)
+   60e09:	a0 00       	cmp	0,d0
+   60e0b:	d1          	lgt	
+   60e0c:	58 08       	mov	(8,sp),d0
+   60e0e:	fc dc 88 b9 	mov	1075886472,a0
+   60e12:	20 40 
+   60e14:	f8 e0 ff    	and	255,d0
+   60e17:	54          	asl2	d0
+   60e18:	f3 30       	mov	(d0,a0),d3
+   60e1a:	58 00       	mov	(sp),d0
+   60e1c:	fc dc 88 bd 	mov	1075887496,a0
+   60e20:	20 40 
+   60e22:	f8 c4 08    	lsr	8,d0
+   60e25:	f8 e0 ff    	and	255,d0
+   60e28:	54          	asl2	d0
+   60e29:	f3 20       	mov	(d0,a0),d2
+   60e2b:	f1 dc       	mov	a3,d0
+   60e2d:	5f 54       	mov	(84,sp),a3
+   60e2f:	f8 c4 10    	lsr	16,d0
+   60e32:	f8 e0 ff    	and	255,d0
+   60e35:	54          	asl2	d0
+   60e36:	fc dc 88 b1 	mov	1075884424,a0
+   60e3a:	20 40 
+   60e3c:	f3 10       	mov	(d0,a0),d1
+   60e3e:	f1 d4       	mov	a1,d0
+   60e40:	f8 c4 18    	lsr	24,d0
+   60e43:	54          	asl2	d0
+   60e44:	fc dc 88 b5 	mov	1075885448,a0
+   60e48:	20 40 
+   60e4a:	f3 00       	mov	(d0,a0),d0
+   60e4c:	f0 03       	mov	(a3),a0
+   60e4e:	4e 2c       	mov	d3,(44,sp)
+   60e50:	fc e1 00 00 	and	16711680,d1
+   60e54:	ff 00 
+   60e56:	fc e0 00 00 	and	-16777216,d0
+   60e5a:	00 ff 
+   60e5c:	26 00 ff    	mov	65280,a2
+   60e5f:	f1 db       	mov	a2,d3
+   60e61:	f2 0e       	and	d3,d2
+   60e63:	5b 2c       	mov	(44,sp),d3
+   60e65:	f2 26       	xor	d1,d2
+   60e67:	f2 22       	xor	d0,d2
+   60e69:	f8 e3 ff    	and	255,d3
+   60e6c:	f2 2e       	xor	d3,d2
+   60e6e:	f1 d0       	mov	a0,d0
+   60e70:	5c 18       	mov	(24,sp),a0
+   60e72:	f2 22       	xor	d0,d2
+   60e74:	68          	mov	d2,(a0)
+   60e75:	58 00       	mov	(sp),d0
+   60e77:	59 08       	mov	(8,sp),d1
+   60e79:	f8 e0 ff    	and	255,d0
+   60e7c:	54          	asl2	d0
+   60e7d:	f8 c5 18    	lsr	24,d1
+   60e80:	55          	asl2	d1
+   60e81:	fc dc 88 b9 	mov	1075886472,a0
+   60e85:	20 40 
+   60e87:	f3 30       	mov	(d0,a0),d3
+   60e89:	58 04       	mov	(4,sp),d0
+   60e8b:	fc dc 88 bd 	mov	1075887496,a0
+   60e8f:	20 40 
+   60e91:	f8 c4 08    	lsr	8,d0
+   60e94:	f8 e0 ff    	and	255,d0
+   60e97:	54          	asl2	d0
+   60e98:	f3 20       	mov	(d0,a0),d2
+   60e9a:	f1 d4       	mov	a1,d0
+   60e9c:	f8 c4 10    	lsr	16,d0
+   60e9f:	f8 e0 ff    	and	255,d0
+   60ea2:	54          	asl2	d0
+   60ea3:	fc dc 88 b1 	mov	1075884424,a0
+   60ea7:	20 40 
+   60ea9:	f3 00       	mov	(d0,a0),d0
+   60eab:	fc dc 88 b5 	mov	1075885448,a0
+   60eaf:	20 40 
+   60eb1:	f3 14       	mov	(d1,a0),d1
+   60eb3:	f8 23 04    	mov	(4,a3),a0
+   60eb6:	4e 30       	mov	d3,(48,sp)
+   60eb8:	f1 db       	mov	a2,d3
+   60eba:	f2 0e       	and	d3,d2
+   60ebc:	5b 30       	mov	(48,sp),d3
+   60ebe:	fc e0 00 00 	and	16711680,d0
+   60ec2:	ff 00 
+   60ec4:	f2 22       	xor	d0,d2
+   60ec6:	fc e1 00 00 	and	-16777216,d1
+   60eca:	00 ff 
+   60ecc:	f2 26       	xor	d1,d2
+   60ece:	f8 e3 ff    	and	255,d3
+   60ed1:	f2 2e       	xor	d3,d2
+   60ed3:	f1 d0       	mov	a0,d0
+   60ed5:	5c 18       	mov	(24,sp),a0
+   60ed7:	f2 22       	xor	d0,d2
+   60ed9:	f8 18 04    	mov	d2,(4,a0)
+   60edc:	58 04       	mov	(4,sp),d0
+   60ede:	fc dc 88 b9 	mov	1075886472,a0
+   60ee2:	20 40 
+   60ee4:	f8 e0 ff    	and	255,d0
+   60ee7:	54          	asl2	d0
+   60ee8:	f3 80       	mov	(d0,a0),a0
+   60eea:	47 34       	mov	a1,(52,sp)
+   60eec:	59 08       	mov	(8,sp),d1
+   60eee:	f1 d4       	mov	a1,d0
+   60ef0:	f8 c4 08    	lsr	8,d0
+   60ef3:	f8 e0 ff    	and	255,d0
+   60ef6:	54          	asl2	d0
+   60ef7:	f8 c5 10    	lsr	16,d1
+   60efa:	f8 e1 ff    	and	255,d1
+   60efd:	55          	asl2	d1
+   60efe:	f8 0f 08    	mov	(8,a3),d3
+   60f01:	fc dd 88 bd 	mov	1075887496,a1
+   60f05:	20 40 
+   60f07:	f3 01       	mov	(d0,a1),d0
+   60f09:	fc dd 88 b1 	mov	1075884424,a1
+   60f0d:	20 40 
+   60f0f:	f3 25       	mov	(d1,a1),d2
+   60f11:	59 00       	mov	(sp),d1
+   60f13:	fc dd 88 b5 	mov	1075885448,a1
+   60f17:	20 40 
+   60f19:	f8 c5 18    	lsr	24,d1
+   60f1c:	55          	asl2	d1
+   60f1d:	f3 15       	mov	(d1,a1),d1
+   60f1f:	5d 34       	mov	(52,sp),a1
+   60f21:	4e 38       	mov	d3,(56,sp)
+   60f23:	f1 db       	mov	a2,d3
+   60f25:	f2 0c       	and	d3,d0
+   60f27:	5b 38       	mov	(56,sp),d3
+   60f29:	fc e1 00 00 	and	-16777216,d1
+   60f2d:	00 ff 
+   60f2f:	fc e2 00 00 	and	16711680,d2
+   60f33:	ff 00 
+   60f35:	f2 28       	xor	d2,d0
+   60f37:	f2 21       	xor	d0,d1
+   60f39:	f1 d0       	mov	a0,d0
+   60f3b:	5c 18       	mov	(24,sp),a0
+   60f3d:	f8 e0 ff    	and	255,d0
+   60f40:	f2 21       	xor	d0,d1
+   60f42:	84          	mov	d1,d0
+   60f43:	f2 2c       	xor	d3,d0
+   60f45:	f8 10 08    	mov	d0,(8,a0)
+   60f48:	58 08       	mov	(8,sp),d0
+   60f4a:	fc dc 88 bd 	mov	1075887496,a0
+   60f4e:	20 40 
+   60f50:	f8 c4 08    	lsr	8,d0
+   60f53:	f8 e0 ff    	and	255,d0
+   60f56:	54          	asl2	d0
+   60f57:	f3 20       	mov	(d0,a0),d2
+   60f59:	58 00       	mov	(sp),d0
+   60f5b:	fc dc 88 b1 	mov	1075884424,a0
+   60f5f:	20 40 
+   60f61:	f8 c4 10    	lsr	16,d0
+   60f64:	f8 e0 ff    	and	255,d0
+   60f67:	54          	asl2	d0
+   60f68:	f3 30       	mov	(d0,a0),d3
+   60f6a:	58 04       	mov	(4,sp),d0
+   60f6c:	fc dc 88 b5 	mov	1075885448,a0
+   60f70:	20 40 
+   60f72:	f8 c4 18    	lsr	24,d0
+   60f75:	54          	asl2	d0
+   60f76:	f3 00       	mov	(d0,a0),d0
+   60f78:	fc dc 88 b9 	mov	1075886472,a0
+   60f7c:	20 40 
+   60f7e:	f1 d9       	mov	a2,d1
+   60f80:	f2 06       	and	d1,d2
+   60f82:	fc e3 00 00 	and	16711680,d3
+   60f86:	ff 00 
+   60f88:	f2 2e       	xor	d3,d2
+   60f8a:	fc e0 00 00 	and	-16777216,d0
+   60f8e:	00 ff 
+   60f90:	f2 22       	xor	d0,d2
+   60f92:	f1 d4       	mov	a1,d0
+   60f94:	f8 e0 ff    	and	255,d0
+   60f97:	54          	asl2	d0
+   60f98:	f3 10       	mov	(d0,a0),d1
+   60f9a:	f8 23 0c    	mov	(12,a3),a0
+   60f9d:	46 3c       	mov	d1,(60,sp)
+   60f9f:	59 3c       	mov	(60,sp),d1
+   60fa1:	f1 d0       	mov	a0,d0
+   60fa3:	5c 18       	mov	(24,sp),a0
+   60fa5:	f8 e1 ff    	and	255,d1
+   60fa8:	f2 26       	xor	d1,d2
+   60faa:	f2 22       	xor	d0,d2
+   60fac:	f8 18 0c    	mov	d2,(12,a0)
+   60faf:	de f0 50    	retf	[d2,d3,a2,a3],80
+   60fb2:	5e 40       	mov	(64,sp),a2
+   60fb4:	47 18       	mov	a1,(24,sp)
+   60fb6:	78          	mov	(a0),d2
+   60fb7:	72          	mov	(a2),d0
+   60fb8:	29 ff       	add	-1,d1
+   60fba:	f2 22       	xor	d0,d2
+   60fbc:	4a 08       	mov	d2,(8,sp)
+   60fbe:	f8 08 04    	mov	(4,a0),d2
+   60fc1:	f8 02 04    	mov	(4,a2),d0
+   60fc4:	f2 22       	xor	d0,d2
+   60fc6:	4a 04       	mov	d2,(4,sp)
+   60fc8:	f8 08 08    	mov	(8,a0),d2
+   60fcb:	f8 02 08    	mov	(8,a2),d0
+   60fce:	f2 22       	xor	d0,d2
+   60fd0:	4a 00       	mov	d2,(sp)
+   60fd2:	f8 08 0c    	mov	(12,a0),d2
+   60fd5:	f8 02 0c    	mov	(12,a2),d0
+   60fd8:	46 10       	mov	d1,(16,sp)
+   60fda:	f2 22       	xor	d0,d2
+   60fdc:	f1 e9       	mov	d2,a1
+   60fde:	f1 d8       	mov	a2,d0
+   60fe0:	28 10       	add	16,d0
+   60fe2:	42 40       	mov	d0,(64,sp)
+   60fe4:	db          	setlb	
+   60fe5:	58 08       	mov	(8,sp),d0
+   60fe7:	fc de 88 c5 	mov	1075889544,a2
+   60feb:	20 40 
+   60fed:	f8 e0 ff    	and	255,d0
+   60ff0:	54          	asl2	d0
+   60ff1:	f8 c6 08    	lsr	8,d2
+   60ff4:	f8 e2 ff    	and	255,d2
+   60ff7:	56          	asl2	d2
+   60ff8:	fc dc 88 c1 	mov	1075888520,a0
+   60ffc:	20 40 
+   60ffe:	f3 80       	mov	(d0,a0),a0
+   61000:	f3 0a       	mov	(d2,a2),d0
+   61002:	5a 00       	mov	(sp),d2
+   61004:	fc de 88 c9 	mov	1075890568,a2
+   61008:	20 40 
+   6100a:	f8 c6 10    	lsr	16,d2
+   6100d:	f8 e2 ff    	and	255,d2
+   61010:	56          	asl2	d2
+   61011:	f3 3a       	mov	(d2,a2),d3
+   61013:	5a 04       	mov	(4,sp),d2
+   61015:	fc de 88 cd 	mov	1075891592,a2
+   61019:	20 40 
+   6101b:	f8 c6 18    	lsr	24,d2
+   6101e:	56          	asl2	d2
+   6101f:	f3 2a       	mov	(d2,a2),d2
+   61021:	5e 40       	mov	(64,sp),a2
+   61023:	f1 d1       	mov	a0,d1
+   61025:	f2 24       	xor	d1,d0
+   61027:	76          	mov	(a2),d1
+   61028:	f2 2c       	xor	d3,d0
+   6102a:	46 1c       	mov	d1,(28,sp)
+   6102c:	59 1c       	mov	(28,sp),d1
+   6102e:	f2 28       	xor	d2,d0
+   61030:	f2 24       	xor	d1,d0
+   61032:	42 14       	mov	d0,(20,sp)
+   61034:	58 04       	mov	(4,sp),d0
+   61036:	5a 08       	mov	(8,sp),d2
+   61038:	f8 e0 ff    	and	255,d0
+   6103b:	54          	asl2	d0
+   6103c:	f8 c6 08    	lsr	8,d2
+   6103f:	f8 e2 ff    	and	255,d2
+   61042:	56          	asl2	d2
+   61043:	fc dc 88 c1 	mov	1075888520,a0
+   61047:	20 40 
+   61049:	f3 80       	mov	(d0,a0),a0
+   6104b:	fc df 88 c5 	mov	1075889544,a3
+   6104f:	20 40 
+   61051:	f3 0b       	mov	(d2,a3),d0
+   61053:	5a 00       	mov	(sp),d2
+   61055:	fc df 88 cd 	mov	1075891592,a3
+   61059:	20 40 
+   6105b:	f8 c6 18    	lsr	24,d2
+   6105e:	56          	asl2	d2
+   6105f:	f3 1b       	mov	(d2,a3),d1
+   61061:	f1 d6       	mov	a1,d2
+   61063:	f8 c6 10    	lsr	16,d2
+   61066:	f8 e2 ff    	and	255,d2
+   61069:	56          	asl2	d2
+   6106a:	fc df 88 c9 	mov	1075890568,a3
+   6106e:	20 40 
+   61070:	f3 3b       	mov	(d2,a3),d3
+   61072:	f8 0a 04    	mov	(4,a2),d2
+   61075:	fc df 88 c5 	mov	1075889544,a3
+   61079:	20 40 
+   6107b:	4a 20       	mov	d2,(32,sp)
+   6107d:	f1 d2       	mov	a0,d2
+   6107f:	f2 28       	xor	d2,d0
+   61081:	5a 20       	mov	(32,sp),d2
+   61083:	f2 2c       	xor	d3,d0
+   61085:	f2 24       	xor	d1,d0
+   61087:	f2 28       	xor	d2,d0
+   61089:	42 0c       	mov	d0,(12,sp)
+   6108b:	58 00       	mov	(sp),d0
+   6108d:	fc dc 88 c1 	mov	1075888520,a0
+   61091:	20 40 
+   61093:	f8 e0 ff    	and	255,d0
+   61096:	54          	asl2	d0
+   61097:	f3 80       	mov	(d0,a0),a0
+   61099:	58 04       	mov	(4,sp),d0
+   6109b:	f8 c4 08    	lsr	8,d0
+   6109e:	f8 e0 ff    	and	255,d0
+   610a1:	54          	asl2	d0
+   610a2:	f3 23       	mov	(d0,a3),d2
+   610a4:	58 08       	mov	(8,sp),d0
+   610a6:	fc df 88 c9 	mov	1075890568,a3
+   610aa:	20 40 
+   610ac:	f8 c4 10    	lsr	16,d0
+   610af:	f8 e0 ff    	and	255,d0
+   610b2:	54          	asl2	d0
+   610b3:	f3 33       	mov	(d0,a3),d3
+   610b5:	f1 d4       	mov	a1,d0
+   610b7:	f8 c4 18    	lsr	24,d0
+   610ba:	54          	asl2	d0
+   610bb:	fc df 88 cd 	mov	1075891592,a3
+   610bf:	20 40 
+   610c1:	f3 13       	mov	(d0,a3),d1
+   610c3:	f8 02 08    	mov	(8,a2),d0
+   610c6:	42 24       	mov	d0,(36,sp)
+   610c8:	f1 d0       	mov	a0,d0
+   610ca:	fc dc 88 c1 	mov	1075888520,a0
+   610ce:	20 40 
+   610d0:	f2 22       	xor	d0,d2
+   610d2:	58 24       	mov	(36,sp),d0
+   610d4:	f2 2e       	xor	d3,d2
+   610d6:	f1 d7       	mov	a1,d3
+   610d8:	f8 e3 ff    	and	255,d3
+   610db:	57          	asl2	d3
+   610dc:	f3 8c       	mov	(d3,a0),a0
+   610de:	f2 26       	xor	d1,d2
+   610e0:	59 00       	mov	(sp),d1
+   610e2:	f2 22       	xor	d0,d2
+   610e4:	f1 eb       	mov	d2,a3
+   610e6:	f8 c5 08    	lsr	8,d1
+   610e9:	f8 e1 ff    	and	255,d1
+   610ec:	55          	asl2	d1
+   610ed:	5b 04       	mov	(4,sp),d3
+   610ef:	fc dd 88 c5 	mov	1075889544,a1
+   610f3:	20 40 
+   610f5:	f3 25       	mov	(d1,a1),d2
+   610f7:	f8 c7 10    	lsr	16,d3
+   610fa:	f8 e3 ff    	and	255,d3
+   610fd:	57          	asl2	d3
+   610fe:	58 08       	mov	(8,sp),d0
+   61100:	fc dd 88 c9 	mov	1075890568,a1
+   61104:	20 40 
+   61106:	f3 3d       	mov	(d3,a1),d3
+   61108:	f8 c4 18    	lsr	24,d0
+   6110b:	54          	asl2	d0
+   6110c:	fc dd 88 cd 	mov	1075891592,a1
+   61110:	20 40 
+   61112:	f3 11       	mov	(d0,a1),d1
+   61114:	f8 02 0c    	mov	(12,a2),d0
+   61117:	5d 14       	mov	(20,sp),a1
+   61119:	42 28       	mov	d0,(40,sp)
+   6111b:	47 08       	mov	a1,(8,sp)
+   6111d:	5d 0c       	mov	(12,sp),a1
+   6111f:	f1 d0       	mov	a0,d0
+   61121:	f2 22       	xor	d0,d2
+   61123:	58 28       	mov	(40,sp),d0
+   61125:	f2 2e       	xor	d3,d2
+   61127:	f2 26       	xor	d1,d2
+   61129:	f2 22       	xor	d0,d2
+   6112b:	47 04       	mov	a1,(4,sp)
+   6112d:	f1 d8       	mov	a2,d0
+   6112f:	28 10       	add	16,d0
+   61131:	42 40       	mov	d0,(64,sp)
+   61133:	58 10       	mov	(16,sp),d0
+   61135:	4f 00       	mov	a3,(sp)
+   61137:	f1 e9       	mov	d2,a1
+   61139:	28 ff       	add	-1,d0
+   6113b:	42 10       	mov	d0,(16,sp)
+   6113d:	a0 00       	cmp	0,d0
+   6113f:	d1          	lgt	
+   61140:	fc de 88 b0 	mov	1075884168,a2
+   61144:	20 40 
+   61146:	58 08       	mov	(8,sp),d0
+   61148:	5c 40       	mov	(64,sp),a0
+   6114a:	f8 e0 ff    	and	255,d0
+   6114d:	f4 12       	movbu	(d0,a2),d1
+   6114f:	88          	mov	d2,d0
+   61150:	f8 c4 08    	lsr	8,d0
+   61153:	f1 de       	mov	a3,d2
+   61155:	f8 c6 10    	lsr	16,d2
+   61158:	f8 e2 ff    	and	255,d2
+   6115b:	f4 3a       	movbu	(d2,a2),d3
+   6115d:	5a 04       	mov	(4,sp),d2
+   6115f:	f8 e0 ff    	and	255,d0
+   61162:	f4 02       	movbu	(d0,a2),d0
+   61164:	f8 c6 18    	lsr	24,d2
+   61167:	f4 2a       	movbu	(d2,a2),d2
+   61169:	f0 00       	mov	(a0),a0
+   6116b:	f8 c3 10    	asl	16,d3
+   6116e:	f8 c0 08    	asl	8,d0
+   61171:	f2 21       	xor	d0,d1
+   61173:	f2 2d       	xor	d3,d1
+   61175:	f8 c2 18    	asl	24,d2
+   61178:	f2 29       	xor	d2,d1
+   6117a:	f1 d0       	mov	a0,d0
+   6117c:	5c 18       	mov	(24,sp),a0
+   6117e:	f2 21       	xor	d0,d1
+   61180:	64          	mov	d1,(a0)
+   61181:	58 04       	mov	(4,sp),d0
+   61183:	5c 40       	mov	(64,sp),a0
+   61185:	f8 e0 ff    	and	255,d0
+   61188:	f4 32       	movbu	(d0,a2),d3
+   6118a:	58 08       	mov	(8,sp),d0
+   6118c:	f1 d6       	mov	a1,d2
+   6118e:	f8 c6 10    	lsr	16,d2
+   61191:	f8 e2 ff    	and	255,d2
+   61194:	f4 1a       	movbu	(d2,a2),d1
+   61196:	5a 00       	mov	(sp),d2
+   61198:	f8 c4 08    	lsr	8,d0
+   6119b:	f8 e0 ff    	and	255,d0
+   6119e:	f4 02       	movbu	(d0,a2),d0
+   611a0:	f8 c6 18    	lsr	24,d2
+   611a3:	f4 2a       	movbu	(d2,a2),d2
+   611a5:	f8 20 04    	mov	(4,a0),a0
+   611a8:	f8 c1 10    	asl	16,d1
+   611ab:	f8 c0 08    	asl	8,d0
+   611ae:	f2 23       	xor	d0,d3
+   611b0:	f2 27       	xor	d1,d3
+   611b2:	f8 c2 18    	asl	24,d2
+   611b5:	f2 2b       	xor	d2,d3
+   611b7:	f1 d0       	mov	a0,d0
+   611b9:	5c 18       	mov	(24,sp),a0
+   611bb:	f2 23       	xor	d0,d3
+   611bd:	f8 1c 04    	mov	d3,(4,a0)
+   611c0:	58 00       	mov	(sp),d0
+   611c2:	5c 40       	mov	(64,sp),a0
+   611c4:	f8 e0 ff    	and	255,d0
+   611c7:	f4 12       	movbu	(d0,a2),d1
+   611c9:	58 04       	mov	(4,sp),d0
+   611cb:	f1 d6       	mov	a1,d2
+   611cd:	f8 c4 08    	lsr	8,d0
+   611d0:	f8 e0 ff    	and	255,d0
+   611d3:	f4 32       	movbu	(d0,a2),d3
+   611d5:	58 08       	mov	(8,sp),d0
+   611d7:	f8 c6 18    	lsr	24,d2
+   611da:	f8 c4 10    	lsr	16,d0
+   611dd:	f8 e0 ff    	and	255,d0
+   611e0:	f8 20 08    	mov	(8,a0),a0
+   611e3:	f1 e7       	mov	d1,a3
+   611e5:	f4 12       	movbu	(d0,a2),d1
+   611e7:	f4 0a       	movbu	(d2,a2),d0
+   611e9:	f8 c3 08    	asl	8,d3
+   611ec:	f1 de       	mov	a3,d2
+   611ee:	f2 2e       	xor	d3,d2
+   611f0:	f8 c1 10    	asl	16,d1
+   611f3:	f2 26       	xor	d1,d2
+   611f5:	f8 c0 18    	asl	24,d0
+   611f8:	f2 22       	xor	d0,d2
+   611fa:	88          	mov	d2,d0
+   611fb:	f1 d1       	mov	a0,d1
+   611fd:	5c 18       	mov	(24,sp),a0
+   611ff:	f2 24       	xor	d1,d0
+   61201:	f8 10 08    	mov	d0,(8,a0)
+   61204:	59 00       	mov	(sp),d1
+   61206:	58 04       	mov	(4,sp),d0
+   61208:	5c 40       	mov	(64,sp),a0
+   6120a:	f1 d7       	mov	a1,d3
+   6120c:	f8 e3 ff    	and	255,d3
+   6120f:	f4 3e       	movbu	(d3,a2),d3
+   61211:	f8 c5 08    	lsr	8,d1
+   61214:	f8 e1 ff    	and	255,d1
+   61217:	f4 26       	movbu	(d1,a2),d2
+   61219:	f8 c4 10    	lsr	16,d0
+   6121c:	f8 e0 ff    	and	255,d0
+   6121f:	f4 12       	movbu	(d0,a2),d1
+   61221:	58 08       	mov	(8,sp),d0
+   61223:	f8 20 0c    	mov	(12,a0),a0
+   61226:	f8 c4 18    	lsr	24,d0
+   61229:	f4 02       	movbu	(d0,a2),d0
+   6122b:	f8 c2 08    	asl	8,d2
+   6122e:	f2 2b       	xor	d2,d3
+   61230:	f8 c1 10    	asl	16,d1
+   61233:	f2 27       	xor	d1,d3
+   61235:	f8 c0 18    	asl	24,d0
+   61238:	8d          	mov	d3,d1
+   61239:	f2 21       	xor	d0,d1
+   6123b:	f1 d0       	mov	a0,d0
+   6123d:	5c 18       	mov	(24,sp),a0
+   6123f:	f2 21       	xor	d0,d1
+   61241:	f8 14 0c    	mov	d1,(12,a0)
+   61244:	de f0 3c    	retf	[d2,d3,a2,a3],60
+   61247:	47 00       	mov	a1,(sp)
+   61249:	42 04       	mov	d0,(4,sp)
+   6124b:	44          	inc	d1
+   6124c:	55          	asl2	d1
+   6124d:	46 08       	mov	d1,(8,sp)
+   6124f:	9f 00       	mov	0,a3
+   61251:	a0 00       	cmp	0,d0
+   61253:	c3 27       	ble	0x6127a
+   61255:	96          	mov	a1,a2
+   61256:	db          	setlb	
+   61257:	f0 4c       	movbu	(a0),d3
+   61259:	f8 48 01    	movbu	(1,a0),d2
+   6125c:	f8 44 02    	movbu	(2,a0),d1
+   6125f:	f8 40 03    	movbu	(3,a0),d0
+   61262:	f8 c2 08    	asl	8,d2
+   61265:	f2 1b       	or	d2,d3
+   61267:	f8 c1 10    	asl	16,d1
+   6126a:	f2 17       	or	d1,d3
+   6126c:	f8 c0 18    	asl	24,d0
+   6126f:	f2 13       	or	d0,d3
+   61271:	6e          	mov	d3,(a2)
+   61272:	58 04       	mov	(4,sp),d0
+   61274:	50          	inc4	a0
+   61275:	4d          	inc	a3
+   61276:	52          	inc4	a2
+   61277:	f1 a3       	cmp	d0,a3
+   61279:	d0          	llt	
+   6127a:	58 08       	mov	(8,sp),d0
+   6127c:	f1 a3       	cmp	d0,a3
+   6127e:	c0 05       	blt	0x61283
+   61280:	df f0 28    	ret	[d2,d3,a2,a3],40
+   61283:	5d 00       	mov	(sp),a1
+   61285:	58 04       	mov	(4,sp),d0
+   61287:	59 00       	mov	(sp),d1
+   61289:	f1 de       	mov	a3,d2
+   6128b:	f1 02       	sub	d0,d2
+   6128d:	f1 dc       	mov	a3,d0
+   6128f:	54          	asl2	d0
+   61290:	f1 61       	add	d0,a1
+   61292:	88          	mov	d2,d0
+   61293:	54          	asl2	d0
+   61294:	e1          	add	d0,d1
+   61295:	46 00       	mov	d1,(sp)
+   61297:	fc de 88 af 	mov	1075883912,a2
+   6129b:	20 40 
+   6129d:	db          	setlb	
+   6129e:	f8 01 fc    	mov	(-4,a1),d0
+   612a1:	59 04       	mov	(4,sp),d1
+   612a3:	f1 df       	mov	a3,d3
+   612a5:	f2 d3       	ext	d3
+   612a7:	f2 67       	div	d1,d3
+   612a9:	f2 e1       	mov	mdr,d1
+   612ab:	a5 00       	cmp	0,d1
+   612ad:	c9 5e       	bne	0x6130b
+   612af:	82          	mov	d0,d2
+   612b0:	f8 c6 08    	lsr	8,d2
+   612b3:	f8 c0 18    	asl	24,d0
+   612b6:	f2 12       	or	d0,d2
+   612b8:	8b          	mov	d2,d3
+   612b9:	f8 c7 10    	lsr	16,d3
+   612bc:	f8 e3 ff    	and	255,d3
+   612bf:	f4 3e       	movbu	(d3,a2),d3
+   612c1:	2d ff 00    	mov	255,d1
+   612c4:	f2 09       	and	d2,d1
+   612c6:	f4 06       	movbu	(d1,a2),d0
+   612c8:	89          	mov	d2,d1
+   612c9:	f8 c5 08    	lsr	8,d1
+   612cc:	f8 e1 ff    	and	255,d1
+   612cf:	f4 16       	movbu	(d1,a2),d1
+   612d1:	4e 0c       	mov	d3,(12,sp)
+   612d3:	f8 c6 18    	lsr	24,d2
+   612d6:	f4 3a       	movbu	(d2,a2),d3
+   612d8:	5a 04       	mov	(4,sp),d2
+   612da:	42 10       	mov	d0,(16,sp)
+   612dc:	f1 dc       	mov	a3,d0
+   612de:	f2 d0       	ext	d0
+   612e0:	f2 68       	div	d2,d0
+   612e2:	82          	mov	d0,d2
+   612e3:	58 10       	mov	(16,sp),d0
+   612e5:	56          	asl2	d2
+   612e6:	4f 14       	mov	a3,(20,sp)
+   612e8:	fc df 88 d1 	mov	1075892616,a3
+   612ec:	20 40 
+   612ee:	f3 2b       	mov	(d2,a3),d2
+   612f0:	f1 ec       	mov	d3,a0
+   612f2:	5b 0c       	mov	(12,sp),d3
+   612f4:	5f 14       	mov	(20,sp),a3
+   612f6:	f8 c1 08    	asl	8,d1
+   612f9:	f2 14       	or	d1,d0
+   612fb:	f8 c3 10    	asl	16,d3
+   612fe:	f2 1c       	or	d3,d0
+   61300:	f1 d3       	mov	a0,d3
+   61302:	f8 c3 18    	asl	24,d3
+   61305:	f2 1c       	or	d3,d0
+   61307:	f2 28       	xor	d2,d0
+   61309:	ca 3a       	bra	0x61343
+   6130b:	5a 04       	mov	(4,sp),d2
+   6130d:	aa 06       	cmp	6,d2
+   6130f:	c3 34       	ble	0x61343
+   61311:	a5 04       	cmp	4,d1
+   61313:	c9 30       	bne	0x61343
+   61315:	2d ff 00    	mov	255,d1
+   61318:	f2 01       	and	d0,d1
+   6131a:	f4 36       	movbu	(d1,a2),d3
+   6131c:	81          	mov	d0,d1
+   6131d:	f8 c5 08    	lsr	8,d1
+   61320:	f8 e1 ff    	and	255,d1
+   61323:	f4 26       	movbu	(d1,a2),d2
+   61325:	81          	mov	d0,d1
+   61326:	f8 c5 10    	lsr	16,d1
+   61329:	f8 e1 ff    	and	255,d1
+   6132c:	f4 16       	movbu	(d1,a2),d1
+   6132e:	f8 c4 18    	lsr	24,d0
+   61331:	f4 02       	movbu	(d0,a2),d0
+   61333:	f8 c2 08    	asl	8,d2
+   61336:	f2 1b       	or	d2,d3
+   61338:	f8 c1 10    	asl	16,d1
+   6133b:	f2 17       	or	d1,d3
+   6133d:	f8 c0 18    	asl	24,d0
+   61340:	f2 13       	or	d0,d3
+   61342:	8c          	mov	d3,d0
+   61343:	5c 00       	mov	(sp),a0
+   61345:	4d          	inc	a3
+   61346:	74          	mov	(a0),d1
+   61347:	f2 21       	xor	d0,d1
+   61349:	65          	mov	d1,(a1)
+   6134a:	58 00       	mov	(sp),d0
+   6134c:	51          	inc4	a1
+   6134d:	28 04       	add	4,d0
+   6134f:	42 00       	mov	d0,(sp)
+   61351:	58 08       	mov	(8,sp),d0
+   61353:	f1 a3       	cmp	d0,a3
+   61355:	d0          	llt	
+   61356:	df f0 28    	ret	[d2,d3,a2,a3],40
+   61359:	47 04       	mov	a1,(4,sp)
+   6135b:	46 08       	mov	d1,(8,sp)
+   6135d:	cd ea fe f0 	call	0x61247,[d2,d3,a2,a3],40
+   61361:	28 
+   61362:	5a 08       	mov	(8,sp),d2
+   61364:	0c          	clr	d3
+   61365:	56          	asl2	d2
+   61366:	ae          	cmp	d3,d2
+   61367:	c3 3b       	ble	0x613a2
+   61369:	5f 04       	mov	(4,sp),a3
+   6136b:	88          	mov	d2,d0
+   6136c:	54          	asl2	d0
+   6136d:	f1 63       	add	d0,a3
+   6136f:	5e 04       	mov	(4,sp),a2
+   61371:	db          	setlb	
+   61372:	76          	mov	(a2),d1
+   61373:	73          	mov	(a3),d0
+   61374:	99          	mov	a2,a1
+   61375:	62          	mov	d0,(a2)
+   61376:	67          	mov	d1,(a3)
+   61377:	51          	inc4	a1
+   61378:	75          	mov	(a1),d1
+   61379:	9c          	mov	a3,a0
+   6137a:	50          	inc4	a0
+   6137b:	70          	mov	(a0),d0
+   6137c:	2b 04       	add	4,d3
+   6137e:	61          	mov	d0,(a1)
+   6137f:	64          	mov	d1,(a0)
+   61380:	95 08       	mov	8,a1
+   61382:	f1 79       	add	a2,a1
+   61384:	75          	mov	(a1),d1
+   61385:	90 08       	mov	8,a0
+   61387:	f1 7c       	add	a3,a0
+   61389:	70          	mov	(a0),d0
+   6138a:	2a fc       	add	-4,d2
+   6138c:	61          	mov	d0,(a1)
+   6138d:	64          	mov	d1,(a0)
+   6138e:	95 0c       	mov	12,a1
+   61390:	f1 79       	add	a2,a1
+   61392:	75          	mov	(a1),d1
+   61393:	90 0c       	mov	12,a0
+   61395:	f1 7c       	add	a3,a0
+   61397:	70          	mov	(a0),d0
+   61398:	22 10       	add	16,a2
+   6139a:	61          	mov	d0,(a1)
+   6139b:	64          	mov	d1,(a0)
+   6139c:	80 10       	mov	16,d0
+   6139e:	f1 23       	sub	d0,a3
+   613a0:	ab          	cmp	d2,d3
+   613a1:	d0          	llt	
+   613a2:	5c 04       	mov	(4,sp),a0
+   613a4:	58 08       	mov	(8,sp),d0
+   613a6:	20 10       	add	16,a0
+   613a8:	a0 01       	cmp	1,d0
+   613aa:	80 01       	mov	1,d0
+   613ac:	42 04       	mov	d0,(4,sp)
+   613ae:	c3 6e       	ble	0x6141c
+   613b0:	fc de 88 af 	mov	1075883912,a2
+   613b4:	20 40 
+   613b6:	95 00       	mov	0,a1
+   613b8:	db          	setlb	
+   613b9:	78          	mov	(a0),d2
+   613ba:	2c ff 00    	mov	255,d0
+   613bd:	f2 08       	and	d2,d0
+   613bf:	f4 02       	movbu	(d0,a2),d0
+   613c1:	fc df 88 c1 	mov	1075888520,a3
+   613c5:	20 40 
+   613c7:	54          	asl2	d0
+   613c8:	f3 b3       	mov	(d0,a3),a3
+   613ca:	88          	mov	d2,d0
+   613cb:	f8 c4 08    	lsr	8,d0
+   613ce:	f8 e0 ff    	and	255,d0
+   613d1:	f4 02       	movbu	(d0,a2),d0
+   613d3:	47 0c       	mov	a1,(12,sp)
+   613d5:	54          	asl2	d0
+   613d6:	fc dd 88 c5 	mov	1075889544,a1
+   613da:	20 40 
+   613dc:	f3 11       	mov	(d0,a1),d1
+   613de:	88          	mov	d2,d0
+   613df:	f8 c4 10    	lsr	16,d0
+   613e2:	f8 e0 ff    	and	255,d0
+   613e5:	f4 02       	movbu	(d0,a2),d0
+   613e7:	f8 c6 18    	lsr	24,d2
+   613ea:	fc dd 88 c9 	mov	1075890568,a1
+   613ee:	20 40 
+   613f0:	54          	asl2	d0
+   613f1:	f3 31       	mov	(d0,a1),d3
+   613f3:	5d 0c       	mov	(12,sp),a1
+   613f5:	f4 0a       	movbu	(d2,a2),d0
+   613f7:	4b 10       	mov	a2,(16,sp)
+   613f9:	54          	asl2	d0
+   613fa:	fc de 88 cd 	mov	1075891592,a2
+   613fe:	20 40 
+   61400:	f3 02       	mov	(d0,a2),d0
+   61402:	5e 10       	mov	(16,sp),a2
+   61404:	f1 de       	mov	a3,d2
+   61406:	f2 29       	xor	d2,d1
+   61408:	f2 2d       	xor	d3,d1
+   6140a:	f2 21       	xor	d0,d1
+   6140c:	64          	mov	d1,(a0)
+   6140d:	45          	inc	a1
+   6140e:	50          	inc4	a0
+   6140f:	b5 04       	cmp	4,a1
+   61411:	d0          	llt	
+   61412:	58 04       	mov	(4,sp),d0
+   61414:	59 08       	mov	(8,sp),d1
+   61416:	40          	inc	d0
+   61417:	42 04       	mov	d0,(4,sp)
+   61419:	a4          	cmp	d1,d0
+   6141a:	c0 9c       	blt	0x613b6
+   6141c:	df f0 24    	ret	[d2,d3,a2,a3],36
+   6141f:	f8 92 18    	movbu	d0,(24,sp)
+   61422:	00          	clr	d0
+   61423:	42 1c       	mov	d0,(28,sp)
+   61425:	8f 01       	mov	1,d3
+   61427:	af 02       	cmp	2,d3
+   61429:	c9 04       	bne	0x6142d
+   6142b:	ca 0b       	bra	0x61436
+   6142d:	8c          	mov	d3,d0
+   6142e:	18          	exth	d0
+   6142f:	dd d9 7e cb 	call	0x3bd19308,[d2,d3,a2,a3],20
+   61433:	3b f0 14 
+   61436:	4c          	inc	d3
+   61437:	af 38       	cmp	56,d3
+   61439:	c2 04       	bge	0x6143d
+   6143b:	ca ec       	bra	0x61427
+   6143d:	80 03       	mov	3,d0
+   6143f:	04          	clr	d1
+   61440:	dd 8d 7f 17 	call	0x1d93cd,[d2,d3],12
+   61444:	00 c0 0c 
+   61447:	00          	clr	d0
+   61448:	81          	mov	d0,d1
+   61449:	dd 84 7f 17 	call	0x1d93cd,[d2,d3],12
+   6144d:	00 c0 0c 
+   61450:	8a 3f       	mov	63,d2
+   61452:	fc cc ff ff 	mov	262143,d0
+   61456:	03 00 
+   61458:	db          	setlb	
+   61459:	85 01       	mov	1,d1
+   6145b:	f1 04       	sub	d1,d0
+   6145d:	a0 00       	cmp	0,d0
+   6145f:	d5          	lhi	
+   61460:	80 03       	mov	3,d0
+   61462:	0c          	clr	d3
+   61463:	f2 fe       	mov	d3,mdr
+   61465:	8b          	mov	d2,d3
+   61466:	f2 73       	divu	d0,d3
+   61468:	f2 e0       	mov	mdr,d0
+   6146a:	a0 00       	cmp	0,d0
+   6146c:	c9 04       	bne	0x61470
+   6146e:	ca 0a       	bra	0x61478
+   61470:	a0 02       	cmp	2,d0
+   61472:	c9 04       	bne	0x61476
+   61474:	ca 1a       	bra	0x6148e
+   61476:	ca 2c       	bra	0x614a2
+   61478:	80 03       	mov	3,d0
+   6147a:	04          	clr	d1
+   6147b:	dd 52 7f 17 	call	0x1d93cd,[d2,d3],12
+   6147f:	00 c0 0c 
+   61482:	00          	clr	d0
+   61483:	85 01       	mov	1,d1
+   61485:	dd 48 7f 17 	call	0x1d93cd,[d2,d3],12
+   61489:	00 c0 0c 
+   6148c:	ca 16       	bra	0x614a2
+   6148e:	80 03       	mov	3,d0
+   61490:	85 01       	mov	1,d1
+   61492:	dd 3b 7f 17 	call	0x1d93cd,[d2,d3],12
+   61496:	00 c0 0c 
+   61499:	00          	clr	d0
+   6149a:	81          	mov	d0,d1
+   6149b:	dd 32 7f 17 	call	0x1d93cd,[d2,d3],12
+   6149f:	00 c0 0c 
+   614a2:	80 01       	mov	1,d0
+   614a4:	f1 02       	sub	d0,d2
+   614a6:	aa 00       	cmp	0,d2
+   614a8:	c7 04       	bls	0x614ac
+   614aa:	ca a8       	bra	0x61452
+   614ac:	80 03       	mov	3,d0
+   614ae:	04          	clr	d1
+   614af:	dd 1e 7f 17 	call	0x1d93cd,[d2,d3],12
+   614b3:	00 c0 0c 
+   614b6:	9a 00       	mov	0,a2
+   614b8:	80 05       	mov	5,d0
+   614ba:	dd 70 95 cb 	call	0x3bd1aa2a,[d2,d3,a2,a3],20
+   614be:	3b f0  

@@ -1,0 +1,5036 @@
+[
+  {
+    "path": "Panasonic_hidden_format_research_20261012/README.md",
+    "lines": 57,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 轻量分发版"
+      },
+      {
+        "line": 5,
+        "text": "# Panasonic 隐藏录制格式研究交付包"
+      },
+      {
+        "line": 11,
+        "text": "## 文件目录"
+      },
+      {
+        "line": 23,
+        "text": "## 快速开始"
+      },
+      {
+        "line": 43,
+        "text": "## 恢复的实际边界"
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/evidence/candidate_results.md",
+    "lines": 22,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# S1H PAL 候选核对"
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/evidence/historical_source/README.md",
+    "lines": 3,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 历史源码"
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/evidence/historical_source/s1h_wifi_prepare_manual_probe.py.txt",
+    "lines": 47,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# -*- coding: utf-8 -*-"
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/evidence/historical_source/s1h_wifi_read.py.txt",
+    "lines": 152,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 38,
+        "text": "    with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:"
+      }
+    ]
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/evidence/historical_source/verify_manual_video.py.txt",
+    "lines": 15,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/evidence/recording/P1022640/software_decode.log",
+    "lines": 33,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/evidence/recording/P1022641/full_decode.log",
+    "lines": 385,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/evidence/static_review/20261012_解码入口研究记录.md",
+    "lines": 25,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 解码入口研究记录"
+      },
+      {
+        "line": 5,
+        "text": "## 已核实的容器偏移"
+      },
+      {
+        "line": 11,
+        "text": "## 对“loader2 明文目录”的纠正"
+      },
+      {
+        "line": 15,
+        "text": "## 之前结论的更正"
+      },
+      {
+        "line": 19,
+        "text": "## 证据与限制"
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/programs/check_package.py",
+    "lines": 28,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import hashlib",
+      "import json",
+      "from pathlib import Path"
+    ],
+    "functions": [
+      {
+        "name": "main",
+        "line": 8,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/programs/lumix_hidden_format.py",
+    "lines": 258,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import argparse",
+      "import datetime as dt",
+      "import hashlib",
+      "import ipaddress",
+      "import json",
+      "import re",
+      "import time",
+      "import urllib.parse",
+      "import urllib.request",
+      "import xml.etree.ElementTree as ET",
+      "from pathlib import Path"
+    ],
+    "functions": [
+      {
+        "name": "save",
+        "line": 25,
+        "end": 26
+      },
+      {
+        "name": "inspect",
+        "line": 134,
+        "end": 144
+      },
+      {
+        "name": "apply_gate",
+        "line": 147,
+        "end": 161
+      },
+      {
+        "name": "restore_visible",
+        "line": 164,
+        "end": 185
+      },
+      {
+        "name": "activate",
+        "line": 188,
+        "end": 221
+      },
+      {
+        "name": "main",
+        "line": 224,
+        "end": 254
+      },
+      {
+        "name": "redirect_request",
+        "line": 30,
+        "end": 31
+      },
+      {
+        "name": "__init__",
+        "line": 35,
+        "end": 46
+      },
+      {
+        "name": "call",
+        "line": 48,
+        "end": 94
+      },
+      {
+        "name": "guard",
+        "line": 96,
+        "end": 101
+      },
+      {
+        "name": "stopped",
+        "line": 103,
+        "end": 106
+      },
+      {
+        "name": "setting",
+        "line": 108,
+        "end": 113
+      },
+      {
+        "name": "snapshot",
+        "line": 115,
+        "end": 119
+      },
+      {
+        "name": "menus",
+        "line": 121,
+        "end": 131
+      }
+    ]
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/programs/test_lumix_hidden_format.py",
+    "lines": 118,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import argparse",
+      "import tempfile",
+      "import unittest",
+      "from pathlib import Path",
+      "from lumix_hidden_format import Camera, activate, inspect"
+    ],
+    "functions": [
+      {
+        "name": "__init__",
+        "line": 10,
+        "end": 14
+      },
+      {
+        "name": "__call__",
+        "line": 16,
+        "end": 43
+      },
+      {
+        "name": "run_fixture",
+        "line": 47,
+        "end": 55
+      },
+      {
+        "name": "test_readonly",
+        "line": 57,
+        "end": 61
+      },
+      {
+        "name": "test_enabled_single_write",
+        "line": 63,
+        "end": 67
+      },
+      {
+        "name": "test_disabled_never_writes",
+        "line": 69,
+        "end": 73
+      },
+      {
+        "name": "test_wrong_model_never_writes",
+        "line": 75,
+        "end": 79
+      },
+      {
+        "name": "test_s5_requires_explicit_experiment",
+        "line": 81,
+        "end": 85
+      },
+      {
+        "name": "test_s5_protocol_fixture_not_hardware",
+        "line": 87,
+        "end": 90
+      },
+      {
+        "name": "test_readback_mismatch_rolls_back",
+        "line": 92,
+        "end": 97
+      },
+      {
+        "name": "test_lost_setter_reply_rolls_back",
+        "line": 99,
+        "end": 103
+      },
+      {
+        "name": "test_no_write_flag",
+        "line": 105,
+        "end": 109
+      },
+      {
+        "name": "test_bad_addresses",
+        "line": 111,
+        "end": 114
+      }
+    ]
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/programs/verify_recording.py",
+    "lines": 42,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import argparse",
+      "import hashlib",
+      "import json",
+      "import subprocess",
+      "from pathlib import Path"
+    ],
+    "functions": [
+      {
+        "name": "main",
+        "line": 10,
+        "end": 38
+      }
+    ]
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/tests_result.txt",
+    "lines": 16,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/复现操作手册.md",
+    "lines": 99,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 操作手册"
+      },
+      {
+        "line": 3,
+        "text": "## A. 准备"
+      },
+      {
+        "line": 12,
+        "text": "## B. 只读确认"
+      },
+      {
+        "line": 34,
+        "text": "## C. 单项选择"
+      },
+      {
+        "line": 54,
+        "text": "## D. 在机身核对"
+      },
+      {
+        "line": 65,
+        "text": "## E. 实际录制与离线检查"
+      },
+      {
+        "line": 83,
+        "text": "## F. 重启及“我的列表”实验"
+      },
+      {
+        "line": 89,
+        "text": "## G. 恢复与交付反馈"
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "Panasonic_hidden_format_research_20261012/研究报告.md",
+    "lines": 173,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Panasonic DC-S1H 隐藏录制格式显示与 S5 迁移研究报告"
+      },
+      {
+        "line": 12,
+        "text": "## 1. 摘要"
+      },
+      {
+        "line": 20,
+        "text": "## 2. 范围、环境与证据等级"
+      },
+      {
+        "line": 34,
+        "text": "## 3. 实现机制"
+      },
+      {
+        "line": 80,
+        "text": "## 4. 实机结果"
+      },
+      {
+        "line": 119,
+        "text": "## 5. 固件静态研究成果与未解问题"
+      },
+      {
+        "line": 133,
+        "text": "## 6. S5 迁移方案"
+      },
+      {
+        "line": 157,
+        "text": "## 7. 复现程序与分发说明"
+      },
+      {
+        "line": 165,
+        "text": "## 8. 参考与证据索引"
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/00-执行摘要.md",
+    "lines": 68,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 00 · 执行摘要（TL;DR）"
+      },
+      {
+        "line": 8,
+        "text": "## A. 已证实的结论（软件/Wi-Fi 侧）"
+      },
+      {
+        "line": 18,
+        "text": "## B. 核心阻塞（\"改内容\"为什么还没打通）"
+      },
+      {
+        "line": 33,
+        "text": "## C. RCE / 代码注入（全部阴性，仅剩一条未测）"
+      },
+      {
+        "line": 42,
+        "text": "## D. 崩溃 / DoS（已打通若干，均非 RCE）"
+      },
+      {
+        "line": 48,
+        "text": "## E. \"改内容\"的可行性排序（回答用户的问题）"
+      },
+      {
+        "line": 61,
+        "text": "## F. 安全红线（务必遵守）"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 4,
+        "text": "> 答案框架：**能改内容的最强原语 = 固件升级写路径（刷写 = 重写整个文件系统）。它目前被\"最终-chunk flash 定址失败\"卡住，尚未打通。RCE 与密钥提取均为阴性。**"
+      },
+      {
+        "line": 8,
+        "text": "## A. 已证实的结论（软件/Wi-Fi 侧）"
+      },
+      {
+        "line": 12,
+        "text": "| 1 | **AES 密钥提取不可行**：密钥固化在 MC801 芯片内（OTP/eFuse/Crypto Engine/TrustZone），不在固件文件/转接环/镜头 I2C 总线里；离线 130k+ 探测、40/41 加密分区、真实 256KB keystream 均无法恢复密钥 | 已证实（终局） |"
+      },
+      {
+        "line": 13,
+        "text": "| 2 | **Wi-Fi 无调试后门**：~70 个候选 mode（dmesg/memdump/flash/jtag/uart/keydump…）只读枚举**全部回通用 `err_param`**；研究版未暴露任何转储/闪读后门 | 已证实（实测） |"
+      },
+      {
+        "line": 14,
+        "text": "| 3 | **Wi-Fi 是\"验证型 oracle\"**：只有 3 个——版本门（防回滚）、固件签名校验、CAMSET 校验和（可伪造）；对\"拿密钥/拿明文\"零贡献 | 已证实（实测） |"
+      },
+      {
+        "line": 15,
+        "text": "| 4 | **固件升级 = 改内容原语**：`startsenddata→senddata→endsenddata` 一旦成功 = 重写整个 rootfs（守护进程/socket/配置路径一次性到手），完全不用拆机/焊接 | 已证实（协议+结构）|"
+      },
+      {
+        "line": 16,
+        "text": "| 5 | **当前唯一实机漏洞 = PTP length-DoS**：相机 PTP 解析器校验 type 不校验 length，length 不符 → 接口挂死、无超时；拔插 USB 恢复，无写操作、不砖机 | 已证实（受控实测）|"
+      },
+      {
+        "line": 22,
+        "text": "- 触发一个 **~31s 的 flash 定址操作** → 返回 `err_busy`（慢）→ 重试 `err_critical`（快）。"
+      },
+      {
+        "line": 31,
+        "text": "⇒ **结论**：只有**真 90MB 镜像**能走到真正的 flash 定址阶段；小镜像在\"固件合法性\"这关就被拒，无法用小样本逼近真实定址。真实 90MB 的 ~31s 定址失败，当前最可能是**内部 flash 对大镜像末块的擦/写超时或磨损**（我们已对同一块 flash 做了大量 90MB 流送测试）。**尚未看到过一次成功的 `endsenddata`**，因此签名/版本 oracle 仍是开放问题。"
+      },
+      {
+        "line": 37,
+        "text": "| 编译 C / `LD_PRELOAD` 注入（CVE-2017-17562 思路） | **阴性** | GoAhead 不把 `LD_*` 传入 CGI 环境，或 `cam.cgi` 为静态链接 |"
+      },
+      {
+        "line": 38,
+        "text": "| 已公开 GoAhead 多数 CVE | **不适用** | 多为 DoS / 信息泄露，非 RCE |"
+      },
+      {
+        "line": 57,
+        "text": "**一句话**：软件侧唯一真正\"能改内容\"的通道是固件升级写路径；它差最后一步（打通一次成功 `endsenddata`）。在此之前，最现实的高价值动作是**拆机走 UART/JTAG 读运行时明文**（零风险、不需密钥、直接绕开 AES）。"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/01-目标与环境.md",
+    "lines": 52,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 01 · 目标与环境"
+      },
+      {
+        "line": 5,
+        "text": "## 1.1 设备"
+      },
+      {
+        "line": 17,
+        "text": "## 1.2 网络"
+      },
+      {
+        "line": 28,
+        "text": "## 1.3 固件文件"
+      },
+      {
+        "line": 37,
+        "text": "## 1.4 工具环境"
+      },
+      {
+        "line": 44,
+        "text": "## 1.5 健康基线（实验前必核）"
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/02-攻击面总览.md",
+    "lines": 31,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 02 · 攻击面总览"
+      },
+      {
+        "line": 5,
+        "text": "## 四类攻击面"
+      },
+      {
+        "line": 14,
+        "text": "## 关键洞察（贯穿全报告）"
+      },
+      {
+        "line": 22,
+        "text": "## \"改内容\"可行性排序（回答用户核心问题）"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 10,
+        "text": "| **B Wi-Fi HTTP 服务** | GoAhead（`Server: Panasonic`，CGI） | RCE / 溢出 / 信息泄露 | **RCE 全阴**，仅剩 CVE-2019-5096 未测（需堆控） | §05 |"
+      },
+      {
+        "line": 17,
+        "text": "2. **软件侧唯一能\"写整个 rootfs\"的是固件升级写路径**（§04）——它是\"改内容\"的主通道，但当前被\"最终-chunk flash 定址失败\"卡住，差最后一步。"
+      },
+      {
+        "line": 20,
+        "text": "5. **RCE 目前全部阴性**（§05）：编译 C / `LD_PRELOAD` 无效，已公开 GoAhead CVE 多数不适用，仅 CVE-2019-5096（multipart UAF→RCE）未测。"
+      },
+      {
+        "line": 31,
+        "text": "**一句话**：软件侧唯一真正\"能改内容\"的通道是固件升级写路径；它差最后一步（打通一次成功 `endsenddata`）。在此之前，最现实的高价值动作是**拆机走 UART/JTAG 读运行时明文**（零风险、不需密钥、直接绕开 AES）。"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/03-固件格式与启动链.md",
+    "lines": 130,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 03 · 固件格式与启动链"
+      },
+      {
+        "line": 5,
+        "text": "## 3.1 容器总体布局"
+      },
+      {
+        "line": 17,
+        "text": "## 3.2 UPD 头字段"
+      },
+      {
+        "line": 36,
+        "text": "## 3.3 ★ 版本字段精确定位（决定\"改版本号绕过版本门\"是否成立）"
+      },
+      {
+        "line": 50,
+        "text": "## 3.4 三重签名（容器内无公钥）"
+      },
+      {
+        "line": 60,
+        "text": "## 3.5 目录头（0x2E0）"
+      },
+      {
+        "line": 68,
+        "text": "## 3.6 分区表条目（92 = 0x5C B / 条，共 48 条）"
+      },
+      {
+        "line": 85,
+        "text": "## 3.7 关键分区"
+      },
+      {
+        "line": 102,
+        "text": "## 3.8 启动链（倒推）"
+      },
+      {
+        "line": 123,
+        "text": "## 3.9 对旧文档的更正（本轮确证）"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 58,
+        "text": "**含义**：容器内无公钥、无\"禁验签\"开关、无回退标志 → 纯软件无法让相机接受自编 / 篡改固件。唯一\"签名 oracle\"是相机 `endsenddata` 时的真实验签（当前尚未触达，见 §04）。"
+      },
+      {
+        "line": 74,
+        "text": "0x14  u32       目的加载地址（RAM）；loader1/2/3 上=数据区相对偏移"
+      },
+      {
+        "line": 106,
+        "text": " └─ [1] MC801 BootROM（片内固化，公钥在 BootROM/OTP，不可改）"
+      },
+      {
+        "line": 110,
+        "text": "     └─ [4] 搬运数据区前 90KB（loader1|2|3 连续块）到 RAM 基址，跳 0x0"
+      },
+      {
+        "line": 111,
+        "text": " [5] loader1(4K, RAM 0x0)  → [6] loader2(38K, 0x1000) → [7] loader3(48K, 0xA800)"
+      },
+      {
+        "line": 112,
+        "text": " [8] program(16M, RAM 0x80000) —— 主相机固件（相机 OS）"
+      },
+      {
+        "line": 121,
+        "text": "- **关键含义**：验证链最前两级（BootROM→loader1 明文头→加密载荷）不在可改写用户区明文里；明文容器内无公钥、无回退标志，纯软件无法绕过验签。"
+      },
+      {
+        "line": 129,
+        "text": "| \"load = flash 地址，128KB 对齐\" | = **目的地址（RAM）**，不 128KB 对齐；loader1/2/3 该值=数据区相对偏移 |"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/04-固件升级写路径.md",
+    "lines": 74,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 04 · 固件升级写路径（核心：改内容原语 + 最终-chunk 失败深潜）"
+      },
+      {
+        "line": 5,
+        "text": "## 4.1 协议序列（反编译自 `com.panasonic.jp.lumixsync`）"
+      },
+      {
+        "line": 20,
+        "text": "## 4.2 `method=once` vs `separate`（本轮关键判别）"
+      },
+      {
+        "line": 28,
+        "text": "## 4.3 ★ 最终-chunk 失败深潜"
+      },
+      {
+        "line": 61,
+        "text": "## 4.4 为什么这条线价值最高（且最接近\"改内容\"）"
+      },
+      {
+        "line": 67,
+        "text": "## 4.5 未用过的、低风险的末块处理变体（待 §10 决策后执行）"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 3,
+        "text": "> 这是**软件侧唯一真正\"能改内容\"的通道**：一旦 `endsenddata` 成功 = 相机用我们流送的 90MB 映像重写整个 flash = rootfs（守护进程、socket、配置路径）一次性到手，完全不用拆机/焊接。本章记录协议、判别探针，以及当前卡住的**最终-chunk flash 定址失败**深潜。"
+      },
+      {
+        "line": 32,
+        "text": "- 首个尝试 → **`err_busy`**（触发 **~31s 的 flash 定址操作**）"
+      },
+      {
+        "line": 41,
+        "text": "| **TESTA-1**（final ONCE → 45s 静置 → endsenddata） | ~54–130ms/块 | 1474 块 128.4s → final 一次性 `err_busy`(0.05s) → 静置 45s → `endsenddata → error`(30.09s) | `phaseI_run12_fast.log` / `campaign.md` |"
+      },
+      {
+        "line": 42,
+        "text": "| **TESTA-2**（final 1/4 次 → err_busy 30.12s → 重试全 err_critical） | pace 150ms（比官方 App 138ms 还慢） | 1474 块 232.7s → final 4 次全失败 → `abortsenddata=error` | `campaign.md` |"
+      },
+      {
+        "line": 56,
+        "text": "⇒ **只有真 90MB 映像能走到真正的 flash 定址阶段**；小 / 假映像在\"固件合法性\"这关就被拒，无法用小样本逼近真实定址行为。"
+      },
+      {
+        "line": 69,
+        "text": "1. **不重试、不静置**：末块 `err_busy` 后**立即**直接发 `endsenddata`（相机可能已在后台擦写，只是忙）。"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/05-RCE与代码注入.md",
+    "lines": 45,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 05 · RCE 与代码注入"
+      },
+      {
+        "line": 5,
+        "text": "## 5.1 HTTP 服务指纹"
+      },
+      {
+        "line": 18,
+        "text": "## 5.2 编译 C / `LD_PRELOAD` 注入（CVE-2017-17562 思路）——**阴性**"
+      },
+      {
+        "line": 25,
+        "text": "## 5.3 已公开 GoAhead CVE 矩阵"
+      },
+      {
+        "line": 35,
+        "text": "## 5.4 现状与判断"
+      },
+      {
+        "line": 41,
+        "text": "## 5.5 已收集信息（可复现）"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 12,
+        "text": "| 引擎 | **GoAhead**（CGI 架构，`cam.cgi`）；`OPTIONS`/`PUT`/`DELETE` 回 500，`HEAD` 异常 → 精简版 GoAhead，只实现 GET/POST |"
+      },
+      {
+        "line": 14,
+        "text": "| 错误页 | XHTML DTD（GoAhead 默认错误页样式） |"
+      },
+      {
+        "line": 16,
+        "text": "判定：这是**精简 GoAhead**，只跑 `cam.cgi` 一个 CGI，暴露面窄。"
+      },
+      {
+        "line": 20,
+        "text": "- 思路：GoAhead 历史上会继承环境并 `execve` CGI；若能在 CGI 环境注入 `LD_PRELOAD`，让相机加载我方 `.so` 即可 RCE。"
+      },
+      {
+        "line": 21,
+        "text": "- 实现：`scripts/RCE/rce_ldpreload.py` + `payload.S`（MIPS 小桩，`s5pre_mipsel.o/.so` 1968B），标记 `S5_RCE_PROOF`。"
+      },
+      {
+        "line": 23,
+        "text": "- 结论：GoAhead **不把 `LD_*` 传入 CGI 环境**，或 `cam.cgi` 为**静态链接**（无动态加载器）→ 此路线**死**。"
+      },
+      {
+        "line": 25,
+        "text": "## 5.3 已公开 GoAhead CVE 矩阵"
+      },
+      {
+        "line": 31,
+        "text": "| 其余多数 GoAhead CVE | DoS / 信息泄露（路径穿越、响应头注入等） | **非 RCE**，价值低 |"
+      },
+      {
+        "line": 37,
+        "text": "- 精简 GoAhead + 单一 CGI + 无 `LD_*` 透传 → 传统 RCE 面很窄。"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/06-崩溃与DoS.md",
+    "lines": 44,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 06 · 崩溃与 DoS"
+      },
+      {
+        "line": 5,
+        "text": "## 6.1 ★ 唯一\"可复现挂死\"实机漏洞：PTP length-DoS"
+      },
+      {
+        "line": 15,
+        "text": "## 6.2 senddata 最终块被拒 → 重试循环 → 状态机未处理分支"
+      },
+      {
+        "line": 24,
+        "text": "## 6.3 其它已尝试（全部无有效崩溃 / 无 RCE）"
+      },
+      {
+        "line": 35,
+        "text": "## 6.4 小结"
+      },
+      {
+        "line": 41,
+        "text": "## 6.5 安全提示"
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/07-USB-PTP-SCSI.md",
+    "lines": 62,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 07 · USB 私有 PTP（pvc_mass_storage）"
+      },
+      {
+        "line": 5,
+        "text": "## 7.1 已识别的私有操作码"
+      },
+      {
+        "line": 22,
+        "text": "## 7.2 ★ 0x9421 全量配置 dump（核心只读成果）"
+      },
+      {
+        "line": 31,
+        "text": "## 7.3 升级状态机（0x9605，只读查询）"
+      },
+      {
+        "line": 37,
+        "text": "## 7.4 \"无任意地址写原语\"（关键否定结论）"
+      },
+      {
+        "line": 43,
+        "text": "## 7.5 已知 CVE 核查（11 条 NVD，全部 N/A）"
+      },
+      {
+        "line": 48,
+        "text": "## 7.6 端点 / 平台细节"
+      },
+      {
+        "line": 54,
+        "text": "## 7.7 复现"
+      },
+      {
+        "line": 61,
+        "text": "# ⚠ mode=lenprobe 是受控 DoS 演示（最后才跑，跑完需拔插 USB）"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 35,
+        "text": "- **意义**：升级状态机可通过 PTP 只读观察，但**无法**用它触发 / 中止升级（那是 0x9406 带副作用子码，红线）。"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/08-WiFi预言机与密钥提取.md",
+    "lines": 64,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 08 · Wi-Fi 预言机与密钥提取边界"
+      },
+      {
+        "line": 5,
+        "text": "## 8.1 三个验证型预言机"
+      },
+      {
+        "line": 36,
+        "text": "## 8.2 隐藏 mode 枚举（研究版无后门）"
+      },
+      {
+        "line": 45,
+        "text": "## 8.3 密钥提取为什么不可能（边界论证）"
+      },
+      {
+        "line": 56,
+        "text": "## 8.4 会话耦合（复现者注意）"
+      },
+      {
+        "line": 62,
+        "text": "## 8.5 一句话"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 21,
+        "text": "`startsenddata(type=fw)` → 分块 `senddata`（`method=separate, bufsize=61460`）→ `requestsenddata` → `endsenddata`。相机在 `endsenddata` 时校验：每分区 **SHA-256 + IV**（type=2 全零/明文，type=3 非零/加密）+ 外层 **ECDSA P-256**（0x220）+ 尾块 **RSA-4096**（0x560EC00）。无效固件 → `err_critical`/`err_reject`。**容器内无公钥、无\"禁验签\"开关** → 无法伪造已签名固件。"
+      },
+      {
+        "line": 49,
+        "text": "| **时序** | BootROM 在 Wi-Fi 固件加载**之前**已运行；Wi-Fi 是网络栈之上的应用层，物理上无法回退到 bootrom 阶段 |"
+      },
+      {
+        "line": 54,
+        "text": "**结论**：密钥固化在 **MC801 芯片内**（OTP/eFuse/Crypto Engine/TrustZone），不在固件文件 / 转接环 / 镜头 I2C 总线里。软件离线 + Wi-Fi 提取**不可行**；要拿明文/绕验签只能走**物理/调试侧**（§10）。"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/09-已证伪路线.md",
+    "lines": 47,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 09 · 已证伪路线（死路清单，别再走）"
+      },
+      {
+        "line": 5,
+        "text": "## 9.1 离线 AES / 密钥破解 —— **死**"
+      },
+      {
+        "line": 14,
+        "text": "## 9.2 转接环 EF-L 路线 —— **死**"
+      },
+      {
+        "line": 20,
+        "text": "## 9.3 S1RM2 OOB 漏洞 —— **不迁移（不同 SoC）**"
+      },
+      {
+        "line": 26,
+        "text": "## 9.4 WonderLantern padding-leak —— **不迁移**"
+      },
+      {
+        "line": 30,
+        "text": "## 9.5 编译 C / `LD_PRELOAD` RCE —— **死**（见 §05）"
+      },
+      {
+        "line": 34,
+        "text": "## 9.6 Wi-Fi 调试后门 / 隐藏 mode —— **死**（见 §08.2）"
+      },
+      {
+        "line": 38,
+        "text": "## 9.7 死路一览"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 12,
+        "text": "- **结论**：密钥固化在芯片硬件（OTP/eFuse/Crypto Engine/TrustZone），**固件文件内无密钥材料** → 软件离线解密不可行，必须硬件提取。"
+      },
+      {
+        "line": 28,
+        "text": "- 该手法（利用填充/长度泄露）针对的是另一平台的特定解析实现，**不适用于 S5 MC801 的 GoAhead/PTP 解析器**（本机已做等价 fuzz，无泄露）。"
+      },
+      {
+        "line": 32,
+        "text": "- GoAhead 不透传 `LD_*` 到 CGI 环境，或 `cam.cgi` 静态链接 → `LD_PRELOAD` 注入无效，无代码执行。"
+      },
+      {
+        "line": 46,
+        "text": "| LD_PRELOAD RCE | GoAhead 不透传 / 静态 CGI | §05, `logs/RCE/` |"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/10-下一步与开放问题.md",
+    "lines": 51,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 10 · 下一步与开放问题"
+      },
+      {
+        "line": 5,
+        "text": "## 10.1 打通一次成功 `endsenddata`（软件侧最高价值）"
+      },
+      {
+        "line": 17,
+        "text": "## 10.2 CVE-2019-5096（multipart UAF → RCE）—— 唯一剩余公开 RCE"
+      },
+      {
+        "line": 25,
+        "text": "## 10.3 ★ 物理 / 调试侧（推荐最高价值，零风险、不需密钥）"
+      },
+      {
+        "line": 38,
+        "text": "## 10.4 开放问题（待回答）"
+      },
+      {
+        "line": 45,
+        "text": "## 10.5 优先级建议"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 8,
+        "text": "- **现状**：始终卡在最终-chunk flash 定址失败（~31s → `err_busy`/`err_critical`），内容/节奏/状态无关（§04）。"
+      },
+      {
+        "line": 10,
+        "text": "  1. 末块 `err_busy` 后**立即**发 `endsenddata`（不静置、不重试）。"
+      },
+      {
+        "line": 25,
+        "text": "## 10.3 ★ 物理 / 调试侧（推荐最高价值，零风险、不需密钥）"
+      },
+      {
+        "line": 28,
+        "text": "- **路线 A：UART / JTAG（只读 dump 运行时 RAM）**"
+      },
+      {
+        "line": 49,
+        "text": "| 1 | **§10.3 物理 UART/JTAG 只读** | 零风险、不需密钥、直接拿运行时明文（改内容所需全部情报） |"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/11-安全约束.md",
+    "lines": 42,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 11 · 安全约束（硬性规则，务必遵守）"
+      },
+      {
+        "line": 5,
+        "text": "## 11.1 电源与恢复"
+      },
+      {
+        "line": 11,
+        "text": "## 11.2 绝对红线（NEVER）"
+      },
+      {
+        "line": 19,
+        "text": "## 11.3 每次探测后的健康守卫"
+      },
+      {
+        "line": 25,
+        "text": "## 11.4 同版本对照实验的安全性"
+      },
+      {
+        "line": 30,
+        "text": "## 11.5 实验前检查清单"
+      },
+      {
+        "line": 38,
+        "text": "## 11.6 数据 / 会话卫生"
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/README.md",
+    "lines": 49,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Panasonic DC-S5（MC801）Wi-Fi 逆向 —— 研究总报告与成果归档"
+      },
+      {
+        "line": 14,
+        "text": "## 先读什么"
+      },
+      {
+        "line": 21,
+        "text": "## 目录"
+      },
+      {
+        "line": 47,
+        "text": "## 一句话总览"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 10,
+        "text": "1. **离线/静态破解线**（能否解出固件 AES 密钥）→ 结论：**不可行**，密钥固化在芯片内。"
+      },
+      {
+        "line": 31,
+        "text": "├── 05-RCE与代码注入.md        ← 编译C/LD_PRELOAD 已证伪；GoAhead CVE；CVE-2019-5096"
+      },
+      {
+        "line": 49,
+        "text": "> **软件/Wi-Fi 侧：解不开 AES 密钥（芯片内固化），也摸不到调试后门；能拿到的最强\"改内容\"原语是固件升级写路径，但目前被\"最终-chunk flash 定址失败（~31s → err_busy/err_critical）\"卡住，尚未打通到一次成功的 `endsenddata`。已确认的实机漏洞只有一条：PTP length 不校验导致的本地 DoS（挂死，拔插 USB 恢复）。RCE（编译 C 注入 / 已公开 GoAhead CVE）目前全部阴性，仅剩 CVE-2019-5096（multipart UAF）未测、需堆控。**"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/RCE/rce_ldpreload_run1.log",
+    "lines": 27,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 2,
+        "text": "[20:26:27] target=192.168.1.131 marker=S5_RCE_PROOF"
+      },
+      {
+        "line": 6,
+        "text": "[20:26:28]   status=200 bodylen=88 marker=False (629ms)"
+      },
+      {
+        "line": 8,
+        "text": "[20:26:29]   status=200 bodylen=88 marker=False (633ms)"
+      },
+      {
+        "line": 10,
+        "text": "[20:26:31]   status=200 bodylen=88 marker=False (626ms)"
+      },
+      {
+        "line": 12,
+        "text": "[20:26:33]   status=200 bodylen=88 marker=False (682ms)"
+      },
+      {
+        "line": 14,
+        "text": "[20:26:34]   status=200 bodylen=88 marker=False (689ms)"
+      },
+      {
+        "line": 16,
+        "text": "[20:26:36]   status=200 bodylen=88 marker=False (693ms)"
+      },
+      {
+        "line": 18,
+        "text": "[20:26:38]   status=200 bodylen=88 marker=False (697ms)"
+      },
+      {
+        "line": 20,
+        "text": "[20:26:39]   status=200 bodylen=88 marker=False (630ms)"
+      },
+      {
+        "line": 22,
+        "text": "[20:26:41]   status=200 bodylen=88 marker=False (746ms)"
+      },
+      {
+        "line": 24,
+        "text": "[20:26:42]   status=200 bodylen=88 marker=False (644ms)"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/USB-PTP/ptp_attack_v1.log",
+    "lines": 50,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/USB-PTP/usb_oob_probe1.log",
+    "lines": 23,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/USB-PTP/usb_oob_probe2.log",
+    "lines": 39,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/USB-PTP/usb_stress_v1.log",
+    "lines": 81,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/USB-PTP/usb_vendor_probe.log",
+    "lines": 10,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/写路径/campaign.jsonl",
+    "lines": 21628,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 3613,
+        "text": "{\"phase\": \"UP\", \"op\": \"senddata chunk @90238464 attempt 1/5 -> err_busy\", \"result\": \"err_busy\", \"elapsed\": 0.078, \"ts\": 1791671025.627676, \"http\": 200}"
+      },
+      {
+        "line": 6571,
+        "text": "{\"phase\": \"UP\", \"op\": \"senddata chunk @90238464 attempt 1/8 -> err_busy\", \"result\": \"err_busy\", \"elapsed\": 0.106, \"ts\": 1791671672.3466618, \"http\": 200}"
+      },
+      {
+        "line": 9616,
+        "text": "{\"phase\": \"UP\", \"op\": \"senddata chunk @90238464 attempt 1/12 -> err_busy\", \"result\": \"err_busy\", \"elapsed\": 0.068, \"ts\": 1791673256.170936, \"http\": 200}"
+      },
+      {
+        "line": 12585,
+        "text": "{\"phase\": \"UP\", \"op\": \"senddata chunk @90238464 attempt 1/12 -> err_busy\", \"result\": \"err_busy\", \"elapsed\": 0.126, \"ts\": 1791674170.287405, \"http\": 200}"
+      },
+      {
+        "line": 15553,
+        "text": "{\"phase\": \"UP\", \"op\": \"senddata chunk @90238464 attempt 1/12 -> err_busy\", \"result\": \"err_busy\", \"elapsed\": 0.124, \"ts\": 1791675745.2553658, \"http\": 200}"
+      },
+      {
+        "line": 18521,
+        "text": "{\"phase\": \"UP\", \"op\": \"senddata chunk @90238464 attempt 1/15 -> err_busy\", \"result\": \"err_busy\", \"elapsed\": 0.384, \"ts\": 1791678128.288932, \"http\": 200}"
+      },
+      {
+        "line": 21540,
+        "text": "{\"phase\": \"UP\", \"op\": \"senddata chunk @90238464 attempt 1/12 -> err_busy\", \"result\": \"err_busy\", \"elapsed\": 0.04, \"ts\": 1791679566.712856, \"http\": 200}"
+      },
+      {
+        "line": 21554,
+        "text": "{\"phase\": \"UP\", \"op\": \"senddata FINAL chunk @90238464 attempt 1/12 -> err_busy\", \"result\": \"err_busy\", \"elapsed\": 0.291, \"ts\": 1791681295.670333, \"http\": 200, \"final_ts\": 264.1}"
+      },
+      {
+        "line": 21580,
+        "text": "{\"phase\": \"UP\", \"op\": \"senddata FINAL chunk @90238464 attempt 1/12 -> err_busy\", \"result\": \"err_busy\", \"elapsed\": 0.041, \"ts\": 1791701387.422227, \"http\": 200, \"final_ts\": 153.9}"
+      },
+      {
+        "line": 21597,
+        "text": "{\"phase\": \"UP\", \"op\": \"senddata FINAL chunk @90238464 attempt 1/12 -> err_busy\", \"result\": \"err_busy\", \"elapsed\": 0.037, \"ts\": 1791724543.703507, \"http\": 200, \"final_ts\": 141.4}"
+      },
+      {
+        "line": 21617,
+        "text": "{\"phase\": \"testa\", \"type\": \"final_chunk_once\", \"n\": 41456, \"http\": 200, \"result\": \"err_busy\", \"dt\": 0.054, \"ts\": 1791725733.4779031}"
+      },
+      {
+        "line": 21618,
+        "text": "{\"phase\": \"testa\", \"type\": \"endsenddata_oracle\", \"http\": 200, \"result\": \"error\", \"dt\": 30.09, \"settle\": 45.0, \"final_result\": \"err_busy\", \"final_dt\": 30.09, \"ts\": 1791725808.583235}"
+      },
+      {
+        "line": 21624,
+        "text": "{\"phase\": \"testa\", \"type\": \"final_chunk_attempt\", \"attempt\": 1, \"n\": 41456, \"http\": 200, \"result\": \"err_busy\", \"dt\": 30.12, \"ts\": 1791726945.8016489}"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/写路径/campaign.md",
+    "lines": 22813,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# S5 second-wave campaign @ 2026-10-11 05:01:24 ip=192.168.1.131"
+      },
+      {
+        "line": 5,
+        "text": "## Phase A @ 2026-10-11 05:01:24  type= enumeration (read-only GETs)"
+      },
+      {
+        "line": 1332,
+        "text": "## SUMMARY — findings"
+      },
+      {
+        "line": 1471,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 05:13:36 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 1473,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 05:22:34 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 1476,
+        "text": "## Phase I @ 2026-10-11 05:22:34  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 1477,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 05:22:53 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 1480,
+        "text": "## Phase I @ 2026-10-11 05:22:53  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 1488,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 06:07:16 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 1491,
+        "text": "## Phase I @ 2026-10-11 06:07:16  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 4454,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 06:25:19 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 4457,
+        "text": "## Phase I @ 2026-10-11 06:25:19  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 7426,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 06:38:22 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 7429,
+        "text": "## Phase I @ 2026-10-11 06:38:22  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 7438,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 06:42:51 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 7441,
+        "text": "## Phase I @ 2026-10-11 06:42:51  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 7476,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 06:45:42 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 7479,
+        "text": "## Phase I @ 2026-10-11 06:45:42  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 7525,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 06:48:27 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 7528,
+        "text": "## Phase I @ 2026-10-11 06:48:27  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 10514,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 07:06:47 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 10517,
+        "text": "## Phase I @ 2026-10-11 07:06:47  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 13504,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 07:33:28 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 13507,
+        "text": "## Phase I @ 2026-10-11 07:33:28  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 16491,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 08:15:20 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 16495,
+        "text": "## Phase I @ 2026-10-11 08:15:20  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 19500,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 08:34:45 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 19505,
+        "text": "## Phase I @ 2026-10-11 08:34:45  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 19559,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 08:42:08 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 19563,
+        "text": "## Phase I @ 2026-10-11 08:42:08  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 22534,
+        "text": "# BENCH @ 2026-10-11 09:01:01 (pure Python, no camera)"
+      },
+      {
+        "line": 22535,
+        "text": "# BENCH @ 2026-10-11 09:01:13 (pure Python, no camera)"
+      },
+      {
+        "line": 22540,
+        "text": "# BENCH @ 2026-10-11 09:01:51 (pure Python, no camera)"
+      },
+      {
+        "line": 22547,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 09:10:30 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 22551,
+        "text": "## Phase I @ 2026-10-11 09:10:31  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 22591,
+        "text": "# BENCH @ 2026-10-11 09:22:11 (pure Python, no camera)"
+      },
+      {
+        "line": 22598,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 09:22:32 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 22604,
+        "text": "## Phase I @ 2026-10-11 09:22:32  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      },
+      {
+        "line": 22623,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 14:47:13 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 22627,
+        "text": "## Phase I @ 2026-10-11 14:47:13  VERSION-BUMP upload (LOW risk, recoverable). target=V2.90 field=outer"
+      },
+      {
+        "line": 22654,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 15:05:09 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 22658,
+        "text": "## Phase I @ 2026-10-11 15:05:10  VERSION-BUMP upload (LOW risk, recoverable). target=V2.90 field=outer"
+      },
+      {
+        "line": 22668,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 15:12:34 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 22670,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 15:16:19 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 22674,
+        "text": "## Phase CONTROL @ 2026-10-11 21:10:01  PRISTINE V29 (2.90) no-edit upload -- same version, no flash. Discriminates content-vs-transport cause of the final-chunk err_critical."
+      },
+      {
+        "line": 22686,
+        "text": "## Phase CONTROL @ 2026-10-11 21:13:22  PRISTINE V29 (2.90) no-edit upload -- same version, no flash. Discriminates content-vs-transport cause of the final-chunk err_critical."
+      },
+      {
+        "line": 22742,
+        "text": "## Phase TESTA @ 2026-10-11 21:33:22  final chunk ONCE -> settle 45s -> endsenddata  (pristine V29, same 2.90)"
+      },
+      {
+        "line": 22777,
+        "text": "## Phase TESTA @ 2026-10-11 21:51:14  final chunk ONCE -> settle 45s -> endsenddata  (pristine V29, same 2.90)"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 4447,
+        "text": "- [UP] senddata chunk @90238464 attempt 1/5 -> err_busy -> `err_busy` (0.08s)"
+      },
+      {
+        "line": 7413,
+        "text": "- [UP] senddata chunk @90238464 attempt 1/8 -> err_busy -> `err_busy` (0.11s)"
+      },
+      {
+        "line": 10486,
+        "text": "- [UP] senddata chunk @90238464 attempt 1/12 -> err_busy -> `err_busy` (0.07s)"
+      },
+      {
+        "line": 10487,
+        "text": "    [retry] transient err_busy (FINAL chunk), waiting 3s"
+      },
+      {
+        "line": 13476,
+        "text": "- [UP] senddata chunk @90238464 attempt 1/12 -> err_busy -> `err_busy` (0.13s)"
+      },
+      {
+        "line": 13477,
+        "text": "    [retry] transient err_busy (FINAL chunk), waiting 3s"
+      },
+      {
+        "line": 16463,
+        "text": "- [UP] senddata chunk @90238464 attempt 1/12 -> err_busy -> `err_busy` (0.12s)"
+      },
+      {
+        "line": 16464,
+        "text": "    [retry] transient err_busy (FINAL chunk), waiting 3s"
+      },
+      {
+        "line": 19452,
+        "text": "- [UP] senddata chunk @90238464 attempt 1/15 -> err_busy -> `err_busy` (0.38s)"
+      },
+      {
+        "line": 19453,
+        "text": "    [retry] transient err_busy (FINAL chunk), waiting 1s"
+      },
+      {
+        "line": 22520,
+        "text": "- [UP] senddata chunk @90238464 attempt 1/12 -> err_busy -> `err_busy` (0.04s)"
+      },
+      {
+        "line": 22521,
+        "text": "    [retry] transient err_busy (FINAL chunk), waiting 2s"
+      },
+      {
+        "line": 22536,
+        "text": "  [upload] loaded 90238464 bytes into RAM in 0.06s; edits+CRC applied once"
+      },
+      {
+        "line": 22541,
+        "text": "  [upload] loaded 90238464 bytes into RAM in 0.04s; edits+CRC applied once"
+      },
+      {
+        "line": 22556,
+        "text": "  [upload] loaded 90238464 bytes into RAM in 0.11s; edits+CRC applied once"
+      },
+      {
+        "line": 22575,
+        "text": "- [UP] senddata FINAL chunk @90238464 attempt 1/12 -> err_busy -> `err_busy` (0.29s)"
+      },
+      {
+        "line": 22576,
+        "text": "    [retry] transient err_busy (FINAL chunk), waiting 2s"
+      },
+      {
+        "line": 22592,
+        "text": "  [upload] loaded 90238464 bytes into RAM in 0.06s; edits+CRC applied once"
+      },
+      {
+        "line": 22609,
+        "text": "  [upload] loaded 90238464 bytes into RAM in 0.04s; edits+CRC applied once"
+      },
+      {
+        "line": 22632,
+        "text": "  [upload] loaded 90238464 bytes into RAM in 0.10s; edits+CRC applied once"
+      },
+      {
+        "line": 22651,
+        "text": "- [UP] senddata FINAL chunk @90238464 attempt 1/12 -> err_busy -> `err_busy` (0.04s)"
+      },
+      {
+        "line": 22652,
+        "text": "    [retry] transient err_busy (FINAL chunk), waiting 2s"
+      },
+      {
+        "line": 22663,
+        "text": "  [upload] loaded 90238464 bytes into RAM in 0.12s; edits+CRC applied once"
+      },
+      {
+        "line": 22680,
+        "text": "  [upload] loaded 90238464 bytes into RAM in 0.08s; edits+CRC applied once"
+      },
+      {
+        "line": 22692,
+        "text": "  [upload] loaded 90238464 bytes into RAM in 0.07s; edits+CRC applied once"
+      },
+      {
+        "line": 22712,
+        "text": "- [UP] senddata FINAL chunk @90238464 attempt 1/12 -> err_busy -> `err_busy` (0.04s)"
+      },
+      {
+        "line": 22713,
+        "text": "    [retry] transient err_busy (FINAL chunk), waiting 2s"
+      },
+      {
+        "line": 22770,
+        "text": "    [final-chunk] ONE SHOT: http=200 -> err_busy  (0.05s)"
+      },
+      {
+        "line": 22805,
+        "text": "    [final-chunk] attempt 1/4: http=200 -> err_busy  (30.12s)"
+      },
+      {
+        "line": 22806,
+        "text": "    [final-chunk] transient err_busy; waiting 5s for flash to drain, retrying"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/写路径/control_run1.log",
+    "lines": 12,
+    "headings": [
+      {
+        "line": 2,
+        "text": "## Phase CONTROL @ 2026-10-11 21:10:01  PRISTINE V29 (2.90) no-edit upload -- same version, no flash. Discriminates content-vs-transport cause of the final-chunk err_critical."
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 8,
+        "text": "  [upload] loaded 90238464 bytes into RAM in 0.08s; edits+CRC applied once"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/写路径/phaseI_run.log",
+    "lines": 13,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 05:22:53 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 4,
+        "text": "## Phase I @ 2026-10-11 05:22:53  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/写路径/phaseI_run12_fast.log",
+    "lines": 44,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# S5 firmware-upload oracle @ 2026-10-11 09:10:30 ip=192.168.1.131 phase=I"
+      },
+      {
+        "line": 5,
+        "text": "## Phase I @ 2026-10-11 09:10:31  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 10,
+        "text": "  [upload] loaded 90238464 bytes into RAM in 0.11s; edits+CRC applied once"
+      },
+      {
+        "line": 29,
+        "text": "- [UP] senddata FINAL chunk @90238464 attempt 1/12 -> err_busy -> `err_busy` (0.29s)"
+      },
+      {
+        "line": 30,
+        "text": "    [retry] transient err_busy (FINAL chunk), waiting 2s"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/写路径/probe_final_chunk.log",
+    "lines": 21,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/写路径/probe_final_chunk_fresh.log",
+    "lines": 21,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/写路径/probe_partial_final.log",
+    "lines": 23,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/崩溃/crash_cam_v2.log",
+    "lines": 89,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/崩溃/crash_v3.log",
+    "lines": 136,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/崩溃/crash_v3b.log",
+    "lines": 91,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 76,
+        "text": "[18:26:17]   After wait: err_busy"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/指纹/enc_handshake.log",
+    "lines": 41,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/指纹/gate_probe.log",
+    "lines": 70,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/指纹/http_fingerprint.md",
+    "lines": 727,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/logs/指纹/startsend_test.log",
+    "lines": 13,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/research/00-总评估报告-中文.md",
+    "lines": 285,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Panasonic DC-S5（MC801）固件 AES 密钥绕过 —— 总评估报告"
+      },
+      {
+        "line": 11,
+        "text": "## 0. 目录结构（随本报告分发）"
+      },
+      {
+        "line": 54,
+        "text": "## 1. 一句话结论（TL;DR）"
+      },
+      {
+        "line": 67,
+        "text": "## 2. 目标与已证实事实（背景，勿再重复推导）"
+      },
+      {
+        "line": 109,
+        "text": "## 3. 为什么转接环路线够不到 S5 的 AES 密钥（证伪）"
+      },
+      {
+        "line": 157,
+        "text": "## 4. 转接环路线的真实价值（能做什么 / 不能做什么）"
+      },
+      {
+        "line": 176,
+        "text": "## 5. 真正可行的路线（硬件/调试侧，按性价比排序）"
+      },
+      {
+        "line": 207,
+        "text": "## 6. 可执行行动清单（分发给探索者）"
+      },
+      {
+        "line": 245,
+        "text": "## 7. 证据边界与诚实声明"
+      },
+      {
+        "line": 255,
+        "text": "## 8. 复现入口（脚本）"
+      },
+      {
+        "line": 258,
+        "text": "# 固件结构 / boot 分析（01/）"
+      },
+      {
+        "line": 265,
+        "text": "# 上传\"预言机\"测试（03/oracle/，需相机连热点 192.168.1.131）"
+      },
+      {
+        "line": 268,
+        "text": "# CAMSET 校验和写预言机（需实机；回写原值即安全，可逆）"
+      },
+      {
+        "line": 270,
+        "text": "# 只读 mode 枚举（需实机；纯 GET，零副作用）"
+      },
+      {
+        "line": 278,
+        "text": "## 9. 一页总结（给只有 5 分钟的人）"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 7,
+        "text": "> 性质：**研究/逆向分析**，非可刷写补丁、非完成破解证明。所有结论区分「已证实 / 推测 / 未证实」。"
+      },
+      {
+        "line": 30,
+        "text": "│   ├── S1M2固件存储拓扑与离线解码技术边界终局报告_20261008.md  ← 终局边界论证"
+      },
+      {
+        "line": 58,
+        "text": "1. S5 的对称解密密钥固化在 **MC801 芯片内部**（OTP / eFuse / Crypto Engine / TrustZone），**不在固件文件里、不在转接环里、不在镜头 I2C 总线上**；"
+      },
+      {
+        "line": 63,
+        "text": "**真正可行的路线是物理/调试侧**：`UART/JTAG`（只读 dump 运行时 RAM = 解密后明文）与 `SD.DAT / ROM-flashing 恢复模式`（绕过验签链、可写自编代码）。**关键洞察：你其实不需要那把 AES 密钥——拿到开机后 DDR 里的运行时明文，就绕开了密钥本身。**"
+      },
+      {
+        "line": 67,
+        "text": "## 2. 目标与已证实事实（背景，勿再重复推导）"
+      },
+      {
+        "line": 80,
+        "text": "### 2.2 已证实（软件侧穷尽）"
+      },
+      {
+        "line": 84,
+        "text": " **密钥不在固件文件内**（无明文、无公钥封装密文） | `03/…终局报告`：UPD 头部除签名/元数据外全零；无 Key Blob |"
+      },
+      {
+        "line": 99,
+        "text": "| 2 | **固件签名校验** | `startsenddata(type=fw)` → 分块 `senddata` → `endsenddata` | 按 分区 SHA-256 + IV + ECDSA P-256(0x220,64B) + RSA-4096 尾块(0x560EC00) 校验；无效→`err_critical`/`err_reject` | 容器内**无公钥、无禁验开关**，无法伪造已签名固件 |"
+      },
+      {
+        "line": 105,
+        "text": "**结论**：Wi-Fi 侧是**验证型 oracle**（可判定固件新旧 / 签名有效性 / 设置校验和），**不是密钥或明文的提取通道**。BootROM 在 Wi-Fi 存在之前已运行、且属独立 SDIO 信任域，**软件 / Wi-Fi 无法触达**；密钥/明文提取仍只能走 §5 的物理/调试路径。"
+      },
+      {
+        "line": 133,
+        "text": "3. 因此「修改转接环固件」在物理上**无法触达** S5 固件的 AES 密钥。"
+      },
+      {
+        "line": 135,
+        "text": "### 3.2 转接环固件本身的性质（为何无法\"塞\"攻击载荷）"
+      },
+      {
+        "line": 144,
+        "text": "→ 拿到的 `.ecp` 是**数据分区，不含 I2C 处理器 / 启动代码 / 中断服务**，无法静态定位越界写 bug，也无法在其上叠加攻击逻辑（缺代码镜像）。"
+      },
+      {
+        "line": 182,
+        "text": " **1** | **UART / JTAG 调试口**（MC801 的 A 核有完整 CoreSight） | 同类 GoPro 已公布 debug connector 引脚 + OpenOCD 现成配置；A7 核 3 看门点 / 5 断点，**可 dump RAM = 解密后明文** | 高（拆机焊 5~6 根线） | **高（运行时明文，无需密钥）** | **低（只读不破坏）** |"
+      },
+      {
+        "line": 187,
+        "text": "**排序理由**：1 是\"只读、零风险、直接拿运行时明文\"，应**第一个做**；2 能写自编代码、彻底绕过验签链，但风险中；3 依赖 1 或 2；4 是\"有先例但 S5 型号未证实、工程量最大\"的备选。"
+      },
+      {
+        "line": 193,
+        "text": "- **UART/JTAG dump RAM** → 直接得到解密后的程序/内核/rootfs 明文，**完全绕开 AES 密钥本身**；"
+      },
+      {
+        "line": 203,
+        "text": "- 落实第一步永远是**拆机只读取证**（§6 任务 1），零风险、信息量最大。"
+      },
+      {
+        "line": 209,
+        "text": "按\"零风险 → 高收益 → 高风险\"排列，每人认领一条即可推进。"
+      },
+      {
+        "line": 211,
+        "text": "### 任务 1【只读 / 零风险 / 最高优先】拆机取证"
+      },
+      {
+        "line": 222,
+        "text": "### 任务 3【中风险 / 需先备份】JTAG dump 运行时 RAM"
+      },
+      {
+        "line": 223,
+        "text": "- OpenOCD（A7 CoreSight）设断点/dump RAM，拿解密后的 loader/program/zimage/rootfs 明文；"
+      },
+      {
+        "line": 228,
+        "text": "- 按 `02/hardware_attack_surface_notes.md` §3.1 构造 SD 卡（`SD.DAT` + `BOOT.PAR` + `SDRAM.PAR` + `DATA.BIN`，注意 DOS 换行）；"
+      },
+      {
+        "line": 251,
+        "text": "5. 跨机型结论（S5=MC801 / S5M2=MC8223 / S1M2=MC8243 同族 UPD、密钥按平台隔离）来自本地只读复现，见 `01/FIRMWARE_FORMAT.md` 与 `03/…终局报告`。"
+      },
+      {
+        "line": 284,
+        "text": "- **可行路线**：物理/调试侧——**先接 UART 看 bootlog（零风险）→ JTAG dump 运行时 RAM（拿明文，绕开密钥）→ 或 SD.DAT 恢复模式（绕验签、可写自编代码）**。"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/research/BOOT_FLOW.md",
+    "lines": 175,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# DC-S5 boot 文件类型与 boot 方式（逆向）"
+      },
+      {
+        "line": 9,
+        "text": "## 1. 文件类型"
+      },
+      {
+        "line": 44,
+        "text": "## 2. 每个 boot 分区的实际内容类型（逐字节统计）"
+      },
+      {
+        "line": 65,
+        "text": "## 3. boot 方式（倒推）"
+      },
+      {
+        "line": 157,
+        "text": "## 4. 对旧文档的更正"
+      },
+      {
+        "line": 167,
+        "text": "## 5. 复现"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 40,
+        "text": "推论：**BootROM 的第一步是把数据区前 90KB（三个 loader）整块搬进 RAM 基址，跳 loader1@0x0**；之后由 loader 链自行装载 program 到 0x80000 等后续地址。外层/内层 UPD 头 0x2C/0x34 字段的值 **3** 与 loader 数量吻合（推断为「引导段数」）。"
+      },
+      {
+        "line": 59,
+        "text": "- 其余加密分区从字节 0 即高熵，无法区分「无头区」还是「头区也被加密」。"
+      },
+      {
+        "line": 71,
+        "text": " └─ [1] MC801 BootROM（片内固化，公钥在 BootROM/OTP，不可改）"
+      },
+      {
+        "line": 79,
+        "text": "     └─ [4] 搬运数据区前 90KB（loader1|2|3 连续块）到 RAM 基址，跳 0x0"
+      },
+      {
+        "line": 80,
+        "text": " [5] loader1（4KB，RAM 0x0）——第 1 段引导"
+      },
+      {
+        "line": 82,
+        "text": "     （DRAM 初始化、搬运下一段；密钥由片内硬件引擎提供）"
+      },
+      {
+        "line": 83,
+        "text": " [6] loader2（38KB，RAM 0x1000）——第 2 段（bootstrap/BL2）"
+      },
+      {
+        "line": 84,
+        "text": " [7] loader3（48KB，RAM 0xA800）——第 3 段（Stubby 类 Linux 引导 / RTOS bring-up）"
+      },
+      {
+        "line": 85,
+        "text": " [8] program（16MB，RAM 0x80000）——主相机固件（相机 OS：菜单/取景/拍照/录像）"
+      },
+      {
+        "line": 103,
+        "text": "4. **load 字段 = 目的地址（RAM），不是「128KB 对齐的 flash 地址」**：loader2@0x1000、loader3@0xA800、dtb@0x3B00800 均不 128KB 对齐；且 loader1/2/3 的 load 值 = 数据区相对偏移（§1.3），而 program 的 load(0x80000) ≠ 数据区偏移(0x16800)，说明 program 起由 loader 链另址装载。"
+      },
+      {
+        "line": 104,
+        "text": "5. RAM 用途图（由 load 字段反推）："
+      },
+      {
+        "line": 123,
+        "text": "  0x01240000 起=运行时分区。若 DRAM 基址同 Milbeaut 惯例为 0x01000000，"
+      },
+      {
+        "line": 124,
+        "text": "  则后段占 DRAM[0x240000..0x2920000] ≈ 72MB。）"
+      },
+      {
+        "line": 133,
+        "text": "  → 初始化 LPDDR，按分区表搬分区进 SDRAM"
+      },
+      {
+        "line": 141,
+        "text": "| loader1 | CM0 supervisor / 第一段 | **推测**（结构吻合：最小、RAM 0x0、有明文 512B 头） |"
+      },
+      {
+        "line": 148,
+        "text": "关键含义（与 `verify_logic_notes.md` 一致）：验证链最前两级（BootROM→loader1 明文头→加密载荷）不在可改写的用户区明文里；明文容器内无公钥、无回退标志，纯软件无法绕过验签。"
+      },
+      {
+        "line": 150,
+        "text": "### 3.4 已证实 vs 待证实"
+      },
+      {
+        "line": 152,
+        "text": "- **已证实（文件结构直读）**：容器布局与三重验证工件；90KB 连续引导块；loader1/zboot 的 512B 明文头 + +0x200 加密载荷；type 字段=加密标记；RAM 用途图；zboot/dtb/zimage/rootfs 的 Linux 子系统布局。"
+      },
+      {
+        "line": 163,
+        "text": "| 条目字段 `unk` =「flash 加载地址，128KB 对齐」 | = **目的地址（RAM）**，不 128KB 对齐（loader2/3、dtb 反例）；loader1/2/3 的该值=数据区相对偏移 |"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/research/FIRMWARE_FORMAT.md",
+    "lines": 92,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# DC-S5 固件 .bin 格式（UPD 容器）逆向结果"
+      },
+      {
+        "line": 6,
+        "text": "## 总体布局"
+      },
+      {
+        "line": 18,
+        "text": "## UPD 头（外层 0x000 / 内层 0x2A0，共 0x40 有效字段）"
+      },
+      {
+        "line": 39,
+        "text": "## 目录头（0x2E0）"
+      },
+      {
+        "line": 47,
+        "text": "## 分区表条目（每条 92 = 0x5C 字节，共 48 条，0x2EC 起）"
+      },
+      {
+        "line": 62,
+        "text": "## 全部分区（48 条，节选关键项）"
+      },
+      {
+        "line": 79,
+        "text": "## 结论"
+      },
+      {
+        "line": 87,
+        "text": "## 跨版本/跨机型验证补充（来自 lumix-s1m2-research 仓库，已在本机只读复现）"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 53,
+        "text": "0x14  u32       目的加载地址（RAM）；loader1/2/3 上=数据区相对偏移（0x0/0x1000/0xA800），非 128KB 对齐 flash 地址"
+      },
+      {
+        "line": 83,
+        "text": "- **boot 文件类型与启动链**（90KB 连续引导块、loader1→2→3→program 链、RAM 用途图、type=加密标记、与 Milbeaut 参考链对照）详见 `BOOT_FLOW.md`。"
+      },
+      {
+        "line": 92,
+        "text": "- 离线破解路线已被社区穷举排除（含 GH2 自嵌式密钥法移植、AV 固定 key、SL3 交叉、13 万+ 探测）；结论是**密钥固化在芯片硬件（OTP/eFuse/Crypto Engine/TrustZone），固件文件内无密钥材料**。软件离线解密不可行，需硬件提取。"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/research/PANASONIC_FIRMWARE_UPDATE_PROTOCOL.md",
+    "lines": 250,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Panasonic LUMIX Sync — Firmware Update Protocol (reverse-engineered)"
+      },
+      {
+        "line": 6,
+        "text": "## 1. Endpoints"
+      },
+      {
+        "line": 35,
+        "text": "## 2. HTTP transport (`p094l5/*`)"
+      },
+      {
+        "line": 61,
+        "text": "## 3. Firmware update sequence"
+      },
+      {
+        "line": 159,
+        "text": "## 4. Multipart `senddata` encoding (`p094l5/f.java`, `p168v5/n.java`)"
+      },
+      {
+        "line": 192,
+        "text": "## 5. Chunk-size calculation (`p168v5/a.V()`)"
+      },
+      {
+        "line": 215,
+        "text": "## 6. Response XML parsing (`p168v5/o.java`)"
+      },
+      {
+        "line": 232,
+        "text": "## 7. Retry / error behaviour (`p168v5/a.java`)"
+      },
+      {
+        "line": 239,
+        "text": "## 8. Source map"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 226,
+        "text": "| `<result>` | `S()` → `f27345a` | `g()` | `ok`, `err_busy`, `err_reject`, `error`, … |"
+      },
+      {
+        "line": 235,
+        "text": "- `\"err_busy\"` → sleep `f27239r = 1000 ms`, retry."
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/research/PROTOCOL_AUDIT.md",
+    "lines": 170,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# LUMIX 相机 HTTP 协议审计（cam.cgi / 传输层 / 下载）"
+      },
+      {
+        "line": 8,
+        "text": "## 1. 传输层（✅）"
+      },
+      {
+        "line": 38,
+        "text": "## 2. 命令面（mode 全集，✅ 逐行核实自 `a.java`）"
+      },
+      {
+        "line": 114,
+        "text": "## 3. 上传（`startsenddata` 时序，✅）"
+      },
+      {
+        "line": 143,
+        "text": "## 4. 下载 / 文件访问（⚠️ 与 README 表述需修正）"
+      },
+      {
+        "line": 158,
+        "text": "## 5. 与 S5Monitor 相关的结论清单"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 16,
+        "text": "- 重试：每命令最多 5 次；`err_busy` 时退避 1000 ms 重试（`err_busy`/`err_reject`/`wait` 等语义不同命令略有差异）。"
+      },
+      {
+        "line": 98,
+        "text": "门面 `W(str, ...)` 用 `this.f27240s`（默认空串）作 type，即 `/cam.cgi?mode=getprogress`（无 type/value）。响应为 CSV：`状态,百分比`（`err_busy` → 重试；`exec`/`finish` → 带百分比；`error` → 带错误码）。"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/research/Wi-Fi实机预言机与mode枚举实测-中文.md",
+    "lines": 114,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# DC-S5（MC801）Wi-Fi 实机预言机 + 隐藏 mode 枚举 —— 实测记录"
+      },
+      {
+        "line": 10,
+        "text": "## 0. TL;DR"
+      },
+      {
+        "line": 23,
+        "text": "## 1. 三个验证型预言机"
+      },
+      {
+        "line": 75,
+        "text": "## 2. 隐藏 mode 枚举（本次新增，只读）"
+      },
+      {
+        "line": 92,
+        "text": "## 3. 会话交互（记录，未完全定论）"
+      },
+      {
+        "line": 103,
+        "text": "## 4. 为什么 Wi-Fi 到不了 bootrom（边界论证）"
+      },
+      {
+        "line": 112,
+        "text": "## 5. 一句话给分发者"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 55,
+        "text": "无效固件 → `err_critical` / `err_reject`。**容器内无公钥、无\"禁验签\"开关** → 无法伪造已签名固件。"
+      },
+      {
+        "line": 105,
+        "text": "1. **时序**：BootROM 在 Wi-Fi 固件加载**之前**已运行（BootROM → CM0 supervisor → bootstrap → … → 网络栈）。Wi-Fi 侧的 cgi 是\"网络栈之上的应用层\"，物理上无法回退到 bootrom 阶段。"
+      },
+      {
+        "line": 107,
+        "text": "3. **验签**：唯一\"bootrom 相邻\"的软件面是**固件更新路径**，但被 RSA-4096 + ECDSA + 分区 SHA-256 三重签名门控，无公钥、无禁验开关（§1.2）→ 无法让相机接受一个自编固件。"
+      },
+      {
+        "line": 108,
+        "text": "4. **结论**：Wi-Fi 侧只能**验证**（§1 三预言机），**不能提取**密钥/明文，**不能**引导自编代码进 bootrom。真正拿明文/绕验签只能走物理/调试侧（见 `00-总评估报告-中文.md` §5：UART/JTAG dump RAM、SD.DAT 恢复模式、Stubby 替换）。"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/research/hardware_attack_surface_notes.md",
+    "lines": 209,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 硬件攻击面调研笔记：Wi-Fi 芯片 / Bootloader / 恢复诊断模式（DC-S5 / MC801）"
+      },
+      {
+        "line": 10,
+        "text": "## 0. 一句话结论与排序"
+      },
+      {
+        "line": 27,
+        "text": "## 1. SoC 与 Wi-Fi 芯片现状"
+      },
+      {
+        "line": 59,
+        "text": "## 2. Bootloader（loader1/2/3）与 BL2 替换弱点"
+      },
+      {
+        "line": 119,
+        "text": "## 3. 恢复 / 诊断模式（SD 引导、UART、JTAG）"
+      },
+      {
+        "line": 155,
+        "text": "## 4. Wi-Fi 芯片攻击面：可引用的先例"
+      },
+      {
+        "line": 180,
+        "text": "## 5. 引用清单（本次调研新增）"
+      },
+      {
+        "line": 196,
+        "text": "## 6. 下一步（按优先级）"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 12,
+        "text": "纯软件/离线路线已穷尽（密钥固化在芯片内）。硬件侧按「可行性 × 收益 ÷ 风险」排序如下："
+      },
+      {
+        "line": 17,
+        "text": "| 2 | **UART / JTAG 调试口** | HERO6/7 已公布 debug connector 引脚（JTAG 5 线 + 多路 UART），OpenOCD 现成配置；A7 核有完整 ARMv7.1 Debug/CoreSight（3 看门点/5 断点），可 dump RAM（=解密后明文） | 高（拆机焊 5~6 根线） | 高（运行时明文、单步、断点） | 低（只读不破坏） |"
+      },
+      {
+        "line": 23,
+        "text": "备选。1 与 2 建议并行：先拆机找 UART/JTAG（只读、零风险），拿到明文后再决定是否上 SD.DAT 写引导。"
+      },
+      {
+        "line": 29,
+        "text": "### 1.1 已证实的平台标识（来自我们自己的固件与本地调研）"
+      },
+      {
+        "line": 33,
+        "text": "  （`research_repos/siegfried82_notes.md`、`williamwu1234_notes.md`，来自社区 lumix-s1m2-research 仓库终局报告）。"
+      },
+      {
+        "line": 68,
+        "text": "  └─ 初始化 LPDDR，按 eMMC user block 的分区表把各分区搬进 SDRAM"
+      },
+      {
+        "line": 78,
+        "text": "### 2.2 我们的 loader1/2/3 与上述链的映射（已证实 + 推测）"
+      },
+      {
+        "line": 80,
+        "text": "- 已证实（`verify_logic_notes.md` E8）：S5 的 `loader1`（0x1400-0x2400，4KB）**几乎全 0**，只有 28 字节是"
+      },
+      {
+        "line": 87,
+        "text": "  与 `verify_logic_notes.md` 结论一致（验签逻辑在加密 loader/BootROM 内，明文容器无法直接改）。"
+      },
+      {
+        "line": 111,
+        "text": "| `SD-ES3/`、`SD-GP1/`、`SD/` | 各板 SD 引导成品目录 | 参考 SD.DAT/BOOT.PAR/SDRAM.PAR 组合 |"
+      },
+      {
+        "line": 125,
+        "text": "- 需要的文件（SD 卡，注意须 DOS 换行）：`SD.DAT`（初始化 SDRAM + 从 SD 加载镜像）、`BOOT.PAR`（GPIO 状态灯、"
+      },
+      {
+        "line": 126,
+        "text": "  加载到 NAND 还是 eMMC、supervisor 向量地址/大小、超时）、`SDRAM.PAR`（LPDDR 配置）、`DATA.BIN`。"
+      },
+      {
+        "line": 129,
+        "text": "- 限制：`SD.DAT` 没有 RAM-boot 模式，要修复 eMMC 需要正确构造的 `pardata.par`；`SD.DAT` 的 CM0 外设地址与"
+      },
+      {
+        "line": 140,
+        "text": "  3 看门点 / 5 断点，DAP 可枚举）→ 可 dump RAM、设断点、单步，**即能拿到解密后的 loader/kernel/密钥"
+      },
+      {
+        "line": 199,
+        "text": "   UART/JTAG 焊点/测试点（参考 HERO6/7 的 debug connector 布局）。零风险，信息量最大。"
+      },
+      {
+        "line": 202,
+        "text": "3. **JTAG dump RAM**：拿到解密后的 zimage/rootfs/program 运行时明文（这是「不碰密钥、直接拿明文」的正解）。"
+      },
+      {
+        "line": 203,
+        "text": "4. **SD.DAT 恢复链**：先备份原 eMMC（如可用 JTAG 读回），再按 stubby README 构造 SD.DAT+BOOT.PAR+SDRAM.PAR+"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/RCE/goahead_overflow.py",
+    "lines": 88,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 2,
+        "text": "\"\"\"Test the GoAhead HTTP parser for a fixed-buffer overflow (classic RCE)."
+      }
+    ],
+    "imports": [
+      "import sys, os, time, socket",
+      "from common import KA, parse_camrply"
+    ],
+    "functions": [
+      {
+        "name": "log",
+        "line": 12,
+        "end": 12
+      },
+      {
+        "name": "health",
+        "line": 13,
+        "end": 17
+      },
+      {
+        "name": "wait_ok",
+        "line": 18,
+        "end": 23
+      },
+      {
+        "name": "raw",
+        "line": 24,
+        "end": 36
+      },
+      {
+        "name": "cyclic",
+        "line": 38,
+        "end": 44
+      },
+      {
+        "name": "run_dim",
+        "line": 46,
+        "end": 69
+      },
+      {
+        "name": "main",
+        "line": 71,
+        "end": 86
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/RCE/http_primitives.py",
+    "lines": 66,
+    "headings": [
+      {
+        "line": 20,
+        "text": "# ---- A. path-based traversal through cam.cgi ----"
+      },
+      {
+        "line": 45,
+        "text": "# ---- B. hidden CGI endpoints ----"
+      },
+      {
+        "line": 60,
+        "text": "# ---- C. getinfo type enumeration ----"
+      }
+    ],
+    "claim_lines": [],
+    "imports": [
+      "import sys, common as c"
+    ],
+    "functions": [
+      {
+        "name": "health",
+        "line": 6,
+        "end": 9
+      },
+      {
+        "name": "go",
+        "line": 11,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/RCE/launch_daemon.py",
+    "lines": 45,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import os",
+      "import sys"
+    ],
+    "functions": [
+      {
+        "name": "main",
+        "line": 16,
+        "end": 41
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/RCE/overflow_fuzz.py",
+    "lines": 184,
+    "headings": [
+      {
+        "line": 96,
+        "text": "# ---- variant builders (all keep total length = len(clean)) ----"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 71,
+        "text": "            if r in (\"err_busy\",\"wait\",\"err_timeout\",\"err_critical\"):"
+      },
+      {
+        "line": 80,
+        "text": "                if rr not in (\"err_busy\",\"wait\",\"err_timeout\"): break"
+      }
+    ],
+    "imports": [
+      "import sys, os, time, struct",
+      "from common import KA, parse_camrply"
+    ],
+    "functions": [
+      {
+        "name": "log",
+        "line": 30,
+        "end": 30
+      },
+      {
+        "name": "health",
+        "line": 31,
+        "end": 35
+      },
+      {
+        "name": "wait_ok",
+        "line": 36,
+        "end": 41
+      },
+      {
+        "name": "mp_head",
+        "line": 43,
+        "end": 46
+      },
+      {
+        "name": "mp_tail",
+        "line": 47,
+        "end": 47
+      },
+      {
+        "name": "cmd",
+        "line": 49,
+        "end": 50
+      },
+      {
+        "name": "getinfo",
+        "line": 51,
+        "end": 52
+      },
+      {
+        "name": "upload_chunked",
+        "line": 54,
+        "end": 83
+      },
+      {
+        "name": "ensure_clean",
+        "line": 85,
+        "end": 94
+      },
+      {
+        "name": "vH1",
+        "line": 97,
+        "end": 98
+      },
+      {
+        "name": "vH2",
+        "line": 99,
+        "end": 100
+      },
+      {
+        "name": "vH3",
+        "line": 101,
+        "end": 102
+      },
+      {
+        "name": "vH4",
+        "line": 103,
+        "end": 104
+      },
+      {
+        "name": "vT1",
+        "line": 105,
+        "end": 106
+      },
+      {
+        "name": "vT2",
+        "line": 107,
+        "end": 108
+      },
+      {
+        "name": "vE1",
+        "line": 109,
+        "end": 111
+      },
+      {
+        "name": "vE2",
+        "line": 112,
+        "end": 116
+      },
+      {
+        "name": "vE3",
+        "line": 117,
+        "end": 121
+      },
+      {
+        "name": "vP1",
+        "line": 122,
+        "end": 124
+      },
+      {
+        "name": "main",
+        "line": 139,
+        "end": 181
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/RCE/payload.S",
+    "lines": 41,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 3,
+        "text": "  * It does write(1, \"S5_RCE_PROOF\\n\", 13): fd 1 = the CGI stdout, which"
+      },
+      {
+        "line": 4,
+        "text": "  * GoAhead captures as the HTTP response body. Marker in response == RCE."
+      },
+      {
+        "line": 25,
+        "text": "     li      $a2, 13           /* strlen(\"S5_RCE_PROOF\\n\") */"
+      },
+      {
+        "line": 40,
+        "text": "     .ascii  \"S5_RCE_PROOF\\n\""
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/RCE/rce_ldpreload.py",
+    "lines": 100,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 2,
+        "text": "\"\"\"rce_ldpreload.py — Test CVE-2017-17562 (GoAhead LD_PRELOAD env injection)."
+      },
+      {
+        "line": 4,
+        "text": "Mechanism (elttam / EDB-43360): GoAhead's cgiHandler copies UNFILTERED HTTP"
+      },
+      {
+        "line": 10,
+        "text": "controlled marker string to fd 1 (stdout), which GoAhead captures as the"
+      },
+      {
+        "line": 13,
+        "text": "SAFETY: the payload's constructor only does write(1, \"S5_RCE_PROOF\\\\n\", 13)."
+      },
+      {
+        "line": 22,
+        "text": "MARKER = \"S5_RCE_PROOF\""
+      }
+    ],
+    "imports": [
+      "import sys, os, time",
+      "from common import KA, parse_camrply"
+    ],
+    "functions": [
+      {
+        "name": "log",
+        "line": 25,
+        "end": 25
+      },
+      {
+        "name": "health",
+        "line": 27,
+        "end": 33
+      },
+      {
+        "name": "wait_ok",
+        "line": 35,
+        "end": 40
+      },
+      {
+        "name": "load_payloads",
+        "line": 42,
+        "end": 47
+      },
+      {
+        "name": "fire",
+        "line": 49,
+        "end": 67
+      },
+      {
+        "name": "main",
+        "line": 69,
+        "end": 97
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/RCE/rce_ldpreload.py.bak",
+    "lines": 100,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 2,
+        "text": " \"\"\"rce_ldpreload.py — Test CVE-2017-17562 (GoAhead LD_PRELOAD env injection)."
+      },
+      {
+        "line": 4,
+        "text": " Mechanism (elttam / EDB-43360): GoAhead's cgiHandler copies UNFILTERED HTTP"
+      },
+      {
+        "line": 10,
+        "text": " controlled marker string to fd 1 (stdout), which GoAhead captures as the"
+      },
+      {
+        "line": 13,
+        "text": " SAFETY: the payload's constructor only does write(1, \"S5_RCE_PROOF\\\\n\", 13)."
+      },
+      {
+        "line": 22,
+        "text": " MARKER = \"S5_RCE_PROOF\""
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/RCE/rce_probe.py",
+    "lines": 440,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import socket",
+      "import struct",
+      "import threading",
+      "import time",
+      "import sys",
+      "import os",
+      "from common import KA, Net, parse_camrply, UA"
+    ],
+    "functions": [
+      {
+        "name": "log",
+        "line": 31,
+        "end": 32
+      },
+      {
+        "name": "health",
+        "line": 34,
+        "end": 42
+      },
+      {
+        "name": "wait_ok",
+        "line": 44,
+        "end": 51
+      },
+      {
+        "name": "download_camsetting",
+        "line": 53,
+        "end": 60
+      },
+      {
+        "name": "upload_camsetting",
+        "line": 62,
+        "end": 79
+      },
+      {
+        "name": "vecA_camsetting_overflow",
+        "line": 81,
+        "end": 136
+      },
+      {
+        "name": "vecB_boundary_injection",
+        "line": 138,
+        "end": 189
+      },
+      {
+        "name": "vecC_content_length_mismatch",
+        "line": 191,
+        "end": 262
+      },
+      {
+        "name": "vecD_null_byte_injection",
+        "line": 264,
+        "end": 305
+      },
+      {
+        "name": "vecE_oversized_camsetting",
+        "line": 307,
+        "end": 345
+      },
+      {
+        "name": "vecF_corrupted_header",
+        "line": 347,
+        "end": 390
+      },
+      {
+        "name": "main",
+        "line": 392,
+        "end": 437
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/RCE/roundtrip_test.py",
+    "lines": 151,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 104,
+        "text": "            if r in (\"err_busy\",\"wait\",\"err_timeout\",\"err_critical\"):"
+      },
+      {
+        "line": 118,
+        "text": "                if rr not in (\"err_busy\",\"wait\",\"err_timeout\"):"
+      }
+    ],
+    "imports": [
+      "import sys, os, time",
+      "from common import KA, parse_camrply"
+    ],
+    "functions": [
+      {
+        "name": "log",
+        "line": 26,
+        "end": 27
+      },
+      {
+        "name": "health",
+        "line": 29,
+        "end": 35
+      },
+      {
+        "name": "wait_ok",
+        "line": 37,
+        "end": 42
+      },
+      {
+        "name": "mp_head",
+        "line": 44,
+        "end": 49
+      },
+      {
+        "name": "mp_tail",
+        "line": 51,
+        "end": 52
+      },
+      {
+        "name": "post_chunk",
+        "line": 54,
+        "end": 61
+      },
+      {
+        "name": "get",
+        "line": 63,
+        "end": 66
+      },
+      {
+        "name": "getinfo_raw",
+        "line": 68,
+        "end": 71
+      },
+      {
+        "name": "main",
+        "line": 73,
+        "end": 148
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/USB-PTP/PTP_0x9421_dump_使用说明.md",
+    "lines": 148,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# S5 只读 PTP 客户端 + 0x9421 配置 dump —— 使用说明"
+      },
+      {
+        "line": 11,
+        "text": "## 0. 相机准备（必做）"
+      },
+      {
+        "line": 21,
+        "text": "## 1. 两个脚本，二选一"
+      },
+      {
+        "line": 34,
+        "text": "## 2. Python 主脚本（Linux / 离线核对）"
+      },
+      {
+        "line": 41,
+        "text": "# (a) 只枚举设备，确认能看到 PTP（06/01/01）相机"
+      },
+      {
+        "line": 44,
+        "text": "# (b) 打印 0x9421 命令字节（不碰 USB，随时可跑，用于核对线格式）"
+      },
+      {
+        "line": 47,
+        "text": "# (c) 完整流程：GetDeviceInfo → OpenSession → GetStorageIDs → 0x9104 → 0x9421 dump → CloseSession"
+      },
+      {
+        "line": 50,
+        "text": "# (c2) 只想快速 dump（跳过 GetStorageIDs/0x9104 基线）"
+      },
+      {
+        "line": 53,
+        "text": "# (d) 手动指定 tag 参数（默认 0x080000a2；失败可试 0x080000a1）"
+      },
+      {
+        "line": 83,
+        "text": "## 3. macOS 原生脚本（ImageCaptureCore，首选）"
+      },
+      {
+        "line": 115,
+        "text": "## 4. 排错"
+      },
+      {
+        "line": 130,
+        "text": "## 5. 安全底线（务必遵守）"
+      },
+      {
+        "line": 140,
+        "text": "## 6. 拿到 dump 做什么（已完成）"
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/USB-PTP/ptp_attack.py",
+    "lines": 289,
+    "headings": [
+      {
+        "line": 29,
+        "text": "# PTP opcodes"
+      }
+    ],
+    "claim_lines": [],
+    "imports": [
+      "import usb1",
+      "import struct",
+      "import time",
+      "import sys"
+    ],
+    "functions": [
+      {
+        "name": "make_ptp_packet",
+        "line": 48,
+        "end": 72
+      },
+      {
+        "name": "make_ptp_raw",
+        "line": 74,
+        "end": 82
+      },
+      {
+        "name": "make_ptp_bad_length",
+        "line": 84,
+        "end": 95
+      },
+      {
+        "name": "read_response",
+        "line": 97,
+        "end": 105
+      },
+      {
+        "name": "send_bulk",
+        "line": 107,
+        "end": 115
+      },
+      {
+        "name": "check_alive",
+        "line": 117,
+        "end": 124
+      },
+      {
+        "name": "main",
+        "line": 126,
+        "end": 286
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/USB-PTP/s5_ptp_dump.py",
+    "lines": 574,
+    "headings": [
+      {
+        "line": 54,
+        "text": "# ---------------------------------------------------------------------------"
+      },
+      {
+        "line": 55,
+        "text": "# PTP 常量"
+      },
+      {
+        "line": 56,
+        "text": "# ---------------------------------------------------------------------------"
+      },
+      {
+        "line": 92,
+        "text": "# 默认/回退端点。实际端点按机型动态发现（见 find_bulk_endpoints）："
+      },
+      {
+        "line": 93,
+        "text": "# S5 (PID 0x2382) 实测 bulk OUT=0x01, bulk IN=0x82（不是 0x81），故不能硬编码。"
+      },
+      {
+        "line": 140,
+        "text": "# ---------------------------------------------------------------------------"
+      },
+      {
+        "line": 141,
+        "text": "# 容器构造"
+      },
+      {
+        "line": 142,
+        "text": "# ---------------------------------------------------------------------------"
+      },
+      {
+        "line": 163,
+        "text": "# ---------------------------------------------------------------------------"
+      },
+      {
+        "line": 164,
+        "text": "# 设备发现"
+      },
+      {
+        "line": 165,
+        "text": "# ---------------------------------------------------------------------------"
+      },
+      {
+        "line": 210,
+        "text": "# ---------------------------------------------------------------------------"
+      },
+      {
+        "line": 211,
+        "text": "# PTP 会话封装"
+      },
+      {
+        "line": 212,
+        "text": "# ---------------------------------------------------------------------------"
+      },
+      {
+        "line": 334,
+        "text": "# ---------------------------------------------------------------------------"
+      },
+      {
+        "line": 335,
+        "text": "# 0x9421 型号解析（从 GetDeviceInfo 的字符串区抽取）"
+      },
+      {
+        "line": 336,
+        "text": "# ---------------------------------------------------------------------------"
+      },
+      {
+        "line": 385,
+        "text": "# ---------------------------------------------------------------------------"
+      },
+      {
+        "line": 386,
+        "text": "# 主流程"
+      },
+      {
+        "line": 387,
+        "text": "# ---------------------------------------------------------------------------"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 74,
+        "text": "RC_PARAM_NOT_SUPPORTED = 0x2006"
+      },
+      {
+        "line": 76,
+        "text": "RC_INVALID_PARAM       = 0x201D"
+      },
+      {
+        "line": 83,
+        "text": "    RC_PARAM_NOT_SUPPORTED: \"ParameterNotSupported\","
+      },
+      {
+        "line": 85,
+        "text": "    RC_INVALID_PARAM: \"InvalidParameter\","
+      }
+    ],
+    "imports": [
+      "import sys",
+      "import os",
+      "import struct",
+      "import time",
+      "import argparse",
+      "import usb.core",
+      "import usb.util",
+      "from collections import Counter"
+    ],
+    "functions": [
+      {
+        "name": "iter_interfaces",
+        "line": 98,
+        "end": 106
+      },
+      {
+        "name": "find_bulk_endpoints",
+        "line": 109,
+        "end": 133
+      },
+      {
+        "name": "build_container",
+        "line": 143,
+        "end": 146
+      },
+      {
+        "name": "parse_response_code",
+        "line": 149,
+        "end": 151
+      },
+      {
+        "name": "hexline",
+        "line": 154,
+        "end": 160
+      },
+      {
+        "name": "find_ptp_devices",
+        "line": 166,
+        "end": 176
+      },
+      {
+        "name": "is_ptp",
+        "line": 179,
+        "end": 193
+      },
+      {
+        "name": "find_ptp_interface",
+        "line": 196,
+        "end": 207
+      },
+      {
+        "name": "extract_strings",
+        "line": 337,
+        "end": 350
+      },
+      {
+        "name": "parse_device_info",
+        "line": 353,
+        "end": 382
+      },
+      {
+        "name": "do_list",
+        "line": 388,
+        "end": 397
+      },
+      {
+        "name": "do_dry_run",
+        "line": 400,
+        "end": 413
+      },
+      {
+        "name": "run_full",
+        "line": 416,
+        "end": 504
+      },
+      {
+        "name": "try_alt_tags",
+        "line": 507,
+        "end": 524
+      },
+      {
+        "name": "scan_tlv",
+        "line": 527,
+        "end": 546
+      },
+      {
+        "name": "safe_name",
+        "line": 549,
+        "end": 550
+      },
+      {
+        "name": "main",
+        "line": 553,
+        "end": 570
+      },
+      {
+        "name": "__init__",
+        "line": 214,
+        "end": 238
+      },
+      {
+        "name": "close",
+        "line": 240,
+        "end": 244
+      },
+      {
+        "name": "_read_exact",
+        "line": 247,
+        "end": 256
+      },
+      {
+        "name": "read_container",
+        "line": 258,
+        "end": 272
+      },
+      {
+        "name": "send_command",
+        "line": 274,
+        "end": 280
+      },
+      {
+        "name": "transaction",
+        "line": 282,
+        "end": 302
+      },
+      {
+        "name": "get_device_info",
+        "line": 305,
+        "end": 307
+      },
+      {
+        "name": "open_session",
+        "line": 309,
+        "end": 312
+      },
+      {
+        "name": "close_session",
+        "line": 314,
+        "end": 318
+      },
+      {
+        "name": "get_storage_ids",
+        "line": 320,
+        "end": 322
+      },
+      {
+        "name": "get_sync_list",
+        "line": 324,
+        "end": 326
+      },
+      {
+        "name": "dump_config",
+        "line": 328,
+        "end": 331
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/USB-PTP/usb_oob.py",
+    "lines": 211,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import sys",
+      "import time",
+      "import usb1"
+    ],
+    "functions": [
+      {
+        "name": "main",
+        "line": 13,
+        "end": 208
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/写路径/control.py",
+    "lines": 115,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 6,
+        "text": "  fine, then the FINAL 41456-byte chunk failed with err_busy -> err_critical,"
+      }
+    ],
+    "imports": [
+      "import argparse",
+      "import time",
+      "from common import Reporter",
+      "from upload import Upload, FW_DEFAULT, OUTER_VER, INNER_VER, bcd2"
+    ],
+    "functions": [
+      {
+        "name": "main",
+        "line": 31,
+        "end": 111
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/写路径/enc_handshake_test.py",
+    "lines": 118,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import http.client, random, time, urllib.parse, sys"
+    ],
+    "functions": [
+      {
+        "name": "conn",
+        "line": 13,
+        "end": 14
+      },
+      {
+        "name": "req",
+        "line": 17,
+        "end": 23
+      },
+      {
+        "name": "xor_obfuscate",
+        "line": 26,
+        "end": 40
+      },
+      {
+        "name": "getstate",
+        "line": 43,
+        "end": 45
+      },
+      {
+        "name": "main",
+        "line": 48,
+        "end": 114
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/写路径/finalfix.py",
+    "lines": 285,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 63,
+        "text": "                    help=\"max attempts for the final chunk (err_busy -> wait+retry)\")"
+      },
+      {
+        "line": 91,
+        "text": "    # Load the pristine image into RAM (no edits)."
+      },
+      {
+        "line": 182,
+        "text": "            if rd in (\"err_busy\", \"wait\", \"err_timeout\"):"
+      },
+      {
+        "line": 186,
+        "text": "                    if rd not in (\"err_busy\", \"wait\", \"err_timeout\"):"
+      },
+      {
+        "line": 199,
+        "text": "    #    small retry (err_busy -> wait + retry). This is the chunk that was always"
+      },
+      {
+        "line": 200,
+        "text": "    #    rejected (err_busy) because the flash writer had fallen behind."
+      },
+      {
+        "line": 221,
+        "text": "        if frep in (\"err_busy\", \"err_critical\", \"err_timeout\") and attempt < args.final_retries:"
+      }
+    ],
+    "imports": [
+      "import argparse",
+      "import time",
+      "import uuid",
+      "from common import Reporter, parse_camrply",
+      "from upload import Upload, FW_DEFAULT"
+    ],
+    "functions": [
+      {
+        "name": "main",
+        "line": 46,
+        "end": 281
+      },
+      {
+        "name": "req_prefix",
+        "line": 133,
+        "end": 147
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/写路径/find_checksum.py",
+    "lines": 47,
+    "headings": [
+      {
+        "line": 13,
+        "text": "# candidate ranges (start,end)"
+      },
+      {
+        "line": 43,
+        "text": "# Also print the raw values for the most likely range for eyeballing"
+      }
+    ],
+    "claim_lines": [],
+    "imports": [
+      "import struct, zlib, binascii"
+    ],
+    "functions": [
+      {
+        "name": "u16",
+        "line": 15,
+        "end": 16
+      },
+      {
+        "name": "sums",
+        "line": 17,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/写路径/gate_probe.py",
+    "lines": 98,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 65,
+        "text": "        if res not in (\"ok_under_research_no_msg\", \"err_busy\", \"err_reject\"):"
+      }
+    ],
+    "imports": [
+      "import http.client, random, time, urllib.parse, sys"
+    ],
+    "functions": [
+      {
+        "name": "conn",
+        "line": 11,
+        "end": 12
+      },
+      {
+        "name": "req",
+        "line": 15,
+        "end": 22
+      },
+      {
+        "name": "getstate",
+        "line": 25,
+        "end": 27
+      },
+      {
+        "name": "main",
+        "line": 30,
+        "end": 94
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/写路径/mutation_test.py",
+    "lines": 56,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import sys, os, time",
+      "import overflow_fuzz as F",
+      "from common import KA, parse_camrply",
+      "import struct"
+    ],
+    "functions": [
+      {
+        "name": "getinfo",
+        "line": 13,
+        "end": 14
+      },
+      {
+        "name": "try_variant",
+        "line": 16,
+        "end": 30
+      },
+      {
+        "name": "log",
+        "line": 32,
+        "end": 32
+      },
+      {
+        "name": "main",
+        "line": 34,
+        "end": 54
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/写路径/probe_final_chunk.py",
+    "lines": 164,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 111,
+        "text": "            if r in (\"err_busy\", \"err_critical\", \"err_timeout\", \"wait\") or r.startswith(\"EXC\"):"
+      },
+      {
+        "line": 156,
+        "text": "    elif finals and any(r in (\"err_busy\", \"err_critical\") for r in finals):"
+      }
+    ],
+    "imports": [
+      "import sys",
+      "import time",
+      "import urllib.request",
+      "from common import Net, parse_camrply"
+    ],
+    "functions": [
+      {
+        "name": "post",
+        "line": 31,
+        "end": 42
+      },
+      {
+        "name": "get",
+        "line": 45,
+        "end": 53
+      },
+      {
+        "name": "open_gate",
+        "line": 56,
+        "end": 67
+      },
+      {
+        "name": "probe_total",
+        "line": 70,
+        "end": 125
+      },
+      {
+        "name": "main",
+        "line": 128,
+        "end": 160
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/写路径/probe_partial_final.py",
+    "lines": 192,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 8,
+        "text": "  (err_busy -> err_critical), independent of content and pacing."
+      },
+      {
+        "line": 123,
+        "text": "            if r in (\"err_busy\", \"err_critical\", \"err_timeout\", \"wait\") or r.startswith(\"EXC\"):"
+      },
+      {
+        "line": 183,
+        "text": "    elif finals and any(f in (\"err_busy\", \"err_critical\", \"err_timeout\") for f in finals):"
+      }
+    ],
+    "imports": [
+      "import sys",
+      "import time",
+      "import urllib.request",
+      "from common import parse_camrply",
+      "import uuid"
+    ],
+    "functions": [
+      {
+        "name": "post",
+        "line": 37,
+        "end": 48
+      },
+      {
+        "name": "get",
+        "line": 51,
+        "end": 59
+      },
+      {
+        "name": "open_gate",
+        "line": 62,
+        "end": 74
+      },
+      {
+        "name": "probe_total",
+        "line": 77,
+        "end": 150
+      },
+      {
+        "name": "main",
+        "line": 153,
+        "end": 188
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/写路径/startsend_test.py",
+    "lines": 50,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import http.client, time, urllib.parse, sys"
+    ],
+    "functions": [
+      {
+        "name": "conn",
+        "line": 12,
+        "end": 13
+      },
+      {
+        "name": "req",
+        "line": 16,
+        "end": 22
+      },
+      {
+        "name": "main",
+        "line": 25,
+        "end": 46
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/写路径/upload.py",
+    "lines": 767,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 39,
+        "text": "    senddata (multipart, one chunk)     -> ok / wifi_reset (retry err_busy)"
+      },
+      {
+        "line": 40,
+        "text": "    requestsenddata (after each chunk)  -> retry err_busy/wait"
+      },
+      {
+        "line": 199,
+        "text": "             retryable=(\"err_busy\", \"wait\")):"
+      },
+      {
+        "line": 300,
+        "text": "        \"\"\"Stream-upload `path`. The ENTIRE image is loaded into RAM once and the"
+      },
+      {
+        "line": 324,
+        "text": "        self.rep._md(\"  [upload] loaded %d bytes into RAM in %.2fs; edits+CRC applied once\""
+      },
+      {
+        "line": 450,
+        "text": "                if r in (\"err_busy\", \"err_critical\", \"err_timeout\", \"wait\") or r.startswith(\"EXC\"):"
+      },
+      {
+        "line": 489,
+        "text": "                    if rd.get(\"result\") in (\"err_busy\", \"wait\", \"err_timeout\"):"
+      },
+      {
+        "line": 493,
+        "text": "                            if rd.get(\"result\") not in (\"err_busy\", \"wait\", \"err_timeout\"):"
+      },
+      {
+        "line": 653,
+        "text": "        per-chunk overhead (RAM load + slice + prefix + concat + control-plane"
+      }
+    ],
+    "imports": [
+      "import argparse",
+      "import re",
+      "import random",
+      "import struct",
+      "import time",
+      "import zlib",
+      "from common import Net, Reporter, Health, KA, parse_camrply",
+      "import urllib.request",
+      "import socket",
+      "import uuid"
+    ],
+    "functions": [
+      {
+        "name": "bcd2",
+        "line": 65,
+        "end": 67
+      },
+      {
+        "name": "main",
+        "line": 677,
+        "end": 763
+      },
+      {
+        "name": "send",
+        "line": 77,
+        "end": 78
+      },
+      {
+        "name": "request",
+        "line": 80,
+        "end": 81
+      },
+      {
+        "name": "close",
+        "line": 83,
+        "end": 84
+      },
+      {
+        "name": "__init__",
+        "line": 88,
+        "end": 110
+      },
+      {
+        "name": "_get",
+        "line": 113,
+        "end": 119
+      },
+      {
+        "name": "_post",
+        "line": 121,
+        "end": 138
+      },
+      {
+        "name": "_post_raw",
+        "line": 140,
+        "end": 181
+      },
+      {
+        "name": "_mp_head",
+        "line": 183,
+        "end": 190
+      },
+      {
+        "name": "_mp_tail",
+        "line": 192,
+        "end": 193
+      },
+      {
+        "name": "_host",
+        "line": 195,
+        "end": 196
+      },
+      {
+        "name": "_cgi",
+        "line": 198,
+        "end": 213
+      },
+      {
+        "name": "open_gate",
+        "line": 216,
+        "end": 267
+      },
+      {
+        "name": "_battery",
+        "line": 269,
+        "end": 276
+      },
+      {
+        "name": "_recompute_crc",
+        "line": 279,
+        "end": 296
+      },
+      {
+        "name": "stream",
+        "line": 299,
+        "end": 554
+      },
+      {
+        "name": "phase_I",
+        "line": 557,
+        "end": 613
+      },
+      {
+        "name": "phase_J",
+        "line": 616,
+        "end": 647
+      },
+      {
+        "name": "run_bench",
+        "line": 650,
+        "end": 674
+      },
+      {
+        "name": "try_fw",
+        "line": 228,
+        "end": 244
+      },
+      {
+        "name": "req_prefix",
+        "line": 386,
+        "end": 400
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/写路径/upload_diag.py",
+    "lines": 103,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 86,
+        "text": "                    if rr2 in (\"err_busy\",\"wait\",\"err_timeout\"):"
+      },
+      {
+        "line": 89,
+        "text": "                            if rr2 not in (\"err_busy\",\"wait\",\"err_timeout\"): break"
+      }
+    ],
+    "imports": [
+      "import sys, os, time",
+      "from common import KA, parse_camrply"
+    ],
+    "functions": [
+      {
+        "name": "log",
+        "line": 23,
+        "end": 23
+      },
+      {
+        "name": "health",
+        "line": 24,
+        "end": 28
+      },
+      {
+        "name": "wait_ok",
+        "line": 29,
+        "end": 34
+      },
+      {
+        "name": "mp_head",
+        "line": 35,
+        "end": 40
+      },
+      {
+        "name": "mp_tail",
+        "line": 41,
+        "end": 41
+      },
+      {
+        "name": "post_raw",
+        "line": 42,
+        "end": 48
+      },
+      {
+        "name": "cmd",
+        "line": 49,
+        "end": 50
+      },
+      {
+        "name": "main",
+        "line": 52,
+        "end": 100
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/崩溃/crash_cam.py",
+    "lines": 365,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 3,
+        "text": "crash_cam.py — Escalate the final-chunk err_busy into a full camera crash."
+      },
+      {
+        "line": 7,
+        "text": "  2. Send the FINAL (partial) chunk immediately -> expect err_busy"
+      },
+      {
+        "line": 18,
+        "text": "Safety: RAM-only corruption. Flash is NOT touched. AC power required."
+      },
+      {
+        "line": 97,
+        "text": "        if r2 == \"err_busy\":"
+      },
+      {
+        "line": 105,
+        "text": "    \"\"\"Send the final partial chunk. Expects err_busy. Returns the response body.\"\"\""
+      }
+    ],
+    "imports": [
+      "import socket",
+      "import struct",
+      "import threading",
+      "import time",
+      "import zlib",
+      "import sys",
+      "import os",
+      "from common import KA, Net, parse_camrply, UA"
+    ],
+    "functions": [
+      {
+        "name": "log",
+        "line": 39,
+        "end": 40
+      },
+      {
+        "name": "build_multipart",
+        "line": 42,
+        "end": 50
+      },
+      {
+        "name": "build_senddata_req",
+        "line": 52,
+        "end": 62
+      },
+      {
+        "name": "setup_session",
+        "line": 64,
+        "end": 79
+      },
+      {
+        "name": "send_chunks_quick",
+        "line": 81,
+        "end": 102
+      },
+      {
+        "name": "trigger_final_chunk_rejection",
+        "line": 104,
+        "end": 112
+      },
+      {
+        "name": "attack_phase_A",
+        "line": 114,
+        "end": 119
+      },
+      {
+        "name": "attack_phase_B",
+        "line": 121,
+        "end": 139
+      },
+      {
+        "name": "attack_phase_C",
+        "line": 141,
+        "end": 177
+      },
+      {
+        "name": "attack_phase_D",
+        "line": 179,
+        "end": 212
+      },
+      {
+        "name": "attack_phase_E",
+        "line": 214,
+        "end": 225
+      },
+      {
+        "name": "check_camera",
+        "line": 227,
+        "end": 248
+      },
+      {
+        "name": "run_crash_cycle",
+        "line": 250,
+        "end": 298
+      },
+      {
+        "name": "wait_for_camera",
+        "line": 300,
+        "end": 314
+      },
+      {
+        "name": "main",
+        "line": 316,
+        "end": 362
+      },
+      {
+        "name": "hammer",
+        "line": 145,
+        "end": 167
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/崩溃/crash_v3.py",
+    "lines": 613,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 15,
+        "text": "the final-write endpoint). RAM-only corruption at worst."
+      }
+    ],
+    "imports": [
+      "import socket",
+      "import struct",
+      "import threading",
+      "import time",
+      "import sys",
+      "import os",
+      "import signal",
+      "from common import KA, Net, parse_camrply, UA"
+    ],
+    "functions": [
+      {
+        "name": "log",
+        "line": 33,
+        "end": 34
+      },
+      {
+        "name": "raw_conn",
+        "line": 36,
+        "end": 44
+      },
+      {
+        "name": "raw_send_recv",
+        "line": 46,
+        "end": 62
+      },
+      {
+        "name": "phase1_integer_overflow",
+        "line": 64,
+        "end": 114
+      },
+      {
+        "name": "phase2_http_smuggling",
+        "line": 116,
+        "end": 191
+      },
+      {
+        "name": "phase3_concurrent_sessions",
+        "line": 193,
+        "end": 256
+      },
+      {
+        "name": "phase4_fork_bomb",
+        "line": 258,
+        "end": 303
+      },
+      {
+        "name": "phase5_midchunk_interrupt",
+        "line": 305,
+        "end": 414
+      },
+      {
+        "name": "phase6_protocol_confusion",
+        "line": 416,
+        "end": 477
+      },
+      {
+        "name": "phase7_sustained_pressure",
+        "line": 479,
+        "end": 534
+      },
+      {
+        "name": "health_check",
+        "line": 536,
+        "end": 545
+      },
+      {
+        "name": "wait_for_recovery",
+        "line": 547,
+        "end": 558
+      },
+      {
+        "name": "main",
+        "line": 560,
+        "end": 610
+      },
+      {
+        "name": "start_session",
+        "line": 203,
+        "end": 238
+      },
+      {
+        "name": "rapid_request",
+        "line": 269,
+        "end": 289
+      },
+      {
+        "name": "worker",
+        "line": 491,
+        "end": 515
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/崩溃/crash_v3b.py",
+    "lines": 351,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import socket",
+      "import struct",
+      "import threading",
+      "import time",
+      "import sys",
+      "import os",
+      "from common import KA, Net, parse_camrply, UA"
+    ],
+    "functions": [
+      {
+        "name": "log",
+        "line": 32,
+        "end": 33
+      },
+      {
+        "name": "health_check",
+        "line": 35,
+        "end": 44
+      },
+      {
+        "name": "open_connections",
+        "line": 46,
+        "end": 57
+      },
+      {
+        "name": "close_all",
+        "line": 59,
+        "end": 65
+      },
+      {
+        "name": "attack_round",
+        "line": 67,
+        "end": 172
+      },
+      {
+        "name": "attack_escalating",
+        "line": 174,
+        "end": 208
+      },
+      {
+        "name": "attack_sustained_exhaust",
+        "line": 210,
+        "end": 236
+      },
+      {
+        "name": "attack_mixed_pressure",
+        "line": 238,
+        "end": 288
+      },
+      {
+        "name": "main",
+        "line": 290,
+        "end": 348
+      },
+      {
+        "name": "hammer",
+        "line": 136,
+        "end": 154
+      },
+      {
+        "name": "fd_worker",
+        "line": 247,
+        "end": 252
+      },
+      {
+        "name": "cpu_worker",
+        "line": 254,
+        "end": 266
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/崩溃/crash_v3c.py",
+    "lines": 461,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import socket",
+      "import struct",
+      "import threading",
+      "import time",
+      "import sys",
+      "import os",
+      "from common import KA, Net, parse_camrply, UA"
+    ],
+    "functions": [
+      {
+        "name": "log",
+        "line": 36,
+        "end": 37
+      },
+      {
+        "name": "health",
+        "line": 39,
+        "end": 47
+      },
+      {
+        "name": "wait_ok",
+        "line": 49,
+        "end": 57
+      },
+      {
+        "name": "vec1_state_inconsistency",
+        "line": 59,
+        "end": 126
+      },
+      {
+        "name": "vec2_dual_endsenddata",
+        "line": 128,
+        "end": 166
+      },
+      {
+        "name": "vec3_pipelined_requests",
+        "line": 168,
+        "end": 210
+      },
+      {
+        "name": "vec4_interrupt_midread",
+        "line": 212,
+        "end": 267
+      },
+      {
+        "name": "vec5_pipelined_data",
+        "line": 269,
+        "end": 327
+      },
+      {
+        "name": "vec6_double_start_same_conn",
+        "line": 329,
+        "end": 369
+      },
+      {
+        "name": "vec7_timing_precision",
+        "line": 371,
+        "end": 411
+      },
+      {
+        "name": "main",
+        "line": 413,
+        "end": 458
+      },
+      {
+        "name": "ender",
+        "line": 141,
+        "end": 153
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/崩溃/crk.py",
+    "lines": 99,
+    "headings": [
+      {
+        "line": 5,
+        "text": "# candidate target fields (offset, width)"
+      },
+      {
+        "line": 13,
+        "text": "# de-dup"
+      },
+      {
+        "line": 80,
+        "text": "# Actually build per-range"
+      },
+      {
+        "line": 94,
+        "text": "# print the known fields for reference"
+      }
+    ],
+    "claim_lines": [],
+    "imports": [
+      "import struct, zlib"
+    ],
+    "functions": [
+      {
+        "name": "crc16",
+        "line": 19,
+        "end": 32
+      },
+      {
+        "name": "algs",
+        "line": 34,
+        "end": 75
+      },
+      {
+        "name": "sum8",
+        "line": 36,
+        "end": 36
+      },
+      {
+        "name": "sum16le",
+        "line": 37,
+        "end": 40
+      },
+      {
+        "name": "sum16be",
+        "line": 41,
+        "end": 44
+      },
+      {
+        "name": "sum32",
+        "line": 45,
+        "end": 48
+      },
+      {
+        "name": "xor8",
+        "line": 49,
+        "end": 52
+      },
+      {
+        "name": "inet16",
+        "line": 53,
+        "end": 59
+      },
+      {
+        "name": "c16",
+        "line": 60,
+        "end": 66
+      },
+      {
+        "name": "rb",
+        "line": 22,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/崩溃/crk2.py",
+    "lines": 129,
+    "headings": [
+      {
+        "line": 7,
+        "text": "# ---- candidate target fields: every 1/2/4-byte LE+BE value in first 96 bytes ----"
+      },
+      {
+        "line": 27,
+        "text": "# ---- crc16 generic (reflect in/out supported) ----"
+      },
+      {
+        "line": 92,
+        "text": "# Build lookup: value -> (field list)"
+      },
+      {
+        "line": 114,
+        "text": "# Broader: does the 16-bit or 32-bit result appear ANYWHERE in first 96 bytes as LE/BE?"
+      }
+    ],
+    "claim_lines": [],
+    "imports": [
+      "import struct, zlib",
+      "from collections import defaultdict"
+    ],
+    "functions": [
+      {
+        "name": "fields",
+        "line": 8,
+        "end": 24
+      },
+      {
+        "name": "crc16",
+        "line": 28,
+        "end": 41
+      },
+      {
+        "name": "inet16",
+        "line": 43,
+        "end": 52
+      },
+      {
+        "name": "algs",
+        "line": 54,
+        "end": 77
+      },
+      {
+        "name": "rev",
+        "line": 29,
+        "end": 33
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/通用/campaign.py",
+    "lines": 522,
+    "headings": [
+      {
+        "line": 39,
+        "text": "# 19 known production modes (from the LUMIX Sync facade)"
+      },
+      {
+        "line": 48,
+        "text": "# 48 partition names from s5_parts_v2.json (used as type= candidates,"
+      },
+      {
+        "line": 49,
+        "text": "# because the firmware update path names partitions by these exact strings)"
+      },
+      {
+        "line": 63,
+        "text": "# debug / flash / key / mem style words as type= candidates (read-only GETs)"
+      },
+      {
+        "line": 78,
+        "text": "# real type= values seen in the decompiled facade, per mode"
+      },
+      {
+        "line": 107,
+        "text": "# value boundary / overflow candidates (Phase B). These are all non-destructive"
+      },
+      {
+        "line": 108,
+        "text": "# (a value the parser rejects or ignores). Nothing here is a write/erase/reboot."
+      },
+      {
+        "line": 117,
+        "text": "# long value / long type (Phase B length probes; still read-only)"
+      }
+    ],
+    "claim_lines": [],
+    "imports": [
+      "import argparse",
+      "import re",
+      "import time",
+      "import uuid",
+      "from urllib.parse import quote",
+      "from common import Net, Reporter, Health, parse_camrply, is_generic"
+    ],
+    "functions": [
+      {
+        "name": "parse_phase_arg",
+        "line": 439,
+        "end": 452
+      },
+      {
+        "name": "main",
+        "line": 455,
+        "end": 518
+      },
+      {
+        "name": "__init__",
+        "line": 123,
+        "end": 127
+      },
+      {
+        "name": "probe_get",
+        "line": 130,
+        "end": 156
+      },
+      {
+        "name": "phase_A",
+        "line": 159,
+        "end": 175
+      },
+      {
+        "name": "_measure_baseline",
+        "line": 177,
+        "end": 183
+      },
+      {
+        "name": "phase_B",
+        "line": 186,
+        "end": 206
+      },
+      {
+        "name": "phase_C",
+        "line": 209,
+        "end": 242
+      },
+      {
+        "name": "phase_D",
+        "line": 245,
+        "end": 280
+      },
+      {
+        "name": "phase_E",
+        "line": 283,
+        "end": 335
+      },
+      {
+        "name": "phase_F",
+        "line": 338,
+        "end": 365
+      },
+      {
+        "name": "phase_G",
+        "line": 368,
+        "end": 394
+      },
+      {
+        "name": "phase_H",
+        "line": 397,
+        "end": 436
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/通用/common.py",
+    "lines": 411,
+    "headings": [
+      {
+        "line": 26,
+        "text": "# generic \"rejection\" substrings: a probe returning one of these is NOT"
+      },
+      {
+        "line": 27,
+        "text": "# interesting (it just means \"unknown parameter\"). Everything else is a"
+      },
+      {
+        "line": 28,
+        "text": "# candidate finding worth keeping."
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 32,
+        "text": "    \"err_no_response\", \"err_busy\", \"err_timeout\", \"err_critical\","
+      }
+    ],
+    "imports": [
+      "import json",
+      "import os",
+      "import socket",
+      "import time",
+      "import urllib.request",
+      "import urllib.error",
+      "from xml.etree import ElementTree"
+    ],
+    "functions": [
+      {
+        "name": "parse_camrply",
+        "line": 38,
+        "end": 51
+      },
+      {
+        "name": "is_generic",
+        "line": 146,
+        "end": 150
+      },
+      {
+        "name": "__init__",
+        "line": 57,
+        "end": 62
+      },
+      {
+        "name": "_pace",
+        "line": 64,
+        "end": 68
+      },
+      {
+        "name": "get",
+        "line": 70,
+        "end": 87
+      },
+      {
+        "name": "raw",
+        "line": 89,
+        "end": 111
+      },
+      {
+        "name": "tcp",
+        "line": 113,
+        "end": 123
+      },
+      {
+        "name": "tcp_send",
+        "line": 125,
+        "end": 143
+      },
+      {
+        "name": "__init__",
+        "line": 157,
+        "end": 162
+      },
+      {
+        "name": "_md",
+        "line": 164,
+        "end": 168
+      },
+      {
+        "name": "_jl",
+        "line": 170,
+        "end": 172
+      },
+      {
+        "name": "header",
+        "line": 174,
+        "end": 177
+      },
+      {
+        "name": "log",
+        "line": 179,
+        "end": 207
+      },
+      {
+        "name": "__init__",
+        "line": 214,
+        "end": 219
+      },
+      {
+        "name": "getstate",
+        "line": 221,
+        "end": 224
+      },
+      {
+        "name": "ok",
+        "line": 226,
+        "end": 235
+      },
+      {
+        "name": "guard",
+        "line": 237,
+        "end": 262
+      },
+      {
+        "name": "__init__",
+        "line": 277,
+        "end": 283
+      },
+      {
+        "name": "_connect",
+        "line": 285,
+        "end": 294
+      },
+      {
+        "name": "close",
+        "line": 296,
+        "end": 303
+      },
+      {
+        "name": "_recv",
+        "line": 305,
+        "end": 321
+      },
+      {
+        "name": "_recv_until",
+        "line": 323,
+        "end": 339
+      },
+      {
+        "name": "_send",
+        "line": 341,
+        "end": 349
+      },
+      {
+        "name": "request",
+        "line": 351,
+        "end": 376
+      },
+      {
+        "name": "_read_response",
+        "line": 378,
+        "end": 393
+      },
+      {
+        "name": "send",
+        "line": 395,
+        "end": 411
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/预言机/api_enum.py",
+    "lines": 42,
+    "headings": [
+      {
+        "line": 19,
+        "text": "# read-only / safe modes"
+      },
+      {
+        "line": 33,
+        "text": "# getinfo types"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 4,
+        "text": "string arguments (RCE surface: sprintf overflow in GoAhead CGI).\"\"\""
+      }
+    ],
+    "imports": [
+      "import sys, os, time",
+      "from common import KA, parse_camrply"
+    ],
+    "functions": [
+      {
+        "name": "log",
+        "line": 9,
+        "end": 9
+      },
+      {
+        "name": "q",
+        "line": 11,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/预言机/api_enum2.py",
+    "lines": 43,
+    "headings": [
+      {
+        "line": 38,
+        "text": "# final health"
+      }
+    ],
+    "claim_lines": [],
+    "imports": [
+      "import sys, os, time",
+      "from common import KA, parse_camrply"
+    ],
+    "functions": [
+      {
+        "name": "log",
+        "line": 8,
+        "end": 8
+      },
+      {
+        "name": "q",
+        "line": 10,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/预言机/http_fingerprint.py",
+    "lines": 259,
+    "headings": [],
+    "claim_lines": [
+      {
+        "line": 6,
+        "text": "  1. Confirm the server language/framework (GoAhead / Embedthis, C)."
+      }
+    ],
+    "imports": [
+      "import os",
+      "import re",
+      "import socket",
+      "import subprocess",
+      "import sys",
+      "import time",
+      "from common import KA, parse_camrply"
+    ],
+    "functions": [
+      {
+        "name": "log",
+        "line": 34,
+        "end": 38
+      },
+      {
+        "name": "curl",
+        "line": 41,
+        "end": 55
+      },
+      {
+        "name": "raw",
+        "line": 58,
+        "end": 84
+      },
+      {
+        "name": "health",
+        "line": 87,
+        "end": 95
+      },
+      {
+        "name": "wait_ok",
+        "line": 98,
+        "end": 105
+      },
+      {
+        "name": "show",
+        "line": 108,
+        "end": 130
+      },
+      {
+        "name": "guard",
+        "line": 133,
+        "end": 135
+      },
+      {
+        "name": "main",
+        "line": 138,
+        "end": 252
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/预言机/poll_wait.py",
+    "lines": 21,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import time, urllib.request"
+    ],
+    "functions": [
+      {
+        "name": "g",
+        "line": 3,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/预言机/portscan.py",
+    "lines": 17,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import socket, concurrent.futures as cf"
+    ],
+    "functions": [
+      {
+        "name": "chk",
+        "line": 5,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/预言机/run_when_up.py",
+    "lines": 77,
+    "headings": [
+      {
+        "line": 67,
+        "text": "# Launch Phase I (foreground subprocess so we see the exit code)."
+      }
+    ],
+    "claim_lines": [],
+    "imports": [
+      "import subprocess, sys, time, urllib.request",
+      "import concurrent.futures as cf"
+    ],
+    "functions": [
+      {
+        "name": "getstate",
+        "line": 6,
+        "end": 13
+      },
+      {
+        "name": "scan_subnet",
+        "line": 15,
+        "end": 35
+      },
+      {
+        "name": "probe",
+        "line": 18,
+        "end": 27
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/预言机/scan.py",
+    "lines": 13,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import socket, concurrent.futures as cf"
+    ],
+    "functions": [
+      {
+        "name": "probe",
+        "line": 2,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/预言机/scan_mac.sh",
+    "lines": 13,
+    "headings": [
+      {
+        "line": 2,
+        "text": "# parallel ping sweep, then dump arp, grep camera MAC"
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/预言机/wait_result.py",
+    "lines": 41,
+    "headings": [],
+    "claim_lines": [],
+    "imports": [
+      "import subprocess, time, re"
+    ],
+    "functions": [
+      {
+        "name": "proc_alive",
+        "line": 9,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/预言机/watch_camera.sh",
+    "lines": 15,
+    "headings": [],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/scripts/预言机/watch_mac.sh",
+    "lines": 33,
+    "headings": [
+      {
+        "line": 2,
+        "text": "# Watch for the camera coming back on the home LAN."
+      },
+      {
+        "line": 3,
+        "text": "# Each tick: probe .131 (fast); every 3rd tick do a full MAC sweep."
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/参考报告/S5_AES破解可行性评估_20261011.md",
+    "lines": 631,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# DC-S5（MC801）固件 AES 破解可行性 —— 汇总评估报告"
+      },
+      {
+        "line": 10,
+        "text": "## 0. 一句话结论（TL;DR）"
+      },
+      {
+        "line": 24,
+        "text": "## 1. 背景、材料与方法"
+      },
+      {
+        "line": 45,
+        "text": "## 2. 已确认的固件结构（老平台，已逐字节复核）"
+      },
+      {
+        "line": 70,
+        "text": "## 3. 静态验证矩阵（全部阴性）"
+      },
+      {
+        "line": 138,
+        "text": "## 4. 为什么\"每台相机/每个固件版本密钥看起来不同\"（密钥 vs IV vs 明文）"
+      },
+      {
+        "line": 170,
+        "text": "## 5. 只读实机验证：松下私有 PTP 协议完整解码（2026-10-11，DC-S5 / 固件 2.9）"
+      },
+      {
+        "line": 330,
+        "text": "## 6. 魔灯（Magic Lantern）式\"固件升级过程动手脚\"可行性评估"
+      },
+      {
+        "line": 364,
+        "text": "## 7. 真正可行的路线（离开静态文件，按性价比）"
+      },
+      {
+        "line": 384,
+        "text": "## 8. 总结论、下一步与诚实边界"
+      },
+      {
+        "line": 422,
+        "text": "## 9. PTP 漏洞 / CVE 枚举 + 实机探测（2026-10-11）"
+      },
+      {
+        "line": 521,
+        "text": "## 10. WonderLantern（Nikon 魔灯组织）对照：能迁移什么、不能迁移什么"
+      },
+      {
+        "line": 577,
+        "text": "## 附录 A：交付包文件清单"
+      },
+      {
+        "line": 623,
+        "text": "## 附录 B：参考资料"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 12,
+        "text": "**对 S5（MC801），静态/离线破解 AES 不可行。** 密钥固化在 MC801 芯片内部安全域（OTP/eFuse/Crypto Engine/TrustZone），不在固件文件内；40/41 个加密分区无已知明文，唯一例外 `ipu_data` 的明文可经同内容分区 `history`（type=2 明文、≈全零）得知 → 已提取 256 KB 真实 keystream（熵 7.999），但**单段 keystream + 128 位随机密钥 + 逐构建随机 IV** 仍不足以恢复密钥（§3.3、§10.4）；IV 逐构建随机；ECDSA P-256 + RSA-4096 双重签名封锁一切改动。唯一可行方向是**硬件/调试侧**（UART/JTAG 读运行时明文，或 SD.DAT 恢复模式绕过验签）——**不需要密钥，只需要开机后 DDR 里的明文**。"
+      },
+      {
+        "line": 34,
+        "text": "- 汇总 `S5固件AES绕过_调研汇总_20261010/`：00 总评估（密钥固化在芯片）、01 固件格式与启动、02 硬件攻击面、03 离线破解与上传预言机（S1M2 系列 130k+ 探测）、04 转接环 EF-L、05 S1RM2 OOB、06 USB-SCSI 源码。"
+      },
+      {
+        "line": 76,
+        "text": "| **1** | **纠正\"512 字节重复\"误判** | 对 41 个 type=3 分区检查 512B 起是否重复/低熵 | **全部满熵密文**。此前的\"512B 起为 0/FF 且重复\"只出现在 **type=2 擦除态分区**（history=0、fileinfo=FF、wifi_info=0、menu_save=FF）——那是 NVRAM\"512B 头 + 擦除区\"的自然结构，**不是加密弱点**，与 +512 明文无关 |"
+      },
+      {
+        "line": 77,
+        "text": "| **2** | **S5 是否有已知明文的加密分区** | 扫全部 type=3 分区，找长段恒定/低熵（=恒定明文）；并比对各分区**明文 SHA@+0x1C** 是否与某 type=2 明文分区相同 | **40 个无已知明文；唯一例外 `ipu_data`** —— 其明文 SHA（`8a39d2…`）与 type=2 明文分区 `history`（≈全零）相同 → 明文已知 → **已提取 256 KB 真实 keystream**（`ks_extract.py`，熵 7.999）。但该明文≈全零（仅 508 字节非零），信息量低；且单段 keystream + 逐构建随机 IV 无法反推 128 位密钥（§10.4） |"
+      },
+      {
+        "line": 128,
+        "text": "3. IV 逐构建随机      —— 41 个全唯一、不可派生、跨版本全变 → 无 nonce 重用、无 IV 预测、跨版本无法做\"同明文同 IV\"对齐"
+      },
+      {
+        "line": 157,
+        "text": "4. **真实 AES 密钥恢复测试（本轮，§10.4）**：用唯一已知明文（`ipu_data`，≈全零、经 `history` 可知）提取 256 KB 真实 keystream（熵 7.999），对 211 个文件内派生候选密钥逐一跑 AES-128 CBC/CTR/ECB（table-IV 与 zero-IV）→ **0 命中** → 密钥**非文件内派生**、且是 128 位随机密钥（单段 keystream 无法反推）。这比\"猜 key\"强：这次是**拿真实明文当校验**去解密，仍然失败。"
+      },
+      {
+        "line": 166,
+        "text": "静态证据无法 100% 排除芯片内存在逐设备二级密钥/认证层，但它只影响\"这台相机是否接受该固件\"（验签），**不影响\"能否解密\"**——解密主密钥固定，由\"官方单一固件通用\"这一事实硬确认。"
+      },
+      {
+        "line": 172,
+        "text": "> 本章全部实测在真机 **纯只读** 操作下完成（序列号 `0000000000000`），零风险、零副作用。它解开了此前两处\"未知\"：**配置导入格式** 与 **固件升级状态机全貌**，并坐实了 0x9606 **无\"任意地址写\"原语**。"
+      },
+      {
+        "line": 286,
+        "text": "- 数据面（0x9606/0x9607）的目标地址、长度、数据**由主机按固件下发的目标写**，但**地址是机身给的**——主机无法把数据写到\"非目标地址\"。"
+      },
+      {
+        "line": 333,
+        "text": "Magic Lantern **从不破解固件加密**。它的真正机制是：拿到**开机早期代码执行权**（BootROM 恢复 / SD 卡启动 / JTAG 断点）→ 自己跑一段代码 → **读解密后的 RAM / hook 解密过程**。一旦有运行时落脚点，AES 就不再相关。因此\"在固件升级过程中改动升级字节\"**不是 ML 的做法**，对 S5 这条路是死的（见 6.2）。"
+      },
+      {
+        "line": 336,
+        "text": "1. **没有\"任意地址写\"原语**：`0x9606` 的目标内存地址是**机身返回**的（ready 事件 `0x41000013` 把地址存到主机 `0x260498`/`0x2604ac`，再原样填入 0x9606；§5.5 实机+反汇编双重坐实），不是主机可填 → 主机无法把数据写到任意地址。"
+      },
+      {
+        "line": 338,
+        "text": "3. **PTP 侧无 RAM 读回**：此前逐条核实 6 条路径（0x9112/0x9703/0x9605-07/0x9706-07/0x9421），**没有任何\"主机指定物理地址+长度→返回 RAM\"的操作码**。升级时解密出的明文即便落在 RAM 也**取不出来**。"
+      },
+      {
+        "line": 347,
+        "text": "- **UART/JTAG**：HERO6/7 已公布 debug 引脚 + OpenOCD；Cortex-A7 有完整 CoreSight（3 看门点/5 断点）→ 直接 dump RAM = **解密后的 zimage/rootfs/program 明文**。"
+      },
+      {
+        "line": 353,
+        "text": "升级流程唯一有用的地方，是它让**整份解密镜像短暂驻留在 RAM staging buffer**。若已握有 UART/JTAG（或 SD 恢复钩子），则："
+      },
+      {
+        "line": 354,
+        "text": "`发合法 UPD → 机身验签+解密+进 RAM → commit 前用 JTAG 断点 dump staging buffer` = **确定性的抓明文窗口**。"
+      },
+      {
+        "line": 355,
+        "text": "但这是 **JTAG/SD 入口的下游收益**；单独靠 PTP 无法落地。"
+      },
+      {
+        "line": 358,
+        "text": "- \"在固件升级过程中动升级字节\"：**不可行**（无地址写 + 双签名 + 无 RAM 读回）。"
+      },
+      {
+        "line": 370,
+        "text": "| **1** | **UART / JTAG 调试口 dump 运行时 RAM** | MC801（A7/A53 级）有完整 CoreSight；同类 GoPro 已公布 debug 引脚 + OpenOCD 配置；断点读 RAM 即得**解密后明文** | 高（拆机焊 5~6 线）| **低（只读不破坏）** |"
+      },
+      {
+        "line": 379,
+        "text": "- **PTP 软件侧全部只读操作码**（§5）：无 RAM 读回、无任意地址写、无密钥/明文泄露。"
+      },
+      {
+        "line": 391,
+        "text": "  ⇒ 静态/离线/跨版本 均无法从密文或版本差中恢复密钥或明文"
+      },
+      {
+        "line": 394,
+        "text": "  无 RAM 读回、无任意地址写、配置面明文 ≠ 固件明文"
+      },
+      {
+        "line": 406,
+        "text": "### 8.2 下一步（零风险优先）"
+      },
+      {
+        "line": 410,
+        "text": "3. **JTAG dump RAM**（先备份原固件）：拿解密后的 loader/program/zimage/rootfs 明文 = **目标达成**。"
+      },
+      {
+        "line": 445,
+        "text": "- **Milbeaut SoC（MC801）**：0 个公开 CVE（闭源，与\"密钥固化在芯片\"的判定一致）。"
+      },
+      {
+        "line": 479,
+        "text": "2. **TID 不校验**：TID=0/最大/复用均成功。但设备侧无 TID 状态缓存 → 无法伪造\"对其它事务的响应\"。"
+      },
+      {
+        "line": 554,
+        "text": "- **无法直接判\"密钥同/异\"**：因为加密分区的 IV 逐版随机、**不存在\"同明文 + 同 IV\"的分区对**，所以无法用\"同明文同 IV → 比密文\"直接判定密钥是否跨版本相同。这是随机 IV 设计带来的**正面效果**——它把跨版本差分这条静态路线彻底封死。"
+      },
+      {
+        "line": 565,
+        "text": "**结论**：S5 的密钥**不是文件内派生的小 secret**（区别于 Nikon 的 K8）；结合\"单段 keystream + 逐构建随机 IV\"，即使有已知明文也**无法反推 128 位随机密钥**。静态/离线侧到此穷尽。"
+      },
+      {
+        "line": 570,
+        "text": "2. **重打包 + 重签名（被双重签名封死，除非走升级流程）**：Nikon 用恢复的 K8 重签名即可刷入。S5 是 **ECDSA P-256 + RSA-4096 非对称双签名**，私钥不可恢复 → **无法离线重签**。唯一绕过点是**固件升级流程**（0x9606/0x9607）——但 §5 已坐实 0x9606 **无\"任意地址写\"原语**、机内 Bootloader 仍做外层解包校验，故此路当前**不通**（留待深挖升级状态机，见 §5.5/§6）。"
+      },
+      {
+        "line": 585,
+        "text": "│   ├── 00-总评估报告-中文.md           前序汇总总评估（密钥固化在芯片）"
+      }
+    ]
+  },
+  {
+    "path": "S5逆向_研究总报告_20261011/参考报告/根目录README.md",
+    "lines": 71,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# DC-S5（MC801）固件 AES 破解研究 —— 项目总览"
+      },
+      {
+        "line": 6,
+        "text": "## 一句话结论"
+      },
+      {
+        "line": 10,
+        "text": "## 主要成果"
+      },
+      {
+        "line": 19,
+        "text": "## 文件地图"
+      },
+      {
+        "line": 41,
+        "text": "## 安全模型（重要）"
+      },
+      {
+        "line": 49,
+        "text": "## 如何运行工具（相机 Tether 模式 + USB 连接后）"
+      },
+      {
+        "line": 52,
+        "text": "# macOS 首选（原生 ImageCaptureCore）："
+      },
+      {
+        "line": 58,
+        "text": "# Linux（pyusb 路径）："
+      },
+      {
+        "line": 63,
+        "text": "# 静态分析（离线，无需相机）："
+      },
+      {
+        "line": 69,
+        "text": "## 打包"
+      }
+    ],
+    "claim_lines": [
+      {
+        "line": 8,
+        "text": "**对 S5（MC801），静态/离线破解 AES 不可行。** 密钥固化在 MC801 芯片内部安全域（OTP/eFuse/Crypto Engine/TrustZone），不在固件文件内；41 个加密分区**没有任何一个已知明文**；IV 逐构建随机（5 版实测）；ECDSA P-256 + RSA-4096 双重签名封锁一切改动。松下私有 PTP 全操作码实机只读验证后，**软件/协议侧同样封死**。唯一可行方向是**硬件/调试侧**（UART/JTAG 读运行时明文，或 SD.DAT 恢复模式绕过验签）——不需要密钥，只需要开机后 DDR 里的明文。"
+      },
+      {
+        "line": 15,
+        "text": "4. **固件升级状态机全貌**（0x9605 只读探测 + Tether 反汇编对照）：坐实 0x9606 **无\"任意地址写\"原语**（目标地址由机身下发）；魔灯式\"升级过程动手脚\"判定为不可行（无地址写 + 双签名 + 无 RAM 读回）。"
+      }
+    ]
+  },
+  {
+    "path": "复现操作手册.md",
+    "lines": 99,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 操作手册"
+      },
+      {
+        "line": 3,
+        "text": "## A. 准备"
+      },
+      {
+        "line": 12,
+        "text": "## B. 只读确认"
+      },
+      {
+        "line": 34,
+        "text": "## C. 单项选择"
+      },
+      {
+        "line": 54,
+        "text": "## D. 在机身核对"
+      },
+      {
+        "line": 65,
+        "text": "## E. 实际录制与离线检查"
+      },
+      {
+        "line": 83,
+        "text": "## F. 重启及“我的列表”实验"
+      },
+      {
+        "line": 89,
+        "text": "## G. 恢复与交付反馈"
+      }
+    ],
+    "claim_lines": []
+  },
+  {
+    "path": "研究报告.md",
+    "lines": 173,
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Panasonic DC-S1H 隐藏录制格式显示与 S5 迁移研究报告"
+      },
+      {
+        "line": 12,
+        "text": "## 1. 摘要"
+      },
+      {
+        "line": 20,
+        "text": "## 2. 范围、环境与证据等级"
+      },
+      {
+        "line": 34,
+        "text": "## 3. 实现机制"
+      },
+      {
+        "line": 80,
+        "text": "## 4. 实机结果"
+      },
+      {
+        "line": 119,
+        "text": "## 5. 固件静态研究成果与未解问题"
+      },
+      {
+        "line": 133,
+        "text": "## 6. S5 迁移方案"
+      },
+      {
+        "line": 157,
+        "text": "## 7. 复现程序与分发说明"
+      },
+      {
+        "line": 165,
+        "text": "## 8. 参考与证据索引"
+      }
+    ],
+    "claim_lines": []
+  }
+]

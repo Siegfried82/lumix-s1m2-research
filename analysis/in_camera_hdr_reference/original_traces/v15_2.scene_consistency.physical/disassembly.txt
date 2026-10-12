@@ -1,0 +1,628 @@
+# pydisasm version 6.3.0
+# CPython Python bytecode 3.10 (3439)
+#   Disassembled from CPython Python 3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]
+# Timestamp in code: 0 (1970-01-01 03:00:00)
+# Method Name:       <module>
+# Filename:          v15_2\scene_consistency\physical.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        4
+# Flags:             0x00000040 (NOFREE)
+# First Line:        1
+# Constants:
+#    0: 'Scene-gated physical preparation with the shortest retained shoulder.\n\nRejecting the globally shortest frame must never turn an all-clipped static\nreference into zero support. The same retained-frame choice is used by every\nphysical input, and identity masks preserve the original equations exactly.\n'
+#    1: 0
+#    2: None
+#    3: 2
+#    4: ('Physical',)
+#    5: <Code310 code object ConsistentPhysical at 0x106b20b90, file v15_2\scene_consistency\physical.py>, line 10
+#    6: 'ConsistentPhysical'
+# Names:
+#    0: __doc__
+#    1: numpy
+#    2: np
+#    3: physical
+#    4: Physical
+#    5: ConsistentPhysical
+
+  1:           0 LOAD_CONST           ("Scene-gated physical preparation with the shortest retained shoulder.\n\nRejecting the globally shortest frame must never turn an all-clipped static\nreference into zero support. The same retained-frame choice is used by every\nphysical input, and identity masks preserve the original equations exactly.\n")
+               2 STORE_NAME           (__doc__)
+
+  7:           4 LOAD_CONST           (0)
+               6 LOAD_CONST           (None)
+               8 IMPORT_NAME          (numpy)
+              10 STORE_NAME           (np)
+
+  8:          12 LOAD_CONST           (2)
+              14 LOAD_CONST           (('Physical',))
+              16 IMPORT_NAME          (physical)
+              18 IMPORT_FROM          (Physical)
+              20 STORE_NAME           (Physical)
+              22 POP_TOP
+
+ 10:          24 LOAD_BUILD_CLASS
+              26 LOAD_CONST           (<Code310 code object ConsistentPhysical at 0x106b20b90, file v15_2\scene_consistency\physical.py>, line 10)
+              28 LOAD_CONST           ("ConsistentPhysical")
+              30 MAKE_FUNCTION        (No arguments)
+              32 LOAD_CONST           ("ConsistentPhysical")
+              34 LOAD_NAME            (Physical)
+              36 CALL_FUNCTION        (3 positional arguments)
+              38 STORE_NAME           (ConsistentPhysical)
+              40 LOAD_CONST           (None)
+              42 RETURN_VALUE
+
+
+# Method Name:       ConsistentPhysical
+# Filename:          v15_2\scene_consistency\physical.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        4
+# Flags:             0x00000000 (0x0)
+# First Line:        10
+# Constants:
+#    0: 'ConsistentPhysical'
+#    1: <Code310 code object __init__ at 0x10694ff20, file v15_2\scene_consistency\physical.py>, line 11
+#    2: 'ConsistentPhysical.__init__'
+#    3: <Code310 code object prepare at 0x10694fb90, file v15_2\scene_consistency\physical.py>, line 17
+#    4: 'ConsistentPhysical.prepare'
+#    5: ''
+#    6: None
+#    7: <Code310 code object emit at 0x106a4fe60, file v15_2\scene_consistency\physical.py>, line 21
+#    8: 'ConsistentPhysical.emit'
+#    9: ('', None, None)
+# Names:
+#    0: __name__
+#    1: __module__
+#    2: __qualname__
+#    3: __init__
+#    4: prepare
+#    5: emit
+#    6: __classcell__
+# Free variables:
+#    0: __class__
+
+ 10:           0 LOAD_NAME            (__name__)
+               2 STORE_NAME           (__module__)
+               4 LOAD_CONST           ("ConsistentPhysical")
+               6 STORE_NAME           (__qualname__)
+
+ 11:           8 LOAD_CLOSURE         (__class__)
+              10 BUILD_TUPLE          1
+              12 LOAD_CONST           (<Code310 code object __init__ at 0x10694ff20, file v15_2\scene_consistency\physical.py>, line 11)
+              14 LOAD_CONST           ("ConsistentPhysical.__init__")
+              16 MAKE_FUNCTION        (closure)
+              18 STORE_NAME           (__init__)
+
+ 17:          20 LOAD_CLOSURE         (__class__)
+              22 BUILD_TUPLE          1
+              24 LOAD_CONST           (<Code310 code object prepare at 0x10694fb90, file v15_2\scene_consistency\physical.py>, line 17)
+              26 LOAD_CONST           ("ConsistentPhysical.prepare")
+              28 MAKE_FUNCTION        (closure)
+              30 STORE_NAME           (prepare)
+
+ 21:          32 LOAD_CONST           (('', None, None))
+              34 LOAD_CLOSURE         (__class__)
+              36 BUILD_TUPLE          1
+              38 LOAD_CONST           (<Code310 code object emit at 0x106a4fe60, file v15_2\scene_consistency\physical.py>, line 21)
+              40 LOAD_CONST           ("ConsistentPhysical.emit")
+              42 MAKE_FUNCTION        (default, closure)
+              44 STORE_NAME           (emit)
+              46 LOAD_CLOSURE         (__class__)
+              48 DUP_TOP
+              50 STORE_NAME           (__classcell__)
+              52 RETURN_VALUE
+
+
+# Method Name:       __init__
+# Filename:          v15_2\scene_consistency\physical.py
+# Argument count:    3
+# Position-only argument count: 0
+# Keyword-only arguments: 2
+# Number of locals:  8
+# Stack size:        6
+# Flags:             0x0000000b (VARKEYWORDS | NEWLOCALS | OPTIMIZED)
+# First Line:        11
+# Constants:
+#    0: None
+#    1: 4
+#    2: 'Expected four CFA gates'
+# Names:
+#    0: super
+#    1: __init__
+#    2: rejection
+#    3: upload
+#    4: np
+#    5: asarray
+#    6: float32
+#    7: query_origin
+#    8: spec
+#    9: shape
+#   10: qh
+#   11: qw
+#   12: ValueError
+# Varnames:
+#	self, rt, native, rejection, query_origin, kwargs, _, c
+# Positional arguments:
+#	self, rt, native
+# Local variables:
+#    3: rejection
+#    4: query_origin
+#    5: kwargs
+#    6: _
+#    7: c
+# Cell variables:
+#    0: __class__
+
+ 12:           0 LOAD_GLOBAL          (super)
+               2 CALL_FUNCTION        (0 positional arguments)
+               4 LOAD_ATTR            (__init__)
+               6 LOAD_FAST            (rt)
+               8 LOAD_FAST            (native)
+              10 BUILD_TUPLE          2
+              12 BUILD_MAP            0
+              14 LOAD_FAST            (kwargs)
+              16 DICT_MERGE           1
+              18 CALL_FUNCTION_EX     (keyword and positional arguments)
+              20 POP_TOP
+
+ 13:          22 LOAD_FAST            (rejection)
+              24 LOAD_FAST            (self)
+              26 STORE_ATTR           (rejection)
+              28 LOAD_FAST            (rt)
+              30 LOAD_METHOD          (upload)
+              32 LOAD_GLOBAL          (np)
+              34 LOAD_METHOD          (asarray)
+              36 LOAD_FAST            (query_origin)
+              38 LOAD_GLOBAL          (np)
+              40 LOAD_ATTR            (float32)
+              42 CALL_METHOD          (2 positional arguments)
+              44 CALL_METHOD          (1 positional argument)
+              46 LOAD_FAST            (self)
+              48 STORE_ATTR           (query_origin)
+
+ 14:          50 LOAD_FAST            (rejection)
+              52 LOAD_ATTR            (spec)
+              54 LOAD_ATTR            (shape)
+              56 UNPACK_SEQUENCE      4
+              58 STORE_FAST           (_)
+              60 STORE_FAST           (c)
+              62 LOAD_FAST            (self)
+              64 STORE_ATTR           (qh)
+              66 LOAD_FAST            (self)
+              68 STORE_ATTR           (qw)
+
+ 15:          70 LOAD_FAST            (c)
+              72 LOAD_CONST           (4)
+              74 COMPARE_OP           (!=)
+              76 POP_JUMP_IF_FALSE    (to 86)
+              78 LOAD_GLOBAL          (ValueError)
+              80 LOAD_CONST           ("Expected four CFA gates")
+              82 CALL_FUNCTION        (1 positional argument)
+              84 RAISE_VARARGS        (exception instance)
+         >>   86 LOAD_CONST           (None)
+              88 RETURN_VALUE
+
+
+# Method Name:       prepare
+# Filename:          v15_2\scene_consistency\physical.py
+# Argument count:    4
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  4
+# Stack size:        9
+# Flags:             0x00000003 (NEWLOCALS | OPTIMIZED)
+# First Line:        17
+# Constants:
+#    0: None
+# Names:
+#    0: super
+#    1: prepare
+#    2: rt
+#    3: release_external
+#    4: query_origin
+# Varnames:
+#	self, bank, G, meta
+# Positional arguments:
+#	self, bank, G, meta
+# Cell variables:
+#    0: __class__
+
+ 18:           0 SETUP_FINALLY        (to 34)
+               2 LOAD_GLOBAL          (super)
+               4 CALL_FUNCTION        (0 positional arguments)
+               6 LOAD_METHOD          (prepare)
+               8 LOAD_FAST            (bank)
+              10 LOAD_FAST            (G)
+              12 LOAD_FAST            (meta)
+              14 CALL_METHOD          (3 positional arguments)
+              16 POP_BLOCK
+
+ 19:          18 LOAD_FAST            (self)
+              20 LOAD_ATTR            (rt)
+              22 LOAD_METHOD          (release_external)
+              24 LOAD_FAST            (self)
+              26 LOAD_ATTR            (query_origin)
+              28 CALL_METHOD          (1 positional argument)
+              30 POP_TOP
+              32 RETURN_VALUE
+         >>   34 LOAD_FAST            (self)
+              36 LOAD_ATTR            (rt)
+              38 LOAD_METHOD          (release_external)
+              40 LOAD_FAST            (self)
+              42 LOAD_ATTR            (query_origin)
+              44 CALL_METHOD          (1 positional argument)
+              46 POP_TOP
+              48 RERAISE              0
+
+
+# Method Name:       emit
+# Filename:          v15_2\scene_consistency\physical.py
+# Argument count:    8
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  16
+# Stack size:        26
+# Flags:             0x00000003 (NEWLOCALS | OPTIMIZED)
+# First Line:        21
+# Constants:
+#    0: None
+#    1: ('seed', 'base', 'evidence130')
+#    2: 'evidence130'
+#    3: '2.'
+#    4: '.5'
+#    5: '+.5'
+#    6: ''
+#    7: 'c'
+#    8: 'plane(k,u32(max(y,0)%2)*2u+u32(max(x,0)%2))'
+#    9: 'let ok=usable(k,x,y);'
+#   10: 'let ok=usable(k,x,y)&&query_cfa_ok(k,'
+#   11: ',p);'
+#   12: ('usable', 'saturated', 'measurement')
+#   13: 'fn '
+#   14: '(k:u32,x:i32,y:i32)'
+#   15: '(k:u32,x:i32,y:i32,qp:u32)'
+#   16: '(k,x,y)'
+#   17: '(k,x,y,p)'
+#   18: 'saturated(k,x,y)'
+#   19: 'saturated(k,x,y,qp)'
+#   20: 'plane(k,(u32(clamp(y,0,'
+#   21: 1
+#   22: '))%2u)*2u+u32(clamp(x,0,'
+#   23: '))%2u)'
+#   24: 'k=='
+#   25: 'u &&'
+#   26: 'shortest_kept(k,'
+#   27: ',qp) &&'
+#   28: 'k!='
+#   29: 'u'
+#   30: '!shortest_kept(k,'
+#   31: ',qp)'
+#   32: '\nfn shortest_kept(k:u32,c:u32,p:u32)->bool{\n if(query_cfa_ok('
+#   33: 'u,c,p)){return k=='
+#   34: 'u;}\n var best=0u;var exposure=3.402823e38;\n for(var j=0u;j<7u;j++){if(query_cfa_ok(j,c,p)&&a2[j*17u]<exposure){best=j;exposure=a2[j*17u];}}\n return k==best;\n}\n'
+#   35: '\nfn query_cfa_ok(k:u32,c:u32,p:u32)->bool{\n if(k==0u){return true;}\n let qx=a'
+#   36: '[0]+f32(p%'
+#   37: 'u)*'
+#   38: ';let qy=a'
+#   39: '[1]+f32(p/'
+#   40: ';\n let x=u32(clamp(i32(round((qx-.5)*.25)),0,'
+#   41: '));let y=u32(clamp(i32(round((qy-.5)*.25)),0,'
+#   42: '));\n return a'
+#   43: '[(k*4u+c)*'
+#   44: 'u+y*'
+#   45: 'u+x]<.5;\n}\n'
+#   46: 'scene_retained_shoulder'
+#   47: ('count', 'out')
+# Names:
+#    0: len
+#    1: r
+#    2: o
+#    3: replace
+#    4: shortest_rolloff
+#    5: h
+#    6: w
+#    7: qw
+#    8: qh
+#    9: rejection
+#   10: query_origin
+#   11: super
+#   12: emit
+# Varnames:
+#	self, tag, inputs, shape, body, helpers, count, out, b, is_evidence, width, scale, offset, phase, fn, cfa
+# Positional arguments:
+#	self, tag, inputs, shape, body, helpers, count, out
+# Local variables:
+#    8: b
+#    9: is_evidence
+#   10: width
+#   11: scale
+#   12: offset
+#   13: phase
+#   14: fn
+#   15: cfa
+# Cell variables:
+#    0: __class__
+
+ 22:           0 LOAD_FAST            (tag)
+               2 LOAD_CONST           (('seed', 'base', 'evidence130'))
+               4 CONTAINS_OP          (in)
+               6 POP_JUMP_IF_FALSE    (to 438)
+
+ 23:           8 LOAD_GLOBAL          (len)
+              10 LOAD_FAST            (inputs)
+              12 CALL_FUNCTION        (1 positional argument)
+              14 STORE_FAST           (b)
+              16 LOAD_FAST            (tag)
+              18 LOAD_CONST           ("evidence130")
+              20 COMPARE_OP           (==)
+              22 STORE_FAST           (is_evidence)
+              24 LOAD_FAST            (is_evidence)
+              26 POP_JUMP_IF_FALSE    (to 34)
+              28 LOAD_FAST            (self)
+              30 LOAD_ATTR            (r)
+              32 JUMP_FORWARD         (to 38)
+         >>   34 LOAD_FAST            (self)
+              36 LOAD_ATTR            (o)
+         >>   38 STORE_FAST           (width)
+
+ 24:          40 LOAD_FAST            (is_evidence)
+              42 POP_JUMP_IF_FALSE    (to 48)
+              44 LOAD_CONST           ("2.")
+              46 JUMP_FORWARD         (to 50)
+         >>   48 LOAD_CONST           (".5")
+         >>   50 STORE_FAST           (scale)
+              52 LOAD_FAST            (is_evidence)
+              54 POP_JUMP_IF_FALSE    (to 60)
+              56 LOAD_CONST           ("+.5")
+              58 JUMP_FORWARD         (to 62)
+         >>   60 LOAD_CONST           ("")
+         >>   62 STORE_FAST           (offset)
+
+ 25:          64 LOAD_FAST            (is_evidence)
+              66 POP_JUMP_IF_FALSE    (to 72)
+              68 LOAD_CONST           ("c")
+              70 JUMP_FORWARD         (to 74)
+         >>   72 LOAD_CONST           ("plane(k,u32(max(y,0)%2)*2u+u32(max(x,0)%2))")
+         >>   74 STORE_FAST           (phase)
+
+ 26:          76 LOAD_FAST            (body)
+              78 LOAD_METHOD          (replace)
+              80 LOAD_CONST           ("let ok=usable(k,x,y);")
+              82 LOAD_CONST           ("let ok=usable(k,x,y)&&query_cfa_ok(k,")
+              84 LOAD_FAST            (phase)
+              86 FORMAT_VALUE         0
+              88 LOAD_CONST           (",p);")
+              90 BUILD_STRING         3
+              92 CALL_METHOD          (2 positional arguments)
+              94 STORE_FAST           (body)
+
+ 27:          96 LOAD_FAST            (self)
+              98 LOAD_ATTR            (shortest_rolloff)
+             100 LOAD_CONST           (None)
+             102 IS_OP                (is not)
+             104 POP_JUMP_IF_FALSE    (to 296)
+
+ 28:         106 LOAD_CONST           (('usable', 'saturated', 'measurement'))
+             108 GET_ITER
+         >>  110 FOR_ITER             (to 168)
+             112 STORE_FAST           (fn)
+
+ 29:         114 LOAD_FAST            (helpers)
+             116 LOAD_METHOD          (replace)
+             118 LOAD_CONST           ("fn ")
+             120 LOAD_FAST            (fn)
+             122 FORMAT_VALUE         0
+             124 LOAD_CONST           ("(k:u32,x:i32,y:i32)")
+             126 BUILD_STRING         3
+             128 LOAD_CONST           ("fn ")
+             130 LOAD_FAST            (fn)
+             132 FORMAT_VALUE         0
+             134 LOAD_CONST           ("(k:u32,x:i32,y:i32,qp:u32)")
+             136 BUILD_STRING         3
+             138 CALL_METHOD          (2 positional arguments)
+             140 STORE_FAST           (helpers)
+
+ 30:         142 LOAD_FAST            (body)
+             144 LOAD_METHOD          (replace)
+             146 LOAD_FAST            (fn)
+             148 FORMAT_VALUE         0
+             150 LOAD_CONST           ("(k,x,y)")
+             152 BUILD_STRING         2
+             154 LOAD_FAST            (fn)
+             156 FORMAT_VALUE         0
+             158 LOAD_CONST           ("(k,x,y,p)")
+             160 BUILD_STRING         2
+             162 CALL_METHOD          (2 positional arguments)
+             164 STORE_FAST           (body)
+             166 JUMP_ABSOLUTE        (to 110)
+
+ 31:     >>  168 LOAD_FAST            (helpers)
+             170 LOAD_METHOD          (replace)
+             172 LOAD_CONST           ("saturated(k,x,y)")
+             174 LOAD_CONST           ("saturated(k,x,y,qp)")
+             176 CALL_METHOD          (2 positional arguments)
+             178 STORE_FAST           (helpers)
+
+ 32:         180 LOAD_CONST           ("plane(k,(u32(clamp(y,0,")
+             182 LOAD_FAST            (self)
+             184 LOAD_ATTR            (h)
+             186 LOAD_CONST           (1)
+             188 BINARY_SUBTRACT
+             190 FORMAT_VALUE         0
+             192 LOAD_CONST           ("))%2u)*2u+u32(clamp(x,0,")
+             194 LOAD_FAST            (self)
+             196 LOAD_ATTR            (w)
+             198 LOAD_CONST           (1)
+             200 BINARY_SUBTRACT
+             202 FORMAT_VALUE         0
+             204 LOAD_CONST           ("))%2u)")
+             206 BUILD_STRING         5
+             208 STORE_FAST           (cfa)
+
+ 33:         210 LOAD_FAST            (helpers)
+             212 LOAD_METHOD          (replace)
+             214 LOAD_CONST           ("k==")
+             216 LOAD_FAST            (self)
+             218 LOAD_ATTR            (shortest_rolloff)
+             220 FORMAT_VALUE         0
+             222 LOAD_CONST           ("u &&")
+             224 BUILD_STRING         3
+             226 LOAD_CONST           ("shortest_kept(k,")
+             228 LOAD_FAST            (cfa)
+             230 FORMAT_VALUE         0
+             232 LOAD_CONST           (",qp) &&")
+             234 BUILD_STRING         3
+             236 CALL_METHOD          (2 positional arguments)
+             238 STORE_FAST           (helpers)
+
+ 34:         240 LOAD_FAST            (helpers)
+             242 LOAD_METHOD          (replace)
+             244 LOAD_CONST           ("k!=")
+             246 LOAD_FAST            (self)
+             248 LOAD_ATTR            (shortest_rolloff)
+             250 FORMAT_VALUE         0
+             252 LOAD_CONST           ("u")
+             254 BUILD_STRING         3
+             256 LOAD_CONST           ("!shortest_kept(k,")
+             258 LOAD_FAST            (cfa)
+             260 FORMAT_VALUE         0
+             262 LOAD_CONST           (",qp)")
+             264 BUILD_STRING         3
+             266 CALL_METHOD          (2 positional arguments)
+             268 STORE_FAST           (helpers)
+
+ 35:         270 LOAD_FAST            (helpers)
+             272 LOAD_CONST           ("\nfn shortest_kept(k:u32,c:u32,p:u32)->bool{\n if(query_cfa_ok(")
+
+ 37:         274 LOAD_FAST            (self)
+             276 LOAD_ATTR            (shortest_rolloff)
+
+ 35:         278 FORMAT_VALUE         0
+             280 LOAD_CONST           ("u,c,p)){return k==")
+
+ 37:         282 LOAD_FAST            (self)
+             284 LOAD_ATTR            (shortest_rolloff)
+
+ 35:         286 FORMAT_VALUE         0
+             288 LOAD_CONST           ("u;}\n var best=0u;var exposure=3.402823e38;\n for(var j=0u;j<7u;j++){if(query_cfa_ok(j,c,p)&&a2[j*17u]<exposure){best=j;exposure=a2[j*17u];}}\n return k==best;\n}\n")
+             290 BUILD_STRING         5
+             292 INPLACE_ADD
+             294 STORE_FAST           (helpers)
+
+ 43:     >>  296 LOAD_FAST            (helpers)
+             298 LOAD_CONST           ("\nfn query_cfa_ok(k:u32,c:u32,p:u32)->bool{\n if(k==0u){return true;}\n let qx=a")
+
+ 46:         300 LOAD_FAST            (b)
+             302 LOAD_CONST           (1)
+             304 BINARY_ADD
+
+ 43:         306 FORMAT_VALUE         0
+             308 LOAD_CONST           ("[0]+f32(p%")
+
+ 46:         310 LOAD_FAST            (width)
+
+ 43:         312 FORMAT_VALUE         0
+             314 LOAD_CONST           ("u)*")
+
+ 46:         316 LOAD_FAST            (scale)
+
+ 43:         318 FORMAT_VALUE         0
+
+ 46:         320 LOAD_FAST            (offset)
+
+ 43:         322 FORMAT_VALUE         0
+             324 LOAD_CONST           (";let qy=a")
+
+ 46:         326 LOAD_FAST            (b)
+             328 LOAD_CONST           (1)
+             330 BINARY_ADD
+
+ 43:         332 FORMAT_VALUE         0
+             334 LOAD_CONST           ("[1]+f32(p/")
+
+ 46:         336 LOAD_FAST            (width)
+
+ 43:         338 FORMAT_VALUE         0
+             340 LOAD_CONST           ("u)*")
+
+ 46:         342 LOAD_FAST            (scale)
+
+ 43:         344 FORMAT_VALUE         0
+
+ 46:         346 LOAD_FAST            (offset)
+
+ 43:         348 FORMAT_VALUE         0
+             350 LOAD_CONST           (";\n let x=u32(clamp(i32(round((qx-.5)*.25)),0,")
+
+ 47:         352 LOAD_FAST            (self)
+             354 LOAD_ATTR            (qw)
+             356 LOAD_CONST           (1)
+             358 BINARY_SUBTRACT
+
+ 43:         360 FORMAT_VALUE         0
+             362 LOAD_CONST           ("));let y=u32(clamp(i32(round((qy-.5)*.25)),0,")
+
+ 47:         364 LOAD_FAST            (self)
+             366 LOAD_ATTR            (qh)
+             368 LOAD_CONST           (1)
+             370 BINARY_SUBTRACT
+
+ 43:         372 FORMAT_VALUE         0
+             374 LOAD_CONST           ("));\n return a")
+
+ 48:         376 LOAD_FAST            (b)
+
+ 43:         378 FORMAT_VALUE         0
+             380 LOAD_CONST           ("[(k*4u+c)*")
+
+ 48:         382 LOAD_FAST            (self)
+             384 LOAD_ATTR            (qh)
+             386 LOAD_FAST            (self)
+             388 LOAD_ATTR            (qw)
+             390 BINARY_MULTIPLY
+
+ 43:         392 FORMAT_VALUE         0
+             394 LOAD_CONST           ("u+y*")
+
+ 48:         396 LOAD_FAST            (self)
+             398 LOAD_ATTR            (qw)
+
+ 43:         400 FORMAT_VALUE         0
+             402 LOAD_CONST           ("u+x]<.5;\n}\n")
+             404 BUILD_STRING         25
+             406 INPLACE_ADD
+             408 STORE_FAST           (helpers)
+
+ 51:         410 BUILD_LIST           0
+             412 LOAD_FAST            (inputs)
+             414 LIST_EXTEND          1
+             416 LOAD_FAST            (self)
+             418 LOAD_ATTR            (rejection)
+             420 LIST_APPEND          1
+             422 LOAD_FAST            (self)
+             424 LOAD_ATTR            (query_origin)
+             426 LIST_APPEND          1
+             428 STORE_FAST           (inputs)
+             430 LOAD_CONST           ("scene_retained_shoulder")
+             432 LOAD_FAST            (tag)
+             434 BUILD_TUPLE          2
+             436 STORE_FAST           (tag)
+
+ 52:     >>  438 LOAD_GLOBAL          (super)
+             440 CALL_FUNCTION        (0 positional arguments)
+             442 LOAD_ATTR            (emit)
+             444 LOAD_FAST            (tag)
+             446 LOAD_FAST            (inputs)
+             448 LOAD_FAST            (shape)
+             450 LOAD_FAST            (body)
+             452 LOAD_FAST            (helpers)
+             454 LOAD_FAST            (count)
+             456 LOAD_FAST            (out)
+             458 LOAD_CONST           (('count', 'out'))
+             460 CALL_FUNCTION_KW     (7 total positional and keyword args)
+             462 RETURN_VALUE
+

@@ -1,0 +1,46 @@
+510:             int i12 = c2538k2.f31569E;
+511:             if (C2538k2.f31564S.d() != null) {
+512:                 this.f17594x.getClass();
+513:                 List list = (List) C2538k2.f31564S.d();
+514:                 if (list != null && !list.isEmpty() && i12 < list.size() && (c0643o = (C0643o) list.get(i12)) != null) {
+515:                     this.f17574e0 = c0643o.f8321b;
+516:                     this.f17575f0 = c0643o.f8322c;
+517:                     if (5 == this.f17569Z) {
+518:                         Boolean bool = Boolean.TRUE;
+519:                         c0643o.a(bool);
+520:                         c0643o.f8319H = bool;
+521:                         this.f17594x.getClass();
+522:                         M m10 = C2538k2.f31564S;
+523:                         this.f17594x.getClass();
+524:                         m10.k((ArrayList) C2538k2.f31564S.d());
+525:                     }
+526:                 }
+527:             }
+528:         }
+529:         this.f17586q.f4779b.setOnClickListener(new C(this, 19));
+530:         j jVar = this.f17594x.f31603w;
+531:         byte[] bArr = {this.f17569Z};
+532:         F f10 = new F(26);
+533:         jVar.getClass();
+534:         I5.d.b(bArr);
+535:         synchronized (G0.class) {
+536:         }
+537:         jVar.f6986c0 = bArr[0];
+538:         BluetoothGattCharacteristic bluetoothGattCharacteristic = jVar.f6995h;
+539:         if (bluetoothGattCharacteristic != null) {
+540:             bluetoothGattCharacteristic.setWriteType(1);
+541:             jVar.f6992f0.add(new i(bArr, 0, jVar.f6995h, f10, null));
+542:             if (jVar.f6992f0.size() == 1) {
+543:                 jVar.b();
+544:             }
+545:         }
+546:         this.f17571b0 = false;
+547:         this.f17594x.f31598r.e(getViewLifecycleOwner(), new androidx.lifecycle.N(this) { // from class: z5.o2
+548: 
+549:             /* JADX INFO: renamed from: b, reason: collision with root package name */
+550:             public final /* synthetic */ CameraWifiConnectFragment f31696b;
+551: 
+552:             {
+553:                 this.f31696b = this;
+554:             }
+555: 

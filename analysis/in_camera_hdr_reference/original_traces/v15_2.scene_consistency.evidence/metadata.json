@@ -1,0 +1,178 @@
+{
+  "module": "v15_2.scene_consistency.evidence",
+  "filename": "v15_2\\scene_consistency\\evidence.py",
+  "sha256": "74bdd81d27133eb1374c234520c39eea4a99551f7ca36b70e200e3f7ba882cc2",
+  "functions": [
+    {
+      "scope": "v15_2.scene_consistency.evidence",
+      "name": "<module>",
+      "line": 1,
+      "args": [],
+      "names": [
+        "__doc__",
+        "math",
+        "numpy",
+        "np",
+        "scene_evidence",
+        "SceneEvidence",
+        "PairEvidence"
+      ],
+      "imports": [
+        "math",
+        "numpy",
+        "scene_evidence"
+      ]
+    },
+    {
+      "scope": "v15_2.scene_consistency.evidence.PairEvidence",
+      "name": "PairEvidence",
+      "line": 6,
+      "args": [],
+      "names": [
+        "__name__",
+        "__module__",
+        "__qualname__",
+        "__init__",
+        "stats",
+        "decide",
+        "scatter",
+        "scatter_censored",
+        "__classcell__"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.evidence.PairEvidence.__init__",
+      "name": "__init__",
+      "line": 7,
+      "args": [
+        "self",
+        "rt",
+        "gains"
+      ],
+      "names": [
+        "super",
+        "__init__",
+        "gains"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.evidence.PairEvidence.stats",
+      "name": "stats",
+      "line": 10,
+      "args": [
+        "self",
+        "bank",
+        "G",
+        "meta",
+        "sigma",
+        "stride"
+      ],
+      "names": [
+        "spec",
+        "shape",
+        "math",
+        "ceil",
+        "float",
+        "join",
+        "emit",
+        "gains"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.evidence.PairEvidence.decide",
+      "name": "decide",
+      "line": 62,
+      "args": [
+        "self",
+        "s4",
+        "s6",
+        "black"
+      ],
+      "names": [
+        "spec",
+        "shape",
+        "append",
+        "join",
+        "emit",
+        "gains"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.evidence.PairEvidence.scatter",
+      "name": "scatter",
+      "line": 93,
+      "args": [
+        "self",
+        "s4",
+        "s6",
+        "decision",
+        "black",
+        "outputs",
+        "box"
+      ],
+      "names": [
+        "v15_1.kernels",
+        "grid_for",
+        "spec",
+        "shape",
+        "rt",
+        "stream",
+        "uniform_buffer",
+        "np",
+        "array",
+        "uint32",
+        "join",
+        "pipeline",
+        "bind_group",
+        "dispatch"
+      ],
+      "imports": [
+        "v15_1.kernels"
+      ]
+    },
+    {
+      "scope": "v15_2.scene_consistency.evidence.PairEvidence.scatter.<listcomp>",
+      "name": "<listcomp>",
+      "line": 128,
+      "args": [
+        ".0"
+      ],
+      "names": [
+        "buffer"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.evidence.PairEvidence.scatter_censored",
+      "name": "scatter_censored",
+      "line": 131,
+      "args": [
+        "self",
+        "s4",
+        "s6",
+        "output",
+        "box"
+      ],
+      "names": [
+        "spec",
+        "shape",
+        "join",
+        "emit"
+      ],
+      "imports": []
+    }
+  ],
+  "imports": [
+    "math",
+    "numpy",
+    "scene_evidence",
+    "v15_1.kernels"
+  ],
+  "shaders": [
+    "carchive/jsr_backend/trace/v15_2.scene_consistency.evidence/shader_000.wgsl"
+  ]
+}

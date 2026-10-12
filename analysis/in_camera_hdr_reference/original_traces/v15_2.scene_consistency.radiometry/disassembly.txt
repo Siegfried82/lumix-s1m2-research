@@ -1,0 +1,1036 @@
+# pydisasm version 6.3.0
+# CPython Python bytecode 3.10 (3439)
+#   Disassembled from CPython Python 3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]
+# Timestamp in code: 0 (1970-01-01 03:00:00)
+# Method Name:       <module>
+# Filename:          v15_2\scene_consistency\radiometry.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        4
+# Flags:             0x00000040 (NOFREE)
+# First Line:        1
+# Constants:
+#    0: 'WGPU robust, bounded, slowly varying photometry for scene comparison only.'
+#    1: 0
+#    2: None
+#    3: 2
+#    4: ('SceneEvidence',)
+#    5: ('Ops',)
+#    6: ('ScenePolicyWGPU',)
+#    7: <Code310 code object SparseEvidence at 0x106b22090, file v15_2\scene_consistency\radiometry.py>, line 7
+#    8: 'SparseEvidence'
+#    9: <Code310 code object Photometry at 0x106b22f90, file v15_2\scene_consistency\radiometry.py>, line 26
+#   10: 'Photometry'
+#   11: <Code310 code object gain_tile at 0x106b21f70, file v15_2\scene_consistency\radiometry.py>, line 61
+#   12: 'gain_tile'
+# Names:
+#    0: __doc__
+#    1: numpy
+#    2: np
+#    3: scene_evidence
+#    4: SceneEvidence
+#    5: ops
+#    6: Ops
+#    7: scene_policy_wgpu
+#    8: ScenePolicyWGPU
+#    9: SparseEvidence
+#   10: Photometry
+#   11: gain_tile
+
+  1:           0 LOAD_CONST           ("WGPU robust, bounded, slowly varying photometry for scene comparison only.")
+               2 STORE_NAME           (__doc__)
+
+  2:           4 LOAD_CONST           (0)
+               6 LOAD_CONST           (None)
+               8 IMPORT_NAME          (numpy)
+              10 STORE_NAME           (np)
+
+  3:          12 LOAD_CONST           (2)
+              14 LOAD_CONST           (('SceneEvidence',))
+              16 IMPORT_NAME          (scene_evidence)
+              18 IMPORT_FROM          (SceneEvidence)
+              20 STORE_NAME           (SceneEvidence)
+              22 POP_TOP
+
+  4:          24 LOAD_CONST           (2)
+              26 LOAD_CONST           (('Ops',))
+              28 IMPORT_NAME          (ops)
+              30 IMPORT_FROM          (Ops)
+              32 STORE_NAME           (Ops)
+              34 POP_TOP
+
+  5:          36 LOAD_CONST           (2)
+              38 LOAD_CONST           (('ScenePolicyWGPU',))
+              40 IMPORT_NAME          (scene_policy_wgpu)
+              42 IMPORT_FROM          (ScenePolicyWGPU)
+              44 STORE_NAME           (ScenePolicyWGPU)
+              46 POP_TOP
+
+  7:          48 LOAD_BUILD_CLASS
+              50 LOAD_CONST           (<Code310 code object SparseEvidence at 0x106b22090, file v15_2\scene_consistency\radiometry.py>, line 7)
+              52 LOAD_CONST           ("SparseEvidence")
+              54 MAKE_FUNCTION        (No arguments)
+              56 LOAD_CONST           ("SparseEvidence")
+              58 LOAD_NAME            (SceneEvidence)
+              60 CALL_FUNCTION        (3 positional arguments)
+              62 STORE_NAME           (SparseEvidence)
+
+ 26:          64 LOAD_BUILD_CLASS
+              66 LOAD_CONST           (<Code310 code object Photometry at 0x106b22f90, file v15_2\scene_consistency\radiometry.py>, line 26)
+              68 LOAD_CONST           ("Photometry")
+              70 MAKE_FUNCTION        (No arguments)
+              72 LOAD_CONST           ("Photometry")
+              74 LOAD_NAME            (ScenePolicyWGPU)
+              76 CALL_FUNCTION        (3 positional arguments)
+              78 STORE_NAME           (Photometry)
+
+ 61:          80 LOAD_CONST           (<Code310 code object gain_tile at 0x106b21f70, file v15_2\scene_consistency\radiometry.py>, line 61)
+              82 LOAD_CONST           ("gain_tile")
+              84 MAKE_FUNCTION        (No arguments)
+              86 STORE_NAME           (gain_tile)
+              88 LOAD_CONST           (None)
+              90 RETURN_VALUE
+
+
+# Method Name:       SparseEvidence
+# Filename:          v15_2\scene_consistency\radiometry.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        2
+# Flags:             0x00000040 (NOFREE)
+# First Line:        7
+# Constants:
+#    0: 'SparseEvidence'
+#    1: <Code310 code object compose at 0x10690a2d0, file v15_2\scene_consistency\radiometry.py>, line 8
+#    2: 'SparseEvidence.compose'
+#    3: <Code310 code object collect at 0x106908aa0, file v15_2\scene_consistency\radiometry.py>, line 15
+#    4: 'SparseEvidence.collect'
+#    5: None
+# Names:
+#    0: __name__
+#    1: __module__
+#    2: __qualname__
+#    3: compose
+#    4: collect
+
+  7:           0 LOAD_NAME            (__name__)
+               2 STORE_NAME           (__module__)
+               4 LOAD_CONST           ("SparseEvidence")
+               6 STORE_NAME           (__qualname__)
+
+  8:           8 LOAD_CONST           (<Code310 code object compose at 0x10690a2d0, file v15_2\scene_consistency\radiometry.py>, line 8)
+              10 LOAD_CONST           ("SparseEvidence.compose")
+              12 MAKE_FUNCTION        (No arguments)
+              14 STORE_NAME           (compose)
+
+ 15:          16 LOAD_CONST           (<Code310 code object collect at 0x106908aa0, file v15_2\scene_consistency\radiometry.py>, line 15)
+              18 LOAD_CONST           ("SparseEvidence.collect")
+              20 MAKE_FUNCTION        (No arguments)
+              22 STORE_NAME           (collect)
+              24 LOAD_CONST           (None)
+              26 RETURN_VALUE
+
+
+# Method Name:       Photometry
+# Filename:          v15_2\scene_consistency\radiometry.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        2
+# Flags:             0x00000040 (NOFREE)
+# First Line:        26
+# Constants:
+#    0: 'Photometry'
+#    1: 513
+#    2: <Code310 code object estimate at 0x106b3b320, file v15_2\scene_consistency\radiometry.py>, line 28
+#    3: 'Photometry.estimate'
+#    4: None
+# Names:
+#    0: __name__
+#    1: __module__
+#    2: __qualname__
+#    3: BINS
+#    4: estimate
+
+ 26:           0 LOAD_NAME            (__name__)
+               2 STORE_NAME           (__module__)
+               4 LOAD_CONST           ("Photometry")
+               6 STORE_NAME           (__qualname__)
+
+ 27:           8 LOAD_CONST           (513)
+              10 STORE_NAME           (BINS)
+
+ 28:          12 LOAD_CONST           (<Code310 code object estimate at 0x106b3b320, file v15_2\scene_consistency\radiometry.py>, line 28)
+              14 LOAD_CONST           ("Photometry.estimate")
+              16 MAKE_FUNCTION        (No arguments)
+              18 STORE_NAME           (estimate)
+              20 LOAD_CONST           (None)
+              22 RETURN_VALUE
+
+
+# Method Name:       gain_tile
+# Filename:          v15_2\scene_consistency\radiometry.py
+# Argument count:    5
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  14
+# Stack size:        17
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        61
+# Constants:
+#    0: None
+#    1: 'fn val(f:u32,x:u32,y:u32)->f32{return a0[(f*8u+y)*8u+x];}'
+#    2: 'let f=i/'
+#    3: 'u;let p=i%'
+#    4: 'u;\nlet q=clamp(vec2<f32>((f32(p%'
+#    5: 'u)+'
+#    6: ')*8./'
+#    7: '-.5,(f32(p/'
+#    8: '-.5),vec2<f32>(0.),vec2<f32>(7.));\nlet lo=vec2<u32>(floor(q));let hi=min(lo+vec2<u32>(1u),vec2<u32>(7u));let t=q-vec2<f32>(lo);\ndst[i]=mix(mix(val(f,lo.x,lo.y),val(f,hi.x,lo.y),t.x),mix(val(f,lo.x,hi.y),val(f,hi.x,hi.y),t.x),t.y);'
+#    9: 'photometry_tile'
+#   10: 7
+# Names:
+#    0: float
+#    1: Ops
+#    2: emit
+# Varnames:
+#	rt, field, shape, origin, full, h, w, n, fh, fw, ox, oy, helper, body
+# Positional arguments:
+#	rt, field, shape, origin, full
+# Local variables:
+#    5: h
+#    6: w
+#    7: n
+#    8: fh
+#    9: fw
+#   10: ox
+#   11: oy
+#   12: helper
+#   13: body
+
+ 62:           0 LOAD_FAST            (shape)
+               2 UNPACK_SEQUENCE      2
+               4 STORE_FAST           (h)
+               6 STORE_FAST           (w)
+               8 LOAD_FAST            (h)
+              10 LOAD_FAST            (w)
+              12 BINARY_MULTIPLY
+              14 STORE_FAST           (n)
+              16 LOAD_FAST            (full)
+              18 UNPACK_SEQUENCE      2
+              20 STORE_FAST           (fh)
+              22 STORE_FAST           (fw)
+              24 LOAD_FAST            (origin)
+              26 UNPACK_SEQUENCE      2
+              28 STORE_FAST           (ox)
+              30 STORE_FAST           (oy)
+
+ 63:          32 LOAD_CONST           ("fn val(f:u32,x:u32,y:u32)->f32{return a0[(f*8u+y)*8u+x];}")
+              34 STORE_FAST           (helper)
+
+ 64:          36 LOAD_CONST           ("let f=i/")
+              38 LOAD_FAST            (n)
+              40 FORMAT_VALUE         0
+              42 LOAD_CONST           ("u;let p=i%")
+              44 LOAD_FAST            (n)
+              46 FORMAT_VALUE         0
+              48 LOAD_CONST           ("u;\nlet q=clamp(vec2<f32>((f32(p%")
+
+ 65:          50 LOAD_FAST            (w)
+
+ 64:          52 FORMAT_VALUE         0
+              54 LOAD_CONST           ("u)+")
+
+ 65:          56 LOAD_GLOBAL          (float)
+              58 LOAD_FAST            (ox)
+              60 CALL_FUNCTION        (1 positional argument)
+
+ 64:          62 FORMAT_VALUE         0
+              64 LOAD_CONST           (")*8./")
+
+ 65:          66 LOAD_GLOBAL          (float)
+              68 LOAD_FAST            (fw)
+              70 CALL_FUNCTION        (1 positional argument)
+
+ 64:          72 FORMAT_VALUE         0
+              74 LOAD_CONST           ("-.5,(f32(p/")
+
+ 65:          76 LOAD_FAST            (w)
+
+ 64:          78 FORMAT_VALUE         0
+              80 LOAD_CONST           ("u)+")
+
+ 65:          82 LOAD_GLOBAL          (float)
+              84 LOAD_FAST            (oy)
+              86 CALL_FUNCTION        (1 positional argument)
+
+ 64:          88 FORMAT_VALUE         0
+              90 LOAD_CONST           (")*8./")
+
+ 65:          92 LOAD_GLOBAL          (float)
+              94 LOAD_FAST            (fh)
+              96 CALL_FUNCTION        (1 positional argument)
+
+ 64:          98 FORMAT_VALUE         0
+             100 LOAD_CONST           ("-.5),vec2<f32>(0.),vec2<f32>(7.));\nlet lo=vec2<u32>(floor(q));let hi=min(lo+vec2<u32>(1u),vec2<u32>(7u));let t=q-vec2<f32>(lo);\ndst[i]=mix(mix(val(f,lo.x,lo.y),val(f,hi.x,lo.y),t.x),mix(val(f,lo.x,hi.y),val(f,hi.x,hi.y),t.x),t.y);")
+             102 BUILD_STRING         17
+             104 STORE_FAST           (body)
+
+ 68:         106 LOAD_GLOBAL          (Ops)
+             108 LOAD_FAST            (rt)
+             110 CALL_FUNCTION        (1 positional argument)
+             112 LOAD_METHOD          (emit)
+             114 LOAD_CONST           ("photometry_tile")
+             116 LOAD_FAST            (origin)
+             118 LOAD_FAST            (full)
+             120 BUILD_TUPLE          3
+             122 LOAD_FAST            (field)
+             124 BUILD_LIST           1
+             126 LOAD_CONST           (7)
+             128 LOAD_FAST            (h)
+             130 LOAD_FAST            (w)
+             132 BUILD_TUPLE          3
+             134 LOAD_FAST            (body)
+             136 LOAD_FAST            (helper)
+             138 CALL_METHOD          (5 positional arguments)
+             140 RETURN_VALUE
+
+
+# Method Name:       compose
+# Filename:          v15_2\scene_consistency\radiometry.py
+# Argument count:    4
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  10
+# Stack size:        13
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        8
+# Constants:
+#    0: None
+#    1: 'let p=i%'
+#    2: 'u;let k=i/'
+#    3: 4
+#    4: 'u;let x=f32(p%'
+#    5: 'u)*32.+a2[0]+.5;let y=f32(p/'
+#    6: 'u)*32.+a2[1]+.5;\nlet q=vec2<f32>(x,y)+2.*vec2<f32>(a0[k*2u*'
+#    7: 'u+p],a0[(k*2u+1u)*'
+#    8: 'u+p]);let j=k*9u;let d=a1[j+6u]*q.x+a1[j+7u]*q.y+a1[j+8u];\ndst[i*2u]=(a1[j]*q.x+a1[j+1u]*q.y+a1[j+2u])/d-a2[2];dst[i*2u+1u]=(a1[j+3u]*q.x+a1[j+4u]*q.y+a1[j+5u])/d-a2[3];'
+#    9: 'sparse_compose32'
+#   10: 2
+#   11: ('count',)
+# Names:
+#    0: spec
+#    1: shape
+#    2: emit
+# Varnames:
+#	self, flow, H, origin, k, _, h, w, n, body
+# Positional arguments:
+#	self, flow, H, origin
+# Local variables:
+#    4: k
+#    5: _
+#    6: h
+#    7: w
+#    8: n
+#    9: body
+
+  9:           0 LOAD_FAST            (flow)
+               2 LOAD_ATTR            (spec)
+               4 LOAD_ATTR            (shape)
+               6 UNPACK_SEQUENCE      4
+               8 STORE_FAST           (k)
+              10 STORE_FAST           (_)
+              12 STORE_FAST           (h)
+              14 STORE_FAST           (w)
+              16 LOAD_FAST            (h)
+              18 LOAD_FAST            (w)
+              20 BINARY_MULTIPLY
+              22 STORE_FAST           (n)
+
+ 10:          24 LOAD_CONST           ("let p=i%")
+              26 LOAD_FAST            (n)
+              28 FORMAT_VALUE         0
+              30 LOAD_CONST           ("u;let k=i/")
+              32 LOAD_CONST           (4)
+              34 LOAD_FAST            (n)
+              36 BINARY_MULTIPLY
+              38 FORMAT_VALUE         0
+              40 LOAD_CONST           ("u;let x=f32(p%")
+              42 LOAD_FAST            (w)
+              44 FORMAT_VALUE         0
+              46 LOAD_CONST           ("u)*32.+a2[0]+.5;let y=f32(p/")
+              48 LOAD_FAST            (w)
+              50 FORMAT_VALUE         0
+              52 LOAD_CONST           ("u)*32.+a2[1]+.5;\nlet q=vec2<f32>(x,y)+2.*vec2<f32>(a0[k*2u*")
+
+ 11:          54 LOAD_FAST            (n)
+
+ 10:          56 FORMAT_VALUE         0
+              58 LOAD_CONST           ("u+p],a0[(k*2u+1u)*")
+
+ 11:          60 LOAD_FAST            (n)
+
+ 10:          62 FORMAT_VALUE         0
+              64 LOAD_CONST           ("u+p]);let j=k*9u;let d=a1[j+6u]*q.x+a1[j+7u]*q.y+a1[j+8u];\ndst[i*2u]=(a1[j]*q.x+a1[j+1u]*q.y+a1[j+2u])/d-a2[2];dst[i*2u+1u]=(a1[j+3u]*q.x+a1[j+4u]*q.y+a1[j+5u])/d-a2[3];")
+              66 BUILD_STRING         13
+              68 STORE_FAST           (body)
+
+ 13:          70 LOAD_FAST            (self)
+              72 LOAD_ATTR            (emit)
+              74 LOAD_CONST           ("sparse_compose32")
+              76 LOAD_FAST            (flow)
+              78 LOAD_FAST            (H)
+              80 LOAD_FAST            (origin)
+              82 BUILD_LIST           3
+              84 LOAD_FAST            (k)
+              86 LOAD_CONST           (4)
+              88 LOAD_FAST            (h)
+              90 LOAD_FAST            (w)
+              92 LOAD_CONST           (2)
+              94 BUILD_TUPLE          5
+              96 LOAD_FAST            (body)
+              98 LOAD_FAST            (k)
+             100 LOAD_CONST           (4)
+             102 BINARY_MULTIPLY
+             104 LOAD_FAST            (n)
+             106 BINARY_MULTIPLY
+             108 LOAD_CONST           (('count',))
+             110 CALL_FUNCTION_KW     (5 total positional and keyword args)
+             112 RETURN_VALUE
+
+
+# Method Name:       collect
+# Filename:          v15_2\scene_consistency\radiometry.py
+# Argument count:    4
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  19
+# Stack size:        8
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        15
+# Constants:
+#    0: None
+#    1: ''
+#    2: 'let f=i/'
+#    3: 'u;let p=i%'
+#    4: 'u;let x=p%'
+#    5: 'u;let y=p/'
+#    6: 'u;\nlet src=(y+'
+#    7: 'u)*'
+#    8: 'u+x+'
+#    9: 'u;let dest=(y+'
+#   10: 1
+#   11: 0
+#   12: 'u;\nlet gr=(f*4u+1u)*6u*'
+#   13: 'u+src;let gb=(f*4u+2u)*6u*'
+#   14: 'u+src;\nlet m=.5*(a0[gr]+a0[gb]);let variance=.25*(a0[gr+'
+#   15: 'u]+a0[gb+'
+#   16: 'u]);\nlet valid=a0[gr+'
+#   17: 2
+#   18: 'u]<.001&&a0[gb+'
+#   19: 'u]<.001&&a0[gr+'
+#   20: 3
+#   21: 'u]>.999&&a0[gb+'
+#   22: 'u]>.999&&a0[gr+'
+#   23: 5
+#   24: 'u]>.5&&a0[gb+'
+#   25: 'u]>.5&&m>max(.004,12.*sqrt(variance));\ndst[(f*2u)*'
+#   26: 'u+dest]=m;dst[(f*2u+1u)*'
+#   27: 'u+dest]=select(0.,1.,valid);'
+#   28: 'sparse_collect'
+#   29: 7
+#   30: ('count', 'out')
+# Names:
+#    0: spec
+#    1: shape
+#    2: join
+#    3: emit
+# Varnames:
+#	self, stats, output, box, _, h, w, n, th, tw, tn, x, y, cw, ch, dx, dy, count, body
+# Positional arguments:
+#	self, stats, output, box
+# Local variables:
+#    4: _
+#    5: h
+#    6: w
+#    7: n
+#    8: th
+#    9: tw
+#   10: tn
+#   11: x
+#   12: y
+#   13: cw
+#   14: ch
+#   15: dx
+#   16: dy
+#   17: count
+#   18: body
+
+ 16:           0 LOAD_FAST            (output)
+               2 LOAD_ATTR            (spec)
+               4 LOAD_ATTR            (shape)
+               6 UNPACK_SEQUENCE      4
+               8 STORE_FAST           (_)
+              10 STORE_FAST           (_)
+              12 STORE_FAST           (h)
+              14 STORE_FAST           (w)
+              16 LOAD_FAST            (h)
+              18 LOAD_FAST            (w)
+              20 BINARY_MULTIPLY
+              22 STORE_FAST           (n)
+              24 LOAD_FAST            (stats)
+              26 LOAD_ATTR            (spec)
+              28 LOAD_ATTR            (shape)
+              30 UNPACK_SEQUENCE      5
+              32 STORE_FAST           (_)
+              34 STORE_FAST           (_)
+              36 STORE_FAST           (_)
+              38 STORE_FAST           (th)
+              40 STORE_FAST           (tw)
+              42 LOAD_FAST            (th)
+              44 LOAD_FAST            (tw)
+              46 BINARY_MULTIPLY
+              48 STORE_FAST           (tn)
+
+ 17:          50 LOAD_FAST            (box)
+              52 UNPACK_SEQUENCE      6
+              54 STORE_FAST           (x)
+              56 STORE_FAST           (y)
+              58 STORE_FAST           (cw)
+              60 STORE_FAST           (ch)
+              62 STORE_FAST           (dx)
+              64 STORE_FAST           (dy)
+              66 LOAD_FAST            (cw)
+              68 LOAD_FAST            (ch)
+              70 BINARY_MULTIPLY
+              72 STORE_FAST           (count)
+
+ 18:          74 LOAD_CONST           ("")
+              76 LOAD_METHOD          (join)
+              78 BUILD_LIST           0
+              80 LOAD_CONST           ("let f=i/")
+              82 LIST_APPEND          1
+              84 LOAD_FAST            (count)
+              86 FORMAT_VALUE         0
+              88 LIST_APPEND          1
+              90 LOAD_CONST           ("u;let p=i%")
+              92 LIST_APPEND          1
+              94 LOAD_FAST            (count)
+              96 FORMAT_VALUE         0
+              98 LIST_APPEND          1
+             100 LOAD_CONST           ("u;let x=p%")
+             102 LIST_APPEND          1
+             104 LOAD_FAST            (cw)
+             106 FORMAT_VALUE         0
+             108 LIST_APPEND          1
+             110 LOAD_CONST           ("u;let y=p/")
+             112 LIST_APPEND          1
+             114 LOAD_FAST            (cw)
+             116 FORMAT_VALUE         0
+             118 LIST_APPEND          1
+             120 LOAD_CONST           ("u;\nlet src=(y+")
+             122 LIST_APPEND          1
+
+ 19:         124 LOAD_FAST            (dy)
+
+ 18:         126 FORMAT_VALUE         0
+             128 LIST_APPEND          1
+             130 LOAD_CONST           ("u)*")
+             132 LIST_APPEND          1
+
+ 19:         134 LOAD_FAST            (tw)
+
+ 18:         136 FORMAT_VALUE         0
+             138 LIST_APPEND          1
+             140 LOAD_CONST           ("u+x+")
+             142 LIST_APPEND          1
+
+ 19:         144 LOAD_FAST            (dx)
+
+ 18:         146 FORMAT_VALUE         0
+             148 LIST_APPEND          1
+             150 LOAD_CONST           ("u;let dest=(y+")
+             152 LIST_APPEND          1
+
+ 19:         154 LOAD_FAST            (box)
+             156 LOAD_CONST           (1)
+             158 BINARY_SUBSCR
+
+ 18:         160 FORMAT_VALUE         0
+             162 LIST_APPEND          1
+             164 LOAD_CONST           ("u)*")
+             166 LIST_APPEND          1
+
+ 19:         168 LOAD_FAST            (w)
+
+ 18:         170 FORMAT_VALUE         0
+             172 LIST_APPEND          1
+             174 LOAD_CONST           ("u+x+")
+             176 LIST_APPEND          1
+
+ 19:         178 LOAD_FAST            (box)
+             180 LOAD_CONST           (0)
+             182 BINARY_SUBSCR
+
+ 18:         184 FORMAT_VALUE         0
+             186 LIST_APPEND          1
+             188 LOAD_CONST           ("u;\nlet gr=(f*4u+1u)*6u*")
+             190 LIST_APPEND          1
+
+ 20:         192 LOAD_FAST            (tn)
+
+ 18:         194 FORMAT_VALUE         0
+             196 LIST_APPEND          1
+             198 LOAD_CONST           ("u+src;let gb=(f*4u+2u)*6u*")
+             200 LIST_APPEND          1
+
+ 20:         202 LOAD_FAST            (tn)
+
+ 18:         204 FORMAT_VALUE         0
+             206 LIST_APPEND          1
+             208 LOAD_CONST           ("u+src;\nlet m=.5*(a0[gr]+a0[gb]);let variance=.25*(a0[gr+")
+             210 LIST_APPEND          1
+
+ 21:         212 LOAD_FAST            (tn)
+
+ 18:         214 FORMAT_VALUE         0
+             216 LIST_APPEND          1
+             218 LOAD_CONST           ("u]+a0[gb+")
+             220 LIST_APPEND          1
+
+ 21:         222 LOAD_FAST            (tn)
+
+ 18:         224 FORMAT_VALUE         0
+             226 LIST_APPEND          1
+             228 LOAD_CONST           ("u]);\nlet valid=a0[gr+")
+             230 LIST_APPEND          1
+
+ 22:         232 LOAD_CONST           (2)
+             234 LOAD_FAST            (tn)
+             236 BINARY_MULTIPLY
+
+ 18:         238 FORMAT_VALUE         0
+             240 LIST_APPEND          1
+             242 LOAD_CONST           ("u]<.001&&a0[gb+")
+             244 LIST_APPEND          1
+
+ 22:         246 LOAD_CONST           (2)
+             248 LOAD_FAST            (tn)
+             250 BINARY_MULTIPLY
+
+ 18:         252 FORMAT_VALUE         0
+             254 LIST_APPEND          1
+             256 LOAD_CONST           ("u]<.001&&a0[gr+")
+             258 LIST_APPEND          1
+
+ 22:         260 LOAD_CONST           (3)
+             262 LOAD_FAST            (tn)
+             264 BINARY_MULTIPLY
+
+ 18:         266 FORMAT_VALUE         0
+             268 LIST_APPEND          1
+             270 LOAD_CONST           ("u]>.999&&a0[gb+")
+             272 LIST_APPEND          1
+
+ 22:         274 LOAD_CONST           (3)
+             276 LOAD_FAST            (tn)
+             278 BINARY_MULTIPLY
+
+ 18:         280 FORMAT_VALUE         0
+             282 LIST_APPEND          1
+             284 LOAD_CONST           ("u]>.999&&a0[gr+")
+             286 LIST_APPEND          1
+
+ 22:         288 LOAD_CONST           (5)
+             290 LOAD_FAST            (tn)
+             292 BINARY_MULTIPLY
+
+ 18:         294 FORMAT_VALUE         0
+             296 LIST_APPEND          1
+             298 LOAD_CONST           ("u]>.5&&a0[gb+")
+             300 LIST_APPEND          1
+
+ 22:         302 LOAD_CONST           (5)
+             304 LOAD_FAST            (tn)
+             306 BINARY_MULTIPLY
+
+ 18:         308 FORMAT_VALUE         0
+             310 LIST_APPEND          1
+             312 LOAD_CONST           ("u]>.5&&m>max(.004,12.*sqrt(variance));\ndst[(f*2u)*")
+             314 LIST_APPEND          1
+
+ 23:         316 LOAD_FAST            (n)
+
+ 18:         318 FORMAT_VALUE         0
+             320 LIST_APPEND          1
+             322 LOAD_CONST           ("u+dest]=m;dst[(f*2u+1u)*")
+             324 LIST_APPEND          1
+
+ 23:         326 LOAD_FAST            (n)
+
+ 18:         328 FORMAT_VALUE         0
+             330 LIST_APPEND          1
+             332 LOAD_CONST           ("u+dest]=select(0.,1.,valid);")
+             334 LIST_APPEND          1
+             336 CALL_METHOD          (1 positional argument)
+             338 STORE_FAST           (body)
+
+ 24:         340 LOAD_FAST            (self)
+             342 LOAD_ATTR            (emit)
+             344 LOAD_CONST           ("sparse_collect")
+             346 LOAD_FAST            (box)
+             348 LOAD_FAST            (th)
+             350 LOAD_FAST            (tw)
+             352 BUILD_TUPLE          4
+             354 LOAD_FAST            (stats)
+             356 BUILD_LIST           1
+             358 LOAD_FAST            (output)
+             360 LOAD_ATTR            (spec)
+             362 LOAD_ATTR            (shape)
+             364 LOAD_FAST            (body)
+             366 LOAD_CONST           (7)
+             368 LOAD_FAST            (count)
+             370 BINARY_MULTIPLY
+             372 LOAD_FAST            (output)
+             374 LOAD_CONST           (('count', 'out'))
+             376 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             378 RETURN_VALUE
+
+
+# Method Name:       estimate
+# Filename:          v15_2\scene_consistency\radiometry.py
+# Argument count:    2
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  17
+# Stack size:        23
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        28
+# Constants:
+#    0: None
+#    1: 64
+#    2: 7
+#    3: '@group(0) @binding(0) var<storage,read> samples:array<f32>;\n@group(0) @binding(1) var<storage,read_write> hist:array<atomic<u32>>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) gid:vec3<u32>){\nlet i=gid.x+gid.y*4194304u;if(i>='
+#    4: 'u){return;}let p=i%'
+#    5: 'u;let f=i/'
+#    6: 'u;\nif(samples[(f*2u+1u)*'
+#    7: 'u+p]<.5||samples['
+#    8: 'u+p]<.5){return;}\nlet z=log(samples[(f*2u)*'
+#    9: 'u+p]/samples[p]);\nlet bin=u32(clamp(round(z/.001)+256.,0.,512.));\nlet cell=min((p/'
+#   10: 'u)*8u/'
+#   11: 'u,7u)*8u+min((p%'
+#   12: 'u,7u);\natomicAdd(&hist[(f*64u+cell)*'
+#   13: 'u+bin],1u);}'
+#   14: 'radiometry_hist'
+#   15: ('a', 'w')
+#   16: 'photometry_histogram'
+#   17: 'fn qtile(start:u32,total:u32,frac:f32)->f32{var count=0u;for(var b=0u;b<'
+#   18: 'u;b++){count+=bitcast<u32>(a0[start+b]);if(f32(count)>=max(1.,f32(total)*frac)){return (f32(b)-256.)*.001;}}return 0.;}'
+#   19: 'let start=i*'
+#   20: 'u;var total=0u;for(var b=0u;b<'
+#   21: 'u;b++){total+=bitcast<u32>(a0[start+b]);}\ndst[i*3u]=qtile(start,total,.5);dst[i*3u+1u]=qtile(start,total,.75)-qtile(start,total,.25);dst[i*3u+2u]=f32(total);'
+#   22: 'photometry_sector'
+#   23: (7, 64, 3)
+#   24: 448
+#   25: ('count',)
+#   26: 'var values:array<f32,64>;var used=0u;for(var q=0u;q<64u;q++){let j=(i*64u+q)*3u;if(a0[j+2u]>=24.){let v=a0[j];var t=used;loop{if(t==0u||values[t-1u]<=v){break;}values[t]=values[t-1u];t-=1u;}values[t]=v;used+=1u;}}\nvar z=0.;if(used>=6u){z=.5*(values[(used-1u)/2u]+values[used/2u]);}let accepted=abs(z)<log(1.12)&&used>=6u;\ndst[i*3u]=select(0.,z,accepted);dst[i*3u+1u]=f32(used);dst[i*3u+2u]=select(0.,1.,accepted);'
+#   27: 'photometry_global'
+#   28: (7, 3)
+#   29: 'let f=i/64u;let local=a0[i*3u];let center=a1[f*3u];let accept=a0[i*3u+2u]>=24.&&a0[i*3u+1u]<=.04&&abs(local-center)<=.06&&a1[f*3u+2u]>.5;\ndst[i]=exp(select(center,local,accept));'
+#   30: 'photometry_smooth_field'
+#   31: (7, 8, 8)
+#   32: 'WGPU'
+#   33: 'detection nuisance only; reconstruction unchanged'
+#   34: 0.001
+#   35: 1.12
+#   36: 0.06
+#   37: 24
+#   38: 0.04
+#   39: 8
+#   40: True
+#   41: ('global_log_gain', 'sector_statistics', 'field', 'engine', 'scope', 'log_histogram_bin', 'maximum_global_scale', 'maximum_local_log_deviation', 'minimum_sector_samples', 'maximum_sector_log_IQR', 'spatial_lattice', 'reference_preserved')
+# Names:
+#    0: spec
+#    1: shape
+#    2: BINS
+#    3: _u32
+#    4: _clear_u32
+#    5: _dispatch
+#    6: buffer
+#    7: Ops
+#    8: rt
+#    9: emit
+#   10: dict
+#   11: read
+#   12: tolist
+#   13: release_external
+#   14: free
+# Varnames:
+#	self, samples, _, h, w, n, bins, cells, hist, code, op, helper, body, sectors, globalv, field, report
+# Positional arguments:
+#	self, samples
+# Local variables:
+#    2: _
+#    3: h
+#    4: w
+#    5: n
+#    6: bins
+#    7: cells
+#    8: hist
+#    9: code
+#   10: op
+#   11: helper
+#   12: body
+#   13: sectors
+#   14: globalv
+#   15: field
+#   16: report
+
+ 29:           0 LOAD_FAST            (samples)
+               2 LOAD_ATTR            (spec)
+               4 LOAD_ATTR            (shape)
+               6 UNPACK_SEQUENCE      4
+               8 STORE_FAST           (_)
+              10 STORE_FAST           (_)
+              12 STORE_FAST           (h)
+              14 STORE_FAST           (w)
+              16 LOAD_FAST            (h)
+              18 LOAD_FAST            (w)
+              20 BINARY_MULTIPLY
+              22 STORE_FAST           (n)
+              24 LOAD_FAST            (self)
+              26 LOAD_ATTR            (BINS)
+              28 STORE_FAST           (bins)
+              30 LOAD_CONST           (64)
+              32 STORE_FAST           (cells)
+
+ 30:          34 LOAD_FAST            (self)
+              36 LOAD_METHOD          (_u32)
+              38 LOAD_CONST           (7)
+              40 LOAD_FAST            (cells)
+              42 LOAD_FAST            (bins)
+              44 BUILD_TUPLE          3
+              46 CALL_METHOD          (1 positional argument)
+              48 STORE_FAST           (hist)
+              50 LOAD_FAST            (self)
+              52 LOAD_METHOD          (_clear_u32)
+              54 LOAD_FAST            (hist)
+              56 CALL_METHOD          (1 positional argument)
+              58 POP_TOP
+
+ 31:          60 LOAD_CONST           ("@group(0) @binding(0) var<storage,read> samples:array<f32>;\n@group(0) @binding(1) var<storage,read_write> hist:array<atomic<u32>>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) gid:vec3<u32>){\nlet i=gid.x+gid.y*4194304u;if(i>=")
+
+ 34:          62 LOAD_CONST           (7)
+              64 LOAD_FAST            (n)
+              66 BINARY_MULTIPLY
+
+ 31:          68 FORMAT_VALUE         0
+              70 LOAD_CONST           ("u){return;}let p=i%")
+
+ 34:          72 LOAD_FAST            (n)
+
+ 31:          74 FORMAT_VALUE         0
+              76 LOAD_CONST           ("u;let f=i/")
+
+ 34:          78 LOAD_FAST            (n)
+
+ 31:          80 FORMAT_VALUE         0
+              82 LOAD_CONST           ("u;\nif(samples[(f*2u+1u)*")
+
+ 35:          84 LOAD_FAST            (n)
+
+ 31:          86 FORMAT_VALUE         0
+              88 LOAD_CONST           ("u+p]<.5||samples[")
+
+ 35:          90 LOAD_FAST            (n)
+
+ 31:          92 FORMAT_VALUE         0
+              94 LOAD_CONST           ("u+p]<.5){return;}\nlet z=log(samples[(f*2u)*")
+
+ 36:          96 LOAD_FAST            (n)
+
+ 31:          98 FORMAT_VALUE         0
+             100 LOAD_CONST           ("u+p]/samples[p]);\nlet bin=u32(clamp(round(z/.001)+256.,0.,512.));\nlet cell=min((p/")
+
+ 38:         102 LOAD_FAST            (w)
+
+ 31:         104 FORMAT_VALUE         0
+             106 LOAD_CONST           ("u)*8u/")
+
+ 38:         108 LOAD_FAST            (h)
+
+ 31:         110 FORMAT_VALUE         0
+             112 LOAD_CONST           ("u,7u)*8u+min((p%")
+
+ 38:         114 LOAD_FAST            (w)
+
+ 31:         116 FORMAT_VALUE         0
+             118 LOAD_CONST           ("u)*8u/")
+
+ 38:         120 LOAD_FAST            (w)
+
+ 31:         122 FORMAT_VALUE         0
+             124 LOAD_CONST           ("u,7u);\natomicAdd(&hist[(f*64u+cell)*")
+
+ 39:         126 LOAD_FAST            (bins)
+
+ 31:         128 FORMAT_VALUE         0
+             130 LOAD_CONST           ("u+bin],1u);}")
+             132 BUILD_STRING         23
+             134 STORE_FAST           (code)
+
+ 40:         136 LOAD_FAST            (self)
+             138 LOAD_METHOD          (_dispatch)
+             140 LOAD_CONST           ("radiometry_hist")
+             142 LOAD_FAST            (h)
+             144 LOAD_FAST            (w)
+             146 BUILD_TUPLE          3
+             148 LOAD_FAST            (code)
+             150 LOAD_CONST           (('a', 'w'))
+             152 LOAD_FAST            (samples)
+             154 LOAD_ATTR            (buffer)
+             156 LOAD_FAST            (hist)
+             158 LOAD_ATTR            (buffer)
+             160 BUILD_LIST           2
+             162 LOAD_CONST           (7)
+             164 LOAD_FAST            (n)
+             166 BINARY_MULTIPLY
+             168 LOAD_CONST           ("photometry_histogram")
+             170 CALL_METHOD          (6 positional arguments)
+             172 POP_TOP
+
+ 41:         174 LOAD_GLOBAL          (Ops)
+             176 LOAD_FAST            (self)
+             178 LOAD_ATTR            (rt)
+             180 CALL_FUNCTION        (1 positional argument)
+             182 STORE_FAST           (op)
+
+ 42:         184 LOAD_CONST           ("fn qtile(start:u32,total:u32,frac:f32)->f32{var count=0u;for(var b=0u;b<")
+             186 LOAD_FAST            (bins)
+             188 FORMAT_VALUE         0
+             190 LOAD_CONST           ("u;b++){count+=bitcast<u32>(a0[start+b]);if(f32(count)>=max(1.,f32(total)*frac)){return (f32(b)-256.)*.001;}}return 0.;}")
+             192 BUILD_STRING         3
+             194 STORE_FAST           (helper)
+
+ 43:         196 LOAD_CONST           ("let start=i*")
+             198 LOAD_FAST            (bins)
+             200 FORMAT_VALUE         0
+             202 LOAD_CONST           ("u;var total=0u;for(var b=0u;b<")
+             204 LOAD_FAST            (bins)
+             206 FORMAT_VALUE         0
+             208 LOAD_CONST           ("u;b++){total+=bitcast<u32>(a0[start+b]);}\ndst[i*3u]=qtile(start,total,.5);dst[i*3u+1u]=qtile(start,total,.75)-qtile(start,total,.25);dst[i*3u+2u]=f32(total);")
+             210 BUILD_STRING         5
+             212 STORE_FAST           (body)
+
+ 45:         214 LOAD_FAST            (op)
+             216 LOAD_ATTR            (emit)
+             218 LOAD_CONST           ("photometry_sector")
+             220 LOAD_FAST            (hist)
+             222 BUILD_LIST           1
+             224 LOAD_CONST           ((7, 64, 3))
+             226 LOAD_FAST            (body)
+             228 LOAD_FAST            (helper)
+             230 LOAD_CONST           (448)
+             232 LOAD_CONST           (('count',))
+             234 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             236 STORE_FAST           (sectors)
+
+ 47:         238 LOAD_CONST           ("var values:array<f32,64>;var used=0u;for(var q=0u;q<64u;q++){let j=(i*64u+q)*3u;if(a0[j+2u]>=24.){let v=a0[j];var t=used;loop{if(t==0u||values[t-1u]<=v){break;}values[t]=values[t-1u];t-=1u;}values[t]=v;used+=1u;}}\nvar z=0.;if(used>=6u){z=.5*(values[(used-1u)/2u]+values[used/2u]);}let accepted=abs(z)<log(1.12)&&used>=6u;\ndst[i*3u]=select(0.,z,accepted);dst[i*3u+1u]=f32(used);dst[i*3u+2u]=select(0.,1.,accepted);")
+             240 STORE_FAST           (body)
+
+ 50:         242 LOAD_FAST            (op)
+             244 LOAD_ATTR            (emit)
+             246 LOAD_CONST           ("photometry_global")
+             248 LOAD_FAST            (sectors)
+             250 BUILD_LIST           1
+             252 LOAD_CONST           ((7, 3))
+             254 LOAD_FAST            (body)
+             256 LOAD_CONST           (7)
+             258 LOAD_CONST           (('count',))
+             260 CALL_FUNCTION_KW     (5 total positional and keyword args)
+             262 STORE_FAST           (globalv)
+
+ 51:         264 LOAD_CONST           ("let f=i/64u;let local=a0[i*3u];let center=a1[f*3u];let accept=a0[i*3u+2u]>=24.&&a0[i*3u+1u]<=.04&&abs(local-center)<=.06&&a1[f*3u+2u]>.5;\ndst[i]=exp(select(center,local,accept));")
+             266 STORE_FAST           (body)
+
+ 53:         268 LOAD_FAST            (op)
+             270 LOAD_METHOD          (emit)
+             272 LOAD_CONST           ("photometry_smooth_field")
+             274 LOAD_FAST            (sectors)
+             276 LOAD_FAST            (globalv)
+             278 BUILD_LIST           2
+             280 LOAD_CONST           ((7, 8, 8))
+             282 LOAD_FAST            (body)
+             284 CALL_METHOD          (4 positional arguments)
+             286 STORE_FAST           (field)
+
+ 54:         288 LOAD_GLOBAL          (dict)
+             290 LOAD_FAST            (self)
+             292 LOAD_ATTR            (rt)
+             294 LOAD_METHOD          (read)
+             296 LOAD_FAST            (globalv)
+             298 CALL_METHOD          (1 positional argument)
+             300 LOAD_METHOD          (tolist)
+             302 CALL_METHOD          (0 positional arguments)
+             304 LOAD_FAST            (self)
+             306 LOAD_ATTR            (rt)
+             308 LOAD_METHOD          (read)
+             310 LOAD_FAST            (sectors)
+             312 CALL_METHOD          (1 positional argument)
+             314 LOAD_METHOD          (tolist)
+             316 CALL_METHOD          (0 positional arguments)
+
+ 55:         318 LOAD_FAST            (self)
+             320 LOAD_ATTR            (rt)
+             322 LOAD_METHOD          (read)
+             324 LOAD_FAST            (field)
+             326 CALL_METHOD          (1 positional argument)
+             328 LOAD_METHOD          (tolist)
+             330 CALL_METHOD          (0 positional arguments)
+             332 LOAD_CONST           ("WGPU")
+             334 LOAD_CONST           ("detection nuisance only; reconstruction unchanged")
+
+ 56:         336 LOAD_CONST           (0.001)
+             338 LOAD_CONST           (1.12)
+             340 LOAD_CONST           (0.06)
+             342 LOAD_CONST           (24)
+
+ 57:         344 LOAD_CONST           (0.04)
+             346 LOAD_CONST           (8)
+             348 LOAD_CONST           (8)
+             350 BUILD_LIST           2
+             352 LOAD_CONST           (True)
+
+ 54:         354 LOAD_CONST           (('global_log_gain', 'sector_statistics', 'field', 'engine', 'scope', 'log_histogram_bin', 'maximum_global_scale', 'maximum_local_log_deviation', 'minimum_sector_samples', 'maximum_sector_log_IQR', 'spatial_lattice', 'reference_preserved'))
+             356 CALL_FUNCTION_KW     (12 total positional and keyword args)
+             358 STORE_FAST           (report)
+
+ 58:         360 LOAD_FAST            (self)
+             362 LOAD_ATTR            (rt)
+             364 LOAD_METHOD          (release_external)
+             366 LOAD_FAST            (hist)
+             368 CALL_METHOD          (1 positional argument)
+             370 POP_TOP
+             372 LOAD_FAST            (self)
+             374 LOAD_ATTR            (rt)
+             376 LOAD_METHOD          (free)
+             378 LOAD_FAST            (sectors)
+             380 CALL_METHOD          (1 positional argument)
+             382 POP_TOP
+             384 LOAD_FAST            (self)
+             386 LOAD_ATTR            (rt)
+             388 LOAD_METHOD          (free)
+             390 LOAD_FAST            (globalv)
+             392 CALL_METHOD          (1 positional argument)
+             394 POP_TOP
+
+ 59:         396 LOAD_FAST            (field)
+             398 LOAD_FAST            (report)
+             400 BUILD_TUPLE          2
+             402 RETURN_VALUE
+

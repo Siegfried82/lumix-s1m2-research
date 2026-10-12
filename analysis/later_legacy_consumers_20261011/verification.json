@@ -1,0 +1,442 @@
+{
+  "scope": "Static firmware-as-data reading and host OpenSSL replay only; no target execution, device access, or network",
+  "tool": {
+    "path": "analysis/ultra_mn10300_tool_20261011/build-system-zlib/binutils/objdump",
+    "sha256": "a2d70ddcd641aa9f88b4b4b8896bf33b86677279dca21d6b5c74274d6e06d0da"
+  },
+  "searches": "All exact patterns search every byte of each complete plaintext input unless an explicit range is recorded. Absence does not rule out other instruction encodings or other consumers.",
+  "models": [
+    {
+      "model": "G3",
+      "input": "analysis/legacy_corpus_20261011/G3___V12.bin.plaintext",
+      "input_size": 15599104,
+      "input_sha256": "b8912ea28230567dc3982aa373f6d0594cc17250802bf46b38b92bb3f60659f7",
+      "raw_input": "analysis/legacy_corpus_20261011/G3___V12.bin",
+      "raw_input_sha256": "470a2e7facb75985e2a1a993096f18aafc1fb043792dbea4c9d94b66fe27ec9a",
+      "own_header": {
+        "0x4": "0x200",
+        "0x8": "0x101",
+        "0x2c": "0x2",
+        "0x34": "0x2",
+        "0x38": "0x200",
+        "0x3c": "0xee0400"
+      },
+      "directory_count": 2,
+      "directory_entries": [
+        {
+          "index": 0,
+          "record_file": "0x404",
+          "name": "program",
+          "relative_start": "0x400",
+          "absolute_start": "0x600",
+          "size": 15204352,
+          "field_addr": "0x0",
+          "in_bounds": true
+        },
+        {
+          "index": 1,
+          "record_file": "0x41c",
+          "name": "eep",
+          "relative_start": "0xe80400",
+          "absolute_start": "0xe80600",
+          "size": 393216,
+          "field_addr": "0xfa0000",
+          "in_bounds": true
+        }
+      ],
+      "main_mapping": {
+        "addend": "0x3ffffa00",
+        "entry_file": "0x600",
+        "entry_va": "0x40000000",
+        "evidence": "own initial ISR jump plus own VBR stores"
+      },
+      "overlay_mapping": {
+        "addend": "0x7b2ffa00",
+        "entry_file": "0x8c0600",
+        "entry_va": "0x7bbc0000",
+        "rom_source": "0x408c0000",
+        "actual_copy_destination": "0xbbbc0000",
+        "copy_start_file": "0x4c5d",
+        "copy_end_file_exclusive": "0x4cdf",
+        "copy_call_file": "0xf9a",
+        "evidence": "own bootstrap copy and own vector self references; executable/write aliases used by code, MMU behavior not measured"
+      },
+      "resident_copy": {
+        "rom_start": "0x405d17b0",
+        "rom_end_exclusive": "0x405d2e98",
+        "ram_start": "0x74000000",
+        "key_file": "0x5d1dd8",
+        "key_ram": "0x74000028",
+        "key_hex": "e686c04a4336f0bf23fd56f925ee553e"
+      },
+      "updater": {
+        "caller_file": "0x9d4e80",
+        "caller_va": "0x7bcd4880",
+        "header_func_file": "0x9d482f",
+        "header_call_file": "0x9d4f11",
+        "key_setter_file": "0x9d4803",
+        "key_call_file": "0x9d4f41",
+        "process_func_file": "0x9d48e0",
+        "process_call_file": "0x9d4f67",
+        "revision_read_file": "0x9d488c",
+        "revision_read_va": "0x7bcd428c",
+        "accepts_revision": "0x101",
+        "rejects_revision_0x200": true,
+        "revision_error_file": "0x9d48b0",
+        "revision_error_va": "0x7bcd42b0",
+        "revision_error_return": "0x80000064",
+        "crypt_selector_read_file": "0x9d4945",
+        "crypt_selector_read_va": "0x7bcd4345",
+        "accepts_crypt": [
+          0,
+          2
+        ],
+        "rejects_crypt3": true,
+        "crypt_error_file": "0x9d498d",
+        "crypt_error_va": "0x7bcd438d",
+        "crypt_error_return": "0x80000006",
+        "body_source_offset_read_file": "0x9d49ad",
+        "directory_pointer_store_file": "0x9d4c53",
+        "directory_count_getter_file": "0x9d4c6e",
+        "directory_index_getter_file": "0x9d4c84",
+        "directory_index_opcode": "f9 00 18 displayed udf00 24,d0 under GNU am33; official AM30 opcode table aliases it mulq; ISA hardware execution not tested"
+      },
+      "replay": {
+        "mode": "AES-128-CBC no padding",
+        "key_source": "same-input boot-copied resident key",
+        "iv_source": "same raw input [0x80,0x90)",
+        "body_range": [
+          "0x200",
+          "0xee0600"
+        ],
+        "md5": "07a55d1b05011d0b4f92b57d1718b662",
+        "matches_header_md5": true,
+        "exact_match_existing_plaintext": true
+      }
+    },
+    {
+      "model": "GF2",
+      "input": "analysis/legacy_corpus_20261011/GF2__V11.bin.plaintext",
+      "input_size": 15599104,
+      "input_sha256": "51f3889063c68e6d42b7295af9a98d374c8ee2484f785ad908101b5bf4f29a8d",
+      "raw_input": "analysis/legacy_corpus_20261011/GF2__V11.bin",
+      "raw_input_sha256": "39403bcf70db42549ac6a29622c768f3c7f6e1e3fa0f769c2ed690ae2ab148c1",
+      "own_header": {
+        "0x4": "0x200",
+        "0x8": "0x101",
+        "0x2c": "0x2",
+        "0x34": "0x2",
+        "0x38": "0x200",
+        "0x3c": "0xee0400"
+      },
+      "directory_count": 2,
+      "directory_entries": [
+        {
+          "index": 0,
+          "record_file": "0x404",
+          "name": "program",
+          "relative_start": "0x400",
+          "absolute_start": "0x600",
+          "size": 15204352,
+          "field_addr": "0x0",
+          "in_bounds": true
+        },
+        {
+          "index": 1,
+          "record_file": "0x41c",
+          "name": "eep",
+          "relative_start": "0xe80400",
+          "absolute_start": "0xe80600",
+          "size": 393216,
+          "field_addr": "0xfa0000",
+          "in_bounds": true
+        }
+      ],
+      "main_mapping": {
+        "addend": "0x3ffffa00",
+        "entry_file": "0x600",
+        "entry_va": "0x40000000",
+        "evidence": "own initial ISR jump plus own VBR stores"
+      },
+      "overlay_mapping": {
+        "addend": "0x7b2ffa00",
+        "entry_file": "0x8c0600",
+        "entry_va": "0x7bbc0000",
+        "rom_source": "0x408c0000",
+        "actual_copy_destination": "0xbbbc0000",
+        "copy_start_file": "0x4c4e",
+        "copy_end_file_exclusive": "0x4cd0",
+        "copy_call_file": "0xf97",
+        "evidence": "own bootstrap copy and own vector self references; executable/write aliases used by code, MMU behavior not measured"
+      },
+      "resident_copy": {
+        "rom_start": "0x4054f8c0",
+        "rom_end_exclusive": "0x40550f74",
+        "ram_start": "0x74000000",
+        "key_file": "0x54fee8",
+        "key_ram": "0x74000028",
+        "key_hex": "4b8ba02b85110dcec98b591f5528fbc2"
+      },
+      "updater": {
+        "caller_file": "0x9d2be3",
+        "caller_va": "0x7bcd25e3",
+        "header_func_file": "0x9d2592",
+        "header_call_file": "0x9d2c7a",
+        "key_setter_file": "0x9d2566",
+        "key_call_file": "0x9d2caa",
+        "process_func_file": "0x9d2643",
+        "process_call_file": "0x9d2cd0",
+        "revision_read_file": "0x9d25ef",
+        "revision_read_va": "0x7bcd1fef",
+        "accepts_revision": "0x101",
+        "rejects_revision_0x200": true,
+        "revision_error_file": "0x9d2613",
+        "revision_error_va": "0x7bcd2013",
+        "revision_error_return": "0x80000064",
+        "crypt_selector_read_file": "0x9d26a8",
+        "crypt_selector_read_va": "0x7bcd20a8",
+        "accepts_crypt": [
+          0,
+          2
+        ],
+        "rejects_crypt3": true,
+        "crypt_error_file": "0x9d26f0",
+        "crypt_error_va": "0x7bcd20f0",
+        "crypt_error_return": "0x80000006",
+        "body_source_offset_read_file": "0x9d2710",
+        "directory_pointer_store_file": "0x9d29b6",
+        "directory_count_getter_file": "0x9d29d1",
+        "directory_index_getter_file": "0x9d29e7",
+        "directory_index_opcode": "f9 00 18 displayed udf00 24,d0 under GNU am33; official AM30 opcode table aliases it mulq; ISA hardware execution not tested"
+      },
+      "replay": {
+        "mode": "AES-128-CBC no padding",
+        "key_source": "same-input boot-copied resident key",
+        "iv_source": "same raw input [0x80,0x90)",
+        "body_range": [
+          "0x200",
+          "0xee0600"
+        ],
+        "md5": "1e5bca8e4f1120c1f779d7f3ad450311",
+        "matches_header_md5": true,
+        "exact_match_existing_plaintext": true
+      }
+    },
+    {
+      "model": "GF3",
+      "input": "analysis/legacy_corpus_20261011/GF3__V12.bin.plaintext",
+      "input_size": 15599104,
+      "input_sha256": "a0ef6af599f7557606b1c9cbe5324d496f84273c09617eb3e6cd875390e66ec0",
+      "raw_input": "analysis/legacy_corpus_20261011/GF3__V12.bin",
+      "raw_input_sha256": "5c7b235d5b55c95d8e6a6db1b24dd2f4013bc46e611aa1bf38b60ee45b875124",
+      "own_header": {
+        "0x4": "0x200",
+        "0x8": "0x101",
+        "0x2c": "0x2",
+        "0x34": "0x2",
+        "0x38": "0x200",
+        "0x3c": "0xee0400"
+      },
+      "directory_count": 2,
+      "directory_entries": [
+        {
+          "index": 0,
+          "record_file": "0x404",
+          "name": "program",
+          "relative_start": "0x400",
+          "absolute_start": "0x600",
+          "size": 15204352,
+          "field_addr": "0x0",
+          "in_bounds": true
+        },
+        {
+          "index": 1,
+          "record_file": "0x41c",
+          "name": "eep",
+          "relative_start": "0xe80400",
+          "absolute_start": "0xe80600",
+          "size": 393216,
+          "field_addr": "0xfa0000",
+          "in_bounds": true
+        }
+      ],
+      "main_mapping": {
+        "addend": "0x3ffffa00",
+        "entry_file": "0x600",
+        "entry_va": "0x40000000",
+        "evidence": "own initial ISR jump plus own VBR stores"
+      },
+      "overlay_mapping": {
+        "addend": "0x7b2ffa00",
+        "entry_file": "0x8c0600",
+        "entry_va": "0x7bbc0000",
+        "rom_source": "0x408c0000",
+        "actual_copy_destination": "0xbbbc0000",
+        "copy_start_file": "0x4e53",
+        "copy_end_file_exclusive": "0x4ed6",
+        "copy_call_file": "0xf78",
+        "evidence": "own bootstrap copy and own vector self references; executable/write aliases used by code, MMU behavior not measured"
+      },
+      "resident_copy": {
+        "rom_start": "0x4059d0e0",
+        "rom_end_exclusive": "0x4059e7c8",
+        "ram_start": "0x74000000",
+        "key_file": "0x59d708",
+        "key_ram": "0x74000028",
+        "key_hex": "3f7e85394912a4d81247c9af4e20ce81"
+      },
+      "updater": {
+        "caller_file": "0x9d54f6",
+        "caller_va": "0x7bcd4ef6",
+        "header_func_file": "0x9d4ea5",
+        "header_call_file": "0x9d558d",
+        "key_setter_file": "0x9d4e79",
+        "key_call_file": "0x9d55bd",
+        "process_func_file": "0x9d4f56",
+        "process_call_file": "0x9d55e3",
+        "revision_read_file": "0x9d4f02",
+        "revision_read_va": "0x7bcd4902",
+        "accepts_revision": "0x101",
+        "rejects_revision_0x200": true,
+        "revision_error_file": "0x9d4f26",
+        "revision_error_va": "0x7bcd4926",
+        "revision_error_return": "0x80000064",
+        "crypt_selector_read_file": "0x9d4fbb",
+        "crypt_selector_read_va": "0x7bcd49bb",
+        "accepts_crypt": [
+          0,
+          2
+        ],
+        "rejects_crypt3": true,
+        "crypt_error_file": "0x9d5003",
+        "crypt_error_va": "0x7bcd4a03",
+        "crypt_error_return": "0x80000006",
+        "body_source_offset_read_file": "0x9d5023",
+        "directory_pointer_store_file": "0x9d52c9",
+        "directory_count_getter_file": "0x9d52e4",
+        "directory_index_getter_file": "0x9d52fa",
+        "directory_index_opcode": "f9 00 18 displayed udf00 24,d0 under GNU am33; official AM30 opcode table aliases it mulq; ISA hardware execution not tested"
+      },
+      "replay": {
+        "mode": "AES-128-CBC no padding",
+        "key_source": "same-input boot-copied resident key",
+        "iv_source": "same raw input [0x80,0x90)",
+        "body_range": [
+          "0x200",
+          "0xee0600"
+        ],
+        "md5": "a3b958bf338888db5ef2beacd399c5ef",
+        "matches_header_md5": true,
+        "exact_match_existing_plaintext": true
+      }
+    },
+    {
+      "model": "GX1",
+      "input": "analysis/legacy_corpus_20261011/GX1__V11.bin.plaintext",
+      "input_size": 15599104,
+      "input_sha256": "ec99c8d15f723e8688afabe39c4e45207e3a16bc90baa5c043c28b412ee937fb",
+      "raw_input": "analysis/legacy_corpus_20261011/GX1__V11.bin",
+      "raw_input_sha256": "75725a6876702909dbd6396527113f5a6e40187a34369624be30844cdeb302cf",
+      "own_header": {
+        "0x4": "0x200",
+        "0x8": "0x101",
+        "0x2c": "0x2",
+        "0x34": "0x2",
+        "0x38": "0x200",
+        "0x3c": "0xee0400"
+      },
+      "directory_count": 2,
+      "directory_entries": [
+        {
+          "index": 0,
+          "record_file": "0x404",
+          "name": "program",
+          "relative_start": "0x400",
+          "absolute_start": "0x600",
+          "size": 15204352,
+          "field_addr": "0x0",
+          "in_bounds": true
+        },
+        {
+          "index": 1,
+          "record_file": "0x41c",
+          "name": "eep",
+          "relative_start": "0xe80400",
+          "absolute_start": "0xe80600",
+          "size": 393216,
+          "field_addr": "0xfa0000",
+          "in_bounds": true
+        }
+      ],
+      "main_mapping": {
+        "addend": "0x3ffffa00",
+        "entry_file": "0x600",
+        "entry_va": "0x40000000",
+        "evidence": "own initial ISR jump plus own VBR stores"
+      },
+      "overlay_mapping": {
+        "addend": "0x7b2ffa00",
+        "entry_file": "0x880600",
+        "entry_va": "0x7bb80000",
+        "rom_source": "0x40880000",
+        "actual_copy_destination": "0xbbb80000",
+        "copy_start_file": "0x4f37",
+        "copy_end_file_exclusive": "0x4f81",
+        "copy_call_file": "0x1877",
+        "evidence": "own bootstrap copy and own vector self references; executable/write aliases used by code, MMU behavior not measured"
+      },
+      "resident_copy": {
+        "rom_start": "0x406398fc",
+        "rom_end_exclusive": "0x4063b254",
+        "ram_start": "0x74000000",
+        "key_file": "0x639f24",
+        "key_ram": "0x74000028",
+        "key_hex": "e4252eb939691d4af1084995691e6151"
+      },
+      "updater": {
+        "caller_file": "0x9bc455",
+        "caller_va": "0x7bcbbe55",
+        "header_func_file": "0x9bbe08",
+        "header_call_file": "0x9bc4e2",
+        "key_setter_file": "0x9bbddc",
+        "key_call_file": "0x9bc513",
+        "process_func_file": "0x9bbeb9",
+        "process_call_file": "0x9bc539",
+        "revision_read_file": "0x9bbe65",
+        "revision_read_va": "0x7bcbb865",
+        "accepts_revision": "0x101",
+        "rejects_revision_0x200": true,
+        "revision_error_file": "0x9bbe89",
+        "revision_error_va": "0x7bcbb889",
+        "revision_error_return": "0x80000064",
+        "crypt_selector_read_file": "0x9bbf1e",
+        "crypt_selector_read_va": "0x7bcbb91e",
+        "accepts_crypt": [
+          0,
+          2
+        ],
+        "rejects_crypt3": true,
+        "crypt_error_file": "0x9bbf66",
+        "crypt_error_va": "0x7bcbb966",
+        "crypt_error_return": "0x80000006",
+        "body_source_offset_read_file": "0x9bbf86",
+        "directory_pointer_store_file": "0x9bc22c",
+        "directory_count_getter_file": "0x9bc247",
+        "directory_index_getter_file": "0x9bc25d",
+        "directory_index_opcode": "f9 00 18 displayed udf00 24,d0 under GNU am33; official AM30 opcode table aliases it mulq; ISA hardware execution not tested"
+      },
+      "replay": {
+        "mode": "AES-128-CBC no padding",
+        "key_source": "same-input boot-copied resident key",
+        "iv_source": "same raw input [0x80,0x90)",
+        "body_range": [
+          "0x200",
+          "0xee0600"
+        ],
+        "md5": "0bef550abc474660ce2d9e962aa0585a",
+        "matches_header_md5": true,
+        "exact_match_existing_plaintext": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+
+<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GF2__V11.bin.plaintext:     file format binary
+
+
+Disassembly of section .data:
+
+4000464e <.data+0x4c4e>:
+4000464e:	fc dd 00 00 	mov	1082916864,a1
+40004652:	8c 40 
+40004654:	fc ce 00 00 	mov	1085145088,d2
+40004658:	ae 40 
+4000465a:	fc cd 00 00 	mov	2075918336,d1
+4000465e:	bc 7b 
+40004660:	fc c1 00 00 	add	-1946157056,d1
+40004664:	00 8c 
+40004666:	fc c1 00 00 	add	-1275068416,d1
+4000466a:	00 b4 
+4000466c:	f1 e7       	mov	d1,a3
+4000466e:	9c          	mov	a3,a0
+4000466f:	db          	setlb	
+40004670:	71          	mov	(a1),d0
+40004671:	51          	inc4	a1
+40004672:	60          	mov	d0,(a0)
+40004673:	71          	mov	(a1),d0
+40004674:	50          	inc4	a0
+40004675:	60          	mov	d0,(a0)
+40004676:	51          	inc4	a1
+40004677:	71          	mov	(a1),d0
+40004678:	50          	inc4	a0
+40004679:	60          	mov	d0,(a0)
+4000467a:	51          	inc4	a1
+4000467b:	71          	mov	(a1),d0
+4000467c:	50          	inc4	a0
+4000467d:	60          	mov	d0,(a0)
+4000467e:	51          	inc4	a1
+4000467f:	50          	inc4	a0
+40004680:	fc d9 e5 a3 	cmp	1083417573,a1
+40004684:	93 40 
+40004686:	d4          	lcs	
+40004687:	fc de 32 c0 	mov	-1677672398,a2
+4000468b:	00 9c 
+4000468d:	f0 62       	movhu	(a2),d0
+4000468f:	f8 e4 80    	or	128,d0
+40004692:	f0 72       	movhu	d0,(a2)
+40004694:	fc de 6c c0 	mov	-1677672340,a2
+40004698:	00 9c 
+4000469a:	f0 62       	movhu	(a2),d0
+4000469c:	f8 e4 20    	or	32,d0
+4000469f:	f0 72       	movhu	d0,(a2)
+400046a1:	f1 a9       	cmp	d2,a1
+400046a3:	c6 16       	bcc	0x400046b9
+400046a5:	db          	setlb	
+400046a6:	71          	mov	(a1),d0
+400046a7:	51          	inc4	a1
+400046a8:	60          	mov	d0,(a0)
+400046a9:	71          	mov	(a1),d0
+400046aa:	50          	inc4	a0
+400046ab:	60          	mov	d0,(a0)
+400046ac:	51          	inc4	a1
+400046ad:	71          	mov	(a1),d0
+400046ae:	50          	inc4	a0
+400046af:	60          	mov	d0,(a0)
+400046b0:	51          	inc4	a1
+400046b1:	71          	mov	(a1),d0
+400046b2:	50          	inc4	a0
+400046b3:	60          	mov	d0,(a0)
+400046b4:	51          	inc4	a1
+400046b5:	50          	inc4	a0
+400046b6:	f1 a9       	cmp	d2,a1
+400046b8:	d4          	lcs	
+400046b9:	73          	mov	(a3),d0
+400046ba:	42 00       	mov	d0,(sp)
+400046bc:	f8 03 40    	mov	(64,a3),d0
+400046bf:	42 00       	mov	d0,(sp)
+400046c1:	fa 03 80 00 	mov	(128,a3),d0
+400046c5:	42 00       	mov	d0,(sp)
+400046c7:	fa 03 c0 00 	mov	(192,a3),d0
+400046cb:	42 00       	mov	d0,(sp)
+400046cd:	de b0 10    	retf	[d2,a2,a3],16

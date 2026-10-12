@@ -1,0 +1,84 @@
+{
+  "module": "v15_2.scene_consistency.censored",
+  "filename": "v15_2\\scene_consistency\\censored.py",
+  "sha256": "0ffe1bc9c2ca76413473fce7c6a5fce48294ee85dd60ebd3ee6a4e2f047318ee",
+  "functions": [
+    {
+      "scope": "v15_2.scene_consistency.censored",
+      "name": "<module>",
+      "line": 1,
+      "args": [],
+      "names": [
+        "__doc__",
+        "numpy",
+        "np",
+        "scene_policy_wgpu",
+        "ScenePolicyWGPU",
+        "CensoredShape"
+      ],
+      "imports": [
+        "numpy",
+        "scene_policy_wgpu"
+      ]
+    },
+    {
+      "scope": "v15_2.scene_consistency.censored.CensoredShape",
+      "name": "CensoredShape",
+      "line": 10,
+      "args": [],
+      "names": [
+        "__name__",
+        "__module__",
+        "__qualname__",
+        "apply"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.censored.CensoredShape.apply",
+      "name": "apply",
+      "line": 11,
+      "args": [
+        "self",
+        "mask",
+        "base",
+        "field"
+      ],
+      "names": [
+        "spec",
+        "shape",
+        "range",
+        "_u32",
+        "_dispatch",
+        "buffer",
+        "_connected",
+        "str",
+        "_clear_u32",
+        "rt",
+        "empty",
+        "float",
+        "_read_u32",
+        "append",
+        "dict",
+        "int",
+        "release_external"
+      ],
+      "imports": []
+    }
+  ],
+  "imports": [
+    "numpy",
+    "scene_policy_wgpu"
+  ],
+  "shaders": [
+    "carchive/jsr_backend/trace/v15_2.scene_consistency.censored/shader_000.wgsl",
+    "carchive/jsr_backend/trace/v15_2.scene_consistency.censored/shader_001.wgsl",
+    "carchive/jsr_backend/trace/v15_2.scene_consistency.censored/shader_002.wgsl",
+    "carchive/jsr_backend/trace/v15_2.scene_consistency.censored/shader_003.wgsl",
+    "carchive/jsr_backend/trace/v15_2.scene_consistency.censored/shader_004.wgsl",
+    "carchive/jsr_backend/trace/v15_2.scene_consistency.censored/shader_005.wgsl",
+    "carchive/jsr_backend/trace/v15_2.scene_consistency.censored/shader_006.wgsl",
+    "carchive/jsr_backend/trace/v15_2.scene_consistency.censored/shader_007.wgsl",
+    "carchive/jsr_backend/trace/v15_2.scene_consistency.censored/shader_008.wgsl"
+  ]
+}

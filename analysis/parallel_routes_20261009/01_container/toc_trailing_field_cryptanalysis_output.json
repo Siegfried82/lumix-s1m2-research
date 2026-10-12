@@ -1,0 +1,19 @@
+{
+  "positive_control": {
+    "md5_matched": true,
+    "sha256_trunc16_matched": true,
+    "hmac_trunc16_matched": true,
+    "positive_control_passed": true
+  },
+  "derivation_results": {
+    "tested_hypotheses_count": 2352,
+    "matches_found": 0,
+    "matches": []
+  },
+  "observations": {
+    "flags_2_components": "All 13 components have trailing_field == 0x00*32.",
+    "flags_3_components": "All 49 components have trailing_field[:16] non-zero and trailing_field[16:] == 0x00*16.",
+    "cross_version": "Between V1.3 and V1.4, identical-hash components have completely different trailing_field[:16].",
+    "conclusion": "The 16-byte trailing field is not a deterministic hash or HMAC of public metadata or plaintext. Its properties are strictly consistent with a per-component cryptographic IV, nonce, or packaging-time salt."
+  }
+}

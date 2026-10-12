@@ -1,0 +1,219 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+[    0.000000] Linux version 4.19.124 (root@Lenovo-Workstation) (gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1)) #10 SMP Mon Oct 12 23:10:27 CST 2026
+[    0.000000] Machine model: linux,dummy-virt
+[    0.000000] cma: Reserved 16 MiB at 0x000000007f000000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: Trusted OS migration not required
+[    0.000000] psci: SMC Calling Convention v1.0
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x420 with crng_init=0
+[    0.000000] percpu: Embedded 22 pages/cpu s52632 r8192 d29288 u90112
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 258048
+[    0.000000] Kernel command line: console=ttyAMA0 init=/init loglevel=7 sbox.shell=1
+[    0.000000] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.000000] Memory: 996692K/1048576K available (7486K kernel code, 922K rwdata, 3424K rodata, 2176K init, 633K bss, 35500K reserved, 16384K cma-reserved)
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=1.
+[    0.000000] 	Tasks RCU enabled.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv2m: range[mem 0x08020000-0x08020fff], SPI[80:143]
+[    0.000000] rcu: 	Offload RCU callbacks from CPUs: (none).
+[    0.000000] arch_timer: cp15 timer(s) running at 62.50MHz (virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1cd42e208c, max_idle_ns: 881590405314 ns
+[    0.000072] sched_clock: 56 bits at 62MHz, resolution 16ns, wraps every 4398046511096ns
+[    0.002166] Console: colour dummy device 80x25
+[    0.002559] Calibrating delay loop (skipped), value calculated using timer frequency.. 125.00 BogoMIPS (lpj=250000)
+[    0.002605] pid_max: default: 32768 minimum: 301
+[    0.002989] Security Framework initialized
+[    0.003212] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.003247] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.015256] /cpus/cpu-map: empty cluster
+[    0.017699] ASID allocator initialised with 32768 entries
+[    0.017974] rcu: Hierarchical SRCU implementation.
+[    0.020465] smp: Bringing up secondary CPUs ...
+[    0.020500] smp: Brought up 1 node, 1 CPU
+[    0.020512] SMP: Total of 1 processors activated.
+[    0.020540] CPU features: detected: 32-bit EL0 Support
+[    0.021068] CPU: All CPU(s) started at EL1
+[    0.021143] alternatives: patching kernel code
+[    0.025419] devtmpfs: initialized
+[    0.029412] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.029475] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.030458] pinctrl core: initialized pinctrl subsystem
+[    0.034495] [DM] dm driver ver3.09 
+[    0.036052] NET: Registered protocol family 16
+[    0.038031] cpuidle: using governor ladder
+[    0.038376] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.041317] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.041629] Serial: AMBA PL011 UART driver
+[    0.047344] 9000000.pl011: ttyAMA0 at MMIO 0x9000000 (irq = 39, base_baud = 0) is a PL011 rev1
+[    0.056286] console [ttyAMA0] enabled
+[    0.064680] vgaarb: loaded
+[    0.065223] SCSI subsystem initialized
+[    0.065641] usbcore: registered new interface driver usbfs
+[    0.065872] usbcore: registered new interface driver hub
+[    0.066063] usbcore: registered new device driver usb
+[    0.066548] media: Linux media interface: v0.10
+[    0.066702] videodev: Linux video capture interface: v2.00
+[    0.066893] pps_core: LinuxPPS API ver. 1 registered
+[    0.066999] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <<REDACTED_EMAIL>>
+[    0.067205] PTP clock support registered
+[    0.067695] Advanced Linux Sound Architecture Driver Initialized.
+[    0.070778] Bluetooth: Core ver 2.22
+[    0.070899] NET: Registered protocol family 31
+[    0.071006] Bluetooth: HCI device and connection manager initialized
+[    0.071198] Bluetooth: HCI socket layer initialized
+[    0.071331] Bluetooth: L2CAP socket layer initialized
+[    0.071667] Bluetooth: SCO socket layer initialized
+[    0.073846] clocksource: Switched to clocksource arch_sys_counter
+[    0.101871] VFS: Disk quotas dquot_6.6.0
+[    0.102102] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.102528] FS-Cache: Loaded
+[    0.107774] NET: Registered protocol family 2
+[    0.110289] tcp_listen_portaddr_hash hash table entries: 512 (order: 1, 8192 bytes)
+[    0.110509] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.110712] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+[    0.110962] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.111858] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.112058] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.112823] NET: Registered protocol family 1
+[    0.114884] Unpacking initramfs...
+[    0.148621] Freeing initrd memory: 1584K
+[    0.149896] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    0.151510] workingset: timestamp_bits=46 max_order=18 bucket_order=0
+[    0.152379] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.153435] romfs: ROMFS MTD (C) 2007 Red Hat, Inc.
+[    0.157982] jitterentropy: Initialization failed with host not compliant with requirements: 2
+[    0.158306] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    0.158532] io scheduler noop registered
+[    0.158673] io scheduler cfq registered (default)
+[    0.158786] io scheduler mq-deadline registered
+[    0.158886] io scheduler kyber registered
+[    0.161640] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.165002] loop: module loaded
+[    0.165525] slram: not enough parameters.
+[    0.166481] libphy: Fixed MDIO Bus: probed
+[    0.166717] tun: Universal TUN/TAP device driver, 1.6
+[    0.167478] usbcore: registered new interface driver rtl8150
+[    0.167626] usbcore: registered new interface driver r8152
+[    0.167766] usbcore: registered new interface driver asix
+[    0.167901] usbcore: registered new interface driver ax88179_178a
+[    0.168042] usbcore: registered new interface driver cdc_ether
+[    0.168182] usbcore: registered new interface driver net1080
+[    0.168320] usbcore: registered new interface driver cdc_subset
+[    0.168459] usbcore: registered new interface driver zaurus
+[    0.168613] usbcore: registered new interface driver cdc_ncm
+[    0.168999] usbcore: registered new interface driver uas
+[    0.169167] usbcore: registered new interface driver usb-storage
+[    0.169675] qoob: fake UDC qoob registered (ep0-ep4, HS); bind a configfs gadget and use /proc/qoob
+[    0.169904] i2c /dev entries driver
+[    0.170207] usbcore: registered new interface driver uvcvideo
+[    0.170328] USB Video Class driver (1.1.1)
+[    0.170445] Bluetooth: HCI UART driver ver 2.3
+[    0.170576] Bluetooth: HCI UART protocol H4 registered
+[    0.171018] sdhci: Secure Digital Host Controller Interface driver
+[    0.171143] sdhci: Copyright(c) Pierre Ossman
+[    0.171253] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.171630] usbcore: registered new interface driver usbhid
+[    0.171754] usbhid: USB HID core driver
+[    0.171846] exFAT: Version 1.3.0
+[    0.173225] NET: Registered protocol family 10
+[    0.175904] Segment Routing with IPv6
+[    0.176202] NET: Registered protocol family 17
+[    0.176937] registered taskstats version 1
+[    0.199838] Key type encrypted registered
+[    0.201655] ALSA device list:
+[    0.201746]   No soundcards found.
+[    0.203527] uart-pl011 9000000.pl011: no DMA platform data
+[    0.221512] Freeing unused kernel memory: 2176K
+[    0.226873] Run /init as init process
+sbox: main enter
+sbox: step=setup start
+sbox: mount sysfs rc=0
+sbox: mount proc rc=0
+sbox: mount configfs rc=0
+sbox: mkdir g1 rc=0
+sbox: serialnumber rc=0
+[    0.235475] file system registered
+sbox: mkdir ffs.ffs0 rc=0
+sbox: symlink ffs.ffs0 rc=0
+sbox: mount functionfs rc=0
+ffs_min: open rc=3
+[    0.243479] read descriptors
+ffs_min: desc write n=66
+[    0.243879] read strings
+ffs_min: bound /dev/ffs0/ep0, staying alive
+sbox: udc bind start
+sbox: udc bind rc=0
+sbox: ready (ffs_min pid=63)
+sbox: cmds: cfg <n> | get <wIdx> | set <wIdx> <wVal> | scan <start> <n> <stride> | status | sh | exit
+printf '\n__LAB_BEGIN_%s__\n' 9ba57b0d66c34bed9b570f118b1df167; /bin/sh -c 'uname -r; cat /proc/cmdline; test -d /proc/self'; _lab_rc=$?; printf '\n__LAB_END_%s__:%s\n' 9ba57b0d66c34bed9b570f118b1df167 "$_lab_rc"
+
+
+BusyBox v1.37.0 (Ubuntu 1:1.37.0-7ubuntu1) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+sh: can't access tty; job control turned off
+lumix-s1rm2:~# printf '\n__LAB_BEGIN_%s__\n' 9ba57b0d66c34bed9b570f118b1df167; /
+bin/sh -c 'uname -r; cat /proc/cmdline; test -d /proc/self'; _lab_rc=$?; printf 
+'\n__LAB_END_%s__:%s\n' 9ba57b0d66c34bed9b570f118b1df167 "$_lab_rc"
+
+__LAB_BEGIN_9ba57b0d66c34bed9b570f118b1df167__
+4.19.124
+console=ttyAMA0 init=/init loglevel=7 sbox.shell=1
+
+__LAB_END_9ba57b0d66c34bed9b570f118b1df167__:0
+lumix-s1rm2:~# [6nprintf '\n__LAB_BEGIN_%s__\n' 9ed01613501745f49abc65715b0a0cfb; /
+bin/sh -c 'uname -a; cat /proc/meminfo | head -n 5; cat /proc/net/dev; mount; pr
+intf '"'"'%s\n'"'"' LUMIX_LOCAL_LINUX_PROOF_a1c5480899ab499ebd593ca3b159a9d1 > /
+tmp/lab-proof.txt; cat /tmp/lab-proof.txt; test -s /tmp/lab-proof.txt'; _lab_rc=
+$?; printf '\n__LAB_END_%s__:%s\n' 9ed01613501745f49abc65715b0a0cfb "$_lab_rc"
+
+__LAB_BEGIN_9ed01613501745f49abc65715b0a0cfb__
+Linux mlbel 4.19.124 #10 SMP Mon Oct 12 23:10:27 CST 2026 aarch64 GNU/Linux
+MemTotal:        1016836 kB
+MemFree:          994880 kB
+MemAvailable:     990624 kB
+Buffers:               0 kB
+Cached:             3312 kB
+Inter-|   Receive                                                |  Transmit
+ face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed
+    lo:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+rootfs on / type rootfs (rw,size=498344k,nr_inodes=124586)
+sysfs on /sys type sysfs (rw,relatime)
+proc on /proc type proc (rw,relatime)
+configfs on /sys/kernel/config type configfs (rw,relatime)
+devtmpfs on /dev type devtmpfs (rw,relatime,size=498344k,nr_inodes=124586,mode=755)
+ffs0 on /dev/ffs0 type functionfs (rw,relatime)
+LUMIX_LOCAL_LINUX_PROOF_a1c5480899ab499ebd593ca3b159a9d1
+
+__LAB_END_9ed01613501745f49abc65715b0a0cfb__:0
+lumix-s1rm2:~# [6nprintf '\n__LAB_BEGIN_%s__\n' 1ee9c62ed0cb4a959bc8119326555882; /
+bin/sh -c 'qoob status; qoob "cfg 1"; qoob "get 0"; cat /tmp/usb_configured /tmp
+/usb_maxpacketBULK_IN /tmp/usb_maxpacketBULK_OUT'; _lab_rc=$?; printf '\n__LAB_E
+ND_%s__:%s\n' 1ee9c62ed0cb4a959bc8119326555882 "$_lab_rc"
+
+__LAB_BEGIN_1ee9c62ed0cb4a959bc8119326555882__
+[   14.396181] qoob: gadget=qoob speed=3 composite_bound=yes setup_calls=0
+gadget=qoob speed=3 composite_bound=yes setup_calls=0
+[   14.407724] configfs-gadget gadget: high-speed config #1: c
+[   14.411886] qoob: SET_CONFIGURATION(1) ret=0
+SET_CONFIGURATION(1) ret=0
+[   14.420371] qoob: GET_INTERFACE wIndex=0x0000 ret=0 byte=0x00
+GET_INTERFACE wIndex=0x0000 ret=0 byte=0x00
+configfs-gadget gadget: high-speed config #1: c512512
+__LAB_END_1ee9c62ed0cb4a959bc8119326555882__:0
+lumix-s1rm2:~# [6nprintf '\n__LAB_BEGIN_%s__\n' 0564df401dc040909bf0f1ecb3d40b53; /
+bin/sh -c sync; _lab_rc=$?; printf '\n__LAB_END_%s__:%s\n' 0564df401dc040909bf0f
+1ecb3d40b53 "$_lab_rc"
+
+__LAB_BEGIN_0564df401dc040909bf0f1ecb3d40b53__
+
+__LAB_END_0564df401dc040909bf0f1ecb3d40b53__:0
+lumix-s1rm2:~# exit
+[  144.321086] reboot: Power down

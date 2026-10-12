@@ -1,0 +1,38 @@
+
+<LOCAL_WORKSPACE>/analysis/method0_review_20261011/decoded/GF1__110.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+400c80e5 <.data+0xc80e5>:
+400c80e5:	00          	clr	d0
+400c80e6:	08          	clr	d2
+400c80e7:	db          	setlb	
+400c80e8:	f0 44       	movbu	(a0),d1
+400c80ea:	41          	inc	a0
+400c80eb:	f8 96 01    	movbu	d1,(1,sp)
+400c80ee:	f0 44       	movbu	(a0),d1
+400c80f0:	41          	inc	a0
+400c80f1:	f8 96 00    	movbu	d1,(sp)
+400c80f4:	f8 bd 00    	movhu	(sp),d1
+400c80f7:	1c          	exthu	d0
+400c80f8:	e4          	add	d1,d0
+400c80f9:	48          	inc	d2
+400c80fa:	16          	extbu	d2
+400c80fb:	aa 10       	cmp	16,d2
+400c80fd:	d0          	llt	
+400c80fe:	f0 44       	movbu	(a0),d1
+400c8100:	41          	inc	a0
+400c8101:	f8 96 01    	movbu	d1,(1,sp)
+400c8104:	f0 44       	movbu	(a0),d1
+400c8106:	f2 30       	not	d0
+400c8108:	f8 96 00    	movbu	d1,(sp)
+400c810b:	f8 bd 00    	movhu	(sp),d1
+400c810e:	40          	inc	d0
+400c810f:	1c          	exthu	d0
+400c8110:	a4          	cmp	d1,d0
+400c8111:	c8 05       	beq	0x400c8116
+400c8113:	00          	clr	d0
+400c8114:	ca 04       	bra	0x400c8118
+400c8116:	80 01       	mov	1,d0
+400c8118:	de 80 08    	retf	[d2],8

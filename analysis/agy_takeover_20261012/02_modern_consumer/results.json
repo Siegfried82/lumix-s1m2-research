@@ -1,0 +1,3319 @@
+{
+  "task_id": "02_modern_consumer",
+  "conclusion_summary": {
+    "readable_consumer_for_rev_0x200_found_in_located_chains_and_scans": false,
+    "readable_consumer_for_crypt_selector_3_found_in_located_chains_and_scans": false,
+    "readable_consumer_for_92b_directory_found_in_located_chains_and_scans": false,
+    "negative_scope_boundary": "Pattern scan negatives apply strictly to the listed byte patterns and scanned ranges and do not by themselves exclude indirect calls or alternate encodings; the primary proof is that all 7 located real updater call chains in decoded legacy firmwares explicitly check header_revision == 0x101 and crypt_selector in {0,1} or {0,2}, rejecting 0x200 and selector 3.",
+    "verified_legacy_consumers_count": 7,
+    "verified_legacy_header_revision": "0x00000101",
+    "verified_legacy_crypt_selectors": {
+      "GH2_V11_GH2_V12_G3_V12_GF2_V11_GF3_V12_GX1_V11_UPD_sel2_PTool_method1_AES128CBC": [
+        0,
+        2
+      ],
+      "TZ10_V12_UPD_sel1_PTool_method2_parity_MT19937": [
+        0,
+        1
+      ]
+    },
+    "verified_legacy_directory_stride_bytes": 24,
+    "verified_modern_directory_stride_bytes": 92,
+    "verified_modern_92b_layout": {
+      "0x00_0x0c": "12B ASCII name",
+      "0x0c_0x10": "4B relative_offset (from 0x200)",
+      "0x10_0x14": "4B size",
+      "0x14_0x18": "4B destination",
+      "0x18_0x1c": "4B flags (2 or 3)",
+      "0x1c_0x3c": "32B candidate SHA-256 digest",
+      "0x3c_0x4c": "16B per-component field (all-zero for flags==2, non-zero for flags==3)",
+      "0x4c_0x5c": "16B zero padding (all-zero across all 391 + 61 entries)"
+    },
+    "verified_host_and_external_tools_status": {
+      "ptool3_exe (analysis/sources/ptool_static/ptool3.exe)": "Matches 12 hardcoded legacy models by file_size + whole-file MD5; switches only on PTool method in {0, 1, 2}; never parses UPD revision 0x200, crypt selector 3, or 92B directory.",
+      "lumix_tether_2_12 (analysis/sources/tether_2_12_expanded & analysis/sources/tether_windows_2_12)": "Checks only .bin/.rom extension and first 3 bytes 'UPD'; transfers raw file in 0x7d000 (500 KiB) chunks over USB PTP 0x9406/0x9605/0x9606/0x9607 to camera RAM.",
+      "lumix_lab_3_1_0 (analysis/sources/lumix_lab_codex_static)": "Extracts first file from .zip and sends JSON via POST firmware/send-prepare (Content-Type: application/json) followed by raw binary stream via POST firmware/send (Content-Type: application/octet-stream, p084h6/a.java:54-60); 18 native .so libraries have no UPD caller.",
+      "lumix_sync_2_0_17 (analysis/sources/lumix_sync_static)": "Extracts first file from .zip and streams raw byte slices via HTTP CGI mode=startsenddata + mode=requestsenddata wrapped in application/octet-stream multipart (B5/a.java, B5/m.java, B5/n.java).",
+      "lumix_flow_1_6_0 (analysis/sources/lumix_flow_1_6_0)": "No firmware update implementation.",
+      "oss_uboot_linux_4_19_124 (analysis/sources/u-boot & analysis/sources/linux-4.19.124)": "Runs post-boot on cpu@3 from pre-loaded RAM / IPCU; does not parse UPD outer header or 92B directory.",
+      "sddl_dec (analysis/sources/sddl_dec)": "Decrypts Panasonic TV SDDL.SEC / SDIT.FDI / PEAKS containers using TV-specific AES-CBC/ECB and Blowfish keys; does not parse camera UPD 0x200 or 92B directory.",
+      "pana_dvd_crypto (analysis/sources/pana_dvd_crypto)": "Implements Panasonic DVD libfmupre.so 64-bit custom Feistel cipher with 256B S-box; does not parse camera UPD 0x200 or 92B directory."
+    }
+  },
+  "host_and_external_tool_files": {
+    "ptool3_exe": {
+      "path": "analysis/sources/ptool_static/ptool3.exe",
+      "size_bytes": 3105280,
+      "sha256": "57a0b1ab911e6e7a672ab971a8f32aef6161029104ad14f78fe8de297788dd2f"
+    },
+    "lumix_tether_2_12_macos_app": {
+      "path": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/MacOS/LUMIX Tether",
+      "size_bytes": 23973680,
+      "sha256": "a20693256aeae33c93722cadb2e0ceaa760a98a48d9ebbfd2f697d3ad6420c3a"
+    },
+    "lumix_tether_2_12_macos_dylib": {
+      "path": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/Frameworks/libLmxptpif.dylib",
+      "size_bytes": 6870784,
+      "sha256": "b767e5680676eefdc05d02a4772c4120a45916e246169b79393356499c07ec97"
+    },
+    "lumix_tether_2_12_windows_exe": {
+      "path": "analysis/sources/tether_windows_2_12/LUMIXTether.exe",
+      "size_bytes": 10276248,
+      "sha256": "2f41d019327b9aaa7a731fb385fd4ecba569490da96ddfeeca87b6ada751fa42"
+    },
+    "lumix_lab_3_1_0_apk": {
+      "path": "analysis/sources/lumix_lab_codex_static/com.panasonic.jp.lumixlab.apk",
+      "size_bytes": 189845077,
+      "sha256": "6ba873110d201675a905f7dac39bcda3291674e7440a484d6d5bd1a78447115f"
+    },
+    "lumix_lab_retrofit_interface": {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/p084h6/a.java",
+      "size_bytes": 12701,
+      "sha256": "53f9f8ec61d95915512a03a3cd5fcabe5ab5a75dd7ac6a19987f15576e3a5104"
+    },
+    "lumix_sync_2_0_17_apk": {
+      "path": "analysis/sources/lumix_sync_static/lumixsync.apk",
+      "size_bytes": 62630463,
+      "sha256": "6986e22f92c9d7a468ee56e948a6e1960128989a8bd90013231b9a27ab10e377"
+    },
+    "sddl_dec_main_rs": {
+      "path": "analysis/sources/sddl_dec/src/main.rs",
+      "size_bytes": 11917,
+      "sha256": "e1428e573120f87ba7d148986901145301356683afda26aa04bff3782cabacaa"
+    },
+    "sddl_dec_include_rs": {
+      "path": "analysis/sources/sddl_dec/src/include.rs",
+      "size_bytes": 11049,
+      "sha256": "e7dd0bfe2fb814ce6a5458cc3350dcd9a2b6ee0c19ee8446933d5a69d56a9ed6"
+    },
+    "pana_dvd_crypto_rs": {
+      "path": "analysis/sources/pana_dvd_crypto/src/crypto.rs",
+      "size_bytes": 5999,
+      "sha256": "6ff73aa7cf637ea2ecdb749ae7208492f521afededb8c2c3890336b6324ed50e"
+    }
+  },
+  "legacy_am33_overlay_consumers": [
+    {
+      "model": "GH2_V11",
+      "variant": "am33_overlay_upd_0x101_aes128cbc_consumer",
+      "upd_crypt_selector": 2,
+      "ptool_method": 1,
+      "cipher": "AES-128-CBC",
+      "path": "analysis/legacy_corpus_20261011/GH2__V11.bin.plaintext",
+      "sha256": "7d34331dda3d40798084c80b5052dc8a307079facf53f1b7d17e2e39f4a8f36b",
+      "size_bytes": 15599104,
+      "segment_mapping": {
+        "rom_main_file_offset": "0x00000600",
+        "rom_main_field_addr": "0x40000000",
+        "rom_main_va_formula": "VA = 0x3FFFFA00 + file_offset",
+        "rom_overlay_file_offset": "0x008c0600",
+        "rom_overlay_source_addr": "0x408c0000",
+        "rom_overlay_exec_entry_va": "0x7bbc0000",
+        "rom_overlay_va_formula": "VA = 0x7B2FFA00 + file_offset"
+      },
+      "outer_header": {
+        "magic_hex": "55504400",
+        "magic_ascii": "UPD\u0000",
+        "header_size_0x04": "0x00000200",
+        "header_revision": "0x00000101",
+        "header_revision_int": 257,
+        "model_name": "GH2",
+        "version_bcd": "0x01110111",
+        "field_0x20": "0x00000004",
+        "field_0x24": "0x11291935",
+        "field_0x28": "0x00000000",
+        "digest_selector_0x2c": 2,
+        "field_0x30": "0x00000000",
+        "crypt_selector_0x34": 2,
+        "field_0x38": "0x00000200",
+        "body_size_0x3c": 15598592,
+        "body_size_0x3c_hex": "0x00ee0400",
+        "digest_0x40_0x50_hex": "d88f4506546ce8e2ab264a7548c3dee0",
+        "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+      },
+      "inner_header_check": {
+        "inner_0x200_0x220_matches_outer_0x0c_0x2c": true,
+        "inner_0x220_dir_relative_offset": "0x00000200",
+        "computed_dir_file_offset": "0x00000400",
+        "dir_entry_count_at_0x400": 2
+      },
+      "functions": {
+        "header_reader_and_rev_magic_check": {
+          "entry_file_offset": "0x9d60b6",
+          "entry_va": "0x7bcd5ab6",
+          "rev_check_file_offset": "0x9d6113",
+          "rev_check_va": "0x7bcd5b13",
+          "accepted_revision": "0x00000101 (fa c8 01 01 = cmp 257, d0)",
+          "accepted_magic": "'U'(85), 'P'(80), 'D'(68), '\\0'(0) byte-by-byte",
+          "rejection_error": "0x80000064",
+          "check_bytes_hex": "f80008fac80101c91df040a055c917f84001a050c910f84002a044c909f84003a000c80afccc64000080"
+        },
+        "updater_main_and_selector_checks": {
+          "entry_file_offset": "0x9d6167",
+          "entry_va": "0x7bcd5b67",
+          "digest_check_file_offset": "0x9d61af",
+          "digest_check_va": "0x7bcd5baf",
+          "accepted_digest_selectors": [
+            0,
+            1,
+            2
+          ],
+          "crypt_check_file_offset": "0x9d61cc",
+          "crypt_check_va": "0x7bcd5bcc",
+          "accepted_crypt_selectors": [
+            0,
+            2
+          ],
+          "rejection_error": "0x80000006",
+          "crypt_check_bytes_hex": "f80434a500c84ca502c93f23749cdd3e"
+        },
+        "inner_dir_pointer_setup": {
+          "file_offset": "0x9d64cf",
+          "va": "0x7bcd5ecf",
+          "semantics": "dir_ptr = inner_hdr + *(uint32_t *)(inner_hdr + 0x20) stored to (0x50, a0)",
+          "bytes_hex": "f800208564f1505c389564f810505c3c"
+        },
+        "directory_count_getter": {
+          "file_offset": "0x9d64f5",
+          "va": "0x7bcd5ef5"
+        },
+        "directory_entry_getter_24b": {
+          "entry_file_offset": "0x9d650b",
+          "entry_va": "0x7bcd5f0b",
+          "mul24_file_offset": "0x9d6540",
+          "mul24_va": "0x7bcd5f40",
+          "entry_stride_bytes": 24,
+          "mul24_insn_hex": "f90018",
+          "reads_fields": [
+            "+0x0c (relative_start)",
+            "+0x10 (size)",
+            "+0x14 (load_addr)"
+          ],
+          "window_bytes_hex": "75f900182904e1f1e69c99dd34bbf7ff2004f80214f1e8f81314f80210f81310f80420f8020ce1f8170c00"
+        }
+      },
+      "directory_entries": [
+        {
+          "entry_index": 0,
+          "entry_file_offset": "0x404",
+          "name": "program",
+          "relative_start": "0x00000400",
+          "actual_file_offset": "0x00000600",
+          "size": "0x00e80000",
+          "field_0x14_addr": "0x00000000"
+        },
+        {
+          "entry_index": 1,
+          "entry_file_offset": "0x41c",
+          "name": "eep",
+          "relative_start": "0x00e80400",
+          "actual_file_offset": "0x00e80600",
+          "size": "0x00060000",
+          "field_0x14_addr": "0x00fa0000"
+        }
+      ]
+    },
+    {
+      "model": "GH2_V12",
+      "variant": "am33_overlay_upd_0x101_aes128cbc_consumer",
+      "upd_crypt_selector": 2,
+      "ptool_method": 1,
+      "cipher": "AES-128-CBC",
+      "path": "analysis/legacy_corpus_20261011/GH2__V12.bin.plaintext",
+      "sha256": "bb54434ababd855b659cab51b8c6931cdba628edf794bf56a3a6143655faf785",
+      "size_bytes": 15599104,
+      "segment_mapping": {
+        "rom_main_file_offset": "0x00000600",
+        "rom_main_field_addr": "0x40000000",
+        "rom_main_va_formula": "VA = 0x3FFFFA00 + file_offset",
+        "rom_overlay_file_offset": "0x008c0600",
+        "rom_overlay_source_addr": "0x408c0000",
+        "rom_overlay_exec_entry_va": "0x7bbc0000",
+        "rom_overlay_va_formula": "VA = 0x7B2FFA00 + file_offset"
+      },
+      "outer_header": {
+        "magic_hex": "55504400",
+        "magic_ascii": "UPD\u0000",
+        "header_size_0x04": "0x00000200",
+        "header_revision": "0x00000101",
+        "header_revision_int": 257,
+        "model_name": "GH2",
+        "version_bcd": "0x01200120",
+        "field_0x20": "0x00000004",
+        "field_0x24": "0x08231738",
+        "field_0x28": "0x00000000",
+        "digest_selector_0x2c": 2,
+        "field_0x30": "0x00000000",
+        "crypt_selector_0x34": 2,
+        "field_0x38": "0x00000200",
+        "body_size_0x3c": 15598592,
+        "body_size_0x3c_hex": "0x00ee0400",
+        "digest_0x40_0x50_hex": "35cb77e2ef08df9ef334ff1e496b0b02",
+        "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+      },
+      "inner_header_check": {
+        "inner_0x200_0x220_matches_outer_0x0c_0x2c": true,
+        "inner_0x220_dir_relative_offset": "0x00000200",
+        "computed_dir_file_offset": "0x00000400",
+        "dir_entry_count_at_0x400": 2
+      },
+      "functions": {
+        "header_reader_and_rev_magic_check": {
+          "entry_file_offset": "0x9d60b6",
+          "entry_va": "0x7bcd5ab6",
+          "rev_check_file_offset": "0x9d6113",
+          "rev_check_va": "0x7bcd5b13",
+          "accepted_revision": "0x00000101 (fa c8 01 01 = cmp 257, d0)",
+          "accepted_magic": "'U'(85), 'P'(80), 'D'(68), '\\0'(0) byte-by-byte",
+          "rejection_error": "0x80000064",
+          "check_bytes_hex": "f80008fac80101c91df040a055c917f84001a050c910f84002a044c909f84003a000c80afccc64000080"
+        },
+        "updater_main_and_selector_checks": {
+          "entry_file_offset": "0x9d6167",
+          "entry_va": "0x7bcd5b67",
+          "digest_check_file_offset": "0x9d61af",
+          "digest_check_va": "0x7bcd5baf",
+          "accepted_digest_selectors": [
+            0,
+            1,
+            2
+          ],
+          "crypt_check_file_offset": "0x9d61cc",
+          "crypt_check_va": "0x7bcd5bcc",
+          "accepted_crypt_selectors": [
+            0,
+            2
+          ],
+          "rejection_error": "0x80000006",
+          "crypt_check_bytes_hex": "f80434a500c84ca502c93f23749cdd3e"
+        },
+        "inner_dir_pointer_setup": {
+          "file_offset": "0x9d64cf",
+          "va": "0x7bcd5ecf",
+          "semantics": "dir_ptr = inner_hdr + *(uint32_t *)(inner_hdr + 0x20) stored to (0x50, a0)",
+          "bytes_hex": "f800208564f1505c389564f810505c3c"
+        },
+        "directory_count_getter": {
+          "file_offset": "0x9d64f5",
+          "va": "0x7bcd5ef5"
+        },
+        "directory_entry_getter_24b": {
+          "entry_file_offset": "0x9d650b",
+          "entry_va": "0x7bcd5f0b",
+          "mul24_file_offset": "0x9d6540",
+          "mul24_va": "0x7bcd5f40",
+          "entry_stride_bytes": 24,
+          "mul24_insn_hex": "f90018",
+          "reads_fields": [
+            "+0x0c (relative_start)",
+            "+0x10 (size)",
+            "+0x14 (load_addr)"
+          ],
+          "window_bytes_hex": "75f900182904e1f1e69c99dd34bbf7ff2004f80214f1e8f81314f80210f81310f80420f8020ce1f8170c00"
+        }
+      },
+      "directory_entries": [
+        {
+          "entry_index": 0,
+          "entry_file_offset": "0x404",
+          "name": "program",
+          "relative_start": "0x00000400",
+          "actual_file_offset": "0x00000600",
+          "size": "0x00e80000",
+          "field_0x14_addr": "0x00000000"
+        },
+        {
+          "entry_index": 1,
+          "entry_file_offset": "0x41c",
+          "name": "eep",
+          "relative_start": "0x00e80400",
+          "actual_file_offset": "0x00e80600",
+          "size": "0x00060000",
+          "field_0x14_addr": "0x00fa0000"
+        }
+      ]
+    },
+    {
+      "model": "G3_V12",
+      "variant": "am33_overlay_upd_0x101_aes128cbc_consumer",
+      "upd_crypt_selector": 2,
+      "ptool_method": 1,
+      "cipher": "AES-128-CBC",
+      "path": "analysis/legacy_corpus_20261011/G3___V12.bin.plaintext",
+      "sha256": "b8912ea28230567dc3982aa373f6d0594cc17250802bf46b38b92bb3f60659f7",
+      "size_bytes": 15599104,
+      "segment_mapping": {
+        "rom_main_file_offset": "0x00000600",
+        "rom_main_field_addr": "0x40000000",
+        "rom_main_va_formula": "VA = 0x3FFFFA00 + file_offset",
+        "rom_overlay_file_offset": "0x008c0600",
+        "rom_overlay_source_addr": "0x408c0000",
+        "rom_overlay_exec_entry_va": "0x7bbc0000",
+        "rom_overlay_va_formula": "VA = 0x7B2FFA00 + file_offset"
+      },
+      "outer_header": {
+        "magic_hex": "55504400",
+        "magic_ascii": "UPD\u0000",
+        "header_size_0x04": "0x00000200",
+        "header_revision": "0x00000101",
+        "header_revision_int": 257,
+        "model_name": "G3",
+        "version_bcd": "0x01200120",
+        "field_0x20": "0x00000004",
+        "field_0x24": "0x10071050",
+        "field_0x28": "0x00000000",
+        "digest_selector_0x2c": 2,
+        "field_0x30": "0x00000000",
+        "crypt_selector_0x34": 2,
+        "field_0x38": "0x00000200",
+        "body_size_0x3c": 15598592,
+        "body_size_0x3c_hex": "0x00ee0400",
+        "digest_0x40_0x50_hex": "07a55d1b05011d0b4f92b57d1718b662",
+        "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+      },
+      "inner_header_check": {
+        "inner_0x200_0x220_matches_outer_0x0c_0x2c": true,
+        "inner_0x220_dir_relative_offset": "0x00000200",
+        "computed_dir_file_offset": "0x00000400",
+        "dir_entry_count_at_0x400": 2
+      },
+      "functions": {
+        "header_reader_and_rev_magic_check": {
+          "entry_file_offset": "0x9d482f",
+          "entry_va": "0x7bcd422f",
+          "rev_check_file_offset": "0x9d488c",
+          "rev_check_va": "0x7bcd428c",
+          "accepted_revision": "0x00000101 (fa c8 01 01 = cmp 257, d0)",
+          "accepted_magic": "'U'(85), 'P'(80), 'D'(68), '\\0'(0) byte-by-byte",
+          "rejection_error": "0x80000064",
+          "check_bytes_hex": "f80008fac80101c91df040a055c917f84001a050c910f84002a044c909f84003a000c80afccc64000080"
+        },
+        "updater_main_and_selector_checks": {
+          "entry_file_offset": "0x9d48e0",
+          "entry_va": "0x7bcd42e0",
+          "digest_check_file_offset": "0x9d4928",
+          "digest_check_va": "0x7bcd4328",
+          "accepted_digest_selectors": [
+            0,
+            1,
+            2
+          ],
+          "crypt_check_file_offset": "0x9d4945",
+          "crypt_check_va": "0x7bcd4345",
+          "accepted_crypt_selectors": [
+            0,
+            2
+          ],
+          "rejection_error": "0x80000006",
+          "crypt_check_bytes_hex": "f80434a500c84ca502c93f23749cdd1d"
+        },
+        "inner_dir_pointer_setup": {
+          "file_offset": "0x9d4c48",
+          "va": "0x7bcd4648",
+          "semantics": "dir_ptr = inner_hdr + *(uint32_t *)(inner_hdr + 0x20) stored to (0x50, a0)",
+          "bytes_hex": "f800208564f1505c389564f810505c3c"
+        },
+        "directory_count_getter": {
+          "file_offset": "0x9d4c6e",
+          "va": "0x7bcd466e"
+        },
+        "directory_entry_getter_24b": {
+          "entry_file_offset": "0x9d4c84",
+          "entry_va": "0x7bcd4684",
+          "mul24_file_offset": "0x9d4cb9",
+          "mul24_va": "0x7bcd46b9",
+          "entry_stride_bytes": 24,
+          "mul24_insn_hex": "f90018",
+          "reads_fields": [
+            "+0x0c (relative_start)",
+            "+0x10 (size)",
+            "+0x14 (load_addr)"
+          ],
+          "window_bytes_hex": "75f900182904e1f1e69c99dda8e3f7ff2004f80214f1e8f81314f80210f81310f80420f8020ce1f8170c00"
+        }
+      },
+      "directory_entries": [
+        {
+          "entry_index": 0,
+          "entry_file_offset": "0x404",
+          "name": "program",
+          "relative_start": "0x00000400",
+          "actual_file_offset": "0x00000600",
+          "size": "0x00e80000",
+          "field_0x14_addr": "0x00000000"
+        },
+        {
+          "entry_index": 1,
+          "entry_file_offset": "0x41c",
+          "name": "eep",
+          "relative_start": "0x00e80400",
+          "actual_file_offset": "0x00e80600",
+          "size": "0x00060000",
+          "field_0x14_addr": "0x00fa0000"
+        }
+      ]
+    },
+    {
+      "model": "GF2_V11",
+      "variant": "am33_overlay_upd_0x101_aes128cbc_consumer",
+      "upd_crypt_selector": 2,
+      "ptool_method": 1,
+      "cipher": "AES-128-CBC",
+      "path": "analysis/legacy_corpus_20261011/GF2__V11.bin.plaintext",
+      "sha256": "51f3889063c68e6d42b7295af9a98d374c8ee2484f785ad908101b5bf4f29a8d",
+      "size_bytes": 15599104,
+      "segment_mapping": {
+        "rom_main_file_offset": "0x00000600",
+        "rom_main_field_addr": "0x40000000",
+        "rom_main_va_formula": "VA = 0x3FFFFA00 + file_offset",
+        "rom_overlay_file_offset": "0x008c0600",
+        "rom_overlay_source_addr": "0x408c0000",
+        "rom_overlay_exec_entry_va": "0x7bbc0000",
+        "rom_overlay_va_formula": "VA = 0x7B2FFA00 + file_offset"
+      },
+      "outer_header": {
+        "magic_hex": "55504400",
+        "magic_ascii": "UPD\u0000",
+        "header_size_0x04": "0x00000200",
+        "header_revision": "0x00000101",
+        "header_revision_int": 257,
+        "model_name": "GF2",
+        "version_bcd": "0x01120112",
+        "field_0x20": "0x00000004",
+        "field_0x24": "0x09082004",
+        "field_0x28": "0x00000000",
+        "digest_selector_0x2c": 2,
+        "field_0x30": "0x00000000",
+        "crypt_selector_0x34": 2,
+        "field_0x38": "0x00000200",
+        "body_size_0x3c": 15598592,
+        "body_size_0x3c_hex": "0x00ee0400",
+        "digest_0x40_0x50_hex": "1e5bca8e4f1120c1f779d7f3ad450311",
+        "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+      },
+      "inner_header_check": {
+        "inner_0x200_0x220_matches_outer_0x0c_0x2c": true,
+        "inner_0x220_dir_relative_offset": "0x00000200",
+        "computed_dir_file_offset": "0x00000400",
+        "dir_entry_count_at_0x400": 2
+      },
+      "functions": {
+        "header_reader_and_rev_magic_check": {
+          "entry_file_offset": "0x9d2592",
+          "entry_va": "0x7bcd1f92",
+          "rev_check_file_offset": "0x9d25ef",
+          "rev_check_va": "0x7bcd1fef",
+          "accepted_revision": "0x00000101 (fa c8 01 01 = cmp 257, d0)",
+          "accepted_magic": "'U'(85), 'P'(80), 'D'(68), '\\0'(0) byte-by-byte",
+          "rejection_error": "0x80000064",
+          "check_bytes_hex": "f80008fac80101c91df040a055c917f84001a050c910f84002a044c909f84003a000c80afccc64000080"
+        },
+        "updater_main_and_selector_checks": {
+          "entry_file_offset": "0x9d2643",
+          "entry_va": "0x7bcd2043",
+          "digest_check_file_offset": "0x9d268b",
+          "digest_check_va": "0x7bcd208b",
+          "accepted_digest_selectors": [
+            0,
+            1,
+            2
+          ],
+          "crypt_check_file_offset": "0x9d26a8",
+          "crypt_check_va": "0x7bcd20a8",
+          "accepted_crypt_selectors": [
+            0,
+            2
+          ],
+          "rejection_error": "0x80000006",
+          "crypt_check_bytes_hex": "f80434a500c84ca502c93f23749cdd9f"
+        },
+        "inner_dir_pointer_setup": {
+          "file_offset": "0x9d29ab",
+          "va": "0x7bcd23ab",
+          "semantics": "dir_ptr = inner_hdr + *(uint32_t *)(inner_hdr + 0x20) stored to (0x50, a0)",
+          "bytes_hex": "f800208564f1505c389564f810505c3c"
+        },
+        "directory_count_getter": {
+          "file_offset": "0x9d29d1",
+          "va": "0x7bcd23d1"
+        },
+        "directory_entry_getter_24b": {
+          "entry_file_offset": "0x9d29e7",
+          "entry_va": "0x7bcd23e7",
+          "mul24_file_offset": "0x9d2a1c",
+          "mul24_va": "0x7bcd241c",
+          "entry_stride_bytes": 24,
+          "mul24_insn_hex": "f90018",
+          "reads_fields": [
+            "+0x0c (relative_start)",
+            "+0x10 (size)",
+            "+0x14 (load_addr)"
+          ],
+          "window_bytes_hex": "75f900182904e1f1e69c99dd16f6f7ff2004f80214f1e8f81314f80210f81310f80420f8020ce1f8170c00"
+        }
+      },
+      "directory_entries": [
+        {
+          "entry_index": 0,
+          "entry_file_offset": "0x404",
+          "name": "program",
+          "relative_start": "0x00000400",
+          "actual_file_offset": "0x00000600",
+          "size": "0x00e80000",
+          "field_0x14_addr": "0x00000000"
+        },
+        {
+          "entry_index": 1,
+          "entry_file_offset": "0x41c",
+          "name": "eep",
+          "relative_start": "0x00e80400",
+          "actual_file_offset": "0x00e80600",
+          "size": "0x00060000",
+          "field_0x14_addr": "0x00fa0000"
+        }
+      ]
+    },
+    {
+      "model": "GF3_V12",
+      "variant": "am33_overlay_upd_0x101_aes128cbc_consumer",
+      "upd_crypt_selector": 2,
+      "ptool_method": 1,
+      "cipher": "AES-128-CBC",
+      "path": "analysis/legacy_corpus_20261011/GF3__V12.bin.plaintext",
+      "sha256": "a0ef6af599f7557606b1c9cbe5324d496f84273c09617eb3e6cd875390e66ec0",
+      "size_bytes": 15599104,
+      "segment_mapping": {
+        "rom_main_file_offset": "0x00000600",
+        "rom_main_field_addr": "0x40000000",
+        "rom_main_va_formula": "VA = 0x3FFFFA00 + file_offset",
+        "rom_overlay_file_offset": "0x008c0600",
+        "rom_overlay_source_addr": "0x408c0000",
+        "rom_overlay_exec_entry_va": "0x7bbc0000",
+        "rom_overlay_va_formula": "VA = 0x7B2FFA00 + file_offset"
+      },
+      "outer_header": {
+        "magic_hex": "55504400",
+        "magic_ascii": "UPD\u0000",
+        "header_size_0x04": "0x00000200",
+        "header_revision": "0x00000101",
+        "header_revision_int": 257,
+        "model_name": "GF3",
+        "version_bcd": "0x01200120",
+        "field_0x20": "0x00000004",
+        "field_0x24": "0x10071050",
+        "field_0x28": "0x00000000",
+        "digest_selector_0x2c": 2,
+        "field_0x30": "0x00000000",
+        "crypt_selector_0x34": 2,
+        "field_0x38": "0x00000200",
+        "body_size_0x3c": 15598592,
+        "body_size_0x3c_hex": "0x00ee0400",
+        "digest_0x40_0x50_hex": "a3b958bf338888db5ef2beacd399c5ef",
+        "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+      },
+      "inner_header_check": {
+        "inner_0x200_0x220_matches_outer_0x0c_0x2c": true,
+        "inner_0x220_dir_relative_offset": "0x00000200",
+        "computed_dir_file_offset": "0x00000400",
+        "dir_entry_count_at_0x400": 2
+      },
+      "functions": {
+        "header_reader_and_rev_magic_check": {
+          "entry_file_offset": "0x9d4ea5",
+          "entry_va": "0x7bcd48a5",
+          "rev_check_file_offset": "0x9d4f02",
+          "rev_check_va": "0x7bcd4902",
+          "accepted_revision": "0x00000101 (fa c8 01 01 = cmp 257, d0)",
+          "accepted_magic": "'U'(85), 'P'(80), 'D'(68), '\\0'(0) byte-by-byte",
+          "rejection_error": "0x80000064",
+          "check_bytes_hex": "f80008fac80101c91df040a055c917f84001a050c910f84002a044c909f84003a000c80afccc64000080"
+        },
+        "updater_main_and_selector_checks": {
+          "entry_file_offset": "0x9d4f56",
+          "entry_va": "0x7bcd4956",
+          "digest_check_file_offset": "0x9d4f9e",
+          "digest_check_va": "0x7bcd499e",
+          "accepted_digest_selectors": [
+            0,
+            1,
+            2
+          ],
+          "crypt_check_file_offset": "0x9d4fbb",
+          "crypt_check_va": "0x7bcd49bb",
+          "accepted_crypt_selectors": [
+            0,
+            2
+          ],
+          "rejection_error": "0x80000006",
+          "crypt_check_bytes_hex": "f80434a500c84ca502c93f23749cdd70"
+        },
+        "inner_dir_pointer_setup": {
+          "file_offset": "0x9d52be",
+          "va": "0x7bcd4cbe",
+          "semantics": "dir_ptr = inner_hdr + *(uint32_t *)(inner_hdr + 0x20) stored to (0x50, a0)",
+          "bytes_hex": "f800208564f1505c389564f810505c3c"
+        },
+        "directory_count_getter": {
+          "file_offset": "0x9d52e4",
+          "va": "0x7bcd4ce4"
+        },
+        "directory_entry_getter_24b": {
+          "entry_file_offset": "0x9d52fa",
+          "entry_va": "0x7bcd4cfa",
+          "mul24_file_offset": "0x9d532f",
+          "mul24_va": "0x7bcd4d2f",
+          "entry_stride_bytes": 24,
+          "mul24_insn_hex": "f90018",
+          "reads_fields": [
+            "+0x0c (relative_start)",
+            "+0x10 (size)",
+            "+0x14 (load_addr)"
+          ],
+          "window_bytes_hex": "75f900182904e1f1e69c99dd20ddf7ff2004f80214f1e8f81314f80210f81310f80420f8020ce1f8170c00"
+        }
+      },
+      "directory_entries": [
+        {
+          "entry_index": 0,
+          "entry_file_offset": "0x404",
+          "name": "program",
+          "relative_start": "0x00000400",
+          "actual_file_offset": "0x00000600",
+          "size": "0x00e80000",
+          "field_0x14_addr": "0x00000000"
+        },
+        {
+          "entry_index": 1,
+          "entry_file_offset": "0x41c",
+          "name": "eep",
+          "relative_start": "0x00e80400",
+          "actual_file_offset": "0x00e80600",
+          "size": "0x00060000",
+          "field_0x14_addr": "0x00fa0000"
+        }
+      ]
+    },
+    {
+      "model": "GX1_V11",
+      "variant": "am33_overlay_upd_0x101_aes128cbc_consumer",
+      "upd_crypt_selector": 2,
+      "ptool_method": 1,
+      "cipher": "AES-128-CBC",
+      "path": "analysis/legacy_corpus_20261011/GX1__V11.bin.plaintext",
+      "sha256": "ec99c8d15f723e8688afabe39c4e45207e3a16bc90baa5c043c28b412ee937fb",
+      "size_bytes": 15599104,
+      "segment_mapping": {
+        "rom_main_file_offset": "0x00000600",
+        "rom_main_field_addr": "0x40000000",
+        "rom_main_va_formula": "VA = 0x3FFFFA00 + file_offset",
+        "rom_overlay_file_offset": "0x00880600",
+        "rom_overlay_source_addr": "0x40880000",
+        "rom_overlay_exec_entry_va": "0x7bb80000",
+        "rom_overlay_va_formula": "VA = 0x7B2FFA00 + file_offset"
+      },
+      "outer_header": {
+        "magic_hex": "55504400",
+        "magic_ascii": "UPD\u0000",
+        "header_size_0x04": "0x00000200",
+        "header_revision": "0x00000101",
+        "header_revision_int": 257,
+        "model_name": "GX1",
+        "version_bcd": "0x01100110",
+        "field_0x20": "0x00000004",
+        "field_0x24": "0x01161701",
+        "field_0x28": "0x00000000",
+        "digest_selector_0x2c": 2,
+        "field_0x30": "0x00000000",
+        "crypt_selector_0x34": 2,
+        "field_0x38": "0x00000200",
+        "body_size_0x3c": 15598592,
+        "body_size_0x3c_hex": "0x00ee0400",
+        "digest_0x40_0x50_hex": "0bef550abc474660ce2d9e962aa0585a",
+        "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+      },
+      "inner_header_check": {
+        "inner_0x200_0x220_matches_outer_0x0c_0x2c": true,
+        "inner_0x220_dir_relative_offset": "0x00000200",
+        "computed_dir_file_offset": "0x00000400",
+        "dir_entry_count_at_0x400": 2
+      },
+      "functions": {
+        "header_reader_and_rev_magic_check": {
+          "entry_file_offset": "0x9bbe08",
+          "entry_va": "0x7bcbb808",
+          "rev_check_file_offset": "0x9bbe65",
+          "rev_check_va": "0x7bcbb865",
+          "accepted_revision": "0x00000101 (fa c8 01 01 = cmp 257, d0)",
+          "accepted_magic": "'U'(85), 'P'(80), 'D'(68), '\\0'(0) byte-by-byte",
+          "rejection_error": "0x80000064",
+          "check_bytes_hex": "f80008fac80101c91df040a055c917f84001a050c910f84002a044c909f84003a000c80afccc64000080"
+        },
+        "updater_main_and_selector_checks": {
+          "entry_file_offset": "0x9bbeb9",
+          "entry_va": "0x7bcbb8b9",
+          "digest_check_file_offset": "0x9bbf01",
+          "digest_check_va": "0x7bcbb901",
+          "accepted_digest_selectors": [
+            0,
+            1,
+            2
+          ],
+          "crypt_check_file_offset": "0x9bbf1e",
+          "crypt_check_va": "0x7bcbb91e",
+          "accepted_crypt_selectors": [
+            0,
+            2
+          ],
+          "rejection_error": "0x80000006",
+          "crypt_check_bytes_hex": "f80434a500c84ca502c93f23749cdd79"
+        },
+        "inner_dir_pointer_setup": {
+          "file_offset": "0x9bc221",
+          "va": "0x7bcbbc21",
+          "semantics": "dir_ptr = inner_hdr + *(uint32_t *)(inner_hdr + 0x20) stored to (0x50, a0)",
+          "bytes_hex": "f800208564f1505c389564f810505c3c"
+        },
+        "directory_count_getter": {
+          "file_offset": "0x9bc247",
+          "va": "0x7bcbbc47"
+        },
+        "directory_entry_getter_24b": {
+          "entry_file_offset": "0x9bc25d",
+          "entry_va": "0x7bcbbc5d",
+          "mul24_file_offset": "0x9bc292",
+          "mul24_va": "0x7bcbbc92",
+          "entry_stride_bytes": 24,
+          "mul24_insn_hex": "f90018",
+          "reads_fields": [
+            "+0x0c (relative_start)",
+            "+0x10 (size)",
+            "+0x14 (load_addr)"
+          ],
+          "window_bytes_hex": "75f900182904e1f1e69c99dd431af7ff2004f80214f1e8f81314f80210f81310f80420f8020ce1f8170c00"
+        }
+      },
+      "directory_entries": [
+        {
+          "entry_index": 0,
+          "entry_file_offset": "0x404",
+          "name": "program",
+          "relative_start": "0x00000400",
+          "actual_file_offset": "0x00000600",
+          "size": "0x00e80000",
+          "field_0x14_addr": "0x00000000"
+        },
+        {
+          "entry_index": 1,
+          "entry_file_offset": "0x41c",
+          "name": "eep",
+          "relative_start": "0x00e80400",
+          "actual_file_offset": "0x00e80600",
+          "size": "0x00060000",
+          "field_0x14_addr": "0x00fa0000"
+        }
+      ]
+    }
+  ],
+  "legacy_tz10_am30_consumer": {
+    "model": "TZ10_V12",
+    "upd_crypt_selector": 1,
+    "ptool_method": 2,
+    "cipher": "parity-feedback MT19937 stream XOR",
+    "path": "analysis/method2_review_20261011/decoded/TZ10_V12.bin.decoded",
+    "sha256": "c4128ef8c4a7f9576a35423e6d806d6a047b17ad649bab93b7362c1e7849c032",
+    "size_bytes": 16592384,
+    "disassembly_window": {
+      "file_start": "0x3103c0",
+      "file_stop": "0x310de8",
+      "va_start": "0x77b8bdc0",
+      "va_stop": "0x77b8c7e8"
+    },
+    "segment_mapping": {
+      "rom_comp_file_offset": "0x00004600",
+      "rom_comp_field_addr": "0x00004600",
+      "verified_execution_base_va": "0x7787ba00",
+      "va_formula": "VA = 0x7787BA00 + file_offset (ROM +0x4600 -> VA 0x77880000)"
+    },
+    "outer_header": {
+      "magic_hex": "55504400",
+      "magic_ascii": "UPD\u0000",
+      "header_size_0x04": "0x00000200",
+      "header_revision": "0x00000101",
+      "header_revision_int": 257,
+      "model_name": "TZ10",
+      "version_bcd": "0x01220122",
+      "field_0x20": "0x00000004",
+      "field_0x24": "0x09081420",
+      "field_0x28": "0x00000000",
+      "digest_selector_0x2c": 2,
+      "field_0x30": "0x00000000",
+      "crypt_selector_0x34": 1,
+      "field_0x38": "0x00000200",
+      "body_size_0x3c": 16591872,
+      "body_size_0x3c_hex": "0x00fd2c00",
+      "digest_0x40_0x50_hex": "7125ec82bbc118824b0a41d9d86a8716",
+      "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+    },
+    "inner_header_check": {
+      "inner_0x200_0x220_matches_outer_0x0c_0x2c": true,
+      "inner_0x220_dir_relative_offset": "0x00000200",
+      "computed_dir_file_offset": "0x00000400",
+      "dir_entry_count_at_0x400": 16
+    },
+    "functions": {
+      "updater_main": {
+        "file_offset": "0x3103ed",
+        "va": "0x77b8bded"
+      },
+      "check_revision_and_magic": {
+        "file_offset": "0x310c4e",
+        "va": "0x77b8c64e",
+        "magic_memcmp_call_file_offset": "0x310c58",
+        "magic_memcmp_call_va": "0x77b8c658",
+        "magic_string_file_offset": "0x3e79f8",
+        "magic_string_va": "0x77c633f8",
+        "rev_cmp_file_offset": "0x310c66",
+        "rev_cmp_va": "0x77b8c666",
+        "accepted_revision": "0x00000101 (f8 02 08 fa c8 01 01 = mov (8,a2),d0; cmp 257,d0 at 0x77b8c666..0x77b8c669)",
+        "accepted_magic": "'UPD\\0' via 4-byte memcmp against 0x77c633f8",
+        "rejection_return_code": 4
+      },
+      "check_digest_selector": {
+        "file_offset": "0x310c9b",
+        "va": "0x77b8c69b",
+        "accepted_selectors": [
+          0,
+          2
+        ],
+        "rejection_return_code": 9,
+        "check_bytes_hex": "902cf17870a000c806a002c930"
+      },
+      "check_crypt_selector": {
+        "file_offset": "0x310cbe",
+        "va": "0x77b8c6be",
+        "accepted_selectors": [
+          0,
+          1
+        ],
+        "rejection_return_code": 9,
+        "check_bytes_hex": "9034f17870a000c806a001c90d"
+      },
+      "inner_header_match_helper": {
+        "file_offset": "0x310d0e",
+        "va": "0x77b8c70e",
+        "end_file_offset": "0x310d4a",
+        "end_va": "0x77b8c74a",
+        "semantics": "compares decrypted inner_hdr [0x200..0x220) model/version/fields against outer_hdr [0x0c..0x2c), returns 0 on match or 4 on mismatch",
+        "bytes_hex": "9792950cf17ddd7e90daff0000a000c926f80610f8031ca1c91df80614f80320a1c914f80618f80324a1c90bf8061cf80328a1c8068004ca0300df300c"
+      },
+      "post_check_flash_helpers": {
+        "helper_1_file_offset": "0x310d4b",
+        "helper_1_va": "0x77b8c74b",
+        "helper_2_file_offset": "0x310d84",
+        "helper_2_va": "0x77b8c784",
+        "helper_3_file_offset": "0x310db7",
+        "helper_3_va": "0x77b8c7b7",
+        "window_end_file_offset": "0x310de8",
+        "window_end_va": "0x77b8c7e8"
+      },
+      "inner_dir_pointer_setup": {
+        "file_offset": "0x3105a0",
+        "va": "0x77b8bfa0",
+        "dir_ptr_add_file_offset": "0x3105c4",
+        "dir_ptr_add_va": "0x77b8bfc4",
+        "semantics": "reads *(uint32_t *)0xb4bc0220 (inner_hdr + 0x20), checks >= 0x30, computes dir_ptr = 0xb4bc0200 + rel_off and stores to (0x20, sp), checks 0 < *dir_ptr <= 64",
+        "bytes_hex": "fcdc2002bcb4708f04a030c605cc5e0674fca62802bcb4fca42402bcb4e1a6c605cc4a0670fcc00002bcb44220f1e070a000c806a040c705cc3306"
+      },
+      "directory_entry_loops_24b": {
+        "entry_stride_bytes": 24,
+        "pass1_validate_special_components": {
+          "loop_start_file_offset": "0x31061b",
+          "loop_start_va": "0x77b8c01b",
+          "stride_add24_file_offset": "0x3106a3",
+          "stride_add24_va": "0x77b8c0a3",
+          "stride_insn_hex": "2218",
+          "stride_insn_asm": "add 24, a2"
+        },
+        "pass2_inspect_and_prepare_components": {
+          "loop_start_file_offset": "0x310767",
+          "loop_start_va": "0x77b8c167",
+          "stride_add24_file_offset": "0x310a89",
+          "stride_add24_va": "0x77b8c489",
+          "stride_insn_hex": "2318",
+          "stride_insn_asm": "add 24, a3"
+        },
+        "pass3_flash_components": {
+          "loop_start_file_offset": "0x310aff",
+          "loop_start_va": "0x77b8c4ff",
+          "stride_add24_file_offset": "0x310c02",
+          "stride_add24_va": "0x77b8c602",
+          "stride_insn_hex": "2218",
+          "stride_insn_asm": "add 24, a2"
+        },
+        "reads_fields": [
+          "+0x00 (name[12])",
+          "+0x0c (relative_start)",
+          "+0x10 (size)",
+          "+0x14 (load_addr)"
+        ]
+      }
+    },
+    "directory_entries": [
+      {
+        "entry_index": 0,
+        "entry_file_offset": "0x404",
+        "name": "boot",
+        "relative_start": "0x00000400",
+        "actual_file_offset": "0x00000600",
+        "size": "0x00004000",
+        "field_0x14_addr": "0x00000000"
+      },
+      {
+        "entry_index": 1,
+        "entry_file_offset": "0x41c",
+        "name": "program",
+        "relative_start": "0x00004400",
+        "actual_file_offset": "0x00004600",
+        "size": "0x00558000",
+        "field_0x14_addr": "0x00010000"
+      },
+      {
+        "entry_index": 2,
+        "entry_file_offset": "0x434",
+        "name": "storage",
+        "relative_start": "0x0055c400",
+        "actual_file_offset": "0x0055c600",
+        "size": "0x00000000",
+        "field_0x14_addr": "0x00600000"
+      },
+      {
+        "entry_index": 3,
+        "entry_file_offset": "0x44c",
+        "name": "eep_ow_a",
+        "relative_start": "0x0055c400",
+        "actual_file_offset": "0x0055c600",
+        "size": "0x00002000",
+        "field_0x14_addr": "0x00600000"
+      },
+      {
+        "entry_index": 4,
+        "entry_file_offset": "0x464",
+        "name": "eep_ow_b",
+        "relative_start": "0x0055e400",
+        "actual_file_offset": "0x0055e600",
+        "size": "0x00002000",
+        "field_0x14_addr": "0x00604000"
+      },
+      {
+        "entry_index": 5,
+        "entry_file_offset": "0x47c",
+        "name": "eep_adj",
+        "relative_start": "0x00560400",
+        "actual_file_offset": "0x00560600",
+        "size": "0x00003000",
+        "field_0x14_addr": "0x00608000"
+      },
+      {
+        "entry_index": 6,
+        "entry_file_offset": "0x494",
+        "name": "eep_fix",
+        "relative_start": "0x00563400",
+        "actual_file_offset": "0x00563600",
+        "size": "0x00005000",
+        "field_0x14_addr": "0x0060b000"
+      },
+      {
+        "entry_index": 7,
+        "entry_file_offset": "0x4ac",
+        "name": "history",
+        "relative_start": "0x00568400",
+        "actual_file_offset": "0x00568600",
+        "size": "0x00010000",
+        "field_0x14_addr": "0x00610000"
+      },
+      {
+        "entry_index": 8,
+        "entry_file_offset": "0x4c4",
+        "name": "opedata",
+        "relative_start": "0x00578400",
+        "actual_file_offset": "0x00578600",
+        "size": "0x00028000",
+        "field_0x14_addr": "0x00620000"
+      },
+      {
+        "entry_index": 9,
+        "entry_file_offset": "0x4dc",
+        "name": "osdover",
+        "relative_start": "0x005a0400",
+        "actual_file_offset": "0x005a0600",
+        "size": "0x00240000",
+        "field_0x14_addr": "0x00648000"
+      },
+      {
+        "entry_index": 10,
+        "entry_file_offset": "0x4f4",
+        "name": "osddata",
+        "relative_start": "0x007e0400",
+        "actual_file_offset": "0x007e0600",
+        "size": "0x00200000",
+        "field_0x14_addr": "0x00888000"
+      },
+      {
+        "entry_index": 11,
+        "entry_file_offset": "0x50c",
+        "name": "packfile",
+        "relative_start": "0x009e0400",
+        "actual_file_offset": "0x009e0600",
+        "size": "0x00580000",
+        "field_0x14_addr": "0x00aa4000"
+      },
+      {
+        "entry_index": 12,
+        "entry_file_offset": "0x524",
+        "name": "ninsho_fc1",
+        "relative_start": "0x00f60400",
+        "actual_file_offset": "0x00f60600",
+        "size": "0x00004000",
+        "field_0x14_addr": "0x011b4000"
+      },
+      {
+        "entry_index": 13,
+        "entry_file_offset": "0x53c",
+        "name": "ninsho_fc2",
+        "relative_start": "0x00f64400",
+        "actual_file_offset": "0x00f64600",
+        "size": "0x0001c000",
+        "field_0x14_addr": "0x011b8000"
+      },
+      {
+        "entry_index": 14,
+        "entry_file_offset": "0x554",
+        "name": "frame_pack",
+        "relative_start": "0x00f80400",
+        "actual_file_offset": "0x00f80600",
+        "size": "0x00050000",
+        "field_0x14_addr": "0x011d4000"
+      },
+      {
+        "entry_index": 15,
+        "entry_file_offset": "0x56c",
+        "name": "avchd_info",
+        "relative_start": "0x00fd0400",
+        "actual_file_offset": "0x00fd0600",
+        "size": "0x00002800",
+        "field_0x14_addr": "0x01224000"
+      }
+    ]
+  },
+  "method0_decoded_scans": [
+    {
+      "file": "G1___150.bin.decoded",
+      "path": "analysis/method0_review_20261011/decoded/G1___150.bin.decoded",
+      "sha256": "0cace0649d5028cbe125437a3585b059209aa96fc22b7dcc535c999072108224",
+      "size_bytes": 8388608,
+      "first_16_bytes_hex": "fcdd50000040f0f5cc0b010000000000",
+      "pattern_scans": [
+        {
+          "pattern": "am30_d0_cmp_UPD_465550440030",
+          "pattern_hex": "465550440030",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "am33_byte_cmp_rev101_UPD_f80008fac80101...",
+          "pattern_hex": "f80008fac80101c91df040a055c917f84001a050c910f84002a044c909f84003a000",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "byte_cmp_UPD_prefix_f040a055c917f84001a050",
+          "pattern_hex": "f040a055c917f84001a050",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "single_byte_cmp_0x55_f040a055",
+          "pattern_hex": "f040a055",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 1,
+          "hits": [
+            {
+              "offset": "0x2de7a9",
+              "context_hex": "24fe01f17cf040a055c90bf84001fac8aa00c845",
+              "verified_semantics": "other"
+            }
+          ]
+        },
+        {
+          "pattern": "ascii_UPD0_55504400",
+          "pattern_hex": "55504400",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "file": "G2___V11.bin.decoded",
+      "path": "analysis/method0_review_20261011/decoded/G2___V11.bin.decoded",
+      "sha256": "1e893ab3468cac6921fd796f9656706bbceecfe79e716b6aa644d0ed91966784",
+      "size_bytes": 16777216,
+      "first_16_bytes_hex": "fcdd18000040f0f5ca2a000000000000",
+      "pattern_scans": [
+        {
+          "pattern": "am30_d0_cmp_UPD_465550440030",
+          "pattern_hex": "465550440030",
+          "scanned_range": "[0x0, 0x1000000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "am33_byte_cmp_rev101_UPD_f80008fac80101...",
+          "pattern_hex": "f80008fac80101c91df040a055c917f84001a050c910f84002a044c909f84003a000",
+          "scanned_range": "[0x0, 0x1000000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "byte_cmp_UPD_prefix_f040a055c917f84001a050",
+          "pattern_hex": "f040a055c917f84001a050",
+          "scanned_range": "[0x0, 0x1000000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "single_byte_cmp_0x55_f040a055",
+          "pattern_hex": "f040a055",
+          "scanned_range": "[0x0, 0x1000000)",
+          "hit_count": 1,
+          "hits": [
+            {
+              "offset": "0xf46ef",
+              "context_hex": "24fe01f16cf040a055c90bf84001fac8aa00c848",
+              "verified_semantics": "MBR/FAT boot sector signature check at +510 (0x1fe): mov 510,a0; add d3,a0; movbu (a0),d0; cmp 0x55,d0; bne ...; movbu (1,a0),d0; cmp 0xaa,d0 (NOT UPD header)"
+            }
+          ]
+        },
+        {
+          "pattern": "ascii_UPD0_55504400",
+          "pattern_hex": "55504400",
+          "scanned_range": "[0x0, 0x1000000)",
+          "hit_count": 0,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "file": "GF1__110.bin.decoded",
+      "path": "analysis/method0_review_20261011/decoded/GF1__110.bin.decoded",
+      "sha256": "a942fc7a1eb301e2eed7b2ae68e8ef3572355c48de49f1bad884137c6c0aa1df",
+      "size_bytes": 8388608,
+      "first_16_bytes_hex": "fcdd18000040f0f5ca2a000000000000",
+      "pattern_scans": [
+        {
+          "pattern": "am30_d0_cmp_UPD_465550440030",
+          "pattern_hex": "465550440030",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "am33_byte_cmp_rev101_UPD_f80008fac80101...",
+          "pattern_hex": "f80008fac80101c91df040a055c917f84001a050c910f84002a044c909f84003a000",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "byte_cmp_UPD_prefix_f040a055c917f84001a050",
+          "pattern_hex": "f040a055c917f84001a050",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "single_byte_cmp_0x55_f040a055",
+          "pattern_hex": "f040a055",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 1,
+          "hits": [
+            {
+              "offset": "0xf1e6a",
+              "context_hex": "24fe01f16cf040a055c90bf84001fac8aa00c846",
+              "verified_semantics": "MBR/FAT boot sector signature check at +510 (0x1fe): mov 510,a0; add d3,a0; movbu (a0),d0; cmp 0x55,d0; bne ...; movbu (1,a0),d0; cmp 0xaa,d0 (NOT UPD header)"
+            }
+          ]
+        },
+        {
+          "pattern": "ascii_UPD0_55504400",
+          "pattern_hex": "55504400",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "file": "GF1__122.bin.decoded",
+      "path": "analysis/method0_review_20261011/decoded/GF1__122.bin.decoded",
+      "sha256": "1453917740734f5873b01640373fd2929b59c65b06a60c592eee3b88c5e8ec75",
+      "size_bytes": 8388608,
+      "first_16_bytes_hex": "fcdd18000040f0f5ca2a000000000000",
+      "pattern_scans": [
+        {
+          "pattern": "am30_d0_cmp_UPD_465550440030",
+          "pattern_hex": "465550440030",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "am33_byte_cmp_rev101_UPD_f80008fac80101...",
+          "pattern_hex": "f80008fac80101c91df040a055c917f84001a050c910f84002a044c909f84003a000",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "byte_cmp_UPD_prefix_f040a055c917f84001a050",
+          "pattern_hex": "f040a055c917f84001a050",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "single_byte_cmp_0x55_f040a055",
+          "pattern_hex": "f040a055",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 1,
+          "hits": [
+            {
+              "offset": "0xf204d",
+              "context_hex": "24fe01f16cf040a055c90bf84001fac8aa00c846",
+              "verified_semantics": "MBR/FAT boot sector signature check at +510 (0x1fe): mov 510,a0; add d3,a0; movbu (a0),d0; cmp 0x55,d0; bne ...; movbu (1,a0),d0; cmp 0xaa,d0 (NOT UPD header)"
+            }
+          ]
+        },
+        {
+          "pattern": "ascii_UPD0_55504400",
+          "pattern_hex": "55504400",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "file": "GH1__121.bin.decoded",
+      "path": "analysis/method0_review_20261011/decoded/GH1__121.bin.decoded",
+      "sha256": "b7f5389498922f5bca597a1743f9508e00b1cf42080198ebe571f9fadc4421a5",
+      "size_bytes": 8388608,
+      "first_16_bytes_hex": "fcdd18000040f0f5ca2a000000000000",
+      "pattern_scans": [
+        {
+          "pattern": "am30_d0_cmp_UPD_465550440030",
+          "pattern_hex": "465550440030",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "am33_byte_cmp_rev101_UPD_f80008fac80101...",
+          "pattern_hex": "f80008fac80101c91df040a055c917f84001a050c910f84002a044c909f84003a000",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "byte_cmp_UPD_prefix_f040a055c917f84001a050",
+          "pattern_hex": "f040a055c917f84001a050",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "single_byte_cmp_0x55_f040a055",
+          "pattern_hex": "f040a055",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 1,
+          "hits": [
+            {
+              "offset": "0xf0fb3",
+              "context_hex": "24fe01f16cf040a055c90bf84001fac8aa00c846",
+              "verified_semantics": "MBR/FAT boot sector signature check at +510 (0x1fe): mov 510,a0; add d3,a0; movbu (a0),d0; cmp 0x55,d0; bne ...; movbu (1,a0),d0; cmp 0xaa,d0 (NOT UPD header)"
+            }
+          ]
+        },
+        {
+          "pattern": "ascii_UPD0_55504400",
+          "pattern_hex": "55504400",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "file": "GH1__132.bin.decoded",
+      "path": "analysis/method0_review_20261011/decoded/GH1__132.bin.decoded",
+      "sha256": "9497f9f9185ac814637a532fd999edb8da92593559576a45a551f51234d19c07",
+      "size_bytes": 8388608,
+      "first_16_bytes_hex": "fcdd18000040f0f5ca2a000000000000",
+      "pattern_scans": [
+        {
+          "pattern": "am30_d0_cmp_UPD_465550440030",
+          "pattern_hex": "465550440030",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "am33_byte_cmp_rev101_UPD_f80008fac80101...",
+          "pattern_hex": "f80008fac80101c91df040a055c917f84001a050c910f84002a044c909f84003a000",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "byte_cmp_UPD_prefix_f040a055c917f84001a050",
+          "pattern_hex": "f040a055c917f84001a050",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        },
+        {
+          "pattern": "single_byte_cmp_0x55_f040a055",
+          "pattern_hex": "f040a055",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 1,
+          "hits": [
+            {
+              "offset": "0xf1102",
+              "context_hex": "24fe01f16cf040a055c90bf84001fac8aa00c846",
+              "verified_semantics": "MBR/FAT boot sector signature check at +510 (0x1fe): mov 510,a0; add d3,a0; movbu (a0),d0; cmp 0x55,d0; bne ...; movbu (1,a0),d0; cmp 0xaa,d0 (NOT UPD header)"
+            }
+          ]
+        },
+        {
+          "pattern": "ascii_UPD0_55504400",
+          "pattern_hex": "55504400",
+          "scanned_range": "[0x0, 0x800000)",
+          "hit_count": 0,
+          "hits": []
+        }
+      ]
+    }
+  ],
+  "modern_0x200_corpus_audit": {
+    "full_modern_images_count": 9,
+    "total_92b_entries_across_9_full_images": 391,
+    "total_flags2_entries": 65,
+    "total_flags3_entries": 326,
+    "layout_92b_verified_across_all_391_entries": {
+      "offset_0x00_0x0c": "12B ASCII component name",
+      "offset_0x0c_0x10": "4B uint32_le relative_offset (actual_file_offset = 0x200 + relative_offset)",
+      "offset_0x10_0x14": "4B uint32_le size",
+      "offset_0x14_0x18": "4B uint32_le destination / field_addr",
+      "offset_0x18_0x1c": "4B uint32_le flags (2 or 3)",
+      "offset_0x1c_0x3c": "32B candidate SHA-256 digest",
+      "offset_0x3c_0x4c": "16B per-component field (all-zero for flags==2, non-zero for flags==3)",
+      "offset_0x4c_0x5c": "16B zero padding (all-zero across all 391 entries + all 61 SL3 entries)",
+      "all_flags2_have_zero_0x3c_0x4c": true,
+      "all_flags3_have_nonzero_0x3c_0x4c": true,
+      "all_entries_have_zero_0x4c_0x5c": true
+    },
+    "modern_images": [
+      {
+        "label": "GH3__V12",
+        "source": "analysis/transition_corpus_20261011/GH3__V12.bin",
+        "sha256": "74bbf6129350a636bcfbf3319ade22fa6860f709570ae6365ba19064ad6488f4",
+        "file_size": 26609152,
+        "outer_header": {
+          "magic_hex": "55504400",
+          "magic_ascii": "UPD\u0000",
+          "header_size_0x04": "0x00000200",
+          "header_revision": "0x00000200",
+          "header_revision_int": 512,
+          "model_name": "GH3",
+          "version_bcd": "0x01200120",
+          "field_0x20": "0x00000004",
+          "field_0x24": "0x06261733",
+          "field_0x28": "0x00000000",
+          "digest_selector_0x2c": 3,
+          "field_0x30": "0x00000000",
+          "crypt_selector_0x34": 3,
+          "field_0x38": "0x00000200",
+          "body_size_0x3c": 26608640,
+          "body_size_0x3c_hex": "0x01960400",
+          "digest_0x40_0x50_hex": "0e719410000000000000000000000000",
+          "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+        },
+        "region_0x200_0x2e8": {
+          "length_bytes": 232,
+          "sha256": "93dd9215cd4def931385b758a9fd94d143db18c8dd1f29885d5f34b94a9f31e9",
+          "first_36_bytes_hex": "70616e61736f6e6963000000000000000000000000000000000000000000000044c4a879",
+          "last_16_bytes_0x2d8_0x2e8_hex": "00020000000496010000000000000000",
+          "raw_0x200_0x220_matches_outer_0x0c_0x2c": false,
+          "raw_uint32_at_0x220": "0x79a8c444",
+          "raw_uint32_at_0x2e4": "0x00000000",
+          "raw_uint32_at_0x2e8_dir_count": 6
+        },
+        "directory_layout_92b_summary": {
+          "entry_count": 6,
+          "flags2_count": 0,
+          "flags3_count": 6,
+          "all_flags2_have_zero_0x3c_0x4c": true,
+          "all_flags3_have_nonzero_0x3c_0x4c": true,
+          "all_entries_have_zero_0x4c_0x5c": true
+        }
+      },
+      {
+        "label": "GH4__V27",
+        "source": "analysis/transition_corpus_20261011/GH4__V27.bin",
+        "sha256": "e75fb8237ff2de4d1e8d970de8eb8e563e9756939b3320849f1c9017f4d956c0",
+        "file_size": 37099008,
+        "outer_header": {
+          "magic_hex": "55504400",
+          "magic_ascii": "UPD\u0000",
+          "header_size_0x04": "0x00000200",
+          "header_revision": "0x00000200",
+          "header_revision_int": 512,
+          "model_name": "GH4",
+          "version_bcd": "0x02700270",
+          "field_0x20": "0x00000004",
+          "field_0x24": "0x08280758",
+          "field_0x28": "0x00000000",
+          "digest_selector_0x2c": 3,
+          "field_0x30": "0x00000000",
+          "crypt_selector_0x34": 3,
+          "field_0x38": "0x00000200",
+          "body_size_0x3c": 37098496,
+          "body_size_0x3c_hex": "0x02361400",
+          "digest_0x40_0x50_hex": "be016c67000000000000000000000000",
+          "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+        },
+        "region_0x200_0x2e8": {
+          "length_bytes": 232,
+          "sha256": "64ae9e8b7a6b9cbc34ba65c6a11dd797a4963c69a513ae1617a4a0aa7cae70a2",
+          "first_36_bytes_hex": "70616e61736f6e69630000000000000000000000000000000000000000000000843387a8",
+          "last_16_bytes_0x2d8_0x2e8_hex": "00020000001436020000000000000000",
+          "raw_0x200_0x220_matches_outer_0x0c_0x2c": false,
+          "raw_uint32_at_0x220": "0xa8873384",
+          "raw_uint32_at_0x2e4": "0x00000000",
+          "raw_uint32_at_0x2e8_dir_count": 18
+        },
+        "directory_layout_92b_summary": {
+          "entry_count": 18,
+          "flags2_count": 0,
+          "flags3_count": 18,
+          "all_flags2_have_zero_0x3c_0x4c": true,
+          "all_flags3_have_nonzero_0x3c_0x4c": true,
+          "all_entries_have_zero_0x4c_0x5c": true
+        }
+      },
+      {
+        "label": "GH5__V28",
+        "source": "analysis/transition_corpus_20261011/GH5__V28.bin",
+        "sha256": "1c7e7538aea0a0009f17be56374b92ab1f77a29d271446ddd771bd5b14bc4442",
+        "file_size": 68246016,
+        "outer_header": {
+          "magic_hex": "55504400",
+          "magic_ascii": "UPD\u0000",
+          "header_size_0x04": "0x00000200",
+          "header_revision": "0x00000200",
+          "header_revision_int": 512,
+          "model_name": "MC561",
+          "version_bcd": "0x02800280",
+          "field_0x20": "0x00000004",
+          "field_0x24": "0x03010857",
+          "field_0x28": "0x00000000",
+          "digest_selector_0x2c": 3,
+          "field_0x30": "0x00000000",
+          "crypt_selector_0x34": 3,
+          "field_0x38": "0x00000200",
+          "body_size_0x3c": 68245504,
+          "body_size_0x3c_hex": "0x04115800",
+          "digest_0x40_0x50_hex": "ed42b5e0000000000000000000000000",
+          "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+        },
+        "region_0x200_0x2e8": {
+          "length_bytes": 232,
+          "sha256": "e1bd3aa2450090307548537e0f9eb2c3342265aa0088f25c28eed0ddda8f6608",
+          "first_36_bytes_hex": "70616e61736f6e69630000000000000000000000000000000000000000000000b11f4cb5",
+          "last_16_bytes_0x2d8_0x2e8_hex": "00020000005811040010000000481104",
+          "raw_0x200_0x220_matches_outer_0x0c_0x2c": false,
+          "raw_uint32_at_0x220": "0xb54c1fb1",
+          "raw_uint32_at_0x2e4": "0x04114800",
+          "raw_uint32_at_0x2e8_dir_count": 40
+        },
+        "directory_layout_92b_summary": {
+          "entry_count": 40,
+          "flags2_count": 4,
+          "flags3_count": 36,
+          "all_flags2_have_zero_0x3c_0x4c": true,
+          "all_flags3_have_nonzero_0x3c_0x4c": true,
+          "all_entries_have_zero_0x4c_0x5c": true
+        }
+      },
+      {
+        "label": "S5___V28",
+        "source": "analysis/transition_corpus_20261011/S5___V28.bin",
+        "sha256": "44944f9bd0fc72b2d612f1acb714f735ca70cea58c2265ac60ec7fca08131939",
+        "file_size": 90238464,
+        "outer_header": {
+          "magic_hex": "55504400",
+          "magic_ascii": "UPD\u0000",
+          "header_size_0x04": "0x00000200",
+          "header_revision": "0x00000200",
+          "header_revision_int": 512,
+          "model_name": "MC801",
+          "version_bcd": "0x02800280",
+          "field_0x20": "0x00010004",
+          "field_0x24": "0x09091052",
+          "field_0x28": "0x00000000",
+          "digest_selector_0x2c": 3,
+          "field_0x30": "0x00000000",
+          "crypt_selector_0x34": 3,
+          "field_0x38": "0x00000200",
+          "body_size_0x3c": 90237952,
+          "body_size_0x3c_hex": "0x0560ec00",
+          "digest_0x40_0x50_hex": "c8110b6a000000000000000000000000",
+          "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+        },
+        "region_0x200_0x2e8": {
+          "length_bytes": 232,
+          "sha256": "db9f348aefc877b6c5d04c7792bc381d02f0100d83e9f5e7dbdaed4b6c7b2ea7",
+          "first_36_bytes_hex": "70616e61736f6e696300000000000000000000000000000000000000000000008bb85c66",
+          "last_16_bytes_0x2d8_0x2e8_hex": "0002000000ec60050014000000d86005",
+          "raw_0x200_0x220_matches_outer_0x0c_0x2c": false,
+          "raw_uint32_at_0x220": "0x665cb88b",
+          "raw_uint32_at_0x2e4": "0x0560d800",
+          "raw_uint32_at_0x2e8_dir_count": 48
+        },
+        "directory_layout_92b_summary": {
+          "entry_count": 48,
+          "flags2_count": 7,
+          "flags3_count": 41,
+          "all_flags2_have_zero_0x3c_0x4c": true,
+          "all_flags3_have_nonzero_0x3c_0x4c": true,
+          "all_entries_have_zero_0x4c_0x5c": true
+        }
+      },
+      {
+        "label": "S5___V29",
+        "source": "analysis/s5_research_report_20261011/S5逆向_研究总报告_20261011/firmware/S5___V29.bin",
+        "sha256": "b2ec4aeec209693b874df8dfdf11fc85b38fa4675b44ec554b7a167f430827e1",
+        "file_size": 90238464,
+        "outer_header": {
+          "magic_hex": "55504400",
+          "magic_ascii": "UPD\u0000",
+          "header_size_0x04": "0x00000200",
+          "header_revision": "0x00000200",
+          "header_revision_int": 512,
+          "model_name": "MC801",
+          "version_bcd": "0x02900290",
+          "field_0x20": "0x00010004",
+          "field_0x24": "0x07101450",
+          "field_0x28": "0x00000000",
+          "digest_selector_0x2c": 3,
+          "field_0x30": "0x00000000",
+          "crypt_selector_0x34": 3,
+          "field_0x38": "0x00000200",
+          "body_size_0x3c": 90237952,
+          "body_size_0x3c_hex": "0x0560ec00",
+          "digest_0x40_0x50_hex": "c0aa738e000000000000000000000000",
+          "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+        },
+        "region_0x200_0x2e8": {
+          "length_bytes": 232,
+          "sha256": "b537486a71484f12b78f5a466dfc56d9f17ead341cb82cb8bbc5a9a2f9b613c0",
+          "first_36_bytes_hex": "70616e61736f6e696300000000000000000000000000000000000000000000009acfa33f",
+          "last_16_bytes_0x2d8_0x2e8_hex": "0002000000ec60050014000000d86005",
+          "raw_0x200_0x220_matches_outer_0x0c_0x2c": false,
+          "raw_uint32_at_0x220": "0x3fa3cf9a",
+          "raw_uint32_at_0x2e4": "0x0560d800",
+          "raw_uint32_at_0x2e8_dir_count": 48
+        },
+        "directory_layout_92b_summary": {
+          "entry_count": 48,
+          "flags2_count": 7,
+          "flags3_count": 41,
+          "all_flags2_have_zero_0x3c_0x4c": true,
+          "all_flags3_have_nonzero_0x3c_0x4c": true,
+          "all_entries_have_zero_0x4c_0x5c": true
+        }
+      },
+      {
+        "label": "S1___V24",
+        "source": "analysis/agy_breakthrough_batch_20261011/03_cross_model/S1___V24.zip::S1___V24.bin",
+        "sha256": "1c54dd84bddb4ebf041713eb47a1d37b6996162479055153a4699459b21ee0bd",
+        "file_size": 90226176,
+        "outer_header": {
+          "magic_hex": "55504400",
+          "magic_ascii": "UPD\u0000",
+          "header_size_0x04": "0x00000200",
+          "header_revision": "0x00000200",
+          "header_revision_int": 512,
+          "model_name": "MC892",
+          "version_bcd": "0x02400240",
+          "field_0x20": "0x00010004",
+          "field_0x24": "0x12161150",
+          "field_0x28": "0x00000000",
+          "digest_selector_0x2c": 3,
+          "field_0x30": "0x00000000",
+          "crypt_selector_0x34": 3,
+          "field_0x38": "0x00000200",
+          "body_size_0x3c": 90225664,
+          "body_size_0x3c_hex": "0x0560bc00",
+          "digest_0x40_0x50_hex": "6a0b8348000000000000000000000000",
+          "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+        },
+        "region_0x200_0x2e8": {
+          "length_bytes": 232,
+          "sha256": "b50a5ad1eae80b9ad302890aef212994045c65609524d8137d31f9878dba7ce1",
+          "first_36_bytes_hex": "70616e61736f6e69630000000000000000000000000000000000000000000000882de3aa",
+          "last_16_bytes_0x2d8_0x2e8_hex": "0002000000bc60050014000000a86005",
+          "raw_0x200_0x220_matches_outer_0x0c_0x2c": false,
+          "raw_uint32_at_0x220": "0xaae32d88",
+          "raw_uint32_at_0x2e4": "0x0560a800",
+          "raw_uint32_at_0x2e8_dir_count": 53
+        },
+        "directory_layout_92b_summary": {
+          "entry_count": 53,
+          "flags2_count": 7,
+          "flags3_count": 46,
+          "all_flags2_have_zero_0x3c_0x4c": true,
+          "all_flags3_have_nonzero_0x3c_0x4c": true,
+          "all_entries_have_zero_0x4c_0x5c": true
+        }
+      },
+      {
+        "label": "S1m2_V13",
+        "source": "analysis/sources/S1m2_V13.bin",
+        "sha256": "cc512f22374005ec99cbe458809b996f3d9ee441b2a8034330708463739c9c66",
+        "file_size": 171605504,
+        "outer_header": {
+          "magic_hex": "55504400",
+          "magic_ascii": "UPD\u0000",
+          "header_size_0x04": "0x00000200",
+          "header_revision": "0x00000200",
+          "header_revision_int": 512,
+          "model_name": "MC8243",
+          "version_bcd": "0x01310131",
+          "field_0x20": "0x00010004",
+          "field_0x24": "0x11271729",
+          "field_0x28": "0x00000000",
+          "digest_selector_0x2c": 3,
+          "field_0x30": "0x00000000",
+          "crypt_selector_0x34": 3,
+          "field_0x38": "0x00000200",
+          "body_size_0x3c": 171604992,
+          "body_size_0x3c_hex": "0x0a3a7c00",
+          "digest_0x40_0x50_hex": "d0c7e1b1000000000000000000000000",
+          "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+        },
+        "region_0x200_0x2e8": {
+          "length_bytes": 232,
+          "sha256": "f2f978ad1b2a69cabf5d40b7fec88b5adbed73b68e65d4d0fa2176325a95ec90",
+          "first_36_bytes_hex": "70616e61736f6e696300000000000000000000000000000000000000000000003e78b213",
+          "last_16_bytes_0x2d8_0x2e8_hex": "00020000007c3a0a0018000000643a0a",
+          "raw_0x200_0x220_matches_outer_0x0c_0x2c": false,
+          "raw_uint32_at_0x220": "0x13b2783e",
+          "raw_uint32_at_0x2e4": "0x0a3a6400",
+          "raw_uint32_at_0x2e8_dir_count": 62
+        },
+        "directory_layout_92b_summary": {
+          "entry_count": 62,
+          "flags2_count": 13,
+          "flags3_count": 49,
+          "all_flags2_have_zero_0x3c_0x4c": true,
+          "all_flags3_have_nonzero_0x3c_0x4c": true,
+          "all_entries_have_zero_0x4c_0x5c": true
+        }
+      },
+      {
+        "label": "S1m2_V14",
+        "source": "S1m2_V14.bin",
+        "sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+        "file_size": 171867648,
+        "outer_header": {
+          "magic_hex": "55504400",
+          "magic_ascii": "UPD\u0000",
+          "header_size_0x04": "0x00000200",
+          "header_revision": "0x00000200",
+          "header_revision_int": 512,
+          "model_name": "MC8243",
+          "version_bcd": "0x01460146",
+          "field_0x20": "0x00010004",
+          "field_0x24": "0x03041340",
+          "field_0x28": "0x00000000",
+          "digest_selector_0x2c": 3,
+          "field_0x30": "0x00000000",
+          "crypt_selector_0x34": 3,
+          "field_0x38": "0x00000200",
+          "body_size_0x3c": 171867136,
+          "body_size_0x3c_hex": "0x0a3e7c00",
+          "digest_0x40_0x50_hex": "f77f6f5d000000000000000000000000",
+          "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+        },
+        "region_0x200_0x2e8": {
+          "length_bytes": 232,
+          "sha256": "b3002c5255626ed6bebd9c4a07bba6f95e467a67320bae874ffaccffb739558b",
+          "first_36_bytes_hex": "70616e61736f6e69630000000000000000000000000000000000000000000000b8ea6472",
+          "last_16_bytes_0x2d8_0x2e8_hex": "00020000007c3e0a0018000000643e0a",
+          "raw_0x200_0x220_matches_outer_0x0c_0x2c": false,
+          "raw_uint32_at_0x220": "0x7264eab8",
+          "raw_uint32_at_0x2e4": "0x0a3e6400",
+          "raw_uint32_at_0x2e8_dir_count": 62
+        },
+        "directory_layout_92b_summary": {
+          "entry_count": 62,
+          "flags2_count": 13,
+          "flags3_count": 49,
+          "all_flags2_have_zero_0x3c_0x4c": true,
+          "all_flags3_have_nonzero_0x3c_0x4c": true,
+          "all_entries_have_zero_0x4c_0x5c": true
+        }
+      },
+      {
+        "label": "S5m2_V31",
+        "source": "analysis/sources/lumix_sync_static/official_firmware_list/S5m2_V31.zip::S5m2_V31.bin",
+        "sha256": "3ce8a371c2a3c088e573a5716ab92dd6a095a780b1d58420d4d6856ed75afd58",
+        "file_size": 205683712,
+        "outer_header": {
+          "magic_hex": "55504400",
+          "magic_ascii": "UPD\u0000",
+          "header_size_0x04": "0x00000200",
+          "header_revision": "0x00000200",
+          "header_revision_int": 512,
+          "model_name": "MC8223",
+          "version_bcd": "0x03150315",
+          "field_0x20": "0x00010004",
+          "field_0x24": "0x09241744",
+          "field_0x28": "0x00000000",
+          "digest_selector_0x2c": 3,
+          "field_0x30": "0x00000000",
+          "crypt_selector_0x34": 3,
+          "field_0x38": "0x00000200",
+          "body_size_0x3c": 205683200,
+          "body_size_0x3c_hex": "0x0c427a00",
+          "digest_0x40_0x50_hex": "8368eebe000000000000000000000000",
+          "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+        },
+        "region_0x200_0x2e8": {
+          "length_bytes": 232,
+          "sha256": "fbcaf9832a30c8f4a3a7910516068cc1423187ce0ec3e3b1d105837ea36a7e7c",
+          "first_36_bytes_hex": "70616e61736f6e69630000000000000000000000000000000000000000000000ba6c13b0",
+          "last_16_bytes_0x2d8_0x2e8_hex": "00020000007a420c001600000064420c",
+          "raw_0x200_0x220_matches_outer_0x0c_0x2c": false,
+          "raw_uint32_at_0x220": "0xb0136cba",
+          "raw_uint32_at_0x2e4": "0x0c426400",
+          "raw_uint32_at_0x2e8_dir_count": 54
+        },
+        "directory_layout_92b_summary": {
+          "entry_count": 54,
+          "flags2_count": 14,
+          "flags3_count": 40,
+          "all_flags2_have_zero_0x3c_0x4c": true,
+          "all_flags3_have_nonzero_0x3c_0x4c": true,
+          "all_entries_have_zero_0x4c_0x5c": true
+        }
+      }
+    ],
+    "sl3_420_tenth_modern_sample": {
+      "label": "SL3__420 (10th modern 0x200 sample, bitwise-inverted ^ 0xFF)",
+      "prefix_path": "analysis/sources/SL3__420.first8192.bin",
+      "prefix_size_bytes": 8192,
+      "raw_prefix_sha256": "b6e7cc1ed8fb0eca8a5d47219e000214c2faec2ae42ac875c478c261245eb1b7",
+      "inverted_prefix_sha256": "c545cecd929cd96fedd086cc638cbadc901af66c1024f6bf0e63df61aa40d00b",
+      "outer_header_after_xor_ff": {
+        "magic_hex": "55504400",
+        "magic_ascii": "UPD\u0000",
+        "header_size_0x04": "0x00000200",
+        "header_revision": "0x00000200",
+        "header_revision_int": 512,
+        "model_name": "MC7231",
+        "version_bcd": "0x04200420",
+        "field_0x20": "0x00010004",
+        "field_0x24": "0x06150944",
+        "field_0x28": "0x00000000",
+        "digest_selector_0x2c": 3,
+        "field_0x30": "0x00000000",
+        "crypt_selector_0x34": 3,
+        "field_0x38": "0x00000200",
+        "body_size_0x3c": 195197952,
+        "body_size_0x3c_hex": "0x0ba27c00",
+        "digest_0x40_0x50_hex": "3a96c81e000000000000000000000000",
+        "digest_0x50_0x60_hex": "00000000000000000000000000000000"
+      },
+      "region_0x200_0x2e8_after_xor_ff": {
+        "length_bytes": 232,
+        "sha256": "669e050cd3bd39491ed1b6886caa82f4158fd6aedd292966e306e29ef5690c07",
+        "first_36_bytes_hex": "6c65696361000000000000000000000000000000000000000000000000000000232cae7d",
+        "dir_entry_count_at_0x2e8": 61
+      },
+      "directory_layout_92b_checks": {
+        "total_entries": 61,
+        "flags2_count": 15,
+        "flags3_count": 46,
+        "all_flags2_have_zero_0x3c_0x4c": true,
+        "all_flags3_have_nonzero_0x3c_0x4c": true,
+        "all_entries_have_zero_0x4c_0x5c": true
+      },
+      "component_samples_count": 15,
+      "component_samples": [
+        {
+          "file": "01_loader1.bin",
+          "path": "analysis/sources/sl3_component_samples/01_loader1.bin",
+          "size_bytes": 131072,
+          "raw_sha256": "22d9b2dbd1270fb95e75553833073c629f0492279661d4650391034b4e445837",
+          "inverted_xor_ff_sha256": "d8313cfaa552364a160140462fe292ce6c939d4f01640dac3c6b183244adeaee",
+          "entry_index": 1,
+          "entry_name": "loader1",
+          "flags": 3,
+          "candidate_digest_0x1c_0x3c": "a7ee9fb6ea7e0be9b80eaa20ee2c26265aca744e5d9d3bf6e2af8506be20f51e",
+          "raw_matches_candidate_digest": false,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        },
+        {
+          "file": "08_postboot2_r.bin",
+          "path": "analysis/sources/sl3_component_samples/08_postboot2_r.bin",
+          "size_bytes": 131072,
+          "raw_sha256": "39b57e7131d59af8c4a5309543db0c419c98c6f369823f18ee5c1f185d5454f2",
+          "inverted_xor_ff_sha256": "95ca6a9e20a472ee50c3d042f985b48e47fd966c8c817b92a09d82e9db8b4975",
+          "entry_index": 8,
+          "entry_name": "postboot2_r",
+          "flags": 3,
+          "candidate_digest_0x1c_0x3c": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+          "raw_matches_candidate_digest": false,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        },
+        {
+          "file": "10_postboot4_r.bin",
+          "path": "analysis/sources/sl3_component_samples/10_postboot4_r.bin",
+          "size_bytes": 131072,
+          "raw_sha256": "66dcb1fb78446d9f2cae82558f3efe57cb47ee2ef379941b1a8ce7181896ff49",
+          "inverted_xor_ff_sha256": "e5379d2504b6802adc3d95b0a5cfd11743782159ed958d89cd06057360f94bab",
+          "entry_index": 10,
+          "entry_name": "postboot4_r",
+          "flags": 3,
+          "candidate_digest_0x1c_0x3c": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+          "raw_matches_candidate_digest": false,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        },
+        {
+          "file": "38_hr_c_prog.bin",
+          "path": "analysis/sources/sl3_component_samples/38_hr_c_prog.bin",
+          "size_bytes": 65536,
+          "raw_sha256": "dc54d467e40fd99578d42c60c9ad9134c2745ed713ff29c1926f4b16ee78e317",
+          "inverted_xor_ff_sha256": "d8f034a5a6988fa1983dbf772288b250c2524f8c66985717d7d355694f47be12",
+          "entry_index": 38,
+          "entry_name": "hr_c_prog",
+          "flags": 3,
+          "candidate_digest_0x1c_0x3c": "2620339bcdd7a12c296eba291ddacf8a79531ef0eac3507e291d599a843d550d",
+          "raw_matches_candidate_digest": false,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        },
+        {
+          "file": "39_hr_d_prog.bin",
+          "path": "analysis/sources/sl3_component_samples/39_hr_d_prog.bin",
+          "size_bytes": 524288,
+          "raw_sha256": "551da1dddb93fead88825155e5c6c9e29b976acef05a273b8a0b575c90f45d44",
+          "inverted_xor_ff_sha256": "77cfb1aa527b7511d142fa1342d2e604edb1a289ae7e3adbbf6cc23a047691b3",
+          "entry_index": 39,
+          "entry_name": "hr_d_prog",
+          "flags": 3,
+          "candidate_digest_0x1c_0x3c": "66b45d747fdd4110ed93488962e6e27d0985a7531a30975f51d6695d3cc461ad",
+          "raw_matches_candidate_digest": false,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        },
+        {
+          "file": "50_hm_d_nw_1st.bin",
+          "path": "analysis/sources/sl3_component_samples/50_hm_d_nw_1st.bin",
+          "size_bytes": 1441792,
+          "raw_sha256": "32435291a9b51b18c7a998f49ec013b7316315dbdedc6f3483bd625f4fb04968",
+          "inverted_xor_ff_sha256": "07cd21d5e1e577350ace631d4232a1a4c257d969036933e9f2357232b6362de4",
+          "entry_index": 50,
+          "entry_name": "hm_d_nw_1st",
+          "flags": 3,
+          "candidate_digest_0x1c_0x3c": "6f8c3c074542db9423d5ca3bc8d75f679d197255c57d00334d34697d2c532d6a",
+          "raw_matches_candidate_digest": false,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        },
+        {
+          "file": "51_hm_d_nw_2nd.bin",
+          "path": "analysis/sources/sl3_component_samples/51_hm_d_nw_2nd.bin",
+          "size_bytes": 1441792,
+          "raw_sha256": "d9d1a324e16d6b02e472c7397f8c2e4147dcbc828de40f683880036642d8fa56",
+          "inverted_xor_ff_sha256": "aa710353c4692df9622850141f1cfb1f9d460c191ed7e51343775c814bb861e5",
+          "entry_index": 51,
+          "entry_name": "hm_d_nw_2nd",
+          "flags": 3,
+          "candidate_digest_0x1c_0x3c": "2434108bf6e3d3c203a6ffcf6b073386da34fa2cd20c141bc46dd6de369af5d0",
+          "raw_matches_candidate_digest": false,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        },
+        {
+          "file": "52_hm_d_nw_3rd.bin",
+          "path": "analysis/sources/sl3_component_samples/52_hm_d_nw_3rd.bin",
+          "size_bytes": 1441792,
+          "raw_sha256": "cc7424eb900701f314d3241f66bfb2842bbd66c4ba278cd6f0d1c100a273ccf2",
+          "inverted_xor_ff_sha256": "7c26dd772708d14585cb9249aa4e580dc55a6e06d54dbd9ee713f6f1382445af",
+          "entry_index": 52,
+          "entry_name": "hm_d_nw_3rd",
+          "flags": 3,
+          "candidate_digest_0x1c_0x3c": "c564b2416df3b9560ca65cf3ca37e9043a94046b07965365f98d9638bd98c0c2",
+          "raw_matches_candidate_digest": false,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        },
+        {
+          "file": "53_hm_d_nw_4th.bin",
+          "path": "analysis/sources/sl3_component_samples/53_hm_d_nw_4th.bin",
+          "size_bytes": 1441792,
+          "raw_sha256": "0582781115ef3a81cdfbcd77f4f931a3b005d77777a972eb0f6a210e8b0a50cd",
+          "inverted_xor_ff_sha256": "2307159cbced4d6e8b2ce9d2680908c1075d44db9bffd41d02584e43efe5a1e6",
+          "entry_index": 53,
+          "entry_name": "hm_d_nw_4th",
+          "flags": 3,
+          "candidate_digest_0x1c_0x3c": "c999927b02641d75d48ec4520b9eb3aa5360ac2d13950e09b6e7cf41e15a90ca",
+          "raw_matches_candidate_digest": false,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        },
+        {
+          "file": "54_hm_d_nw_5th.bin",
+          "path": "analysis/sources/sl3_component_samples/54_hm_d_nw_5th.bin",
+          "size_bytes": 1441792,
+          "raw_sha256": "e28f4d885889e7f7f047c2477128047fd99e6fe4a55a0c60c35a286bb41867e5",
+          "inverted_xor_ff_sha256": "2d528a6e17bbbb7cd9961723032fa8219e111d285ad7032af7c04aa65113f7c8",
+          "entry_index": 54,
+          "entry_name": "hm_d_nw_5th",
+          "flags": 3,
+          "candidate_digest_0x1c_0x3c": "0b65f1777fdcce85febd39bfb5ea2f4024e272357aa949ead329b9e9e5aebce8",
+          "raw_matches_candidate_digest": false,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        },
+        {
+          "file": "55_hm_d_nw_6th.bin",
+          "path": "analysis/sources/sl3_component_samples/55_hm_d_nw_6th.bin",
+          "size_bytes": 1441792,
+          "raw_sha256": "092ec6a85dfd132d6f593008a74c30b94fddd6807e70f175ec4fe6e7e357ac77",
+          "inverted_xor_ff_sha256": "d1f1681b7f8d6a6e5e89c43f005dc4d7b434d5a9c9e5dd140d755a563cc33daf",
+          "entry_index": 55,
+          "entry_name": "hm_d_nw_6th",
+          "flags": 3,
+          "candidate_digest_0x1c_0x3c": "307dceee9b047ab5649eafbe82eb16709730d794c36c3a2205ceb505a848758b",
+          "raw_matches_candidate_digest": false,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        },
+        {
+          "file": "56_hm_d_nw_7th.bin",
+          "path": "analysis/sources/sl3_component_samples/56_hm_d_nw_7th.bin",
+          "size_bytes": 1441792,
+          "raw_sha256": "7134ad94ea53dc5c8daade65b56a04a57d99366500fb8c13b9a085ae98973f94",
+          "inverted_xor_ff_sha256": "f8e117bec80f8f94e799f6c6248b7ce0504ba129d224b2e1f0409c778dda9f20",
+          "entry_index": 56,
+          "entry_name": "hm_d_nw_7th",
+          "flags": 3,
+          "candidate_digest_0x1c_0x3c": "8ee84bc7b9e35db690471c938e4f95892c580004da5bb7d8c456c52b99ec2934",
+          "raw_matches_candidate_digest": false,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        },
+        {
+          "file": "57_hm_d_nw_8th.bin",
+          "path": "analysis/sources/sl3_component_samples/57_hm_d_nw_8th.bin",
+          "size_bytes": 1441792,
+          "raw_sha256": "c670716a03d6bd3b1277d28f6c14240d392e720ef206f93b1e3820e17b926242",
+          "inverted_xor_ff_sha256": "7876f74ca4369fc18b25f3a7e851480375b477184d6460f94ad644e91feae62e",
+          "entry_index": 57,
+          "entry_name": "hm_d_nw_8th",
+          "flags": 3,
+          "candidate_digest_0x1c_0x3c": "6e8752e886e71284db14556b910232587db4f15f6f7e08c80c0e43521a76188c",
+          "raw_matches_candidate_digest": false,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        },
+        {
+          "file": "58_hm_d_reid.bin",
+          "path": "analysis/sources/sl3_component_samples/58_hm_d_reid.bin",
+          "size_bytes": 3145728,
+          "raw_sha256": "ccef17f5bf4c4ce76fa1aa521991e3b2cfaf5efaa74485e0613f42fed8beb66d",
+          "inverted_xor_ff_sha256": "0fef56b85199d28de019c00eb008c7dc8136c1271e2bec4721ba33c0a5734981",
+          "entry_index": 58,
+          "entry_name": "hm_d_reid",
+          "flags": 3,
+          "candidate_digest_0x1c_0x3c": "583bc02d84e5cb96e2d25b89bacaeedb4094d01ab828462578d42c6b9bf8febf",
+          "raw_matches_candidate_digest": false,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        },
+        {
+          "file": "60_mbr_dummy_d.bin",
+          "path": "analysis/sources/sl3_component_samples/60_mbr_dummy_d.bin",
+          "size_bytes": 131072,
+          "raw_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+          "inverted_xor_ff_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+          "entry_index": 60,
+          "entry_name": "mbr_dummy_d",
+          "flags": 2,
+          "candidate_digest_0x1c_0x3c": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+          "raw_matches_candidate_digest": true,
+          "inverted_matches_candidate_digest": false,
+          "contains_ascii_UPD0_raw_or_inv": false
+        }
+      ]
+    },
+    "non_flags3_or_plaintext_entries_count": 65,
+    "non_flags3_or_plaintext_entries": [
+      {
+        "firmware_label": "GH5__V28",
+        "entry_index": 4,
+        "name": "storage",
+        "occurrence": 0,
+        "directory_offset": "0x045c",
+        "flags": 2,
+        "start": "0x009d3a00",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x00ca0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "GH5__V28",
+        "entry_index": 20,
+        "name": "avchd_info",
+        "occurrence": 0,
+        "directory_offset": "0x0a1c",
+        "flags": 2,
+        "start": "0x02432200",
+        "size": "0x00004000",
+        "size_int": 16384,
+        "destination": "0x03000000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "GH5__V28",
+        "entry_index": 21,
+        "name": "eep_net_a",
+        "occurrence": 0,
+        "directory_offset": "0x0a78",
+        "flags": 2,
+        "start": "0x02436200",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x03020000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "first_32_bytes_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "GH5__V28",
+        "entry_index": 22,
+        "name": "eep_net_b",
+        "occurrence": 0,
+        "directory_offset": "0x0ad4",
+        "flags": 2,
+        "start": "0x02456200",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x03040000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "first_32_bytes_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5___V28",
+        "entry_index": 4,
+        "name": "storage",
+        "occurrence": 0,
+        "directory_offset": "0x045c",
+        "flags": 2,
+        "start": "0x00ffee00",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x01240000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5___V28",
+        "entry_index": 17,
+        "name": "history",
+        "occurrence": 0,
+        "directory_offset": "0x0908",
+        "flags": 2,
+        "start": "0x01e01600",
+        "size": "0x00040000",
+        "size_int": 262144,
+        "destination": "0x020a0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5___V28",
+        "entry_index": 18,
+        "name": "lens_hist",
+        "occurrence": 0,
+        "directory_offset": "0x0964",
+        "flags": 2,
+        "start": "0x01e41600",
+        "size": "0x00060000",
+        "size_int": 393216,
+        "destination": "0x020e0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5___V28",
+        "entry_index": 22,
+        "name": "fileinfo",
+        "occurrence": 0,
+        "directory_offset": "0x0ad4",
+        "flags": 2,
+        "start": "0x03681600",
+        "size": "0x000e0000",
+        "size_int": 917504,
+        "destination": "0x03920000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "03cdeacb6a286652f8b3a2e4a6d6a3f81d4952762eb12b1659338722c7ab4a5b",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "03cdeacb6a286652f8b3a2e4a6d6a3f81d4952762eb12b1659338722c7ab4a5b",
+        "first_32_bytes_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5___V28",
+        "entry_index": 23,
+        "name": "ninsho_db",
+        "occurrence": 0,
+        "directory_offset": "0x0b30",
+        "flags": 2,
+        "start": "0x03761600",
+        "size": "0x000a0000",
+        "size_int": 655360,
+        "destination": "0x03a00000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "ff6335069b6e140eb47149d847aea80bf7e2b06bd80ae9708aa382efb3ae21ee",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "ff6335069b6e140eb47149d847aea80bf7e2b06bd80ae9708aa382efb3ae21ee",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5___V28",
+        "entry_index": 25,
+        "name": "wifi_info",
+        "occurrence": 0,
+        "directory_offset": "0x0be8",
+        "flags": 2,
+        "start": "0x0381d600",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x03ac0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5___V28",
+        "entry_index": 26,
+        "name": "menu_save",
+        "occurrence": 0,
+        "directory_offset": "0x0c44",
+        "flags": 2,
+        "start": "0x0383d600",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x03ae0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "first_32_bytes_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5___V29",
+        "entry_index": 4,
+        "name": "storage",
+        "occurrence": 0,
+        "directory_offset": "0x045c",
+        "flags": 2,
+        "start": "0x00ffee00",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x01240000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5___V29",
+        "entry_index": 17,
+        "name": "history",
+        "occurrence": 0,
+        "directory_offset": "0x0908",
+        "flags": 2,
+        "start": "0x01e01600",
+        "size": "0x00040000",
+        "size_int": 262144,
+        "destination": "0x020a0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5___V29",
+        "entry_index": 18,
+        "name": "lens_hist",
+        "occurrence": 0,
+        "directory_offset": "0x0964",
+        "flags": 2,
+        "start": "0x01e41600",
+        "size": "0x00060000",
+        "size_int": 393216,
+        "destination": "0x020e0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5___V29",
+        "entry_index": 22,
+        "name": "fileinfo",
+        "occurrence": 0,
+        "directory_offset": "0x0ad4",
+        "flags": 2,
+        "start": "0x03681600",
+        "size": "0x000e0000",
+        "size_int": 917504,
+        "destination": "0x03920000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "03cdeacb6a286652f8b3a2e4a6d6a3f81d4952762eb12b1659338722c7ab4a5b",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "03cdeacb6a286652f8b3a2e4a6d6a3f81d4952762eb12b1659338722c7ab4a5b",
+        "first_32_bytes_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5___V29",
+        "entry_index": 23,
+        "name": "ninsho_db",
+        "occurrence": 0,
+        "directory_offset": "0x0b30",
+        "flags": 2,
+        "start": "0x03761600",
+        "size": "0x000a0000",
+        "size_int": 655360,
+        "destination": "0x03a00000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "ff6335069b6e140eb47149d847aea80bf7e2b06bd80ae9708aa382efb3ae21ee",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "ff6335069b6e140eb47149d847aea80bf7e2b06bd80ae9708aa382efb3ae21ee",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5___V29",
+        "entry_index": 25,
+        "name": "wifi_info",
+        "occurrence": 0,
+        "directory_offset": "0x0be8",
+        "flags": 2,
+        "start": "0x0381d600",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x03ac0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5___V29",
+        "entry_index": 26,
+        "name": "menu_save",
+        "occurrence": 0,
+        "directory_offset": "0x0c44",
+        "flags": 2,
+        "start": "0x0383d600",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x03ae0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "first_32_bytes_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1___V24",
+        "entry_index": 4,
+        "name": "storage",
+        "occurrence": 0,
+        "directory_offset": "0x045c",
+        "flags": 2,
+        "start": "0x00e37e00",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x01240000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1___V24",
+        "entry_index": 17,
+        "name": "history",
+        "occurrence": 0,
+        "directory_offset": "0x0908",
+        "flags": 2,
+        "start": "0x01c3a600",
+        "size": "0x00040000",
+        "size_int": 262144,
+        "destination": "0x020a0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1___V24",
+        "entry_index": 21,
+        "name": "fileinfo",
+        "occurrence": 0,
+        "directory_offset": "0x0a78",
+        "flags": 2,
+        "start": "0x0333a600",
+        "size": "0x000e0000",
+        "size_int": 917504,
+        "destination": "0x037a0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "03cdeacb6a286652f8b3a2e4a6d6a3f81d4952762eb12b1659338722c7ab4a5b",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "03cdeacb6a286652f8b3a2e4a6d6a3f81d4952762eb12b1659338722c7ab4a5b",
+        "first_32_bytes_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1___V24",
+        "entry_index": 22,
+        "name": "ninsho_db",
+        "occurrence": 0,
+        "directory_offset": "0x0ad4",
+        "flags": 2,
+        "start": "0x0341a600",
+        "size": "0x000a0000",
+        "size_int": 655360,
+        "destination": "0x03880000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "ff6335069b6e140eb47149d847aea80bf7e2b06bd80ae9708aa382efb3ae21ee",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "ff6335069b6e140eb47149d847aea80bf7e2b06bd80ae9708aa382efb3ae21ee",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1___V24",
+        "entry_index": 24,
+        "name": "avchd_info",
+        "occurrence": 0,
+        "directory_offset": "0x0b8c",
+        "flags": 2,
+        "start": "0x034d6600",
+        "size": "0x00004000",
+        "size_int": 16384,
+        "destination": "0x03940000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1___V24",
+        "entry_index": 25,
+        "name": "wifi_info",
+        "occurrence": 0,
+        "directory_offset": "0x0be8",
+        "flags": 2,
+        "start": "0x034da600",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x03960000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1___V24",
+        "entry_index": 26,
+        "name": "menu_save",
+        "occurrence": 0,
+        "directory_offset": "0x0c44",
+        "flags": 2,
+        "start": "0x034fa600",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x03980000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "first_32_bytes_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V13",
+        "entry_index": 0,
+        "name": "boot",
+        "occurrence": 0,
+        "directory_offset": "0x02ec",
+        "flags": 2,
+        "start": "0x00001a00",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x00000000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V13",
+        "entry_index": 2,
+        "name": "loader2",
+        "occurrence": 0,
+        "directory_offset": "0x03a4",
+        "flags": 2,
+        "start": "0x00021a00",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x00020000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V13",
+        "entry_index": 3,
+        "name": "loader3",
+        "occurrence": 0,
+        "directory_offset": "0x0400",
+        "flags": 2,
+        "start": "0x00021a00",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x00020000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V13",
+        "entry_index": 4,
+        "name": "storage",
+        "occurrence": 0,
+        "directory_offset": "0x045c",
+        "flags": 2,
+        "start": "0x00021a00",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x00080000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V13",
+        "entry_index": 24,
+        "name": "lens_hist",
+        "occurrence": 0,
+        "directory_offset": "0x0b8c",
+        "flags": 2,
+        "start": "0x05547e00",
+        "size": "0x00060000",
+        "size_int": 393216,
+        "destination": "0x05620000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V13",
+        "entry_index": 27,
+        "name": "wifi_info",
+        "occurrence": 0,
+        "directory_offset": "0x0ca0",
+        "flags": 2,
+        "start": "0x07947e00",
+        "size": "0x00040000",
+        "size_int": 262144,
+        "destination": "0x07a20000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V13",
+        "entry_index": 28,
+        "name": "menu_save",
+        "occurrence": 0,
+        "directory_offset": "0x0cfc",
+        "flags": 2,
+        "start": "0x07987e00",
+        "size": "0x00080000",
+        "size_int": 524288,
+        "destination": "0x07a60000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "043e238a765f7cfbc62596a50e53c8ffb6b188a99357b0ebede251725d67589f",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "043e238a765f7cfbc62596a50e53c8ffb6b188a99357b0ebede251725d67589f",
+        "first_32_bytes_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V13",
+        "entry_index": 29,
+        "name": "kizu_data",
+        "occurrence": 0,
+        "directory_offset": "0x0d58",
+        "flags": 2,
+        "start": "0x07a07e00",
+        "size": "0x00080000",
+        "size_int": 524288,
+        "destination": "0x07ae0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V13",
+        "entry_index": 30,
+        "name": "vkizu_data",
+        "occurrence": 0,
+        "directory_offset": "0x0db4",
+        "flags": 2,
+        "start": "0x07a87e00",
+        "size": "0x00900000",
+        "size_int": 9437184,
+        "destination": "0x07b60000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "d2ee4703cd9698945ca7b9fe1689ea3095597eac1a0afd8dba00cac7894fdc43",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "d2ee4703cd9698945ca7b9fe1689ea3095597eac1a0afd8dba00cac7894fdc43",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V13",
+        "entry_index": 38,
+        "name": "xtk",
+        "occurrence": 0,
+        "directory_offset": "0x1094",
+        "flags": 2,
+        "start": "0x088c7e00",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x089c0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V13",
+        "entry_index": 39,
+        "name": "lut_data",
+        "occurrence": 0,
+        "directory_offset": "0x10f0",
+        "flags": 2,
+        "start": "0x088e7e00",
+        "size": "0x00860000",
+        "size_int": 8781824,
+        "destination": "0x089e0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "6217bc4155fa384f23c6e11e7823877d36d13419e7941b5bcd25ed8e9d4644ee",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "6217bc4155fa384f23c6e11e7823877d36d13419e7941b5bcd25ed8e9d4644ee",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V13",
+        "entry_index": 49,
+        "name": "dsh_adj",
+        "occurrence": 0,
+        "directory_offset": "0x1488",
+        "flags": 2,
+        "start": "0x09247e00",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x09340000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V13",
+        "entry_index": 61,
+        "name": "mbr_dummy_d",
+        "occurrence": 0,
+        "directory_offset": "0x18d8",
+        "flags": 2,
+        "start": "0x0a387e00",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x0a480000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "first_32_bytes_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V14",
+        "entry_index": 0,
+        "name": "boot",
+        "occurrence": 0,
+        "directory_offset": "0x02ec",
+        "flags": 2,
+        "start": "0x00001a00",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x00000000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V14",
+        "entry_index": 2,
+        "name": "loader2",
+        "occurrence": 0,
+        "directory_offset": "0x03a4",
+        "flags": 2,
+        "start": "0x00021a00",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x00020000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V14",
+        "entry_index": 3,
+        "name": "loader3",
+        "occurrence": 0,
+        "directory_offset": "0x0400",
+        "flags": 2,
+        "start": "0x00021a00",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x00020000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V14",
+        "entry_index": 4,
+        "name": "storage",
+        "occurrence": 0,
+        "directory_offset": "0x045c",
+        "flags": 2,
+        "start": "0x00021a00",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x00080000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V14",
+        "entry_index": 24,
+        "name": "lens_hist",
+        "occurrence": 0,
+        "directory_offset": "0x0b8c",
+        "flags": 2,
+        "start": "0x05547e00",
+        "size": "0x00060000",
+        "size_int": 393216,
+        "destination": "0x05620000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V14",
+        "entry_index": 27,
+        "name": "wifi_info",
+        "occurrence": 0,
+        "directory_offset": "0x0ca0",
+        "flags": 2,
+        "start": "0x07987e00",
+        "size": "0x00040000",
+        "size_int": 262144,
+        "destination": "0x07a60000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V14",
+        "entry_index": 28,
+        "name": "menu_save",
+        "occurrence": 0,
+        "directory_offset": "0x0cfc",
+        "flags": 2,
+        "start": "0x079c7e00",
+        "size": "0x00080000",
+        "size_int": 524288,
+        "destination": "0x07aa0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "043e238a765f7cfbc62596a50e53c8ffb6b188a99357b0ebede251725d67589f",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "043e238a765f7cfbc62596a50e53c8ffb6b188a99357b0ebede251725d67589f",
+        "first_32_bytes_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V14",
+        "entry_index": 29,
+        "name": "kizu_data",
+        "occurrence": 0,
+        "directory_offset": "0x0d58",
+        "flags": 2,
+        "start": "0x07a47e00",
+        "size": "0x00080000",
+        "size_int": 524288,
+        "destination": "0x07b20000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V14",
+        "entry_index": 30,
+        "name": "vkizu_data",
+        "occurrence": 0,
+        "directory_offset": "0x0db4",
+        "flags": 2,
+        "start": "0x07ac7e00",
+        "size": "0x00900000",
+        "size_int": 9437184,
+        "destination": "0x07ba0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "d2ee4703cd9698945ca7b9fe1689ea3095597eac1a0afd8dba00cac7894fdc43",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "d2ee4703cd9698945ca7b9fe1689ea3095597eac1a0afd8dba00cac7894fdc43",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V14",
+        "entry_index": 38,
+        "name": "xtk",
+        "occurrence": 0,
+        "directory_offset": "0x1094",
+        "flags": 2,
+        "start": "0x08907e00",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x08a00000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V14",
+        "entry_index": 39,
+        "name": "lut_data",
+        "occurrence": 0,
+        "directory_offset": "0x10f0",
+        "flags": 2,
+        "start": "0x08927e00",
+        "size": "0x00860000",
+        "size_int": 8781824,
+        "destination": "0x08a20000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "6217bc4155fa384f23c6e11e7823877d36d13419e7941b5bcd25ed8e9d4644ee",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "6217bc4155fa384f23c6e11e7823877d36d13419e7941b5bcd25ed8e9d4644ee",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V14",
+        "entry_index": 49,
+        "name": "dsh_adj",
+        "occurrence": 0,
+        "directory_offset": "0x1488",
+        "flags": 2,
+        "start": "0x09287e00",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x09380000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S1m2_V14",
+        "entry_index": 61,
+        "name": "mbr_dummy_d",
+        "occurrence": 0,
+        "directory_offset": "0x18d8",
+        "flags": 2,
+        "start": "0x0a3c7e00",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x0a4c0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "first_32_bytes_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5m2_V31",
+        "entry_index": 0,
+        "name": "boot",
+        "occurrence": 0,
+        "directory_offset": "0x02ec",
+        "flags": 2,
+        "start": "0x00001800",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x00000000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5m2_V31",
+        "entry_index": 2,
+        "name": "loader2",
+        "occurrence": 0,
+        "directory_offset": "0x03a4",
+        "flags": 2,
+        "start": "0x00021800",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x00020000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5m2_V31",
+        "entry_index": 3,
+        "name": "loader3",
+        "occurrence": 0,
+        "directory_offset": "0x0400",
+        "flags": 2,
+        "start": "0x00021800",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x00020000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5m2_V31",
+        "entry_index": 4,
+        "name": "storage",
+        "occurrence": 0,
+        "directory_offset": "0x045c",
+        "flags": 2,
+        "start": "0x00021800",
+        "size": "0x00000000",
+        "size_int": 0,
+        "destination": "0x00080000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_32_bytes_hex": "",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5m2_V31",
+        "entry_index": 23,
+        "name": "lens_hist",
+        "occurrence": 0,
+        "directory_offset": "0x0b30",
+        "flags": 2,
+        "start": "0x080c7c00",
+        "size": "0x00060000",
+        "size_int": 393216,
+        "destination": "0x081a0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5m2_V31",
+        "entry_index": 27,
+        "name": "wifi_info",
+        "occurrence": 0,
+        "directory_offset": "0x0ca0",
+        "flags": 2,
+        "start": "0x0a5c7c00",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x0a6a0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5m2_V31",
+        "entry_index": 28,
+        "name": "wifi2_info",
+        "occurrence": 0,
+        "directory_offset": "0x0cfc",
+        "flags": 2,
+        "start": "0x0a5e7c00",
+        "size": "0x00040000",
+        "size_int": 262144,
+        "destination": "0x0a6c0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5m2_V31",
+        "entry_index": 29,
+        "name": "menu_save",
+        "occurrence": 0,
+        "directory_offset": "0x0d58",
+        "flags": 2,
+        "start": "0x0a627c00",
+        "size": "0x00040000",
+        "size_int": 262144,
+        "destination": "0x0a700000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "3b874d3ba46c638fc3094f8e92fb744ca974893873f8885f54e23760f9b6311b",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "3b874d3ba46c638fc3094f8e92fb744ca974893873f8885f54e23760f9b6311b",
+        "first_32_bytes_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5m2_V31",
+        "entry_index": 30,
+        "name": "kizu_data",
+        "occurrence": 0,
+        "directory_offset": "0x0db4",
+        "flags": 2,
+        "start": "0x0a667c00",
+        "size": "0x00080000",
+        "size_int": 524288,
+        "destination": "0x0a740000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5m2_V31",
+        "entry_index": 31,
+        "name": "vkizu_data",
+        "occurrence": 0,
+        "directory_offset": "0x0e10",
+        "flags": 2,
+        "start": "0x0a6e7c00",
+        "size": "0x00600000",
+        "size_int": 6291456,
+        "destination": "0x0a7c0000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "b69dae56a14d1a8314ed40664c4033ea0a550eea2673e04df42a66ac6b9faf2c",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "b69dae56a14d1a8314ed40664c4033ea0a550eea2673e04df42a66ac6b9faf2c",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5m2_V31",
+        "entry_index": 39,
+        "name": "xtk",
+        "occurrence": 0,
+        "directory_offset": "0x10f0",
+        "flags": 2,
+        "start": "0x0b227c00",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x0b320000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5m2_V31",
+        "entry_index": 40,
+        "name": "lut_data",
+        "occurrence": 0,
+        "directory_offset": "0x114c",
+        "flags": 2,
+        "start": "0x0b247c00",
+        "size": "0x00220000",
+        "size_int": 2228224,
+        "destination": "0x0b340000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "7b15c3f99be0c5f9ae0a0ecdc21d3a8c4dc8006aed712338a0ad06aa35382793",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "7b15c3f99be0c5f9ae0a0ecdc21d3a8c4dc8006aed712338a0ad06aa35382793",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5m2_V31",
+        "entry_index": 41,
+        "name": "lut2_data",
+        "occurrence": 0,
+        "directory_offset": "0x11a8",
+        "flags": 2,
+        "start": "0x0b467c00",
+        "size": "0x00860000",
+        "size_int": 8781824,
+        "destination": "0x0b560000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "6217bc4155fa384f23c6e11e7823877d36d13419e7941b5bcd25ed8e9d4644ee",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "6217bc4155fa384f23c6e11e7823877d36d13419e7941b5bcd25ed8e9d4644ee",
+        "first_32_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "contains_ascii_UPD0": false
+      },
+      {
+        "firmware_label": "S5m2_V31",
+        "entry_index": 53,
+        "name": "mbr_dummy_d",
+        "occurrence": 0,
+        "directory_offset": "0x15f8",
+        "flags": 2,
+        "start": "0x0c407c00",
+        "size": "0x00020000",
+        "size_int": 131072,
+        "destination": "0x0c500000",
+        "raw_matches_candidate": true,
+        "candidate_digest_0x1c_0x3c": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "per_component_16b_0x3c_0x4c": "00000000000000000000000000000000",
+        "zero_padding_16b_0x4c_0x5c": "00000000000000000000000000000000",
+        "raw_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "first_32_bytes_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "contains_ascii_UPD0": false
+      }
+    ]
+  }
+}

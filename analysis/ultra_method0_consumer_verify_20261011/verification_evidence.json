@@ -1,0 +1,490 @@
+{
+  "scope": "offline GH1__132 exact consumers; no camera communication or execution of firmware",
+  "tool": {
+    "objdump_path": "<LOCAL_WORKSPACE>/analysis/ultra_mn10300_tool_20261011/build-system-zlib/binutils/objdump",
+    "objdump_sha256": "a2d70ddcd641aa9f88b4b4b8896bf33b86677279dca21d6b5c74274d6e06d0da",
+    "version": "GNU objdump (GNU Binutils) 2.44"
+  },
+  "input_hash_checks": [
+    {
+      "file": "<LOCAL_WORKSPACE>/analysis/method0_review_20261011/decoded/G1___150.bin.decoded",
+      "size": 8388608,
+      "actual_sha256": "0cace0649d5028cbe125437a3585b059209aa96fc22b7dcc535c999072108224",
+      "inventory_json_sha256": "0cace0649d5028cbe125437a3585b059209aa96fc22b7dcc535c999072108224",
+      "report_sha256": "93f4b509b1793e05f84f86d609a09f5e6efda956d49acbb9d543bd7b4b7568f0",
+      "json_matches_actual": true,
+      "report_matches_actual": false
+    },
+    {
+      "file": "<LOCAL_WORKSPACE>/analysis/method0_review_20261011/decoded/G2___V11.bin.decoded",
+      "size": 16777216,
+      "actual_sha256": "1e893ab3468cac6921fd796f9656706bbceecfe79e716b6aa644d0ed91966784",
+      "inventory_json_sha256": "1e893ab3468cac6921fd796f9656706bbceecfe79e716b6aa644d0ed91966784",
+      "report_sha256": "7c1d09142c5d370df07d2ec6bd890c13e5d406fa20b6aa4bf23c1a6760d84e3d",
+      "json_matches_actual": true,
+      "report_matches_actual": false
+    },
+    {
+      "file": "<LOCAL_WORKSPACE>/analysis/method0_review_20261011/decoded/GF1__110.bin.decoded",
+      "size": 8388608,
+      "actual_sha256": "a942fc7a1eb301e2eed7b2ae68e8ef3572355c48de49f1bad884137c6c0aa1df",
+      "inventory_json_sha256": "a942fc7a1eb301e2eed7b2ae68e8ef3572355c48de49f1bad884137c6c0aa1df",
+      "report_sha256": "a6d85dd582ab0e451e9e141610751908db7077ba171739a6d56f7c225a933e3d",
+      "json_matches_actual": true,
+      "report_matches_actual": false
+    },
+    {
+      "file": "<LOCAL_WORKSPACE>/analysis/method0_review_20261011/decoded/GF1__122.bin.decoded",
+      "size": 8388608,
+      "actual_sha256": "1453917740734f5873b01640373fd2929b59c65b06a60c592eee3b88c5e8ec75",
+      "inventory_json_sha256": "1453917740734f5873b01640373fd2929b59c65b06a60c592eee3b88c5e8ec75",
+      "report_sha256": "42be1428a3742fa49621968ce40de59a72de3ed6386592ca90787723482491b4",
+      "json_matches_actual": true,
+      "report_matches_actual": false
+    },
+    {
+      "file": "<LOCAL_WORKSPACE>/analysis/method0_review_20261011/decoded/GH1__121.bin.decoded",
+      "size": 8388608,
+      "actual_sha256": "b7f5389498922f5bca597a1743f9508e00b1cf42080198ebe571f9fadc4421a5",
+      "inventory_json_sha256": "b7f5389498922f5bca597a1743f9508e00b1cf42080198ebe571f9fadc4421a5",
+      "report_sha256": "d9b04fb3a7579d69bb4086f6d52c9ca7d3e348573b3de91367ab547d787690f7",
+      "json_matches_actual": true,
+      "report_matches_actual": false
+    },
+    {
+      "file": "<LOCAL_WORKSPACE>/analysis/method0_review_20261011/decoded/GH1__132.bin.decoded",
+      "size": 8388608,
+      "actual_sha256": "9497f9f9185ac814637a532fd999edb8da92593559576a45a551f51234d19c07",
+      "inventory_json_sha256": "9497f9f9185ac814637a532fd999edb8da92593559576a45a551f51234d19c07",
+      "report_sha256": "7c1c051acfb30f553b4a0d5c84a70d52b97e3199e7ed25da25040656d0217508",
+      "json_matches_actual": true,
+      "report_matches_actual": false
+    }
+  ],
+  "address_map_for_saved_disassembly": {
+    "mapping": "VA = 0x40000000 + file_offset",
+    "scope": "ROM code below 0x510000",
+    "overlay_mapping": "VA = 0x7bc00000 + (file_offset-0x510000)",
+    "overlay_basis": "startup 0x10e4..0x112c copies ROM 0x40510000..0x406ab900 to 0xbbc00000; reset and ROM calls use 0x7bc00000 code alias; confined to examined overlay"
+  },
+  "horizontal": {
+    "entry_offset": "0xc844a",
+    "false_entry_offset": "0xc8448",
+    "false_entry_instruction": "blt 0x400c8450 (2 bytes)",
+    "loop_count_register": "d2",
+    "sum_register": "d0",
+    "loop_compare_offset": "0xc8460",
+    "negate_offset": "0xc846b",
+    "not_bytes": "f230",
+    "increment_offset": "0xc8473",
+    "meaning": "16 big-endian uint16 payload words; trailing big-endian uint16 equals (-sum)&65535"
+  },
+  "vertical": {
+    "entry_offset": "0xc8817",
+    "false_entry_offset": "0xc8813",
+    "false_entry_meaning": "previous stream function success return path",
+    "buffer": "stream stack sp+0x20; caller-provided a0 in accumulator",
+    "initial_copy_source_rom_va": "0x404ae3bb",
+    "initial_copy_bytes": "0000000000000000000000000000000000000000000000000000000000000000",
+    "index_formula": "halfword_byte_offset = 2 * (byte_position & 15)",
+    "byte_positions_per_32b_input": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30
+    ],
+    "halfword_byte_offsets_per_32b_input": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28
+    ],
+    "updated_u16_slots": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "unused_u16_slots": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15
+    ],
+    "zero_verifier_entry_offset": "0xc8840",
+    "zero_verifier_checks": "all 16 uint16 slots"
+  },
+  "stream": {
+    "entry_offset": "0xc8705",
+    "read_size_instruction_offset": "0xc874e",
+    "read_max_bytes": 8704,
+    "horizontal_call": "0xc877b -> 0xc844a",
+    "vertical_call": "0xc8799 -> 0xc8817",
+    "copy_call": "0xc87a3 -> 0x7bc455a8",
+    "copy_length": 32,
+    "destination_step_offset": "0xc87ae",
+    "destination_step_bytes": 32,
+    "source_step_offset": "0xc87b2",
+    "source_step_bytes": 34,
+    "returned_length": "output_end-output_start at 0xc87f2..0xc87fa; no local subtraction of final 32B trailer",
+    "full_data_reaccumulation_call": "0xc87ff -> 0xc8817"
+  },
+  "instruction_correction": {
+    "offset": "0xb2756",
+    "va": "0x400b2756",
+    "length_bytes": 6,
+    "bytes": "fd156589076c",
+    "immediate_le": "0x6c078965",
+    "gnu_name": "udfu01 1812433253,d1",
+    "assembler_alias": "mulqu 1812433253,d1 (.am30)",
+    "next_instruction_offset": "0xb275c",
+    "next_instruction": "add d2,d1",
+    "cross_instruction_boundary_claim": false,
+    "semantics_boundary": "alias bytes matched; no firmware execution; inspect complete recurrence before PRNG attribution"
+  },
+  "mt19937_chain": {
+    "status": "full static seed, twist and tempering structure matches MT19937; generic bounded integer consumer observed",
+    "seed_entry_offset": "0xb2734",
+    "generator_entry_offset": "0xb276d",
+    "seed_formula": "state[i]=(1812433253*(state[i-1]^(state[i-1]>>30))+i)&0xffffffff, i=1..623",
+    "state_ram_base": "0x74153c94",
+    "state_words": 624,
+    "default_seed": 5489,
+    "index_ram_va": "0x741268b8",
+    "index_source_offset": "0x4c944c",
+    "initial_index": 625,
+    "mag01_ram_va": "0x741268bc",
+    "mag01_source_offset": "0x4c9450",
+    "mag01_values": [
+      "0x00000000",
+      "0x9908b0df"
+    ],
+    "twist_word_offsets": [
+      397,
+      -227
+    ],
+    "twist_masks": [
+      "0x80000000",
+      "0x7fffffff"
+    ],
+    "tempering_right_shifts": [
+      11,
+      18
+    ],
+    "tempering_left_shifts": [
+      7,
+      15
+    ],
+    "tempering_masks": [
+      "0x9d2c5680",
+      "0xefc60000"
+    ],
+    "direct_consumer_entry_offset": "0x12c064",
+    "direct_consumer_outputs": [
+      {
+        "call_offset": "0x12c091",
+        "expression": "generate()%6+7",
+        "range": [
+          7,
+          12
+        ]
+      },
+      {
+        "call_offset": "0x12c0a5",
+        "expression": "generate()%6+13",
+        "range": [
+          13,
+          18
+        ]
+      },
+      {
+        "call_offset": "0x12c0b9",
+        "expression": "generate()%6+14",
+        "range": [
+          14,
+          19
+        ]
+      },
+      {
+        "call_offset": "0x12c0cd",
+        "expression": "generate()%3+20",
+        "range": [
+          20,
+          22
+        ]
+      },
+      {
+        "call_offset": "0x12c0e1",
+        "expression": "generate()%7+23",
+        "range": [
+          23,
+          29
+        ]
+      }
+    ],
+    "jump_table_offset": "0x4b8014",
+    "jump_table_vas": [
+      "0x4012c080",
+      "0x4012c084",
+      "0x4012c089",
+      "0x4012c08d",
+      "0x4012c091",
+      "0x4012c0a5",
+      "0x4012c0b9",
+      "0x4012c0cd",
+      "0x4012c0e1",
+      "0x4012c0f5"
+    ],
+    "purpose_boundary": "Known immediate callers choose small integers; no established call or data chain to firmware decryption, method2 or S1/S1M2",
+    "startup_data_mapping": {
+      "code_offsets": [
+        "0x102c",
+        "0x1049"
+      ],
+      "rom_file_start": "0x4c43f0",
+      "rom_file_end_exclusive": "0x4d0420",
+      "ram_start": "0x7412185c"
+    }
+  },
+  "vertical_compatibility": {
+    "raw_file": "<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GH1__132.bin",
+    "raw_sha256": "5f2a050f3daa9bf119e4af0a9e043ead26a84a092b82f7ed00c87944285ea4e6",
+    "raw_bytes": 8912930,
+    "records": 262145,
+    "horizontal_failure_count": 0,
+    "conventional_16_column_sums": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "machine_index_folded_16_slots": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "both_accept": true
+  },
+  "folded_vs_strict_counterexample": {
+    "words_be_u16": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      65535,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "horizontal_check_u16": 0,
+    "folded_slots": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "conventional_16_column_sums": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      65535,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "folded_accepts": true,
+    "strict_16_column_accepts": false,
+    "boundary": "mathematical execution of the decoded addressing formula, not execution of firmware"
+  },
+  "global_negative_boundary": {
+    "hardcoded_empty_arrays_in_inventory_script": {
+      "aes_sbox_or_te_tables": 243,
+      "des_sboxes": 244,
+      "sha1_sha256_md5_iv_or_k_tables": 245,
+      "crc32_reflected_edb88320_table": 246
+    },
+    "meaning": "These empty values are not outputs of a scan in the saved generator. Missing constants cannot prove no parser, RC4, or PRNG."
+  },
+  "potential_direct_call_sites": [
+    {
+      "offset": "0xb2785",
+      "va": "0x400b2785",
+      "target_va": "0x400b2734",
+      "target_label": "seed",
+      "bytes": "cdafffa008",
+      "segment": "ROM",
+      "status": "candidate_until_boundary_checked"
+    },
+    {
+      "offset": "0xbbbba",
+      "va": "0x400bbbba",
+      "target_va": "0x400c8705",
+      "target_label": "stream",
+      "bytes": "dd4bcb0000f050",
+      "segment": "ROM",
+      "status": "candidate_until_boundary_checked"
+    },
+    {
+      "offset": "0xbbc5d",
+      "va": "0x400bbc5d",
+      "target_va": "0x400c8705",
+      "target_label": "stream",
+      "bytes": "dda8ca0000f050",
+      "segment": "ROM",
+      "status": "candidate_until_boundary_checked"
+    },
+    {
+      "offset": "0x12c091",
+      "va": "0x4012c091",
+      "target_va": "0x400b276d",
+      "target_label": "generate",
+      "bytes": "dddc66f8ffe010",
+      "segment": "ROM",
+      "status": "candidate_until_boundary_checked"
+    },
+    {
+      "offset": "0x12c0a5",
+      "va": "0x4012c0a5",
+      "target_va": "0x400b276d",
+      "target_label": "generate",
+      "bytes": "ddc866f8ffe010",
+      "segment": "ROM",
+      "status": "candidate_until_boundary_checked"
+    },
+    {
+      "offset": "0x12c0b9",
+      "va": "0x4012c0b9",
+      "target_va": "0x400b276d",
+      "target_label": "generate",
+      "bytes": "ddb466f8ffe010",
+      "segment": "ROM",
+      "status": "candidate_until_boundary_checked"
+    },
+    {
+      "offset": "0x12c0cd",
+      "va": "0x4012c0cd",
+      "target_va": "0x400b276d",
+      "target_label": "generate",
+      "bytes": "dda066f8ffe010",
+      "segment": "ROM",
+      "status": "candidate_until_boundary_checked"
+    },
+    {
+      "offset": "0x12c0e1",
+      "va": "0x4012c0e1",
+      "target_va": "0x400b276d",
+      "target_label": "generate",
+      "bytes": "dd8c66f8ffe010",
+      "segment": "ROM",
+      "status": "candidate_until_boundary_checked"
+    }
+  ],
+  "locally_boundary_verified_call_sites": [
+    "0xb2785",
+    "0xbbbba",
+    "0xbbc5d",
+    "0x12c091",
+    "0x12c0a5",
+    "0x12c0b9",
+    "0x12c0cd",
+    "0x12c0e1"
+  ],
+  "outputs": {
+    "horizontal": "<LOCAL_WORKSPACE>/analysis/ultra_method0_consumer_verify_20261011/horizontal_34b.objdump.txt",
+    "horizontal_entry_boundary": "<LOCAL_WORKSPACE>/analysis/ultra_method0_consumer_verify_20261011/horizontal_entry_boundary.objdump.txt",
+    "stream_and_vertical": "<LOCAL_WORKSPACE>/analysis/ultra_method0_consumer_verify_20261011/stream_and_folded_vertical.objdump.txt",
+    "mt_candidate": "<LOCAL_WORKSPACE>/analysis/ultra_method0_consumer_verify_20261011/seed_twist_temper_candidate.objdump.txt",
+    "mt_direct_caller": "<LOCAL_WORKSPACE>/analysis/ultra_method0_consumer_verify_20261011/random_integer_selector.objdump.txt",
+    "stream_callers": "<LOCAL_WORKSPACE>/analysis/ultra_method0_consumer_verify_20261011/stream_caller_arguments.objdump.txt",
+    "data_copy": "<LOCAL_WORKSPACE>/analysis/ultra_method0_consumer_verify_20261011/startup_initialized_data_copy.objdump.txt",
+    "tail_copy": "<LOCAL_WORKSPACE>/analysis/ultra_method0_consumer_verify_20261011/tail_identity_copy.objdump.txt",
+    "overlay_copy": "<LOCAL_WORKSPACE>/analysis/ultra_method0_consumer_verify_20261011/startup_overlay_copy.objdump.txt",
+    "copy_consumer": "<LOCAL_WORKSPACE>/analysis/ultra_method0_consumer_verify_20261011/copy_32b_consumer.objdump.txt"
+  }
+}

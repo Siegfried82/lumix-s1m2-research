@@ -1,0 +1,133 @@
+{
+  "pe_export_ordinal_mechanism": {
+    "pe_base": 50,
+    "address_of_functions_slots": 9302,
+    "address_of_names_count": 513,
+    "address_of_name_ordinals": "Stores 0-based function array index (0..9301)",
+    "export_ordinal_formula": "ExportOrdinal = Base (50) + FunctionIndex",
+    "prior_report_clarification": "The prior report noted 'export 701 / import 751'. In fact, FunctionIndex is 701 (0-based in AddressOfFunctions), Base is 50, so ExportOrdinal = 50 + 701 = 751. LUMIXTether.exe imports from Lmxptpif.dll strictly by ordinal (all 272 imports are by ordinal), requesting Ordinal 751. They are the exact same entry; 701 is the internal array index, and 751 is the formal PE export ordinal."
+  },
+  "inventory_summary": {
+    "total_named_exports": 513,
+    "unnamed_exports": 0,
+    "imported_by_lumix_tether_exe": 272,
+    "unimported_by_lumix_tether_exe": 241,
+    "mac_lmx_symbols": 524,
+    "common_vendor_functions": 493,
+    "truly_windows_only_count": 20,
+    "mac_only_count": 31
+  },
+  "truly_windows_only_functions": [
+    "LMX_func_api_Hl_Shd_GetCapability",
+    "LMX_func_api_Hl_Shd_Get_Highlight_Adj",
+    "LMX_func_api_Hl_Shd_Get_Pattern_Info",
+    "LMX_func_api_Hl_Shd_Get_Shadow_Adj",
+    "LMX_func_api_Hl_Shd_Set_Highlight_Adj",
+    "LMX_func_api_Hl_Shd_Set_Pattern_Info",
+    "LMX_func_api_Hl_Shd_Set_Shadow_Adj",
+    "LMX_func_api_SetupRangeSet_Get_Aperture",
+    "LMX_func_api_SetupRangeSet_Get_ExposureComp",
+    "LMX_func_api_SetupRangeSet_Get_ISO",
+    "LMX_func_api_SetupRangeSet_Get_Info",
+    "LMX_func_api_SetupRangeSet_Get_SS",
+    "LMX_func_api_SetupRangeSet_Set_Aperture",
+    "LMX_func_api_SetupRangeSet_Set_ExposureComp",
+    "LMX_func_api_SetupRangeSet_Set_ISO",
+    "LMX_func_api_SetupRangeSet_Set_Info",
+    "LMX_func_api_SetupRangeSet_Set_SS",
+    "LMX_func_api_Setup_Exec_Menu_Save_Comp",
+    "LMX_func_api_Setup_Exec_Pixel_Refresh_Comp",
+    "Lmx_func_api_Get_Error"
+  ],
+  "host_buffer_vs_target_address_distinction": {
+    "host_buffer": "Pointers passed into functions such as LMX_func_api_SetupFilesConfigSetting_Get_Data (0xc(%rbp)) and LMX_func_api_Get_Partial_Object (%rdx) are destinations in host PC virtual RAM where the PTP transport copies received packet payloads.",
+    "target_device_address": "No vendor export accepts or constructs a target physical memory/bus address (RAM/ROM) for the camera. Parameters transmitted in PTP request containers are strictly PTP Object Handles, sub-command tags (e.g. 0x80030001, 0x80040001, 0x800000a2, 0x15c00021), or property IDs."
+  },
+  "strongest_3_unresolved_candidates": [
+    {
+      "rank": 1,
+      "name": "LMX_func_api_Mnt_GetInfo_Get_Version",
+      "export_ordinal": 750,
+      "function_index": 700,
+      "rva": "0x1a690",
+      "imported_by_app": false,
+      "request_construction": {
+        "ptp_opcode": "0x9703",
+        "sub_command": "0x80030001",
+        "fixed_param": "0x20001 (written to param1 buffer)"
+      },
+      "response_handling": "Receives fixed 4-byte version response and copies DWORD into caller pointer.",
+      "mac_counterpart": {
+        "symbol": "__Z36LMX_func_api_Mnt_GetInfo_Get_VersionPjS_PcS_",
+        "address": "0x4a9f8",
+        "semantic_comparison": "Structurally identical. Constructs PTP 0x9703 with sub-command 0x80030001 and constant 0x20001; writes 4-byte version to output pointer."
+      },
+      "evaluation": "Diagnostic/maintenance query; returns version number only, no memory read capability."
+    },
+    {
+      "rank": 2,
+      "name": "LMX_func_api_Mnt_Set_UsbMode",
+      "export_ordinal": 850,
+      "function_index": 800,
+      "rva": "0x1aff0",
+      "imported_by_app": false,
+      "request_construction": {
+        "ptp_opcode": "0x9704",
+        "sub_command": "0x80040001",
+        "param": "mode (uint16/uint32 from caller)"
+      },
+      "response_handling": "Validates response status (0..3).",
+      "mac_counterpart": {
+        "symbol": "__Z28LMX_func_api_Mnt_Set_UsbModejPcPj",
+        "address": "0x42018",
+        "semantic_comparison": "Identical logic. Mac calls helper __Z23LMX_func_api_SetMntInfo (exported in Mac dylib, internal static in Windows DLL at RVA 0x1b090) with sub-command 0x80040001 and opcode 0x9704."
+      },
+      "evaluation": "Maintenance mode control; sets USB operation mode, no arbitrary memory write/read."
+    },
+    {
+      "rank": 3,
+      "name": "LMX_func_api_SetupFilesConfigSetting_Get_Data",
+      "export_ordinal": 1801,
+      "function_index": 1751,
+      "rva": "0x2e060",
+      "imported_by_app": true,
+      "request_construction": {
+        "ptp_opcode": "0x9421",
+        "sub_command": "0x800000a2",
+        "operation": "Acquires camera configuration backup dump (s1m2_config_0x9421.bin)"
+      },
+      "response_handling": "Copies variable binary configuration stream into host buffer 0xc(%rbp) bounded by length 0x14(%rbp).",
+      "mac_counterpart": {
+        "symbol": "__Z45LMX_func_api_SetupFilesConfigSetting_Get_DataP43_tag_lmx_struct_setupfiles_config_settingPcPj",
+        "address": "0x43b24",
+        "semantic_comparison": "Identical binary configuration backup path using 0x9421 / 0x800000a2."
+      },
+      "evaluation": "Returns real binary data, but it is an opaque high-level serialized camera configuration file, not arbitrary device RAM/ROM addressable dump."
+    }
+  ],
+  "alternative_read_candidates_evaluated": [
+    {
+      "name": "LMX_func_api_Get_Partial_Object",
+      "export_ordinal": 911,
+      "function_index": 861,
+      "rva": "0x24750",
+      "imported_by_app": false,
+      "ptp_opcode": "0x101b",
+      "evaluation": "Standard PTP GetPartialObject (ObjectHandle, Offset, MaxBytes). Offset is file offset inside camera storage object, not target hardware address."
+    },
+    {
+      "name": "LMX_func_api_Setup_Exec_Pixel_Refresh_Comp",
+      "export_ordinal": 731,
+      "function_index": 681,
+      "rva": "0x2d820",
+      "imported_by_app": false,
+      "windows_only": true,
+      "ptp_opcode": "0x9605",
+      "evaluation": "Passes 0x15c00022 confirmation command. Windows-only wrapper for pixel refresh completion notification."
+    }
+  ],
+  "conclusion_and_next_step": {
+    "summary": "Full PE export audit (513 exports, 241 unimported) confirms no hidden arbitrary memory reading or physical dump routines exist in Lmxptpif.dll. All 20 Windows-only exports are camera UI/calibration wrappers (tone curves, setup ranges, refresh completion).",
+    "next_concrete_candidate": "None within host Tether client software. Any future diagnostic read capability must target camera-side PTP firmware dispatchers (auditing firmware handlers for opcodes 0x97xx, 0x94xx, 0x96xx) rather than client-side tethering binaries."
+  }
+}

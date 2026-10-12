@@ -1,0 +1,3426 @@
+{
+  "workspace": "<LOCAL_WORKSPACE>",
+  "audit_date": "2026-10-12",
+  "audit_mode": "read_only_content_review",
+  "mutations_performed": [
+    "created this review JSON only"
+  ],
+  "scope": "Nested project-generated MD/TXT narratives; focus AGY batches, handoff indexes, parallel routes, ultra verification and other project reports",
+  "excluded": [
+    "sources",
+    "tools",
+    "ultra_mn10300_tool",
+    "local_qemu_lab",
+    "external",
+    "s5_research_report",
+    "desktop_panasonic_review",
+    "in_camera_hdr_reference",
+    "model_archive",
+    "workspace_cleanup",
+    "third-party input documents",
+    "licenses",
+    "disassembly/objdump listings",
+    "source windows",
+    "raw logs/responses",
+    "synthetic fixtures",
+    "pid.txt",
+    "all metadata and result JSON deletion",
+    "inputs/scripts/binaries deletion"
+  ],
+  "claims_boundary": "Preserve judgments are about documentary value, not independent verification of the reported technical conclusions. No AGY calls, firmware execution, device communication, file movement or deletion.",
+  "summary": {
+    "reviewed_documents": 130,
+    "actions": {
+      "delete_candidate": 36,
+      "keep": 91,
+      "keep_correction": 2,
+      "keep_retracted_original": 1
+    },
+    "delete_candidate_bytes": 7978660,
+    "delete_candidate_count": 36
+  },
+  "entries": [
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/01_new_consumer/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/01_new_consumer/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2567,
+      "sha256": "66fd45774e407e35480bf0d62f752af5ca6b54691ca5599c20522343a3137ce5",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/01_new_consumer/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/01_new_consumer/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/02_format_transition/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/02_format_transition/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2484,
+      "sha256": "0072ba45a080e9d947b0c009c8bb3bcc4f2603a1f09f1c7eba23753816f50d14",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/02_format_transition/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/02_format_transition/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/03_cross_model/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/03_cross_model/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2453,
+      "sha256": "186f1b626a8602191e7188d60a528049b28f7dd93952c69e624e4b8343518131",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/03_cross_model/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/03_cross_model/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/04_boot_producer/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/04_boot_producer/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2371,
+      "sha256": "de158b5397488f6f72290b9c65068b03dcef5ea1a4246689d398073128aaa14d",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/04_boot_producer/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/04_boot_producer/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/05_update_state/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/05_update_state/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2405,
+      "sha256": "14f94267168f4c7d78d6efd8b91bc579028ce54ad8bf34dcab29da634039c748",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/05_update_state/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/05_update_state/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/06_service_reads/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/06_service_reads/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2492,
+      "sha256": "f08d23892f12aa5f969955e704e4f6dd4d40b91378eced2571795d89195cc30d",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/06_service_reads/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/06_service_reads/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/07_video_diff/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/07_video_diff/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2441,
+      "sha256": "3663f4e18801477c39031559792ad309c0645cb8148746f82495f5fd96980d39",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/07_video_diff/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/07_video_diff/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/08_app_params/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/08_app_params/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2449,
+      "sha256": "c4309ee2516ec10493bebce02532858c85bba39f3d291809c0a6da6017fc7d48",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/08_app_params/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/08_app_params/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/09_config_format/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/09_config_format/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2486,
+      "sha256": "da18e86b9c37e6e239ac38420babeb13d16c4cb670f3265610e4857ed0a81c7e",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/09_config_format/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/09_config_format/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/10_lut_storage/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/10_lut_storage/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2455,
+      "sha256": "b579f8bf96bb3aea9b3d15c434a2e042f1542ea6c053c2d29b10490b4f59b700",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/10_lut_storage/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/10_lut_storage/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/11_hdr_frames/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/11_hdr_frames/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2402,
+      "sha256": "fb49dae957d8820756850b74354e9499916eb1d46c52b4d99a9c4722726d03b8",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/11_hdr_frames/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/11_hdr_frames/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/12_sound_resource/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/12_sound_resource/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2404,
+      "sha256": "abdf65733f546355a79dd92cb2b1b39d6aa1dead01adc2e476e3c0166e7a4783",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/12_sound_resource/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/12_sound_resource/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/13_protection_semantics/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/13_protection_semantics/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2415,
+      "sha256": "cda8b6a7106a094d4e41cce07884922b96f78ce59d6cb70a70aa458410b700cc",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/13_protection_semantics/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/13_protection_semantics/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/14_oss_artifacts/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/14_oss_artifacts/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2412,
+      "sha256": "ad548ee8054cddc934010d08d01409c770dab42b534b551c47e4fe2f2d70d6f3",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/14_oss_artifacts/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/14_oss_artifacts/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/15_hardware_plan/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "仅为历史派发任务提示，无 report.md；agent_result.json 的 content 为空。提示包含计划目标，没有已执行方法或研究结果。当前AGY停用；保留JSON与所有实质产物。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/15_hardware_plan/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2410,
+      "sha256": "40a446d55e17d09b01e07c6622f342efafd0eabfde19a0255861c6255bd0016e",
+      "retained_metadata": "analysis/agy_breakthrough_batch_20261011/15_hardware_plan/agent_result.json",
+      "metadata_summary": {
+        "finished": true,
+        "model_verified": true,
+        "content_chars": 0
+      },
+      "reference_note": "tasks.json 仍有历史 prompt 路径；主线程清理索引时处理引用，不删除 JSON。",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/15_hardware_plan/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/16_adversarial/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "纯历史派发提示；该分支实际报告、结果JSON及脚本保留，提示不含独有研究结果。当前AGY停用，不再作为活研究工具输入。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/16_adversarial/prompt.txt",
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2441,
+      "sha256": "f5e5560cc78e413f6bef77c6d2b07432c67c3569d23528a323ef2b36b568fb93",
+      "historical_tool_reader": {
+        "path": "analysis/agy_breakthrough_batch_20261011/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/16_adversarial/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/16_adversarial/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/16_adversarial/report.md",
+          "start": 4,
+          "end": 4
+        },
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/16_adversarial/report.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/16_adversarial/report.md",
+          "start": 11,
+          "end": 11
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 27146,
+      "sha256": "554011de3cbbd3ad1aa41b3d82e3a75ab4be67615fc8bb390cd2a733cb88fb48"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/任务总览.md",
+      "action": "delete_candidate",
+      "reason": "历史派发方向索引和观察会话流水账。方向与目录登记在保留的 tasks.json，真实状态在保留的 dispatch_status.json/agent_result.json；无独有研究结果。文中观察会话号是过时运行状态。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_breakthrough_batch_20261011/任务总览.md",
+          "start": 3,
+          "end": 30
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 3085,
+      "sha256": "ab1745c53d10e55167ac821bcd28eb812d9827f39f588c3f38e6e20eb20a5868",
+      "unique_information_kind": "历史观察会话号及调度说明，不是研究证据",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/任务总览.md"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/01_diff_review/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "纯历史派发提示；该分支实际报告、结果JSON及脚本保留，提示不含独有研究结果。当前AGY停用，不再作为活研究工具输入。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/01_diff_review/prompt.txt",
+          "start": 1,
+          "end": 6
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 1440,
+      "sha256": "097f2342805ef52fa17458b1d941eb15bebb8db5d156e88b9d2b11eb920e067b",
+      "historical_tool_reader": {
+        "path": "analysis/agy_takeover_20261012/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/01_diff_review/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/01_diff_review/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/01_diff_review/report.md",
+          "start": 4,
+          "end": 4
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/01_diff_review/report.md",
+          "start": 12,
+          "end": 12
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/01_diff_review/report.md",
+          "start": 13,
+          "end": 13
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 17297,
+      "sha256": "ba9b0f5fc3ae8a0075a2fcda8b5dbe621fa6f6d6ba4320622b8150dfb2d70012"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/02_modern_consumer/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "纯历史派发提示；该分支实际报告、结果JSON及脚本保留，提示不含独有研究结果。当前AGY停用，不再作为活研究工具输入。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/02_modern_consumer/prompt.txt",
+          "start": 1,
+          "end": 6
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 1497,
+      "sha256": "9df161547277e79c11f09ea6033b310173d1acd14c6818a14782ea0256a959ab",
+      "historical_tool_reader": {
+        "path": "analysis/agy_takeover_20261012/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/02_modern_consumer/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/02_modern_consumer/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/02_modern_consumer/report.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/02_modern_consumer/report.md",
+          "start": 6,
+          "end": 6
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/02_modern_consumer/report.md",
+          "start": 18,
+          "end": 18
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 32937,
+      "sha256": "2b8b75acced3532139c911a3d384f6017a71d002d1fef0b78f35fd4c7139604b"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/03_small_loader/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "纯历史派发提示；该分支实际报告、结果JSON及脚本保留，提示不含独有研究结果。当前AGY停用，不再作为活研究工具输入。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/03_small_loader/prompt.txt",
+          "start": 1,
+          "end": 6
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 1508,
+      "sha256": "d23c220ad26638428c7d887e413ed038a1f926aa5b0e4b81c19befe0d2f8ebae",
+      "historical_tool_reader": {
+        "path": "analysis/agy_takeover_20261012/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/03_small_loader/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/03_small_loader/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/03_small_loader/report.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/03_small_loader/report.md",
+          "start": 4,
+          "end": 4
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/03_small_loader/report.md",
+          "start": 12,
+          "end": 12
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 22030,
+      "sha256": "42775a8ef6c1b8f1d52304300924a2a0dfd350481924f8683c289bd3c8d7273f"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/04_legacy_versions/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "纯历史派发提示；该分支实际报告、结果JSON及脚本保留，提示不含独有研究结果。当前AGY停用，不再作为活研究工具输入。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/04_legacy_versions/prompt.txt",
+          "start": 1,
+          "end": 6
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 1460,
+      "sha256": "1b71cfba6ebe53a52a9d6ca8de6e0b1b99f4b1feca2a0fc251e36f4e34d09e7d",
+      "historical_tool_reader": {
+        "path": "analysis/agy_takeover_20261012/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/04_legacy_versions/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/04_legacy_versions/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/04_legacy_versions/report.md",
+          "start": 4,
+          "end": 4
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/04_legacy_versions/report.md",
+          "start": 6,
+          "end": 6
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/04_legacy_versions/report.md",
+          "start": 10,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 23737,
+      "sha256": "49c6dfdda1a7375a09498db69134922fd2ef2596d54427efe262e4a1a3630800"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/05_boot_producer/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "纯历史派发提示；该分支实际报告、结果JSON及脚本保留，提示不含独有研究结果。当前AGY停用，不再作为活研究工具输入。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/05_boot_producer/prompt.txt",
+          "start": 1,
+          "end": 6
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 1474,
+      "sha256": "c9242b6e65af67d4ad5cdc8555d163095e63b339fb80974334551dc2867bf0e6",
+      "historical_tool_reader": {
+        "path": "analysis/agy_takeover_20261012/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/05_boot_producer/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/05_boot_producer/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/05_boot_producer/report.md",
+          "start": 4,
+          "end": 4
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/05_boot_producer/report.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/05_boot_producer/report.md",
+          "start": 8,
+          "end": 8
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 36043,
+      "sha256": "797e1c653f4212818fe41a00d002d0cf77a82ca142a6476b17433ad5bc436274"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/06_lab_control/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "纯历史派发提示；该分支实际报告、结果JSON及脚本保留，提示不含独有研究结果。当前AGY停用，不再作为活研究工具输入。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/06_lab_control/prompt.txt",
+          "start": 1,
+          "end": 6
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 1527,
+      "sha256": "83c53e40809ac69c89404d36e0792b7edf8a412747f42c6fa9a5b6659c614027",
+      "historical_tool_reader": {
+        "path": "analysis/agy_takeover_20261012/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/06_lab_control/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/06_lab_control/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/06_lab_control/report.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/06_lab_control/report.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/06_lab_control/report.md",
+          "start": 12,
+          "end": 12
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 40066,
+      "sha256": "c3a32c5a8db40f0dbfb666c6c05983828f92de7b21b92d777c9fe466e57cf500"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/07_lab_bluetooth/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "纯历史派发提示；该分支实际报告、结果JSON及脚本保留，提示不含独有研究结果。当前AGY停用，不再作为活研究工具输入。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/07_lab_bluetooth/prompt.txt",
+          "start": 1,
+          "end": 6
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 1507,
+      "sha256": "1ee9c782d130266906a46088a757657c36d912b3a113829dfbd7a7fe4c0ccc8a",
+      "historical_tool_reader": {
+        "path": "analysis/agy_takeover_20261012/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/07_lab_bluetooth/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/07_lab_bluetooth/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/07_lab_bluetooth/report.md",
+          "start": 6,
+          "end": 6
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/07_lab_bluetooth/report.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/07_lab_bluetooth/report.md",
+          "start": 9,
+          "end": 9
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 38840,
+      "sha256": "2b871f2f0a4641646384503883b142c87e4083fdc61cfc8480056dc5b404923c"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/08_lab_preview/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "纯历史派发提示；该分支实际报告、结果JSON及脚本保留，提示不含独有研究结果。当前AGY停用，不再作为活研究工具输入。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/08_lab_preview/prompt.txt",
+          "start": 1,
+          "end": 6
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 1462,
+      "sha256": "73ec298dfdbdf624fdbd85e09784f7a690f7734ab804d32facb1f1fabb30f820",
+      "historical_tool_reader": {
+        "path": "analysis/agy_takeover_20261012/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/08_lab_preview/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/08_lab_preview/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/08_lab_preview/report.md",
+          "start": 6,
+          "end": 6
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/08_lab_preview/report.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/08_lab_preview/report.md",
+          "start": 8,
+          "end": 8
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 64136,
+      "sha256": "b1e969aced0bdffcec817b22b803feda982593f77c8662d90ece8f8da4f01b4b"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/09_tether_wireless/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "纯历史派发提示；该分支实际报告、结果JSON及脚本保留，提示不含独有研究结果。当前AGY停用，不再作为活研究工具输入。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/09_tether_wireless/prompt.txt",
+          "start": 1,
+          "end": 6
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 1558,
+      "sha256": "5943f48d64e3dbab8570c2210fa2f6ee558dcecb8822e52e9eb3fe0fa02a3087",
+      "historical_tool_reader": {
+        "path": "analysis/agy_takeover_20261012/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/09_tether_wireless/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/09_tether_wireless/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/09_tether_wireless/report.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/09_tether_wireless/report.md",
+          "start": 11,
+          "end": 11
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/09_tether_wireless/report.md",
+          "start": 16,
+          "end": 16
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 37105,
+      "sha256": "afcd04947721c5a6037c8a03ace6e5c0c9ec681a1f74714e18dd566e26d810a5"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/10_video_filter/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "纯历史派发提示；该分支实际报告、结果JSON及脚本保留，提示不含独有研究结果。当前AGY停用，不再作为活研究工具输入。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/10_video_filter/prompt.txt",
+          "start": 1,
+          "end": 6
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 1448,
+      "sha256": "141934b406cf8e9d86ba2fde8d2240c5ba3b558d811d8ee6a02772a31d0f2d79",
+      "historical_tool_reader": {
+        "path": "analysis/agy_takeover_20261012/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/10_video_filter/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/10_video_filter/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/10_video_filter/report.md",
+          "start": 6,
+          "end": 6
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/10_video_filter/report.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/10_video_filter/report.md",
+          "start": 8,
+          "end": 8
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 53214,
+      "sha256": "c8cd8c61211962971d96ffcacf41b3890366910377c9a892d7303b9b8e87fdbd"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/11_config_lut/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "纯历史派发提示；该分支实际报告、结果JSON及脚本保留，提示不含独有研究结果。当前AGY停用，不再作为活研究工具输入。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/11_config_lut/prompt.txt",
+          "start": 1,
+          "end": 6
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 1536,
+      "sha256": "3f0f55a61918189fc484b40df8a5672199fde3aacba7992ff09db0910bba2719",
+      "historical_tool_reader": {
+        "path": "analysis/agy_takeover_20261012/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/11_config_lut/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/11_config_lut/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/11_config_lut/report.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/11_config_lut/report.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/11_config_lut/report.md",
+          "start": 11,
+          "end": 11
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 44966,
+      "sha256": "600705937194dd4f35784fda0986abc4551dfc1a648fabf9ed9e604f7fca8bad"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/12_handoff/prompt.txt",
+      "action": "delete_candidate",
+      "reason": "纯历史派发提示；该分支实际报告、结果JSON及脚本保留，提示不含独有研究结果。当前AGY停用，不再作为活研究工具输入。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/12_handoff/prompt.txt",
+          "start": 1,
+          "end": 6
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 1564,
+      "sha256": "c286bfc03f78eec08752c741d5aa9dabb242e2f64279bcd936b2301d309ff583",
+      "historical_tool_reader": {
+        "path": "analysis/agy_takeover_20261012/dispatch_batch.py",
+        "line": 68,
+        "status": "已停用AGY派发器的历史提示读取；未运行或修改该脚本"
+      },
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/12_handoff/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/12_handoff/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/agy_takeover_20261012/12_handoff/report.md",
+          "start": 4,
+          "end": 4
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/12_handoff/report.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/agy_takeover_20261012/12_handoff/report.md",
+          "start": 13,
+          "end": 13
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 47532,
+      "sha256": "d3cc2aa4700149d63a656dd5bfe9c99284f619ea8243ff0b82adac8983267ded"
+    },
+    {
+      "path": "analysis/ai_handoff_20261010/handoff_validation.md",
+      "action": "keep",
+      "reason": "保留交接包装的历史检查范围：输入散列、实际重放统计、公开副本修复和未证明项。不是纯目录索引。",
+      "evidence_lines": [
+        {
+          "path": "analysis/ai_handoff_20261010/handoff_validation.md",
+          "start": 3,
+          "end": 13
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1281,
+      "sha256": "b5f72e4f4539557c0891f9344b3fad1f4afd028104a5168bc3d27469c9292a3b"
+    },
+    {
+      "path": "analysis/ai_handoff_20261010/全部文件索引.md",
+      "action": "delete_candidate",
+      "reason": "2026-10-10 的全磁盘路径/大小清单，79,483条，包含大量第三方树。第3行明确仅列文件且未读正文；是易失效的生成索引，不含文件内容、SHA或实验结果。保留实际目录和原始文件即可重新列举；历史文件规模信息也在 handoff_validation.md:4。",
+      "evidence_lines": [
+        {
+          "path": "analysis/ai_handoff_20261010/全部文件索引.md",
+          "start": 1,
+          "end": 15
+        },
+        {
+          "path": "analysis/ai_handoff_20261010/handoff_validation.md",
+          "start": 4,
+          "end": 4
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 7905170,
+      "sha256": "36f143c3e21fb5827c4ea3b17db7a4a9b0c074c276a096133567a8f4b78c257b",
+      "unique_information_kind": "旧快照中的路径存在性和大小；无独有研究证据",
+      "reference_note": "主线程须清理交接正文对此索引的链接。",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/ai_handoff_20261010/全部文件索引.md"
+    },
+    {
+      "path": "analysis/ai_handoff_20261010/脚本入口清单.md",
+      "action": "keep",
+      "reason": "虽由AST生成且不能作为运行成功证据，但汇总101个本项目脚本的入口、参数和依赖，仍有集中导航价值；保留此较小清单。",
+      "evidence_lines": [
+        {
+          "path": "analysis/ai_handoff_20261010/脚本入口清单.md",
+          "start": 1,
+          "end": 39
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 32404,
+      "sha256": "8f69cb8d6659039e36fd25930e43ada146b4b413e88e8bcfcaa4c54f94050d59",
+      "reference_note": "主线程须清理交接正文对此生成清单的链接。"
+    },
+    {
+      "path": "analysis/android_lab_live_20261012/实机连接结果.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/android_lab_live_20261012/实机连接结果.md",
+          "start": 10,
+          "end": 10
+        },
+        {
+          "path": "analysis/android_lab_live_20261012/实机连接结果.md",
+          "start": 12,
+          "end": 12
+        },
+        {
+          "path": "analysis/android_lab_live_20261012/实机连接结果.md",
+          "start": 15,
+          "end": 15
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1315,
+      "sha256": "156157990d44549c23a222f88b17b6dc4b57bd678d9d03cb62e14a6c4d25507d"
+    },
+    {
+      "path": "analysis/android_lab_live_20261012/正常认证与LUT读取.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/android_lab_live_20261012/正常认证与LUT读取.md",
+          "start": 13,
+          "end": 13
+        },
+        {
+          "path": "analysis/android_lab_live_20261012/正常认证与LUT读取.md",
+          "start": 19,
+          "end": 19
+        },
+        {
+          "path": "analysis/android_lab_live_20261012/正常认证与LUT读取.md",
+          "start": 25,
+          "end": 25
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2185,
+      "sha256": "9d0947f08e221c6a9f45496080aed388679427c715d478e4da39cfd56c7bc7c4"
+    },
+    {
+      "path": "analysis/backup_request_audit_20261010/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/backup_request_audit_20261010/结论.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/backup_request_audit_20261010/结论.md",
+          "start": 13,
+          "end": 13
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1239,
+      "sha256": "4c8d4786eac6151825dd2e492543f4f744b63b8ea9c643288aca2a9466cc56e1"
+    },
+    {
+      "path": "analysis/baseline_20261008_01/MODE_LABEL_CORRECTION.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/baseline_20261008_01/MODE_LABEL_CORRECTION.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/baseline_20261008_01/MODE_LABEL_CORRECTION.md",
+          "start": 10,
+          "end": 10
+        },
+        {
+          "path": "analysis/baseline_20261008_01/MODE_LABEL_CORRECTION.md",
+          "start": 11,
+          "end": 11
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1413,
+      "sha256": "43f9dffb753f5b90fb8c9ee91a782f243d51a8fd3e6fc640fbf46e76c4c1cdbb"
+    },
+    {
+      "path": "analysis/cleanup_20261010/validation.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/cleanup_20261010/validation.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/cleanup_20261010/validation.md",
+          "start": 6,
+          "end": 6
+        },
+        {
+          "path": "analysis/cleanup_20261010/validation.md",
+          "start": 9,
+          "end": 9
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 972,
+      "sha256": "bc794d29cad3188ae99b8cd07bfb00ee881aa5f515293c2a75a415c40afafec8"
+    },
+    {
+      "path": "analysis/config_review_20261010/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/config_review_20261010/结论.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/config_review_20261010/结论.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/config_review_20261010/结论.md",
+          "start": 13,
+          "end": 13
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 4229,
+      "sha256": "e03ab9650df27f79b967de68977105381407e571de7c54d5426e3790ec028da3"
+    },
+    {
+      "path": "analysis/format_transition_audit_20261011/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/format_transition_audit_20261011/结论.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/format_transition_audit_20261011/结论.md",
+          "start": 17,
+          "end": 17
+        },
+        {
+          "path": "analysis/format_transition_audit_20261011/结论.md",
+          "start": 25,
+          "end": 25
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2865,
+      "sha256": "3554f84d09387a9f32ef492e22cea209d5d332856bd89bfeb5bd0abab3612d00"
+    },
+    {
+      "path": "analysis/fwup_ready_address_audit_20261010/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/fwup_ready_address_audit_20261010/结论.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/fwup_ready_address_audit_20261010/结论.md",
+          "start": 13,
+          "end": 13
+        },
+        {
+          "path": "analysis/fwup_ready_address_audit_20261010/结论.md",
+          "start": 17,
+          "end": 17
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 3809,
+      "sha256": "5a7bda15e60c49d3e4db3b4acf770af0decad6bc09306b75e94850880a1f956d"
+    },
+    {
+      "path": "analysis/lab_connection_20261012/连接链分析.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lab_connection_20261012/连接链分析.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/lab_connection_20261012/连接链分析.md",
+          "start": 11,
+          "end": 11
+        },
+        {
+          "path": "analysis/lab_connection_20261012/连接链分析.md",
+          "start": 13,
+          "end": 13
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2795,
+      "sha256": "97c96efde17a401df102e9559ba27bd9b10e1543aa5760f446ea6340a9a06ee8"
+    },
+    {
+      "path": "analysis/lab_crypto_callsite_audit_20261010/findings.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lab_crypto_callsite_audit_20261010/findings.md",
+          "start": 11,
+          "end": 11
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2045,
+      "sha256": "97012a337d5d41aba92172313c9b535cf95b75ba9bcf4373602c398e445feee4"
+    },
+    {
+      "path": "analysis/lab_lut_protocol_20261010/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lab_lut_protocol_20261010/结论.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/lab_lut_protocol_20261010/结论.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/lab_lut_protocol_20261010/结论.md",
+          "start": 11,
+          "end": 11
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 14079,
+      "sha256": "a86738c4489edbf4c3aae24bbd3d88c22294a6205f8211e3620bfe1f0ec07919"
+    },
+    {
+      "path": "analysis/lab_read_baseline_20261012/读取成果.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lab_read_baseline_20261012/读取成果.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/lab_read_baseline_20261012/读取成果.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/lab_read_baseline_20261012/读取成果.md",
+          "start": 9,
+          "end": 9
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1618,
+      "sha256": "7438b16b582ae77509c85526ca8b754576cc61db66c148f2f60326d3840021d9"
+    },
+    {
+      "path": "analysis/lab_roundtrip_preparation_20261012/进度与下一步.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lab_roundtrip_preparation_20261012/进度与下一步.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/lab_roundtrip_preparation_20261012/进度与下一步.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/lab_roundtrip_preparation_20261012/进度与下一步.md",
+          "start": 15,
+          "end": 15
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2200,
+      "sha256": "4fdd1ff93344345e26ce75b8abcb79e4c0cf7bb8044c19e703e8ec39c6f4ec5e"
+    },
+    {
+      "path": "analysis/lab_session_chain_20261012/正常会话链核验.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lab_session_chain_20261012/正常会话链核验.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/lab_session_chain_20261012/正常会话链核验.md",
+          "start": 11,
+          "end": 11
+        },
+        {
+          "path": "analysis/lab_session_chain_20261012/正常会话链核验.md",
+          "start": 17,
+          "end": 17
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 3317,
+      "sha256": "3a48a339c12bd1bab8a421489b37816ccf3e809bb1123102cbd9e0a1cde2de96"
+    },
+    {
+      "path": "analysis/later_legacy_consumers_20261011/较晚旧固件消费者核验.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/later_legacy_consumers_20261011/较晚旧固件消费者核验.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/later_legacy_consumers_20261011/较晚旧固件消费者核验.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/later_legacy_consumers_20261011/较晚旧固件消费者核验.md",
+          "start": 9,
+          "end": 9
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 6359,
+      "sha256": "d5ef714429867f29c8f6b5180442d110c85ad552f5a1a6fc88b9fd033ef39ec4"
+    },
+    {
+      "path": "analysis/legacy_corpus_20261011/进度与证据.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/legacy_corpus_20261011/进度与证据.md",
+          "start": 11,
+          "end": 11
+        },
+        {
+          "path": "analysis/legacy_corpus_20261011/进度与证据.md",
+          "start": 22,
+          "end": 22
+        },
+        {
+          "path": "analysis/legacy_corpus_20261011/进度与证据.md",
+          "start": 26,
+          "end": 26
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 3961,
+      "sha256": "e6998fe36f26e6c51c8c14a09238bebeb12bf5e2ffee24c033ee063f799f30e4"
+    },
+    {
+      "path": "analysis/loader_ipcufs_review_20261011/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/loader_ipcufs_review_20261011/结论.md",
+          "start": 8,
+          "end": 8
+        },
+        {
+          "path": "analysis/loader_ipcufs_review_20261011/结论.md",
+          "start": 15,
+          "end": 15
+        },
+        {
+          "path": "analysis/loader_ipcufs_review_20261011/结论.md",
+          "start": 19,
+          "end": 19
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 7346,
+      "sha256": "8985345740e69bc9ca432433cae62d256aff5b4d3ab44fe768903e50bf4be16a"
+    },
+    {
+      "path": "analysis/lut_config_after_20261012/导入对照结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lut_config_after_20261012/导入对照结论.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/lut_config_after_20261012/导入对照结论.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/lut_config_after_20261012/导入对照结论.md",
+          "start": 17,
+          "end": 17
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2099,
+      "sha256": "ccacecf17a737e3b5dad50182c4d2ee87260ef23db83b71b2ea385145b268074"
+    },
+    {
+      "path": "analysis/lut_config_before_20261012/基线说明.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lut_config_before_20261012/基线说明.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/lut_config_before_20261012/基线说明.md",
+          "start": 5,
+          "end": 5
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 437,
+      "sha256": "626171e95f8fa1da0a2ccc8bfa3a579f546fdd606cc875c656e569481858bdbe"
+    },
+    {
+      "path": "analysis/lut_config_blank_20261012/空白对照结果.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lut_config_blank_20261012/空白对照结果.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/lut_config_blank_20261012/空白对照结果.md",
+          "start": 5,
+          "end": 5
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 661,
+      "sha256": "53afd791d01e17c0e213b14deecb98282c58305f6ac99a55c954fd19a6d7b3d6"
+    },
+    {
+      "path": "analysis/lut_config_delete_20261012/删除行为结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lut_config_delete_20261012/删除行为结论.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/lut_config_delete_20261012/删除行为结论.md",
+          "start": 17,
+          "end": 17
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1465,
+      "sha256": "db146898b938bb6084d3805173fa9383ed371236882104e6c302706f08282d26"
+    },
+    {
+      "path": "analysis/lut_config_reboot_20261012/重启持久性验证.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lut_config_reboot_20261012/重启持久性验证.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/lut_config_reboot_20261012/重启持久性验证.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/lut_config_reboot_20261012/重启持久性验证.md",
+          "start": 7,
+          "end": 7
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 707,
+      "sha256": "1c47b5e867d6a7bb2225d5325c22c01be2958af76214a4f82783f531658d7f7a"
+    },
+    {
+      "path": "analysis/lut_config_rename_20261012/重命名对照结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lut_config_rename_20261012/重命名对照结论.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/lut_config_rename_20261012/重命名对照结论.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/lut_config_rename_20261012/重命名对照结论.md",
+          "start": 9,
+          "end": 9
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 924,
+      "sha256": "5ec8772bf38b9c64c183f3043596c865909f5f4a426e1a805d6f0fb4308769b5"
+    },
+    {
+      "path": "analysis/lut_identity_delete_camera_20261012/机内删除核验.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lut_identity_delete_camera_20261012/机内删除核验.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/lut_identity_delete_camera_20261012/机内删除核验.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/lut_identity_delete_camera_20261012/机内删除核验.md",
+          "start": 9,
+          "end": 9
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1260,
+      "sha256": "6493cfbba020a3b84f153620d455b8732f53216f440efb87ddd82bb4d1640d59"
+    },
+    {
+      "path": "analysis/lut_identity_import_20261012/标准表读回结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lut_identity_import_20261012/标准表读回结论.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/lut_identity_import_20261012/标准表读回结论.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/lut_identity_import_20261012/标准表读回结论.md",
+          "start": 7,
+          "end": 7
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2258,
+      "sha256": "f3b511d0510145d389989fe40c54608bec003c99eee97370cb33f5c951048740"
+    },
+    {
+      "path": "analysis/lut_numeric_review_20261010/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lut_numeric_review_20261010/结论.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/lut_numeric_review_20261010/结论.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/lut_numeric_review_20261010/结论.md",
+          "start": 7,
+          "end": 7
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 6407,
+      "sha256": "e61201c30bbd1541b271087cdfebf4db4e18fe1890465fc0178aacccd6cf08e0"
+    },
+    {
+      "path": "analysis/lut_slot_mapping_20261012/槽位映射与配置提取结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lut_slot_mapping_20261012/槽位映射与配置提取结论.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/lut_slot_mapping_20261012/槽位映射与配置提取结论.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/lut_slot_mapping_20261012/槽位映射与配置提取结论.md",
+          "start": 16,
+          "end": 16
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2444,
+      "sha256": "21f636a7ec78fd36ccf1db70ea8580d7dcc0ebd149a037a43ad4e468ffaa1944"
+    },
+    {
+      "path": "analysis/lut_upload_live_20261012_01/独立上传实机结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lut_upload_live_20261012_01/独立上传实机结论.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/lut_upload_live_20261012_01/独立上传实机结论.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/lut_upload_live_20261012_01/独立上传实机结论.md",
+          "start": 7,
+          "end": 7
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 3918,
+      "sha256": "cf57a5151b964c5e8c2fa254be153244d2f75feac33025cc4154d2296f482660"
+    },
+    {
+      "path": "analysis/lut_uploader_20261012/上传工具与实测接续.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/lut_uploader_20261012/上传工具与实测接续.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/lut_uploader_20261012/上传工具与实测接续.md",
+          "start": 14,
+          "end": 14
+        },
+        {
+          "path": "analysis/lut_uploader_20261012/上传工具与实测接续.md",
+          "start": 22,
+          "end": 22
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 3418,
+      "sha256": "6c301d21bd6d50b6e1e81281aef7d4e4996108440947791bfb7b99401a7fc05b"
+    },
+    {
+      "path": "analysis/menu_request_audit_20261010/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/menu_request_audit_20261010/结论.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/menu_request_audit_20261010/结论.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/menu_request_audit_20261010/结论.md",
+          "start": 9,
+          "end": 9
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1634,
+      "sha256": "d8aacc9f91d172853f8bc44146c4e0dba108e0f462a681671eaf5fef2ae59ec6"
+    },
+    {
+      "path": "analysis/method0_codex_verify_20261011/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/method0_codex_verify_20261011/结论.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/method0_codex_verify_20261011/结论.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/method0_codex_verify_20261011/结论.md",
+          "start": 11,
+          "end": 11
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1615,
+      "sha256": "60d1ec59b78a6a37395ed8770682fa79b4559898f436a035503baabc28eb7f9b"
+    },
+    {
+      "path": "analysis/method0_review_20261011/method0_evidence_report.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/method0_review_20261011/method0_evidence_report.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/method0_review_20261011/method0_evidence_report.md",
+          "start": 8,
+          "end": 8
+        },
+        {
+          "path": "analysis/method0_review_20261011/method0_evidence_report.md",
+          "start": 10,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 7503,
+      "sha256": "d5020bdcdd53d12dbbce16407252072b6700ee520b33eaedf92d92edc6e955ee"
+    },
+    {
+      "path": "analysis/method2_codex_verify_20261011/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/method2_codex_verify_20261011/结论.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/method2_codex_verify_20261011/结论.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/method2_codex_verify_20261011/结论.md",
+          "start": 13,
+          "end": 13
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1669,
+      "sha256": "dba860112f1c887888799012afa4b095eeee2d5be441c27b42a56a657843bfb8"
+    },
+    {
+      "path": "analysis/method2_review_20261011/method2_evidence_report.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/method2_review_20261011/method2_evidence_report.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/method2_review_20261011/method2_evidence_report.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/method2_review_20261011/method2_evidence_report.md",
+          "start": 10,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 5119,
+      "sha256": "3e322ee91ac0b2e69bf50df3ddb343de3976843d906bb17857aca4d63e88c563"
+    },
+    {
+      "path": "analysis/method2_transfer_20261011/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/method2_transfer_20261011/结论.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/method2_transfer_20261011/结论.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/method2_transfer_20261011/结论.md",
+          "start": 19,
+          "end": 19
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2895,
+      "sha256": "9fe50a214c28b0856006992c3586291e3020725218a7fac742493447c1ee8698"
+    },
+    {
+      "path": "analysis/multimodel_diff_20261012/报告.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/multimodel_diff_20261012/报告.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/multimodel_diff_20261012/报告.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/multimodel_diff_20261012/报告.md",
+          "start": 9,
+          "end": 9
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 4288,
+      "sha256": "de3ace946f33069f0a1b0492b815b1e09915f15117b52e8b287692885097975a"
+    },
+    {
+      "path": "analysis/new_pr_review_20261010/S1M2适用性核验.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/new_pr_review_20261010/S1M2适用性核验.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/new_pr_review_20261010/S1M2适用性核验.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/new_pr_review_20261010/S1M2适用性核验.md",
+          "start": 11,
+          "end": 11
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2019,
+      "sha256": "c5a81f8fcc29e4627102faedd0790638917c4532e87a15831b5f798a301f7439"
+    },
+    {
+      "path": "analysis/new_pr_review_20261010/初审.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/new_pr_review_20261010/初审.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/new_pr_review_20261010/初审.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/new_pr_review_20261010/初审.md",
+          "start": 7,
+          "end": 7
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1345,
+      "sha256": "0b6413905e670ca8079119fcdc4286fc5014cead4a0bb3e1cbc09180960a3f71"
+    },
+    {
+      "path": "analysis/nikon_xor_model_check_20261010/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/nikon_xor_model_check_20261010/结论.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/nikon_xor_model_check_20261010/结论.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/nikon_xor_model_check_20261010/结论.md",
+          "start": 9,
+          "end": 9
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1626,
+      "sha256": "d8811918e2d8debfcb43997c08760d1e0685b559c852c718fbe20a986a6c22a1"
+    },
+    {
+      "path": "analysis/object_metadata_full_20261010/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/object_metadata_full_20261010/结论.md",
+          "start": 12,
+          "end": 12
+        },
+        {
+          "path": "analysis/object_metadata_full_20261010/结论.md",
+          "start": 22,
+          "end": 22
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1343,
+      "sha256": "e244ba46a85b98e7755f56a352f87da5fd0bce901f4c1513b91a879495c3c32b"
+    },
+    {
+      "path": "analysis/object_metadata_sample_20261010/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/object_metadata_sample_20261010/结论.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/object_metadata_sample_20261010/结论.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/object_metadata_sample_20261010/结论.md",
+          "start": 7,
+          "end": 7
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 752,
+      "sha256": "1c59e1a597ba670ae504fc51d24257993bafe9e6fa51877b7dc5a6e4a56f1c1b"
+    },
+    {
+      "path": "analysis/object_route_preparation_20261009/对象读取准备说明.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/object_route_preparation_20261009/对象读取准备说明.md",
+          "start": 11,
+          "end": 11
+        },
+        {
+          "path": "analysis/object_route_preparation_20261009/对象读取准备说明.md",
+          "start": 13,
+          "end": 13
+        },
+        {
+          "path": "analysis/object_route_preparation_20261009/对象读取准备说明.md",
+          "start": 17,
+          "end": 17
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 3940,
+      "sha256": "15ba67ca275f3a79aba413b438df08084d04706f648c2700b152882ee6db93d5"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/01_container/Codex容器字段复核.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/01_container/Codex容器字段复核.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/01_container/Codex容器字段复核.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/01_container/Codex容器字段复核.md",
+          "start": 10,
+          "end": 10
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2680,
+      "sha256": "a617326e1671169b46031d0df41d2e35b65e63e85fe65f7babd54b567ea7cd0f"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/01_container/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/01_container/report.md",
+          "start": 6,
+          "end": 6
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/01_container/report.md",
+          "start": 13,
+          "end": 13
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/01_container/report.md",
+          "start": 22,
+          "end": 22
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 14681,
+      "sha256": "c47a93f36d18b658a865fd3cbbea9e08c4dfa46db35bf4ab369d3640bd5557fd"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/01_container/task.txt",
+      "action": "delete_candidate",
+      "reason": "纯派发提示，已用保留的 run.py 中 COMMON、TASKS 及第24行拼接规则逐字重建并确认完全一致；没有独有研究信息。原始 JSON、报告、脚本和实测记录均保留。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/01_container/task.txt",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/run.py",
+          "start": 10,
+          "end": 25
+        }
+      ],
+      "has_unique_information": false,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2122,
+      "sha256": "be5c90c8b416b5937968b28b183e8658d24e0b6497bb19356993146bde0ebbfd",
+      "exact_reconstruction_verified": true,
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/parallel_routes_20261009/01_container/task.txt"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/02_host/Codex维修读取接口核验.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/02_host/Codex维修读取接口核验.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/02_host/Codex维修读取接口核验.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/02_host/Codex维修读取接口核验.md",
+          "start": 12,
+          "end": 12
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 8398,
+      "sha256": "89bc72908fdea7e560d2bffb08ae08ef29a5e13afa66417c3460d7b248c368a2"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/02_host/PR1鉴权与菜单资料复核.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/02_host/PR1鉴权与菜单资料复核.md",
+          "start": 17,
+          "end": 17
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/02_host/PR1鉴权与菜单资料复核.md",
+          "start": 20,
+          "end": 20
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/02_host/PR1鉴权与菜单资料复核.md",
+          "start": 21,
+          "end": 21
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2818,
+      "sha256": "c719dae97e43e1d5f3e66e748deaa0f9621619ab16ac9066f93121f6ec218e81"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/02_host/task.txt",
+      "action": "delete_candidate",
+      "reason": "纯派发提示，已用保留的 run.py 中 COMMON、TASKS 及第24行拼接规则逐字重建并确认完全一致；没有独有研究信息。原始 JSON、报告、脚本和实测记录均保留。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/02_host/task.txt",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/run.py",
+          "start": 10,
+          "end": 25
+        }
+      ],
+      "has_unique_information": false,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2224,
+      "sha256": "68f2cf63b982a2b97752cdfe38092c50861983acc395a3609ffedea2cd59100d",
+      "exact_reconstruction_verified": true,
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/parallel_routes_20261009/02_host/task.txt"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/03_flow/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/03_flow/report.md",
+          "start": 12,
+          "end": 12
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/03_flow/report.md",
+          "start": 14,
+          "end": 14
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/03_flow/report.md",
+          "start": 16,
+          "end": 16
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 20207,
+      "sha256": "98c0f204fc8808504cd03d6f00938ac2a32dd0880d438d4cc06b7ef2a857fd42"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/03_flow/task.txt",
+      "action": "delete_candidate",
+      "reason": "纯派发提示，已用保留的 run.py 中 COMMON、TASKS 及第24行拼接规则逐字重建并确认完全一致；没有独有研究信息。原始 JSON、报告、脚本和实测记录均保留。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/03_flow/task.txt",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/run.py",
+          "start": 10,
+          "end": 25
+        }
+      ],
+      "has_unique_information": false,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2107,
+      "sha256": "769f0cee7e5d9ba84b16c5d2040ed1248a0ddf25521e882ae2d9f6a1ed22fd5f",
+      "exact_reconstruction_verified": true,
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/parallel_routes_20261009/03_flow/task.txt"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/04_backup/report.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/04_backup/report.md",
+          "start": 4,
+          "end": 4
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/04_backup/report.md",
+          "start": 10,
+          "end": 10
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/04_backup/report.md",
+          "start": 11,
+          "end": 11
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 14198,
+      "sha256": "b8c410e828ab68f03e236b25ebc613ce32d1ec8a5396b81d8aa63c839d280dc5"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/04_backup/task.txt",
+      "action": "delete_candidate",
+      "reason": "纯派发提示，已用保留的 run.py 中 COMMON、TASKS 及第24行拼接规则逐字重建并确认完全一致；没有独有研究信息。原始 JSON、报告、脚本和实测记录均保留。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/04_backup/task.txt",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/run.py",
+          "start": 10,
+          "end": 25
+        }
+      ],
+      "has_unique_information": false,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2261,
+      "sha256": "cf2a3cefeb8329444b1ad0083522ea97b64d9d5900768f65e776553cc33e8250",
+      "exact_reconstruction_verified": true,
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/parallel_routes_20261009/04_backup/task.txt"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/05_sources/report.md",
+      "action": "keep_correction",
+      "reason": "七行文稿是明确撤回旧无证据结论的更正入口，含撤回边界与当前核验链接；保留可防止旧报告继续被当作事实，不是被撤回报告的正文。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/05_sources/report.md",
+          "start": 1,
+          "end": 7
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 753,
+      "sha256": "eafd03e82338723cece47258cbae47a10b2b04ff15215b1faf4e0ebc25509c10"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/05_sources/task.txt",
+      "action": "delete_candidate",
+      "reason": "纯派发提示，已用保留的 run.py 中 COMMON、TASKS 及第24行拼接规则逐字重建并确认完全一致；没有独有研究信息。原始 JSON、报告、脚本和实测记录均保留。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/05_sources/task.txt",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/run.py",
+          "start": 10,
+          "end": 25
+        }
+      ],
+      "has_unique_information": false,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2282,
+      "sha256": "d99d67844c8279bd14bab77892c553fcd5d04f42a6bded0ac1b210509727d387",
+      "exact_reconstruction_verified": true,
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/parallel_routes_20261009/05_sources/task.txt"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/06_gaps/report.md",
+      "action": "keep_correction",
+      "reason": "七行文稿是明确撤回旧无证据结论的更正入口，含撤回边界与当前核验链接；保留可防止旧报告继续被当作事实，不是被撤回报告的正文。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/06_gaps/report.md",
+          "start": 1,
+          "end": 7
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 772,
+      "sha256": "cd04638e300ff05412c8e542b37e8075367fe49362eee8bad2323f2f98e5b6ca"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/06_gaps/task.txt",
+      "action": "delete_candidate",
+      "reason": "纯派发提示，已用保留的 run.py 中 COMMON、TASKS 及第24行拼接规则逐字重建并确认完全一致；没有独有研究信息。原始 JSON、报告、脚本和实测记录均保留。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/06_gaps/task.txt",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/run.py",
+          "start": 10,
+          "end": 25
+        }
+      ],
+      "has_unique_information": false,
+      "has_unique_research_evidence": false,
+      "size_bytes": 2341,
+      "sha256": "ab485919dcbccebcccaf9db17a385cff445f5a3f2b7a192c1091ab75db400179",
+      "exact_reconstruction_verified": true,
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/parallel_routes_20261009/06_gaps/task.txt"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/Codex接收核验.md",
+      "action": "keep",
+      "reason": "含来源、验证方法、结果边界或更正；本轮只做文稿内容审计，不将保留判定视为其研究结论已重验。",
+      "evidence_lines": [
+        {
+          "path": "analysis/parallel_routes_20261009/Codex接收核验.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/Codex接收核验.md",
+          "start": 12,
+          "end": 12
+        },
+        {
+          "path": "analysis/parallel_routes_20261009/Codex接收核验.md",
+          "start": 18,
+          "end": 18
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 3458,
+      "sha256": "83a94c15a36b4e66008d0ce4a95f089483048a3ded29a8c05ed01e8bcd40313f"
+    },
+    {
+      "path": "analysis/partial_object_host_audit_20261010/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/partial_object_host_audit_20261010/结论.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/partial_object_host_audit_20261010/结论.md",
+          "start": 11,
+          "end": 11
+        },
+        {
+          "path": "analysis/partial_object_host_audit_20261010/结论.md",
+          "start": 13,
+          "end": 13
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1294,
+      "sha256": "9595e18c33d8dd7cae7400578ae2993d745c23f8ebdb583b47a5a8dae48610e7"
+    },
+    {
+      "path": "analysis/pastebin_mHG1T5Ph_20261011/agy_review/audit_report.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/pastebin_mHG1T5Ph_20261011/agy_review/audit_report.md",
+          "start": 4,
+          "end": 4
+        },
+        {
+          "path": "analysis/pastebin_mHG1T5Ph_20261011/agy_review/audit_report.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/pastebin_mHG1T5Ph_20261011/agy_review/audit_report.md",
+          "start": 25,
+          "end": 25
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 15431,
+      "sha256": "309424603d269959a29ba010f039b45ee297acc3fd19aff13efbe496b0d6bf0a"
+    },
+    {
+      "path": "analysis/pastebin_mHG1T5Ph_20261011/结论与可迁移路线.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/pastebin_mHG1T5Ph_20261011/结论与可迁移路线.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/pastebin_mHG1T5Ph_20261011/结论与可迁移路线.md",
+          "start": 15,
+          "end": 15
+        },
+        {
+          "path": "analysis/pastebin_mHG1T5Ph_20261011/结论与可迁移路线.md",
+          "start": 29,
+          "end": 29
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 9118,
+      "sha256": "c7e3c180317ddb0c994dbb6451009b07a243acdcc5aaeb240677f1e02b24df6e"
+    },
+    {
+      "path": "analysis/pasted_research_audit_20261011/核验结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/pasted_research_audit_20261011/核验结论.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/pasted_research_audit_20261011/核验结论.md",
+          "start": 13,
+          "end": 13
+        },
+        {
+          "path": "analysis/pasted_research_audit_20261011/核验结论.md",
+          "start": 14,
+          "end": 14
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2655,
+      "sha256": "4f2d2e57292c60586fc6160e39cfbb7edf954b8637e4f79fea0ea0a22f142925"
+    },
+    {
+      "path": "analysis/plaintext_region_audit_20261010/findings.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/plaintext_region_audit_20261010/findings.md",
+          "start": 3,
+          "end": 3
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 780,
+      "sha256": "04d6b34d610c40c2c1af55791871b3cf700529f35a49dba398723cd0f7cba801"
+    },
+    {
+      "path": "analysis/ptp_client/README.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/ptp_client/README.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/ptp_client/README.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/ptp_client/README.md",
+          "start": 13,
+          "end": 13
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2488,
+      "sha256": "b634582af1b9a87e92434f7d95a21395b858167cb0a7e548720e1cee2ba4e00f"
+    },
+    {
+      "path": "analysis/ptp_parameter_api_20261010/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/ptp_parameter_api_20261010/结论.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/ptp_parameter_api_20261010/结论.md",
+          "start": 10,
+          "end": 10
+        },
+        {
+          "path": "analysis/ptp_parameter_api_20261010/结论.md",
+          "start": 11,
+          "end": 11
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 3143,
+      "sha256": "e6a69d2c0b3354afc3e5cb13edf1e494b3d60d5817e873cb84b51d3b02d38071"
+    },
+    {
+      "path": "analysis/ptp_verification_pack_review_20261010/review.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/ptp_verification_pack_review_20261010/review.md",
+          "start": 5,
+          "end": 5
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1675,
+      "sha256": "5abc866be75d8f59caa7ca6678049bbaad7a07a8a2a35433499f4a506f9976be"
+    },
+    {
+      "path": "analysis/s1m2_lut_config_tool_20261012/工具说明与进度.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/s1m2_lut_config_tool_20261012/工具说明与进度.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/s1m2_lut_config_tool_20261012/工具说明与进度.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/s1m2_lut_config_tool_20261012/工具说明与进度.md",
+          "start": 11,
+          "end": 11
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1958,
+      "sha256": "13414922476e618b9098df0bd40783f60367fed3af23cb335ac04e003768319e"
+    },
+    {
+      "path": "analysis/s5_delivery_review_20261010/评审结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/s5_delivery_review_20261010/评审结论.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/s5_delivery_review_20261010/评审结论.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/s5_delivery_review_20261010/评审结论.md",
+          "start": 9,
+          "end": 9
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 5083,
+      "sha256": "2e7a95079396ef0c7a843707f54dcfa20d12bc4fcbffeb07fada0f14bc171b1a"
+    },
+    {
+      "path": "analysis/sync_connection_extract_20261012/连接逻辑核验.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/sync_connection_extract_20261012/连接逻辑核验.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/sync_connection_extract_20261012/连接逻辑核验.md",
+          "start": 11,
+          "end": 11
+        },
+        {
+          "path": "analysis/sync_connection_extract_20261012/连接逻辑核验.md",
+          "start": 13,
+          "end": 13
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2795,
+      "sha256": "4173ee70db91fec6fab4f8f6e6799c2d33837e94f54585add82e5551c3a79f2a"
+    },
+    {
+      "path": "analysis/system_reverse_mainline_20261012/主线重设.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/system_reverse_mainline_20261012/主线重设.md",
+          "start": 13,
+          "end": 13
+        },
+        {
+          "path": "analysis/system_reverse_mainline_20261012/主线重设.md",
+          "start": 17,
+          "end": 17
+        },
+        {
+          "path": "analysis/system_reverse_mainline_20261012/主线重设.md",
+          "start": 19,
+          "end": 19
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2968,
+      "sha256": "8a40279928244f46a6b51a2821d53eecdbd42e13f43d44a7766a14212801afcb"
+    },
+    {
+      "path": "analysis/tether_opcode_inventory_20261010/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/tether_opcode_inventory_20261010/结论.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/tether_opcode_inventory_20261010/结论.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/tether_opcode_inventory_20261010/结论.md",
+          "start": 9,
+          "end": 9
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1010,
+      "sha256": "9b5413e10f5f7d29315641c07b8d896d3fc35399a36c5db3634e19880d46c7f5"
+    },
+    {
+      "path": "analysis/transition_corpus_20261011/进度与证据.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/transition_corpus_20261011/进度与证据.md",
+          "start": 15,
+          "end": 15
+        },
+        {
+          "path": "analysis/transition_corpus_20261011/进度与证据.md",
+          "start": 22,
+          "end": 22
+        },
+        {
+          "path": "analysis/transition_corpus_20261011/进度与证据.md",
+          "start": 26,
+          "end": 26
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 3142,
+      "sha256": "b7f947ff4021246ef2a9ddcb98fec3c5b7c8219ab5f933481353def7cc90ec5c"
+    },
+    {
+      "path": "analysis/ultra_agy_old_image_20261011/Codex复核入口.md",
+      "action": "keep",
+      "reason": "包含真实消费者、阴性覆盖、独立纠错或原始外部报告；应保留研究证据与其使用边界。",
+      "evidence_lines": [
+        {
+          "path": "analysis/ultra_agy_old_image_20261011/Codex复核入口.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/ultra_agy_old_image_20261011/Codex复核入口.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/ultra_agy_old_image_20261011/Codex复核入口.md",
+          "start": 8,
+          "end": 8
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1675,
+      "sha256": "a1aedc7da38cda81ac3bc6f232f7904737a421d04601c8a37104a3c1a4d04362"
+    },
+    {
+      "path": "analysis/ultra_agy_old_image_20261011/old_image_static_clue_inventory.md",
+      "action": "keep_retracted_original",
+      "reason": "虽然部分确定性结论已撤回，Codex复核入口第5行明确将本目录 Markdown/JSON/生成器保留为原始外部产物；应保留用于追溯纠错，不能把整份原稿作为当前结论。",
+      "evidence_lines": [
+        {
+          "path": "analysis/ultra_agy_old_image_20261011/old_image_static_clue_inventory.md",
+          "start": 138,
+          "end": 180
+        },
+        {
+          "path": "analysis/ultra_agy_old_image_20261011/Codex复核入口.md",
+          "start": 5,
+          "end": 15
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": false,
+      "size_bytes": 18217,
+      "sha256": "46f9026f23e88997dec7631b5ee94058441b794fd16df1dc11bee67541d1070f"
+    },
+    {
+      "path": "analysis/ultra_crypto_audit_20261011/审计结论.md",
+      "action": "keep",
+      "reason": "包含真实消费者、阴性覆盖、独立纠错或原始外部报告；应保留研究证据与其使用边界。",
+      "evidence_lines": [
+        {
+          "path": "analysis/ultra_crypto_audit_20261011/审计结论.md",
+          "start": 4,
+          "end": 4
+        },
+        {
+          "path": "analysis/ultra_crypto_audit_20261011/审计结论.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/ultra_crypto_audit_20261011/审计结论.md",
+          "start": 6,
+          "end": 6
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1475,
+      "sha256": "a376a4abeb62f219b83b8ccd7900adc0a959c1faf303cc771bd598e661a3dbeb"
+    },
+    {
+      "path": "analysis/ultra_key_claim_audit_20261011/文档审计与公式复核.md",
+      "action": "keep",
+      "reason": "包含真实消费者、阴性覆盖、独立纠错或原始外部报告；应保留研究证据与其使用边界。",
+      "evidence_lines": [
+        {
+          "path": "analysis/ultra_key_claim_audit_20261011/文档审计与公式复核.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/ultra_key_claim_audit_20261011/文档审计与公式复核.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/ultra_key_claim_audit_20261011/文档审计与公式复核.md",
+          "start": 11,
+          "end": 11
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 10326,
+      "sha256": "5a5f593b1aed1078fa71fd42dd93f92bcda81cede0f37df01017808a25d2eb52"
+    },
+    {
+      "path": "analysis/ultra_legacy_closure_20261011/旧固件真实解码链闭合报告.md",
+      "action": "keep",
+      "reason": "包含真实消费者、阴性覆盖、独立纠错或原始外部报告；应保留研究证据与其使用边界。",
+      "evidence_lines": [
+        {
+          "path": "analysis/ultra_legacy_closure_20261011/旧固件真实解码链闭合报告.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/ultra_legacy_closure_20261011/旧固件真实解码链闭合报告.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/ultra_legacy_closure_20261011/旧固件真实解码链闭合报告.md",
+          "start": 9,
+          "end": 9
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 12016,
+      "sha256": "4ca09184beb8e0df5c1bcf943c84375ca6f13527a68206b17806e90f812897ee"
+    },
+    {
+      "path": "analysis/ultra_method0_consumer_verify_20261011/consumer_verification_report.md",
+      "action": "keep",
+      "reason": "包含真实消费者、阴性覆盖、独立纠错或原始外部报告；应保留研究证据与其使用边界。",
+      "evidence_lines": [
+        {
+          "path": "analysis/ultra_method0_consumer_verify_20261011/consumer_verification_report.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/ultra_method0_consumer_verify_20261011/consumer_verification_report.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/ultra_method0_consumer_verify_20261011/consumer_verification_report.md",
+          "start": 11,
+          "end": 11
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 7419,
+      "sha256": "40cd674056194b46ec9d46d2ae322d605c7219b89d60b44d080e979e051ca8a5"
+    },
+    {
+      "path": "analysis/ultra_tether_update_consumer_20261011/证据.md",
+      "action": "keep",
+      "reason": "包含真实消费者、阴性覆盖、独立纠错或原始外部报告；应保留研究证据与其使用边界。",
+      "evidence_lines": [
+        {
+          "path": "analysis/ultra_tether_update_consumer_20261011/证据.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/ultra_tether_update_consumer_20261011/证据.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/ultra_tether_update_consumer_20261011/证据.md",
+          "start": 9,
+          "end": 9
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 3357,
+      "sha256": "df22d7091595b97d8c5acb300d8bf9fb142519a9e2966b7f371fc11031e765e5"
+    },
+    {
+      "path": "analysis/unpacked/README.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/unpacked/README.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/unpacked/README.md",
+          "start": 8,
+          "end": 8
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2038,
+      "sha256": "6021b71483a4375de816e928cdbaac71807f86098802f00e5e8a74122e562837"
+    },
+    {
+      "path": "analysis/usb_lut_direct_20261012/USB路径核验.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/usb_lut_direct_20261012/USB路径核验.md",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "path": "analysis/usb_lut_direct_20261012/USB路径核验.md",
+          "start": 11,
+          "end": 11
+        },
+        {
+          "path": "analysis/usb_lut_direct_20261012/USB路径核验.md",
+          "start": 15,
+          "end": 15
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 2564,
+      "sha256": "79a7535ae7f9e3e7d201666614ad841eb915f9c9a1d8206fb71d184280923dfd"
+    },
+    {
+      "path": "analysis/usb_lut_direct_20261012/拍摄对照步骤.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/usb_lut_direct_20261012/拍摄对照步骤.md",
+          "start": 9,
+          "end": 9
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1360,
+      "sha256": "e3e92c0e94df3f4f5565412e609f417dfbcf70fb0d30ae6a6673ea4980aceffc"
+    },
+    {
+      "path": "analysis/usb_video_paired_20261012/采集报告.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/usb_video_paired_20261012/采集报告.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/usb_video_paired_20261012/采集报告.md",
+          "start": 13,
+          "end": 13
+        },
+        {
+          "path": "analysis/usb_video_paired_20261012/采集报告.md",
+          "start": 17,
+          "end": 17
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 1719,
+      "sha256": "1263da6fc10982ff90c6e8a7a58b1462a4b2364cf6d5922076f4fd7f56171b6b"
+    },
+    {
+      "path": "analysis/video_quality_consumer_20261011/报告.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/video_quality_consumer_20261011/报告.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/video_quality_consumer_20261011/报告.md",
+          "start": 9,
+          "end": 9
+        },
+        {
+          "path": "analysis/video_quality_consumer_20261011/报告.md",
+          "start": 11,
+          "end": 11
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 7690,
+      "sha256": "341097ab826a5bcb74b4345a8ba75d28f38da9778000b9e50850fb484280c8b2"
+    },
+    {
+      "path": "analysis/vuln_hunt_20261010/松下漏洞初筛_20261010.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/vuln_hunt_20261010/松下漏洞初筛_20261010.md",
+          "start": 4,
+          "end": 4
+        },
+        {
+          "path": "analysis/vuln_hunt_20261010/松下漏洞初筛_20261010.md",
+          "start": 11,
+          "end": 11
+        },
+        {
+          "path": "analysis/vuln_hunt_20261010/松下漏洞初筛_20261010.md",
+          "start": 24,
+          "end": 24
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 5379,
+      "sha256": "4a73cb382d34232f2842dc8c37fef0b9bed8bd62d7a6e9582fd72ea9296cd7c8"
+    },
+    {
+      "path": "analysis/windows_only_exports_audit_20261010/结论.md",
+      "action": "keep",
+      "reason": "含本项目的来源定位、具体采集/解析方法、数值结果、阴性范围、工具说明或更正背景；无需为清理而删除。这里只判断文稿信息价值，未重新执行研究测试。",
+      "evidence_lines": [
+        {
+          "path": "analysis/windows_only_exports_audit_20261010/结论.md",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "path": "analysis/windows_only_exports_audit_20261010/结论.md",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "path": "analysis/windows_only_exports_audit_20261010/结论.md",
+          "start": 12,
+          "end": 12
+        }
+      ],
+      "has_unique_information": true,
+      "has_unique_research_evidence": true,
+      "size_bytes": 3201,
+      "sha256": "8ac5f32715b4bbad7eb5783a17a1fca993f05533d00ebbdebd80bd3bddf7c049"
+    }
+  ],
+  "memory_note": {
+    "used": "MEMORY.md:242-246 supplied historical delegation context; all deletion recommendations were based on current files",
+    "rollout_id": "01a12d24-f8f8-7323-b85b-f68e1a2b0397"
+  },
+  "delete_candidates": [
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/01_new_consumer/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/01_new_consumer/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/02_format_transition/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/02_format_transition/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/03_cross_model/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/03_cross_model/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/04_boot_producer/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/04_boot_producer/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/05_update_state/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/05_update_state/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/06_service_reads/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/06_service_reads/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/07_video_diff/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/07_video_diff/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/08_app_params/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/08_app_params/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/09_config_format/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/09_config_format/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/10_lut_storage/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/10_lut_storage/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/11_hdr_frames/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/11_hdr_frames/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/12_sound_resource/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/12_sound_resource/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/13_protection_semantics/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/13_protection_semantics/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/14_oss_artifacts/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/14_oss_artifacts/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/15_hardware_plan/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/15_hardware_plan/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/16_adversarial/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/16_adversarial/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/任务总览.md",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_breakthrough_batch_20261011/任务总览.md"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/01_diff_review/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/01_diff_review/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/02_modern_consumer/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/02_modern_consumer/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/03_small_loader/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/03_small_loader/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/04_legacy_versions/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/04_legacy_versions/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/05_boot_producer/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/05_boot_producer/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/06_lab_control/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/06_lab_control/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/07_lab_bluetooth/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/07_lab_bluetooth/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/08_lab_preview/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/08_lab_preview/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/09_tether_wireless/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/09_tether_wireless/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/10_video_filter/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/10_video_filter/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/11_config_lut/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/11_config_lut/prompt.txt"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/12_handoff/prompt.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/agy_takeover_20261012/12_handoff/prompt.txt"
+    },
+    {
+      "path": "analysis/ai_handoff_20261010/全部文件索引.md",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/ai_handoff_20261010/全部文件索引.md"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/01_container/task.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/parallel_routes_20261009/01_container/task.txt"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/02_host/task.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/parallel_routes_20261009/02_host/task.txt"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/03_flow/task.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/parallel_routes_20261009/03_flow/task.txt"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/04_backup/task.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/parallel_routes_20261009/04_backup/task.txt"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/05_sources/task.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/parallel_routes_20261009/05_sources/task.txt"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/06_gaps/task.txt",
+      "suggested_recovery_path": "analysis/workspace_cleanup_20261012/removed_docs/analysis/parallel_routes_20261009/06_gaps/task.txt"
+    }
+  ],
+  "recovery_note": "suggested_recovery_path is a proposed preservation location only. This agent created no backup or move; root should use its actual cleanup manifest and recovery location."
+}

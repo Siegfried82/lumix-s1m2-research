@@ -1,0 +1,1603 @@
+[
+  {
+    "file": "GH3__V12.bin",
+    "sha256": "74bbf6129350a636bcfbf3319ade22fa6860f709570ae6365ba19064ad6488f4",
+    "identifier": "GH3",
+    "components": [
+      {
+        "index": 0,
+        "name": "program",
+        "offset": 1536,
+        "size": 5505024,
+        "flags": 3,
+        "stored_hash": "d4ecdbcbdb5300ae6825cd82af0eef90500629b2a1a904afafe3d7948c40e9d6",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 1,
+        "name": "guires",
+        "offset": 5506560,
+        "size": 11010048,
+        "flags": 3,
+        "stored_hash": "db7cc05bd240eed422c838cfc956078976abce4f9b82231bb99746a9c76dff61",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 2,
+        "name": "program2",
+        "offset": 16516608,
+        "size": 4325376,
+        "flags": 3,
+        "stored_hash": "85ec5b294b878711d55e3dcc633d3940d68f14d491d701b4a2579d7023b1ad9e",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 3,
+        "name": "net",
+        "offset": 20841984,
+        "size": 1703936,
+        "flags": 3,
+        "stored_hash": "c085d53f6b2a34b4ed069752ba6e7604076c63c541466f83bfd7cbfd26e42abd",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 4,
+        "name": "other",
+        "offset": 22545920,
+        "size": 3670016,
+        "flags": 3,
+        "stored_hash": "0c774a853ea6757a1bff2244bf5675123ad7c54354ef4c50aa06572b8a306c84",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 5,
+        "name": "eep",
+        "offset": 26215936,
+        "size": 393216,
+        "flags": 3,
+        "stored_hash": "fc04b2bd773ed416182bd025e9053ceaa8782499fc556a1c79e97e89d3b4b1ee",
+        "raw_hash_matches": false
+      }
+    ]
+  },
+  {
+    "file": "GH4__V27.bin",
+    "sha256": "e75fb8237ff2de4d1e8d970de8eb8e563e9756939b3320849f1c9017f4d956c0",
+    "identifier": "GH4",
+    "components": [
+      {
+        "index": 0,
+        "name": "loader1",
+        "offset": 2560,
+        "size": 4096,
+        "flags": 3,
+        "stored_hash": "a13ebd44523a398246cd6357df5ec77786d20807c74f1b0f14a055455aaca9bf",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 1,
+        "name": "loader2",
+        "offset": 6656,
+        "size": 32768,
+        "flags": 3,
+        "stored_hash": "e1ceaa8ef92b189153d75b5b738b8f43792422a4e2243e89689ca795f50d7528",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 2,
+        "name": "loader3",
+        "offset": 39424,
+        "size": 40960,
+        "flags": 3,
+        "stored_hash": "cb892b70cd0ae77ea21850a93f79ccc8f1bf326acbcac737e51dc52101cafcfc",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 3,
+        "name": "dram_sleep",
+        "offset": 80384,
+        "size": 6144,
+        "flags": 3,
+        "stored_hash": "0becdcaf4a2f6778c6fbb02f0d209bfa1d79f3daab0139d07151ca49c40b38cd",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 4,
+        "name": "program",
+        "offset": 86528,
+        "size": 8388608,
+        "flags": 3,
+        "stored_hash": "d6390ddfa8649cee01b2c79ccc383db50b20bf50809b2aef9529485495db1f40",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 5,
+        "name": "postboot1",
+        "offset": 8475136,
+        "size": 4325376,
+        "flags": 3,
+        "stored_hash": "1bdb65bcb565b15f902623646fd31f0da84054a37de18a417ad1ffe47ed61d1d",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 6,
+        "name": "postboot2",
+        "offset": 12800512,
+        "size": 6422528,
+        "flags": 3,
+        "stored_hash": "ac7228c44c8c90508188fc1af668e065c0a18282145dfa172d10e1ba01ea26e4",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 7,
+        "name": "postboot3",
+        "offset": 19223040,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "6b645b669eb37c348b75e371d65bd7f43e3e740cecd3c2b95c47e027423352dc",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 8,
+        "name": "postboot4",
+        "offset": 19354112,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "bfcd987039d168695d279169c919faf41205f9123c9fcc348dad10b26bb17938",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 9,
+        "name": "postboot5",
+        "offset": 19485184,
+        "size": 1703936,
+        "flags": 3,
+        "stored_hash": "9bb07184ef3cc012bf5a8d28ed2ab5e4d5c1c1d388fd230fbcdb20f8e1509b84",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 10,
+        "name": "osddata",
+        "offset": 21189120,
+        "size": 7340032,
+        "flags": 3,
+        "stored_hash": "31827902caba13e58a2cdcdd06bcb9b08ec6b81f0aba4fd3fc04528d105dcb06",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 11,
+        "name": "overlaydata",
+        "offset": 28529152,
+        "size": 4587520,
+        "flags": 3,
+        "stored_hash": "f4e7f8e930089cb1eef515656b4016a38fff7a462cb94154fc9d25f29b306a18",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 12,
+        "name": "koutei_kao",
+        "offset": 33116672,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "64ca950b7449373e473006a767d6457a64890167c1db829281618c1ba099e66a",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 13,
+        "name": "music",
+        "offset": 33247744,
+        "size": 3538944,
+        "flags": 3,
+        "stored_hash": "5dcc34ae10f9d7be2150752d7fbf4e7bae58d585ea3b3eeff93e985cf557c723",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 14,
+        "name": "eep_activate",
+        "offset": 36786688,
+        "size": 1024,
+        "flags": 3,
+        "stored_hash": "f05497f08ed2b621f66e5ec23d9489e69a69829c97e91a53d9c3115146d00dd5",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 15,
+        "name": "eep_ow_a",
+        "offset": 36787712,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "ca53fd1e6d40089c0b740b9f0038837df5958809fd7dcbba9bb06b7671faf267",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 16,
+        "name": "eep_ow_b",
+        "offset": 36918784,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "ca53fd1e6d40089c0b740b9f0038837df5958809fd7dcbba9bb06b7671faf267",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 17,
+        "name": "eep_adjfix",
+        "offset": 37049856,
+        "size": 49152,
+        "flags": 3,
+        "stored_hash": "0db552e29510e454d62e1c8b9290ec443944d0072efbb73a5fa6c8b623f5463d",
+        "raw_hash_matches": false
+      }
+    ]
+  },
+  {
+    "file": "S1m2_V14.bin",
+    "sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+    "identifier": "MC8243",
+    "components": [
+      {
+        "index": 0,
+        "name": "boot",
+        "offset": 6656,
+        "size": 0,
+        "flags": 2,
+        "stored_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 1,
+        "name": "loader1",
+        "offset": 6656,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "21d10affd6daecdf80de04f77668d886eea712d25a5add2d15c9347103cdd69a",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 2,
+        "name": "loader2",
+        "offset": 137728,
+        "size": 0,
+        "flags": 2,
+        "stored_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 3,
+        "name": "loader3",
+        "offset": 137728,
+        "size": 0,
+        "flags": 2,
+        "stored_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 4,
+        "name": "storage",
+        "offset": 137728,
+        "size": 0,
+        "flags": 2,
+        "stored_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 5,
+        "name": "program",
+        "offset": 137728,
+        "size": 46923776,
+        "flags": 3,
+        "stored_hash": "003209de63fb3e9c0f576493d5c49cf4dacfc9c6acd53ba19234d4e62a8c833d",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 6,
+        "name": "compress_pr",
+        "offset": 47061504,
+        "size": 16777216,
+        "flags": 3,
+        "stored_hash": "5950f6f252d6f9564b48eaa792ce78230ea79d94decf15bedf2cb70c62ea0ad8",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 7,
+        "name": "postboot1_r",
+        "offset": 63838720,
+        "size": 6946816,
+        "flags": 3,
+        "stored_hash": "b7875162f8742b9a3299c50e8b393e6db335cb680d11d2fffbeb4d4b4e7d735e",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 8,
+        "name": "postboot2_r",
+        "offset": 70785536,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 9,
+        "name": "postboot3_r",
+        "offset": 70916608,
+        "size": 8257536,
+        "flags": 3,
+        "stored_hash": "420f788e4c5ce87c23788488874b19ab5b9f53708a0d0b14a2a03bce7f4428d7",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 10,
+        "name": "postboot4_r",
+        "offset": 79174144,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 11,
+        "name": "postboot5_r",
+        "offset": 79305216,
+        "size": 1835008,
+        "flags": 3,
+        "stored_hash": "d3804bfd0adb49abb890624bd19511de0f3c5d669cd0124cf787d94aeadc4db3",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 12,
+        "name": "postboot1_r",
+        "offset": 81140224,
+        "size": 1966080,
+        "flags": 3,
+        "stored_hash": "46f93767396f9f3c9e6ed7fba89b2bd3712981841a89c5e772d062accb6709a2",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 13,
+        "name": "postboot3_r",
+        "offset": 83106304,
+        "size": 3670016,
+        "flags": 3,
+        "stored_hash": "ad317834535584b3d6783ef2d6c92e3d947d3714f80b19724480ded35e35a4dd",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 14,
+        "name": "postboot5_r",
+        "offset": 86776320,
+        "size": 1835008,
+        "flags": 3,
+        "stored_hash": "3324448ab97232891a1fdac4d4bda85c91225f2d0a11e022db5bf485ca0210cd",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 15,
+        "name": "eep_ow_a",
+        "offset": 88611328,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "76195964ec78a7be2d236799ad0d6143cf9a252e28d1f0f6982b08c5d4453d82",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 16,
+        "name": "eep_ow_b",
+        "offset": 88742400,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "76195964ec78a7be2d236799ad0d6143cf9a252e28d1f0f6982b08c5d4453d82",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 17,
+        "name": "eep_adj",
+        "offset": 88873472,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "4745676d29601cdc2735dfda94825e1843be529b37dc4ae5e47408564f95440e",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 18,
+        "name": "eep_fix",
+        "offset": 89004544,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "f6775429e901548a6091aa2c00e4e966f231feece1d65a5022e48cb7bee9b4a6",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 19,
+        "name": "eep_act_a",
+        "offset": 89135616,
+        "size": 512,
+        "flags": 3,
+        "stored_hash": "3bdcb4d0d03318c64c76be1f413395e666aec061f62236ebe6f757cac84a88d0",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 20,
+        "name": "eep_act_b",
+        "offset": 89136128,
+        "size": 512,
+        "flags": 3,
+        "stored_hash": "3bdcb4d0d03318c64c76be1f413395e666aec061f62236ebe6f757cac84a88d0",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 21,
+        "name": "eep_exp_a",
+        "offset": 89136640,
+        "size": 12288,
+        "flags": 3,
+        "stored_hash": "9eb84b8d7df42801a6038c54bdf91a750f8397bdd387e2ad7518ccf466659b12",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 22,
+        "name": "eep_exp_b",
+        "offset": 89148928,
+        "size": 12288,
+        "flags": 3,
+        "stored_hash": "9eb84b8d7df42801a6038c54bdf91a750f8397bdd387e2ad7518ccf466659b12",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 23,
+        "name": "history",
+        "offset": 89161216,
+        "size": 262144,
+        "flags": 3,
+        "stored_hash": "b52fe951cf1c915661f8c2d5735fcd408284771260720143babb26487ba56997",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 24,
+        "name": "lens_hist",
+        "offset": 89423360,
+        "size": 393216,
+        "flags": 2,
+        "stored_hash": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 25,
+        "name": "osdover",
+        "offset": 89816576,
+        "size": 17301504,
+        "flags": 3,
+        "stored_hash": "0543fe7d2ee7b860b6595c3dd904791f22e38f00d879082e73394c76a84a539b",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 26,
+        "name": "osddata",
+        "offset": 107118080,
+        "size": 20316160,
+        "flags": 3,
+        "stored_hash": "3bcdf16b90859eae8dbfe47a4e29a3fc192641172bdc15a2c1da43ffe9731bf9",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 27,
+        "name": "wifi_info",
+        "offset": 127434240,
+        "size": 262144,
+        "flags": 2,
+        "stored_hash": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 28,
+        "name": "menu_save",
+        "offset": 127696384,
+        "size": 524288,
+        "flags": 2,
+        "stored_hash": "043e238a765f7cfbc62596a50e53c8ffb6b188a99357b0ebede251725d67589f",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 29,
+        "name": "kizu_data",
+        "offset": 128220672,
+        "size": 524288,
+        "flags": 2,
+        "stored_hash": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 30,
+        "name": "vkizu_data",
+        "offset": 128744960,
+        "size": 9437184,
+        "flags": 2,
+        "stored_hash": "d2ee4703cd9698945ca7b9fe1689ea3095597eac1a0afd8dba00cac7894fdc43",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 31,
+        "name": "usbcharge",
+        "offset": 138182144,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "f9c25ad715ad999dfdff93ea0aa9df1e7046d6cfe801f9691ed87cd2117c039f",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 32,
+        "name": "hm_c_ddr",
+        "offset": 138313216,
+        "size": 3145728,
+        "flags": 3,
+        "stored_hash": "b26f3b3d07c411f1b7e641b03aec415f8ae2068edd8746b8ac71d50db143415f",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 33,
+        "name": "hm_d_ddr",
+        "offset": 141458944,
+        "size": 1048576,
+        "flags": 3,
+        "stored_hash": "e9688a52f4371814874321f244516d809d36d8fa16f1895b26a6e0224de734e2",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 34,
+        "name": "hr_c_prog",
+        "offset": 142507520,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "1113b321c41da183c03c5d1ee30821866ce08da21ceace6d580c193a725fe155",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 35,
+        "name": "hr_d_prog",
+        "offset": 142573056,
+        "size": 524288,
+        "flags": 3,
+        "stored_hash": "a4ae6ba5841a0010fcecec944241d92ac6da9211d0add29c7013dbdd77b9eedf",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 36,
+        "name": "hr_c_ddr",
+        "offset": 143097344,
+        "size": 524288,
+        "flags": 3,
+        "stored_hash": "3ea537dbd868076d77178bfff28dda41cb928e102822c0b37be9d4b03d15c961",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 37,
+        "name": "pzm_data",
+        "offset": 143621632,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "c197c49bd583974d8d2c603c7948fb585a3a3f9b7374d0c6086d69069ec61841",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 38,
+        "name": "xtk",
+        "offset": 143687168,
+        "size": 131072,
+        "flags": 2,
+        "stored_hash": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 39,
+        "name": "lut_data",
+        "offset": 143818240,
+        "size": 8781824,
+        "flags": 2,
+        "stored_hash": "6217bc4155fa384f23c6e11e7823877d36d13419e7941b5bcd25ed8e9d4644ee",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 40,
+        "name": "dsp_kizu_c",
+        "offset": 152600064,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "abfd6d9ae6df5b822b1450f56161314ee492bc445455059099dd534b53f12a5d",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 41,
+        "name": "dsp_kizu_d",
+        "offset": 152665600,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "d9ffe60b68d04269ee8143bd44cbebc4c71eac3dd7f2c12bc6554d894a4e74cc",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 42,
+        "name": "dsp_eisldc_",
+        "offset": 152731136,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "0d52acea6d42bd3c3f9e66422b98f1727624f4e8d0299b5554a33841f09315b9",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 43,
+        "name": "dsp_eisldc_",
+        "offset": 152796672,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "8a57a408cf530cb36a8da727292474a8370fbc03af9dcb9478be942b9338ecca",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 44,
+        "name": "dsp_fstack_",
+        "offset": 152862208,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "9117dc91098d94a3101e34af91ece7fc4275d0525a9cadf74637069280f26288",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 45,
+        "name": "dsp_fstack_",
+        "offset": 152927744,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "e27f690c862e3c0670eff9dac8ae453daa7d862f8410f02c63823581556ca255",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 46,
+        "name": "fstack_c_ex",
+        "offset": 152993280,
+        "size": 524288,
+        "flags": 3,
+        "stored_hash": "f9fd57c04680561a4d6005fabe1839a50912eae965ab46de7ff9ec7f89df3364",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 47,
+        "name": "raw_kizu_c",
+        "offset": 153517568,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "94c99fcab59d51acd69b63fcc1425501e0c880d5ffa9e931e5e5f34cc6a8a848",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 48,
+        "name": "raw_kizu_d",
+        "offset": 153583104,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "46c0ce00573d86c6aa7ba7f4116d794c3083e51a9cdfdeb4bebd6b612b0feb3e",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 49,
+        "name": "dsh_adj",
+        "offset": 153648640,
+        "size": 131072,
+        "flags": 2,
+        "stored_hash": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 50,
+        "name": "hm_d_nw_1st",
+        "offset": 153779712,
+        "size": 1441792,
+        "flags": 3,
+        "stored_hash": "6f8c3c074542db9423d5ca3bc8d75f679d197255c57d00334d34697d2c532d6a",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 51,
+        "name": "hm_d_nw_2nd",
+        "offset": 155221504,
+        "size": 1441792,
+        "flags": 3,
+        "stored_hash": "2434108bf6e3d3c203a6ffcf6b073386da34fa2cd20c141bc46dd6de369af5d0",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 52,
+        "name": "hm_d_nw_3rd",
+        "offset": 156663296,
+        "size": 1441792,
+        "flags": 3,
+        "stored_hash": "c564b2416df3b9560ca65cf3ca37e9043a94046b07965365f98d9638bd98c0c2",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 53,
+        "name": "hm_d_nw_4th",
+        "offset": 158105088,
+        "size": 1441792,
+        "flags": 3,
+        "stored_hash": "c999927b02641d75d48ec4520b9eb3aa5360ac2d13950e09b6e7cf41e15a90ca",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 54,
+        "name": "hm_d_nw_5th",
+        "offset": 159546880,
+        "size": 1441792,
+        "flags": 3,
+        "stored_hash": "0b65f1777fdcce85febd39bfb5ea2f4024e272357aa949ead329b9e9e5aebce8",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 55,
+        "name": "hm_d_nw_6th",
+        "offset": 160988672,
+        "size": 1441792,
+        "flags": 3,
+        "stored_hash": "307dceee9b047ab5649eafbe82eb16709730d794c36c3a2205ceb505a848758b",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 56,
+        "name": "hm_d_nw_7th",
+        "offset": 162430464,
+        "size": 1441792,
+        "flags": 3,
+        "stored_hash": "8ee84bc7b9e35db690471c938e4f95892c580004da5bb7d8c456c52b99ec2934",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 57,
+        "name": "hm_d_nw_8th",
+        "offset": 163872256,
+        "size": 1441792,
+        "flags": 3,
+        "stored_hash": "6e8752e886e71284db14556b910232587db4f15f6f7e08c80c0e43521a76188c",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 58,
+        "name": "hm_d_nw_9th",
+        "offset": 165314048,
+        "size": 1441792,
+        "flags": 3,
+        "stored_hash": "c4465a9d31f2faf6733d0bc84fef1e509d91f0166ca722809cdf7d4a73389b8d",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 59,
+        "name": "hm_d_reid",
+        "offset": 166755840,
+        "size": 3145728,
+        "flags": 3,
+        "stored_hash": "583bc02d84e5cb96e2d25b89bacaeedb4094d01ab828462578d42c6b9bf8febf",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 60,
+        "name": "ai_awb_data",
+        "offset": 169901568,
+        "size": 1835008,
+        "flags": 3,
+        "stored_hash": "484b90a2c7b798fc71f4155447be7bdae3d5471f5d3a40b7c9bcef595fa13bb3",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 61,
+        "name": "mbr_dummy_d",
+        "offset": 171736576,
+        "size": 131072,
+        "flags": 2,
+        "stored_hash": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "raw_hash_matches": true
+      }
+    ]
+  },
+  {
+    "file": "GH5__V28.bin",
+    "sha256": "1c7e7538aea0a0009f17be56374b92ab1f77a29d271446ddd771bd5b14bc4442",
+    "identifier": "MC561",
+    "components": [
+      {
+        "index": 0,
+        "name": "loader1",
+        "offset": 4608,
+        "size": 4096,
+        "flags": 3,
+        "stored_hash": "4913f493636ed435d185ca3e5bea7a49eec28195606c99845d38ec68d91ccc5b",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 1,
+        "name": "loader2",
+        "offset": 8704,
+        "size": 22528,
+        "flags": 3,
+        "stored_hash": "8f18fd6d9a5b22e1c06084f7064c5113a2765b62978752fcab0b52da702e9103",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 2,
+        "name": "loader3",
+        "offset": 31232,
+        "size": 49152,
+        "flags": 3,
+        "stored_hash": "cc522198f618e1db35449512eae441569fb7e2fb806561f81e35b89705149488",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 3,
+        "name": "program",
+        "offset": 80384,
+        "size": 10223616,
+        "flags": 3,
+        "stored_hash": "13dc8170a7941f7bcec488003dec88979376a398b81bf537252a5983397fb250",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 4,
+        "name": "storage",
+        "offset": 10304000,
+        "size": 0,
+        "flags": 2,
+        "stored_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 5,
+        "name": "postboot1",
+        "offset": 10304000,
+        "size": 4587520,
+        "flags": 3,
+        "stored_hash": "b8cce312ea4c1882afa70ea2b90d19fd56b25fc235de81dd0ea6575b4acd19a0",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 6,
+        "name": "postboot3",
+        "offset": 14891520,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "8482d8b75656d1345cf72347cd25b28199c01d893cebf0c4bba7c7cc153f0ebf",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 7,
+        "name": "postboot4",
+        "offset": 15022592,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "d1691ea2ecba8853aba9bc387a35d55528d58f8111c7dc42e30e5a0a5406694f",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 8,
+        "name": "postboot5",
+        "offset": 15153664,
+        "size": 786432,
+        "flags": 3,
+        "stored_hash": "e35ddd9fbbf129765ef18a8a942043f34eaac60d39172c819954a1670f20e1eb",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 9,
+        "name": "dram_sleep",
+        "offset": 15940096,
+        "size": 6144,
+        "flags": 3,
+        "stored_hash": "f14783a43185b08a7b7aa84dbf18942be255837fb2be2debdd64685a6a527973",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 10,
+        "name": "eep_ow_a",
+        "offset": 15946240,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "55ec239b211c8493780d1eb6edc0801a9774ee6ae96de2ed34a16c20be1a7b84",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 11,
+        "name": "eep_ow_b",
+        "offset": 16077312,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "55ec239b211c8493780d1eb6edc0801a9774ee6ae96de2ed34a16c20be1a7b84",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 12,
+        "name": "eep_adj",
+        "offset": 16208384,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "09568ec09d76be84d1079528ff3b1943d404fd7c5e11127424794e7af1dc97e9",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 13,
+        "name": "eep_fix",
+        "offset": 16339456,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "1e54b5d15a46d9840e020c5b8c3d4fe2221c94a588341d83b3df0964538fc614",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 14,
+        "name": "eep_act_a",
+        "offset": 16470528,
+        "size": 2048,
+        "flags": 3,
+        "stored_hash": "59aa79d1fdaa9ed58e3eb53b3bad24ca7301ad21fd2f967af4ec8a7c518ecf4a",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 15,
+        "name": "eep_act_b",
+        "offset": 16472576,
+        "size": 2048,
+        "flags": 3,
+        "stored_hash": "59aa79d1fdaa9ed58e3eb53b3bad24ca7301ad21fd2f967af4ec8a7c518ecf4a",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 16,
+        "name": "music",
+        "offset": 16474624,
+        "size": 3538944,
+        "flags": 3,
+        "stored_hash": "5dcc34ae10f9d7be2150752d7fbf4e7bae58d585ea3b3eeff93e985cf557c723",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 17,
+        "name": "osdover",
+        "offset": 20013568,
+        "size": 8388608,
+        "flags": 3,
+        "stored_hash": "3b9464fa1c43d4af7102db5ad678b287dd915cbfe2fd04eec432f2c48b26593c",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 18,
+        "name": "osddata",
+        "offset": 28402176,
+        "size": 9437184,
+        "flags": 3,
+        "stored_hash": "aab9ae303ab5ff6d93a08e61239c463c6f01b8cef9527317aa3f66c942058d14",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 19,
+        "name": "koutei_kao",
+        "offset": 37839360,
+        "size": 114688,
+        "flags": 3,
+        "stored_hash": "0fb19aef2e26fbb568abce93c300cb41b2754c6e309726c880fd11c2a1f7776d",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 20,
+        "name": "avchd_info",
+        "offset": 37954048,
+        "size": 16384,
+        "flags": 2,
+        "stored_hash": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 21,
+        "name": "eep_net_a",
+        "offset": 37970432,
+        "size": 131072,
+        "flags": 2,
+        "stored_hash": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 22,
+        "name": "eep_net_b",
+        "offset": 38101504,
+        "size": 131072,
+        "flags": 2,
+        "stored_hash": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 23,
+        "name": "zboot",
+        "offset": 38232576,
+        "size": 2048,
+        "flags": 3,
+        "stored_hash": "bee20cb8a85d855329a31b5612a3760fd035dd502f26472704fd91beb162ad8a",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 24,
+        "name": "dtb",
+        "offset": 38234624,
+        "size": 4096,
+        "flags": 3,
+        "stored_hash": "905e034d2e1ae1436450637368328e49d20832fade0cdadd39e553ba40f8e342",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 25,
+        "name": "zimage",
+        "offset": 38238720,
+        "size": 2621440,
+        "flags": 3,
+        "stored_hash": "3c408a0e01b007c8ba97f4bab6783ea6193b36097c5f632159a489cae3731dbd",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 26,
+        "name": "rootfs1",
+        "offset": 40860160,
+        "size": 4194304,
+        "flags": 3,
+        "stored_hash": "87ec618552857b08153785d929a92b155bd9be2c51b05981c8366c5fbce7f842",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 27,
+        "name": "rootfs2",
+        "offset": 45054464,
+        "size": 12582912,
+        "flags": 3,
+        "stored_hash": "116581d194da825e08daa6303549be65b837e68d3f6e4ddf0fd86ca9203adf47",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 28,
+        "name": "apu0_data_i",
+        "offset": 57637376,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "34ec85e534af284213771447b59f2987f0c7f53102c0f2a27084696a9d02ad56",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 29,
+        "name": "apu0_data_e",
+        "offset": 57768448,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "7b7dc8a105d75b778aeb580950fdd2fab9ad11a6db3ffd2841a9854cc49aaf68",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 30,
+        "name": "apu0_code_i",
+        "offset": 57899520,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "428299af9303b0816bf779f3f6f4092c2fffbdc9b2b2d585dec144238e785eb1",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 31,
+        "name": "apu0_code_e",
+        "offset": 57965056,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "71189f7fb6aed638640078fba3a35fda6c39c8962e74dcc75935aac948da9063",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 32,
+        "name": "ipu_data",
+        "offset": 58030592,
+        "size": 262144,
+        "flags": 3,
+        "stored_hash": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 33,
+        "name": "ipu_code",
+        "offset": 58292736,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "c8958782feff19752e0b81122b79f742d06d102343f08a2101fa4e8b1e2f572c",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 34,
+        "name": "rc_data",
+        "offset": 58358272,
+        "size": 262144,
+        "flags": 3,
+        "stored_hash": "736424438c98bbe9fde213cc237c09aff94003fa1b62bf39d80bf7a854eda718",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 35,
+        "name": "rc_code",
+        "offset": 58620416,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "fc306a4463c9784a2f8f7f16f473bacc6f75ae0f49a69357c8d6c2cd805918c2",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 36,
+        "name": "nr_data",
+        "offset": 58685952,
+        "size": 262144,
+        "flags": 3,
+        "stored_hash": "e235e38856489970ba0cff0a6128391b7e56aa0f13f65ca06d2f2ce9b96ac76a",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 37,
+        "name": "nr_code",
+        "offset": 58948096,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "2553aa1d7cc21e0750d81b0c671abbf361acd35d69d96b9d2f6ba47c52c434cf",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 38,
+        "name": "sound_data",
+        "offset": 59013632,
+        "size": 1630208,
+        "flags": 3,
+        "stored_hash": "21c722290a807ff30cbc585e1e9728e5f1b2b557ca72a67107ad940477f3c5f6",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 39,
+        "name": "postboot2",
+        "offset": 60643840,
+        "size": 7602176,
+        "flags": 3,
+        "stored_hash": "949fc37034dca433ea6964c8beeae033bccc21444bd6bd5e52428e7480587a58",
+        "raw_hash_matches": false
+      }
+    ]
+  },
+  {
+    "file": "S5___V28.bin",
+    "sha256": "44944f9bd0fc72b2d612f1acb714f735ca70cea58c2265ac60ec7fca08131939",
+    "identifier": "MC801",
+    "components": [
+      {
+        "index": 0,
+        "name": "loader1",
+        "offset": 5632,
+        "size": 4096,
+        "flags": 3,
+        "stored_hash": "e009d688fb152a70d90fb4df88705b29f441e3dc50c57e4ea1fddf1a49c19d32",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 1,
+        "name": "loader2",
+        "offset": 9728,
+        "size": 38912,
+        "flags": 3,
+        "stored_hash": "4a925f2e019310a9a8f2029df652cc7a5e93be5fb8ee4b6b29c6c6d3805cea85",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 2,
+        "name": "loader3",
+        "offset": 48640,
+        "size": 49152,
+        "flags": 3,
+        "stored_hash": "67d44d7c2bb2091b7a56ca5118345e0ee604e6b2c6c31769cd6de06ae752d838",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 3,
+        "name": "program",
+        "offset": 97792,
+        "size": 16674816,
+        "flags": 3,
+        "stored_hash": "ca861a324763f0292a6e6335dbfc94e0c1af0c87adf15ba618bdcb6cfd790a2b",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 4,
+        "name": "storage",
+        "offset": 16772608,
+        "size": 0,
+        "flags": 2,
+        "stored_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 5,
+        "name": "postboot1",
+        "offset": 16772608,
+        "size": 4718592,
+        "flags": 3,
+        "stored_hash": "9ad2ea55181d32ce7e3b3aab0a195dadf606ceb0e2d2ac01cf777e5e49995997",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 6,
+        "name": "postboot2",
+        "offset": 21491200,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "76a627dc813626668f242f3da0001e9c7df6cb6983a68093951b42d4b8a81284",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 7,
+        "name": "postboot3",
+        "offset": 21622272,
+        "size": 8257536,
+        "flags": 3,
+        "stored_hash": "d17c583efb0478dc90542a7145ce2cdab72e5cc6ca681c9684623039a22f3cd9",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 8,
+        "name": "postboot4",
+        "offset": 29879808,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "a328d5508102bdb141469c4b6a6dc84b584f14dfbc34cfde54d5837a4f42f444",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 9,
+        "name": "postboot5",
+        "offset": 30010880,
+        "size": 917504,
+        "flags": 3,
+        "stored_hash": "b7496aaf7a2aace817fd9350db54a2fc444f511445c731393dc716cf73038bbe",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 10,
+        "name": "dram_sleep",
+        "offset": 30928384,
+        "size": 6144,
+        "flags": 3,
+        "stored_hash": "d2bc9022b49fd9bfd908e5e95039604ab925d143b568ffc2964ed0355681bbee",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 11,
+        "name": "eep_ow_a",
+        "offset": 30934528,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "6c4be51bd4c8fb00919ba3460313f31ea2f69bbc107ec4ce5f26ec1ab44ed013",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 12,
+        "name": "eep_ow_b",
+        "offset": 31065600,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "6c4be51bd4c8fb00919ba3460313f31ea2f69bbc107ec4ce5f26ec1ab44ed013",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 13,
+        "name": "eep_adj",
+        "offset": 31196672,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "3a611abac2442339574ace1c359b801de15ba2c0c5cde42ed4471597505d204b",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 14,
+        "name": "eep_fix",
+        "offset": 31327744,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "64c1ff1d5d38643c3abdb1bbc96367d085a4c892051b80107d57403d83f36bb6",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 15,
+        "name": "eep_act_a",
+        "offset": 31458816,
+        "size": 2048,
+        "flags": 3,
+        "stored_hash": "59aa79d1fdaa9ed58e3eb53b3bad24ca7301ad21fd2f967af4ec8a7c518ecf4a",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 16,
+        "name": "eep_act_b",
+        "offset": 31460864,
+        "size": 2048,
+        "flags": 3,
+        "stored_hash": "59aa79d1fdaa9ed58e3eb53b3bad24ca7301ad21fd2f967af4ec8a7c518ecf4a",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 17,
+        "name": "history",
+        "offset": 31462912,
+        "size": 262144,
+        "flags": 2,
+        "stored_hash": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 18,
+        "name": "lens_hist",
+        "offset": 31725056,
+        "size": 393216,
+        "flags": 2,
+        "stored_hash": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 19,
+        "name": "music",
+        "offset": 32118272,
+        "size": 3538944,
+        "flags": 3,
+        "stored_hash": "5dcc34ae10f9d7be2150752d7fbf4e7bae58d585ea3b3eeff93e985cf557c723",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 20,
+        "name": "osdover",
+        "offset": 35657216,
+        "size": 10485760,
+        "flags": 3,
+        "stored_hash": "696b88d0f158a37d91cb3e2914df0505e4b63dbb68ba006d4af272169653bdf3",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 21,
+        "name": "osddata",
+        "offset": 46142976,
+        "size": 11010048,
+        "flags": 3,
+        "stored_hash": "9581b1d535c8f3eb20f5f51d7d33c4c5e4106a3024c0ba7bf2b231a480e29f5b",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 22,
+        "name": "fileinfo",
+        "offset": 57153024,
+        "size": 917504,
+        "flags": 2,
+        "stored_hash": "03cdeacb6a286652f8b3a2e4a6d6a3f81d4952762eb12b1659338722c7ab4a5b",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 23,
+        "name": "ninsho_db",
+        "offset": 58070528,
+        "size": 655360,
+        "flags": 2,
+        "stored_hash": "ff6335069b6e140eb47149d847aea80bf7e2b06bd80ae9708aa382efb3ae21ee",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 24,
+        "name": "koutei_kao",
+        "offset": 58725888,
+        "size": 114688,
+        "flags": 3,
+        "stored_hash": "0fb19aef2e26fbb568abce93c300cb41b2754c6e309726c880fd11c2a1f7776d",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 25,
+        "name": "wifi_info",
+        "offset": 58840576,
+        "size": 131072,
+        "flags": 2,
+        "stored_hash": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 26,
+        "name": "menu_save",
+        "offset": 58971648,
+        "size": 131072,
+        "flags": 2,
+        "stored_hash": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+        "raw_hash_matches": true
+      },
+      {
+        "index": 27,
+        "name": "zboot",
+        "offset": 59102720,
+        "size": 2048,
+        "flags": 3,
+        "stored_hash": "014dad699b15c269e9905ccfbffe1f73963bbef1301298ba230bb9cf8b34fd9f",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 28,
+        "name": "dtb",
+        "offset": 59104768,
+        "size": 4096,
+        "flags": 3,
+        "stored_hash": "f1a4d16edaadbda1940fa95994acd5d69a3e90f5c25daaa68c7151535df8e188",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 29,
+        "name": "zimage",
+        "offset": 59108864,
+        "size": 2621440,
+        "flags": 3,
+        "stored_hash": "46eb127ba1c454dca9dc74be9a8c37ab8f96cc587550ea963dc64ed9d9c4af7e",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 30,
+        "name": "rootfs1",
+        "offset": 61730304,
+        "size": 3145728,
+        "flags": 3,
+        "stored_hash": "cbb2cb8c92225f0cdc3273d30a39c6896c425a04f464ed999e089fed490d931c",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 31,
+        "name": "rootfs2",
+        "offset": 64876032,
+        "size": 10485760,
+        "flags": 3,
+        "stored_hash": "d2a3914561996bf91c2af2565f9e1b4515a4674f65a36f5543e8e88fdc365914",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 32,
+        "name": "usbcharge",
+        "offset": 75361792,
+        "size": 131072,
+        "flags": 3,
+        "stored_hash": "fc6d177cdc31bd35c45e964617eda6c630423657c89794bccaaff2cbd31a89a7",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 33,
+        "name": "ipu_data",
+        "offset": 75492864,
+        "size": 262144,
+        "flags": 3,
+        "stored_hash": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 34,
+        "name": "ipu_code",
+        "offset": 75755008,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "c8958782feff19752e0b81122b79f742d06d102343f08a2101fa4e8b1e2f572c",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 35,
+        "name": "rc_data",
+        "offset": 75820544,
+        "size": 262144,
+        "flags": 3,
+        "stored_hash": "736424438c98bbe9fde213cc237c09aff94003fa1b62bf39d80bf7a854eda718",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 36,
+        "name": "rc_code",
+        "offset": 76082688,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "fc306a4463c9784a2f8f7f16f473bacc6f75ae0f49a69357c8d6c2cd805918c2",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 37,
+        "name": "nr_data",
+        "offset": 76148224,
+        "size": 262144,
+        "flags": 3,
+        "stored_hash": "e235e38856489970ba0cff0a6128391b7e56aa0f13f65ca06d2f2ce9b96ac76a",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 38,
+        "name": "nr_code",
+        "offset": 76410368,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "2553aa1d7cc21e0750d81b0c671abbf361acd35d69d96b9d2f6ba47c52c434cf",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 39,
+        "name": "hm_c_prog",
+        "offset": 76475904,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "06e44fbb2c38f7b389ff71a85dd66ebf06ad1138e2fd8f4aebf3bfc6a97a0d47",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 40,
+        "name": "hm_d_prog",
+        "offset": 76541440,
+        "size": 262144,
+        "flags": 3,
+        "stored_hash": "dc4064303a8eab1bd7f374aa8d8df52834ace9873dce1f1087458ff2ff75beaf",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 41,
+        "name": "hm_c_ddr",
+        "offset": 76803584,
+        "size": 3145728,
+        "flags": 3,
+        "stored_hash": "b26f3b3d07c411f1b7e641b03aec415f8ae2068edd8746b8ac71d50db143415f",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 42,
+        "name": "hm_d_ddr",
+        "offset": 79949312,
+        "size": 1048576,
+        "flags": 3,
+        "stored_hash": "e9688a52f4371814874321f244516d809d36d8fa16f1895b26a6e0224de734e2",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 43,
+        "name": "hm_d_nw",
+        "offset": 80997888,
+        "size": 4194304,
+        "flags": 3,
+        "stored_hash": "d74e1f38fa7ce7a40ed49e6ffc3fd65bae70ae77eb9d37add2f896abc52897d6",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 44,
+        "name": "hm_d_nw_sng",
+        "offset": 85192192,
+        "size": 4194304,
+        "flags": 3,
+        "stored_hash": "b510989f1e12fd1e6a2efbc5306b125289cb796c48e5ffefe7e4d4ce26390a50",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 45,
+        "name": "hr_c_prog",
+        "offset": 89386496,
+        "size": 65536,
+        "flags": 3,
+        "stored_hash": "79ea2664e742c6a0bc7005052473c7c4f04292eaafab625b2774ffad0e8db9aa",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 46,
+        "name": "hr_d_prog",
+        "offset": 89452032,
+        "size": 262144,
+        "flags": 3,
+        "stored_hash": "805be6894a099e740c4aac0931db28f2fcfa0f105b0bc3fe448c0354174cc586",
+        "raw_hash_matches": false
+      },
+      {
+        "index": 47,
+        "name": "hr_c_ddr",
+        "offset": 89714176,
+        "size": 524288,
+        "flags": 3,
+        "stored_hash": "d4478e26b8b7b385f5f1483bba7d4a89a51005be45c07d280ba270b9996963c6",
+        "raw_hash_matches": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+# S5 firmware-upload oracle @ 2026-10-11 09:10:30 ip=192.168.1.131 phase=I
+  MODE: fast (keep-alive connection reuse, pace=0)
+  [healthupload-start] getstate=ok
+
+## Phase I @ 2026-10-11 09:10:31  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer
+  [I] opening gate then streaming V29 with the version bump...
+  [gate] opening firmware-update gate (gate_version=V3.00, no req_acc)
+- [UP] gate fw_update_mode(V3.00) #1 -> ok -> `ok` (0.05s)  **<== GATE OPEN**
+  [gate] OPEN: upload may proceed
+  [upload] loaded 90238464 bytes into RAM in 0.11s; edits+CRC applied once
+  [upload] transform: version field -> V3.00 (BCD sub=0x00 major=0x03) @ 0x1C,0x1D,0x1E,0x1F; CRC32 unchanged 0x8E73AAC0 (0x1C is outside [0x200..end])
+- [UP] startsenddata(size=90238464) attempt 1/5 -> `ok` (0.01s)
+  [upload] method=separate bufsize=61460
+    ... 0% (0/90238464) t=0s avg_sd=76ms
+    ... 6% (6119200/90238464) t=16s avg_sd=112ms
+    ... 13% (12238400/90238464) t=30s avg_sd=107ms
+    ... 20% (18357600/90238464) t=44s avg_sd=106ms
+    ... 27% (24476800/90238464) t=58s avg_sd=109ms
+    ... 33% (30596000/90238464) t=81s avg_sd=127ms
+    ... 40% (36715200/90238464) t=122s avg_sd=167ms
+    ... 47% (42834400/90238464) t=138s avg_sd=162ms
+    ... 54% (48953600/90238464) t=153s avg_sd=158ms
+    ... 61% (55072800/90238464) t=167s avg_sd=151ms
+    ... 67% (61192000/90238464) t=180s avg_sd=146ms
+    ... 74% (67311200/90238464) t=201s avg_sd=146ms
+    ... 81% (73430400/90238464) t=218s avg_sd=145ms
+    ... 88% (79549600/90238464) t=230s avg_sd=142ms
+    ... 94% (85668800/90238464) t=249s avg_sd=142ms
+- [UP] senddata FINAL chunk @90238464 attempt 1/12 -> err_busy -> `err_busy` (0.29s)
+    [retry] transient err_busy (FINAL chunk), waiting 2s
+- [UP] senddata FINAL chunk @90238464 attempt 2/12 -> err_critical -> `err_critical` (1.51s)
+    [retry] transient err_critical (FINAL chunk), waiting 4s
+- [UP] senddata FINAL chunk @90238464 attempt 3/12 -> err_critical -> `err_critical` (1.41s)
+    [retry] transient err_critical (FINAL chunk), waiting 6s
+- [UP] senddata FINAL chunk @90238464 attempt 4/12 -> err_critical -> `err_critical` (31.58s)
+    [retry] transient err_critical (FINAL chunk), waiting 8s
+- [UP] senddata FINAL chunk @90238464 attempt 5/12 -> err_critical -> `err_critical` (31.48s)
+    [retry] transient err_critical (FINAL chunk), waiting 10s
+- [UP] senddata FINAL chunk @90238464 attempt 6/12 -> err_critical -> `err_critical` (33.13s)
+    [retry] transient err_critical (FINAL chunk), waiting 12s
+- [UP] senddata FINAL chunk @90238464 attempt 7/12 -> err_critical -> `err_critical` (31.72s)
+    [retry] transient err_critical (FINAL chunk), waiting 14s
+- [UP] senddata FINAL chunk @90238464 attempt 8/12 -> err_critical -> `err_critical` (31.05s)
+    [retry] transient err_critical (FINAL chunk), waiting 15s

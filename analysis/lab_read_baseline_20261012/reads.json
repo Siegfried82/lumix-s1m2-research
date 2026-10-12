@@ -1,0 +1,34 @@
+[
+  {
+    "name": "remote_state",
+    "path": "remote/get-state",
+    "request_body": null,
+    "curl_exit": 0,
+    "bytes": 353,
+    "sha256": "6bf1fbbd81b80bbf43a51ef0765d83acb7acfc6c3f55eed368b3b4951637d973",
+    "error": "",
+    "prefix_hex": "3c3f786d6c2076657273696f6e3d2231"
+  },
+  {
+    "name": "photostyle_display",
+    "path": "photostyle/get-display-setting",
+    "request_body": null,
+    "curl_exit": 0,
+    "bytes": 353,
+    "sha256": "6bf1fbbd81b80bbf43a51ef0765d83acb7acfc6c3f55eed368b3b4951637d973",
+    "error": "",
+    "prefix_hex": "3c3f786d6c2076657273696f6e3d2231"
+  },
+  {
+    "name": "lut_slot2",
+    "path": "lut/file",
+    "request_body": {
+      "LutId": 2
+    },
+    "curl_exit": 0,
+    "bytes": 956987,
+    "sha256": "8d381f947eefee42312656057e8d4c181495ac0845f15cbae548f4588b47655c",
+    "error": "",
+    "prefix_hex": "5449544c452022220a234c554d495850"
+  }
+]

@@ -1,30 +1,28 @@
-# Panasonic LUMIX S1M2 固件解包清单与说明
+# S1M2 V1.4 固件解包组件
 
-- 原始固件: `S1m2_V14.bin` (版本 V1.4, 大小 171,867,648 字节)
-- 解包时间: 2026-10-07
-- 解包目标目录: `analysis/unpacked/`
+原始输入：`S1m2_V14.bin`，171,867,648 字节。完整 SHA-256：
 
-## 目录结构
-- `headers/`: 固件外层头、安全签名头、内层头及原始 62 条目录表二进制
-- `components/`: 全部 62 个组件独立镜像 (格式 `{index:02d}_{name}.bin`)
-- `manifest.json` / `manifest.csv`: 完整元数据清单
+```text
+e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f
+```
 
-## 组件统计
-- 组件总数: 62
-- 零长度占位组件: 4 (如 boot, loader2, loader3, storage)
-- 明文擦除/占位组件 (Flags=2): 9 (全 0 或全 FF)
-- 加密高熵组件 (Flags=3): 49 (含独立 128-bit IV)
+本目录按该输入实际目录提取载荷，**不是已经恢复的相机操作系统**。2026-10-12 核验了 62 条 92 字节目录项、CRC 及全部提取文件与输入范围的一致性，见 [逐项结果](../guest_dump_feasibility_20261012/components_current.json)。
 
-## 关键业务组件指引
-| 索引 | 组件名称 | 文件名 | 大小 | 业务说明 |
-|---|---|---|---:|---|
-| 01 | loader1 | `01_loader1.bin` | 128 KiB | 二级引导加载器候选 |
-| 06 | compress_pr | `06_compress_pr.bin` | 16.00 MiB | 压缩 Linux 内核/SquashFS 根文件系统 |
-| 25 | osdover | `25_osdover.bin` | 16.50 MiB | OSD 图形与界面资源 |
-| 26 | osddata | `26_osddata.bin` | 19.37 MiB | 菜单与系统数据 |
-| 44 | dsp_fstack_ | `44_dsp_fstack_.bin` | 64 KiB | 焦点堆叠 (Focus Stacking) 算法微码 A |
-| 45 | dsp_fstack_ | `45_dsp_fstack_.bin` | 64 KiB | 焦点堆叠 (Focus Stacking) 算法微码 B |
-| 46 | fstack_c_ex | `46_fstack_c_ex.bin` | 512 KiB | 焦点堆叠扩展模块 |
-| 50-58 | hm_d_nw_1st~9th | `50~58_hm_d_nw_*.bin` | 各 1.375 MiB | AI 检测神经网络模型权重 (人/眼/动物/车) |
-| 59 | hm_d_reid | `59_hm_d_reid.bin` | 3.00 MiB | AI 人物重识别 (Re-ID) 深度学习模型 |
-| 60 | ai_awb_data | `60_ai_awb_data.bin` | 1.75 MiB | AI 自动白平衡权重数据 |
+| 内容 | 路径 |
+|---|---|
+| 原始头和目录二进制 | `headers/` |
+| 62 个独立载荷（包括零长度项） | `components/` |
+| 历史提取元数据 | [manifest.json](manifest.json)、[manifest.csv](manifest.csv) |
+| 解析与提取实现 | [unpack_upd.py](../../s1m2_firmware_project/tools/unpack_upd.py) |
+
+文件名保留目录索引；重复名称不能合并成名称字典。偏移以本次输入的目录解析为准。
+
+- 49 项 flags=3：仍是不透明载荷，没有经过验证的明文。
+- 4 项长度为零。
+- 9 项非空 flags=2：数据为全 00 或全 FF；这不能独自证明运行时的擦除区语义。
+
+旧清单的 `is_encrypted`、`destination_hex`、`stored_sha256`、`iv_hex` 等是历史解析标签；密码模式、目标地址、明文摘要及 IV 的具体语义需要实际消费者核验，不能仅凭标签认定。组件名称及高熵只作为候选线索。
+
+先前把 `program`、`compress_pr`、`hr_*`、`hm_d_*` 直接标为 RTOS、Linux/SquashFS、算法微码和模型权重的说明已撤回；目前缺少支持这些精确用途的明文与消费者证据。
+
+总进度见 [当前状态](../../S1M2研究当前状态.md)。

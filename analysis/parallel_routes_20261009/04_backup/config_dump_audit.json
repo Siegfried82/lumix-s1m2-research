@@ -1,0 +1,60 @@
+{
+  "filepath": "<LOCAL_WORKSPACE>/analysis/s1m2_config_0x9421.bin",
+  "filesize_bytes": 9197421,
+  "envelope": {
+    "magic_hex": "0x080000a2",
+    "ptp_declared_total_len": 9197413,
+    "ptp_declared_inner_len": 9197409,
+    "vendor": "Panasonic",
+    "model": "DC-S1M2"
+  },
+  "executable_structures": {
+    "elf_magic_found": false,
+    "macho_magic_found": false,
+    "pe_magic_found": false,
+    "contains_executable_code": false
+  },
+  "lut_record_partition": {
+    "tag": "0x051f",
+    "offset_in_bin": 306836,
+    "length_bytes": 8840924,
+    "percentage_of_total": 96.12,
+    "description": "41 slots x 33-point 3D LUT tables (sensor/color calibration)"
+  },
+  "non_lut_analysis": {
+    "size_bytes": 356497,
+    "percentage_of_total": 3.88,
+    "firmware_keywords_found": {},
+    "non_trivial_ascii_samples": [
+      "<UUUUUUUUUUC<CU",
+      "DC-S1M2",
+      "Panasonic"
+    ],
+    "non_trivial_utf16_samples": [
+      "%ARRI 709",
+      "500tclean",
+      "709ArriLike",
+      "BBBBBBBBBBBBBBBBBBBFr",
+      "BUTTERY_Eterna",
+      "Bleach_33x",
+      "Clear-S",
+      "Custom Mode C1",
+      "Custom Mode C2",
+      "Custom Mode C3",
+      "Custom Mode C4",
+      "Custom Mode C5-1",
+      "Custom Mode C5-10",
+      "Custom Mode C5-2",
+      "Custom Mode C5-3",
+      "Custom Mode C5-4",
+      "Custom Mode C5-5",
+      "Custom Mode C5-6",
+      "Custom Mode C5-7",
+      "Custom Mode C5-8"
+    ],
+    "contains_firmware_loading_clues": false,
+    "contains_platform_architecture_clues": false,
+    "contains_version_numbers": false
+  },
+  "verdict": "Strictly camera configuration and 3D LUT parameters; zero program code; no clues pointing to firmware loading, platform internals, or firmware version."
+}

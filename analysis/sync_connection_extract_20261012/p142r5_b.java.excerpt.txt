@@ -1,0 +1,16 @@
+80:         try {
+81:             try {
+82:                 if (this.f27231e) {
+83:                     throw new c(c.a.Executing);
+84:                 }
+85:                 this.f27231e = true;
+86:                 b();
+87:                 HttpURLConnection httpURLConnectionL = l(this.f27227a);
+88:                 String str = f27226h;
+89:                 if (str != null && !str.isEmpty()) {
+90:                     httpURLConnectionL.setRequestProperty("X-SESSION_ID", f27226h);
+91:                 }
+92:                 c(httpURLConnectionL);
+93:                 d(httpURLConnectionL);
+94:                 c(httpURLConnectionL);
+95:                 p(httpURLConnectionL);

@@ -1,0 +1,20 @@
+SOCIONEXT Milbeaut Timer64 counter
+
+Required properties:
+- compatible:	Must be "socionext,milbeaut-timer64".
+- clocks:	set clock driver with M20V_TMR64CLK_ID.
+- clock-name:	Must be "base".
+- dmas:	set hdmac's phandle and set value which specify corresponding
+		IDREQ no.
+- dma-names: set "rx".
+
+Example:
+
+	timer64_0: timer64_0@e001000 {
+		compatible = "socionext,milbeaut-timer64";
+		reg = <0x0e001000 0x400>;
+		clocks = <&clk M20V_TMR64CLK_ID>;
+		clock-names = "base";
+		dmas = <&hdmac1 40>;
+		dma-names = "rx";
+	};

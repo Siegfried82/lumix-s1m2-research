@@ -134,54 +134,18 @@
           "Line 286109: getter switch lookup in DeviceAdapter"
         ],
         "values": {
-          "0": {
-            "name": "DM_Unknown",
-            "raw_val": "0x0000"
-          },
-          "1": {
-            "name": "DM_Single",
-            "raw_val": "0x0001"
-          },
-          "2": {
-            "name": "DM_Burst",
-            "raw_val": "0x0002"
-          },
-          "3": {
-            "name": "DM_Bracket",
-            "raw_val": "0x0003"
-          },
-          "4": {
-            "name": "DM_SelfTimer",
-            "raw_val": "0x0004"
-          },
-          "5": {
-            "name": "DM_Interval",
-            "raw_val": "0x0005"
-          },
-          "6": {
-            "name": "DM_4K6K",
-            "raw_val": "0x0006"
-          },
-          "7": {
-            "name": "DM_Focus",
-            "raw_val": "0x0007"
-          },
-          "8": {
-            "name": "DM_Burst1",
-            "raw_val": "0x0008"
-          },
-          "9": {
-            "name": "DM_Burst2",
-            "raw_val": "0x0009"
-          },
-          "10": {
-            "name": "DM_HRS",
-            "raw_val": "0x000a"
-          },
-          "11": {
-            "name": "DM_HANDHELD_HRS",
-            "raw_val": "0x0004"
-          }
+          "0": {"name": "DM_Unknown", "raw_val": "0x0000"},
+          "1": {"name": "DM_Single", "raw_val": "0x0001"},
+          "2": {"name": "DM_Burst", "raw_val": "0x0002"},
+          "3": {"name": "DM_Bracket", "raw_val": "0x0003"},
+          "4": {"name": "DM_SelfTimer", "raw_val": "0x0004"},
+          "5": {"name": "DM_Interval", "raw_val": "0x0005"},
+          "6": {"name": "DM_4K6K", "raw_val": "0x0006"},
+          "7": {"name": "DM_Focus", "raw_val": "0x0007"},
+          "8": {"name": "DM_Burst1", "raw_val": "0x0008"},
+          "9": {"name": "DM_Burst2", "raw_val": "0x0009"},
+          "10": {"name": "DM_HRS", "raw_val": "0x000a"},
+          "11": {"name": "DM_HANDHELD_HRS", "raw_val": "0x0004"}
         }
       },
       "capability_query": {
@@ -230,11 +194,7 @@
       "storage_location_control": {
         "app_method": "ApplicationSettings::setRawTransferType (lines 242044, 242158)",
         "enum_name": "StoLocType",
-        "options": [
-          "StoLocType_SdCard",
-          "StoLocType_SdCardPc",
-          "StoLocType_Pc"
-        ],
+        "options": ["StoLocType_SdCard", "StoLocType_SdCardPc", "StoLocType_Pc"],
         "ptp_opcodes": "0x940a (Get) / 0x940b (Set) with CaptureTarget subcode"
       },
       "quality_setting": {
@@ -305,10 +265,7 @@
   },
   "differential_analysis_evaluation": {
     "intra_model_diff_s5ii": {
-      "sample_dates": [
-        "2025-03-13",
-        "2026-05-28"
-      ],
+      "sample_dates": ["2025-03-13", "2026-05-28"],
       "total_records": 966,
       "modified_records": 84,
       "unmodified_records": 882,
@@ -378,7 +335,7 @@
       {
         "material": "Decrypted Firmware Microcode for RTOS / ISP State Machine",
         "description": "Decrypted components of S1M2 firmware (specifically loader1 and imaging DSP code hr_c_prog).",
-        "why_essential": ""
+        "why_essential": "Required to verify whether the camera firmware state machine permits mechanical shutter in high-res mode upon receiving an altered .DAT configuration, or whether the RTOS hardware arbiter overrides it back to electronic shutter."
       },
       {
         "material": "Native DC-S1M2 / S1M2ES .DAT Sample",

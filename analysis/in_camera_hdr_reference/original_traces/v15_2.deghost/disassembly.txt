@@ -1,0 +1,249 @@
+# pydisasm version 6.3.0
+# CPython Python bytecode 3.10 (3439)
+#   Disassembled from CPython Python 3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]
+# Timestamp in code: 0 (1970-01-01 03:00:00)
+# Method Name:       <module>
+# Filename:          v15_2\deghost.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        2
+# Flags:             0x00000040 (NOFREE)
+# First Line:        1
+# Constants:
+#    0: 'WGPU scene consistency and one coherent gate for all physical inputs.'
+#    1: 0
+#    2: None
+#    3: 1
+#    4: ('build_rejection',)
+#    5: ('ScenePhysical',)
+#    6: <Code310 code object restore_with_rejection at 0x106b14ad0, file v15_2\deghost.py>, line 6
+#    7: 'restore_with_rejection'
+# Names:
+#    0: __doc__
+#    1: numpy
+#    2: np
+#    3: scene_consistency.detector
+#    4: build_rejection
+#    5: scene_gate
+#    6: ScenePhysical
+#    7: restore_with_rejection
+
+  1:           0 LOAD_CONST           ("WGPU scene consistency and one coherent gate for all physical inputs.")
+               2 STORE_NAME           (__doc__)
+
+  2:           4 LOAD_CONST           (0)
+               6 LOAD_CONST           (None)
+               8 IMPORT_NAME          (numpy)
+              10 STORE_NAME           (np)
+
+  3:          12 LOAD_CONST           (1)
+              14 LOAD_CONST           (('build_rejection',))
+              16 IMPORT_NAME          (scene_consistency.detector)
+              18 IMPORT_FROM          (build_rejection)
+              20 STORE_NAME           (build_rejection)
+              22 POP_TOP
+
+  4:          24 LOAD_CONST           (1)
+              26 LOAD_CONST           (('ScenePhysical',))
+              28 IMPORT_NAME          (scene_gate)
+              30 IMPORT_FROM          (ScenePhysical)
+              32 STORE_NAME           (ScenePhysical)
+              34 POP_TOP
+
+  6:          36 LOAD_CONST           (<Code310 code object restore_with_rejection at 0x106b14ad0, file v15_2\deghost.py>, line 6)
+              38 LOAD_CONST           ("restore_with_rejection")
+              40 MAKE_FUNCTION        (No arguments)
+              42 STORE_NAME           (restore_with_rejection)
+              44 LOAD_CONST           (None)
+              46 RETURN_VALUE
+
+
+# Method Name:       restore_with_rejection
+# Filename:          v15_2\deghost.py
+# Argument count:    7
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  12
+# Stack size:        9
+# Flags:             0x0000000b (VARKEYWORDS | NEWLOCALS | OPTIMIZED)
+# First Line:        6
+# Constants:
+#    0: 'Gate physical samples consistently in base/A/support/evidence paths.'
+#    1: 1
+#    2: ('restore',)
+#    3: 7
+#    4: 4
+#    5: 'h'
+#    6: 'w'
+#    7: 0
+#    8: 'Invalid reference-query rejection mask'
+#    9: 'float32'
+#   10: <Code310 code object factory at 0x1069fd460, file v15_2\deghost.py>, line 13
+#   11: 'restore_with_rejection.<locals>.factory'
+#   12: 'physical_factory'
+# Names:
+#    0: pipeline
+#    1: restore
+#    2: np
+#    3: asarray
+#    4: shape
+#    5: isin
+#    6: all
+#    7: any
+#    8: ValueError
+#    9: upload
+#   10: astype
+#   11: release_external
+# Varnames:
+#	rt, data, flows, H, grid, output, rejection, kwargs, restore, mask, expected, factory
+# Positional arguments:
+#	rt, data, flows, H, grid, output, rejection
+# Local variables:
+#    7: kwargs
+#    8: restore
+#    9: mask
+#   10: expected
+#   11: factory
+# Free variables:
+#    0: gpu
+
+  8:           0 LOAD_CONST           (1)
+               2 LOAD_CONST           (('restore',))
+               4 IMPORT_NAME          (pipeline)
+               6 IMPORT_FROM          (restore)
+               8 STORE_FAST           (restore)
+              10 POP_TOP
+
+  9:          12 LOAD_GLOBAL          (np)
+              14 LOAD_METHOD          (asarray)
+              16 LOAD_FAST            (rejection)
+              18 CALL_METHOD          (1 positional argument)
+              20 STORE_FAST           (mask)
+
+ 10:          22 LOAD_CONST           (7)
+              24 LOAD_CONST           (4)
+              26 LOAD_FAST            (data)
+              28 LOAD_CONST           ("h")
+              30 BINARY_SUBSCR
+              32 LOAD_CONST           (4)
+              34 BINARY_FLOOR_DIVIDE
+              36 LOAD_FAST            (data)
+              38 LOAD_CONST           ("w")
+              40 BINARY_SUBSCR
+              42 LOAD_CONST           (4)
+              44 BINARY_FLOOR_DIVIDE
+              46 BUILD_TUPLE          4
+              48 STORE_FAST           (expected)
+
+ 11:          50 LOAD_FAST            (mask)
+              52 LOAD_ATTR            (shape)
+              54 LOAD_FAST            (expected)
+              56 COMPARE_OP           (!=)
+              58 POP_JUMP_IF_TRUE     (to 92)
+              60 LOAD_GLOBAL          (np)
+              62 LOAD_METHOD          (isin)
+              64 LOAD_FAST            (mask)
+              66 LOAD_CONST           (0)
+              68 LOAD_CONST           (1)
+              70 BUILD_LIST           2
+              72 CALL_METHOD          (2 positional arguments)
+              74 LOAD_METHOD          (all)
+              76 CALL_METHOD          (0 positional arguments)
+              78 POP_JUMP_IF_FALSE    (to 92)
+              80 LOAD_FAST            (mask)
+              82 LOAD_CONST           (0)
+              84 BINARY_SUBSCR
+              86 LOAD_METHOD          (any)
+              88 CALL_METHOD          (0 positional arguments)
+              90 POP_JUMP_IF_FALSE    (to 100)
+         >>   92 LOAD_GLOBAL          (ValueError)
+              94 LOAD_CONST           ("Invalid reference-query rejection mask")
+              96 CALL_FUNCTION        (1 positional argument)
+              98 RAISE_VARARGS        (exception instance)
+
+ 12:     >>  100 LOAD_FAST            (rt)
+             102 LOAD_METHOD          (upload)
+             104 LOAD_FAST            (mask)
+             106 LOAD_METHOD          (astype)
+             108 LOAD_CONST           ("float32")
+             110 CALL_METHOD          (1 positional argument)
+             112 CALL_METHOD          (1 positional argument)
+             114 STORE_DEREF          (gpu)
+
+ 13:         116 LOAD_CLOSURE         (gpu)
+             118 BUILD_TUPLE          1
+             120 LOAD_CONST           (<Code310 code object factory at 0x1069fd460, file v15_2\deghost.py>, line 13)
+             122 LOAD_CONST           ("restore_with_rejection.<locals>.factory")
+             124 MAKE_FUNCTION        (closure)
+             126 STORE_FAST           (factory)
+
+ 14:         128 SETUP_FINALLY        (to 172)
+             130 LOAD_FAST            (restore)
+             132 LOAD_FAST            (rt)
+             134 LOAD_FAST            (data)
+             136 LOAD_FAST            (flows)
+             138 LOAD_FAST            (H)
+             140 LOAD_FAST            (grid)
+             142 LOAD_FAST            (output)
+             144 BUILD_TUPLE          6
+             146 LOAD_CONST           ("physical_factory")
+             148 LOAD_FAST            (factory)
+             150 BUILD_MAP            1
+             152 LOAD_FAST            (kwargs)
+             154 DICT_MERGE           1
+             156 CALL_FUNCTION_EX     (keyword and positional arguments)
+             158 POP_BLOCK
+
+ 15:         160 LOAD_FAST            (rt)
+             162 LOAD_METHOD          (release_external)
+             164 LOAD_DEREF           (gpu)
+             166 CALL_METHOD          (1 positional argument)
+             168 POP_TOP
+             170 RETURN_VALUE
+         >>  172 LOAD_FAST            (rt)
+             174 LOAD_METHOD          (release_external)
+             176 LOAD_DEREF           (gpu)
+             178 CALL_METHOD          (1 positional argument)
+             180 POP_TOP
+             182 RERAISE              0
+
+
+# Method Name:       factory
+# Filename:          v15_2\deghost.py
+# Argument count:    2
+# Position-only argument count: 0
+# Keyword-only arguments: 1
+# Number of locals:  4
+# Stack size:        5
+# Flags:             0x0000001b (NESTED | VARKEYWORDS | NEWLOCALS | OPTIMIZED)
+# First Line:        13
+# Constants:
+#    0: None
+#    1: ('rejection', 'query_origin')
+# Names:
+#    0: ScenePhysical
+# Varnames:
+#	rt, native, query_origin, kw
+# Positional arguments:
+#	rt, native
+# Local variables:
+#    2: query_origin
+#    3: kw
+# Cell variables:
+#    0: gpu
+
+ 13:           0 LOAD_GLOBAL          (ScenePhysical)
+               2 LOAD_FAST            (rt)
+               4 LOAD_FAST            (native)
+               6 BUILD_TUPLE          2
+               8 LOAD_DEREF           (gpu)
+              10 LOAD_FAST            (query_origin)
+              12 LOAD_CONST           (('rejection', 'query_origin'))
+              14 BUILD_CONST_KEY_MAP  2
+              16 LOAD_FAST            (kw)
+              18 DICT_MERGE           1
+              20 CALL_FUNCTION_EX     (keyword and positional arguments)
+              22 RETURN_VALUE
+

@@ -1,0 +1,263 @@
+{
+  "meaning": "Known key byte sequence occurrences are confirmed; address words are candidates until decoded as instructions and mapped correctly",
+  "rows": [
+    {
+      "plaintext_file": "G3___V12.bin.plaintext",
+      "key_source_file": "G3___V12.bin",
+      "literal_hits": [
+        {
+          "offset": 6102488,
+          "offset_hex": "0x5d1dd8",
+          "surrounding64_sha256": "86021d2c9545f7c609d8cfd9177f8d7fa5cf3c2ba677273959a415aa2c1b05b0",
+          "candidate_address_references": [
+            {
+              "delta": 1073740288,
+              "address": "0x405d17d8",
+              "raw_little_endian_word_positions": []
+            },
+            {
+              "delta": 1073741824,
+              "address": "0x405d1dd8",
+              "raw_little_endian_word_positions": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "plaintext_file": "G3___V12.bin.plaintext",
+      "key_source_file": "GF2__V11.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "G3___V12.bin.plaintext",
+      "key_source_file": "GF3__V12.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "G3___V12.bin.plaintext",
+      "key_source_file": "GH2__V11.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "G3___V12.bin.plaintext",
+      "key_source_file": "GX1__V11.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GF2__V11.bin.plaintext",
+      "key_source_file": "G3___V12.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GF2__V11.bin.plaintext",
+      "key_source_file": "GF2__V11.bin",
+      "literal_hits": [
+        {
+          "offset": 5570280,
+          "offset_hex": "0x54fee8",
+          "surrounding64_sha256": "38a61a0f2087cd75c3416fcb53d157bcd6b3abdeb945d72930f7ce1241e932d7",
+          "candidate_address_references": [
+            {
+              "delta": 1073740288,
+              "address": "0x4054f8e8",
+              "raw_little_endian_word_positions": []
+            },
+            {
+              "delta": 1073741824,
+              "address": "0x4054fee8",
+              "raw_little_endian_word_positions": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "plaintext_file": "GF2__V11.bin.plaintext",
+      "key_source_file": "GF3__V12.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GF2__V11.bin.plaintext",
+      "key_source_file": "GH2__V11.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GF2__V11.bin.plaintext",
+      "key_source_file": "GX1__V11.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GF3__V12.bin.plaintext",
+      "key_source_file": "G3___V12.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GF3__V12.bin.plaintext",
+      "key_source_file": "GF2__V11.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GF3__V12.bin.plaintext",
+      "key_source_file": "GF3__V12.bin",
+      "literal_hits": [
+        {
+          "offset": 5887752,
+          "offset_hex": "0x59d708",
+          "surrounding64_sha256": "aa8b6045fcbb2f2ee838f94a04e52ea8406b51bb81687793cd4dd6eabaff2bd4",
+          "candidate_address_references": [
+            {
+              "delta": 1073740288,
+              "address": "0x4059d108",
+              "raw_little_endian_word_positions": []
+            },
+            {
+              "delta": 1073741824,
+              "address": "0x4059d708",
+              "raw_little_endian_word_positions": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "plaintext_file": "GF3__V12.bin.plaintext",
+      "key_source_file": "GH2__V11.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GF3__V12.bin.plaintext",
+      "key_source_file": "GX1__V11.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GH2__V11.bin.plaintext",
+      "key_source_file": "G3___V12.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GH2__V11.bin.plaintext",
+      "key_source_file": "GF2__V11.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GH2__V11.bin.plaintext",
+      "key_source_file": "GF3__V12.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GH2__V11.bin.plaintext",
+      "key_source_file": "GH2__V11.bin",
+      "literal_hits": [
+        {
+          "offset": 8344312,
+          "offset_hex": "0x7f52f8",
+          "surrounding64_sha256": "92ce5fa4d9abd0095131c462553112ef332db1fe32980cd50879b5fb5f563db4",
+          "candidate_address_references": [
+            {
+              "delta": 1073740288,
+              "address": "0x407f4cf8",
+              "raw_little_endian_word_positions": []
+            },
+            {
+              "delta": 1073741824,
+              "address": "0x407f52f8",
+              "raw_little_endian_word_positions": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "plaintext_file": "GH2__V11.bin.plaintext",
+      "key_source_file": "GX1__V11.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GH2__V12.bin.plaintext",
+      "key_source_file": "G3___V12.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GH2__V12.bin.plaintext",
+      "key_source_file": "GF2__V11.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GH2__V12.bin.plaintext",
+      "key_source_file": "GF3__V12.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GH2__V12.bin.plaintext",
+      "key_source_file": "GH2__V11.bin",
+      "literal_hits": [
+        {
+          "offset": 8344312,
+          "offset_hex": "0x7f52f8",
+          "surrounding64_sha256": "92ce5fa4d9abd0095131c462553112ef332db1fe32980cd50879b5fb5f563db4",
+          "candidate_address_references": [
+            {
+              "delta": 1073740288,
+              "address": "0x407f4cf8",
+              "raw_little_endian_word_positions": []
+            },
+            {
+              "delta": 1073741824,
+              "address": "0x407f52f8",
+              "raw_little_endian_word_positions": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "plaintext_file": "GH2__V12.bin.plaintext",
+      "key_source_file": "GX1__V11.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GX1__V11.bin.plaintext",
+      "key_source_file": "G3___V12.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GX1__V11.bin.plaintext",
+      "key_source_file": "GF2__V11.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GX1__V11.bin.plaintext",
+      "key_source_file": "GF3__V12.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GX1__V11.bin.plaintext",
+      "key_source_file": "GH2__V11.bin",
+      "literal_hits": []
+    },
+    {
+      "plaintext_file": "GX1__V11.bin.plaintext",
+      "key_source_file": "GX1__V11.bin",
+      "literal_hits": [
+        {
+          "offset": 6528804,
+          "offset_hex": "0x639f24",
+          "surrounding64_sha256": "5ecea7735576a64d31e60bd02336977a10a85a9e2a69f37090d7342cc4b750ef",
+          "candidate_address_references": [
+            {
+              "delta": 1073740288,
+              "address": "0x40639924",
+              "raw_little_endian_word_positions": []
+            },
+            {
+              "delta": 1073741824,
+              "address": "0x40639f24",
+              "raw_little_endian_word_positions": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

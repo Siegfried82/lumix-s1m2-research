@@ -1,0 +1,147 @@
+
+<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GX1__V11.bin.plaintext:     file format binary
+
+
+Disassembly of section .data:
+
+7bcbbe55 <.data+0x9bc455>:
+7bcbbe55:	fa fe f4 fe 	add	-268,sp
+7bcbbe59:	47 24       	mov	a1,(36,sp)
+7bcbbe5b:	43 08       	mov	a0,(8,sp)
+7bcbbe5d:	fc a8 48 d7 	movbu	(0x743ad748),d0
+7bcbbe61:	3a 74 
+7bcbbe63:	9f 00       	mov	0,a3
+7bcbbe65:	42 14       	mov	d0,(20,sp)
+7bcbbe67:	f8 40 09    	movbu	(9,a0),d0
+7bcbbe6a:	3c          	mov	sp,a0
+7bcbbe6b:	f8 92 2c    	movbu	d0,(44,sp)
+7bcbbe6e:	20 38       	add	56,a0
+7bcbbe70:	43 28       	mov	a0,(40,sp)
+7bcbbe72:	47 38       	mov	a1,(56,sp)
+7bcbbe74:	94          	mov	a1,a0
+7bcbbe75:	9d          	mov	a3,a1
+7bcbbe76:	0c          	clr	d3
+7bcbbe77:	8c          	mov	d3,d0
+7bcbbe78:	81          	mov	d0,d1
+7bcbbe79:	cd c0 06 a0 	call	0x7bcbc539,[d2,a2],12
+7bcbbe7d:	0c 
+7bcbbe7e:	5c 08       	mov	(8,sp),a0
+7bcbbe80:	3e          	mov	sp,a2
+7bcbbe81:	70          	mov	(a0),d0
+7bcbbe82:	22 50       	add	80,a2
+7bcbbe84:	98          	mov	a2,a0
+7bcbbe85:	f1 e1       	mov	d0,a1
+7bcbbe87:	8d          	mov	d3,d1
+7bcbbe88:	80 02       	mov	2,d0
+7bcbbe8a:	dd 8a cd 4a 	call	0x40168c14,[d2,d3,a2,a3],52
+7bcbbe8e:	c4 f0 34 
+7bcbbe91:	82          	mov	d0,d2
+7bcbbe92:	ae          	cmp	d3,d2
+7bcbbe93:	c8 05       	beq	0x7bcbbe98
+7bcbbe95:	cc 56 06    	jmp	0x7bcbc4eb
+7bcbbe98:	8f 01       	mov	1,d3
+7bcbbe9a:	3c          	mov	sp,a0
+7bcbbe9b:	20 74       	add	116,a0
+7bcbbe9d:	43 1c       	mov	a0,(28,sp)
+7bcbbe9f:	cd a7 f8 00 	call	0x7bcbb746,[],4
+7bcbbea3:	04 
+7bcbbea4:	82          	mov	d0,d2
+7bcbbea5:	aa 00       	cmp	0,d2
+7bcbbea7:	c8 05       	beq	0x7bcbbeac
+7bcbbea9:	cc 42 06    	jmp	0x7bcbc4eb
+7bcbbeac:	9f 01       	mov	1,a3
+7bcbbeae:	80 09       	mov	9,d0
+7bcbbeb0:	cd cf f2 f0 	call	0x7bcbb17f,[d2,d3,a2,a3],56
+7bcbbeb4:	38 
+7bcbbeb5:	5c 1c       	mov	(28,sp),a0
+7bcbbeb7:	fc dd 00 00 	mov	-1251999744,a1
+7bcbbebb:	60 b5 
+7bcbbebd:	fc cc 00 00 	mov	20971520,d0
+7bcbbec1:	40 01 
+7bcbbec3:	cd c9 f8 b0 	call	0x7bcbb78c,[d2,a2,a3],12
+7bcbbec7:	0c 
+7bcbbec8:	82          	mov	d0,d2
+7bcbbec9:	aa 00       	cmp	0,d2
+7bcbbecb:	c8 05       	beq	0x7bcbbed0
+7bcbbecd:	cc 1e 06    	jmp	0x7bcbc4eb
+7bcbbed0:	5c 1c       	mov	(28,sp),a0
+7bcbbed2:	99          	mov	a2,a1
+7bcbbed3:	cd 85 f8 30 	call	0x7bcbb758,[a2,a3],12
+7bcbbed7:	0c 
+7bcbbed8:	82          	mov	d0,d2
+7bcbbed9:	aa 00       	cmp	0,d2
+7bcbbedb:	c8 05       	beq	0x7bcbbee0
+7bcbbedd:	cc 0e 06    	jmp	0x7bcbc4eb
+7bcbbee0:	5c 1c       	mov	(28,sp),a0
+7bcbbee2:	cd 26 f9 f0 	call	0x7bcbb808,[d2,d3,a2,a3],32
+7bcbbee6:	20 
+7bcbbee7:	82          	mov	d0,d2
+7bcbbee8:	aa 00       	cmp	0,d2
+7bcbbeea:	c8 05       	beq	0x7bcbbeef
+7bcbbeec:	cc ff 05    	jmp	0x7bcbc4eb
+7bcbbeef:	5c 1c       	mov	(28,sp),a0
+7bcbbef1:	cd 50 fd 00 	call	0x7bcbbc41,[],0
+7bcbbef5:	00 
+7bcbbef6:	43 0c       	mov	a0,(12,sp)
+7bcbbef8:	5d 08       	mov	(8,sp),a1
+7bcbbefa:	58 14       	mov	(20,sp),d0
+7bcbbefc:	cd 00 fe f0 	call	0x7bcbbcfc,[d2,d3,a2,a3],88
+7bcbbf00:	58 
+7bcbbf01:	82          	mov	d0,d2
+7bcbbf02:	aa 00       	cmp	0,d2
+7bcbbf04:	c8 05       	beq	0x7bcbbf09
+7bcbbf06:	cc e5 05    	jmp	0x7bcbc4eb
+7bcbbf09:	5c 1c       	mov	(28,sp),a0
+7bcbbf0b:	fc dd 28 00 	mov	1946157096,a1
+7bcbbf0f:	00 74 
+7bcbbf11:	80 10       	mov	16,d0
+7bcbbf13:	cd c9 f8 a0 	call	0x7bcbb7dc,[d2,a2],12
+7bcbbf17:	0c 
+7bcbbf18:	4a 3c       	mov	d2,(60,sp)
+7bcbbf1a:	58 28       	mov	(40,sp),d0
+7bcbbf1c:	3d          	mov	sp,a1
+7bcbbf1d:	42 cc       	mov	d0,(204,sp)
+7bcbbf1f:	fa d1 cc 00 	add	204,a1
+7bcbbf23:	fc cc 48 c5 	mov	2076951880,d0
+7bcbbf27:	cb 7b 
+7bcbbf29:	42 d0       	mov	d0,(208,sp)
+7bcbbf2b:	4a 40       	mov	d2,(64,sp)
+7bcbbf2d:	80 64       	mov	100,d0
+7bcbbf2f:	42 44       	mov	d0,(68,sp)
+7bcbbf31:	4a 48       	mov	d2,(72,sp)
+7bcbbf33:	80 1e       	mov	30,d0
+7bcbbf35:	42 4c       	mov	d0,(76,sp)
+7bcbbf37:	5c 1c       	mov	(28,sp),a0
+7bcbbf39:	cd 80 f9 f0 	call	0x7bcbb8b9,[d2,d3,a2,a3],160
+7bcbbf3d:	a0 
+7bcbbf3e:	82          	mov	d0,d2
+7bcbbf3f:	aa 00       	cmp	0,d2
+7bcbbf41:	c8 05       	beq	0x7bcbbf46
+7bcbbf43:	cc a8 05    	jmp	0x7bcbc4eb
+7bcbbf46:	98          	mov	a2,a0
+7bcbbf47:	dd b7 cd 4a 	call	0x40168cfe,[],4
+7bcbbf4b:	c4 00 04 
+7bcbbf4e:	fc dc 24 81 	mov	-1677688540,a0
+7bcbbf52:	00 9c 
+7bcbbf54:	f0 60       	movhu	(a0),d0
+7bcbbf56:	fa e0 ff fe 	and	65279,d0
+7bcbbf5a:	f0 70       	movhu	d0,(a0)
+7bcbbf5c:	fc dc 62 c0 	mov	-1677672350,a0
+7bcbbf60:	00 9c 
+7bcbbf62:	f0 60       	movhu	(a0),d0
+7bcbbf64:	fa e0 ff fe 	and	65279,d0
+7bcbbf68:	f0 70       	movhu	d0,(a0)
+7bcbbf6a:	f0 60       	movhu	(a0),d0
+7bcbbf6c:	fa e0 ff fd 	and	65023,d0
+7bcbbf70:	f0 70       	movhu	d0,(a0)
+7bcbbf72:	f0 60       	movhu	(a0),d0
+7bcbbf74:	fa e0 ff fb 	and	64511,d0
+7bcbbf78:	f0 70       	movhu	d0,(a0)
+7bcbbf7a:	f0 60       	movhu	(a0),d0
+7bcbbf7c:	fa e0 ff f7 	and	63487,d0
+7bcbbf80:	f0 70       	movhu	d0,(a0)
+7bcbbf82:	f0 60       	movhu	(a0),d0
+7bcbbf84:	fa e0 ff ef 	and	61439,d0
+7bcbbf88:	f0 70       	movhu	d0,(a0)
+7bcbbf8a:	fc cc 88  	mov	34952,d0
+7bcbbf8e:	  

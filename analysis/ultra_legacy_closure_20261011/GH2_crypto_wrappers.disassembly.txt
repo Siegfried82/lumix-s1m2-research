@@ -1,0 +1,142 @@
+
+<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GH2__V11.bin.plaintext:     file format binary
+
+
+Disassembly of section .data:
+
+4015559c <.data+0x155b9c>:
+4015559c:	f8 00 04    	mov	(4,a0),d0
+4015559f:	de 00 00    	retf	[],0
+401555a2:	f8 00 08    	mov	(8,a0),d0
+401555a5:	de 00 00    	retf	[],0
+401555a8:	f8 00 04    	mov	(4,a0),d0
+401555ab:	de 00 00    	retf	[],0
+401555ae:	fc cc 88 99 	mov	1076140424,d0
+401555b2:	24 40 
+401555b4:	60          	mov	d0,(a0)
+401555b5:	80 10       	mov	16,d0
+401555b7:	91          	mov	a0,a1
+401555b8:	51          	inc4	a1
+401555b9:	61          	mov	d0,(a1)
+401555ba:	f8 11 04    	mov	d0,(4,a1)
+401555bd:	cd 10 00 00 	call	0x401555cd,[],4
+401555c1:	04 
+401555c2:	00          	clr	d0
+401555c3:	df 00 04    	ret	[],4
+401555c6:	00          	clr	d0
+401555c7:	de 00 00    	retf	[],0
+401555ca:	f8 fe fc    	add	-4,sp
+401555cd:	20 0c       	add	12,a0
+401555cf:	dd 8d e6 ea 	call	0x40003c5c,[],0
+401555d3:	ff 00 00 
+401555d6:	00          	clr	d0
+401555d7:	df 00 04    	ret	[],4
+401555da:	f8 fe fc    	add	-4,sp
+401555dd:	20 0c       	add	12,a0
+401555df:	dd a9 e6 ea 	call	0x40003c88,[d2,d3,a2,a3],20
+401555e3:	ff f0 14 
+401555e6:	00          	clr	d0
+401555e7:	df 00 04    	ret	[],4
+401555ea:	f8 fe fc    	add	-4,sp
+401555ed:	91          	mov	a0,a1
+401555ee:	51          	inc4	a1
+401555ef:	90 08       	mov	8,a0
+401555f1:	f1 74       	add	a1,a0
+401555f3:	21 60       	add	96,a1
+401555f5:	dd 16 e7 ea 	call	0x40003d0b,[d2,d3,a2,a3],24
+401555f9:	ff f0 18 
+401555fc:	00          	clr	d0
+401555fd:	df 00 04    	ret	[],4
+40155600:	cf 20       	movm	[a2],(sp)
+40155602:	f8 fe fc    	add	-4,sp
+40155605:	96          	mov	a1,a2
+40155606:	95 64       	mov	100,a1
+40155608:	f1 71       	add	a0,a1
+4015560a:	80 10       	mov	16,d0
+4015560c:	98          	mov	a2,a0
+4015560d:	dd bb c3 af 	call	0x7bc519c8,[a2,a3],8
+40155611:	3b 30 08 
+40155614:	00          	clr	d0
+40155615:	df 20 08    	ret	[a2],8
+40155618:	fc cc 9c 99 	mov	1076140444,d0
+4015561c:	24 40 
+4015561e:	60          	mov	d0,(a0)
+4015561f:	80 10       	mov	16,d0
+40155621:	50          	inc4	a0
+40155622:	60          	mov	d0,(a0)
+40155623:	f8 10 04    	mov	d0,(4,a0)
+40155626:	00          	clr	d0
+40155627:	f8 10 08    	mov	d0,(8,a0)
+4015562a:	2c 80 00    	mov	128,d0
+4015562d:	f8 10 0c    	mov	d0,(12,a0)
+40155630:	20 10       	add	16,a0
+40155632:	dd e7 ad f0 	call	0x40060419,[],4
+40155636:	ff 00 04 
+40155639:	00          	clr	d0
+4015563a:	df 00 04    	ret	[],4
+4015563d:	f8 fe fc    	add	-4,sp
+40155640:	20 14       	add	20,a0
+40155642:	dd e6 ad f0 	call	0x40060428,[],0
+40155646:	ff 00 00 
+40155649:	00          	clr	d0
+4015564a:	df 00 04    	ret	[],4
+4015564d:	f8 fe fc    	add	-4,sp
+40155650:	20 14       	add	20,a0
+40155652:	dd 26 ae f0 	call	0x40060478,[],0
+40155656:	ff 00 00 
+40155659:	00          	clr	d0
+4015565a:	df 00 04    	ret	[],4
+4015565d:	f8 fe fc    	add	-4,sp
+40155660:	20 14       	add	20,a0
+40155662:	dd 07 ae f0 	call	0x40060469,[],4
+40155666:	ff 00 04 
+40155669:	00          	clr	d0
+4015566a:	df 00 04    	ret	[],4
+4015566d:	f8 fe fc    	add	-4,sp
+40155670:	50          	inc4	a0
+40155671:	f8 00 0c    	mov	(12,a0),d0
+40155674:	20 10       	add	16,a0
+40155676:	f8 c8 03    	asr	3,d0
+40155679:	dd b3 ad f0 	call	0x4006042c,[],4
+4015567d:	ff 00 04 
+40155680:	00          	clr	d0
+40155681:	df 00 04    	ret	[],4
+40155684:	f8 10 10    	mov	d0,(16,a0)
+40155687:	00          	clr	d0
+40155688:	de 00 00    	retf	[],0
+4015568b:	f8 00 10    	mov	(16,a0),d0
+4015568e:	de 00 00    	retf	[],0
+40155691:	f8 fe fc    	add	-4,sp
+40155694:	20 14       	add	20,a0
+40155696:	dd e7 ad f0 	call	0x4006047d,[a2],8
+4015569a:	ff 20 08 
+4015569d:	00          	clr	d0
+4015569e:	df 00 04    	ret	[],4
+401556a1:	f8 fe fc    	add	-4,sp
+401556a4:	20 14       	add	20,a0
+401556a6:	dd 0a ae f0 	call	0x400604b0,[a2],8
+401556aa:	ff 20 08 
+401556ad:	00          	clr	d0
+401556ae:	df 00 04    	ret	[],4
+401556b1:	cf 80       	movm	[d2],(sp)
+401556b3:	f8 fe f8    	add	-8,sp
+401556b6:	82          	mov	d0,d2
+401556b7:	58 10       	mov	(16,sp),d0
+401556b9:	20 14       	add	20,a0
+401556bb:	42 04       	mov	d0,(4,sp)
+401556bd:	88          	mov	d2,d0
+401556be:	dd 25 ae f0 	call	0x400604e3,[d2,d3,a2,a3],40
+401556c2:	ff f0 28 
+401556c5:	88          	mov	d2,d0
+401556c6:	df 80 0c    	ret	[d2],12
+401556c9:	cf 80       	movm	[d2],(sp)
+401556cb:	f8 fe f8    	add	-8,sp
+401556ce:	82          	mov	d0,d2
+401556cf:	58 10       	mov	(16,sp),d0
+401556d1:	20 14       	add	20,a0
+401556d3:	42 04       	mov	d0,(4,sp)
+401556d5:	88          	mov	d2,d0
+401556d6:	dd d0 ae f0 	call	0x400605a6,[d2,d3,a2,a3],60
+401556da:	ff f0 3c 
+401556dd:	88          	mov	d2,d0
+401556de:	df 80 0c    	ret	[d2],12

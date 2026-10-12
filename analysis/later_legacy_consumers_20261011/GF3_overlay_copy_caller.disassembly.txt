@@ -1,0 +1,20 @@
+
+<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GF3__V12.bin.plaintext:     file format binary
+
+
+Disassembly of section .data:
+
+40000975 <.data+0xf75>:
+40000975:	f8 fe ec    	add	-20,sp
+40000978:	cd db 3e b0 	call	0x40004853,[d2,a2,a3],16
+4000097c:	10 
+4000097d:	f8 fe 14    	add	20,sp
+40000980:	fc cc 00 00 	mov	2075918336,d0
+40000984:	bc 7b 
+40000986:	f8 c4 10    	lsr	16,d0
+40000989:	fc 83 f2 2f 	movhu	d0,(0x9c012ff2)
+4000098d:	01 9c 
+4000098f:	fc cc 00 00 	mov	2075918336,d0
+40000993:	bc 7b 
+40000995:	fc 81 f0 2f 	mov	d0,(0x9c012ff0)
+40000999:	  

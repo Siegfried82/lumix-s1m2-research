@@ -1,0 +1,98 @@
+[
+  {
+    "file": "S1m2_V14.bin",
+    "index": 1,
+    "name": "loader1",
+    "claimed_offset": 6656,
+    "actual_offset": 6656,
+    "matches": true
+  },
+  {
+    "file": "S1m2_V14.bin",
+    "index": 5,
+    "name": "program",
+    "claimed_offset": 137728,
+    "actual_offset": 137728,
+    "matches": true
+  },
+  {
+    "file": "S1m2_V14.bin",
+    "index": 6,
+    "name": "compress_pr",
+    "claimed_offset": 47061504,
+    "actual_offset": 47061504,
+    "matches": true
+  },
+  {
+    "file": "S1m2_V14.bin",
+    "index": 7,
+    "name": "postboot1_r",
+    "claimed_offset": 63838720,
+    "actual_offset": 63838720,
+    "matches": true
+  },
+  {
+    "file": "S1m2_V14.bin",
+    "index": 12,
+    "name": "postboot1_r",
+    "claimed_offset": 84548096,
+    "actual_offset": 81140224,
+    "matches": false
+  },
+  {
+    "file": "S5___V28.bin",
+    "index": 0,
+    "name": "loader1",
+    "claimed_offset": 5120,
+    "actual_offset": 5632,
+    "matches": false
+  },
+  {
+    "file": "S5___V28.bin",
+    "index": 3,
+    "name": "program",
+    "claimed_offset": 92672,
+    "actual_offset": 97792,
+    "matches": false
+  },
+  {
+    "file": "S5___V28.bin",
+    "index": 27,
+    "name": "zboot",
+    "claimed_offset": 57731584,
+    "actual_offset": 59102720,
+    "matches": false
+  },
+  {
+    "file": "S5___V28.bin",
+    "index": 28,
+    "name": "dtb",
+    "claimed_offset": 57733632,
+    "actual_offset": 59104768,
+    "matches": false
+  },
+  {
+    "file": "S5___V28.bin",
+    "index": 29,
+    "name": "zimage",
+    "claimed_offset": 57737728,
+    "actual_offset": 59108864,
+    "matches": false
+  },
+  {
+    "file": "S5___V28.bin",
+    "index": 30,
+    "name": "rootfs1",
+    "claimed_offset": 60359168,
+    "actual_offset": 61730304,
+    "matches": false
+  },
+  {
+    "file": "S5___V28.bin",
+    "index": 31,
+    "name": "rootfs2",
+    "claimed_offset": 63504896,
+    "actual_offset": 64876032,
+    "matches": false
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "module": "v15_2.deghost",
+  "filename": "v15_2\\deghost.py",
+  "sha256": "be51206f3f02cefd8161335b2e6c724c49312b4b37967aed9d0844934b7566d2",
+  "functions": [
+    {
+      "scope": "v15_2.deghost",
+      "name": "<module>",
+      "line": 1,
+      "args": [],
+      "names": [
+        "__doc__",
+        "numpy",
+        "np",
+        "scene_consistency.detector",
+        "build_rejection",
+        "scene_gate",
+        "ScenePhysical",
+        "restore_with_rejection"
+      ],
+      "imports": [
+        "numpy",
+        "scene_consistency.detector",
+        "scene_gate"
+      ]
+    },
+    {
+      "scope": "v15_2.deghost.restore_with_rejection",
+      "name": "restore_with_rejection",
+      "line": 6,
+      "args": [
+        "rt",
+        "data",
+        "flows",
+        "H",
+        "grid",
+        "output",
+        "rejection"
+      ],
+      "names": [
+        "pipeline",
+        "restore",
+        "np",
+        "asarray",
+        "shape",
+        "isin",
+        "all",
+        "any",
+        "ValueError",
+        "upload",
+        "astype",
+        "release_external"
+      ],
+      "imports": [
+        "pipeline"
+      ]
+    },
+    {
+      "scope": "v15_2.deghost.restore_with_rejection.factory",
+      "name": "factory",
+      "line": 13,
+      "args": [
+        "rt",
+        "native"
+      ],
+      "names": [
+        "ScenePhysical"
+      ],
+      "imports": []
+    }
+  ],
+  "imports": [
+    "numpy",
+    "pipeline",
+    "scene_consistency.detector",
+    "scene_gate"
+  ],
+  "shaders": []
+}

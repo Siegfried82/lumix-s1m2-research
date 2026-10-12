@@ -1,0 +1,344 @@
+[
+  {
+    "method": "POST",
+    "path": "firmware/send",
+    "declaration": "InterfaceC2118h<LutDataBean> A(@i(\"Authorization\") String str, @i(\"Content-Length\") String str2, @i(\"transID\") String str3, @sa.a A0 a8)",
+    "line": 55
+  },
+  {
+    "method": "POST",
+    "path": "firmware/send-prepare",
+    "declaration": "InterfaceC2118h<LutDataBean> B(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 59
+  },
+  {
+    "method": "POST",
+    "path": "media/gallery/count",
+    "declaration": "l<GalleryCountResponseBean> C(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 63
+  },
+  {
+    "method": "POST",
+    "path": "photostyle/get-setting",
+    "declaration": "InterfaceC2118h<C0624e0> D(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 67
+  },
+  {
+    "method": "POST",
+    "path": "lut/send",
+    "declaration": "InterfaceC2118h<LutDataBean> E(@i(\"Authorization\") String str, @i(\"Content-Length\") String str2, @i(\"transID\") String str3, @i(\"Content-Type\") String str4, @sa.a A0 a8)",
+    "line": 70
+  },
+  {
+    "method": "POST",
+    "path": "auth",
+    "declaration": "l<AuthResponseBean> F(@sa.a AuthRequestBean authRequestBean)",
+    "line": 74
+  },
+  {
+    "method": "POST",
+    "path": "photostyle/start-stream",
+    "declaration": "InterfaceC2118h<T0> G(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 78
+  },
+  {
+    "method": "POST",
+    "path": "remote/get-state",
+    "declaration": "InterfaceC2118h<C0630h0> H(@i(\"Authorization\") String str)",
+    "line": 82
+  },
+  {
+    "method": "POST",
+    "path": "community/lut",
+    "declaration": "InterfaceC2118h<CommunityDownloadBean> I(@sa.a CommunityGenresPostBean communityGenresPostBean)",
+    "line": 86
+  },
+  {
+    "method": "GET",
+    "path": "app_version.json",
+    "declaration": "l<AppVersionResponseBean> J()",
+    "line": 89
+  },
+  {
+    "method": "POST",
+    "path": "photostyle/set-myphotostyle-setting",
+    "declaration": "InterfaceC2118h<T0> K(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 93
+  },
+  {
+    "method": "POST",
+    "path": "lut/delete",
+    "declaration": "InterfaceC2118h<LutDataBean> L(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)",
+    "line": 97
+  },
+  {
+    "method": "POST",
+    "path": "remote/get-setting",
+    "declaration": "InterfaceC2118h<C0624e0> M(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 101
+  },
+  {
+    "method": "POST",
+    "path": "lut/rename",
+    "declaration": "InterfaceC2118h<LutDataBean> N(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)",
+    "line": 105
+  },
+  {
+    "method": "POST",
+    "path": "photostyle/get-myphotostyle-setting",
+    "declaration": "InterfaceC2118h<E> O(@i(\"Authorization\") String str)",
+    "line": 109
+  },
+  {
+    "method": "POST",
+    "path": "community/creators",
+    "declaration": "InterfaceC2118h<CommunityCreatorListBean> P(@sa.a CommunityCreatorsPostBean communityCreatorsPostBean)",
+    "line": 113
+  },
+  {
+    "method": "POST",
+    "path": "media/gallery/current-sd",
+    "declaration": "l<GalleryCurrentSdResponseBean> Q(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 117
+  },
+  {
+    "method": "POST",
+    "path": "photostyle/restore-to-default",
+    "declaration": "InterfaceC2118h<T0> R(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 121
+  },
+  {
+    "method": "POST",
+    "path": "remote/get-lvport",
+    "declaration": "InterfaceC2118h<B> S(@i(\"Authorization\") String str)",
+    "line": 125
+  },
+  {
+    "method": "POST",
+    "path": "remote/set-setting",
+    "declaration": "InterfaceC2118h<T0> T(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 129
+  },
+  {
+    "method": "POST",
+    "path": "remote/camctrl",
+    "declaration": "InterfaceC2118h<C0625f> U(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 133
+  },
+  {
+    "method": "POST",
+    "path": "lut/info",
+    "declaration": "InterfaceC2118h<LutCameraBean> W(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)",
+    "line": 140
+  },
+  {
+    "method": "POST",
+    "path": "lut/file",
+    "declaration": "l<G0> X(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 144
+  },
+  {
+    "method": "POST",
+    "path": "lut/set-display-setting",
+    "declaration": "InterfaceC2118h<LutDataBean> Y(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)",
+    "line": 148
+  },
+  {
+    "method": "POST",
+    "path": "media/transfer/count",
+    "declaration": "InterfaceC2118h<CameraImageTransferCountResponseBean> Z(@i(\"Authorization\") String str)",
+    "line": 152
+  },
+  {
+    "method": "POST",
+    "path": "auto-transfer/get-content-info",
+    "declaration": "l<G0> a(@i(\"Authorization\") String str)",
+    "line": 156
+  },
+  {
+    "method": "POST",
+    "path": "community/luts/top",
+    "declaration": "InterfaceC2118h<CommunityLutsTopBean> a0(@sa.a CommunityLutTopPostBean communityLutTopPostBean)",
+    "line": 160
+  },
+  {
+    "method": "POST",
+    "path": "remote/camcmd",
+    "declaration": "l<C0619c> b(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 164
+  },
+  {
+    "method": "POST",
+    "path": "community/genres",
+    "declaration": "InterfaceC2118h<CommunityGenresBean> b0()",
+    "line": 168
+  },
+  {
+    "method": "POST",
+    "path": "media/gallery/count",
+    "declaration": "l<GalleryCountResponseBean> c0(@i(\"Authorization\") String str)",
+    "line": 176
+  },
+  {
+    "method": "POST",
+    "path": "media/image",
+    "declaration": "@w\n    InterfaceC2118h<G0> d(@i(\"Authorization\") String str, @i(\"Range\") String str2, @sa.a String str3)",
+    "line": 180
+  },
+  {
+    "method": "POST",
+    "path": "media/transfer/info",
+    "declaration": "InterfaceC2118h<CameraImageTransferInfoResponseBean> d0(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 185
+  },
+  {
+    "method": "POST",
+    "path": "remote/camcmd",
+    "declaration": "InterfaceC2118h<C0619c> e(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 189
+  },
+  {
+    "method": "POST",
+    "path": "lut/rearrange",
+    "declaration": "InterfaceC2118h<LutDataBean> e0(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)",
+    "line": 193
+  },
+  {
+    "method": "POST",
+    "path": "remote/stop-stream",
+    "declaration": "InterfaceC2118h<Z0> f(@i(\"Authorization\") String str)",
+    "line": 197
+  },
+  {
+    "method": "POST",
+    "path": "photostyle/change",
+    "declaration": "InterfaceC2118h<T0> f0(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 201
+  },
+  {
+    "method": "POST",
+    "path": "firmware/abort-send",
+    "declaration": "InterfaceC2118h<LutDataBean> g(@i(\"Authorization\") String str)",
+    "line": 205
+  },
+  {
+    "method": "POST",
+    "path": "photostyle/rename",
+    "declaration": "InterfaceC2118h<T0> g0(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 209
+  },
+  {
+    "method": "POST",
+    "path": "media/gallery/thumbnail",
+    "declaration": "@w\n    l<G0> h(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 213
+  },
+  {
+    "method": "GET",
+    "path": "firmware_list.json",
+    "declaration": "l<FirmListResponseBean> i()",
+    "line": 217
+  },
+  {
+    "method": "POST",
+    "path": "photostyle/save-current-setting",
+    "declaration": "InterfaceC2118h<T0> j(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 221
+  },
+  {
+    "method": "POST",
+    "path": "photostyle/get-display-setting",
+    "declaration": "InterfaceC2118h<C0662y> k(@i(\"Authorization\") String str)",
+    "line": 225
+  },
+  {
+    "method": "POST",
+    "path": "lut/send-prepare",
+    "declaration": "InterfaceC2118h<LutDataBean> l(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)",
+    "line": 229
+  },
+  {
+    "method": "POST",
+    "path": "community/luts/download",
+    "declaration": "@w\n    l<G0> m(@sa.a CommunityDownloadPostBean communityDownloadPostBean)",
+    "line": 233
+  },
+  {
+    "method": "POST",
+    "path": "lut/abort-send",
+    "declaration": "InterfaceC2118h<LutDataBean> n(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)",
+    "line": 238
+  },
+  {
+    "method": "POST",
+    "path": "media/image",
+    "declaration": "@w\n    InterfaceC2118h<G0> o(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 242
+  },
+  {
+    "method": "POST",
+    "path": "auth",
+    "declaration": "InterfaceC2118h<AuthResponseBean> p(@sa.a AuthRequestBean authRequestBean)",
+    "line": 247
+  },
+  {
+    "method": "POST",
+    "path": "media/burst/info",
+    "declaration": "l<BurstInfoResponseBean> q(@i(\"Authorization\") String str, @sa.a BurstInfoRequestBean burstInfoRequestBean)",
+    "line": 251
+  },
+  {
+    "method": "POST",
+    "path": "photostyle/set-display-setting",
+    "declaration": "InterfaceC2118h<T0> r(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 255
+  },
+  {
+    "method": "POST",
+    "path": "media/gallery/info",
+    "declaration": "l<GalleryInfoResponseBean> s(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 259
+  },
+  {
+    "method": "POST",
+    "path": "photostyle/rearrange",
+    "declaration": "InterfaceC2118h<T0> t(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 263
+  },
+  {
+    "method": "POST",
+    "path": "photostyle/load-preset-setting",
+    "declaration": "InterfaceC2118h<T0> u(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 267
+  },
+  {
+    "method": "POST",
+    "path": "community/luts/filter",
+    "declaration": "InterfaceC2118h<CommunityFilterBean> v(@sa.a CommunityListPostBean communityListPostBean)",
+    "line": 271
+  },
+  {
+    "method": "POST",
+    "path": "community/creator",
+    "declaration": "l<CommunityCreatorResponseBean> w(@sa.a CommunityGenresPostBean communityGenresPostBean)",
+    "line": 275
+  },
+  {
+    "method": "POST",
+    "path": "community/creators/countries",
+    "declaration": "InterfaceC2118h<CommunityCreatorsCountriesBean> x(@sa.a CommunityCreatorsCountriesPostBean communityCreatorsCountriesPostBean)",
+    "line": 279
+  },
+  {
+    "method": "POST",
+    "path": "remote/start-stream",
+    "declaration": "InterfaceC2118h<W0> y(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 283
+  },
+  {
+    "method": "POST",
+    "path": "media/transfer/notify",
+    "declaration": "InterfaceC2118h<G0> z(@i(\"Authorization\") String str, @sa.a String str2)",
+    "line": 287
+  }
+]

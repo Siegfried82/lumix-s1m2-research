@@ -1,0 +1,70 @@
+UUID: 4D454930-0100-1000-8001-f85c963d48d9
+req_acc_can -> <?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>ok</result></camrply>
+[1] req_acc -> 'ok_under_research,S5-70E253,remote,encrypted'
+[2] req_acc -> 'err_user_refused,S5-70E253,remote,encrypted'
+[3] req_acc -> 'ok_under_research,S5-70E253,remote,encrypted'
+[4] req_acc -> 'err_user_refused,S5-70E253,remote,encrypted'
+[5] req_acc -> 'ok_under_research,S5-70E253,remote,encrypted'
+[6] req_acc -> 'err_user_refused,S5-70E253,remote,encrypted'
+[7] req_acc -> 'ok_under_research,S5-70E253,remote,encrypted'
+[8] req_acc -> 'err_user_refused,S5-70E253,remote,encrypted'
+[9] req_acc -> 'ok_under_research,S5-70E253,remote,encrypted'
+[10] req_acc -> 'err_user_refused,S5-70E253,remote,encrypted'
+[11] req_acc -> 'err_user_refused,S5-70E253,remote,encrypted'
+[12] EXC timed out (reconnect)
+[13] EXC timed out (reconnect)
+[14] EXC timed out (reconnect)
+[15] EXC timed out (reconnect)
+[16] EXC timed out (reconnect)
+[17] EXC timed out (reconnect)
+[18] EXC timed out (reconnect)
+[19] EXC timed out (reconnect)
+[20] EXC timed out (reconnect)
+[21] EXC timed out (reconnect)
+[22] EXC timed out (reconnect)
+[23] EXC timed out (reconnect)
+[24] EXC timed out (reconnect)
+[25] EXC timed out (reconnect)
+[26] EXC timed out (reconnect)
+[27] EXC [Errno 64] Host is down (reconnect)
+[28] EXC [Errno 64] Host is down (reconnect)
+[29] EXC [Errno 64] Host is down (reconnect)
+[30] EXC [Errno 64] Host is down (reconnect)
+[31] EXC [Errno 64] Host is down (reconnect)
+[32] EXC [Errno 64] Host is down (reconnect)
+[33] EXC [Errno 64] Host is down (reconnect)
+[34] EXC [Errno 64] Host is down (reconnect)
+[35] EXC [Errno 64] Host is down (reconnect)
+[36] EXC [Errno 64] Host is down (reconnect)
+[37] EXC [Errno 64] Host is down (reconnect)
+[38] EXC [Errno 64] Host is down (reconnect)
+[39] EXC timed out (reconnect)
+
+=== post-req_acc getstate (same conn) ===
+Traceback (most recent call last):
+  File "<LOCAL_USER>/Documents/ChatGPT/S5逆向/campaign2/gate_probe.py", line 98, in <module>
+    main()
+  File "<LOCAL_USER>/Documents/ChatGPT/S5逆向/campaign2/gate_probe.py", line 71, in main
+    print(getstate(c))
+  File "<LOCAL_USER>/Documents/ChatGPT/S5逆向/campaign2/gate_probe.py", line 26, in getstate
+    _, body = req(c, "/cam.cgi?mode=getstate")
+  File "<LOCAL_USER>/Documents/ChatGPT/S5逆向/campaign2/gate_probe.py", line 19, in req
+    c.request("GET", path, headers=h)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1012, in _send_output
+    self.send(msg)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 952, in send
+    self.connect()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 923, in connect
+    self.sock = self._create_connection(
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py", line 843, in create_connection
+    raise err
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py", line 831, in create_connection
+    sock.connect(sa)
+OSError: [Errno 64] Host is down

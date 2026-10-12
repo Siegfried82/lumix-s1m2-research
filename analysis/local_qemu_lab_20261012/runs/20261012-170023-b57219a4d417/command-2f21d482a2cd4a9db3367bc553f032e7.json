@@ -1,0 +1,5 @@
+{
+  "command": "ls -l /; uname -r; cat /proc/cmdline; cat /proc/mounts",
+  "exit_code": 0,
+  "output": "total 1380\ndrwxr-xr-x    2 0        0             1060 Oct 12  2026 bin\ndrwxr-xr-x    5 0        0             2140 Jan  1 00:00 dev\ndrwxr-xr-x    2 0        0               40 Oct 12  2026 etc\n-rwxr-xr-x    1 0        0           703584 Oct 12  2026 ffs_min\n-rwxr-xr-x    1 0        0           706232 Oct 12  2026 init\ndr-xr-xr-x   43 0        0                0 Jan  1 00:00 proc\ndrwx------    2 0        0               40 Oct 12  2026 root\ndrwxr-xr-x    2 0        0              280 Oct 12  2026 sbin\ndr-xr-xr-x   12 0        0                0 Jan  1 00:00 sys\ndrwxr-xr-x    2 0        0               60 Jan  1 00:58 tmp\ndrwxr-xr-x    4 0        0               80 Oct 12  2026 usr\n4.19.124\nconsole=ttyAMA0 init=/init loglevel=7 sbox.shell=1\nrootfs / rootfs rw,size=498344k,nr_inodes=124586 0 0\nsysfs /sys sysfs rw,relatime 0 0\nproc /proc proc rw,relatime 0 0\nconfigfs /sys/kernel/config configfs rw,relatime 0 0\ndevtmpfs /dev devtmpfs rw,relatime,size=498344k,nr_inodes=124586,mode=755 0 0\nffs0 /dev/ffs0 functionfs rw,relatime 0 0\n"
+}

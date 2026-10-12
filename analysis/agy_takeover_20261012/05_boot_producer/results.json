@@ -1,0 +1,3615 @@
+{
+  "task_id": "05_boot_producer",
+  "title": "slram / IPCU / U-Boot gunzip 源数据生产者与可读代码链核查",
+  "input_hashes": [
+    {
+      "path": "analysis/loader_ipcufs_review_20261011/结论.md",
+      "size_bytes": 7346,
+      "sha256": "8985345740e69bc9ca432433cae62d256aff5b4d3ab44fe768903e50bf4be16a"
+    },
+    {
+      "path": "analysis/loader_ipcufs_review_20261011/source_hashes.json",
+      "size_bytes": 262,
+      "sha256": "2a56b2ec2da3df7e2588cecd26199910192da79b1aa8767ea68e7482070c47f8"
+    },
+    {
+      "path": "analysis/loader_ipcufs_review_20261011/directory_address_check.json",
+      "size_bytes": 14872,
+      "sha256": "8c68ba5c3b3cf75db2fe7ebf3fa8675161424cbf6d1fe1f28c5fa30244e60757"
+    },
+    {
+      "path": "analysis/sources/oss_static_inventory.json",
+      "size_bytes": 23282,
+      "sha256": "9c0aefaafff4a7aee392daa3c9a8235a271b5cbfc2bcec83964053d88b218857"
+    },
+    {
+      "path": "analysis/sources/leica_sl3_source_inventory.json",
+      "size_bytes": 36686,
+      "sha256": "341cfeef1d2805f7c41c29bb6207fe7bc510dad0c8c2e208735cab13a206e1d8"
+    },
+    {
+      "path": "analysis/agy_breakthrough_batch_20261011/04_boot_producer/agent_result.json",
+      "size_bytes": 4550,
+      "sha256": "b6d597e9d6c31910957c34c812715ba7d7369ca7617749af5a339a154160221b"
+    },
+    {
+      "path": "analysis/sources/linux-4.19.124.tar.gz",
+      "size_bytes": 165766380,
+      "sha256": "2067822653621ff9f3e1acdad99d7777812d0dc1036007921014da18fc9c6fce"
+    },
+    {
+      "path": "analysis/sources/oss_refresh_20261009/linux-4.19.124-nt.tar.gz",
+      "size_bytes": 165765706,
+      "sha256": "b219c9402eff8a7826a47371652d06d0810781e6bde4d1c415ae0a54456b5bb6"
+    },
+    {
+      "path": "analysis/sources/u-boot.tar.gz",
+      "size_bytes": 18796312,
+      "sha256": "f3d7fb6e3e609751d3d62d076fde898c39a969d22deb4ede4819ee4d982c4fae"
+    },
+    {
+      "path": "analysis/sources/oss_refresh_20261009/u-boot-nt.tar.gz",
+      "size_bytes": 18795242,
+      "sha256": "cc0503973d20df6e75e0c912b40e1e248f6002ba031003def8660fd36d683367"
+    },
+    {
+      "path": "analysis/sources/copyright.tar.gz",
+      "size_bytes": 858750,
+      "sha256": "a4e4b61662f1cc547a0567c3e5cf9dbb594a78d2729b34c05246dade657a0717"
+    },
+    {
+      "path": "analysis/sources/LeicaSL3_OSS.zip",
+      "size_bytes": 245154904,
+      "sha256": "36bb3e858170808a7f9eaa40837626c941ef446363766bc98cdb1ccd964aad80"
+    },
+    {
+      "path": "analysis/sources/u-boot/u-boot/GNUmakefile",
+      "size_bytes": 1156,
+      "sha256": "480ce15061eeb185fde7ce98d1b8806184708692979ca157882f5ab740006b55"
+    },
+    {
+      "path": "analysis/sources/oss_refresh_20261009/u-boot-nt/u-boot/GNUmakefile",
+      "size_bytes": 1156,
+      "sha256": "480ce15061eeb185fde7ce98d1b8806184708692979ca157882f5ab740006b55"
+    },
+    {
+      "path": "analysis/sources/u-boot/u-boot/arch/arm/dts/Makefile",
+      "size_bytes": 20591,
+      "sha256": "1104e19316a983c30275a3ceeb62aa84d48f9917bc3614f44b8051392833717c"
+    },
+    {
+      "path": "analysis/sources/u-boot/u-boot/configs/pvc04v_MC8241_defconfig",
+      "size_bytes": 1128,
+      "sha256": "2e5e511ce527dc7d3eeee171234638b9df7ed5378ebfd5e5e4a923941edf3cd4"
+    },
+    {
+      "path": "analysis/sources/oss_refresh_20261009/u-boot-nt/u-boot/configs/pvc04v_MC8266_defconfig",
+      "size_bytes": 1128,
+      "sha256": "6138b34bb1c57b90f9ff74f1cc02bdbc4fbf50a81e8d3eaa0de2452808f003d8"
+    },
+    {
+      "path": "analysis/sources/leica_sl3_selected/u-boot/configs/pvc04v_MC501_defconfig",
+      "size_bytes": 1126,
+      "sha256": "19dd82ae2f92bc8b9cafd5d2a60202006688287cdd8a0a801cc442fe338b8771"
+    },
+    {
+      "path": "analysis/sources/u-boot/u-boot/arch/arm/mach-milbeaut/Kconfig",
+      "size_bytes": 1537,
+      "sha256": "5b791e57f10032d4a3dafea54aae71f30ff4f9ed75815e250a8e0ee539600edb"
+    },
+    {
+      "path": "analysis/sources/u-boot/u-boot/arch/arm/mach-milbeaut/milbeaut.c",
+      "size_bytes": 1920,
+      "sha256": "95fb026bc447b59e53d699247f810738d3c58eb2a8d31d07d33d0d3bdb9f1d37"
+    },
+    {
+      "path": "analysis/sources/u-boot/u-boot/board/socionext/sc2006a-evb/sc2006a-evb.c",
+      "size_bytes": 167,
+      "sha256": "3c13a2ee7d7d9af468c98d28bdf7d515885edd273bf5a0640cf1fb6bfb41acbb"
+    },
+    {
+      "path": "analysis/sources/u-boot/u-boot/include/configs/sc2006a-evb.h",
+      "size_bytes": 1429,
+      "sha256": "6f9f272a1d2343c4a2f58e71c7e4a39fcbaea8ae26cac1676db3656137713c3c"
+    },
+    {
+      "path": "analysis/sources/oss_refresh_20261009/u-boot-nt/u-boot/include/configs/sc2006a-evb.h",
+      "size_bytes": 1429,
+      "sha256": "6f9f272a1d2343c4a2f58e71c7e4a39fcbaea8ae26cac1676db3656137713c3c"
+    },
+    {
+      "path": "analysis/sources/u-boot/u-boot/cmd/unzip.c",
+      "size_bytes": 2147,
+      "sha256": "5cb720b1b7c3bef78290d11537080e54b5ad138afe81a5daec961fff4bb6b749"
+    },
+    {
+      "path": "analysis/sources/u-boot/u-boot/lib/gunzip.c",
+      "size_bytes": 6709,
+      "sha256": "b82deca7490fea550d03a51d4350e0ed9388e0c8305b4befc0fc8bda13bd8491"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/arch/arm64/configs/pvc04v_MC8241_defconfig",
+      "size_bytes": 14606,
+      "sha256": "757efee7162ca853d1970dc5d988accc6a0c07a2ef362ca6fc14408b3a9cc0c2"
+    },
+    {
+      "path": "analysis/sources/oss_refresh_20261009/linux-4.19.124/arch/arm64/configs/pvc04v_MC8266_defconfig",
+      "size_bytes": 14606,
+      "sha256": "e18271a582839ef4312c3f45b3be1db906f336f10014ed57aac3d2451de8fd86"
+    },
+    {
+      "path": "analysis/sources/leica_sl3_selected/linux-4.19.124/arch/arm64/configs/pvc04v_DC1231_defconfig",
+      "size_bytes": 12972,
+      "sha256": "7bbfb8d0c7969c5ca0db962634d60f3d7e80a44fcc6b42fbf9352d9ebc72659d"
+    },
+    {
+      "path": "analysis/sources/leica_sl3_selected/linux-4.19.124/arch/arm64/configs/pvc04v_DC1232_defconfig",
+      "size_bytes": 12972,
+      "sha256": "b429006ce1115264d8311d093ed82651bcec57147bb1215685a0f8526abd3b05"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241.dts",
+      "size_bytes": 17255,
+      "sha256": "170b51a3057efdb72caac696a9a7530d780187b5af13b6710518f1390092a33a"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241.dtsi",
+      "size_bytes": 27422,
+      "sha256": "796ed66d3c14edb6077afe49833433107cef828f0528f2926f7975fcfe4d6462"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241-rtos.h",
+      "size_bytes": 1992,
+      "sha256": "8c9952944da3b65eacb6354ec995b19c9ab287ea50e78db4cbfce17ed81ead61"
+    },
+    {
+      "path": "analysis/sources/linux-4.19.124.tar.gz::linux-4.19.124/drivers/mtd/devices/slram.c",
+      "size_bytes": 8710,
+      "sha256": "462d4b0fe7fa19792efdd6c1cb856f0ea7717eb8f8d3ce109099508e2f584c23"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/fs/ipcufs.c",
+      "size_bytes": 56540,
+      "sha256": "d026653716aa62a87dee10c05fdc6c94e68c7ea0046813f3e4399725639b79eb"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/drivers/block/ipcu.c",
+      "size_bytes": 10119,
+      "sha256": "a9ffb9c7f0ec088e351063a119d016a8827a1864a855e5c518d81a6e24447ba1"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/drivers/sniipcu/shared_mem/shared_mem.c",
+      "size_bytes": 2666,
+      "sha256": "67c1783ef86bb469b4381b56fe4ebf1ddd3fb8725b614ccb53bc854a817b5be4"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/drivers/sniipcu/sni_ipcu_drv.c",
+      "size_bytes": 14290,
+      "sha256": "6b697a58585e16c690e3b8890ef9d2d16a1d9ca0643134e60d4b6c6ccd218f15"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/drivers/sniipcu/sni_ipcu_parts.c",
+      "size_bytes": 15060,
+      "sha256": "1a1f2a9ce5f6e59836781248d11f96c61fe1c7aa9ad3cfbb5697e80ae6e577b9"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/include/linux/sni_ipcu_parts.h",
+      "size_bytes": 4696,
+      "sha256": "9941285c1e9585d4468d370e184565904a9f636d54f13ce4943ff8314987f6ce"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/drivers/dm/dmdrv.c",
+      "size_bytes": 26170,
+      "sha256": "98c3855b063c3ea8c482e4f838b053afc6f9f95db003166d77f7aa64f3578c7d"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/drivers/pvc/buffer/main.c",
+      "size_bytes": 13905,
+      "sha256": "ee5d531276ca5d02a967315185ed00ed2b9efd15766f364825ead6c3cedcb512"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/drivers/snidsp/sni_dsp_drv_m20v.c",
+      "size_bytes": 28666,
+      "sha256": "5770acb0d10ac2660875022b427691c54d8836e069bbf8cbb997ad67a4f42fab"
+    }
+  ],
+  "build_selection": {
+    "uboot_gnumakefile_identical_across_es_nt": true,
+    "uboot_gnumakefile_sha256": "480ce15061eeb185fde7ce98d1b8806184708692979ca157882f5ab740006b55",
+    "linux_gnumakefile_sha256": "ed05ff965191d46a0c9984c707c6deb2eebf16feaeaf47b74c02cfff6d7b5cca",
+    "linux_socionext_dts_makefile_sha256": "2f73b152b14ab780750c61a72313bcd1068f58f1ebe03a4667b6389f85dc1820",
+    "uboot_defconfig_pattern": "pvc04v_$(PVCPF_SUBMODEL)$(PVCPF_HW_VERSION)_defconfig",
+    "uboot_dtb_pattern": "pvc04v-$(PVCPF_SUBMODEL)$(PVCPF_HW_VERSION).dtb",
+    "linux_defconfig_pattern": "pvc04v_$(PVCPF_SUBMODEL)$(PVCPF_HW_VERSION)_defconfig",
+    "linux_dtb_targets_in_makefile": [
+      "dtb-$(CONFIG_ARCH_MILBEAUT) += \\",
+      "pvc04v-$(PVCPF_SUBMODEL)$(PVCPF_HW_VERSION).dtb \\",
+      "pvc04v-$(PVCPF_SUBMODEL)$(PVCPF_HW_VERSION)-shell.dtb"
+    ],
+    "es_nt_socionext_dts_files": [
+      "pvc04v-MC8241-gpio.h",
+      "pvc04v-MC8241-rtos.h",
+      "pvc04v-MC8241.dts",
+      "pvc04v-MC8241.dtsi"
+    ],
+    "sl3_socionext_dts_files": [
+      "pvc04v-DC1231-gpio.h",
+      "pvc04v-DC1231-rtos.h",
+      "pvc04v-DC1231.dts",
+      "pvc04v-DC1231.dtsi",
+      "pvc04v-DC1232-gpio.h",
+      "pvc04v-DC1232-rtos.h",
+      "pvc04v-DC1232.dts",
+      "pvc04v-DC1232.dtsi"
+    ],
+    "shell_dts_present_in_oss": false,
+    "mc8243_present_in_oss": false,
+    "uboot_defconfigs": {
+      "S1M2_ES_MC8241": {
+        "path": "analysis/sources/u-boot/u-boot/configs/pvc04v_MC8241_defconfig",
+        "sha256": "2e5e511ce527dc7d3eeee171234638b9df7ed5378ebfd5e5e4a923941edf3cd4",
+        "spl_enabled_lines": [],
+        "sys_text_base": [
+          "CONFIG_SYS_TEXT_BASE=0x400180000"
+        ],
+        "bootdelay": [
+          "CONFIG_BOOTDELAY=-2"
+        ]
+      },
+      "S1M2_NT_MC8266": {
+        "path": "analysis/sources/oss_refresh_20261009/u-boot-nt/u-boot/configs/pvc04v_MC8266_defconfig",
+        "sha256": "6138b34bb1c57b90f9ff74f1cc02bdbc4fbf50a81e8d3eaa0de2452808f003d8",
+        "spl_enabled_lines": [],
+        "sys_text_base": [
+          "CONFIG_SYS_TEXT_BASE=0x400180000"
+        ],
+        "bootdelay": [
+          "CONFIG_BOOTDELAY=-2"
+        ]
+      },
+      "SL3_MC501": {
+        "path": "analysis/sources/leica_sl3_selected/u-boot/configs/pvc04v_MC501_defconfig",
+        "sha256": "19dd82ae2f92bc8b9cafd5d2a60202006688287cdd8a0a801cc442fe338b8771",
+        "spl_enabled_lines": [],
+        "sys_text_base": [
+          "CONFIG_SYS_TEXT_BASE=0x400180000"
+        ],
+        "bootdelay": [
+          "CONFIG_BOOTDELAY=-2"
+        ]
+      }
+    }
+  },
+  "amp_and_gic_partitioning": {
+    "gic_v3_driver": {
+      "tar_member": "linux-4.19.124/drivers/irqchip/irq-gic-v3.c",
+      "sha256": "4129175702b75691d41d7fed0d726920de1954e81ddc7b60ece79c73b2841597",
+      "size_bytes": 46530,
+      "kconfig_guard": "CONFIG_DEBUG_GIC_BL",
+      "relevant_lines": [
+        {
+          "line": 444,
+          "text": "\tfor (i = 32; i < gic_data.irq_nr; i++) {"
+        },
+        {
+          "line": 445,
+          "text": "\t\t/*"
+        },
+        {
+          "line": 446,
+          "text": "\t\t * skip black-listed interrupts"
+        },
+        {
+          "line": 447,
+          "text": "\t\t */"
+        },
+        {
+          "line": 448,
+          "text": "\t\tif (gic_data.bl_arr[i])"
+        },
+        {
+          "line": 449,
+          "text": "\t\t\tcontinue;"
+        },
+        {
+          "line": 450,
+          "text": ""
+        },
+        {
+          "line": 451,
+          "text": "\t\t/*"
+        },
+        {
+          "line": 452,
+          "text": "\t\t * Configure SPIs as non-secure Group-1. This will only matter"
+        },
+        {
+          "line": 453,
+          "text": "\t\t * if the GIC only has a single security state. This will not"
+        },
+        {
+          "line": 454,
+          "text": "\t\t * do the right thing if the kernel is running in secure mode,"
+        },
+        {
+          "line": 455,
+          "text": "\t\t * but that's not the intended use case anyway."
+        },
+        {
+          "line": 456,
+          "text": "\t\t */"
+        },
+        {
+          "line": 457,
+          "text": "\t\tval = readl_relaxed(base + GICD_IGROUPR + (i / 32) * 4);"
+        },
+        {
+          "line": 458,
+          "text": "\t\tval |= 1 << (i % 32);"
+        },
+        {
+          "line": 459,
+          "text": "\t\twritel_relaxed(val, base + GICD_IGROUPR + (i / 32) * 4);"
+        },
+        {
+          "line": 460,
+          "text": ""
+        },
+        {
+          "line": 461,
+          "text": "\t\t/*"
+        },
+        {
+          "line": 462,
+          "text": "\t\t * Set all global interrupts to be level triggered, active low."
+        },
+        {
+          "line": 463,
+          "text": "\t\t */"
+        },
+        {
+          "line": 464,
+          "text": "\t\tval = readl_relaxed(base + GICD_ICFGR + (i / 16) * 4);"
+        },
+        {
+          "line": 465,
+          "text": "\t\tval &= ~(0x3 << ((i * 2) % 32));"
+        },
+        {
+          "line": 466,
+          "text": "\t\twritel_relaxed(val, base + GICD_ICFGR + (i / 16) * 4);"
+        },
+        {
+          "line": 467,
+          "text": ""
+        },
+        {
+          "line": 468,
+          "text": "\t\t/*"
+        },
+        {
+          "line": 469,
+          "text": "\t\t * Set priority on all global interrupts."
+        },
+        {
+          "line": 470,
+          "text": "\t\t */"
+        },
+        {
+          "line": 471,
+          "text": "\t\twriteb_relaxed(0xa0, base + GICD_IPRIORITYR + i);"
+        },
+        {
+          "line": 472,
+          "text": ""
+        },
+        {
+          "line": 473,
+          "text": "\t\t/*"
+        },
+        {
+          "line": 474,
+          "text": "\t\t * Deactivate and disable all SPIs. Leave the PPI and SGIs"
+        },
+        {
+          "line": 475,
+          "text": "\t\t * alone as they are in the redistributor registers on GICv3."
+        },
+        {
+          "line": 476,
+          "text": "\t\t */"
+        },
+        {
+          "line": 477,
+          "text": "\t\twritel_relaxed(1 << (i % 32), base +"
+        },
+        {
+          "line": 478,
+          "text": "\t\t\t\tGICD_ICACTIVER + (i / 32) * 4);"
+        },
+        {
+          "line": 479,
+          "text": "\t\twritel_relaxed(1 << (i % 32), base +"
+        },
+        {
+          "line": 480,
+          "text": "\t\t\t\tGICD_ICENABLER + (i / 32) * 4);"
+        },
+        {
+          "line": 481,
+          "text": ""
+        },
+        {
+          "line": 482,
+          "text": "\t\tgic_dist_wait_for_rwp();"
+        },
+        {
+          "line": 483,
+          "text": "\t}"
+        },
+        {
+          "line": 484,
+          "text": ""
+        },
+        {
+          "line": 485,
+          "text": "\t/* Enable distributor with ARE, Group1 */"
+        },
+        {
+          "line": 486,
+          "text": "\tval = readl_relaxed(base + GICD_CTLR);"
+        },
+        {
+          "line": 487,
+          "text": "\tval |= GICD_CTLR_ARE_NS | GICD_CTLR_ENABLE_G1A | GICD_CTLR_ENABLE_G1;"
+        },
+        {
+          "line": 488,
+          "text": "\twritel_relaxed(val, base + GICD_CTLR);"
+        },
+        {
+          "line": 489,
+          "text": ""
+        },
+        {
+          "line": 490,
+          "text": "\t/*"
+        },
+        {
+          "line": 491,
+          "text": "\t * Set all global interrupts to the boot CPU only. ARE must be"
+        },
+        {
+          "line": 492,
+          "text": "\t * enabled."
+        },
+        {
+          "line": 493,
+          "text": "\t */"
+        },
+        {
+          "line": 494,
+          "text": "\taffinity = gic_mpidr_to_affinity(cpu_logical_map(smp_processor_id()));"
+        },
+        {
+          "line": 495,
+          "text": "\tfor (i = 32; i < gic_data.irq_nr; i++) {"
+        },
+        {
+          "line": 496,
+          "text": "\t\t/*"
+        },
+        {
+          "line": 497,
+          "text": "\t\t * skip black-listed interrupts"
+        },
+        {
+          "line": 498,
+          "text": "\t\t */"
+        },
+        {
+          "line": 499,
+          "text": "\t\tif (gic_data.bl_arr[i])"
+        },
+        {
+          "line": 500,
+          "text": "\t\t\tcontinue;"
+        },
+        {
+          "line": 501,
+          "text": ""
+        },
+        {
+          "line": 502,
+          "text": "\t\tgic_write_irouter(affinity, base + GICD_IROUTER + i * 8);"
+        },
+        {
+          "line": 503,
+          "text": "\t}"
+        },
+        {
+          "line": 1445,
+          "text": "\tif (gic_data.bl_sz > 1020) {"
+        },
+        {
+          "line": 1446,
+          "text": "\t\tpr_err(\"The black-list array is too long\\n\");"
+        },
+        {
+          "line": 1447,
+          "text": "\t\treturn -EINVAL;"
+        },
+        {
+          "line": 1448,
+          "text": "\t}"
+        },
+        {
+          "line": 1449,
+          "text": ""
+        },
+        {
+          "line": 1450,
+          "text": "\t/* poison the list empty */"
+        },
+        {
+          "line": 1451,
+          "text": "\tfor (i = 0; i < 1020; i++)"
+        },
+        {
+          "line": 1452,
+          "text": "\t\tgic_data.bl_arr[i] = false;"
+        },
+        {
+          "line": 1453,
+          "text": ""
+        },
+        {
+          "line": 1454,
+          "text": "\tif (gic_data.bl_sz > 0) {"
+        },
+        {
+          "line": 1455,
+          "text": "\t\t/* read the black-list into temp buffer */"
+        },
+        {
+          "line": 1456,
+          "text": "\t\tbl = kzalloc(gic_data.bl_sz * sizeof(u32), GFP_KERNEL);"
+        },
+        {
+          "line": 1457,
+          "text": "\t\tif (!bl)"
+        },
+        {
+          "line": 1458,
+          "text": "\t\t\treturn -ENOMEM;"
+        },
+        {
+          "line": 1459,
+          "text": ""
+        },
+        {
+          "line": 1460,
+          "text": "\t\terr = of_property_read_u32_array(node, \"black-list\","
+        },
+        {
+          "line": 1461,
+          "text": "\t\t\t\t\t       bl, gic_data.bl_sz);"
+        },
+        {
+          "line": 1462,
+          "text": "\t\tif (err) {"
+        },
+        {
+          "line": 1463,
+          "text": "\t\t\tpr_err(\"Failed to read black-list array\\n\");"
+        },
+        {
+          "line": 1464,
+          "text": "\t\t\tkfree(bl);"
+        },
+        {
+          "line": 1465,
+          "text": "\t\t\treturn -EINVAL;"
+        },
+        {
+          "line": 1466,
+          "text": "\t\t}"
+        },
+        {
+          "line": 1467,
+          "text": ""
+        }
+      ]
+    },
+    "spi_summary": {
+      "total_spi_range_0_to_415": 416,
+      "blacklisted_spi_count": 403,
+      "allowed_spi_count": 13,
+      "allowed_spis": [
+        185,
+        186,
+        189,
+        192,
+        194,
+        197,
+        306,
+        312,
+        315,
+        321,
+        385,
+        386,
+        387
+      ],
+      "allowed_spi_nodes": {
+        "185": [],
+        "186": [],
+        "189": [],
+        "192": [],
+        "194": [],
+        "197": [],
+        "306": [],
+        "312": [],
+        "315": [],
+        "321": [],
+        "385": [],
+        "386": [],
+        "387": []
+      },
+      "storage_spis_blacklisted_in_linux": {
+        "182": {
+          "blacklisted": true,
+          "nodes": []
+        },
+        "183": {
+          "blacklisted": true,
+          "nodes": []
+        },
+        "184": {
+          "blacklisted": true,
+          "nodes": []
+        },
+        "187": {
+          "blacklisted": true,
+          "nodes": []
+        },
+        "188": {
+          "blacklisted": true,
+          "nodes": []
+        },
+        "190": {
+          "blacklisted": true,
+          "nodes": []
+        },
+        "191": {
+          "blacklisted": true,
+          "nodes": []
+        },
+        "323": {
+          "blacklisted": true,
+          "nodes": []
+        },
+        "324": {
+          "blacklisted": true,
+          "nodes": []
+        },
+        "325": {
+          "blacklisted": true,
+          "nodes": []
+        }
+      }
+    },
+    "do_mounts_driver": {
+      "tar_member": "linux-4.19.124/init/do_mounts.c",
+      "sha256": "3fc52c065a96c967141208eb6ae0e7eed2e226131aa5e4762549aa37e50dda36",
+      "size_bytes": 14624,
+      "prepare_namespace_lines": [
+        {
+          "line": 538,
+          "text": "void __init prepare_namespace(void)"
+        },
+        {
+          "line": 539,
+          "text": "{"
+        },
+        {
+          "line": 540,
+          "text": "\tint is_floppy;"
+        },
+        {
+          "line": 541,
+          "text": ""
+        },
+        {
+          "line": 542,
+          "text": "\tif (root_delay) {"
+        },
+        {
+          "line": 543,
+          "text": "\t\tprintk(KERN_INFO \"Waiting %d sec before mounting root device...\\n\","
+        },
+        {
+          "line": 544,
+          "text": "\t\t       root_delay);"
+        },
+        {
+          "line": 545,
+          "text": "\t\tssleep(root_delay);"
+        },
+        {
+          "line": 546,
+          "text": "\t}"
+        },
+        {
+          "line": 547,
+          "text": ""
+        },
+        {
+          "line": 548,
+          "text": "\t/*"
+        },
+        {
+          "line": 549,
+          "text": "\t * wait for the known devices to complete their probing"
+        },
+        {
+          "line": 550,
+          "text": "\t *"
+        },
+        {
+          "line": 551,
+          "text": "\t * Note: this is a potential source of long boot delays."
+        },
+        {
+          "line": 552,
+          "text": "\t * For example, it is not atypical to wait 5 seconds here"
+        },
+        {
+          "line": 553,
+          "text": "\t * for the touchpad of a laptop to initialize."
+        },
+        {
+          "line": 554,
+          "text": "\t */"
+        },
+        {
+          "line": 555,
+          "text": "\twait_for_device_probe();"
+        },
+        {
+          "line": 556,
+          "text": ""
+        },
+        {
+          "line": 557,
+          "text": "\tmd_run_setup();"
+        },
+        {
+          "line": 558,
+          "text": ""
+        },
+        {
+          "line": 559,
+          "text": "\tif (saved_root_name[0]) {"
+        },
+        {
+          "line": 560,
+          "text": "\t\troot_device_name = saved_root_name;"
+        },
+        {
+          "line": 561,
+          "text": "\t\tif (!strncmp(root_device_name, \"mtd\", 3) ||"
+        },
+        {
+          "line": 562,
+          "text": "\t\t    !strncmp(root_device_name, \"ubi\", 3)) {"
+        },
+        {
+          "line": 563,
+          "text": "\t\t\tmount_block_root(root_device_name, root_mountflags);"
+        },
+        {
+          "line": 564,
+          "text": "\t\t\tgoto out;"
+        },
+        {
+          "line": 565,
+          "text": "\t\t}"
+        },
+        {
+          "line": 566,
+          "text": "\t\tROOT_DEV = name_to_dev_t(root_device_name);"
+        },
+        {
+          "line": 567,
+          "text": "\t\tif (strncmp(root_device_name, \"/dev/\", 5) == 0)"
+        },
+        {
+          "line": 568,
+          "text": "\t\t\troot_device_name += 5;"
+        },
+        {
+          "line": 569,
+          "text": "\t}"
+        },
+        {
+          "line": 570,
+          "text": ""
+        },
+        {
+          "line": 571,
+          "text": "\tif (initrd_load())"
+        },
+        {
+          "line": 572,
+          "text": "\t\tgoto out;"
+        },
+        {
+          "line": 573,
+          "text": ""
+        },
+        {
+          "line": 574,
+          "text": "\t/* wait for any asynchronous scanning to complete */"
+        },
+        {
+          "line": 575,
+          "text": "\tif ((ROOT_DEV == 0) && root_wait) {"
+        },
+        {
+          "line": 576,
+          "text": "\t\tprintk(KERN_INFO \"Waiting for root device %s...\\n\","
+        },
+        {
+          "line": 577,
+          "text": "\t\t\tsaved_root_name);"
+        },
+        {
+          "line": 578,
+          "text": "\t\twhile (driver_probe_done() != 0 ||"
+        },
+        {
+          "line": 579,
+          "text": "\t\t\t(ROOT_DEV = name_to_dev_t(saved_root_name)) == 0)"
+        },
+        {
+          "line": 580,
+          "text": "\t\t\tmsleep(5);"
+        },
+        {
+          "line": 581,
+          "text": "\t\tasync_synchronize_full();"
+        },
+        {
+          "line": 582,
+          "text": "\t}"
+        },
+        {
+          "line": 583,
+          "text": ""
+        },
+        {
+          "line": 584,
+          "text": "\tis_floppy = MAJOR(ROOT_DEV) == FLOPPY_MAJOR;"
+        },
+        {
+          "line": 585,
+          "text": ""
+        },
+        {
+          "line": 586,
+          "text": "\tif (is_floppy && rd_doload && rd_load_disk(0))"
+        },
+        {
+          "line": 587,
+          "text": "\t\tROOT_DEV = Root_RAM0;"
+        },
+        {
+          "line": 588,
+          "text": ""
+        },
+        {
+          "line": 589,
+          "text": "\tmount_root();"
+        },
+        {
+          "line": 590,
+          "text": "out:"
+        },
+        {
+          "line": 591,
+          "text": "\tdevtmpfs_mount(\"dev\");"
+        },
+        {
+          "line": 592,
+          "text": "\tksys_mount(\".\", \"/\", NULL, MS_MOVE, NULL);"
+        },
+        {
+          "line": 593,
+          "text": "\tksys_chroot(\".\");"
+        },
+        {
+          "line": 594,
+          "text": "}"
+        }
+      ]
+    }
+  },
+  "ipcu_shared_mem_and_handshake": {
+    "rtos_header_lines": [
+      {
+        "line": 18,
+        "text": "#define SHMEM_TOP_ADDRU\t\t0x00000004"
+      },
+      {
+        "line": 19,
+        "text": "#define SHMEM_TOP_ADDRL\t\t0xAC000000"
+      },
+      {
+        "line": 20,
+        "text": "#define SHMEM_TOP_ADDR_SIZE\t0x00000200"
+      },
+      {
+        "line": 21,
+        "text": ""
+      },
+      {
+        "line": 22,
+        "text": "#define SHMEM_IPCU_BUFFER_ADDR_OFFSET\t0x08"
+      },
+      {
+        "line": 23,
+        "text": "#define SHMEM_IPCU_BUFFER_SIZE_OFFSET\t0x10"
+      },
+      {
+        "line": 24,
+        "text": "#define SHMEM_IPCU_SYNC_ADDR_OFFSET\t0x18"
+      },
+      {
+        "line": 25,
+        "text": "#define SHMEM_IPCU_SYNC_SIZE_OFFSET\t0x20"
+      },
+      {
+        "line": 26,
+        "text": "#define SHMEM_MOVIE_ADDR_OFFSET\t0x28"
+      },
+      {
+        "line": 27,
+        "text": "#define SHMEM_MOVIE_SIZE_OFFSET\t0x30"
+      },
+      {
+        "line": 28,
+        "text": "#define SHMEM_AUDIO_ADDR_OFFSET\t0x38"
+      },
+      {
+        "line": 29,
+        "text": "#define SHMEM_AUDIO_SIZE_OFFSET\t0x40"
+      },
+      {
+        "line": 30,
+        "text": ""
+      },
+      {
+        "line": 31,
+        "text": "/* macro */"
+      },
+      {
+        "line": 32,
+        "text": "#define GET_IPCU_BUFFER_ADDRU\tSHMEM_TOP_ADDRU"
+      },
+      {
+        "line": 33,
+        "text": "#define GET_IPCU_BUFFER_ADDRL\t(SHMEM_TOP_ADDRL + SHMEM_IPCU_BUFFER_ADDR_OFFSET)"
+      },
+      {
+        "line": 34,
+        "text": "#define GET_IPCU_BUFFER_SIZEU\tSHMEM_TOP_ADDRU"
+      },
+      {
+        "line": 35,
+        "text": "#define GET_IPCU_BUFFER_SIZEL\t(SHMEM_TOP_ADDRL + SHMEM_IPCU_BUFFER_SIZE_OFFSET)"
+      },
+      {
+        "line": 36,
+        "text": "#define GET_IPCU_SYNC_ADDRU\tSHMEM_TOP_ADDRU"
+      },
+      {
+        "line": 37,
+        "text": "#define GET_IPCU_SYNC_ADDRL\t(SHMEM_TOP_ADDRL + SHMEM_IPCU_SYNC_ADDR_OFFSET)"
+      },
+      {
+        "line": 38,
+        "text": "#define GET_IPCU_SYNC_SIZEU\tSHMEM_TOP_ADDRU"
+      },
+      {
+        "line": 39,
+        "text": "#define GET_IPCU_SYNC_SIZEL\t(SHMEM_TOP_ADDRL + SHMEM_IPCU_SYNC_SIZE_OFFSET)"
+      },
+      {
+        "line": 40,
+        "text": "#define GET_MOVIE_ADDRU\tSHMEM_TOP_ADDRU"
+      },
+      {
+        "line": 41,
+        "text": "#define GET_MOVIE_ADDRL\t(SHMEM_TOP_ADDRL + SHMEM_MOVIE_ADDR_OFFSET)"
+      },
+      {
+        "line": 42,
+        "text": "#define GET_MOVIE_SIZEU\tSHMEM_TOP_ADDRU"
+      },
+      {
+        "line": 43,
+        "text": "#define GET_MOVIE_SIZEL\t(SHMEM_TOP_ADDRL + SHMEM_MOVIE_SIZE_OFFSET)"
+      },
+      {
+        "line": 44,
+        "text": "#define GET_AUDIO_ADDRU\tSHMEM_TOP_ADDRU"
+      },
+      {
+        "line": 45,
+        "text": "#define GET_AUDIO_ADDRL\t(SHMEM_TOP_ADDRL + SHMEM_AUDIO_ADDR_OFFSET)"
+      },
+      {
+        "line": 46,
+        "text": "#define GET_AUDIO_SIZEU\tSHMEM_TOP_ADDRU"
+      },
+      {
+        "line": 47,
+        "text": "#define GET_AUDIO_SIZEL\t(SHMEM_TOP_ADDRL + SHMEM_AUDIO_SIZE_OFFSET)"
+      }
+    ],
+    "shared_mem_driver_lines": [
+      {
+        "line": 28,
+        "text": "void __iomem *shared_mem_get_mem(E_SHARED_MEM mem)"
+      },
+      {
+        "line": 29,
+        "text": "{"
+      },
+      {
+        "line": 30,
+        "text": "\tu32 ipcu_buff_addr;"
+      },
+      {
+        "line": 31,
+        "text": "\tu32 ipcu_sync_addr;"
+      },
+      {
+        "line": 32,
+        "text": "\tu64 ipcu_buff_addr64;"
+      },
+      {
+        "line": 33,
+        "text": "\tu64 ipcu_sync_addr64;"
+      },
+      {
+        "line": 34,
+        "text": "\tu32 add64 = 0;"
+      },
+      {
+        "line": 35,
+        "text": ""
+      },
+      {
+        "line": 36,
+        "text": "\tif (!node) {"
+      },
+      {
+        "line": 37,
+        "text": "\t\tnode = of_find_compatible_node(NULL, NULL,"
+      },
+      {
+        "line": 38,
+        "text": "\t\t\t\t\t\"socionext, shared-commem\");"
+      },
+      {
+        "line": 39,
+        "text": "\t\tif (!node) {"
+      },
+      {
+        "line": 40,
+        "text": "\t\t\tpr_err(\"get_shared_commem_node failed\\n\");"
+      },
+      {
+        "line": 41,
+        "text": "\t\t\tgoto end;"
+      },
+      {
+        "line": 42,
+        "text": "\t\t}"
+      },
+      {
+        "line": 43,
+        "text": "\t}"
+      },
+      {
+        "line": 44,
+        "text": ""
+      },
+      {
+        "line": 45,
+        "text": "\tif(of_get_property(node, \"address64\", NULL)) {"
+      },
+      {
+        "line": 46,
+        "text": "\t\tadd64 = 1;"
+      },
+      {
+        "line": 47,
+        "text": "\t}"
+      },
+      {
+        "line": 48,
+        "text": ""
+      },
+      {
+        "line": 49,
+        "text": "\tswitch (mem) {"
+      },
+      {
+        "line": 50,
+        "text": "\t\tcase E_SHARED_MEM_BUFFER:"
+      },
+      {
+        "line": 51,
+        "text": "\t\t\tspin_lock(&shared_mem_lock);"
+      },
+      {
+        "line": 52,
+        "text": "\t\t\tif (!ipcu_buff_mem) {"
+      },
+      {
+        "line": 53,
+        "text": "\t\t\t\tif (add64) {"
+      },
+      {
+        "line": 54,
+        "text": "\t\t\t\t\tif (of_property_read_u64(node,"
+      },
+      {
+        "line": 55,
+        "text": "\t\t\t\t\t\t\t \"buf-addr\", &ipcu_buff_addr64)) {"
+      },
+      {
+        "line": 56,
+        "text": "\t\t\t\t\t\tpr_err(\"get ipcu-buffer-addr64 failed\\n\");"
+      },
+      {
+        "line": 57,
+        "text": "\t\t\t\t\t\tgoto unlock;"
+      },
+      {
+        "line": 58,
+        "text": "\t\t\t\t\t}"
+      },
+      {
+        "line": 59,
+        "text": "\t\t\t\t\tipcu_buff_mem = ioremap(ipcu_buff_addr64,"
+      },
+      {
+        "line": 60,
+        "text": "\t\t\t\t\t\t\t\tsizeof(u64));"
+      },
+      {
+        "line": 61,
+        "text": "\t\t\t\t} else {"
+      },
+      {
+        "line": 62,
+        "text": "\t\t\t\t\tif (of_property_read_u32(node,"
+      },
+      {
+        "line": 63,
+        "text": "\t\t\t\t\t\t\t \"buf-addr\", &ipcu_buff_addr)) {"
+      },
+      {
+        "line": 64,
+        "text": "\t\t\t\t\t\tpr_err(\"get ipcu-buffer-addr failed\\n\");"
+      },
+      {
+        "line": 65,
+        "text": "\t\t\t\t\t\tgoto unlock;"
+      },
+      {
+        "line": 66,
+        "text": "\t\t\t\t\t}"
+      },
+      {
+        "line": 67,
+        "text": "\t\t\t\t\tipcu_buff_mem = ioremap(ipcu_buff_addr,"
+      },
+      {
+        "line": 68,
+        "text": "\t\t\t\t\t\t\t\tsizeof(u32));"
+      },
+      {
+        "line": 69,
+        "text": "\t\t\t\t}"
+      },
+      {
+        "line": 70,
+        "text": ""
+      },
+      {
+        "line": 71,
+        "text": "\t\t\t\tif (!ipcu_buff_mem) {"
+      },
+      {
+        "line": 72,
+        "text": "\t\t\t\t\tpr_err(\"get ipcu-buffer-mem failed\\n\");"
+      },
+      {
+        "line": 73,
+        "text": "\t\t\t\t\tgoto unlock;"
+      },
+      {
+        "line": 74,
+        "text": "\t\t\t\t}"
+      },
+      {
+        "line": 75,
+        "text": "\t\t\t}"
+      },
+      {
+        "line": 76,
+        "text": "\t\t\tspin_unlock(&shared_mem_lock);"
+      },
+      {
+        "line": 77,
+        "text": "\t\t\treturn ipcu_buff_mem;"
+      },
+      {
+        "line": 78,
+        "text": ""
+      },
+      {
+        "line": 79,
+        "text": "\t\tcase E_SHARED_MEM_SYNC:"
+      },
+      {
+        "line": 80,
+        "text": "\t\t\tspin_lock(&shared_mem_lock);"
+      },
+      {
+        "line": 81,
+        "text": "\t\t\tif (!ipcu_sync_mem) {"
+      },
+      {
+        "line": 82,
+        "text": "\t\t\t\tif (add64) {"
+      },
+      {
+        "line": 83,
+        "text": "\t\t\t\t\tif (of_property_read_u64(node,"
+      },
+      {
+        "line": 84,
+        "text": "\t\t\t\t\t\t\"sync-addr\", &ipcu_sync_addr64)) {"
+      },
+      {
+        "line": 85,
+        "text": "\t\t\t\t\t\tpr_err(\"get ipcu-sync-addr64 failed\\n\");"
+      },
+      {
+        "line": 86,
+        "text": "\t\t\t\t\t\tgoto unlock;"
+      },
+      {
+        "line": 87,
+        "text": "\t\t\t\t\t}"
+      },
+      {
+        "line": 88,
+        "text": "\t\t\t\t\tipcu_sync_mem = ioremap(ipcu_sync_addr64,"
+      },
+      {
+        "line": 89,
+        "text": "\t\t\t\t\t\t\t\tsizeof(u64));"
+      },
+      {
+        "line": 90,
+        "text": "\t\t\t\t} else {"
+      },
+      {
+        "line": 91,
+        "text": "\t\t\t\t\tif (of_property_read_u32(node,"
+      },
+      {
+        "line": 92,
+        "text": "\t\t\t\t\t\t\"sync-addr\", &ipcu_sync_addr)) {"
+      },
+      {
+        "line": 93,
+        "text": "\t\t\t\t\t\tpr_err(\"get ipcu-sync-addr failed\\n\");"
+      },
+      {
+        "line": 94,
+        "text": "\t\t\t\t\t\tgoto unlock;"
+      },
+      {
+        "line": 95,
+        "text": "\t\t\t\t\t}"
+      },
+      {
+        "line": 96,
+        "text": "\t\t\t\t\tipcu_sync_mem = ioremap(ipcu_sync_addr,"
+      },
+      {
+        "line": 97,
+        "text": "\t\t\t\t\t\t\t\tsizeof(u32));"
+      },
+      {
+        "line": 98,
+        "text": "\t\t\t\t}"
+      },
+      {
+        "line": 99,
+        "text": ""
+      },
+      {
+        "line": 100,
+        "text": "\t\t\t\tif (!ipcu_sync_mem) {"
+      },
+      {
+        "line": 101,
+        "text": "\t\t\t\t\tpr_err(\"ioremqp ipcu-sync-mem failed\\n\");"
+      },
+      {
+        "line": 102,
+        "text": "\t\t\t\t\tgoto unlock;"
+      },
+      {
+        "line": 103,
+        "text": "\t\t\t\t}"
+      },
+      {
+        "line": 104,
+        "text": "\t\t\t}"
+      },
+      {
+        "line": 105,
+        "text": "\t\t\tspin_unlock(&shared_mem_lock);"
+      },
+      {
+        "line": 106,
+        "text": "\t\t\treturn ipcu_sync_mem;"
+      },
+      {
+        "line": 107,
+        "text": ""
+      },
+      {
+        "line": 108,
+        "text": "\t\tdefault:"
+      },
+      {
+        "line": 109,
+        "text": "\t\t\tpr_err(\"this mem type is not supported.\\n\");"
+      },
+      {
+        "line": 110,
+        "text": "\t\t\tgoto end;"
+      },
+      {
+        "line": 111,
+        "text": "\t}"
+      },
+      {
+        "line": 112,
+        "text": "unlock:"
+      },
+      {
+        "line": 113,
+        "text": "\tspin_unlock(&shared_mem_lock);"
+      },
+      {
+        "line": 114,
+        "text": "end:"
+      },
+      {
+        "line": 115,
+        "text": "\treturn NULL;"
+      },
+      {
+        "line": 116,
+        "text": "}"
+      }
+    ],
+    "sni_ipcu_drv_probe_lines": [
+      {
+        "line": 386,
+        "text": "\tif (dest_mb == 0) {"
+      },
+      {
+        "line": 387,
+        "text": "\t\tres_mem = platform_get_resource(pdev, IORESOURCE_MEM, 0);"
+      },
+      {
+        "line": 388,
+        "text": "\t\tif (!res_mem) {"
+      },
+      {
+        "line": 389,
+        "text": "\t\t\tdev_err(dev, \"No IOMEM found\\n\");"
+      },
+      {
+        "line": 390,
+        "text": "\t\t\treturn -ENXIO;"
+      },
+      {
+        "line": 391,
+        "text": "\t\t}"
+      },
+      {
+        "line": 392,
+        "text": ""
+      },
+      {
+        "line": 393,
+        "text": "\t\tio_mem = devm_ioremap(dev,"
+      },
+      {
+        "line": 394,
+        "text": "\t\t\t\tres_mem->start,"
+      },
+      {
+        "line": 395,
+        "text": "\t\t\t\tresource_size(res_mem));"
+      },
+      {
+        "line": 396,
+        "text": "\t\tif (!io_mem) {"
+      },
+      {
+        "line": 397,
+        "text": "\t\t\tdev_err(dev, \"ioremap failed.\\n\");"
+      },
+      {
+        "line": 398,
+        "text": "\t\t\treturn -ENXIO;"
+      },
+      {
+        "line": 399,
+        "text": "\t\t}"
+      },
+      {
+        "line": 400,
+        "text": "\t\tipcu_drv_inf[dest_unit].ipcu_io_mem = io_mem;"
+      },
+      {
+        "line": 401,
+        "text": ""
+      },
+      {
+        "line": 402,
+        "text": "\t\tio_mem = shared_mem_get_mem(E_SHARED_MEM_SYNC);"
+      },
+      {
+        "line": 403,
+        "text": "\t\tif (!io_mem) {"
+      },
+      {
+        "line": 404,
+        "text": "\t\t\tdev_err(dev, \"get shared_mem failed.\\n\");"
+      },
+      {
+        "line": 405,
+        "text": "\t\t\treturn -ENXIO;"
+      },
+      {
+        "line": 406,
+        "text": "\t\t}"
+      },
+      {
+        "line": 407,
+        "text": ""
+      },
+      {
+        "line": 408,
+        "text": "\t\tio_get_mem = devm_ioremap(dev,"
+      },
+      {
+        "line": 409,
+        "text": "#ifdef CONFIG_PHYS_ADDR_T_64BIT"
+      },
+      {
+        "line": 410,
+        "text": "\t\t\t\tioread64(io_mem) + mc_offset[dest_unit],"
+      },
+      {
+        "line": 411,
+        "text": "#else"
+      },
+      {
+        "line": 412,
+        "text": "\t\t\t\tioread32(io_mem) + mc_offset[dest_unit],"
+      },
+      {
+        "line": 413,
+        "text": "#endif"
+      },
+      {
+        "line": 414,
+        "text": "\t\t\t\tsizeof(io_mem));"
+      },
+      {
+        "line": 415,
+        "text": "\t\tif (!io_get_mem) {"
+      },
+      {
+        "line": 416,
+        "text": "\t\t\tdev_err(dev, \"ioremap failed.\\n\");"
+      },
+      {
+        "line": 417,
+        "text": "\t\t\treturn -ENXIO;"
+      },
+      {
+        "line": 418,
+        "text": "\t\t}"
+      },
+      {
+        "line": 419,
+        "text": "\t\tipcu_drv_inf[dest_unit].ipcu_magic_mem = io_get_mem;"
+      },
+      {
+        "line": 420,
+        "text": "\t\tipcu_drv_inf[dest_unit].dev = dev;"
+      },
+      {
+        "line": 421,
+        "text": "\t}"
+      }
+    ],
+    "sni_ipcu_magic_code_header": [
+      {
+        "line": 35,
+        "text": "#define SNI_IPCU_SHAREDMEM_TOP        0x73100000UL"
+      },
+      {
+        "line": 36,
+        "text": "#define SNI_IPCU_SHAREDMEM_SIZE       0x00100000UL"
+      },
+      {
+        "line": 37,
+        "text": ""
+      },
+      {
+        "line": 38,
+        "text": "#define SNI_IPCU_MAGIC_CODE           0xBEEFCAFEUL"
+      },
+      {
+        "line": 39,
+        "text": "#define SNI_IPCU_MAGIC_SIZE           0x00000020"
+      },
+      {
+        "line": 40,
+        "text": ""
+      },
+      {
+        "line": 41,
+        "text": "/* definition of interface constant value */"
+      },
+      {
+        "line": 42,
+        "text": "#define SNI_IPCU_DIR_INIT 0"
+      }
+    ],
+    "sni_ipcu_parts_handshake_lines": {
+      "open_check": [
+        {
+          "line": 128,
+          "text": "\t\t\treturn -EINVAL;"
+        },
+        {
+          "line": 129,
+          "text": "\t\t}"
+        },
+        {
+          "line": 130,
+          "text": "\t\tbreak;"
+        },
+        {
+          "line": 131,
+          "text": ""
+        },
+        {
+          "line": 132,
+          "text": "\tdefault:"
+        },
+        {
+          "line": 133,
+          "text": "\t\tpr_err(\"%s:%d [ERROR] unknown function: %d\\n\","
+        },
+        {
+          "line": 134,
+          "text": "\t\t\t\t\t__func__, __LINE__, func);"
+        },
+        {
+          "line": 135,
+          "text": "\t\treturn -EINVAL;"
+        },
+        {
+          "line": 136,
+          "text": "\t}"
+        },
+        {
+          "line": 137,
+          "text": ""
+        },
+        {
+          "line": 138,
+          "text": "\treturn 0;"
+        },
+        {
+          "line": 139,
+          "text": "}"
+        },
+        {
+          "line": 140,
+          "text": ""
+        },
+        {
+          "line": 141,
+          "text": "static void sni_ipcu_set_magic_code(u32 unit, u32 mb)"
+        },
+        {
+          "line": 142,
+          "text": "{"
+        },
+        {
+          "line": 143,
+          "text": "\tiowrite32(SNI_IPCU_MAGIC_CODE,"
+        },
+        {
+          "line": 144,
+          "text": "\t\t  (ipcu_drv_inf[unit].ipcu_magic_mem + (mb << 2)));"
+        },
+        {
+          "line": 145,
+          "text": "}"
+        },
+        {
+          "line": 146,
+          "text": ""
+        },
+        {
+          "line": 147,
+          "text": "static void sni_ipcu_clear_magic_code(u32 unit, u32 mb)"
+        },
+        {
+          "line": 148,
+          "text": "{"
+        },
+        {
+          "line": 149,
+          "text": "\tiowrite32(0, ipcu_drv_inf[unit].ipcu_magic_mem + (mb << 2));"
+        },
+        {
+          "line": 150,
+          "text": "}"
+        },
+        {
+          "line": 151,
+          "text": ""
+        },
+        {
+          "line": 152,
+          "text": "static irqreturn_t sni_ipcu_ack_handler(int irq, void *ipcu_dev)"
+        }
+      ],
+      "send_msg_require_beefcafe": [
+        {
+          "line": 325,
+          "text": "\tunsigned long ret = 0;"
+        },
+        {
+          "line": 326,
+          "text": "\tint result;"
+        },
+        {
+          "line": 327,
+          "text": ""
+        },
+        {
+          "line": 328,
+          "text": "\tresult = sni_ipcu_sanity_check(CHECK_FUNC_SEND, unit, mb, len);"
+        },
+        {
+          "line": 329,
+          "text": "\tif (result != 0) {"
+        },
+        {
+          "line": 330,
+          "text": "\t\tpr_err(\"%s:%d [ERROR] parameter check NG.\\n\","
+        },
+        {
+          "line": 331,
+          "text": "\t\t\t__func__, __LINE__);"
+        },
+        {
+          "line": 332,
+          "text": "\t\treturn result;"
+        },
+        {
+          "line": 333,
+          "text": "\t}"
+        },
+        {
+          "line": 334,
+          "text": ""
+        },
+        {
+          "line": 335,
+          "text": "\tif (ioread32(ipcu_drv_inf[unit].ipcu_magic_mem + (mb << 2))"
+        },
+        {
+          "line": 336,
+          "text": "\t\t\t\t\t\t!= SNI_IPCU_MAGIC_CODE) {"
+        },
+        {
+          "line": 337,
+          "text": "\t\tpr_err(\"%s:%d [ERROR] Not ready destination\\n\","
+        },
+        {
+          "line": 338,
+          "text": "\t\t\t__func__, __LINE__);"
+        },
+        {
+          "line": 339,
+          "text": "\t\treturn -EAGAIN;"
+        },
+        {
+          "line": 340,
+          "text": "\t}"
+        },
+        {
+          "line": 341,
+          "text": ""
+        },
+        {
+          "line": 342,
+          "text": "\tret = copy_from_user(&pSNI_IPCU[unit][mb].data[0], buf, len);"
+        },
+        {
+          "line": 343,
+          "text": "\tif (ret != 0) {"
+        },
+        {
+          "line": 344,
+          "text": "\t\tpr_err(\"%s:%d copy_from_user failed.(ret=%lu,src=%p,len=%d)\\n\","
+        },
+        {
+          "line": 345,
+          "text": "\t\t\t__func__, __LINE__, ret, buf, len);"
+        }
+      ],
+      "recv_msg_write_beefcafe": [
+        {
+          "line": 398,
+          "text": "\ttrace_ipcu_start_recv_msg(unit, mb, buf, flags);"
+        },
+        {
+          "line": 399,
+          "text": ""
+        },
+        {
+          "line": 400,
+          "text": "\tset_current_state(TASK_INTERRUPTIBLE);"
+        },
+        {
+          "line": 401,
+          "text": "\tadd_wait_queue(&sni_ipcu_mbctl[unit][mb].rdq, &wait);"
+        },
+        {
+          "line": 402,
+          "text": ""
+        },
+        {
+          "line": 403,
+          "text": "\tspin_unlock_irq(&lock_shared_mem);"
+        },
+        {
+          "line": 404,
+          "text": ""
+        },
+        {
+          "line": 405,
+          "text": "\tsni_ipcu_set_magic_code(unit, mb);"
+        },
+        {
+          "line": 406,
+          "text": ""
+        },
+        {
+          "line": 407,
+          "text": "\tif (timeout == 0x7fffffff) {"
+        },
+        {
+          "line": 408,
+          "text": "\t\tif (sni_ipcu_mbctl[unit][mb].status == STATUS_INIT)"
+        },
+        {
+          "line": 409,
+          "text": "\t\t\tschedule();"
+        },
+        {
+          "line": 410,
+          "text": "\t} else {"
+        },
+        {
+          "line": 411,
+          "text": "\t\tj = jiffies;"
+        },
+        {
+          "line": 412,
+          "text": "\t\tif (abs_timeout >= j)"
+        },
+        {
+          "line": 413,
+          "text": "\t\t\tdelta = abs_timeout - j;"
+        },
+        {
+          "line": 414,
+          "text": "\t\telse"
+        },
+        {
+          "line": 415,
+          "text": "\t\t\tdelta = 0;"
+        },
+        {
+          "line": 416,
+          "text": "\t\tschedule_timeout(delta);"
+        },
+        {
+          "line": 417,
+          "text": "\t}"
+        },
+        {
+          "line": 418,
+          "text": ""
+        },
+        {
+          "line": 419,
+          "text": "\tremove_wait_queue(&sni_ipcu_mbctl[unit][mb].rdq, &wait);"
+        },
+        {
+          "line": 420,
+          "text": ""
+        },
+        {
+          "line": 421,
+          "text": "\tspin_lock_irq(&lock_shared_mem);"
+        },
+        {
+          "line": 422,
+          "text": "\tsni_ipcu_mbctl[unit][mb].status = STATUS_INIT;"
+        },
+        {
+          "line": 423,
+          "text": "\tspin_unlock_irq(&lock_shared_mem);"
+        },
+        {
+          "line": 424,
+          "text": ""
+        },
+        {
+          "line": 425,
+          "text": "\t/* wait was signal */"
+        },
+        {
+          "line": 426,
+          "text": "\tif (signal_pending(current)) {"
+        },
+        {
+          "line": 427,
+          "text": "\t\tresult = -ERESTARTSYS;\t/* EAGAIN? */"
+        },
+        {
+          "line": 428,
+          "text": "\t\tgoto end;"
+        },
+        {
+          "line": 429,
+          "text": "\t}"
+        },
+        {
+          "line": 430,
+          "text": ""
+        },
+        {
+          "line": 431,
+          "text": "\tret = copy_to_user(buf,"
+        },
+        {
+          "line": 432,
+          "text": "\t\t\t   &pSNI_IPCU[unit][mb].data[0],"
+        },
+        {
+          "line": 433,
+          "text": "\t\t\t   (IPCU_MAX_DATA * sizeof(int)));"
+        },
+        {
+          "line": 434,
+          "text": "\tif (ret != 0) {"
+        },
+        {
+          "line": 435,
+          "text": "\t\tpr_err(\"%s:%d [ERROR] copy_to_user failed! (ret=%lu,dest=%p,len=%d)\\n\","
+        },
+        {
+          "line": 436,
+          "text": "\t\t\t__func__, __LINE__, ret, buf, len);"
+        },
+        {
+          "line": 437,
+          "text": "\t\tresult = -EFAULT;"
+        },
+        {
+          "line": 438,
+          "text": "\t\tgoto end;"
+        },
+        {
+          "line": 439,
+          "text": "\t}"
+        },
+        {
+          "line": 440,
+          "text": "\twmb();"
+        },
+        {
+          "line": 441,
+          "text": ""
+        },
+        {
+          "line": 442,
+          "text": "\tif (timeout != 0x7fffffff) {"
+        },
+        {
+          "line": 443,
+          "text": "\t\tj = jiffies;"
+        },
+        {
+          "line": 444,
+          "text": "\t\tif (time_after(j, abs_timeout)) {"
+        },
+        {
+          "line": 445,
+          "text": "\t\t\tresult = -ETIME;"
+        },
+        {
+          "line": 446,
+          "text": "\t\t\tgoto end;"
+        },
+        {
+          "line": 447,
+          "text": "\t\t}"
+        },
+        {
+          "line": 448,
+          "text": "\t}"
+        },
+        {
+          "line": 449,
+          "text": ""
+        },
+        {
+          "line": 450,
+          "text": "end:"
+        },
+        {
+          "line": 451,
+          "text": "\tsni_ipcu_clear_magic_code(unit, mb);"
+        },
+        {
+          "line": 452,
+          "text": "\ttrace_ipcu_recv_msg(unit, mb, buf, result);"
+        },
+        {
+          "line": 453,
+          "text": ""
+        },
+        {
+          "line": 454,
+          "text": "\treturn result;"
+        },
+        {
+          "line": 455,
+          "text": "}"
+        },
+        {
+          "line": 456,
+          "text": ""
+        }
+      ],
+      "send_msg_kernel_require_beefcafe": [
+        {
+          "line": 498,
+          "text": ""
+        },
+        {
+          "line": 499,
+          "text": "\tresult = sni_ipcu_sanity_check(CHECK_FUNC_SEND, unit, mb, len);"
+        },
+        {
+          "line": 500,
+          "text": "\tif (result != 0) {"
+        },
+        {
+          "line": 501,
+          "text": "\t\tpr_err(\"%s:%d [ERROR] parameter check NG.\\n\","
+        },
+        {
+          "line": 502,
+          "text": "\t\t\t__func__, __LINE__);"
+        },
+        {
+          "line": 503,
+          "text": "\t\treturn result;"
+        },
+        {
+          "line": 504,
+          "text": "\t}"
+        },
+        {
+          "line": 505,
+          "text": ""
+        },
+        {
+          "line": 506,
+          "text": "\tif (ioread32(ipcu_drv_inf[unit].ipcu_magic_mem + (mb << 2))"
+        },
+        {
+          "line": 507,
+          "text": "\t\t\t\t\t\t!= SNI_IPCU_MAGIC_CODE) {"
+        },
+        {
+          "line": 508,
+          "text": "\t\tpr_err(\"%s:%d [ERROR] Not ready destination\\n\","
+        },
+        {
+          "line": 509,
+          "text": "\t\t\t__func__, __LINE__);"
+        },
+        {
+          "line": 510,
+          "text": "\t\treturn -EAGAIN;"
+        },
+        {
+          "line": 511,
+          "text": "\t}"
+        },
+        {
+          "line": 512,
+          "text": ""
+        },
+        {
+          "line": 513,
+          "text": "\tmemcpy(&pSNI_IPCU[unit][mb].data[0], buf, len);"
+        },
+        {
+          "line": 514,
+          "text": ""
+        },
+        {
+          "line": 515,
+          "text": "\twmb();"
+        }
+      ]
+    },
+    "ipcufs_probe_and_mount_lines": {
+      "sn_ipcufs_probe": [
+        {
+          "line": 2500,
+          "text": "\t\treturn -EINVAL;"
+        },
+        {
+          "line": 2501,
+          "text": "\t}"
+        },
+        {
+          "line": 2502,
+          "text": ""
+        },
+        {
+          "line": 2503,
+          "text": "\tif (of_property_read_u32_index(dev->of_node, \"ipcu_mb\", 1, &recv_mb)) {"
+        },
+        {
+          "line": 2504,
+          "text": "\t\tdev_err(dev, \"%s:%d IPCU Receive Channel is not provided\\n\","
+        },
+        {
+          "line": 2505,
+          "text": "\t\t\t__func__, __LINE__);"
+        },
+        {
+          "line": 2506,
+          "text": "\t\treturn -EINVAL;"
+        },
+        {
+          "line": 2507,
+          "text": "\t}"
+        },
+        {
+          "line": 2508,
+          "text": ""
+        },
+        {
+          "line": 2509,
+          "text": "\tcommon_mem = shared_mem_get_mem(E_SHARED_MEM_BUFFER);"
+        },
+        {
+          "line": 2510,
+          "text": "\tif (!common_mem) {"
+        },
+        {
+          "line": 2511,
+          "text": "\t\tdev_err(dev, \"get shared_mem failed.\\n\");"
+        },
+        {
+          "line": 2512,
+          "text": "\t\treturn -EINVAL;"
+        },
+        {
+          "line": 2513,
+          "text": "\t}"
+        },
+        {
+          "line": 2514,
+          "text": ""
+        },
+        {
+          "line": 2515,
+          "text": "\tsend_dev.dest_unit = ipcu_unit;"
+        },
+        {
+          "line": 2516,
+          "text": "\tsend_dev.dest_mb = send_mb;"
+        },
+        {
+          "line": 2517,
+          "text": ""
+        },
+        {
+          "line": 2518,
+          "text": "\trecv_dev.dest_unit = ipcu_unit;"
+        },
+        {
+          "line": 2519,
+          "text": "\trecv_dev.dest_mb = recv_mb;"
+        },
+        {
+          "line": 2520,
+          "text": ""
+        },
+        {
+          "line": 2521,
+          "text": "#ifdef CONFIG_PHYS_ADDR_T_64BIT"
+        },
+        {
+          "line": 2522,
+          "text": "\tshm_start_addr = ioread64(common_mem);"
+        },
+        {
+          "line": 2523,
+          "text": "#else"
+        },
+        {
+          "line": 2524,
+          "text": "\tshm_start_addr = ioread32(common_mem);"
+        },
+        {
+          "line": 2525,
+          "text": "#endif"
+        },
+        {
+          "line": 2526,
+          "text": "\toffset = IPCU_COMMEM_DOMAIN_SIZE * send_mb;"
+        },
+        {
+          "line": 2527,
+          "text": "\tshm_start_addr += offset;"
+        },
+        {
+          "line": 2528,
+          "text": ""
+        },
+        {
+          "line": 2529,
+          "text": "\tshm_paddr = shm_start_addr;"
+        },
+        {
+          "line": 2530,
+          "text": "\tshm = ioremap(shm_paddr, IPCUFS_TABLE_BUF_SIZE);"
+        },
+        {
+          "line": 2531,
+          "text": ""
+        },
+        {
+          "line": 2532,
+          "text": "\tpage_shm_paddr = shm_start_addr + IPCUFS_TABLE_BUF_SIZE;"
+        },
+        {
+          "line": 2533,
+          "text": "\tpage_shm = ioremap(page_shm_paddr, IPCUFS_PAGE_BUF_SIZE);"
+        },
+        {
+          "line": 2534,
+          "text": ""
+        },
+        {
+          "line": 2535,
+          "text": "\tdio_buf = kmalloc(IPCUFS_DIO_BUF_SIZE, GFP_KERNEL);"
+        },
+        {
+          "line": 2536,
+          "text": ""
+        },
+        {
+          "line": 2537,
+          "text": "\tif (!dio_buf)"
+        },
+        {
+          "line": 2538,
+          "text": "\t\treturn -ENOMEM;"
+        },
+        {
+          "line": 2539,
+          "text": "\tmutex_init(&mlock);"
+        },
+        {
+          "line": 2540,
+          "text": "\tmutex_init(&flock);"
+        },
+        {
+          "line": 2541,
+          "text": ""
+        },
+        {
+          "line": 2542,
+          "text": "\tif (!shm)"
+        },
+        {
+          "line": 2543,
+          "text": "\t\treturn -ENOMEM;"
+        },
+        {
+          "line": 2544,
+          "text": ""
+        },
+        {
+          "line": 2545,
+          "text": "\tret = dma_set_mask_and_coherent(&pdev->dev, DMA_BIT_MASK(40));"
+        }
+      ],
+      "ipcufs_ipcu_init": [
+        {
+          "line": 198,
+          "text": "\t\t\t\treturn -ENOMEM;"
+        },
+        {
+          "line": 199,
+          "text": "\t\t}"
+        },
+        {
+          "line": 200,
+          "text": "\t}"
+        },
+        {
+          "line": 201,
+          "text": ""
+        },
+        {
+          "line": 202,
+          "text": "\tif (mount_cnt == 0) {"
+        },
+        {
+          "line": 203,
+          "text": "\t\tfor (n = 0; n < ARRAY_SIZE_IPCUFS_OPEN_FILE; n++) {"
+        },
+        {
+          "line": 204,
+          "text": "\t\t\tipcufs_open_mng.open_file[n] = NULL;"
+        },
+        {
+          "line": 205,
+          "text": "\t\t\tipcufs_open_mng.older_flg[n] = 0;"
+        },
+        {
+          "line": 206,
+          "text": "\t\t}"
+        },
+        {
+          "line": 207,
+          "text": "\t}"
+        },
+        {
+          "line": 208,
+          "text": ""
+        },
+        {
+          "line": 209,
+          "text": "\tmount_cnt++;"
+        },
+        {
+          "line": 210,
+          "text": "\treturn ret;"
+        },
+        {
+          "line": 211,
+          "text": "}"
+        },
+        {
+          "line": 212,
+          "text": "static void ipcufs_free_drive_only(u32 s)"
+        },
+        {
+          "line": 213,
+          "text": "{"
+        },
+        {
+          "line": 214,
+          "text": "\tint n;"
+        },
+        {
+          "line": 215,
+          "text": ""
+        },
+        {
+          "line": 216,
+          "text": "\tif (fake_file[s]) {"
+        },
+        {
+          "line": 217,
+          "text": "\t\t/* fake_file[s][0] is reserved */"
+        },
+        {
+          "line": 218,
+          "text": "\t\tfor (n = 1; n < inode_num[s]; n++) {"
+        },
+        {
+          "line": 219,
+          "text": "\t\t\tif (fake_file[s][n].name) {"
+        },
+        {
+          "line": 220,
+          "text": "\t\t\t\tkfree(fake_file[s][n].name);\t/* it is safe to pass NULL */"
+        },
+        {
+          "line": 221,
+          "text": "\t\t\t\tfake_file[s][n].name = NULL;"
+        },
+        {
+          "line": 222,
+          "text": "\t\t\t}"
+        },
+        {
+          "line": 223,
+          "text": "\t\t}"
+        },
+        {
+          "line": 224,
+          "text": "\t\tkfree(fake_file[s]);"
+        },
+        {
+          "line": 225,
+          "text": "\t\tfake_file[s] = NULL;"
+        },
+        {
+          "line": 226,
+          "text": "\t}"
+        },
+        {
+          "line": 227,
+          "text": "}"
+        },
+        {
+          "line": 228,
+          "text": "static void ipcufs_free_drive(u32 s)"
+        },
+        {
+          "line": 229,
+          "text": "{"
+        },
+        {
+          "line": 230,
+          "text": "\tipcufs_free_drive_only(s);"
+        },
+        {
+          "line": 231,
+          "text": "\tmount_cnt--;"
+        },
+        {
+          "line": 232,
+          "text": "}"
+        },
+        {
+          "line": 233,
+          "text": ""
+        },
+        {
+          "line": 234,
+          "text": "static int ipcufs_get_fake_ino(u32 s, int parent,"
+        },
+        {
+          "line": 235,
+          "text": "\t\t\tconst char *filename, u64 *ino)"
+        },
+        {
+          "line": 236,
+          "text": "{"
+        },
+        {
+          "line": 237,
+          "text": "\tu64 *pp = &fake_file[s][parent].i_target;"
+        },
+        {
+          "line": 238,
+          "text": "\tint ret = 0;"
+        },
+        {
+          "line": 239,
+          "text": ""
+        },
+        {
+          "line": 240,
+          "text": "\twhile (*pp) {"
+        },
+        {
+          "line": 241,
+          "text": "\t\tif (!fnamecmp(filename, fake_file[s][*pp].name)) {"
+        },
+        {
+          "line": 242,
+          "text": "\t\t\t*ino = *pp;"
+        },
+        {
+          "line": 243,
+          "text": "\t\t\treturn ret;"
+        },
+        {
+          "line": 244,
+          "text": "\t\t}"
+        },
+        {
+          "line": 245,
+          "text": "\t\tpp = &fake_file[s][*pp].i_sibling;"
+        },
+        {
+          "line": 246,
+          "text": "\t}"
+        },
+        {
+          "line": 247,
+          "text": ""
+        },
+        {
+          "line": 248,
+          "text": "\t*ino ="
+        },
+        {
+          "line": 249,
+          "text": "\t*pp = ipcufs_find_unused_inode(s);"
+        },
+        {
+          "line": 250,
+          "text": "\tif (*ino == 0) {"
+        }
+      ]
+    },
+    "static_dts_ipcu_node_count": 0,
+    "static_dts_all_disabled": true,
+    "static_dts_ipcu00_06_07": []
+  },
+  "init_and_defconfig_verification": {
+    "kernel_defconfigs": {
+      "S1M2_ES_MC8241": {
+        "path": "analysis/sources/kernel_selected/linux-4.19.124/arch/arm64/configs/pvc04v_MC8241_defconfig",
+        "sha256": "757efee7162ca853d1970dc5d988accc6a0c07a2ef362ca6fc14408b3a9cc0c2",
+        "symbol_occurrences": {
+          "CONFIG_BLK_DEV_INITRD": [
+            {
+              "line": 46,
+              "text": "CONFIG_BLK_DEV_INITRD=y"
+            },
+            {
+              "line": 488,
+              "text": "# CONFIG_BLK_DEV_INITRD is not set"
+            }
+          ],
+          "CONFIG_BLK_DEV_RAM": [
+            {
+              "line": 163,
+              "text": "CONFIG_BLK_DEV_RAM=y"
+            },
+            {
+              "line": 489,
+              "text": "# CONFIG_BLK_DEV_RAM is not set"
+            }
+          ],
+          "CONFIG_PVC_USB_BUFFER": [
+            {
+              "line": 283,
+              "text": "CONFIG_PVC_USB_BUFFER=m"
+            }
+          ],
+          "CONFIG_DM": [
+            {
+              "line": 287,
+              "text": "CONFIG_DM=y"
+            }
+          ],
+          "CONFIG_IPCU_FS": [
+            {
+              "line": 387,
+              "text": "CONFIG_IPCU_FS=y"
+            }
+          ],
+          "CONFIG_DEBUG_GIC_BL": [
+            {
+              "line": 394,
+              "text": "CONFIG_DEBUG_GIC_BL=y"
+            }
+          ],
+          "CONFIG_SNI_IPCU": [
+            {
+              "line": 430,
+              "text": "CONFIG_SNI_IPCU=y"
+            }
+          ],
+          "CONFIG_SNI_DSP": [
+            {
+              "line": 440,
+              "text": "CONFIG_SNI_DSP=y"
+            }
+          ],
+          "CONFIG_MTD_SLRAM": [
+            {
+              "line": 476,
+              "text": "CONFIG_MTD_SLRAM=y"
+            }
+          ]
+        }
+      },
+      "S1M2_NT_MC8266": {
+        "path": "analysis/sources/oss_refresh_20261009/linux-4.19.124/arch/arm64/configs/pvc04v_MC8266_defconfig",
+        "sha256": "e18271a582839ef4312c3f45b3be1db906f336f10014ed57aac3d2451de8fd86",
+        "symbol_occurrences": {
+          "CONFIG_BLK_DEV_INITRD": [
+            {
+              "line": 46,
+              "text": "CONFIG_BLK_DEV_INITRD=y"
+            },
+            {
+              "line": 488,
+              "text": "# CONFIG_BLK_DEV_INITRD is not set"
+            }
+          ],
+          "CONFIG_BLK_DEV_RAM": [
+            {
+              "line": 163,
+              "text": "CONFIG_BLK_DEV_RAM=y"
+            },
+            {
+              "line": 489,
+              "text": "# CONFIG_BLK_DEV_RAM is not set"
+            }
+          ],
+          "CONFIG_PVC_USB_BUFFER": [
+            {
+              "line": 283,
+              "text": "CONFIG_PVC_USB_BUFFER=m"
+            }
+          ],
+          "CONFIG_DM": [
+            {
+              "line": 287,
+              "text": "CONFIG_DM=y"
+            }
+          ],
+          "CONFIG_IPCU_FS": [
+            {
+              "line": 387,
+              "text": "CONFIG_IPCU_FS=y"
+            }
+          ],
+          "CONFIG_DEBUG_GIC_BL": [
+            {
+              "line": 394,
+              "text": "CONFIG_DEBUG_GIC_BL=y"
+            }
+          ],
+          "CONFIG_SNI_IPCU": [
+            {
+              "line": 430,
+              "text": "CONFIG_SNI_IPCU=y"
+            }
+          ],
+          "CONFIG_SNI_DSP": [
+            {
+              "line": 440,
+              "text": "CONFIG_SNI_DSP=y"
+            }
+          ],
+          "CONFIG_MTD_SLRAM": [
+            {
+              "line": 476,
+              "text": "CONFIG_MTD_SLRAM=y"
+            }
+          ]
+        }
+      },
+      "SL3_DC1231": {
+        "path": "analysis/sources/leica_sl3_selected/linux-4.19.124/arch/arm64/configs/pvc04v_DC1231_defconfig",
+        "sha256": "7bbfb8d0c7969c5ca0db962634d60f3d7e80a44fcc6b42fbf9352d9ebc72659d",
+        "symbol_occurrences": {
+          "CONFIG_BLK_DEV_INITRD": [
+            {
+              "line": 46,
+              "text": "CONFIG_BLK_DEV_INITRD=y"
+            },
+            {
+              "line": 486,
+              "text": "# CONFIG_BLK_DEV_INITRD is not set"
+            }
+          ],
+          "CONFIG_BLK_DEV_RAM": [
+            {
+              "line": 163,
+              "text": "CONFIG_BLK_DEV_RAM=y"
+            },
+            {
+              "line": 487,
+              "text": "# CONFIG_BLK_DEV_RAM is not set"
+            }
+          ],
+          "CONFIG_PVC_USB_BUFFER": [
+            {
+              "line": 281,
+              "text": "CONFIG_PVC_USB_BUFFER=m"
+            }
+          ],
+          "CONFIG_DM": [
+            {
+              "line": 285,
+              "text": "CONFIG_DM=y"
+            }
+          ],
+          "CONFIG_IPCU_FS": [
+            {
+              "line": 385,
+              "text": "CONFIG_IPCU_FS=y"
+            }
+          ],
+          "CONFIG_DEBUG_GIC_BL": [
+            {
+              "line": 392,
+              "text": "CONFIG_DEBUG_GIC_BL=y"
+            }
+          ],
+          "CONFIG_SNI_IPCU": [
+            {
+              "line": 428,
+              "text": "CONFIG_SNI_IPCU=y"
+            }
+          ],
+          "CONFIG_SNI_DSP": [
+            {
+              "line": 438,
+              "text": "CONFIG_SNI_DSP=y"
+            }
+          ],
+          "CONFIG_MTD_SLRAM": [
+            {
+              "line": 474,
+              "text": "CONFIG_MTD_SLRAM=y"
+            }
+          ]
+        }
+      },
+      "SL3_DC1232": {
+        "path": "analysis/sources/leica_sl3_selected/linux-4.19.124/arch/arm64/configs/pvc04v_DC1232_defconfig",
+        "sha256": "b429006ce1115264d8311d093ed82651bcec57147bb1215685a0f8526abd3b05",
+        "symbol_occurrences": {
+          "CONFIG_BLK_DEV_INITRD": [
+            {
+              "line": 46,
+              "text": "CONFIG_BLK_DEV_INITRD=y"
+            },
+            {
+              "line": 486,
+              "text": "# CONFIG_BLK_DEV_INITRD is not set"
+            }
+          ],
+          "CONFIG_BLK_DEV_RAM": [
+            {
+              "line": 163,
+              "text": "CONFIG_BLK_DEV_RAM=y"
+            },
+            {
+              "line": 487,
+              "text": "# CONFIG_BLK_DEV_RAM is not set"
+            }
+          ],
+          "CONFIG_PVC_USB_BUFFER": [
+            {
+              "line": 281,
+              "text": "CONFIG_PVC_USB_BUFFER=m"
+            }
+          ],
+          "CONFIG_DM": [
+            {
+              "line": 285,
+              "text": "CONFIG_DM=y"
+            }
+          ],
+          "CONFIG_IPCU_FS": [
+            {
+              "line": 385,
+              "text": "CONFIG_IPCU_FS=y"
+            }
+          ],
+          "CONFIG_DEBUG_GIC_BL": [
+            {
+              "line": 392,
+              "text": "CONFIG_DEBUG_GIC_BL=y"
+            }
+          ],
+          "CONFIG_SNI_IPCU": [
+            {
+              "line": 428,
+              "text": "CONFIG_SNI_IPCU=y"
+            }
+          ],
+          "CONFIG_SNI_DSP": [
+            {
+              "line": 438,
+              "text": "CONFIG_SNI_DSP=y"
+            }
+          ],
+          "CONFIG_MTD_SLRAM": [
+            {
+              "line": 474,
+              "text": "CONFIG_MTD_SLRAM=y"
+            }
+          ]
+        }
+      }
+    },
+    "init_main_driver": {
+      "tar_member": "linux-4.19.124/init/main.c",
+      "sha256": "b242c865aa2fa72a0c56cb78b2a1a97e1d0b75120a606167496be9687480e1c2",
+      "size_bytes": 35882,
+      "kernel_init_lines_1355_1385": [
+        {
+          "line": 1355,
+          "text": ""
+        },
+        {
+          "line": 1356,
+          "text": "\trcu_end_inkernel_boot();"
+        },
+        {
+          "line": 1357,
+          "text": ""
+        },
+        {
+          "line": 1358,
+          "text": "\tif (ramdisk_execute_command) {"
+        },
+        {
+          "line": 1359,
+          "text": "\t\tret = run_init_process(ramdisk_execute_command);"
+        },
+        {
+          "line": 1360,
+          "text": "\t\tif (!ret)"
+        },
+        {
+          "line": 1361,
+          "text": "\t\t\treturn 0;"
+        },
+        {
+          "line": 1362,
+          "text": "\t\tpr_err(\"Failed to execute %s (error %d)\\n\","
+        },
+        {
+          "line": 1363,
+          "text": "\t\t       ramdisk_execute_command, ret);"
+        },
+        {
+          "line": 1364,
+          "text": "\t}"
+        },
+        {
+          "line": 1365,
+          "text": ""
+        },
+        {
+          "line": 1366,
+          "text": "\t/*"
+        },
+        {
+          "line": 1367,
+          "text": "\t * We try each of these until one succeeds."
+        },
+        {
+          "line": 1368,
+          "text": "\t *"
+        },
+        {
+          "line": 1369,
+          "text": "\t * The Bourne shell can be used instead of init if we are"
+        },
+        {
+          "line": 1370,
+          "text": "\t * trying to recover a really broken machine."
+        },
+        {
+          "line": 1371,
+          "text": "\t */"
+        },
+        {
+          "line": 1372,
+          "text": "\tif (execute_command) {"
+        },
+        {
+          "line": 1373,
+          "text": "\t\tret = run_init_process(execute_command);"
+        },
+        {
+          "line": 1374,
+          "text": "\t\tif (!ret)"
+        },
+        {
+          "line": 1375,
+          "text": "\t\t\treturn 0;"
+        },
+        {
+          "line": 1376,
+          "text": "\t\tpanic(\"Requested init %s failed (error %d).\","
+        },
+        {
+          "line": 1377,
+          "text": "\t\t      execute_command, ret);"
+        },
+        {
+          "line": 1378,
+          "text": "\t}"
+        },
+        {
+          "line": 1379,
+          "text": "\tif (!try_to_run_init_process(\"/sbin/init\") ||"
+        },
+        {
+          "line": 1380,
+          "text": "\t    !try_to_run_init_process(\"/etc/init\") ||"
+        },
+        {
+          "line": 1381,
+          "text": "\t    !try_to_run_init_process(\"/bin/init\") ||"
+        },
+        {
+          "line": 1382,
+          "text": "\t    !try_to_run_init_process(\"/bin/sh\"))"
+        },
+        {
+          "line": 1383,
+          "text": "\t\treturn 0;"
+        },
+        {
+          "line": 1384,
+          "text": ""
+        },
+        {
+          "line": 1385,
+          "text": "\tpanic(\"No working init found.  Try passing init= option to kernel. \""
+        }
+      ],
+      "kernel_init_freeable_lines_1430_1448": [
+        {
+          "line": 1430,
+          "text": "\t/*"
+        },
+        {
+          "line": 1431,
+          "text": "\t * check if there is an early userspace init.  If yes, let it do all"
+        },
+        {
+          "line": 1432,
+          "text": "\t * the work"
+        },
+        {
+          "line": 1433,
+          "text": "\t */"
+        },
+        {
+          "line": 1434,
+          "text": ""
+        },
+        {
+          "line": 1435,
+          "text": "\tif (!ramdisk_execute_command)"
+        },
+        {
+          "line": 1436,
+          "text": "\t\tramdisk_execute_command = \"/init\";"
+        },
+        {
+          "line": 1437,
+          "text": ""
+        },
+        {
+          "line": 1438,
+          "text": "\tif (ksys_access((const char __user *)"
+        },
+        {
+          "line": 1439,
+          "text": "\t\t\tramdisk_execute_command, 0) != 0) {"
+        },
+        {
+          "line": 1440,
+          "text": "\t\tramdisk_execute_command = NULL;"
+        },
+        {
+          "line": 1441,
+          "text": "\t\tprepare_namespace();"
+        },
+        {
+          "line": 1442,
+          "text": "\t}"
+        },
+        {
+          "line": 1443,
+          "text": ""
+        },
+        {
+          "line": 1444,
+          "text": "\t/*"
+        },
+        {
+          "line": 1445,
+          "text": "\t * Ok, we have completed the initial bootup, and"
+        },
+        {
+          "line": 1446,
+          "text": "\t * we're essentially up and running. Get rid of the"
+        },
+        {
+          "line": 1447,
+          "text": "\t * initmem segments and start the user-mode stuff.."
+        },
+        {
+          "line": 1448,
+          "text": "\t *"
+        }
+      ]
+    }
+  },
+  "freertos_and_userland_verification": {
+    "freertos_archive": {
+      "zip_member": "20260612_OSS_SL3/FreeRTOS-202212.00.tar.bz2",
+      "sha256": "5f9f4aedc31143560ff2fa2a1c0f4a33a4683127c77005a5456f93589f867dcd",
+      "size_bytes": 975531,
+      "scanned_regular_files": 710,
+      "patterns_checked_case_insensitive": [
+        "panasonic",
+        "socionext",
+        "milbeaut",
+        "ipcu",
+        "pvc04",
+        "sc2006",
+        "slram",
+        "beefcafe",
+        "mc824",
+        "dc123"
+      ],
+      "match_count": 0,
+      "matches": []
+    },
+    "sysvinit_archive": {
+      "zip_member": "20260612_OSS_SL3/sysvinit-2.88dsf.tar.bz2",
+      "sha256": "ea35bd8ee7b8e7aad18932ad477d945cb916345a06a17e4c9a0be763a5a0237d",
+      "size_bytes": 106083,
+      "src_paths_h_excerpt": [
+        {
+          "line": 1,
+          "text": "/*"
+        },
+        {
+          "line": 2,
+          "text": " * paths.h\tPaths of files that init and related utilities need."
+        },
+        {
+          "line": 3,
+          "text": " *"
+        },
+        {
+          "line": 4,
+          "text": " * Version:\t@(#) paths.h 2.85-8 05-Nov-2003"
+        },
+        {
+          "line": 5,
+          "text": " *"
+        },
+        {
+          "line": 6,
+          "text": " * Author:\tMiquel van Smoorenburg, <<REDACTED_EMAIL>>"
+        },
+        {
+          "line": 7,
+          "text": " *"
+        },
+        {
+          "line": 8,
+          "text": " *\t\tThis file is part of the sysvinit suite,"
+        },
+        {
+          "line": 9,
+          "text": " *\t\tCopyright (C) 1991-2001 Miquel van Smoorenburg."
+        },
+        {
+          "line": 10,
+          "text": " *"
+        },
+        {
+          "line": 11,
+          "text": " *\t\tThis program is free software; you can redistribute it and/or modify"
+        },
+        {
+          "line": 12,
+          "text": " *\t\tit under the terms of the GNU General Public License as published by"
+        },
+        {
+          "line": 13,
+          "text": " *\t\tthe Free Software Foundation; either version 2 of the License, or"
+        },
+        {
+          "line": 14,
+          "text": " *\t\t(at your option) any later version."
+        },
+        {
+          "line": 15,
+          "text": " *"
+        },
+        {
+          "line": 16,
+          "text": " *\t\tThis program is distributed in the hope that it will be useful,"
+        },
+        {
+          "line": 17,
+          "text": " *\t\tbut WITHOUT ANY WARRANTY; without even the implied warranty of"
+        },
+        {
+          "line": 18,
+          "text": " *\t\tMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the"
+        },
+        {
+          "line": 19,
+          "text": " *\t\tGNU General Public License for more details."
+        },
+        {
+          "line": 20,
+          "text": " *"
+        },
+        {
+          "line": 21,
+          "text": " *\t\tYou should have received a copy of the GNU General Public License"
+        },
+        {
+          "line": 22,
+          "text": " *\t\talong with this program; if not, write to the Free Software"
+        },
+        {
+          "line": 23,
+          "text": " *\t\tFoundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA"
+        },
+        {
+          "line": 24,
+          "text": " */"
+        },
+        {
+          "line": 25,
+          "text": "#define VT_MASTER\t\"/dev/tty0\"\t\t/* Virtual console master */"
+        },
+        {
+          "line": 26,
+          "text": "#define CONSOLE\t\t\"/dev/console\"\t\t/* Logical system console */"
+        },
+        {
+          "line": 27,
+          "text": "#define SECURETTY\t\"/etc/securetty\"\t/* List of root terminals */"
+        },
+        {
+          "line": 28,
+          "text": "#define SDALLOW\t\t\"/etc/shutdown.allow\"\t/* Users allowed to shutdown */"
+        },
+        {
+          "line": 29,
+          "text": "#define INITTAB\t\t\"/etc/inittab\"\t\t/* Location of inittab */"
+        },
+        {
+          "line": 30,
+          "text": "#define INIT\t\t\"/sbin/init\"\t\t/* Location of init itself. */"
+        },
+        {
+          "line": 31,
+          "text": "#define NOLOGIN\t\t\"/etc/nologin\"\t\t/* Stop user logging in. */"
+        },
+        {
+          "line": 32,
+          "text": "#define FASTBOOT\t\"/fastboot\"\t\t/* Enable fast boot. */"
+        },
+        {
+          "line": 33,
+          "text": "#define FORCEFSCK\t\"/forcefsck\"\t\t/* Force fsck on boot */"
+        },
+        {
+          "line": 34,
+          "text": "#define SDPID\t\t\"/var/run/shutdown.pid\"\t/* PID of shutdown program */"
+        },
+        {
+          "line": 35,
+          "text": "#define SHELL\t\t\"/bin/sh\"\t\t/* Default shell */"
+        },
+        {
+          "line": 36,
+          "text": "#define SULOGIN\t\t\"/sbin/sulogin\"\t\t/* Sulogin */"
+        },
+        {
+          "line": 37,
+          "text": "#define INITSCRIPT\t\"/etc/initscript\"\t/* Initscript. */"
+        },
+        {
+          "line": 38,
+          "text": "#define PWRSTAT_OLD\t\"/etc/powerstatus\"\t/* COMPAT: SIGPWR reason (OK/BAD) */"
+        },
+        {
+          "line": 39,
+          "text": "#define PWRSTAT\t\t\"/var/run/powerstatus\"\t/* COMPAT: SIGPWR reason (OK/BAD) */"
+        },
+        {
+          "line": 40,
+          "text": ""
+        },
+        {
+          "line": 41,
+          "text": "#if 0"
+        },
+        {
+          "line": 42,
+          "text": "#define INITLVL\t\t\"/etc/initrunlvl\"\t/* COMPAT: New runlevel */"
+        },
+        {
+          "line": 43,
+          "text": "#define INITLVL2\t\"/var/log/initrunlvl\"\t/* COMPAT: New runlevel */"
+        },
+        {
+          "line": 44,
+          "text": "\t\t\t\t/* Note: INITLVL2 definition needs INITLVL */"
+        },
+        {
+          "line": 45,
+          "text": "#define HALTSCRIPT1\t\"/etc/init.d/halt\"\t/* Called by \"fast\" shutdown */"
+        }
+      ]
+    },
+    "base_files_archive": {
+      "zip_member": "20260612_OSS_SL3/base-files-3.0.14.tar.bz2",
+      "sha256": "2b1397c8b6011b920b1ead5b7625df07efd51ac6c6ad11e9d9d1e44012cbe47d",
+      "size_bytes": 8073,
+      "etc_fstab": null
+    }
+  },
+  "custom_drivers_summary": {
+    "dmdrv": [
+      {
+        "line": 435,
+        "text": "\t\t\t}"
+      },
+      {
+        "line": 436,
+        "text": "\t\t\tprintk(KERN_ERR \"[DM] can't get free pages for sd-driver i=%x\\n\",i);"
+      },
+      {
+        "line": 437,
+        "text": "\t\t\treturn -ENOMEM;"
+      },
+      {
+        "line": 438,
+        "text": "\t\t}"
+      },
+      {
+        "line": 439,
+        "text": "\t}"
+      },
+      {
+        "line": 440,
+        "text": "#endif //CONFIG_DM_SUPPORT_P2"
+      },
+      {
+        "line": 441,
+        "text": ""
+      },
+      {
+        "line": 442,
+        "text": "\t/* get pages (2MB) DM_PAGE_NUM times */"
+      },
+      {
+        "line": 443,
+        "text": "\tfor(i = 0; i < DM_PAGE_NUM; i++){"
+      },
+      {
+        "line": 444,
+        "text": "\t\tdm_pages[i] = (char *)__get_free_pages(GFP_KERNEL, DM_ORDER);"
+      },
+      {
+        "line": 445,
+        "text": "\t\tif (dm_pages[i] == NULL){"
+      },
+      {
+        "line": 446,
+        "text": "#ifdef CONFIG_DM_SUPPORT_P2"
+      },
+      {
+        "line": 447,
+        "text": "\t\t\tint j;"
+      },
+      {
+        "line": 448,
+        "text": "\t\t\tfor(j = 0; j < CONFIG_DM_P2_SLOT; j++){"
+      },
+      {
+        "line": 449,
+        "text": "\t\t\t\tsd_free_pages(j, dm_sd_pages[j], dm_sd_phys_addr[j]);"
+      },
+      {
+        "line": 450,
+        "text": "\t\t\t}"
+      },
+      {
+        "line": 451,
+        "text": "#endif //CONFIG_DM_SUPPORT_P2"
+      },
+      {
+        "line": 452,
+        "text": "\t\t\twhile(i > 0){"
+      },
+      {
+        "line": 453,
+        "text": "\t\t\t\ti--;"
+      },
+      {
+        "line": 454,
+        "text": "\t\t\t\tfree_pages((unsigned long)dm_pages[i], "
+      },
+      {
+        "line": 455,
+        "text": "\t\t\t\t            DM_ORDER);"
+      },
+      {
+        "line": 456,
+        "text": "\t\t\t}"
+      },
+      {
+        "line": 457,
+        "text": "\t\t\tprintk(KERN_ERR \"[DM] can't get free pages i=%x\\n\",i);"
+      },
+      {
+        "line": 458,
+        "text": "\t\t\treturn -ENOMEM;"
+      },
+      {
+        "line": 459,
+        "text": "\t\t}"
+      },
+      {
+        "line": 460,
+        "text": "\t}"
+      },
+      {
+        "line": 461,
+        "text": "\t/* initializing the memory allocation information */"
+      },
+      {
+        "line": 462,
+        "text": "\tdoDM_RESET();"
+      },
+      {
+        "line": 463,
+        "text": ""
+      },
+      {
+        "line": 464,
+        "text": "\treturn 0;"
+      },
+      {
+        "line": 465,
+        "text": "}"
+      }
+    ],
+    "pvc_usb_buffer": [
+      {
+        "line": 398,
+        "text": "\t/* buf3_bus_addr are reserved parameters\t*/"
+      },
+      {
+        "line": 399,
+        "text": "\tprintk(\"scullp : scullp_init : allocated 3 buffers at (%p) & (%p) & (%p)\\n\","
+      },
+      {
+        "line": 400,
+        "text": "\t\t\tphys_to_virt((unsigned long)buf0_bus_addr), phys_to_virt((unsigned long)buf1_bus_addr), phys_to_virt((unsigned long)buf2_bus_addr));"
+      },
+      {
+        "line": 401,
+        "text": ""
+      },
+      {
+        "line": 402,
+        "text": "    return 0;"
+      },
+      {
+        "line": 403,
+        "text": ""
+      },
+      {
+        "line": 404,
+        "text": "#else /* ! CONFIG_BUFFER_DM */ /* XXX */"
+      },
+      {
+        "line": 405,
+        "text": ""
+      },
+      {
+        "line": 406,
+        "text": "\tscullp_dev.buf_num = DMABUF_NUM;"
+      },
+      {
+        "line": 407,
+        "text": "\tscullp_dev.buf_size = DMABUF_SIZE_CHUNK;"
+      },
+      {
+        "line": 408,
+        "text": ""
+      },
+      {
+        "line": 409,
+        "text": "\t/* allocate kernel memories \t*/"
+      },
+      {
+        "line": 410,
+        "text": "\tfor(lpc = 0; lpc < DMABUF_NUM; lpc++){"
+      },
+      {
+        "line": 411,
+        "text": "\t\tscullp_dev.dmabuf[lpc] = (void *)__get_free_pages(GFP_KERNEL, DMABUF_SIZE_ORDER);"
+      },
+      {
+        "line": 412,
+        "text": "\t\tif (!scullp_dev.dmabuf[lpc]) {"
+      },
+      {
+        "line": 413,
+        "text": "\t\t\tresult = -ENOMEM;"
+      },
+      {
+        "line": 414,
+        "text": "\t\t\tgoto fail_malloc;"
+      },
+      {
+        "line": 415,
+        "text": "\t\t}"
+      },
+      {
+        "line": 416,
+        "text": "\t}"
+      },
+      {
+        "line": 417,
+        "text": "\tprintk(\"scullp : scullp_init : allocated %d buffers\\n\", DMABUF_NUM);"
+      },
+      {
+        "line": 418,
+        "text": "\tfor(lpc = 0; lpc < DMABUF_NUM; lpc++){"
+      },
+      {
+        "line": 419,
+        "text": "\t\tprintk(\"scullp : scullp_init : at (%08lX)\\n\", (unsigned long)(scullp_dev.dmabuf[lpc]));"
+      },
+      {
+        "line": 420,
+        "text": "\t}"
+      }
+    ],
+    "sni_dsp_m20v": [
+      {
+        "line": 907,
+        "text": "\tcase XM6_IOCTL_COPY_K2TCM:"
+      },
+      {
+        "line": 908,
+        "text": "\t{"
+      },
+      {
+        "line": 909,
+        "text": "\t\tT_XM6_COPY t_copy;"
+      },
+      {
+        "line": 910,
+        "text": "\t\tdma_addr_t dst_dma_addr;"
+      },
+      {
+        "line": 911,
+        "text": "\t\tdma_addr_t src_dma_addr;"
+      },
+      {
+        "line": 912,
+        "text": "\t\tsize_t size;"
+      },
+      {
+        "line": 913,
+        "text": "\t\tstruct dma_device *dma_dev;"
+      },
+      {
+        "line": 914,
+        "text": "\t\tstruct dma_async_tx_descriptor *tx;"
+      },
+      {
+        "line": 915,
+        "text": "\t\tvolatile int dma_flag;"
+      },
+      {
+        "line": 916,
+        "text": ""
+      },
+      {
+        "line": 917,
+        "text": "\t\tif(copy_from_user(&t_copy, (void*)arg, sizeof(T_XM6_COPY))){"
+      },
+      {
+        "line": 918,
+        "text": "\t\t\tpr_err(\"%s:%d copy_from_user failed\\n\", __func__, __LINE__);"
+      },
+      {
+        "line": 919,
+        "text": "\t\t\treturn -EFAULT;"
+      },
+      {
+        "line": 920,
+        "text": "\t\t}"
+      },
+      {
+        "line": 921,
+        "text": ""
+      },
+      {
+        "line": 922,
+        "text": "\t\tdma_dev = sni_dsp_dev->chan->device;"
+      },
+      {
+        "line": 923,
+        "text": ""
+      },
+      {
+        "line": 924,
+        "text": "\t\tdma_flag = 0;"
+      },
+      {
+        "line": 925,
+        "text": "\t\t//dst_dma_addr = D_XM6_DTCM_ADDR;"
+      },
+      {
+        "line": 926,
+        "text": "\t\tdst_dma_addr = (dma_addr_t)t_copy.dstAddr;"
+      },
+      {
+        "line": 927,
+        "text": "\t\t//src_dma_addr = 0xAC908000;"
+      },
+      {
+        "line": 928,
+        "text": "\t\tsrc_dma_addr = (dma_addr_t)t_copy.srcAddr;"
+      },
+      {
+        "line": 929,
+        "text": "\t\tsize = t_copy.size;"
+      },
+      {
+        "line": 930,
+        "text": "\t\t//size = 0x80000;"
+      },
+      {
+        "line": 931,
+        "text": "\t\ttx = dma_dev->device_prep_dma_memcpy(sni_dsp_dev->chan, dst_dma_addr,"
+      },
+      {
+        "line": 932,
+        "text": "                                        src_dma_addr, size, 0);"
+      },
+      {
+        "line": 933,
+        "text": "\t\tif (!tx)"
+      },
+      {
+        "line": 934,
+        "text": "\t\t\treturn -ENOMEM;"
+      },
+      {
+        "line": 935,
+        "text": ""
+      },
+      {
+        "line": 936,
+        "text": "\t\ttx->callback = dma_callback;"
+      },
+      {
+        "line": 937,
+        "text": "\t\ttx->callback_param = (void*)&dma_flag;"
+      },
+      {
+        "line": 938,
+        "text": "\t\tdmaengine_submit(tx);"
+      },
+      {
+        "line": 939,
+        "text": "\t\tdma_async_issue_pending(sni_dsp_dev->chan);"
+      },
+      {
+        "line": 940,
+        "text": ""
+      },
+      {
+        "line": 941,
+        "text": "\t\tprintk(\"wait for copy to TCM ... (src:%llx dst:%llx size:%ld)\\n\", src_dma_addr, dst_dma_addr, size);"
+      },
+      {
+        "line": 942,
+        "text": "\t\twhile(dma_flag == 0){"
+      },
+      {
+        "line": 943,
+        "text": ""
+      },
+      {
+        "line": 944,
+        "text": "\t\t}"
+      },
+      {
+        "line": 945,
+        "text": ""
+      },
+      {
+        "line": 946,
+        "text": "\t\tbreak;"
+      },
+      {
+        "line": 947,
+        "text": "\t}"
+      }
+    ]
+  },
+  "epistemic_classification": {
+    "confirmed": [
+      "U-Boot and Linux top-level GNUmakefile files dispatch builds via PVCPF_MTYPE=pvc04v, PVCPF_SUBMODEL, and PVCPF_HW_VERSION to pvc04v_$(PVCPF_SUBMODEL)$(PVCPF_HW_VERSION)_defconfig and pvc04v-$(PVCPF_SUBMODEL)$(PVCPF_HW_VERSION).dtb.",
+      "Linux arch/arm64/boot/dts/socionext/Makefile additionally builds pvc04v-$(PVCPF_SUBMODEL)$(PVCPF_HW_VERSION)-shell.dtb, whose -shell.dts source is omitted from all shipped OSS tarballs.",
+      "All three U-Boot defconfigs (MC8241, MC8266, MC501) disable CONFIG_SPL and link U-Boot directly at CONFIG_SYS_TEXT_BASE=0x400180000 with CONFIG_BOOTDELAY=-2; U-Boot's board_init/dram_init do not read flash or populate 0x400200000, 0x401290000, 0x4012A0000, or 0x4016A0000.",
+      "U-Boot do_unzip (cmd/unzip.c:21-57) -> gunzip (lib/gunzip.c:39-61) only validates standard gzip magic (0x1f 0x8b, method 8) and inflates 0x400200000 to 0x403700000; it contains no decryption or flash read logic.",
+      "Linux runs in AMP co-boot mode on cpu@3 only (cpu@0..2 disabled, nr_cpu=1). drivers/irqchip/irq-gic-v3.c (CONFIG_DEBUG_GIC_BL=y) reads the 403-entry GICv3 black-list in pvc04v-MC8241.dts and leaves 403 of 416 SPIs untouched by Linux, including all NAND (SPI 182), eMMC (SPI 183-184), SD1/SD2 (SPI 187-191), and SPI0-2 (SPI 323-325) interrupts.",
+      "Linux slram (drivers/mtd/devices/slram.c) and ipcufs (fs/ipcufs.c) are pure consumers. Linux reads the 64-bit physical buffer pool pointer from SHMEM_TOP+0x08 (0x4_AC00_0008) and sync magic base pointer from SHMEM_TOP+0x18 (0x4_AC00_0018) via ioread64, and sni_ipcu_send_msg[_kernel] refuses to send (-EAGAIN) unless the remote RTOS peer has already written SNI_IPCU_MAGIC_CODE (0xBEEFCAFE) into the destination mailbox slot.",
+      "In all four kernel defconfigs (MC8241, MC8266, DC1231, DC1232), line 488/486 '# CONFIG_BLK_DEV_INITRD is not set' overrides line 46 'CONFIG_BLK_DEV_INITRD=y'. In init/main.c:1435-1442, ksys_access(ramdisk_execute_command, 0) runs before prepare_namespace(), clearing ramdisk_execute_command ('/sbin/finit') to NULL before /dev/mtdblock0 (slram0) is mounted, so kernel_init executes /sbin/init from slram0.",
+      "A full scan of all 710 files in LeicaSL3_OSS.zip::20260612_OSS_SL3/FreeRTOS-202212.00.tar.bz2 returned 0 matches for panasonic/socionext/milbeaut/ipcu/pvc04/sc2006/slram/beefcafe/mc824/dc123, confirming the archive is vanilla upstream FreeRTOS without vendor BSP/loader code."
+    ],
+    "inferred": [
+      "The proprietary RTOS / boot loader running on cpu@0..2 (which retains ownership of NAND/eMMC/SD/SPI controllers and 403 GICv3 SPIs) is the sole producer that decrypts/loads U-Boot (0x400180000), ZKERNEL (0x400200000), the active co-boot DTB (0x401290000), slram0 (0x4012A0000), and slram1 (0x4016A0000) into DRAM, populates the descriptor table at 0x4_AC00_0000, writes 0xBEEFCAFE into IPCU mailbox sync slots, and serves ipcufs requests.",
+      "The active DTB placed at 0x401290000 at runtime (or built from the omitted -shell.dts target) enables at least snrtos_ipcu00 (dest_mb=0), snrtos_ipcu06 (recv), and snrtos_ipcu07 (send) and adjusts GICv3 black-list/status properties when co-booting with RTOS."
+    ],
+    "unknown": [
+      "The exact binary implementation of the proprietary Boot ROM / stage-1 loader / RTOS producer on cpu@0..2 (including its flash partition table parser, decryption routines for 01_loader1.bin..12_main.bin, and the exact physical address written into 0x4_AC00_0008 and 0x4_AC00_0018 at runtime).",
+      "The exact contents of the omitted pvc04v-*-shell.dts files and the exact runtime DTB binary loaded at 0x401290000.",
+      "The filesystem image format and userland contents inside slram0 (0x4012A0000) and slram1 (0x4016A0000), since their payloads originate from the unrecovered encrypted firmware components."
+    ]
+  }
+}

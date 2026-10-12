@@ -1,0 +1,607 @@
+{
+  "assumptions": [
+    "directory digest identifies full uniform plaintext",
+    "encryption begins at component origin",
+    "no KDF or extra transform",
+    "standard AES-128 CFB128, CFB8, or OFB at the same origin"
+  ],
+  "boundary": "A prefix mismatch rejects only these conditional models. No plaintext was recovered; no camera commands were issued.",
+  "controls": [
+    {
+      "mode": "CFB128",
+      "uniform_byte": 0,
+      "positive_passed": true,
+      "corruption_rejected": true
+    },
+    {
+      "mode": "CFB8",
+      "uniform_byte": 0,
+      "positive_passed": true,
+      "corruption_rejected": true
+    },
+    {
+      "mode": "OFB",
+      "uniform_byte": 0,
+      "positive_passed": true,
+      "corruption_rejected": true
+    },
+    {
+      "mode": "CFB128",
+      "uniform_byte": 255,
+      "positive_passed": true,
+      "corruption_rejected": true
+    },
+    {
+      "mode": "CFB8",
+      "uniform_byte": 255,
+      "positive_passed": true,
+      "corruption_rejected": true
+    },
+    {
+      "mode": "OFB",
+      "uniform_byte": 255,
+      "positive_passed": true,
+      "corruption_rejected": true
+    }
+  ],
+  "key_controls": [
+    {
+      "file": "analysis/legacy_corpus_20261011/G3___V12.bin",
+      "input_sha256": "470a2e7facb75985e2a1a993096f18aafc1fb043792dbea4c9d94b66fe27ec9a",
+      "body_md5_passed": true
+    },
+    {
+      "file": "analysis/legacy_corpus_20261011/GF2__V11.bin",
+      "input_sha256": "39403bcf70db42549ac6a29622c768f3c7f6e1e3fa0f769c2ed690ae2ab148c1",
+      "body_md5_passed": true
+    },
+    {
+      "file": "analysis/legacy_corpus_20261011/GF3__V12.bin",
+      "input_sha256": "5c7b235d5b55c95d8e6a6db1b24dd2f4013bc46e611aa1bf38b60ee45b875124",
+      "body_md5_passed": true
+    },
+    {
+      "file": "analysis/legacy_corpus_20261011/GH2__V11.bin",
+      "input_sha256": "5756a37304b2453982b977d250806e1056cd9dfc5acf9de07a53fa3e2973400d",
+      "body_md5_passed": true
+    },
+    {
+      "file": "analysis/legacy_corpus_20261011/GX1__V11.bin",
+      "input_sha256": "75725a6876702909dbd6396527113f5a6e40187a34369624be30844cdeb302cf",
+      "body_md5_passed": true
+    }
+  ],
+  "pair_count": 35,
+  "pass_counts": {
+    "CFB128": 0,
+    "CFB8": 0,
+    "OFB": 0
+  },
+  "rows": [
+    {
+      "file": "S1m2_V14.bin",
+      "input_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+      "index": 8,
+      "name": "postboot2_r",
+      "absolute_offset": 70785536,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "G3___V12.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "input_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+      "index": 8,
+      "name": "postboot2_r",
+      "absolute_offset": 70785536,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF2__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "input_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+      "index": 8,
+      "name": "postboot2_r",
+      "absolute_offset": 70785536,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF3__V12.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "input_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+      "index": 8,
+      "name": "postboot2_r",
+      "absolute_offset": 70785536,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GH2__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "input_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+      "index": 8,
+      "name": "postboot2_r",
+      "absolute_offset": 70785536,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GX1__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "input_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+      "index": 10,
+      "name": "postboot4_r",
+      "absolute_offset": 79174144,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "G3___V12.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "input_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+      "index": 10,
+      "name": "postboot4_r",
+      "absolute_offset": 79174144,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF2__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "input_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+      "index": 10,
+      "name": "postboot4_r",
+      "absolute_offset": 79174144,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF3__V12.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "input_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+      "index": 10,
+      "name": "postboot4_r",
+      "absolute_offset": 79174144,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GH2__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "S1m2_V14.bin",
+      "input_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+      "index": 10,
+      "name": "postboot4_r",
+      "absolute_offset": 79174144,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GX1__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/sources/S1m2_V13.bin",
+      "input_sha256": "cc512f22374005ec99cbe458809b996f3d9ee441b2a8034330708463739c9c66",
+      "index": 8,
+      "name": "postboot2_r",
+      "absolute_offset": 70785536,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "G3___V12.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/sources/S1m2_V13.bin",
+      "input_sha256": "cc512f22374005ec99cbe458809b996f3d9ee441b2a8034330708463739c9c66",
+      "index": 8,
+      "name": "postboot2_r",
+      "absolute_offset": 70785536,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF2__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/sources/S1m2_V13.bin",
+      "input_sha256": "cc512f22374005ec99cbe458809b996f3d9ee441b2a8034330708463739c9c66",
+      "index": 8,
+      "name": "postboot2_r",
+      "absolute_offset": 70785536,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF3__V12.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/sources/S1m2_V13.bin",
+      "input_sha256": "cc512f22374005ec99cbe458809b996f3d9ee441b2a8034330708463739c9c66",
+      "index": 8,
+      "name": "postboot2_r",
+      "absolute_offset": 70785536,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GH2__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/sources/S1m2_V13.bin",
+      "input_sha256": "cc512f22374005ec99cbe458809b996f3d9ee441b2a8034330708463739c9c66",
+      "index": 8,
+      "name": "postboot2_r",
+      "absolute_offset": 70785536,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GX1__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/sources/S1m2_V13.bin",
+      "input_sha256": "cc512f22374005ec99cbe458809b996f3d9ee441b2a8034330708463739c9c66",
+      "index": 10,
+      "name": "postboot4_r",
+      "absolute_offset": 79174144,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "G3___V12.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/sources/S1m2_V13.bin",
+      "input_sha256": "cc512f22374005ec99cbe458809b996f3d9ee441b2a8034330708463739c9c66",
+      "index": 10,
+      "name": "postboot4_r",
+      "absolute_offset": 79174144,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF2__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/sources/S1m2_V13.bin",
+      "input_sha256": "cc512f22374005ec99cbe458809b996f3d9ee441b2a8034330708463739c9c66",
+      "index": 10,
+      "name": "postboot4_r",
+      "absolute_offset": 79174144,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF3__V12.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/sources/S1m2_V13.bin",
+      "input_sha256": "cc512f22374005ec99cbe458809b996f3d9ee441b2a8034330708463739c9c66",
+      "index": 10,
+      "name": "postboot4_r",
+      "absolute_offset": 79174144,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GH2__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/sources/S1m2_V13.bin",
+      "input_sha256": "cc512f22374005ec99cbe458809b996f3d9ee441b2a8034330708463739c9c66",
+      "index": 10,
+      "name": "postboot4_r",
+      "absolute_offset": 79174144,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GX1__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/GH5__V28.bin",
+      "input_sha256": "1c7e7538aea0a0009f17be56374b92ab1f77a29d271446ddd771bd5b14bc4442",
+      "index": 31,
+      "name": "apu0_code_e",
+      "absolute_offset": 57965056,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "G3___V12.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/GH5__V28.bin",
+      "input_sha256": "1c7e7538aea0a0009f17be56374b92ab1f77a29d271446ddd771bd5b14bc4442",
+      "index": 31,
+      "name": "apu0_code_e",
+      "absolute_offset": 57965056,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF2__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/GH5__V28.bin",
+      "input_sha256": "1c7e7538aea0a0009f17be56374b92ab1f77a29d271446ddd771bd5b14bc4442",
+      "index": 31,
+      "name": "apu0_code_e",
+      "absolute_offset": 57965056,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GF3__V12.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/GH5__V28.bin",
+      "input_sha256": "1c7e7538aea0a0009f17be56374b92ab1f77a29d271446ddd771bd5b14bc4442",
+      "index": 31,
+      "name": "apu0_code_e",
+      "absolute_offset": 57965056,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GH2__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/GH5__V28.bin",
+      "input_sha256": "1c7e7538aea0a0009f17be56374b92ab1f77a29d271446ddd771bd5b14bc4442",
+      "index": 31,
+      "name": "apu0_code_e",
+      "absolute_offset": 57965056,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 255,
+      "key_source": "GX1__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/GH5__V28.bin",
+      "input_sha256": "1c7e7538aea0a0009f17be56374b92ab1f77a29d271446ddd771bd5b14bc4442",
+      "index": 32,
+      "name": "ipu_data",
+      "absolute_offset": 58030592,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 0,
+      "key_source": "G3___V12.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/GH5__V28.bin",
+      "input_sha256": "1c7e7538aea0a0009f17be56374b92ab1f77a29d271446ddd771bd5b14bc4442",
+      "index": 32,
+      "name": "ipu_data",
+      "absolute_offset": 58030592,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GF2__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/GH5__V28.bin",
+      "input_sha256": "1c7e7538aea0a0009f17be56374b92ab1f77a29d271446ddd771bd5b14bc4442",
+      "index": 32,
+      "name": "ipu_data",
+      "absolute_offset": 58030592,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GF3__V12.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/GH5__V28.bin",
+      "input_sha256": "1c7e7538aea0a0009f17be56374b92ab1f77a29d271446ddd771bd5b14bc4442",
+      "index": 32,
+      "name": "ipu_data",
+      "absolute_offset": 58030592,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GH2__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/GH5__V28.bin",
+      "input_sha256": "1c7e7538aea0a0009f17be56374b92ab1f77a29d271446ddd771bd5b14bc4442",
+      "index": 32,
+      "name": "ipu_data",
+      "absolute_offset": 58030592,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GX1__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/S5___V28.bin",
+      "input_sha256": "44944f9bd0fc72b2d612f1acb714f735ca70cea58c2265ac60ec7fca08131939",
+      "index": 33,
+      "name": "ipu_data",
+      "absolute_offset": 75492864,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 0,
+      "key_source": "G3___V12.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/S5___V28.bin",
+      "input_sha256": "44944f9bd0fc72b2d612f1acb714f735ca70cea58c2265ac60ec7fca08131939",
+      "index": 33,
+      "name": "ipu_data",
+      "absolute_offset": 75492864,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GF2__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/S5___V28.bin",
+      "input_sha256": "44944f9bd0fc72b2d612f1acb714f735ca70cea58c2265ac60ec7fca08131939",
+      "index": 33,
+      "name": "ipu_data",
+      "absolute_offset": 75492864,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GF3__V12.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/S5___V28.bin",
+      "input_sha256": "44944f9bd0fc72b2d612f1acb714f735ca70cea58c2265ac60ec7fca08131939",
+      "index": 33,
+      "name": "ipu_data",
+      "absolute_offset": 75492864,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GH2__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    },
+    {
+      "file": "analysis/transition_corpus_20261011/S5___V28.bin",
+      "input_sha256": "44944f9bd0fc72b2d612f1acb714f735ca70cea58c2265ac60ec7fca08131939",
+      "index": 33,
+      "name": "ipu_data",
+      "absolute_offset": 75492864,
+      "sample_bytes": 128,
+      "hypothesized_uniform_byte": 0,
+      "key_source": "GX1__V11.bin",
+      "matches": {
+        "CFB128": false,
+        "CFB8": false,
+        "OFB": false
+      }
+    }
+  ]
+}

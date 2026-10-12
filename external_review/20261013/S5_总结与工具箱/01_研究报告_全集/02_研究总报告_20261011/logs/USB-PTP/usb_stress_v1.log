@@ -1,0 +1,81 @@
+<string>:8: DeprecationWarning: Use "with USBContext() as context:" for safer cleanup on interpreter shutdown. See also USBContext.open().
+Opened: Panasonic DC-S5 (PID=0x2374)
+  NumConfigs: 2
+
+=== 1. Invalid SET_CONFIGURATION ===
+  SET_CONFIGURATION(0): USBErrorPipe
+  SET_CONFIGURATION(3): USBErrorPipe
+  SET_CONFIGURATION(4): USBErrorPipe
+  SET_CONFIGURATION(255): USBErrorPipe
+  SET_CONFIGURATION(65535): USBErrorPipe
+
+=== 2. SET_FEATURE / CLEAR_FEATURE with invalid values ===
+  SET_FEATURE(feat=0x0002, ep=0x00): USBErrorPipe
+  SET_FEATURE(feat=0x0002, ep=0x01): USBErrorPipe
+  SET_FEATURE(feat=0x0002, ep=0x82): USBErrorPipe
+  SET_FEATURE(feat=0x0002, ep=0x83): USBErrorPipe
+  SET_FEATURE(feat=0x0003, ep=0x00): USBErrorPipe
+  SET_FEATURE(feat=0x0003, ep=0x01): USBErrorPipe
+  SET_FEATURE(feat=0x0003, ep=0x82): USBErrorPipe
+  SET_FEATURE(feat=0x0003, ep=0x83): USBErrorPipe
+  SET_FEATURE(feat=0x00FF, ep=0x00): USBErrorPipe
+  SET_FEATURE(feat=0x00FF, ep=0x01): USBErrorPipe
+  SET_FEATURE(feat=0x00FF, ep=0x82): USBErrorPipe
+  SET_FEATURE(feat=0x00FF, ep=0x83): USBErrorPipe
+  SET_FEATURE(feat=0xFFFF, ep=0x00): USBErrorPipe
+  SET_FEATURE(feat=0xFFFF, ep=0x01): USBErrorPipe
+  SET_FEATURE(feat=0xFFFF, ep=0x82): USBErrorPipe
+  SET_FEATURE(feat=0xFFFF, ep=0x83): USBErrorPipe
+
+=== 3. GET_DESCRIPTOR with invalid type/index ===
+  GET_DESCRIPTOR(type=0x00, idx=0): USBErrorPipe
+  GET_DESCRIPTOR(type=0x00, idx=255): USBErrorPipe
+  GET_DESCRIPTOR(type=0x00, idx=256): USBErrorPipe
+  GET_DESCRIPTOR(type=0x00, idx=65535): USBErrorPipe
+  GET_DESCRIPTOR(type=0x0F, idx=0): USBErrorPipe
+  GET_DESCRIPTOR(type=0x0F, idx=255): USBErrorPipe
+  GET_DESCRIPTOR(type=0x0F, idx=256): USBErrorPipe
+  GET_DESCRIPTOR(type=0x0F, idx=65535): USBErrorPipe
+  GET_DESCRIPTOR(type=0x10, idx=0): USBErrorPipe
+  GET_DESCRIPTOR(type=0x10, idx=255): USBErrorPipe
+  GET_DESCRIPTOR(type=0x10, idx=256): USBErrorPipe
+  GET_DESCRIPTOR(type=0x10, idx=65535): USBErrorPipe
+  GET_DESCRIPTOR(type=0xFF, idx=0): USBErrorPipe
+  GET_DESCRIPTOR(type=0xFF, idx=255): USBErrorPipe
+  GET_DESCRIPTOR(type=0xFF, idx=256): USBErrorPipe
+  GET_DESCRIPTOR(type=0xFF, idx=65535): USBErrorPipe
+  GET_DESCRIPTOR(type=0x20, idx=0): USBErrorPipe
+  GET_DESCRIPTOR(type=0x20, idx=255): USBErrorPipe
+  GET_DESCRIPTOR(type=0x20, idx=256): USBErrorPipe
+  GET_DESCRIPTOR(type=0x20, idx=65535): USBErrorPipe
+
+=== 4. Vendor-specific requests (bmRequestType=0xC0/0xC1) ===
+  Vendor W req=0x00: W OK(ret=0)
+  Vendor R req=0x00: USBErrorTimeout
+  Vendor W req=0x01: USBErrorTimeout
+  Vendor R req=0x01: USBErrorTimeout
+  Vendor W req=0x02: USBErrorTimeout
+  Vendor R req=0x02: USBErrorIO
+  Vendor W req=0x80: USBErrorIO
+  Vendor R req=0x80: USBErrorIO
+  Vendor W req=0x81: USBErrorIO
+  Vendor R req=0x81: USBErrorIO
+  Vendor W req=0xFF: USBErrorIO
+  Vendor R req=0xFF: USBErrorIO
+
+=== 5. Rapid SET_CONFIGURATION toggle ===
+  Toggling between config 1 and 2 rapidly...
+  Toggle 5/20: cfg1=USBErrorIO cfg2=USBErrorIO
+  Toggle 10/20: cfg1=USBErrorIO cfg2=USBErrorIO
+  Toggle 15/20: cfg1=USBErrorIO cfg2=USBErrorIO
+  Toggle 20/20: cfg1=USBErrorIO cfg2=USBErrorIO
+
+=== 6. Mass overflow on control endpoint ===
+  Class OUT size=64: USBErrorIO
+  Class OUT size=128: USBErrorIO
+  Class OUT size=256: USBErrorIO
+  Class OUT size=512: USBErrorIO
+  Class OUT size=1024: USBErrorIO
+
+=== FINAL: Device still alive ===
+Done

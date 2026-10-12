@@ -1,0 +1,108 @@
+{
+  "module": "v15_2.scene_consistency.chroma",
+  "filename": "v15_2\\scene_consistency\\chroma.py",
+  "sha256": "81fb050a8c88c7b5df54ef63c52e467807e11e500509d47550ba7b643be99014",
+  "functions": [
+    {
+      "scope": "v15_2.scene_consistency.chroma",
+      "name": "<module>",
+      "line": 1,
+      "args": [],
+      "names": [
+        "__doc__",
+        "numpy",
+        "np",
+        "ops",
+        "Ops",
+        "residual_after_illumination",
+        "confirm"
+      ],
+      "imports": [
+        "numpy",
+        "ops"
+      ]
+    },
+    {
+      "scope": "v15_2.scene_consistency.chroma.residual_after_illumination",
+      "name": "residual_after_illumination",
+      "line": 10,
+      "args": [
+        "rt",
+        "base",
+        "band",
+        "budget"
+      ],
+      "names": [
+        "spec",
+        "shape",
+        "Ops",
+        "np",
+        "exp",
+        "arange",
+        "float32",
+        "sum",
+        "join",
+        "emit",
+        "free"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.chroma.residual_after_illumination.<genexpr>",
+      "name": "<genexpr>",
+      "line": 19,
+      "args": [
+        ".0"
+      ],
+      "names": [
+        "format",
+        "float"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.chroma.confirm",
+      "name": "confirm",
+      "line": 48,
+      "args": [
+        "rt",
+        "base",
+        "band",
+        "budget"
+      ],
+      "names": [
+        "residual_after_illumination",
+        "spec",
+        "shape",
+        "Ops",
+        "np",
+        "exp",
+        "arange",
+        "float32",
+        "sum",
+        "join",
+        "emit",
+        "free"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.chroma.confirm.<genexpr>",
+      "name": "<genexpr>",
+      "line": 52,
+      "args": [
+        ".0"
+      ],
+      "names": [
+        "format",
+        "float"
+      ],
+      "imports": []
+    }
+  ],
+  "imports": [
+    "numpy",
+    "ops"
+  ],
+  "shaders": []
+}

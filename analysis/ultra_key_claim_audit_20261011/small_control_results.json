@@ -1,0 +1,207 @@
+{
+  "scope": "synthetic check() controls and sparse key equality; no target main() or complete firmware decryption",
+  "reviewed_script_sha256": "311358f5ba54455e09b79f7da4dceab56774ddfb234eff97c9833d3210680c8f",
+  "synthetic_case_count": 18,
+  "synthetic_cases": [
+    {
+      "mode": "CFB128",
+      "length": 32,
+      "uniform_byte": 0,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "CFB8",
+      "length": 32,
+      "uniform_byte": 0,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "OFB",
+      "length": 32,
+      "uniform_byte": 0,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "CFB128",
+      "length": 32,
+      "uniform_byte": 255,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "CFB8",
+      "length": 32,
+      "uniform_byte": 255,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "OFB",
+      "length": 32,
+      "uniform_byte": 255,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "CFB128",
+      "length": 48,
+      "uniform_byte": 0,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "CFB8",
+      "length": 48,
+      "uniform_byte": 0,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "OFB",
+      "length": 48,
+      "uniform_byte": 0,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "CFB128",
+      "length": 48,
+      "uniform_byte": 255,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "CFB8",
+      "length": 48,
+      "uniform_byte": 255,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "OFB",
+      "length": 48,
+      "uniform_byte": 255,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "CFB128",
+      "length": 128,
+      "uniform_byte": 0,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "CFB8",
+      "length": 128,
+      "uniform_byte": 0,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "OFB",
+      "length": 128,
+      "uniform_byte": 0,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "CFB128",
+      "length": 128,
+      "uniform_byte": 255,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "CFB8",
+      "length": 128,
+      "uniform_byte": 255,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    },
+    {
+      "mode": "OFB",
+      "length": 128,
+      "uniform_byte": 255,
+      "positive": true,
+      "corruption_rejected": true,
+      "wrong_value_rejected": true,
+      "wrong_key_rejected": true
+    }
+  ],
+  "literal_matches": [
+    {
+      "plaintext_file": "G3___V12.bin.plaintext",
+      "key_source_file": "G3___V12.bin",
+      "offset": 6102488,
+      "exact_literal_match": true
+    },
+    {
+      "plaintext_file": "GF2__V11.bin.plaintext",
+      "key_source_file": "GF2__V11.bin",
+      "offset": 5570280,
+      "exact_literal_match": true
+    },
+    {
+      "plaintext_file": "GF3__V12.bin.plaintext",
+      "key_source_file": "GF3__V12.bin",
+      "offset": 5887752,
+      "exact_literal_match": true
+    },
+    {
+      "plaintext_file": "GH2__V11.bin.plaintext",
+      "key_source_file": "GH2__V11.bin",
+      "offset": 8344312,
+      "exact_literal_match": true
+    },
+    {
+      "plaintext_file": "GH2__V12.bin.plaintext",
+      "key_source_file": "GH2__V11.bin",
+      "offset": 8344312,
+      "exact_literal_match": true
+    },
+    {
+      "plaintext_file": "GX1__V11.bin.plaintext",
+      "key_source_file": "GX1__V11.bin",
+      "offset": 6528804,
+      "exact_literal_match": true
+    }
+  ]
+}

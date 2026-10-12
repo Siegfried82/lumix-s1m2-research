@@ -1,0 +1,216 @@
+{
+  "date": "2026-10-12",
+  "edited_document_count": 8,
+  "table_checks": {
+    "lab_historical_rows": 14,
+    "acquisition_historical_rows": 27,
+    "official_package_sha_rows": 4
+  },
+  "records": [
+    {
+      "path": "analysis/Gemini_CAM公开资料检索_20261008.md",
+      "before_sha256": "6474ad825c8757ce78fcbccd5b4c404e07b05aeab201b42862544daa8c39b368",
+      "after_sha256": "58ebcfe4ac338ab4299d1a436b4dcbf0892c268e7a884883f6dd857498e01b74",
+      "bytes_before": 6593,
+      "bytes_after": 2172,
+      "backup_path": "<LOCAL_BACKUP>/相机文稿清理-20261012-212031/analysis/Gemini_CAM公开资料检索_20261008.md",
+      "removed_claims": [
+        "低熵证明全部载荷未加密/明文及14个模式块",
+        "DAT与CAM全载荷相同",
+        "机械快门限制的硬件原因已知",
+        "在未解码固件中直接查找接收函数"
+      ],
+      "retained_information": [
+        "两个样本来源/长度",
+        "头字段和不同尾值",
+        "历史检索式",
+        "已核验入口"
+      ],
+      "verification": "Full rewritten document generated; table/count/JSON unchanged assertions checked below. No firmware/device action."
+    },
+    {
+      "path": "analysis/Gemini_CAM静态审计_20261008.md",
+      "before_sha256": "0761fe075131a2803b7546edb28c2766a3ac7cf98331e968c0383e1406c3157e",
+      "after_sha256": "320e0dfe156d71b1b8fdf50dd7b73d647d4c73b759ea6dfb8d5af4a516ffd1ee",
+      "bytes_before": 7029,
+      "bytes_after": 2347,
+      "backup_path": "<LOCAL_BACKUP>/相机文稿清理-20261012-212031/analysis/Gemini_CAM静态审计_20261008.md",
+      "removed_claims": [
+        "宿主零Magic/零校验/绝无配置解析器的全称结论",
+        "错误兼容性标签作为参数",
+        "低熵证明明文结构体",
+        "把候选下发/裁判权当作完整实现"
+      ],
+      "retained_information": [
+        "7阶段历史坐标表",
+        "0xf00000常量及15MiB换算",
+        "正确兼容性标签及未执行状态",
+        "Codex纠错入口"
+      ],
+      "verification": "Full rewritten document generated; table/count/JSON unchanged assertions checked below. No firmware/device action."
+    },
+    {
+      "path": "analysis/oss_refresh_gemini_20261009.md",
+      "before_sha256": "81be1bb22543693e2e89530b0cae39bdac9cdeccf36ce5e6dea13e84c935fe8a",
+      "after_sha256": "2486fffca496809da02ebb8e3a2ee61d0aa6b75a6e10984f3369eec0be7dc93f",
+      "bytes_before": 4565,
+      "bytes_after": 2607,
+      "backup_path": "<LOCAL_BACKUP>/相机文稿清理-20261012-212031/analysis/oss_refresh_gemini_20261009.md",
+      "removed_claims": [
+        "归档成员计数等于普通文件数量",
+        "66,156个普通文件",
+        "BootROM已确定装载U-Boot",
+        "destination_field已知物理烧录地址"
+      ],
+      "retained_information": [
+        "4个完整摘要和文件长度",
+        "历史官方页及包数量",
+        "Codex逐文件比较数",
+        "构建参数与型号映射缺口"
+      ],
+      "verification": "Full rewritten document generated; table/count/JSON unchanged assertions checked below. No firmware/device action."
+    },
+    {
+      "path": "analysis/tether_app_maintenance_audit_gemini_20261008.md",
+      "before_sha256": "549a22144156cbe70fd240d0272e479817d54cb9ef0f0335c991d217f045df22",
+      "after_sha256": "4dca4a1d47473fe7c0f3ef2fac6517d0c781cc212903455f452e8f4aaf4c7cd2",
+      "bytes_before": 5105,
+      "bytes_after": 2377,
+      "backup_path": "<LOCAL_BACKUP>/相机文稿清理-20261012-212031/analysis/tether_app_maintenance_audit_gemini_20261008.md",
+      "removed_claims": [
+        "无任何动态加载和所有调用只经存根",
+        "仅有2个调用者的全局判断",
+        "已有S1M2解码数据可查分发表",
+        "USB模式值已确定物理速率"
+      ],
+      "retained_information": [
+        "2条Codex支持调用",
+        "6组历史候选坐标/参数标记",
+        "原JSON",
+        "准确覆盖边界"
+      ],
+      "verification": "Full rewritten document generated; table/count/JSON unchanged assertions checked below. No firmware/device action."
+    },
+    {
+      "path": "analysis/lumix_lab_ptp_read_audit_gemini_20261008.md",
+      "before_sha256": "47dd80c96c2dcd4dfc4a40a72fb33530a9417911016d1de207740e18fbd04b5f",
+      "after_sha256": "d6e7329bc1a2635c1b53eaf0a36715dac4b97cc11c02a9042f08ed887b419baf",
+      "bytes_before": 4561,
+      "bytes_after": 4184,
+      "backup_path": "<LOCAL_BACKUP>/相机文稿清理-20261012-212031/analysis/lumix_lab_ptp_read_audit_gemini_20261008.md",
+      "removed_claims": [
+        "80枚举完全无调用并只是残留定义",
+        "能力数据笼统为XML/TLV",
+        "枚举机制证明机身绝无其他读取",
+        "主机memory符号代表相机RAM"
+      ],
+      "retained_information": [
+        "14条历史定位表",
+        "111/31/14历史计数标记",
+        "42反编译错误范围",
+        "媒体对象真实消费者坐标"
+      ],
+      "verification": "Full rewritten document generated; table/count/JSON unchanged assertions checked below. No firmware/device action."
+    },
+    {
+      "path": "analysis/service_materials_gemini_20261008.md",
+      "before_sha256": "fc7e080b2df240857341bb128aacbff77344a4662e4f513fc2faf21e7ebb4336",
+      "after_sha256": "c3ec6689095a86bb14bb080fb271f44d32655a77043c926526d78d94172a2fd0",
+      "bytes_before": 6701,
+      "bytes_after": 2380,
+      "backup_path": "<LOCAL_BACKUP>/相机文稿清理-20261012-212031/analysis/service_materials_gemini_20261008.md",
+      "removed_claims": [
+        "无合法公开同款手册/唯一第三方来源",
+        "全部现代调整程序非公开",
+        "所有账号必须有专有凭证",
+        "未取得原件的机型编号/文档内容"
+      ],
+      "retained_information": [
+        "6来源当次状态",
+        "TS2本地文件/长度和正确页码入口",
+        "后续S1M2手册取得说明",
+        "视频修复工具用途区分"
+      ],
+      "verification": "Full rewritten document generated; table/count/JSON unchanged assertions checked below. No firmware/device action."
+    },
+    {
+      "path": "analysis/service_alternatives_gemini_20261009.md",
+      "before_sha256": "859411b979549ef2959f884596751d377c3f09efc186744d969a0c4b2e5c81fe",
+      "after_sha256": "0708376f66eea9ce74366545bb541b8a8984e85e9ada61214f33aace90a4d703",
+      "bytes_before": 3882,
+      "bytes_after": 1631,
+      "backup_path": "<LOCAL_BACKUP>/相机文稿清理-20261012-212031/analysis/service_alternatives_gemini_20261009.md",
+      "removed_claims": [
+        "GH7无维修手册",
+        "未下载证明无公开正文",
+        "访问失败证明必须账号",
+        "未核实编号作为原件"
+      ],
+      "retained_information": [
+        "5机型历史状态",
+        "new_downloaded_files=0",
+        "GH7已找到索引/尚未取得正文区别",
+        "后续S1M2同款手册入口"
+      ],
+      "verification": "Full rewritten document generated; table/count/JSON unchanged assertions checked below. No firmware/device action."
+    },
+    {
+      "path": "analysis/机身有限时间_采集清单.md",
+      "before_sha256": "ce6cf5cb727383fa05a38a338e2a3469bf2b512ce6046141b8561480306af2b6",
+      "after_sha256": "79d24d59ae5f447b7fcb01af51043fbd4b5f5b67fd4b85c5830fe33bb34bbb9d",
+      "bytes_before": 27788,
+      "bytes_after": 8410,
+      "backup_path": "<LOCAL_BACKUP>/相机文稿清理-20261012-212031/analysis/机身有限时间_采集清单.md",
+      "removed_claims": [
+        "零副作用/零风险/经过双重验证白名单承诺",
+        "错误兼容性参数作执行指引",
+        "未支持存储查询的采集顺序",
+        "未公布标准曝光属性默认查询",
+        "完整状态或RAM镜像承诺"
+      ],
+      "retained_information": [
+        "27原机器记录坐标索引",
+        "机器JSON原件",
+        "实际92次结果及错误保留",
+        "兼容性正确标签和未执行状态",
+        "真实采集与能力解析入口"
+      ],
+      "verification": "Full rewritten document generated; table/count/JSON unchanged assertions checked below. No firmware/device action."
+    }
+  ],
+  "verification": {
+    "analysis/Gemini_CAM公开资料检索_20261008.md": {
+      "sha_matches": true,
+      "lines": 27
+    },
+    "analysis/Gemini_CAM静态审计_20261008.md": {
+      "sha_matches": true,
+      "lines": 19
+    },
+    "analysis/oss_refresh_gemini_20261009.md": {
+      "sha_matches": true,
+      "lines": 27
+    },
+    "analysis/tether_app_maintenance_audit_gemini_20261008.md": {
+      "sha_matches": true,
+      "lines": 25
+    },
+    "analysis/lumix_lab_ptp_read_audit_gemini_20261008.md": {
+      "sha_matches": true,
+      "lines": 28
+    },
+    "analysis/service_materials_gemini_20261008.md": {
+      "sha_matches": true,
+      "lines": 22
+    },
+    "analysis/service_alternatives_gemini_20261009.md": {
+      "sha_matches": true,
+      "lines": 15
+    },
+    "analysis/机身有限时间_采集清单.md": {
+      "sha_matches": true,
+      "lines": 45
+    }
+  },
+  "local_link_missing": []
+}

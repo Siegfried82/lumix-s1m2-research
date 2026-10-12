@@ -1,0 +1,70 @@
+[
+  {
+    "purpose" : "readonly_0x9421_dump",
+    "model_filter" : "(any)",
+    "event" : "started",
+    "time_utc" : "2026-10-10T18:20:10Z"
+  },
+  {
+    "event" : "device_found",
+    "model" : "DC-S5",
+    "time_utc" : "2026-10-10T18:20:10Z"
+  },
+  {
+    "event" : "session_opened",
+    "time_utc" : "2026-10-10T18:20:10Z"
+  },
+  {
+    "opcode" : "0x1001",
+    "data_bytes" : 225,
+    "ok" : true,
+    "event" : "read_response",
+    "response_bytes" : 12,
+    "time_utc" : "2026-10-10T18:20:10Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "device_info"
+  },
+  {
+    "opcode" : "0x1004",
+    "data_bytes" : 12,
+    "ok" : true,
+    "event" : "read_response",
+    "response_bytes" : 12,
+    "time_utc" : "2026-10-10T18:20:10Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "storage_ids"
+  },
+  {
+    "opcode" : "0x9104",
+    "data_bytes" : 32,
+    "ok" : true,
+    "event" : "read_response",
+    "response_bytes" : 12,
+    "time_utc" : "2026-10-10T18:20:10Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "sync_list"
+  },
+  {
+    "opcode" : "0x9421",
+    "data_bytes" : 65545,
+    "ok" : true,
+    "event" : "read_response",
+    "response_bytes" : 12,
+    "time_utc" : "2026-10-10T18:20:10Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "config_0x9421"
+  },
+  {
+    "event" : "session_closed",
+    "error" : "",
+    "time_utc" : "2026-10-10T18:20:10Z"
+  }
+]

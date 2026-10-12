@@ -1,0 +1,19 @@
+989:     public static String d0(String str) {
+990:         if (!str.equalsIgnoreCase(YouTube.DEFAULT_SERVICE_PATH) && str.length() != 0) {
+991:             try {
+992:                 return URLEncoder.encode(str, "UTF-8").replace("+", "%20").replace("!", "%21").replace("#", "%23").replace("$", "%24").replace("&", "%26").replace("'", "%27").replace("(", "%28").replace(")", "%29").replace("*", "%2A").replace("+", "%2B").replace(",", "%2C").replace("/", "%2F").replace(":", "%3A").replace(";", "%3B").replace("<", "%3C").replace("=", "%3D").replace(">", "%3E").replace("?", "%3F").replace("@", "%40").replace("[", "%5B").replace("]", "%5D").replace("^", "%5E").replace("`", "%60").replace("{", "%7B").replace("|", "%7C").replace("}", "%7D").replace("~", "%7E");
+993:             } catch (UnsupportedEncodingException e7) {
+994:                 e7.printStackTrace();
+995:             }
+996:         }
+997:         return YouTube.DEFAULT_SERVICE_PATH;
+998:     }
+999: 
+1000:     public static boolean e(Handler handler, Runnable runnable) {
+1001:         if (handler != null) {
+1002:             return handler.post(runnable);
+
+1477:     public static String y(Context context) {
+1478:         return "4D454930-0100-1000-8001-" + androidx.preference.g.c(context).getString("Dlna_UUID_Seed", YouTube.DEFAULT_SERVICE_PATH);
+1479:     }
+1480: 

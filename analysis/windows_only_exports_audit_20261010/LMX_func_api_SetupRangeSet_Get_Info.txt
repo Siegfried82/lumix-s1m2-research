@@ -1,0 +1,35 @@
+
+analysis/sources/tether_windows_2_12/Lmxptpif.dll:	file format coff-x86-64
+
+Disassembly of section .text:
+
+000000018002fcb0 <LMX_func_api_SetupRangeSet_Get_Info>:
+18002fcb0: 33 c0                       	xorl	%eax, %eax
+18002fcb2: 4d 85 c9                    	testq	%r9, %r9
+18002fcb5: 74 03                       	je	0x18002fcba <LMX_func_api_SetupRangeSet_Get_Info+0xa>
+18002fcb7: 41 89 01                    	movl	%eax, (%r9)
+18002fcba: 89 05 44 ea 22 00           	movl	%eax, 0x22ea44(%rip)    # 0x18025e704
+18002fcc0: 48 85 c9                    	testq	%rcx, %rcx
+18002fcc3: 75 17                       	jne	0x18002fcdc <LMX_func_api_SetupRangeSet_Get_Info+0x2c>
+18002fcc5: 4d 85 c9                    	testq	%r9, %r9
+18002fcc8: 74 07                       	je	0x18002fcd1 <LMX_func_api_SetupRangeSet_Get_Info+0x21>
+18002fcca: 41 c7 01 00 00 01 00        	movl	$0x10000, (%r9)         # imm = 0x10000
+18002fcd1: c7 05 29 ea 22 00 00 00 01 00       	movl	$0x10000, 0x22ea29(%rip) # imm = 0x10000
+                                                                        # 0x18025e704
+18002fcdb: c3                          	retq
+18002fcdc: e9 bf 04 00 00              	jmp	0x1800301a0 <LMX_func_api_SetupRangeSet_Set_Info+0x330>
+18002fce1: cc                          	int3
+18002fce2: cc                          	int3
+18002fce3: cc                          	int3
+18002fce4: cc                          	int3
+18002fce5: cc                          	int3
+18002fce6: cc                          	int3
+18002fce7: cc                          	int3
+18002fce8: cc                          	int3
+18002fce9: cc                          	int3
+18002fcea: cc                          	int3
+18002fceb: cc                          	int3
+18002fcec: cc                          	int3
+18002fced: cc                          	int3
+18002fcee: cc                          	int3
+18002fcef: cc                          	int3

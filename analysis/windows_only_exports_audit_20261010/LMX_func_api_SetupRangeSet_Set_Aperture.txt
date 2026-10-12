@@ -1,0 +1,29 @@
+
+analysis/sources/tether_windows_2_12/Lmxptpif.dll:	file format coff-x86-64
+
+Disassembly of section .text:
+
+000000018002fd50 <LMX_func_api_SetupRangeSet_Set_Aperture>:
+18002fd50: 48 83 ec 68                 	subq	$0x68, %rsp
+18002fd54: 48 8b 05 15 95 22 00        	movq	0x229515(%rip), %rax    # 0x180259270
+18002fd5b: 48 33 c4                    	xorq	%rsp, %rax
+18002fd5e: 48 89 44 24 58              	movq	%rax, 0x58(%rsp)
+18002fd63: 33 c0                       	xorl	%eax, %eax
+18002fd65: 4d 85 c9                    	testq	%r9, %r9
+18002fd68: 74 03                       	je	0x18002fd6d <LMX_func_api_SetupRangeSet_Set_Aperture+0x1d>
+18002fd6a: 41 89 01                    	movl	%eax, (%r9)
+18002fd6d: 66 89 4c 24 38              	movw	%cx, 0x38(%rsp)
+18002fd72: 48 8d 4c 24 20              	leaq	0x20(%rsp), %rcx
+18002fd77: 66 89 54 24 3a              	movw	%dx, 0x3a(%rsp)
+18002fd7c: ba b2 00 00 08              	movl	$0x80000b2, %edx        # imm = 0x80000B2
+18002fd81: 89 05 7d e9 22 00           	movl	%eax, 0x22e97d(%rip)    # 0x18025e704
+18002fd87: c7 44 24 30 b2 00 00 08     	movl	$0x80000b2, 0x30(%rsp)  # imm = 0x80000B2
+18002fd8f: c7 44 24 34 04 00 00 00     	movl	$0x4, 0x34(%rsp)
+18002fd97: e8 d4 00 00 00              	callq	0x18002fe70 <LMX_func_api_SetupRangeSet_Set_Info>
+18002fd9c: 48 8b 4c 24 58              	movq	0x58(%rsp), %rcx
+18002fda1: 48 33 cc                    	xorq	%rsp, %rcx
+18002fda4: e8 57 b4 16 00              	callq	0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>
+18002fda9: 48 83 c4 68                 	addq	$0x68, %rsp
+18002fdad: c3                          	retq
+18002fdae: cc                          	int3
+18002fdaf: cc                          	int3

@@ -1,0 +1,35 @@
+[   0.028] CAMERA 04DA:2382
+[   0.029] OPEN iface=0 ep_out=0x01 ep_in=0x81 ep_int=0x82
+[   0.329] TX  CMD  tid=1 code=0x1002 params=['0x1'] len=16 hex=10000000010002100100000001000000   [OpenSession]
+[   0.330] RX  RESP tid=1 code=0x2001 len=12 head=0c0000000300012001000000
+[   0.530] TX  CMD  tid=2 code=0x9102 params=['0x10001'] len=16 hex=10000000010002910200000001000100   [LumixOpenSession]
+[   0.546] RX  RESP tid=2 code=0x2001 len=16 head=10000000030001200200000001000100
+[   0.746] 
+########## 步骤1：读配置镜像 ##########
+[   0.746] TX  CMD  tid=3 code=0x9421 params=['0x80000a2'] len=16 hex=100000000100219403000000a2000008   [ExportConfigFile]
+[   5.453] RX  DATA tid=3 code=0x9421 len=9197349 head=25578c000200219403000000a200000811578c000d578c0050616e61736f6e696300000000000000...
+[   5.453] RX  RESP tid=3 code=0x2001 len=12 head=0c0000000300012003000000
+[   5.457]   => 9197337 字节  sha256=0e3090d6827ef31ed08cce7f261544c1ee819a34c2e0b437e5fb3432b8c2489a  (tid=3)
+[   5.460] 
+########## 步骤2：恒等写回（内容一字不改）##########
+[   5.460] TX  CMD  tid=4 code=0x9422 params=['0x80000a2'] len=16 hex=100000000100229404000000a2000008   [ImportConfigFile 恒等]
+[   5.461] TX  DATA tid=4 code=0x9422 len=9197337 head=25578c000200229404000000a200000811578c000d578c0050616e61736f6e6963000000000000000000...
+[  13.141] RX  RESP tid=4 code=0x2001 len=12 head=0c0000000300012004000000
+[  13.478] EVENT tid=0xffffffff code=0xc104 len=16 hex=10000000040004c1ffffffff10000008
+[  14.142] 
+########## 步骤3：回读校验 ##########
+[  14.142] TX  CMD  tid=5 code=0x9421 params=['0x80000a2'] len=16 hex=100000000100219405000000a2000008   [ExportConfigFile 回读]
+[  18.849] RX  DATA tid=5 code=0x9421 len=9197349 head=25578c000200219405000000a200000811578c000d578c0050616e61736f6e696300000000000000...
+[  18.850] RX  RESP tid=5 code=0x2001 len=12 head=0c0000000300012005000000
+[  18.853]   => 9197337 字节  sha256=0e3090d6827ef31ed08cce7f261544c1ee819a34c2e0b437e5fb3432b8c2489a  (tid=5)
+[  18.856] 
+########## 结论 ##########
+[  18.856]   写前 sha256 = 0e3090d6827ef31ed08cce7f261544c1ee819a34c2e0b437e5fb3432b8c2489a
+[  18.856]   写后 sha256 = 0e3090d6827ef31ed08cce7f261544c1ee819a34c2e0b437e5fb3432b8c2489a
+[  18.856]   逐字节一致: 是 ✅
+[  18.857]   事务错配次数=0  未收到RESP次数=0  事件数=1
+[  18.857] TX  CMD  tid=6 code=0x9103 params=[] len=12 hex=0c0000000100039106000000   [LumixCloseSession]
+[  18.893] RX  RESP tid=6 code=0x2001 len=12 head=0c0000000300012006000000
+[  18.893] TX  CMD  tid=7 code=0x1003 params=[] len=12 hex=0c0000000100031007000000   [CloseSession]
+[  18.894] RX  RESP tid=7 code=0x2001 len=12 head=0c0000000300012007000000
+[  19.167] CLOSE interface

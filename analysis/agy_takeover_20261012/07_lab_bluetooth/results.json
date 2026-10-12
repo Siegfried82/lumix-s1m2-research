@@ -1,0 +1,228 @@
+{
+  "task_id": "07_lab_bluetooth",
+  "title": "LUMIX Lab 蓝牙状态机、GATT 特征、Wi-Fi 凭据数据流与断连清理链路取证",
+  "generated_at": "2026-10-12T02:12:00+03:00",
+  "mode": "offline_static_and_dex_verification",
+  "inputs": {
+    "apk_path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/com.panasonic.jp.lumixlab.apk",
+    "apk_sha256": "6ba873110d201675a905f7dac39bcda3291674e7440a484d6d5bd1a78447115f",
+    "classes2_dex_sha256": "34a087028836c7ca25a06fa6d574c048b9c39747aa45fa3fa50db3ff46a64c23",
+    "classes2_dex_size": 6235920,
+    "prior_report_path": "<LOCAL_WORKSPACE>/analysis/lab_connection_20261012/连接链分析.md",
+    "prior_evidence_path": "<LOCAL_WORKSPACE>/analysis/lab_connection_20261012/evidence.json"
+  },
+  "summary_findings": {
+    "prior_findings_verified": [
+      {
+        "claim": "BLE 广播扫描服务 UUID 为 054ac620-3214-11e6-ac0d-0002a5d5c51b，GATT 主服务 UUID 为 1fe71b85-8344-4e6a-bf1a-ac7acdb3f8af",
+        "status": "确认",
+        "evidence": [
+          "H5/j.java:478 (ScanFilter.Builder().setServiceUuid)",
+          "H5/g.java:73 (classes2.dex LH5/g;->onScanResult code_off=0x157c68, pc=0x00b0)",
+          "H5/d.java:1503 (classes2.dex LH5/d;->onServicesDiscovered code_off=0x1574b8)"
+        ]
+      },
+      {
+        "claim": "BLE 连接后通过 S1->d2->c2->e2 链路完成 INITIAL_INFORM 读取及 APP_UUID、APP_INFO、FRIENDLY_NAME 写入",
+        "status": "确认",
+        "evidence": [
+          "p281z5/RunnableC2616s1.java:25-110 (classes2.dex Lz5/s1;->run code_off=0x397c44)",
+          "p281z5/S1.java:20-36, p281z5/C2468d2.java:20-39, p281z5/C2458c2.java:18-32, p281z5/C2478e2.java:21-38",
+          "p281z5/C2538k2.java:351-390 (classes2.dex Lz5/k2;->d code_off=0x39ac9c, Lz5/k2;->e code_off=0x39ad18)"
+        ]
+      },
+      {
+        "claim": "CameraWifiConnectFragment 先写 ACTION_MODE (7644371c-1ddc-4b16-832f-f07c322e311b)，再等待 ACTION_MODE_RESULT 与 AP_STATE==1 后调用 I5.c.b 连接软 AP，随后通过 https://<gateway>/ 执行 AuthRequestBean 鉴权",
+        "status": "确认",
+        "evidence": [
+          "CameraWifiConnectFragment.java:530-626 (classes2.dex code_off=0x2119e8)",
+          "H5/d.java:184-225 (classes2.dex LH5/d;->onCharacteristicChanged code_off=0x155914, pc=0x006e, 0x00e5)",
+          "I5/c.java:43-79, 96-111 (classes2.dex LI5/c;->b code_off=0x15c594, LI5/c;->d code_off=0x15c464)",
+          "p281z5/RunnableC2667x2.java:25-44"
+        ]
+      }
+    ],
+    "new_and_refined_findings": [
+      {
+        "topic": "BLE 厂商自定义广播数据 (Company ID 0x003A) 与设备名后缀解析",
+        "status": "确认",
+        "details": "H5/g.java:54-162 要求设备名倒数第 2 字节为 0x0A ('\\n')，最后 1 字节经 J0.a(byte) 映射为受支持机型代号；Manufacturer Specific Data 键必须为 58 (0x003A, Panasonic)，长度固定 6 字节，其中首字节 (或遍历检查) 为 0 表示已配对常规广播 (z14=false)、为 3 表示相机处于配对广播模式 (z14=true)，后 4 字节 (bytes[2..5]) 提取为相机 Public BT Address 标识 (f7004l0 / C0643o.f8316E)。此外字节码核实 H5/g.java:156 存在真实编译期 Bug：bArr3.equals(I5.d.b(...)) 将 byte[] 与 String 直接比较 (恒为 false)。"
+      },
+      {
+        "topic": "INITIAL_INFORM (f8323d) 4 字节对称混淆/反混淆算法与 WPA3 能力协商特征 f7022z",
+        "status": "确认",
+        "details": "z5.k2.d 将明文封装为 [len, payload..., 0x00对齐至4字节, 0xFF×4]；z5.k2.e 按 4 字节块执行字节逆序并与 f8323d[0..3] 异或：out[4i+k] = framed[4i+(3-k)] ^ key[k]。APP_UUID 与 FRIENDLY_NAME 写入使用该混淆，APP_INFO 写入 32 字节明文 'LUMIX LUT Creators APP ' + 版本号。WIFI_PASSWORD 读取回调 (z5.M1.c case 11) 执行严格逆运算：out[4i+k] = in[4i+(3-k)] ^ key[3-k]，取首字节长度并经 I5.d.a 过滤 ASCII 33..126。在 e2 之后、读取 WIFI_SSID 之前，C2518i2 检查手机是否支持 WPA3 SAE (!C1410v.R0() && I5.c.f())：若不支持 WPA3，则向未命名特征 f7022z (36f99090-e79b-4060-9ac7-89f3f8bf88d5) 写入单字节 {2} (writeType=2)，通知相机降级/使用兼容 AP 加密方式。"
+      },
+      {
+        "topic": "ACTION_MODE (f17569Z) 全部取值语义与附加等待条件",
+        "status": "确认",
+        "details": "CameraWifiConnectFragment.f17569Z 在代码中共有 3 种实际赋值：1 (默认值，用于常规图库/LUT/远程拍摄/远程PhotoStyle/固件更新 Wi-Fi 开启；当 f17569Z==1 且 destination=='camera' 时，HTTPS 鉴权成功后还会额外等待 CAMERA_OPERATE_NOTIFICATION 16726c35-52ef-4d00-868d-099549a90d9b 通知值 2，超时 30s)、5 (自动传输 Auto Transfer 触发的 Wi-Fi 连接，关联 AUTO_TRANSFER_START_NOTIFY 52f8c131-dd62-4e34-9283-3086db261fad 与 AUTO_TRANSFER_OBJ 30185b4a-f18f-44c1-9b19-1bf787956185)、6 (机身发起图像传输 Image Transfer 触发的 Wi-Fi 连接，关联 IMAGE_TRANSFER_NOTIFICATION 0b29969b-a89a-4636-8e63-575d416663d6 与取消时向 IMAGE_TRANSFER_ACTION 72ef8930-887b-47b2-bab0-a2cbbd657300 写入 {1})。"
+      },
+      {
+        "topic": "Wi-Fi 断开与清理的完整双通道链路 (BLE 预协商 + HTTP wifioff + ConnectivityManager 解绑)",
+        "status": "确认",
+        "details": "断连并非仅调用 I5.c.c()：在 p281z5/D.java:467-512 (j0) 中，若相机支持 FunctionLevel>=2 且已开启自动传输 (f8324e==true) 且 BLE 在线，会先向 AUTO_TRANSFER_ACTION (5d07a97b-f2ca-4a28-9214-89ef3bb85db9) 写入 {3}，等待相机通过 AUTO_TRANSFER_START_NOTIFY 返回 3(报错)/4(弹窗确认)/5(直接继续)；随后调用 D.b0() 向相机发送 HTTP POST/GET 命令 {\"Command\":\"wifioff\"}，待响应完成或失败后才调用 D.L()->D.M() 重置 C0643o 状态并执行 I5.c.c() 与 I5.e.a() (bindProcessToNetwork(null) + unregisterNetworkCallback)。"
+      }
+    ]
+  },
+  "ble_state_machine": {
+    "scan_and_advertisement": {
+      "status": "确认",
+      "service_uuid_filter": "054ac620-3214-11e6-ac0d-0002a5d5c51b",
+      "manufacturer_id": 58,
+      "manufacturer_id_hex": "0x003A",
+      "manufacturer_data_length": 6,
+      "pairing_flag_byte": {
+        "0": "normal_paired_advertisement (z14 = false)",
+        "3": "pairing_mode_advertisement (z14 = true)"
+      },
+      "public_bt_address_bytes": "manufacturer_data[2..5] (4 bytes, stored in H5.j.f7004l0 and K5.C0643o.f8316E)",
+      "device_name_suffix_rule": "UTF-8 bytes[len-2] == 0x0A ('\\n'), bytes[len-1] mapped via J0.a(byte) to model code, display name = substring(0, len-2)"
+    },
+    "gatt_connection_stages": [
+      {
+        "stage": 1,
+        "progress_f31599s": 20,
+        "trigger": "BluetoothDevice.connectGatt(context, false, f6976V, 2) -> onConnectionStateChange(status=0, newState=2)",
+        "action": "gatt.requestMtu(57)",
+        "evidence": "H5/j.java:244-273, H5/d.java:1311-1318, p281z5/C2626t1.java:26-48"
+      },
+      {
+        "stage": 2,
+        "progress_f31599s": 40,
+        "trigger": "onMtuChanged(gatt, mtu, status=0)",
+        "action": "gatt.discoverServices()",
+        "evidence": "H5/d.java:1440-1451"
+      },
+      {
+        "stage": 3,
+        "progress_f31599s": 60,
+        "trigger": "onServicesDiscovered(gatt, status=0) matches service 1fe71b85-8344-4e6a-bf1a-ac7acdb3f8af",
+        "action": "Bind 36 BluetoothGattCharacteristic fields on H5/j; enable setCharacteristicNotification(char, true) for all characteristics with (properties & 0x10) != 0",
+        "evidence": "H5/d.java:1495-1565"
+      },
+      {
+        "stage": 4,
+        "progress_f31599s": 80,
+        "trigger": "C2626t1.a() after service & characteristic binding",
+        "action": "Update C0643o.f8328i = BLE_STATE_CONNECTED; launch RunnableC2616s1 after 200ms (or 0ms if USB-PTP)",
+        "evidence": "p281z5/C2626t1.java:78-115, p281z5/RunnableC2616s1.java:25-110"
+      },
+      {
+        "stage": 5,
+        "progress_f31599s": 100,
+        "trigger": "Chained B1 tasks S1 -> d2 -> c2 -> e2 -> (x1 -> i2 -> w1 -> a2 -> Z1 -> W1 -> G1 -> H1 -> N1 -> v1 -> K1 -> I1 -> L1 -> U1 -> T1 -> V1 -> F1 -> Q1 -> X1 -> D1)",
+        "action": "Complete BLE authentication, Wi-Fi credential read (f31590j=true at v1), camera/lens metadata read, time sync (TIME_INFORMATION), and set f31599s = 100 in X1",
+        "evidence": "p281z5/RunnableC2616s1.java:30-108, p281z5/M1.java:35-434, p281z5/X1.java:20-35"
+      }
+    ]
+  },
+  "action_mode_and_notifications": {
+    "characteristic_uuid": "7644371c-1ddc-4b16-832f-f07c322e311b",
+    "field_in_H5_a": "f6995h",
+    "write_method": "H5/j.java:436-447 (u(byte[]), writeType=1)",
+    "values": [
+      {
+        "byte_value": 1,
+        "status": "确认",
+        "meaning": "常规相机 Wi-Fi AP 开启请求（默认模式）",
+        "call_sites": [
+          "CameraWifiConnectFragment.java:129 (field default f17569Z = 1)",
+          "CameraWifiConnectFragment.java:400 (bundle.getByte(\"BUNDLE_KEY_ACTION_MODE\", (byte) 1))"
+        ],
+        "destinations": [
+          "camera",
+          "gallery",
+          "camera_gallery",
+          "lut",
+          "remote_shooting",
+          "remote_photostyle",
+          "firmware_detail"
+        ],
+        "expected_events": [
+          "ACTION_MODE_RESULT (6c875728-7636-425e-818a-f1d93a39e075): 0=成功, 1=失败(弹窗 ACTION_MODE_RESULT_FAILED_DIALOG_FRAGMENT)",
+          "AP_STATE (dcba3a74-80bc-4919-8ef4-0c9f99cc20dd): 1=相机软 AP 就绪，触发 I5.c.b 连接 Wi-Fi",
+          "若 destination == 'camera' (CameraWifiConnectFragment.java:164-194)，在 HTTPS 鉴权成功后额外等待 CAMERA_OPERATE_NOTIFICATION (16726c35-52ef-4d00-868d-099549a90d9b) 通知值 2（最长 30 秒超时 RunnableC2548l2(this, 1)）"
+        ]
+      },
+      {
+        "byte_value": 5,
+        "status": "确认",
+        "meaning": "自动传输 (Auto Transfer) 模式下的相机 Wi-Fi AP 开启请求",
+        "call_sites": [
+          "p281z5/C2516i0.java:78 (intExtra == 0 ? (byte) 5 : (byte) 6)",
+          "p281z5/C2665x0.java:31 (bundle.putByte(\"BUNDLE_KEY_ACTION_MODE\", (byte) 5))",
+          "MainActivity.java:1142 (o0(0) -> bundle.putByte(\"BUNDLE_KEY_ACTION_MODE\", (byte) 5))"
+        ],
+        "expected_events": [
+          "触发源：相机通过 AUTO_TRANSFER_START_NOTIFY (52f8c131-dd62-4e34-9283-3086db261fad) 发送 1，或用户在 App 开启自动传输开关向 AUTO_TRANSFER_ACTION (5d07a97b-f2ca-4a28-9214-89ef3bb85db9) 写入 {1}",
+          "ACTION_MODE_RESULT (6c875728-7636-425e-818a-f1d93a39e075): H5/d.java:216-222 检查 f6986c0 == 5 并记录埋点 SettingAutoSendPhotoComplete",
+          "AP_STATE == 1 -> Wi-Fi 连接 -> HTTPS 鉴权 -> RunnableC2548l2.java:132-148 设置 c0643o.a(true), c0643o.f8319H=true, f31573I=7",
+          "CameraWifiConnectFragment.L() (lines 329-332): 若 f17569Z == 5 且 f31570F == true（即相机已通过 AUTO_TRANSFER_OBJ 30185b4a-f18f-44c1-9b19-1bf787956185 发送待传通知），延时 2000ms 执行 N6.c(14) 广播 BROADCAST_ACTION_AUTO_TRANSFER 拉取自动传输文件列表"
+        ]
+      },
+      {
+        "byte_value": 6,
+        "status": "确认",
+        "meaning": "机身侧发起图像传输 (Camera Image Transfer) 模式下的 Wi-Fi AP 开启请求",
+        "call_sites": [
+          "p281z5/C2516i0.java:78 (intExtra != 0 -> (byte) 6)",
+          "MainActivity.java:1137 (o0(i10 != 0) -> bundle.putByte(\"BUNDLE_KEY_ACTION_MODE\", (byte) 6))"
+        ],
+        "expected_events": [
+          "触发源：相机通过 IMAGE_TRANSFER_NOTIFICATION (0b29969b-a89a-4636-8e63-575d416663d6) 发送 1 且当前 Wi-Fi 未连接 (C2538k2.java:733-740 调用 J(1) 广播 BROADCAST_ACTION_CAMERA_IMAGE_TRANSFER_OPERATE_WIFI_CONNECTION)",
+          "AP_STATE == 1 -> Wi-Fi 连接 -> HTTPS 鉴权 -> RunnableC2548l2.java:149-156 设置 c0643o.f8325f = Boolean.TRUE；若此时相机已发送 IMAGE_TRANSFER_NOTIFICATION == 2 (isRequestCameraTransferData()==true)，立即调用 C2538k2.D(c0643o) 启动传输",
+          "取消处理：若用户在连接中途点击取消且 f17569Z == 6 (p126l4/C.java:317-319)，执行 RunnableC2548l2(this, 5) 向 IMAGE_TRANSFER_ACTION (72ef8930-887b-47b2-bab0-a2cbbd657300) 写入 {1} 通知相机终止图像传输"
+        ]
+      }
+    ]
+  },
+  "wifi_credentials_data_flow": {
+    "ssid_flow": {
+      "status": "确认",
+      "characteristic_uuid": "657edba2-5bc8-42dd-974f-21871d7dbcd1",
+      "characteristic_field": "H5.a.f6989e (WIFI_SSID )",
+      "steps": [
+        "1. BLE 读请求：p281z5/C2438a2.java:24 调用 H5.j.o() (H5/j.java:391-400) 读取特征 f6989e",
+        "2. GATT 回调分发：H5/d.java:1060-1065 (onCharacteristicRead) 匹配 UUID f6989e，调用 f6996h0.c(characteristic)",
+        "3. 解码与模型存储：p281z5/M1.java:421-432 (case 12, classes2.dex Lz5/M1;->c pc=0x000d..0x0043) 使用 new String(value, StandardCharsets.UTF_8).trim() 解码明文 SSID，存入 K5.C0643o.f8321b，随后链式调用 Z1.run()",
+        "4. 数据库持久化：p281z5/H1.java -> M1.java:293-305 (CAMERA_DESTINATION_SUB 回调) 调用 C2538k2.h -> p062f5/Z3.java:93-102 将 c0643o.f8321b 写入 Room 数据库 CameraInfoEntity.cameraSsid",
+        "5. UI Fragment 读取：CameraWifiConnectFragment.onViewCreated (lines 525-527) 从当前选中 C0643o.f8321b 赋值给 this.f17574e0",
+        "6. 系统 Wi-Fi 连接：CameraWifiConnectFragment.I() -> RunnableC2627t2 -> I5/c.java:58 (WifiNetworkSpecifier.Builder().setSsid(str)) 或 OPPO Android 13 分支 I5/e.java (ClipData/Toast 提示用户手工选择)"
+      ]
+    },
+    "password_flow": {
+      "status": "确认",
+      "characteristic_uuid": "42d509f7-f122-4816-92d1-5e402d9453cb",
+      "characteristic_field": "H5.a.f6991f (WIFI_PASSWORD)",
+      "steps": [
+        "1. 预置 4 字节密钥：p281z5/S1.java 读取 INITIAL_INFORM (239c7203-922f-43e9-bdf1-6d1fedf6f43f, f6993g) -> p281z5/M1.java:200-209 将 4 字节原始值存入 K5.C0643o.f8323d",
+        "2. BLE 读请求：p281z5/Z1.java:24 调用 H5.j.n() (H5/j.java:377-386) 读取特征 f6991f",
+        "3. GATT 回调分发：H5/d.java:1054-1059 (onCharacteristicRead) 匹配 UUID f6991f，调用 f6996h0.c(characteristic)",
+        "4. 反混淆与裁剪过滤：p281z5/M1.java:389-419 (case 11, classes2.dex Lz5/M1;->c pc=0x0044..0x00be) 读取 c0643o.f8323d (key[0..3])，对 value 按 4 字节块执行字节逆序异或：bArr4[4i+0]=value[4i+3]^key[3], bArr4[4i+1]=value[4i+2]^key[2], bArr4[4i+2]=value[4i+1]^key[1], bArr4[4i+3]=value[4i+0]^key[0]；取首字节 length=bArr4[0]，截取 bArr4[1..length]，调用 I5.d.a(bArr5) 仅保留 ASCII 33..126 可见字符（遇 0x00 停止），结果存入 K5.C0643o.f8322c",
+        "5. 数据库持久化：p281z5/H1.java -> M1.java:293-305 -> p062f5/Z3.java:93-102 将 c0643o.f8322c 写入 Room 数据库 CameraInfoEntity.cameraPassword",
+        "6. UI Fragment 读取：CameraWifiConnectFragment.onViewCreated (lines 526-527) 从 C0643o.f8322c 赋值给 this.f17575f0",
+        "7. 系统 Wi-Fi 连接：CameraWifiConnectFragment.I() -> RunnableC2627t2 -> I5/c.java:59-64：若 I5.c.f() 且 f8342w==true 则调用 builder.setWpa3Passphrase(str2)，否则调用 builder.setWpa2Passphrase(str2)，再通过 ConnectivityManager.requestNetwork(networkRequest, callback) 发起连接"
+      ]
+    },
+    "potential_race_condition": {
+      "status": "确认",
+      "location": "CameraWifiConnectFragment.java:525-527 vs 605-621 (C2598q2.java:19-30)",
+      "description": "f17574e0 (SSID) 与 f17575f0 (Password) 仅在 CameraWifiConnectFragment.onViewCreated 时从 c0643o.f8321b/f8322c 拷贝一次。若进入 Fragment 时 BLE 尚未读完凭据 (f31590j == false)，当 AP_STATE==1 且随后 C2598q2 监听到 isWifiInfoReadComplete 变为 true 时，C2598q2 直接调用 cameraWifiConnectFragment.I() 而未重新从 c0643o 刷新 f17574e0/f17575f0。"
+    }
+  },
+  "wifi_disconnect_and_cleanup": {
+    "status": "确认",
+    "entry_points": [
+      "p281z5/D.java:467-512 (j0(int i10): i10=2 相机页点击 WIFI_CUT_OFF; i10=5 删除配对/切换相机; i10=6 配对新相机前断连; i10=9 LUT页断连)",
+      "CameraWifiConnectFragment.java:260-324 (K(): 连接中途取消或超时清理)",
+      "H5/d.java:299-312 (AUTO_TRANSFER_START_NOTIFY 收到 1 且处于 Image Transfer 时切回自动传输清理)",
+      "H5/d.java:1322-1420 (BLE onConnectionStateChange 断开时的状态清理)"
+    ],
+    "graceful_disconnect_sequence": [
+      "1. BLE 自动传输预协商 (D.java:504-506)：若 FunctionLevel>=2 且自动传输开启 (f8324e==true) 且 BLE 已连接，先记录 f31573I = i10 并向 AUTO_TRANSFER_ACTION (5d07a97b-f2ca-4a28-9214-89ef3bb85db9) 写入 {3}；等待相机通过 AUTO_TRANSFER_START_NOTIFY (52f8c131-dd62-4e34-9283-3086db261fad) 通知 4 (弹出 q9 确认框) 或 5 (无弹窗继续) -> C2674y.java:40-70",
+      "2. HTTP wifioff 命令 (D.java:399-416, b0(boolean))：通过 G5.f 构造 JSON {\"Command\":\"wifioff\"}，携带 AuthToken 调用 p084h6.a.b(token, json) 发送给相机 HTTP 服务；无论响应 200 (G5/e.java:50 onComplete) 还是异常 (G5/e.java:23 a(Throwable))，均回调 C2614s -> D.L()",
+      "3. 本地状态与网络解绑 (D.java:279-334, L() -> M(C0643o))：将 c0643o.f8325f=false, f8319H=false, f8331l=WIFI_UNCONNECTED, f8317F=false 并刷新 LiveData f31564S；依次调用 I5.c.c() (bindProcessToNetwork(null) + unregisterNetworkCallback(f7222b)) 与 I5.e.a() (bindProcessToNetwork(null) + unregisterNetworkCallback(f7227d))"
+    ]
+  }
+}

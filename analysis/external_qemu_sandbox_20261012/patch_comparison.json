@@ -1,0 +1,21 @@
+[
+  {
+    "file": "composite.c",
+    "original_sha256": "3146053ea44a0555d1bb847e7b090e93b91dbd30193094511fe5d0cfa3c1823f",
+    "patched_sha256": "3ead359acaad71197d370d430bde273cfab47dba8b86bcd5b8b1378fe18777c6",
+    "diff_lines": 24,
+    "hunks": [
+      "@@ -2053,6 +2053,21 @@"
+    ]
+  },
+  {
+    "file": "irq-gic.c",
+    "original_sha256": "29f1ada7510636ceaeda07af04d7f88f978119d5bb40162381c9b1db4be1ffa8",
+    "patched_sha256": "7f4a8e14755003bc7514d22cb7555898fc76ee5c60bf6ec1253f3ad203c199a0",
+    "diff_lines": 20,
+    "hunks": [
+      "@@ -539,7 +539,7 @@",
+      "@@ -630,7 +630,7 @@"
+    ]
+  }
+]

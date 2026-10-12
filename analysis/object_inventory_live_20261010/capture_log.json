@@ -1,0 +1,54 @@
+[
+  {
+    "purpose" : "allowlisted_read_inventory",
+    "read_count" : 2,
+    "event" : "started",
+    "time_utc" : "2026-10-09T22:20:44Z"
+  },
+  {
+    "event" : "device_found",
+    "model" : "DC-S1M2",
+    "time_utc" : "2026-10-09T22:20:44Z"
+  },
+  {
+    "event" : "session_opened",
+    "time_utc" : "2026-10-09T22:20:44Z"
+  },
+  {
+    "opcode" : "0x1004",
+    "params" : [
+
+    ],
+    "data_bytes" : 12,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:20:44Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "storage_ids",
+    "index" : 0
+  },
+  {
+    "opcode" : "0x1007",
+    "params" : [
+      4294967295,
+      0,
+      0
+    ],
+    "data_bytes" : 10376,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-09T22:20:45Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "all_object_handles",
+    "index" : 1
+  },
+  {
+    "event" : "session_closed",
+    "error" : "",
+    "time_utc" : "2026-10-09T22:20:45Z"
+  }
+]

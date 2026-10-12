@@ -1,0 +1,144 @@
+
+<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GH2__V11.bin.plaintext:     file format binary
+
+
+Disassembly of section .data:
+
+40003c5c <.data+0x425c>:
+40003c5c:	fc cc 01 23 	mov	1732584193,d0
+40003c60:	45 67 
+40003c62:	60          	mov	d0,(a0)
+40003c63:	fc cc 89 ab 	mov	-271733879,d0
+40003c67:	cd ef 
+40003c69:	f8 10 04    	mov	d0,(4,a0)
+40003c6c:	fc cc fe dc 	mov	-1732584194,d0
+40003c70:	ba 98 
+40003c72:	f8 10 08    	mov	d0,(8,a0)
+40003c75:	fc cc 76 54 	mov	271733878,d0
+40003c79:	32 10 
+40003c7b:	f8 10 0c    	mov	d0,(12,a0)
+40003c7e:	20 10       	add	16,a0
+40003c80:	00          	clr	d0
+40003c81:	60          	mov	d0,(a0)
+40003c82:	f8 10 04    	mov	d0,(4,a0)
+40003c85:	de 00 00    	retf	[],0
+40003c88:	96          	mov	a1,a2
+40003c89:	83          	mov	d0,d3
+40003c8a:	93          	mov	a0,a3
+40003c8b:	90 10       	mov	16,a0
+40003c8d:	f1 7c       	add	a3,a0
+40003c8f:	70          	mov	(a0),d0
+40003c90:	8d          	mov	d3,d1
+40003c91:	f8 c1 03    	asl	3,d1
+40003c94:	e1          	add	d0,d1
+40003c95:	64          	mov	d1,(a0)
+40003c96:	a1          	cmp	d0,d1
+40003c97:	c6 09       	bcc	0x40003ca0
+40003c99:	90 14       	mov	20,a0
+40003c9b:	f1 7c       	add	a3,a0
+40003c9d:	74          	mov	(a0),d1
+40003c9e:	44          	inc	d1
+40003c9f:	64          	mov	d1,(a0)
+40003ca0:	90 14       	mov	20,a0
+40003ca2:	f1 7c       	add	a3,a0
+40003ca4:	78          	mov	(a0),d2
+40003ca5:	8d          	mov	d3,d1
+40003ca6:	f8 c5 1d    	lsr	29,d1
+40003ca9:	e6          	add	d1,d2
+40003caa:	68          	mov	d2,(a0)
+40003cab:	f8 c4 03    	lsr	3,d0
+40003cae:	f8 e0 3f    	and	63,d0
+40003cb1:	c8 27       	beq	0x40003cd8
+40003cb3:	85 18       	mov	24,d1
+40003cb5:	f1 5d       	add	a3,d1
+40003cb7:	e1          	add	d0,d1
+40003cb8:	8a 40       	mov	64,d2
+40003cba:	f1 02       	sub	d0,d2
+40003cbc:	ab          	cmp	d2,d3
+40003cbd:	c6 07       	bcc	0x40003cc4
+40003cbf:	f1 e4       	mov	d1,a0
+40003cc1:	8c          	mov	d3,d0
+40003cc2:	ca 3e       	bra	0x40003d00
+40003cc4:	f1 e4       	mov	d1,a0
+40003cc6:	88          	mov	d2,d0
+40003cc7:	dd 01 dd c4 	call	0x7bc519c8,[a2,a3],8
+40003ccb:	3b 30 08 
+40003cce:	9c          	mov	a3,a0
+40003ccf:	cd a3 00 f0 	call	0x40003d72,[d2,d3,a2,a3],144
+40003cd3:	90 
+40003cd4:	f1 6a       	add	d2,a2
+40003cd6:	f1 0b       	sub	d2,d3
+40003cd8:	af 40       	cmp	64,d3
+40003cda:	c4 21       	bcs	0x40003cfb
+40003cdc:	8a 18       	mov	24,d2
+40003cde:	f1 5e       	add	a3,d2
+40003ce0:	f1 e8       	mov	d2,a0
+40003ce2:	99          	mov	a2,a1
+40003ce3:	80 40       	mov	64,d0
+40003ce5:	dd e3 dc c4 	call	0x7bc519c8,[a2,a3],8
+40003ce9:	3b 30 08 
+40003cec:	9c          	mov	a3,a0
+40003ced:	cd 85 00 f0 	call	0x40003d72,[d2,d3,a2,a3],144
+40003cf1:	90 
+40003cf2:	22 40       	add	64,a2
+40003cf4:	80 40       	mov	64,d0
+40003cf6:	f1 03       	sub	d0,d3
+40003cf8:	a3          	cmp	d0,d3
+40003cf9:	c6 e7       	bcc	0x40003ce0
+40003cfb:	23 18       	add	24,a3
+40003cfd:	8c          	mov	d3,d0
+40003cfe:	99          	mov	a2,a1
+40003cff:	9c          	mov	a3,a0
+40003d00:	dd c8 dc c4 	call	0x7bc519c8,[a2,a3],8
+40003d04:	3b 30 08 
+40003d07:	00          	clr	d0
+40003d08:	df f0 14    	ret	[d2,d3,a2,a3],20
+40003d0b:	93          	mov	a0,a3
+40003d0c:	47 04       	mov	a1,(4,sp)
+40003d0e:	8a 10       	mov	16,d2
+40003d10:	f1 5e       	add	a3,d2
+40003d12:	f1 e8       	mov	d2,a0
+40003d14:	70          	mov	(a0),d0
+40003d15:	9a 18       	mov	24,a2
+40003d17:	f8 c4 03    	lsr	3,d0
+40003d1a:	f8 e0 3f    	and	63,d0
+40003d1d:	f1 7e       	add	a3,a2
+40003d1f:	98          	mov	a2,a0
+40003d20:	f1 60       	add	d0,a0
+40003d22:	2d 80 00    	mov	128,d1
+40003d25:	f0 54       	movbu	d1,(a0)
+40003d27:	41          	inc	a0
+40003d28:	85 3f       	mov	63,d1
+40003d2a:	f1 01       	sub	d0,d1
+40003d2c:	a5 08       	cmp	8,d1
+40003d2e:	c6 16       	bcc	0x40003d44
+40003d30:	00          	clr	d0
+40003d31:	dd d7 dc c4 	call	0x7bc51a08,[a2],4
+40003d35:	3b 20 04 
+40003d38:	9c          	mov	a3,a0
+40003d39:	cd 39 00 f0 	call	0x40003d72,[d2,d3,a2,a3],144
+40003d3d:	90 
+40003d3e:	98          	mov	a2,a0
+40003d3f:	00          	clr	d0
+40003d40:	85 38       	mov	56,d1
+40003d42:	ca 07       	bra	0x40003d49
+40003d44:	00          	clr	d0
+40003d45:	8f 08       	mov	8,d3
+40003d47:	f1 0d       	sub	d3,d1
+40003d49:	dd bf dc c4 	call	0x7bc51a08,[a2],4
+40003d4d:	3b 20 04 
+40003d50:	f1 e8       	mov	d2,a0
+40003d52:	70          	mov	(a0),d0
+40003d53:	f8 12 38    	mov	d0,(56,a2)
+40003d56:	f8 00 04    	mov	(4,a0),d0
+40003d59:	9c          	mov	a3,a0
+40003d5a:	f8 12 3c    	mov	d0,(60,a2)
+40003d5d:	cd 15 00 f0 	call	0x40003d72,[d2,d3,a2,a3],144
+40003d61:	90 
+40003d62:	5c 04       	mov	(4,sp),a0
+40003d64:	9d          	mov	a3,a1
+40003d65:	80 10       	mov	16,d0
+40003d67:	dd 61 dc c4 	call	0x7bc519c8,[a2,a3],8
+40003d6b:	3b 30 08 
+40003d6e:	00          	clr	d0
+40003d6f:	df f0 18    	ret	[d2,d3,a2,a3],24

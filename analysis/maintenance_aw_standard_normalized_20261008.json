@@ -2,11 +2,11 @@
   "normalization": "Compare ARM64 maintenance functions without executing vendor software.\n\nLocal branch destinations become instruction indices, symbol-stub addresses\nbecome their annotated symbols. Literal loads retain their annotation; only\nrelocation operands are replaced. Unresolved differences remain visible.\n",
   "sources": [
     {
-      "file": "<LOCAL_HOME>/\u76f8\u673a\u529f\u80fd\u9a8c\u8bc1/analysis/tether_aw_ptp_arm64_disassembly.txt",
+      "file": "<LOCAL_USER>/\u76f8\u673a\u529f\u80fd\u9a8c\u8bc1/analysis/tether_aw_ptp_arm64_disassembly.txt",
       "sha256": "dc06089140d81dedaa089781803d265fa78eafd709453daf2f746f870b035eab"
     },
     {
-      "file": "<LOCAL_HOME>/\u76f8\u673a\u529f\u80fd\u9a8c\u8bc1/analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "file": "<LOCAL_USER>/\u76f8\u673a\u529f\u80fd\u9a8c\u8bc1/analysis/tether_2_12_ptp_arm64_disassembly.txt",
       "sha256": "f0beab04bef63508de6492cf263f62199548bda97911ab5852b371474537af1d"
     }
   ],

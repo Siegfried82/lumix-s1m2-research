@@ -1,0 +1,24 @@
+{
+  "positive_control": {
+    "synthetic_header_offset": 128,
+    "detected_header_offset": 128,
+    "positive_control_passed": true
+  },
+  "candidate_keys_count": 81,
+  "tested_header_offsets": [
+    0,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096
+  ],
+  "total_trials": 3240,
+  "matches_found": 0,
+  "matches": [],
+  "interpretation": "Falsifies the hypothesis that an unencrypted header (at 16, 32, 64, 128, 256, 512, 1024, 2048, 4096 bytes) precedes standard CBC all-FF encryption for the tested signature/metadata key derivations."
+}

@@ -1,0 +1,436 @@
+{
+  "files": [
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/wgpu_rarm_tiled.py",
+      "saved": "original_core/wgpu_rarm_tiled.py",
+      "sha256": "0cbc16ec4203817a97d65923385a6bc071b41f67ce17b6b7234223aa2bdb61f1"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/requirements.txt",
+      "saved": "original_core/requirements.txt",
+      "sha256": "5c86ff2719c7d6f5f867cf48f10ba3c9190a4528aea9752c248c00602a7b8e95"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/wgpu_greenfilm_rarm.py",
+      "saved": "original_core/wgpu_greenfilm_rarm.py",
+      "sha256": "9a5bff7795a1c01248b00923d93699caa02048b96bdbcbd97dce25d04f5639a7"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/wgpu_unet_tiled.py",
+      "saved": "original_core/wgpu_unet_tiled.py",
+      "sha256": "56ae4e8a84a4f42f3041d643c13c2a2a36f15f90b2758d55017a952d686eb404"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/local_v7_frontend.py",
+      "saved": "original_core/local_v7_frontend.py",
+      "sha256": "be346c3bd186edd1ac6af6bd0f80616c3487670eb79ea7efa085190457927c7e"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/wgpu_net.py",
+      "saved": "original_core/wgpu_net.py",
+      "sha256": "29a8cf8a478c5e97b9ce5d3a6068d283b4b82c7a762f5f4ac0f79a650344f914"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/wgpu_buf.py",
+      "saved": "original_core/wgpu_buf.py",
+      "sha256": "c707c4503107d632975a88c348a8ebb134bab83cdb4ca38b3415673a881d689c"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights.py",
+      "saved": "original_core/weights.py",
+      "sha256": "b5540d504f652e635f035c0bde4475f35ff3ade22c8413a984a689588339d4a2"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k06_rarm_wgpu.npz",
+      "saved": "original_core/weights/v97_k06_rarm_wgpu.npz",
+      "sha256": "777c275d83b3dde7b5cdd777df47cce8006357c7bdb297f04d942f74bd7051f6"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k02_rarm_wgpu.npz",
+      "saved": "original_core/weights/v97_k02_rarm_wgpu.npz",
+      "sha256": "6e69264769e79ed438d81ae6574ffa711e380fd9d1ad794dd32dffb24f010e15"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k05_rarm_wgpu.npz",
+      "saved": "original_core/weights/v97_k05_rarm_wgpu.npz",
+      "sha256": "a00bedc1dba05075e01038493531c60afdb7a87d585fb653f46ea0107e9f8a44"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k01_rarm_wgpu.npz",
+      "saved": "original_core/weights/v97_k01_rarm_wgpu.npz",
+      "sha256": "f592718d34f88a5dcf6b60be9ec4af2bc03ec6683c4942d86f4f46cd1ddad487"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/local_v7_static_affine_v1.npz",
+      "saved": "original_core/weights/local_v7_static_affine_v1.npz",
+      "sha256": "606f16a60a7738a5193de765d8408e4de810c684cddb2286aadd7cb7556854f3"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k14_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k14_controller_wgpu.npz",
+      "sha256": "4c1746a90096d20951b3121f03e6ebe966e8becc9e05b356c8dd9fb43845e424"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k11_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k11_controller_wgpu.npz",
+      "sha256": "d9117afe86b62f1326db906e855a37a0cda89c8c6fe8627cac81d2eaa2d69303"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k08_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k08_controller_wgpu.npz",
+      "sha256": "a4a5a4e50170ff7732d2a2c579c2a4d7bd06b14a863d9474d04d722868c8909c"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k10_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k10_controller_wgpu.npz",
+      "sha256": "d1a05c9957042900ac6abea758d7b476fced6cc5c4ed8f93ef37599bb607a8c4"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k09_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k09_controller_wgpu.npz",
+      "sha256": "755278cf8bda65854cd168c53f9830733a02859f8662355f2c9381db71ed6d1f"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/manifest.json",
+      "saved": "original_core/weights/manifest.json",
+      "sha256": "e341f144430b25ec6c105f9deb302e8a46e06c7ab0ca829cff17d7c555d0107a"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k12_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k12_controller_wgpu.npz",
+      "sha256": "a0165f527ea60ccc0b8f8f5bd8b02758309e501c7fef9ef5e46711371913dba3"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k06_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k06_controller_wgpu.npz",
+      "sha256": "2377fad89060aa94538bcef0f788feebd19bd914cb54c086b5eec4935b93f975"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k04_rarm_wgpu.npz",
+      "saved": "original_core/weights/v97_k04_rarm_wgpu.npz",
+      "sha256": "087a55f6670ac1a55fd28fabb75d4fb4f970a4439647255d46c5e959be81a64b"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k07_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k07_controller_wgpu.npz",
+      "sha256": "7f01d53876988e4272f7d2d50f6c05a3b51b2eea209579068c79bfe1524a2ab5"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k04_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k04_controller_wgpu.npz",
+      "sha256": "0e12ab8bcd840e74729ce91daaab89127c1c8348a2b06f8c2fa4d9ce28dbbfc0"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k05_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k05_controller_wgpu.npz",
+      "sha256": "e2211aec8aaa55b547c1ce846fbeec4dffbfcccf03c680b4b7e996e9368907ce"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k03_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k03_controller_wgpu.npz",
+      "sha256": "6014c5ff8dcde80b5780be4f81d7f6c984953ec5a3cb09559961f40a859d9bda"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k02_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k02_controller_wgpu.npz",
+      "sha256": "8e8c606c0bc89e6838b8155986d86af148ac58021a06c4cac09c8527c91eeebc"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k03_rarm_wgpu.npz",
+      "saved": "original_core/weights/v97_k03_rarm_wgpu.npz",
+      "sha256": "3f2d19873ad3d77ed4555952e34907661885419dbd3582eab489a89ce9c57ce1"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k01_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k01_controller_wgpu.npz",
+      "sha256": "1505dfe974dfd7c741e8343c051c60c86ed6bd72cd678259ced679266a124062"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k14_rarm_wgpu.npz",
+      "saved": "original_core/weights/v97_k14_rarm_wgpu.npz",
+      "sha256": "0c4f470e1341ad9dea82d445d590d21890d1fc989a95d054e8dbd8ef1450629d"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/extracted/Jiangtherapee-Super-Resolution-World-Best-jb-v2.3.11/Core-Only-Source-Code/weights/v97_k07_rarm_wgpu.npz",
+      "saved": "original_core/weights/v97_k07_rarm_wgpu.npz",
+      "sha256": "e597f2d412acd574f2554b65219e2d24d4d8c06792d21430d507d824498a8be7"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/assets/backend_96.json",
+      "saved": "transformer_backend/assets/backend_96.json",
+      "sha256": "f698d31bcc27d0047595797b8f197b03bce1d2d64317358bb296f18cf18df919"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/assets/backend_shared.npz",
+      "saved": "transformer_backend/assets/backend_shared.npz",
+      "sha256": "224f46e0226dbcc9cd0297c60c0097893b6f8a91bb661b405c3ba8464664e937"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/assets/backend_32.json",
+      "saved": "transformer_backend/assets/backend_32.json",
+      "sha256": "a4fbdc60bf562c7a41b1fd24e1162cb5c2cb523e23239788f36b75be865f5e27"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/assets/backend_64.json",
+      "saved": "transformer_backend/assets/backend_64.json",
+      "sha256": "1b4c1e6b95016fd616bd0c6c5d6c5399de251a4f0b4fc1d8ecac10638f8e4bda"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/assets/backend_192.json",
+      "saved": "transformer_backend/assets/backend_192.json",
+      "sha256": "0c0e6216dd4f34db98f94063a30d6334db96ecb656de6cc2e488a22ef0a37267"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/assets/spynet.npz",
+      "saved": "transformer_backend/assets/spynet.npz",
+      "sha256": "b335e6b1b39c7f55f02aeaf96863914ad6289a861d17c4434ab7a14eeb574ccc"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/assets/MANIFEST.json",
+      "saved": "transformer_backend/assets/MANIFEST.json",
+      "sha256": "987cca5321065be721471ef01b6c2386e8f743429ef7c5ae7ba7c0deed8f90b6"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/assets/backend_128.json",
+      "saved": "transformer_backend/assets/backend_128.json",
+      "sha256": "8d03a26ec752e613c952218c23bb9862f55c516ea915529c95cf749811033b87"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/assets/backend_256.json",
+      "saved": "transformer_backend/assets/backend_256.json",
+      "sha256": "bf753206ead8e4f27786b6308e98cde878f787bc7171eb4289072638f145aae8"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/graph.py",
+      "saved": "transformer_backend/graph.py",
+      "sha256": "d8546732feda2d9f67818aeef522b5a2536932d245406f6a5c7e5d2b8c0da15b"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/graph_inventory.json",
+      "saved": "transformer_backend/graph_inventory.json",
+      "sha256": "100f5a171a756956d82572e498d39e3689c8a02261ec8b59e70888fe75e9c4e3"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/alignment.py",
+      "saved": "transformer_backend/alignment.py",
+      "sha256": "536e0647d16e0401e1d7b731c21409d918821e806c83b49f225ac8c8e4ca2456"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/frame_order.py",
+      "saved": "transformer_backend/frame_order.py",
+      "sha256": "721ac13d8194c4b9af229826ecdf6012594a381a82f167f382dc03a44e87cb97"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/requirements.txt",
+      "saved": "transformer_backend/requirements.txt",
+      "sha256": "3ecac32a2238575ae7e28349ac35144ce626c4a999fa9cced34fe4d2c0158921"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_mac/pipeline.py",
+      "saved": "transformer_backend/pipeline.py",
+      "sha256": "5a9ebcfbdd27c24d126dfbb944c4b4da23fe0f01e6c329b08e5d6cabc6c85160"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/carchive/jsr_v98_k14_backend/wgpu_v81_assets\\v97_k14_controller_wgpu.npz",
+      "saved": "additional_weights/17e445589bff4775-wgpu_v81_assets_v97_k14_controller_wgpu.npz",
+      "sha256": "17e445589bff4775dc3de02eb997bcf0de19c0ea90b6328f6516f34f766aa8d7"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/carchive/jsr_v98_k14_backend/wgpu_v81_assets\\v97_k14_rarm_wgpu.npz",
+      "saved": "additional_weights/cf3e22bc9dcddf4a-wgpu_v81_assets_v97_k14_rarm_wgpu.npz",
+      "sha256": "cf3e22bc9dcddf4a5aa5e70584425f142a14292dd40f4e19d52071559f590224"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/carchive/jsr_v98_k14_backend/ckpt_refine_v8\\multireal_seed2_rarm.npz",
+      "saved": "additional_weights/323baf5bc9fd14cc-ckpt_refine_v8_multireal_seed2_rarm.npz",
+      "sha256": "323baf5bc9fd14cc5a5890a998ede4ee68de306d1424232e40ea2532f64e937e"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/carchive/jsr_v98_k14_backend/ckpt_v73\\weights_ema.npz",
+      "saved": "additional_weights/657fa13af5d51ebb-ckpt_v73_weights_ema.npz",
+      "sha256": "657fa13af5d51ebb5b3d83c25cc39d67b84aea40aba305c9294aca399a2c00bf"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/carchive/jsr_backend/fixtures\\real_inputs_32.npz",
+      "saved": "additional_weights/dde79ca7bda2c8dc-fixtures_real_inputs_32.npz",
+      "sha256": "dde79ca7bda2c8dc685ffd98af1c9b8e48cfd45cc0dda21c8941d704f8267d3e"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/backend_hash_verification.json",
+      "saved": "provenance/backend_hash_verification.json",
+      "sha256": "5c56670ea9db79e7082583f86c335a9b31024776e1dc7f305d8a543aa97cd537"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/weight_hash_verification.json",
+      "saved": "provenance/weight_hash_verification.json",
+      "sha256": "58498096ecda2db19cb5ab65bc94175f32e1017fd9ea55a2b3e053b851634472"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/weight_shapes.json",
+      "saved": "provenance/weight_shapes.json",
+      "sha256": "ced9a743a7b3dfc9a47c08650c3162c5ae0f3ab4e68805e0484e99938413c991"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/embedded_public_weight_comparison.json",
+      "saved": "provenance/embedded_public_weight_comparison.json",
+      "sha256": "1ce9a33a79694b2f082f5474f812eac3cc382201eeea049dda1f1bc0c3ae2209"
+    },
+    {
+      "source": "<LOCAL_BACKUP>/姜尧耕多张合成-20261009-200522/jsr/transformer_graph_inventory.json",
+      "saved": "provenance/transformer_graph_inventory.json",
+      "sha256": "100f5a171a756956d82572e498d39e3689c8a02261ec8b59e70888fe75e9c4e3"
+    }
+  ],
+  "extracted_weight_mapping": [
+    {
+      "original": "carchive/jsr_v98_k14_backend/wgpu_v81_assets\\v97_k14_controller_wgpu.npz",
+      "saved": "additional_weights/17e445589bff4775-wgpu_v81_assets_v97_k14_controller_wgpu.npz",
+      "sha256": "17e445589bff4775dc3de02eb997bcf0de19c0ea90b6328f6516f34f766aa8d7"
+    },
+    {
+      "original": "carchive/jsr_v98_k14_backend/wgpu_v81_assets\\v97_k14_rarm_wgpu.npz",
+      "saved": "additional_weights/cf3e22bc9dcddf4a-wgpu_v81_assets_v97_k14_rarm_wgpu.npz",
+      "sha256": "cf3e22bc9dcddf4a5aa5e70584425f142a14292dd40f4e19d52071559f590224"
+    },
+    {
+      "original": "carchive/jsr_v98_k14_backend/ckpt_refine_v8\\multireal_seed2_rarm.npz",
+      "saved": "additional_weights/323baf5bc9fd14cc-ckpt_refine_v8_multireal_seed2_rarm.npz",
+      "sha256": "323baf5bc9fd14cc5a5890a998ede4ee68de306d1424232e40ea2532f64e937e"
+    },
+    {
+      "original": "carchive/jsr_v98_k14_backend/ckpt_v73\\weights_ema.npz",
+      "saved": "additional_weights/657fa13af5d51ebb-ckpt_v73_weights_ema.npz",
+      "sha256": "657fa13af5d51ebb5b3d83c25cc39d67b84aea40aba305c9294aca399a2c00bf"
+    },
+    {
+      "original": "carchive/jsr_v98_k14_backend/wgpu_v81_assets\\v97_k01_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k01_controller_wgpu.npz",
+      "sha256": "1505dfe974dfd7c741e8343c051c60c86ed6bd72cd678259ced679266a124062"
+    },
+    {
+      "original": "carchive/jsr_v98_k14_backend/wgpu_v81_assets\\local_v7_static_affine_v1.npz",
+      "saved": "original_core/weights/local_v7_static_affine_v1.npz",
+      "sha256": "606f16a60a7738a5193de765d8408e4de810c684cddb2286aadd7cb7556854f3"
+    },
+    {
+      "original": "carchive/jsr_v98_k14_backend/wgpu_v81_assets\\v97_k01_rarm_wgpu.npz",
+      "saved": "original_core/weights/v97_k01_rarm_wgpu.npz",
+      "sha256": "f592718d34f88a5dcf6b60be9ec4af2bc03ec6683c4942d86f4f46cd1ddad487"
+    },
+    {
+      "original": "carchive/jsr_v98_k14_backend/wgpu_v81_assets/v97_k01_rarm_wgpu.npz",
+      "saved": "original_core/weights/v97_k01_rarm_wgpu.npz",
+      "sha256": "f592718d34f88a5dcf6b60be9ec4af2bc03ec6683c4942d86f4f46cd1ddad487"
+    },
+    {
+      "original": "carchive/jsr_v98_k14_backend/wgpu_v81_assets/local_v7_static_affine_v1.npz",
+      "saved": "original_core/weights/local_v7_static_affine_v1.npz",
+      "sha256": "606f16a60a7738a5193de765d8408e4de810c684cddb2286aadd7cb7556854f3"
+    },
+    {
+      "original": "carchive/jsr_v98_k14_backend/wgpu_v81_assets/v97_k14_controller_wgpu.npz",
+      "saved": "additional_weights/17e445589bff4775-wgpu_v81_assets_v97_k14_controller_wgpu.npz",
+      "sha256": "17e445589bff4775dc3de02eb997bcf0de19c0ea90b6328f6516f34f766aa8d7"
+    },
+    {
+      "original": "carchive/jsr_v98_k14_backend/wgpu_v81_assets/v97_k01_controller_wgpu.npz",
+      "saved": "original_core/weights/v97_k01_controller_wgpu.npz",
+      "sha256": "1505dfe974dfd7c741e8343c051c60c86ed6bd72cd678259ced679266a124062"
+    },
+    {
+      "original": "carchive/jsr_v98_k14_backend/wgpu_v81_assets/v97_k14_rarm_wgpu.npz",
+      "saved": "additional_weights/cf3e22bc9dcddf4a-wgpu_v81_assets_v97_k14_rarm_wgpu.npz",
+      "sha256": "cf3e22bc9dcddf4a5aa5e70584425f142a14292dd40f4e19d52071559f590224"
+    },
+    {
+      "original": "carchive/jsr_v98_k14_backend/ckpt_v73/weights_ema.npz",
+      "saved": "additional_weights/657fa13af5d51ebb-ckpt_v73_weights_ema.npz",
+      "sha256": "657fa13af5d51ebb5b3d83c25cc39d67b84aea40aba305c9294aca399a2c00bf"
+    },
+    {
+      "original": "carchive/jsr_v98_k14_backend/ckpt_refine_v8/multireal_seed2_rarm.npz",
+      "saved": "additional_weights/323baf5bc9fd14cc-ckpt_refine_v8_multireal_seed2_rarm.npz",
+      "sha256": "323baf5bc9fd14cc5a5890a998ede4ee68de306d1424232e40ea2532f64e937e"
+    },
+    {
+      "original": "carchive/jsr_backend/wgpu\\assets_v15_2\\backend_32.npz",
+      "saved": "transformer_backend/assets/backend_shared.npz",
+      "sha256": "224f46e0226dbcc9cd0297c60c0097893b6f8a91bb661b405c3ba8464664e937"
+    },
+    {
+      "original": "carchive/jsr_backend/wgpu\\assets_v15_2\\backend_96.npz",
+      "saved": "transformer_backend/assets/backend_shared.npz",
+      "sha256": "224f46e0226dbcc9cd0297c60c0097893b6f8a91bb661b405c3ba8464664e937"
+    },
+    {
+      "original": "carchive/jsr_backend/fixtures\\real_inputs_32.npz",
+      "saved": "additional_weights/dde79ca7bda2c8dc-fixtures_real_inputs_32.npz",
+      "sha256": "dde79ca7bda2c8dc685ffd98af1c9b8e48cfd45cc0dda21c8941d704f8267d3e"
+    },
+    {
+      "original": "carchive/jsr_backend/wgpu\\assets_v15_2\\backend_128.npz",
+      "saved": "transformer_backend/assets/backend_shared.npz",
+      "sha256": "224f46e0226dbcc9cd0297c60c0097893b6f8a91bb661b405c3ba8464664e937"
+    },
+    {
+      "original": "carchive/jsr_backend/wgpu\\assets_v15_2\\backend_64.npz",
+      "saved": "transformer_backend/assets/backend_shared.npz",
+      "sha256": "224f46e0226dbcc9cd0297c60c0097893b6f8a91bb661b405c3ba8464664e937"
+    },
+    {
+      "original": "carchive/jsr_backend/wgpu\\assets_v15_2\\backend_256.npz",
+      "saved": "transformer_backend/assets/backend_shared.npz",
+      "sha256": "224f46e0226dbcc9cd0297c60c0097893b6f8a91bb661b405c3ba8464664e937"
+    },
+    {
+      "original": "carchive/jsr_backend/wgpu\\assets_v15_2\\spynet.npz",
+      "saved": "transformer_backend/assets/spynet.npz",
+      "sha256": "b335e6b1b39c7f55f02aeaf96863914ad6289a861d17c4434ab7a14eeb574ccc"
+    },
+    {
+      "original": "carchive/jsr_backend/wgpu\\assets_v15_2\\backend_192.npz",
+      "saved": "transformer_backend/assets/backend_shared.npz",
+      "sha256": "224f46e0226dbcc9cd0297c60c0097893b6f8a91bb661b405c3ba8464664e937"
+    },
+    {
+      "original": "carchive/jsr_backend/wgpu/assets_v15_2/backend_64.npz",
+      "saved": "transformer_backend/assets/backend_shared.npz",
+      "sha256": "224f46e0226dbcc9cd0297c60c0097893b6f8a91bb661b405c3ba8464664e937"
+    },
+    {
+      "original": "carchive/jsr_backend/wgpu/assets_v15_2/backend_192.npz",
+      "saved": "transformer_backend/assets/backend_shared.npz",
+      "sha256": "224f46e0226dbcc9cd0297c60c0097893b6f8a91bb661b405c3ba8464664e937"
+    },
+    {
+      "original": "carchive/jsr_backend/wgpu/assets_v15_2/backend_256.npz",
+      "saved": "transformer_backend/assets/backend_shared.npz",
+      "sha256": "224f46e0226dbcc9cd0297c60c0097893b6f8a91bb661b405c3ba8464664e937"
+    },
+    {
+      "original": "carchive/jsr_backend/wgpu/assets_v15_2/spynet.npz",
+      "saved": "transformer_backend/assets/spynet.npz",
+      "sha256": "b335e6b1b39c7f55f02aeaf96863914ad6289a861d17c4434ab7a14eeb574ccc"
+    },
+    {
+      "original": "carchive/jsr_backend/wgpu/assets_v15_2/backend_128.npz",
+      "saved": "transformer_backend/assets/backend_shared.npz",
+      "sha256": "224f46e0226dbcc9cd0297c60c0097893b6f8a91bb661b405c3ba8464664e937"
+    },
+    {
+      "original": "carchive/jsr_backend/wgpu/assets_v15_2/backend_32.npz",
+      "saved": "transformer_backend/assets/backend_shared.npz",
+      "sha256": "224f46e0226dbcc9cd0297c60c0097893b6f8a91bb661b405c3ba8464664e937"
+    },
+    {
+      "original": "carchive/jsr_backend/wgpu/assets_v15_2/backend_96.npz",
+      "saved": "transformer_backend/assets/backend_shared.npz",
+      "sha256": "224f46e0226dbcc9cd0297c60c0097893b6f8a91bb661b405c3ba8464664e937"
+    },
+    {
+      "original": "carchive/jsr_backend/fixtures/real_inputs_32.npz",
+      "saved": "additional_weights/dde79ca7bda2c8dc-fixtures_real_inputs_32.npz",
+      "sha256": "dde79ca7bda2c8dc685ffd98af1c9b8e48cfd45cc0dda21c8941d704f8267d3e"
+    }
+  ]
+}

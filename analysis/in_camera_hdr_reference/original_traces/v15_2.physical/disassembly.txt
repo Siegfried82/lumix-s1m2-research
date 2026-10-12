@@ -1,0 +1,2257 @@
+# pydisasm version 6.3.0
+# CPython Python bytecode 3.10 (3439)
+#   Disassembled from CPython Python 3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]
+# Timestamp in code: 0 (1970-01-01 03:00:00)
+# Method Name:       <module>
+# Filename:          v15_2\physical.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        4
+# Flags:             0x00000040 (NOFREE)
+# First Line:        1
+# Constants:
+#    0: 'Original 130-tap preparation, fused without changing the frozen amplitude law.'
+#    1: 0
+#    2: None
+#    3: 1
+#    4: ('Ops',)
+#    5: ('SHOULDER_START', 'SHOULDER_CEILING')
+#    6: <Code310 code object Physical at 0x106b3b2c0, file v15_2\physical.py>, line 6
+#    7: 'Physical'
+#    8: <Code310 code object metadata at 0x106b38e30, file v15_2\physical.py>, line 196
+#    9: 'metadata'
+# Names:
+#    0: __doc__
+#    1: numpy
+#    2: np
+#    3: ops
+#    4: Ops
+#    5: highlights
+#    6: SHOULDER_START
+#    7: SHOULDER_CEILING
+#    8: Physical
+#    9: metadata
+
+  1:           0 LOAD_CONST           ("Original 130-tap preparation, fused without changing the frozen amplitude law.")
+               2 STORE_NAME           (__doc__)
+
+  2:           4 LOAD_CONST           (0)
+               6 LOAD_CONST           (None)
+               8 IMPORT_NAME          (numpy)
+              10 STORE_NAME           (np)
+
+  3:          12 LOAD_CONST           (1)
+              14 LOAD_CONST           (('Ops',))
+              16 IMPORT_NAME          (ops)
+              18 IMPORT_FROM          (Ops)
+              20 STORE_NAME           (Ops)
+              22 POP_TOP
+
+  4:          24 LOAD_CONST           (1)
+              26 LOAD_CONST           (('SHOULDER_START', 'SHOULDER_CEILING'))
+              28 IMPORT_NAME          (highlights)
+              30 IMPORT_FROM          (SHOULDER_START)
+              32 STORE_NAME           (SHOULDER_START)
+              34 IMPORT_FROM          (SHOULDER_CEILING)
+              36 STORE_NAME           (SHOULDER_CEILING)
+              38 POP_TOP
+
+  6:          40 LOAD_BUILD_CLASS
+              42 LOAD_CONST           (<Code310 code object Physical at 0x106b3b2c0, file v15_2\physical.py>, line 6)
+              44 LOAD_CONST           ("Physical")
+              46 MAKE_FUNCTION        (No arguments)
+              48 LOAD_CONST           ("Physical")
+              50 LOAD_NAME            (Ops)
+              52 CALL_FUNCTION        (3 positional arguments)
+              54 STORE_NAME           (Physical)
+
+196:          56 LOAD_CONST           (<Code310 code object metadata at 0x106b38e30, file v15_2\physical.py>, line 196)
+              58 LOAD_CONST           ("metadata")
+              60 MAKE_FUNCTION        (No arguments)
+              62 STORE_NAME           (metadata)
+              64 LOAD_CONST           (None)
+              66 RETURN_VALUE
+
+
+# Method Name:       Physical
+# Filename:          v15_2\physical.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        4
+# Flags:             0x00000000 (0x0)
+# First Line:        6
+# Constants:
+#    0: 'Physical'
+#    1: 7
+#    2: None
+#    3: 1
+#    4: <Code310 code object __init__ at 0x1069083e0, file v15_2\physical.py>, line 7
+#    5: 'Physical.__init__'
+#    6: <Code310 code object emit at 0x10690b8c0, file v15_2\physical.py>, line 15
+#    7: 'Physical.emit'
+#    8: False
+#    9: <Code310 code object helpers at 0x10695a060, file v15_2\physical.py>, line 20
+#   10: 'Physical.helpers'
+#   11: <Code310 code object guard_fully_clipped at 0x10690b8f0, file v15_2\physical.py>, line 59
+#   12: 'Physical.guard_fully_clipped'
+#   13: <Code310 code object merge at 0x106458830, file v15_2\physical.py>, line 105
+#   14: 'Physical.merge'
+#   15: <Code310 code object covariance at 0x106929df0, file v15_2\physical.py>, line 128
+#   16: 'Physical.covariance'
+#   17: <Code310 code object blur at 0x10692aed0, file v15_2\physical.py>, line 146
+#   18: 'Physical.blur'
+#   19: <Code310 code object max_reduce at 0x106b389e0, file v15_2\physical.py>, line 160
+#   20: 'Physical.max_reduce'
+#   21: <Code310 code object prepare at 0x1069599a0, file v15_2\physical.py>, line 167
+#   22: 'Physical.prepare'
+#   23: (7, None, 1, None)
+#   24: (False,)
+#   25: (None,)
+#   26: (1,)
+# Names:
+#    0: __name__
+#    1: __module__
+#    2: __qualname__
+#    3: __init__
+#    4: emit
+#    5: helpers
+#    6: guard_fully_clipped
+#    7: merge
+#    8: covariance
+#    9: blur
+#   10: max_reduce
+#   11: prepare
+#   12: __classcell__
+# Free variables:
+#    0: __class__
+
+  6:           0 LOAD_NAME            (__name__)
+               2 STORE_NAME           (__module__)
+               4 LOAD_CONST           ("Physical")
+               6 STORE_NAME           (__qualname__)
+
+  7:           8 LOAD_CONST           ((7, None, 1, None))
+              10 LOAD_CLOSURE         (__class__)
+              12 BUILD_TUPLE          1
+              14 LOAD_CONST           (<Code310 code object __init__ at 0x1069083e0, file v15_2\physical.py>, line 7)
+              16 LOAD_CONST           ("Physical.__init__")
+              18 MAKE_FUNCTION        (default, closure)
+              20 STORE_NAME           (__init__)
+
+ 15:          22 LOAD_CLOSURE         (__class__)
+              24 BUILD_TUPLE          1
+              26 LOAD_CONST           (<Code310 code object emit at 0x10690b8c0, file v15_2\physical.py>, line 15)
+              28 LOAD_CONST           ("Physical.emit")
+              30 MAKE_FUNCTION        (closure)
+              32 STORE_NAME           (emit)
+
+ 20:          34 LOAD_CONST           ((False,))
+              36 LOAD_CONST           (<Code310 code object helpers at 0x10695a060, file v15_2\physical.py>, line 20)
+              38 LOAD_CONST           ("Physical.helpers")
+              40 MAKE_FUNCTION        (default)
+              42 STORE_NAME           (helpers)
+
+ 59:          44 LOAD_CONST           (<Code310 code object guard_fully_clipped at 0x10690b8f0, file v15_2\physical.py>, line 59)
+              46 LOAD_CONST           ("Physical.guard_fully_clipped")
+              48 MAKE_FUNCTION        (No arguments)
+              50 STORE_NAME           (guard_fully_clipped)
+
+105:          52 LOAD_CONST           ((None,))
+              54 LOAD_CONST           (<Code310 code object merge at 0x106458830, file v15_2\physical.py>, line 105)
+              56 LOAD_CONST           ("Physical.merge")
+              58 MAKE_FUNCTION        (default)
+              60 STORE_NAME           (merge)
+
+128:          62 LOAD_CONST           (<Code310 code object covariance at 0x106929df0, file v15_2\physical.py>, line 128)
+              64 LOAD_CONST           ("Physical.covariance")
+              66 MAKE_FUNCTION        (No arguments)
+              68 STORE_NAME           (covariance)
+
+146:          70 LOAD_CONST           (<Code310 code object blur at 0x10692aed0, file v15_2\physical.py>, line 146)
+              72 LOAD_CONST           ("Physical.blur")
+              74 MAKE_FUNCTION        (No arguments)
+              76 STORE_NAME           (blur)
+
+160:          78 LOAD_CONST           ((1,))
+              80 LOAD_CONST           (<Code310 code object max_reduce at 0x106b389e0, file v15_2\physical.py>, line 160)
+              82 LOAD_CONST           ("Physical.max_reduce")
+              84 MAKE_FUNCTION        (default)
+              86 STORE_NAME           (max_reduce)
+
+167:          88 LOAD_CONST           (<Code310 code object prepare at 0x1069599a0, file v15_2\physical.py>, line 167)
+              90 LOAD_CONST           ("Physical.prepare")
+              92 MAKE_FUNCTION        (No arguments)
+              94 STORE_NAME           (prepare)
+              96 LOAD_CLOSURE         (__class__)
+              98 DUP_TOP
+             100 STORE_NAME           (__classcell__)
+             102 RETURN_VALUE
+
+
+# Method Name:       metadata
+# Filename:          v15_2\physical.py
+# Argument count:    5
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  7
+# Stack size:        10
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        196
+# Constants:
+#    0: None
+#    1: -1
+#    2: 4
+# Names:
+#    0: np
+#    1: asarray
+#    2: float32
+#    3: reshape
+#    4: len
+#    5: c_
+#    6: broadcast_to
+#    7: astype
+# Varnames:
+#	exposure, index, white, under, calibration, e, k
+# Positional arguments:
+#	exposure, index, white, under, calibration
+# Local variables:
+#    5: e
+#    6: k
+
+197:           0 LOAD_GLOBAL          (np)
+               2 LOAD_METHOD          (asarray)
+               4 LOAD_FAST            (exposure)
+               6 LOAD_GLOBAL          (np)
+               8 LOAD_ATTR            (float32)
+              10 CALL_METHOD          (2 positional arguments)
+              12 LOAD_METHOD          (reshape)
+              14 LOAD_CONST           (-1)
+              16 CALL_METHOD          (1 positional argument)
+              18 STORE_FAST           (e)
+              20 LOAD_GLOBAL          (len)
+              22 LOAD_FAST            (e)
+              24 CALL_FUNCTION        (1 positional argument)
+              26 STORE_FAST           (k)
+
+198:          28 LOAD_GLOBAL          (np)
+              30 LOAD_ATTR            (c_)
+              32 LOAD_FAST            (e)
+              34 LOAD_GLOBAL          (np)
+              36 LOAD_METHOD          (asarray)
+              38 LOAD_FAST            (index)
+              40 CALL_METHOD          (1 positional argument)
+              42 LOAD_METHOD          (reshape)
+              44 LOAD_FAST            (k)
+              46 LOAD_CONST           (4)
+              48 CALL_METHOD          (2 positional arguments)
+              50 LOAD_GLOBAL          (np)
+              52 LOAD_METHOD          (broadcast_to)
+              54 LOAD_FAST            (white)
+              56 LOAD_FAST            (k)
+              58 LOAD_CONST           (4)
+              60 BUILD_TUPLE          2
+              62 CALL_METHOD          (2 positional arguments)
+              64 LOAD_GLOBAL          (np)
+              66 LOAD_METHOD          (broadcast_to)
+              68 LOAD_FAST            (under)
+              70 LOAD_FAST            (k)
+              72 LOAD_CONST           (4)
+              74 BUILD_TUPLE          2
+              76 CALL_METHOD          (2 positional arguments)
+              78 LOAD_GLOBAL          (np)
+              80 LOAD_METHOD          (broadcast_to)
+              82 LOAD_FAST            (calibration)
+              84 LOAD_FAST            (k)
+              86 LOAD_CONST           (4)
+              88 BUILD_TUPLE          2
+              90 CALL_METHOD          (2 positional arguments)
+              92 BUILD_TUPLE          5
+              94 BINARY_SUBSCR
+              96 LOAD_METHOD          (astype)
+              98 LOAD_GLOBAL          (np)
+             100 LOAD_ATTR            (float32)
+             102 CALL_METHOD          (1 positional argument)
+             104 LOAD_METHOD          (reshape)
+             106 LOAD_CONST           (-1)
+             108 CALL_METHOD          (1 positional argument)
+             110 RETURN_VALUE
+
+
+# Method Name:       __init__
+# Filename:          v15_2\physical.py
+# Argument count:    7
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  7
+# Stack size:        3
+# Flags:             0x00000003 (NEWLOCALS | OPTIMIZED)
+# First Line:        7
+# Constants:
+#    0: None
+#    1: 2
+#    2: (1, 3)
+#    3: 8
+#    4: 'Invalid physical lattice'
+#    5: 0
+#    6: 'Invalid shortest frame'
+# Names:
+#    0: super
+#    1: __init__
+#    2: int
+#    3: t
+#    4: k
+#    5: gc
+#    6: h
+#    7: w
+#    8: o
+#    9: n
+#   10: r
+#   11: nr
+#   12: min
+#   13: ValueError
+#   14: shortest_rolloff
+# Varnames:
+#	self, rt, native, frames, source_hw, colours, shortest_rolloff
+# Positional arguments:
+#	self, rt, native, frames, source_hw, colours, shortest_rolloff
+# Cell variables:
+#    0: __class__
+
+  8:           0 LOAD_GLOBAL          (super)
+               2 CALL_FUNCTION        (0 positional arguments)
+               4 LOAD_METHOD          (__init__)
+               6 LOAD_FAST            (rt)
+               8 CALL_METHOD          (1 positional argument)
+              10 POP_TOP
+              12 LOAD_GLOBAL          (int)
+              14 LOAD_FAST            (native)
+              16 CALL_FUNCTION        (1 positional argument)
+              18 LOAD_FAST            (self)
+              20 STORE_ATTR           (t)
+              22 LOAD_FAST            (frames)
+              24 LOAD_FAST            (self)
+              26 STORE_ATTR           (k)
+              28 LOAD_FAST            (colours)
+              30 LOAD_FAST            (self)
+              32 STORE_ATTR           (gc)
+
+  9:          34 LOAD_FAST            (source_hw)
+              36 JUMP_IF_TRUE_OR_POP  (to 44)
+              38 LOAD_FAST            (native)
+              40 LOAD_FAST            (native)
+              42 BUILD_TUPLE          2
+         >>   44 UNPACK_SEQUENCE      2
+              46 LOAD_FAST            (self)
+              48 STORE_ATTR           (h)
+              50 LOAD_FAST            (self)
+              52 STORE_ATTR           (w)
+
+ 10:          54 LOAD_CONST           (2)
+              56 LOAD_FAST            (native)
+              58 BINARY_MULTIPLY
+              60 LOAD_FAST            (self)
+              62 STORE_ATTR           (o)
+              64 LOAD_FAST            (self)
+              66 LOAD_ATTR            (o)
+              68 LOAD_CONST           (2)
+              70 BINARY_POWER
+              72 LOAD_FAST            (self)
+              74 STORE_ATTR           (n)
+              76 LOAD_FAST            (native)
+              78 LOAD_CONST           (2)
+              80 BINARY_FLOOR_DIVIDE
+              82 LOAD_FAST            (self)
+              84 STORE_ATTR           (r)
+              86 LOAD_FAST            (self)
+              88 LOAD_ATTR            (r)
+              90 LOAD_CONST           (2)
+              92 BINARY_POWER
+              94 LOAD_FAST            (self)
+              96 STORE_ATTR           (nr)
+
+ 11:          98 LOAD_FAST            (colours)
+             100 LOAD_CONST           ((1, 3))
+             102 CONTAINS_OP          (not in)
+             104 POP_JUMP_IF_TRUE     (to 132)
+             106 LOAD_FAST            (native)
+             108 LOAD_CONST           (8)
+             110 BINARY_MODULO
+             112 POP_JUMP_IF_TRUE     (to 132)
+             114 LOAD_GLOBAL          (min)
+             116 LOAD_FAST            (self)
+             118 LOAD_ATTR            (h)
+             120 LOAD_FAST            (self)
+             122 LOAD_ATTR            (w)
+             124 CALL_FUNCTION        (2 positional arguments)
+             126 LOAD_CONST           (2)
+             128 BINARY_MODULO
+             130 POP_JUMP_IF_FALSE    (to 140)
+         >>  132 LOAD_GLOBAL          (ValueError)
+             134 LOAD_CONST           ("Invalid physical lattice")
+             136 CALL_FUNCTION        (1 positional argument)
+             138 RAISE_VARARGS        (exception instance)
+
+ 12:     >>  140 LOAD_FAST            (shortest_rolloff)
+             142 LOAD_CONST           (None)
+             144 IS_OP                (is not)
+             146 POP_JUMP_IF_FALSE    (to 184)
+             148 LOAD_CONST           (0)
+             150 LOAD_FAST            (shortest_rolloff)
+             152 DUP_TOP
+             154 ROT_THREE
+             156 COMPARE_OP           (<=)
+             158 POP_JUMP_IF_FALSE    (to 174)
+             160 LOAD_FAST            (frames)
+             162 COMPARE_OP           (<)
+             164 POP_JUMP_IF_TRUE     (to 184)
+             166 LOAD_GLOBAL          (ValueError)
+             168 LOAD_CONST           ("Invalid shortest frame")
+             170 CALL_FUNCTION        (1 positional argument)
+             172 RAISE_VARARGS        (exception instance)
+         >>  174 POP_TOP
+             176 LOAD_GLOBAL          (ValueError)
+             178 LOAD_CONST           ("Invalid shortest frame")
+             180 CALL_FUNCTION        (1 positional argument)
+             182 RAISE_VARARGS        (exception instance)
+
+ 13:     >>  184 LOAD_FAST            (shortest_rolloff)
+             186 LOAD_FAST            (self)
+             188 STORE_ATTR           (shortest_rolloff)
+             190 LOAD_CONST           (None)
+             192 RETURN_VALUE
+
+
+# Method Name:       emit
+# Filename:          v15_2\physical.py
+# Argument count:    2
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  4
+# Stack size:        4
+# Flags:             0x0000000f (VARKEYWORDS | VARARGS | NEWLOCALS | OPTIMIZED)
+# First Line:        15
+# Constants:
+#    0: None
+#    1: 'shoulder0999'
+# Names:
+#    0: shortest_rolloff
+#    1: super
+#    2: emit
+# Varnames:
+#	self, tag, args, kwargs
+# Positional arguments:
+#	self, tag
+# Local variables:
+#    2: args
+#    3: kwargs
+# Cell variables:
+#    0: __class__
+
+ 17:           0 LOAD_FAST            (self)
+               2 LOAD_ATTR            (shortest_rolloff)
+               4 LOAD_CONST           (None)
+               6 IS_OP                (is not)
+               8 POP_JUMP_IF_FALSE    (to 22)
+              10 LOAD_CONST           ("shoulder0999")
+              12 LOAD_FAST            (self)
+              14 LOAD_ATTR            (shortest_rolloff)
+              16 LOAD_FAST            (tag)
+              18 BUILD_TUPLE          3
+              20 STORE_FAST           (tag)
+
+ 18:     >>   22 LOAD_GLOBAL          (super)
+              24 CALL_FUNCTION        (0 positional arguments)
+              26 LOAD_ATTR            (emit)
+              28 LOAD_FAST            (tag)
+              30 BUILD_LIST           1
+              32 LOAD_FAST            (args)
+              34 LIST_EXTEND          1
+              36 LIST_TO_TUPLE
+              38 BUILD_MAP            0
+              40 LOAD_FAST            (kwargs)
+              42 DICT_MERGE           1
+              44 CALL_FUNCTION_EX     (keyword and positional arguments)
+              46 RETURN_VALUE
+
+
+# Method Name:       helpers
+# Filename:          v15_2\physical.py
+# Argument count:    2
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  9
+# Stack size:        16
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        20
+# Constants:
+#    0: None
+#    1: ''
+#    2: '\nfn coord(k:u32,c:u32,p:u32)->vec2<f32>{let cc='
+#    3: 1
+#    4: '0u'
+#    5: 'c'
+#    6: ';let j=((k*'
+#    7: 'u+cc)*'
+#    8: 'u+p)*2u;return vec2<f32>(a1[j],a1[j+1u]);}\nfn phase_colour(k:u32,phase:u32)->u32{let j=k*17u;if(phase==u32(a2[j+1u])){return 0u;}if(phase==u32(a2[j+4u])){return 2u;}return 1u;}\nfn plane(k:u32,phase:u32)->u32{for(var c=0u;c<4u;c++){if(u32(a2[k*17u+1u+c])==phase){return c;}}return 0u;}\nfn ix(k:u32,x:i32,y:i32)->u32{return k*'
+#    9: 'u+u32(clamp(y,0,'
+#   10: '))*'
+#   11: 'u+u32(clamp(x,0,'
+#   12: '));}\nfn valid(k:u32,x:i32,y:i32)->bool{return x>=0&&y>=0&&x<'
+#   13: '&&y<'
+#   14: '&&a0['
+#   15: 'u+ix(k,x,y)]>0.;}\nfn saturated(k:u32,x:i32,y:i32)->bool{let p=(u32(clamp(y,0,'
+#   16: '))%2u)*2u+u32(clamp(x,0,'
+#   17: '))%2u;return a0['
+#   18: 2
+#   19: 'u+ix(k,x,y)]>0.||a0[ix(k,x,y)]>=a2[k*17u+5u+plane(k,p)];}\nfn under(k:u32,x:i32,y:i32)->bool{let p=(u32(clamp(y,0,'
+#   20: 3
+#   21: 'u+ix(k,x,y)]>0.||a0[ix(k,x,y)]<=a2[k*17u+9u+plane(k,p)];}\nfn usable(k:u32,x:i32,y:i32)->bool{return valid(k,x,y)&&!saturated(k,x,y)&&!under(k,x,y);}\nfn ash(x:f32)->f32{let z=abs(x);return sign(x)*log(z+sqrt(z*z+1.));}\n'
+#   22: 'fn measurement(k:u32,x:i32,y:i32)->f32{return a0[ix(k,x,y)];}\n'
+#   23: '\nfn measurement(k:u32,x:i32,y:i32)->f32{\n let raw=a0[ix(k,x,y)];if(k!='
+#   24: 'u){return raw;}\n let phase=(u32(clamp(y,0,'
+#   25: '))%2u;\n let white=a2[k*17u+5u+plane(k,phase)];\n if(raw<'
+#   26: '*white){return raw;}\n let u=clamp((raw/white-'
+#   27: ')/'
+#   28: '.12g'
+#   29: ',0.,1.);\n return min(raw,white)-'
+#   30: '*white*u*u;\n}\n'
+#   31: 'fn saturated(k:u32,x:i32,y:i32)->bool{'
+#   32: 'if(k=='
+#   33: 'u && a0[ix(k,x,y)]>=0.95*a2[k*17u+5u+plane(k,(u32(clamp(y,0,'
+#   34: '))%2u)]){return false;}'
+#   35: 'a0['
+#   36: 'u+ix(k,x,y)]>0.'
+#   37: 'true'
+#   38: 'u+ix(k,x,y)]>0.||'
+# Names:
+#    0: k
+#    1: h
+#    2: w
+#    3: n
+#    4: gc
+#    5: join
+#    6: shortest_rolloff
+#    7: SHOULDER_START
+#    8: SHOULDER_CEILING
+#    9: replace
+# Varnames:
+#	self, compact, k, h, w, n, gc, helper, old
+# Positional arguments:
+#	self, compact
+# Local variables:
+#    2: k
+#    3: h
+#    4: w
+#    5: n
+#    6: gc
+#    7: helper
+#    8: old
+
+ 21:           0 LOAD_FAST            (self)
+               2 LOAD_ATTR            (k)
+               4 LOAD_FAST            (self)
+               6 LOAD_ATTR            (h)
+               8 LOAD_FAST            (self)
+              10 LOAD_ATTR            (w)
+              12 LOAD_FAST            (self)
+              14 LOAD_ATTR            (n)
+              16 LOAD_FAST            (self)
+              18 LOAD_ATTR            (gc)
+              20 BUILD_TUPLE          5
+              22 UNPACK_SEQUENCE      5
+              24 STORE_FAST           (k)
+              26 STORE_FAST           (h)
+              28 STORE_FAST           (w)
+              30 STORE_FAST           (n)
+              32 STORE_FAST           (gc)
+
+ 22:          34 LOAD_CONST           ("")
+              36 LOAD_METHOD          (join)
+              38 BUILD_LIST           0
+              40 LOAD_CONST           ("\nfn coord(k:u32,c:u32,p:u32)->vec2<f32>{let cc=")
+              42 LIST_APPEND          1
+
+ 23:          44 LOAD_FAST            (gc)
+              46 LOAD_CONST           (1)
+              48 COMPARE_OP           (==)
+              50 POP_JUMP_IF_FALSE    (to 56)
+              52 LOAD_CONST           ("0u")
+              54 JUMP_FORWARD         (to 58)
+         >>   56 LOAD_CONST           ("c")
+
+ 22:     >>   58 FORMAT_VALUE         0
+              60 LIST_APPEND          1
+              62 LOAD_CONST           (";let j=((k*")
+              64 LIST_APPEND          1
+
+ 23:          66 LOAD_FAST            (gc)
+
+ 22:          68 FORMAT_VALUE         0
+              70 LIST_APPEND          1
+              72 LOAD_CONST           ("u+cc)*")
+              74 LIST_APPEND          1
+
+ 23:          76 LOAD_FAST            (n)
+
+ 22:          78 FORMAT_VALUE         0
+              80 LIST_APPEND          1
+              82 LOAD_CONST           ("u+p)*2u;return vec2<f32>(a1[j],a1[j+1u]);}\nfn phase_colour(k:u32,phase:u32)->u32{let j=k*17u;if(phase==u32(a2[j+1u])){return 0u;}if(phase==u32(a2[j+4u])){return 2u;}return 1u;}\nfn plane(k:u32,phase:u32)->u32{for(var c=0u;c<4u;c++){if(u32(a2[k*17u+1u+c])==phase){return c;}}return 0u;}\nfn ix(k:u32,x:i32,y:i32)->u32{return k*")
+              84 LIST_APPEND          1
+
+ 26:          86 LOAD_FAST            (h)
+              88 LOAD_FAST            (w)
+              90 BINARY_MULTIPLY
+
+ 22:          92 FORMAT_VALUE         0
+              94 LIST_APPEND          1
+              96 LOAD_CONST           ("u+u32(clamp(y,0,")
+              98 LIST_APPEND          1
+
+ 26:         100 LOAD_FAST            (h)
+             102 LOAD_CONST           (1)
+             104 BINARY_SUBTRACT
+
+ 22:         106 FORMAT_VALUE         0
+             108 LIST_APPEND          1
+             110 LOAD_CONST           ("))*")
+             112 LIST_APPEND          1
+
+ 26:         114 LOAD_FAST            (w)
+
+ 22:         116 FORMAT_VALUE         0
+             118 LIST_APPEND          1
+             120 LOAD_CONST           ("u+u32(clamp(x,0,")
+             122 LIST_APPEND          1
+
+ 26:         124 LOAD_FAST            (w)
+             126 LOAD_CONST           (1)
+             128 BINARY_SUBTRACT
+
+ 22:         130 FORMAT_VALUE         0
+             132 LIST_APPEND          1
+             134 LOAD_CONST           ("));}\nfn valid(k:u32,x:i32,y:i32)->bool{return x>=0&&y>=0&&x<")
+             136 LIST_APPEND          1
+
+ 27:         138 LOAD_FAST            (w)
+
+ 22:         140 FORMAT_VALUE         0
+             142 LIST_APPEND          1
+             144 LOAD_CONST           ("&&y<")
+             146 LIST_APPEND          1
+
+ 27:         148 LOAD_FAST            (h)
+
+ 22:         150 FORMAT_VALUE         0
+             152 LIST_APPEND          1
+             154 LOAD_CONST           ("&&a0[")
+             156 LIST_APPEND          1
+
+ 27:         158 LOAD_FAST            (k)
+             160 LOAD_FAST            (h)
+             162 BINARY_MULTIPLY
+             164 LOAD_FAST            (w)
+             166 BINARY_MULTIPLY
+
+ 22:         168 FORMAT_VALUE         0
+             170 LIST_APPEND          1
+             172 LOAD_CONST           ("u+ix(k,x,y)]>0.;}\nfn saturated(k:u32,x:i32,y:i32)->bool{let p=(u32(clamp(y,0,")
+             174 LIST_APPEND          1
+
+ 28:         176 LOAD_FAST            (h)
+             178 LOAD_CONST           (1)
+             180 BINARY_SUBTRACT
+
+ 22:         182 FORMAT_VALUE         0
+             184 LIST_APPEND          1
+             186 LOAD_CONST           ("))%2u)*2u+u32(clamp(x,0,")
+             188 LIST_APPEND          1
+
+ 28:         190 LOAD_FAST            (w)
+             192 LOAD_CONST           (1)
+             194 BINARY_SUBTRACT
+
+ 22:         196 FORMAT_VALUE         0
+             198 LIST_APPEND          1
+             200 LOAD_CONST           ("))%2u;return a0[")
+             202 LIST_APPEND          1
+
+ 28:         204 LOAD_CONST           (2)
+             206 LOAD_FAST            (k)
+             208 BINARY_MULTIPLY
+             210 LOAD_FAST            (h)
+             212 BINARY_MULTIPLY
+             214 LOAD_FAST            (w)
+             216 BINARY_MULTIPLY
+
+ 22:         218 FORMAT_VALUE         0
+             220 LIST_APPEND          1
+             222 LOAD_CONST           ("u+ix(k,x,y)]>0.||a0[ix(k,x,y)]>=a2[k*17u+5u+plane(k,p)];}\nfn under(k:u32,x:i32,y:i32)->bool{let p=(u32(clamp(y,0,")
+             224 LIST_APPEND          1
+
+ 29:         226 LOAD_FAST            (h)
+             228 LOAD_CONST           (1)
+             230 BINARY_SUBTRACT
+
+ 22:         232 FORMAT_VALUE         0
+             234 LIST_APPEND          1
+             236 LOAD_CONST           ("))%2u)*2u+u32(clamp(x,0,")
+             238 LIST_APPEND          1
+
+ 29:         240 LOAD_FAST            (w)
+             242 LOAD_CONST           (1)
+             244 BINARY_SUBTRACT
+
+ 22:         246 FORMAT_VALUE         0
+             248 LIST_APPEND          1
+             250 LOAD_CONST           ("))%2u;return a0[")
+             252 LIST_APPEND          1
+
+ 29:         254 LOAD_CONST           (3)
+             256 LOAD_FAST            (k)
+             258 BINARY_MULTIPLY
+             260 LOAD_FAST            (h)
+             262 BINARY_MULTIPLY
+             264 LOAD_FAST            (w)
+             266 BINARY_MULTIPLY
+
+ 22:         268 FORMAT_VALUE         0
+             270 LIST_APPEND          1
+             272 LOAD_CONST           ("u+ix(k,x,y)]>0.||a0[ix(k,x,y)]<=a2[k*17u+9u+plane(k,p)];}\nfn usable(k:u32,x:i32,y:i32)->bool{return valid(k,x,y)&&!saturated(k,x,y)&&!under(k,x,y);}\nfn ash(x:f32)->f32{let z=abs(x);return sign(x)*log(z+sqrt(z*z+1.));}\n")
+             274 LIST_APPEND          1
+             276 CALL_METHOD          (1 positional argument)
+             278 STORE_FAST           (helper)
+
+ 33:         280 LOAD_FAST            (self)
+             282 LOAD_ATTR            (shortest_rolloff)
+             284 LOAD_CONST           (None)
+             286 IS_OP                (is)
+             288 POP_JUMP_IF_FALSE    (to 300)
+
+ 34:         290 LOAD_FAST            (helper)
+             292 LOAD_CONST           ("fn measurement(k:u32,x:i32,y:i32)->f32{return a0[ix(k,x,y)];}\n")
+             294 INPLACE_ADD
+             296 STORE_FAST           (helper)
+             298 JUMP_FORWARD         (to 424)
+
+ 39:     >>  300 LOAD_FAST            (helper)
+             302 LOAD_CONST           ("\nfn measurement(k:u32,x:i32,y:i32)->f32{\n let raw=a0[ix(k,x,y)];if(k!=")
+
+ 41:         304 LOAD_FAST            (self)
+             306 LOAD_ATTR            (shortest_rolloff)
+
+ 39:         308 FORMAT_VALUE         0
+             310 LOAD_CONST           ("u){return raw;}\n let phase=(u32(clamp(y,0,")
+
+ 42:         312 LOAD_FAST            (h)
+             314 LOAD_CONST           (1)
+             316 BINARY_SUBTRACT
+
+ 39:         318 FORMAT_VALUE         0
+             320 LOAD_CONST           ("))%2u)*2u+u32(clamp(x,0,")
+
+ 42:         322 LOAD_FAST            (w)
+             324 LOAD_CONST           (1)
+             326 BINARY_SUBTRACT
+
+ 39:         328 FORMAT_VALUE         0
+             330 LOAD_CONST           ("))%2u;\n let white=a2[k*17u+5u+plane(k,phase)];\n if(raw<")
+
+ 44:         332 LOAD_GLOBAL          (SHOULDER_START)
+
+ 39:         334 FORMAT_VALUE         0
+             336 LOAD_CONST           ("*white){return raw;}\n let u=clamp((raw/white-")
+
+ 45:         338 LOAD_GLOBAL          (SHOULDER_START)
+
+ 39:         340 FORMAT_VALUE         0
+             342 LOAD_CONST           (")/")
+
+ 45:         344 LOAD_CONST           (1)
+             346 LOAD_GLOBAL          (SHOULDER_START)
+             348 BINARY_SUBTRACT
+
+ 39:         350 LOAD_CONST           (".12g")
+             352 FORMAT_VALUE         4
+             354 LOAD_CONST           (",0.,1.);\n return min(raw,white)-")
+
+ 46:         356 LOAD_CONST           (1)
+             358 LOAD_GLOBAL          (SHOULDER_CEILING)
+             360 BINARY_SUBTRACT
+
+ 39:         362 LOAD_CONST           (".12g")
+             364 FORMAT_VALUE         4
+             366 LOAD_CONST           ("*white*u*u;\n}\n")
+             368 BUILD_STRING         15
+             370 INPLACE_ADD
+             372 STORE_FAST           (helper)
+
+ 51:         374 LOAD_CONST           ("fn saturated(k:u32,x:i32,y:i32)->bool{")
+             376 STORE_FAST           (old)
+
+ 52:         378 LOAD_FAST            (helper)
+             380 LOAD_METHOD          (replace)
+             382 LOAD_FAST            (old)
+             384 LOAD_FAST            (old)
+             386 LOAD_CONST           ("if(k==")
+             388 LOAD_FAST            (self)
+             390 LOAD_ATTR            (shortest_rolloff)
+             392 FORMAT_VALUE         0
+             394 LOAD_CONST           ("u && a0[ix(k,x,y)]>=0.95*a2[k*17u+5u+plane(k,(u32(clamp(y,0,")
+             396 LOAD_FAST            (h)
+             398 LOAD_CONST           (1)
+             400 BINARY_SUBTRACT
+             402 FORMAT_VALUE         0
+             404 LOAD_CONST           ("))%2u)*2u+u32(clamp(x,0,")
+             406 LOAD_FAST            (w)
+             408 LOAD_CONST           (1)
+             410 BINARY_SUBTRACT
+             412 FORMAT_VALUE         0
+             414 LOAD_CONST           ("))%2u)]){return false;}")
+             416 BUILD_STRING         7
+             418 BINARY_ADD
+             420 CALL_METHOD          (2 positional arguments)
+             422 STORE_FAST           (helper)
+
+ 53:     >>  424 LOAD_FAST            (compact)
+             426 EXTENDED_ARG         (256)
+             428 POP_JUMP_IF_FALSE    (to 522)
+
+ 54:         430 LOAD_FAST            (helper)
+             432 LOAD_METHOD          (replace)
+             434 LOAD_CONST           ("a0[")
+             436 LOAD_FAST            (k)
+             438 LOAD_FAST            (h)
+             440 BINARY_MULTIPLY
+             442 LOAD_FAST            (w)
+             444 BINARY_MULTIPLY
+             446 FORMAT_VALUE         0
+             448 LOAD_CONST           ("u+ix(k,x,y)]>0.")
+             450 BUILD_STRING         3
+             452 LOAD_CONST           ("true")
+             454 CALL_METHOD          (2 positional arguments)
+             456 STORE_FAST           (helper)
+
+ 55:         458 LOAD_FAST            (helper)
+             460 LOAD_METHOD          (replace)
+             462 LOAD_CONST           ("a0[")
+             464 LOAD_CONST           (2)
+             466 LOAD_FAST            (k)
+             468 BINARY_MULTIPLY
+             470 LOAD_FAST            (h)
+             472 BINARY_MULTIPLY
+             474 LOAD_FAST            (w)
+             476 BINARY_MULTIPLY
+             478 FORMAT_VALUE         0
+             480 LOAD_CONST           ("u+ix(k,x,y)]>0.||")
+             482 BUILD_STRING         3
+             484 LOAD_CONST           ("")
+             486 CALL_METHOD          (2 positional arguments)
+             488 STORE_FAST           (helper)
+
+ 56:         490 LOAD_FAST            (helper)
+             492 LOAD_METHOD          (replace)
+             494 LOAD_CONST           ("a0[")
+             496 LOAD_CONST           (3)
+             498 LOAD_FAST            (k)
+             500 BINARY_MULTIPLY
+             502 LOAD_FAST            (h)
+             504 BINARY_MULTIPLY
+             506 LOAD_FAST            (w)
+             508 BINARY_MULTIPLY
+             510 FORMAT_VALUE         0
+             512 LOAD_CONST           ("u+ix(k,x,y)]>0.||")
+             514 BUILD_STRING         3
+             516 LOAD_CONST           ("")
+             518 CALL_METHOD          (2 positional arguments)
+             520 STORE_FAST           (helper)
+
+ 57:     >>  522 LOAD_FAST            (helper)
+             524 RETURN_VALUE
+
+
+# Method Name:       guard_fully_clipped
+# Filename:          v15_2\physical.py
+# Argument count:    6
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  10
+# Stack size:        10
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        59
+# Constants:
+#    0: 'Use actual shortest-frame clipping as a radiance lower bound.\n\n        Reliable conflicting unsaturated observations cancel the projection.\n        Values already above the bound are retained. No colour/detail is\n        inferred beyond a censored observation; 3-sigma uses existing PTC.\n        '
+#    1: '\nfn censoring_bound(p:u32)->vec3<f32>{\n var bounds=vec3<f32>(0.);\n for(var c=0u;c<3u;c++){var seen=false;var bound=3.402823e38;\n  let k='
+#    2: 'u;let q=coord(k,c,p);let cell=vec2<i32>(floor(q));\n   for(var dy=0;dy<=1;dy++){for(var dx=0;dx<=1;dx++){\n    let x=cell.x+dx;let y=cell.y+dy;\n    if(!valid(k,x,y)){return vec3<f32>(0.);}\n    let phase=u32(y%2)*2u+u32(x%2);\n    if(phase_colour(k,phase)!=c){continue;}\n    let j=ix(k,x,y);\n    let white=a2[k*17u+5u+plane(k,phase)];\n    let clipped=a0['
+#    3: 2
+#    4: 'u+j]>0.||a0[j]>=white;\n    if(!clipped){return vec3<f32>(0.);}\n    bound=min(bound,white/a2[k*17u]);\n    seen=true;\n   }}\n  if(!seen){return vec3<f32>(0.);}bounds[c]=bound;\n }\n for(var c=0u;c<3u;c++){for(var k=0u;k<'
+#    5: 'u;k++){\n  let q=coord(k,c,p);let cell=vec2<i32>(floor(q));\n  for(var dy=0;dy<=1;dy++){for(var dx=0;dx<=1;dx++){\n   let x=cell.x+dx;let y=cell.y+dy;if(!valid(k,x,y)){continue;}\n   let phase=u32(y%2)*2u+u32(x%2);if(phase_colour(k,phase)!=c){continue;}\n   let j=ix(k,x,y);if(a0['
+#    6: 'u+j]>0.){continue;}\n   let white=a2[k*17u+5u+plane(k,phase)];let raw=a0[j];\n   let variance=a2[k*17u+13u]*white+a2[k*17u+14u]+a2[k*17u+15u]+a2[k*17u+16u]*white*white;\n   let margin=3.*sqrt(max(variance,0.));\n   if(raw<white-margin&&raw/a2[k*17u]<bounds[c]-margin/a2[k*17u]){return vec3<f32>(0.);}\n  }}\n }}\n return bounds;\n}\n'
+#    7: 'let bounds=censoring_bound(i);\nfor(var c=0u;c<3u;c++){dst[c*'
+#    8: 'u+i]=select(a3[c*'
+#    9: 'u+i],max(a3[c*'
+#   10: 'u+i],bounds[c]),bounds[c]>0.);}'
+#   11: 'censoring_bound_guard'
+#   12: 1
+#   13: 3
+#   14: ('count',)
+# Names:
+#    0: n
+#    1: shortest_rolloff
+#    2: helpers
+#    3: k
+#    4: h
+#    5: w
+#    6: emit
+#    7: o
+# Varnames:
+#	self, bank, G, meta, prediction, tag_white, n, k0, helpers, body
+# Positional arguments:
+#	self, bank, G, meta, prediction, tag_white
+# Local variables:
+#    6: n
+#    7: k0
+#    8: helpers
+#    9: body
+
+ 66:           0 LOAD_FAST            (self)
+               2 LOAD_ATTR            (n)
+               4 STORE_FAST           (n)
+               6 LOAD_FAST            (self)
+               8 LOAD_ATTR            (shortest_rolloff)
+              10 STORE_FAST           (k0)
+
+ 67:          12 LOAD_FAST            (self)
+              14 LOAD_METHOD          (helpers)
+              16 CALL_METHOD          (0 positional arguments)
+              18 LOAD_CONST           ("\nfn censoring_bound(p:u32)->vec3<f32>{\n var bounds=vec3<f32>(0.);\n for(var c=0u;c<3u;c++){var seen=false;var bound=3.402823e38;\n  let k=")
+
+ 71:          20 LOAD_FAST            (k0)
+
+ 67:          22 FORMAT_VALUE         0
+              24 LOAD_CONST           ("u;let q=coord(k,c,p);let cell=vec2<i32>(floor(q));\n   for(var dy=0;dy<=1;dy++){for(var dx=0;dx<=1;dx++){\n    let x=cell.x+dx;let y=cell.y+dy;\n    if(!valid(k,x,y)){return vec3<f32>(0.);}\n    let phase=u32(y%2)*2u+u32(x%2);\n    if(phase_colour(k,phase)!=c){continue;}\n    let j=ix(k,x,y);\n    let white=a2[k*17u+5u+plane(k,phase)];\n    let clipped=a0[")
+
+ 79:          26 LOAD_CONST           (2)
+              28 LOAD_FAST            (self)
+              30 LOAD_ATTR            (k)
+              32 BINARY_MULTIPLY
+              34 LOAD_FAST            (self)
+              36 LOAD_ATTR            (h)
+              38 BINARY_MULTIPLY
+              40 LOAD_FAST            (self)
+              42 LOAD_ATTR            (w)
+              44 BINARY_MULTIPLY
+
+ 67:          46 FORMAT_VALUE         0
+              48 LOAD_CONST           ("u+j]>0.||a0[j]>=white;\n    if(!clipped){return vec3<f32>(0.);}\n    bound=min(bound,white/a2[k*17u]);\n    seen=true;\n   }}\n  if(!seen){return vec3<f32>(0.);}bounds[c]=bound;\n }\n for(var c=0u;c<3u;c++){for(var k=0u;k<")
+
+ 86:          50 LOAD_FAST            (self)
+              52 LOAD_ATTR            (k)
+
+ 67:          54 FORMAT_VALUE         0
+              56 LOAD_CONST           ("u;k++){\n  let q=coord(k,c,p);let cell=vec2<i32>(floor(q));\n  for(var dy=0;dy<=1;dy++){for(var dx=0;dx<=1;dx++){\n   let x=cell.x+dx;let y=cell.y+dy;if(!valid(k,x,y)){continue;}\n   let phase=u32(y%2)*2u+u32(x%2);if(phase_colour(k,phase)!=c){continue;}\n   let j=ix(k,x,y);if(a0[")
+
+ 91:          58 LOAD_CONST           (2)
+              60 LOAD_FAST            (self)
+              62 LOAD_ATTR            (k)
+              64 BINARY_MULTIPLY
+              66 LOAD_FAST            (self)
+              68 LOAD_ATTR            (h)
+              70 BINARY_MULTIPLY
+              72 LOAD_FAST            (self)
+              74 LOAD_ATTR            (w)
+              76 BINARY_MULTIPLY
+
+ 67:          78 FORMAT_VALUE         0
+              80 LOAD_CONST           ("u+j]>0.){continue;}\n   let white=a2[k*17u+5u+plane(k,phase)];let raw=a0[j];\n   let variance=a2[k*17u+13u]*white+a2[k*17u+14u]+a2[k*17u+15u]+a2[k*17u+16u]*white*white;\n   let margin=3.*sqrt(max(variance,0.));\n   if(raw<white-margin&&raw/a2[k*17u]<bounds[c]-margin/a2[k*17u]){return vec3<f32>(0.);}\n  }}\n }}\n return bounds;\n}\n")
+              82 BUILD_STRING         9
+              84 BINARY_ADD
+              86 STORE_FAST           (helpers)
+
+101:          88 LOAD_CONST           ("let bounds=censoring_bound(i);\nfor(var c=0u;c<3u;c++){dst[c*")
+
+102:          90 LOAD_FAST            (n)
+
+101:          92 FORMAT_VALUE         0
+              94 LOAD_CONST           ("u+i]=select(a3[c*")
+
+102:          96 LOAD_FAST            (n)
+
+101:          98 FORMAT_VALUE         0
+             100 LOAD_CONST           ("u+i],max(a3[c*")
+
+102:         102 LOAD_FAST            (n)
+
+101:         104 FORMAT_VALUE         0
+             106 LOAD_CONST           ("u+i],bounds[c]),bounds[c]>0.);}")
+             108 BUILD_STRING         7
+             110 STORE_FAST           (body)
+
+103:         112 LOAD_FAST            (self)
+             114 LOAD_ATTR            (emit)
+             116 LOAD_CONST           ("censoring_bound_guard")
+             118 LOAD_FAST            (bank)
+             120 LOAD_FAST            (G)
+             122 LOAD_FAST            (meta)
+             124 LOAD_FAST            (prediction)
+             126 BUILD_LIST           4
+             128 LOAD_CONST           (1)
+             130 LOAD_CONST           (3)
+             132 LOAD_FAST            (self)
+             134 LOAD_ATTR            (o)
+             136 LOAD_FAST            (self)
+             138 LOAD_ATTR            (o)
+             140 BUILD_TUPLE          4
+             142 LOAD_FAST            (body)
+             144 LOAD_FAST            (helpers)
+             146 LOAD_FAST            (n)
+             148 LOAD_CONST           (('count',))
+             150 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             152 RETURN_VALUE
+
+
+# Method Name:       merge
+# Filename:          v15_2\physical.py
+# Argument count:    5
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  10
+# Stack size:        14
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        105
+# Constants:
+#    0: None
+#    1: 'let p=i%'
+#    2: 'u;let c='
+#    3: '1u'
+#    4: 'i/'
+#    5: 'u'
+#    6: ';\nvar top=-3.402823e38;var mass=0.;var total=0.;var energy=0.;var count=0.;\nfor(var k=0u;k<'
+#    7: 'u;k++){let q=coord(k,c,p);let cell=vec2<i32>(floor(q));\n for(var dy=-1;dy<=2;dy++){for(var dx=-1;dx<=2;dx++){\n  let x=cell.x+dx;let y=cell.y+dy;let colour=phase_colour(k,u32(max(y,0)%2)*2u+u32(max(x,0)%2));\n  let ok=usable(k,x,y);let v=measurement(k,x,y)/a2[k*17u];\n  if(ok'
+#    8: 3
+#    9: ' && colour==c'
+#   10: ''
+#   11: '){energy+=v*v;count+=1.;}\n  if(!ok||colour!=c){continue;}\n  let d=vec2<f32>(f32(x),f32(y))-q;\n  let score='
+#   12: '-0.5*dot(d,d)/0.09'
+#   13: '-0.5*(a3[p]*d.x*d.x+2.*a3['
+#   14: 'u+p]*d.x*d.y+a3['
+#   15: 2
+#   16: 'u+p]*d.y*d.y)'
+#   17: '+log(a2[k*17u]);\n  let nt=max(top,score);let old=exp(top-nt);let add=exp(score-nt);\n  total=total*old+add*v;mass=mass*old+add;top=nt;\n }}\n}\ndst[i]=select(0.,total/max(mass,1e-30),mass>0.);\n'
+#   18: 'dst['
+#   19: 'u+i]=select(0.,1.,mass>0.);dst['
+#   20: 6
+#   21: 'u+i]=energy;dst['
+#   22: 9
+#   23: 'u+i]=count;'
+#   24: 'seed'
+#   25: 'base'
+#   26: 1
+#   27: 12
+#   28: ('count',)
+# Names:
+#    0: o
+#    1: n
+#    2: k
+#    3: gc
+#    4: emit
+#    5: helpers
+# Varnames:
+#	self, bank, G, meta, cov, seed, o, n, k, body
+# Positional arguments:
+#	self, bank, G, meta, cov
+# Local variables:
+#    5: seed
+#    6: o
+#    7: n
+#    8: k
+#    9: body
+
+106:           0 LOAD_FAST            (cov)
+               2 LOAD_CONST           (None)
+               4 IS_OP                (is)
+               6 STORE_FAST           (seed)
+               8 LOAD_FAST            (self)
+              10 LOAD_ATTR            (o)
+              12 LOAD_FAST            (self)
+              14 LOAD_ATTR            (n)
+              16 LOAD_FAST            (self)
+              18 LOAD_ATTR            (k)
+              20 ROT_THREE
+              22 ROT_TWO
+              24 STORE_FAST           (o)
+              26 STORE_FAST           (n)
+              28 STORE_FAST           (k)
+
+108:          30 LOAD_CONST           ("let p=i%")
+              32 LOAD_FAST            (n)
+              34 FORMAT_VALUE         0
+              36 LOAD_CONST           ("u;let c=")
+              38 LOAD_FAST            (seed)
+              40 POP_JUMP_IF_FALSE    (to 46)
+              42 LOAD_CONST           ("1u")
+              44 JUMP_FORWARD         (to 56)
+         >>   46 LOAD_CONST           ("i/")
+              48 LOAD_FAST            (n)
+              50 FORMAT_VALUE         0
+              52 LOAD_CONST           ("u")
+              54 BUILD_STRING         3
+         >>   56 FORMAT_VALUE         0
+              58 LOAD_CONST           (";\nvar top=-3.402823e38;var mass=0.;var total=0.;var energy=0.;var count=0.;\nfor(var k=0u;k<")
+
+110:          60 LOAD_FAST            (k)
+
+108:          62 FORMAT_VALUE         0
+              64 LOAD_CONST           ("u;k++){let q=coord(k,c,p);let cell=vec2<i32>(floor(q));\n for(var dy=-1;dy<=2;dy++){for(var dx=-1;dx<=2;dx++){\n  let x=cell.x+dx;let y=cell.y+dy;let colour=phase_colour(k,u32(max(y,0)%2)*2u+u32(max(x,0)%2));\n  let ok=usable(k,x,y);let v=measurement(k,x,y)/a2[k*17u];\n  if(ok")
+
+114:          66 LOAD_FAST            (self)
+              68 LOAD_ATTR            (gc)
+              70 LOAD_CONST           (3)
+              72 COMPARE_OP           (==)
+              74 POP_JUMP_IF_FALSE    (to 80)
+              76 LOAD_CONST           (" && colour==c")
+              78 JUMP_FORWARD         (to 82)
+         >>   80 LOAD_CONST           ("")
+
+108:     >>   82 FORMAT_VALUE         0
+              84 LOAD_CONST           ("){energy+=v*v;count+=1.;}\n  if(!ok||colour!=c){continue;}\n  let d=vec2<f32>(f32(x),f32(y))-q;\n  let score=")
+
+117:          86 LOAD_FAST            (seed)
+              88 POP_JUMP_IF_FALSE    (to 94)
+              90 LOAD_CONST           ("-0.5*dot(d,d)/0.09")
+              92 JUMP_FORWARD         (to 114)
+         >>   94 LOAD_CONST           ("-0.5*(a3[p]*d.x*d.x+2.*a3[")
+              96 LOAD_FAST            (n)
+              98 FORMAT_VALUE         0
+             100 LOAD_CONST           ("u+p]*d.x*d.y+a3[")
+             102 LOAD_CONST           (2)
+             104 LOAD_FAST            (n)
+             106 BINARY_MULTIPLY
+             108 FORMAT_VALUE         0
+             110 LOAD_CONST           ("u+p]*d.y*d.y)")
+             112 BUILD_STRING         5
+
+108:     >>  114 FORMAT_VALUE         0
+             116 LOAD_CONST           ("+log(a2[k*17u]);\n  let nt=max(top,score);let old=exp(top-nt);let add=exp(score-nt);\n  total=total*old+add*v;mass=mass*old+add;top=nt;\n }}\n}\ndst[i]=select(0.,total/max(mass,1e-30),mass>0.);\n")
+             118 BUILD_STRING         11
+             120 STORE_FAST           (body)
+
+124:         122 LOAD_FAST            (seed)
+             124 POP_JUMP_IF_TRUE     (to 166)
+             126 LOAD_FAST            (body)
+             128 LOAD_CONST           ("dst[")
+             130 LOAD_CONST           (3)
+             132 LOAD_FAST            (n)
+             134 BINARY_MULTIPLY
+             136 FORMAT_VALUE         0
+             138 LOAD_CONST           ("u+i]=select(0.,1.,mass>0.);dst[")
+             140 LOAD_CONST           (6)
+             142 LOAD_FAST            (n)
+             144 BINARY_MULTIPLY
+             146 FORMAT_VALUE         0
+             148 LOAD_CONST           ("u+i]=energy;dst[")
+             150 LOAD_CONST           (9)
+             152 LOAD_FAST            (n)
+             154 BINARY_MULTIPLY
+             156 FORMAT_VALUE         0
+             158 LOAD_CONST           ("u+i]=count;")
+             160 BUILD_STRING         7
+             162 INPLACE_ADD
+             164 STORE_FAST           (body)
+
+125:     >>  166 LOAD_FAST            (self)
+             168 LOAD_ATTR            (emit)
+             170 LOAD_FAST            (seed)
+             172 POP_JUMP_IF_FALSE    (to 178)
+             174 LOAD_CONST           ("seed")
+             176 JUMP_FORWARD         (to 180)
+         >>  178 LOAD_CONST           ("base")
+         >>  180 LOAD_FAST            (bank)
+             182 LOAD_FAST            (G)
+             184 LOAD_FAST            (meta)
+             186 BUILD_LIST           3
+             188 LOAD_FAST            (seed)
+             190 POP_JUMP_IF_FALSE    (to 196)
+             192 BUILD_LIST           0
+             194 JUMP_FORWARD         (to 200)
+         >>  196 LOAD_FAST            (cov)
+             198 BUILD_LIST           1
+         >>  200 BINARY_ADD
+
+126:         202 LOAD_CONST           (1)
+             204 LOAD_FAST            (seed)
+             206 POP_JUMP_IF_FALSE    (to 212)
+             208 LOAD_CONST           (1)
+             210 JUMP_FORWARD         (to 214)
+         >>  212 LOAD_CONST           (12)
+         >>  214 LOAD_FAST            (o)
+             216 LOAD_FAST            (o)
+             218 BUILD_TUPLE          4
+             220 LOAD_FAST            (body)
+             222 LOAD_FAST            (self)
+             224 LOAD_METHOD          (helpers)
+             226 CALL_METHOD          (0 positional arguments)
+             228 LOAD_FAST            (seed)
+             230 POP_JUMP_IF_FALSE    (to 240)
+             232 LOAD_FAST            (n)
+
+125:         234 LOAD_CONST           (('count',))
+             236 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             238 RETURN_VALUE
+
+126:     >>  240 LOAD_CONST           (3)
+             242 LOAD_FAST            (n)
+             244 BINARY_MULTIPLY
+
+125:         246 LOAD_CONST           (('count',))
+             248 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             250 RETURN_VALUE
+
+
+# Method Name:       covariance
+# Filename:          v15_2\physical.py
+# Argument count:    2
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  10
+# Stack size:        19
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        128
+# Constants:
+#    0: None
+#    1: 'fn refl(x:i32,n:i32)->u32{return u32(select(select(x,2*n-2-x,x>=n),-x,x<0));}'
+#    2: 'let x=i%'
+#    3: 'u;let y=i/'
+#    4: 'u;var gx=0.;var gy=0.;\nfor(var dy=-1;dy<=1;dy++){for(var dx=-1;dx<=1;dx++){let xx=refl(i32(x)+dx,'
+#    5: ');let yy=refl(i32(y)+dy,'
+#    6: ');let v=a0[yy*2u*'
+#    7: 'u+xx*2u];gx+=v*f32(dx)*select(1.,2.,dy==0)*0.25;gy+=v*f32(dy)*select(1.,2.,dx==0)*0.25;}}\ndst[i]=gx*gx;dst['
+#    8: 'u+i]=gx*gy;dst['
+#    9: 2
+#   10: 'u+i]=gy*gy;'
+#   11: 'structure'
+#   12: 1
+#   13: 3
+#   14: ('count',)
+#   15: 'let x=(i%'
+#   16: 'u)/2u;let y=(i/'
+#   17: 'u)/2u;var j=vec3<f32>(0.);\nfor(var dy=-1;dy<=1;dy++){for(var dx=-1;dx<=1;dx++){let p=refl(i32(y)+dy,'
+#   18: ')*'
+#   19: 'u+refl(i32(x)+dx,'
+#   20: ');j+=vec3<f32>(a0[p],a0['
+#   21: 'u+p],a0['
+#   22: 'u+p]);}}\nlet trace=j.x+j.z;let nonflat=trace>0.;j=j/select(1.,trace,nonflat);let tr=j.x+j.z;\nlet disc=sqrt(max(0.,0.25*tr*tr-(j.x*j.z-j.y*j.y)));let l1=max(0.5*tr+disc,1e-12);let l2=max(0.5*tr-disc,0.);\nlet anis=1.+sqrt(clamp((l1-l2)/(l1+l2+1e-12),0.,1.));let across=max(0.12*(1.+anis*0.5*(-0.5)),0.20);let along=max(0.12*(1.+anis*0.5*3.),0.20);\nlet a=vec2<f32>(j.y,l1-j.x);let b=vec2<f32>(l1-j.z,j.y);var e=select(a,b,dot(b,b)>dot(a,a));let norm=length(e);e=select(vec2<f32>(1.,0.),e/max(norm,1e-30),norm>1e-6*l1);\nlet ai=1./along/along;let ci=1./across/across;let diff=ci-ai;\ndst[i]=select(11.1111111111,ai+diff*e.x*e.x,nonflat);dst['
+#   23: 'u+i]=select(0.,diff*e.x*e.y,nonflat);dst['
+#   24: 'u+i]=select(11.1111111111,ai+diff*e.y*e.y,nonflat);'
+#   25: 'covariance'
+# Names:
+#    0: t
+#    1: o
+#    2: n
+#    3: emit
+#    4: rt
+#    5: free
+# Varnames:
+#	self, seed, t, o, n, nn, reflect, body, tensor, cov
+# Positional arguments:
+#	self, seed
+# Local variables:
+#    2: t
+#    3: o
+#    4: n
+#    5: nn
+#    6: reflect
+#    7: body
+#    8: tensor
+#    9: cov
+
+129:           0 LOAD_FAST            (self)
+               2 LOAD_ATTR            (t)
+               4 LOAD_FAST            (self)
+               6 LOAD_ATTR            (o)
+               8 LOAD_FAST            (self)
+              10 LOAD_ATTR            (n)
+              12 ROT_THREE
+              14 ROT_TWO
+              16 STORE_FAST           (t)
+              18 STORE_FAST           (o)
+              20 STORE_FAST           (n)
+              22 LOAD_FAST            (t)
+              24 LOAD_FAST            (t)
+              26 BINARY_MULTIPLY
+              28 STORE_FAST           (nn)
+
+130:          30 LOAD_CONST           ("fn refl(x:i32,n:i32)->u32{return u32(select(select(x,2*n-2-x,x>=n),-x,x<0));}")
+              32 STORE_FAST           (reflect)
+
+131:          34 LOAD_CONST           ("let x=i%")
+              36 LOAD_FAST            (t)
+              38 FORMAT_VALUE         0
+              40 LOAD_CONST           ("u;let y=i/")
+              42 LOAD_FAST            (t)
+              44 FORMAT_VALUE         0
+              46 LOAD_CONST           ("u;var gx=0.;var gy=0.;\nfor(var dy=-1;dy<=1;dy++){for(var dx=-1;dx<=1;dx++){let xx=refl(i32(x)+dx,")
+
+132:          48 LOAD_FAST            (t)
+
+131:          50 FORMAT_VALUE         0
+              52 LOAD_CONST           (");let yy=refl(i32(y)+dy,")
+
+132:          54 LOAD_FAST            (t)
+
+131:          56 FORMAT_VALUE         0
+              58 LOAD_CONST           (");let v=a0[yy*2u*")
+
+132:          60 LOAD_FAST            (o)
+
+131:          62 FORMAT_VALUE         0
+              64 LOAD_CONST           ("u+xx*2u];gx+=v*f32(dx)*select(1.,2.,dy==0)*0.25;gy+=v*f32(dy)*select(1.,2.,dx==0)*0.25;}}\ndst[i]=gx*gx;dst[")
+
+133:          66 LOAD_FAST            (nn)
+
+131:          68 FORMAT_VALUE         0
+              70 LOAD_CONST           ("u+i]=gx*gy;dst[")
+
+133:          72 LOAD_CONST           (2)
+              74 LOAD_FAST            (nn)
+              76 BINARY_MULTIPLY
+
+131:          78 FORMAT_VALUE         0
+              80 LOAD_CONST           ("u+i]=gy*gy;")
+              82 BUILD_STRING         15
+              84 STORE_FAST           (body)
+
+134:          86 LOAD_FAST            (self)
+              88 LOAD_ATTR            (emit)
+              90 LOAD_CONST           ("structure")
+              92 LOAD_FAST            (seed)
+              94 BUILD_LIST           1
+              96 LOAD_CONST           (1)
+              98 LOAD_CONST           (3)
+             100 LOAD_FAST            (t)
+             102 LOAD_FAST            (t)
+             104 BUILD_TUPLE          4
+             106 LOAD_FAST            (body)
+             108 LOAD_FAST            (reflect)
+             110 LOAD_FAST            (nn)
+             112 LOAD_CONST           (('count',))
+             114 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             116 STORE_FAST           (tensor)
+
+135:         118 LOAD_CONST           ("let x=(i%")
+             120 LOAD_FAST            (o)
+             122 FORMAT_VALUE         0
+             124 LOAD_CONST           ("u)/2u;let y=(i/")
+             126 LOAD_FAST            (o)
+             128 FORMAT_VALUE         0
+             130 LOAD_CONST           ("u)/2u;var j=vec3<f32>(0.);\nfor(var dy=-1;dy<=1;dy++){for(var dx=-1;dx<=1;dx++){let p=refl(i32(y)+dy,")
+
+136:         132 LOAD_FAST            (t)
+
+135:         134 FORMAT_VALUE         0
+             136 LOAD_CONST           (")*")
+
+136:         138 LOAD_FAST            (t)
+
+135:         140 FORMAT_VALUE         0
+             142 LOAD_CONST           ("u+refl(i32(x)+dx,")
+
+136:         144 LOAD_FAST            (t)
+
+135:         146 FORMAT_VALUE         0
+             148 LOAD_CONST           (");j+=vec3<f32>(a0[p],a0[")
+
+136:         150 LOAD_FAST            (nn)
+
+135:         152 FORMAT_VALUE         0
+             154 LOAD_CONST           ("u+p],a0[")
+
+136:         156 LOAD_CONST           (2)
+             158 LOAD_FAST            (nn)
+             160 BINARY_MULTIPLY
+
+135:         162 FORMAT_VALUE         0
+             164 LOAD_CONST           ("u+p]);}}\nlet trace=j.x+j.z;let nonflat=trace>0.;j=j/select(1.,trace,nonflat);let tr=j.x+j.z;\nlet disc=sqrt(max(0.,0.25*tr*tr-(j.x*j.z-j.y*j.y)));let l1=max(0.5*tr+disc,1e-12);let l2=max(0.5*tr-disc,0.);\nlet anis=1.+sqrt(clamp((l1-l2)/(l1+l2+1e-12),0.,1.));let across=max(0.12*(1.+anis*0.5*(-0.5)),0.20);let along=max(0.12*(1.+anis*0.5*3.),0.20);\nlet a=vec2<f32>(j.y,l1-j.x);let b=vec2<f32>(l1-j.z,j.y);var e=select(a,b,dot(b,b)>dot(a,a));let norm=length(e);e=select(vec2<f32>(1.,0.),e/max(norm,1e-30),norm>1e-6*l1);\nlet ai=1./along/along;let ci=1./across/across;let diff=ci-ai;\ndst[i]=select(11.1111111111,ai+diff*e.x*e.x,nonflat);dst[")
+
+142:         166 LOAD_FAST            (n)
+
+135:         168 FORMAT_VALUE         0
+             170 LOAD_CONST           ("u+i]=select(0.,diff*e.x*e.y,nonflat);dst[")
+
+142:         172 LOAD_CONST           (2)
+             174 LOAD_FAST            (n)
+             176 BINARY_MULTIPLY
+
+135:         178 FORMAT_VALUE         0
+             180 LOAD_CONST           ("u+i]=select(11.1111111111,ai+diff*e.y*e.y,nonflat);")
+             182 BUILD_STRING         19
+             184 STORE_FAST           (body)
+
+143:         186 LOAD_FAST            (self)
+             188 LOAD_ATTR            (emit)
+             190 LOAD_CONST           ("covariance")
+             192 LOAD_FAST            (tensor)
+             194 BUILD_LIST           1
+             196 LOAD_CONST           (1)
+             198 LOAD_CONST           (3)
+             200 LOAD_FAST            (o)
+             202 LOAD_FAST            (o)
+             204 BUILD_TUPLE          4
+             206 LOAD_FAST            (body)
+             208 LOAD_FAST            (reflect)
+             210 LOAD_FAST            (n)
+             212 LOAD_CONST           (('count',))
+             214 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             216 STORE_FAST           (cov)
+             218 LOAD_FAST            (self)
+             220 LOAD_ATTR            (rt)
+             222 LOAD_METHOD          (free)
+             224 LOAD_FAST            (tensor)
+             226 CALL_METHOD          (1 positional argument)
+             228 POP_TOP
+
+144:         230 LOAD_FAST            (cov)
+             232 RETURN_VALUE
+
+
+# Method Name:       blur
+# Filename:          v15_2\physical.py
+# Argument count:    2
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  11
+# Stack size:        12
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        146
+# Constants:
+#    0: None
+#    1: -0.5
+#    2: -16
+#    3: 17
+#    4: ('dtype',)
+#    5: 4
+#    6: 2
+#    7: 'fn refl(x:i32,n:i32)->u32{return u32(select(select(x,2*n-2-x,x>=n),-x,x<0));}\n'
+#    8: 'const weights=array<f32,33>('
+#    9: ','
+#   10: <Code310 code object <genexpr> at 0x106928500, file v15_2\physical.py>, line 149
+#   11: 'Physical.blur.<locals>.<genexpr>'
+#   12: ');'
+#   13: 0
+#   14: 'refl(i32(x)+i32(j)-16,'
+#   15: ')'
+#   16: 'x'
+#   17: 1
+#   18: 'refl(i32(y)+i32(j)-16,'
+#   19: 'y'
+#   20: 'let x=i%'
+#   21: 'u;let y=i/'
+#   22: 'u;var z=0.;for(var j=0u;j<33u;j++){z+=weights[j]*a0['
+#   23: '*'
+#   24: 'u+'
+#   25: '];}dst[i]=z;'
+#   26: 'blur'
+# Names:
+#    0: o
+#    1: np
+#    2: exp
+#    3: arange
+#    4: float32
+#    5: sum
+#    6: join
+#    7: range
+#    8: emit
+#    9: rt
+#   10: free
+# Varnames:
+#	self, value, o, kernel, helper, cur, axis, xx, yy, body, out
+# Positional arguments:
+#	self, value
+# Local variables:
+#    2: o
+#    3: kernel
+#    4: helper
+#    5: cur
+#    6: axis
+#    7: xx
+#    8: yy
+#    9: body
+#   10: out
+
+147:           0 LOAD_FAST            (self)
+               2 LOAD_ATTR            (o)
+               4 STORE_FAST           (o)
+               6 LOAD_GLOBAL          (np)
+               8 LOAD_METHOD          (exp)
+              10 LOAD_CONST           (-0.5)
+              12 LOAD_GLOBAL          (np)
+              14 LOAD_ATTR            (arange)
+              16 LOAD_CONST           (-16)
+              18 LOAD_CONST           (17)
+              20 LOAD_GLOBAL          (np)
+              22 LOAD_ATTR            (float32)
+              24 LOAD_CONST           (('dtype',))
+              26 CALL_FUNCTION_KW     (3 total positional and keyword args)
+              28 LOAD_GLOBAL          (np)
+              30 LOAD_METHOD          (float32)
+              32 LOAD_CONST           (4)
+              34 CALL_METHOD          (1 positional argument)
+              36 BINARY_TRUE_DIVIDE
+              38 LOAD_CONST           (2)
+              40 BINARY_POWER
+              42 BINARY_MULTIPLY
+              44 CALL_METHOD          (1 positional argument)
+              46 STORE_FAST           (kernel)
+              48 LOAD_FAST            (kernel)
+              50 LOAD_FAST            (kernel)
+              52 LOAD_METHOD          (sum)
+              54 CALL_METHOD          (0 positional arguments)
+              56 INPLACE_TRUE_DIVIDE
+              58 STORE_FAST           (kernel)
+
+148:          60 LOAD_CONST           ("fn refl(x:i32,n:i32)->u32{return u32(select(select(x,2*n-2-x,x>=n),-x,x<0));}\n")
+              62 STORE_FAST           (helper)
+
+149:          64 LOAD_FAST            (helper)
+              66 LOAD_CONST           ("const weights=array<f32,33>(")
+              68 LOAD_CONST           (",")
+              70 LOAD_METHOD          (join)
+              72 LOAD_CONST           (<Code310 code object <genexpr> at 0x106928500, file v15_2\physical.py>, line 149)
+              74 LOAD_CONST           ("Physical.blur.<locals>.<genexpr>")
+              76 MAKE_FUNCTION        (No arguments)
+              78 LOAD_FAST            (kernel)
+              80 GET_ITER
+              82 CALL_FUNCTION        (1 positional argument)
+              84 CALL_METHOD          (1 positional argument)
+              86 FORMAT_VALUE         0
+              88 LOAD_CONST           (");")
+              90 BUILD_STRING         3
+              92 INPLACE_ADD
+              94 STORE_FAST           (helper)
+
+150:          96 LOAD_FAST            (value)
+              98 STORE_FAST           (cur)
+
+151:         100 LOAD_GLOBAL          (range)
+             102 LOAD_CONST           (2)
+             104 CALL_FUNCTION        (1 positional argument)
+             106 GET_ITER
+         >>  108 FOR_ITER             (to 254)
+             110 STORE_FAST           (axis)
+
+152:         112 LOAD_FAST            (axis)
+             114 LOAD_CONST           (0)
+             116 COMPARE_OP           (==)
+             118 POP_JUMP_IF_FALSE    (to 132)
+             120 LOAD_CONST           ("refl(i32(x)+i32(j)-16,")
+             122 LOAD_FAST            (o)
+             124 FORMAT_VALUE         0
+             126 LOAD_CONST           (")")
+             128 BUILD_STRING         3
+             130 JUMP_FORWARD         (to 134)
+         >>  132 LOAD_CONST           ("x")
+         >>  134 STORE_FAST           (xx)
+
+153:         136 LOAD_FAST            (axis)
+             138 LOAD_CONST           (1)
+             140 COMPARE_OP           (==)
+             142 POP_JUMP_IF_FALSE    (to 156)
+             144 LOAD_CONST           ("refl(i32(y)+i32(j)-16,")
+             146 LOAD_FAST            (o)
+             148 FORMAT_VALUE         0
+             150 LOAD_CONST           (")")
+             152 BUILD_STRING         3
+             154 JUMP_FORWARD         (to 158)
+         >>  156 LOAD_CONST           ("y")
+         >>  158 STORE_FAST           (yy)
+
+154:         160 LOAD_CONST           ("let x=i%")
+             162 LOAD_FAST            (o)
+             164 FORMAT_VALUE         0
+             166 LOAD_CONST           ("u;let y=i/")
+             168 LOAD_FAST            (o)
+             170 FORMAT_VALUE         0
+             172 LOAD_CONST           ("u;var z=0.;for(var j=0u;j<33u;j++){z+=weights[j]*a0[")
+             174 LOAD_FAST            (yy)
+             176 FORMAT_VALUE         0
+             178 LOAD_CONST           ("*")
+             180 LOAD_FAST            (o)
+             182 FORMAT_VALUE         0
+             184 LOAD_CONST           ("u+")
+             186 LOAD_FAST            (xx)
+             188 FORMAT_VALUE         0
+             190 LOAD_CONST           ("];}dst[i]=z;")
+             192 BUILD_STRING         11
+             194 STORE_FAST           (body)
+
+155:         196 LOAD_FAST            (self)
+             198 LOAD_METHOD          (emit)
+             200 LOAD_CONST           ("blur")
+             202 LOAD_FAST            (axis)
+             204 BUILD_TUPLE          2
+             206 LOAD_FAST            (cur)
+             208 BUILD_LIST           1
+             210 LOAD_CONST           (1)
+             212 LOAD_CONST           (1)
+             214 LOAD_FAST            (o)
+             216 LOAD_FAST            (o)
+             218 BUILD_TUPLE          4
+             220 LOAD_FAST            (body)
+             222 LOAD_FAST            (helper)
+             224 CALL_METHOD          (5 positional arguments)
+             226 STORE_FAST           (out)
+
+156:         228 LOAD_FAST            (cur)
+             230 LOAD_FAST            (value)
+             232 IS_OP                (is not)
+             234 POP_JUMP_IF_FALSE    (to 248)
+             236 LOAD_FAST            (self)
+             238 LOAD_ATTR            (rt)
+             240 LOAD_METHOD          (free)
+             242 LOAD_FAST            (cur)
+             244 CALL_METHOD          (1 positional argument)
+             246 POP_TOP
+
+157:     >>  248 LOAD_FAST            (out)
+             250 STORE_FAST           (cur)
+             252 JUMP_ABSOLUTE        (to 108)
+
+158:     >>  254 LOAD_FAST            (cur)
+             256 RETURN_VALUE
+
+
+# Method Name:       max_reduce
+# Filename:          v15_2\physical.py
+# Argument count:    3
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  8
+# Stack size:        10
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        160
+# Constants:
+#    0: None
+#    1: 255
+#    2: 256
+#    3: 1
+#    4: 'p'
+#    5: '((p/'
+#    6: 'u)*4u+1u)*'
+#    7: 'u+(p%'
+#    8: 'u)*4u+1u'
+#    9: 'maxpart'
+#   10: 'var z=0.;for(var p=i*256u;p<min((i+1u)*256u,'
+#   11: 'u);p++){z=max(z,a0['
+#   12: ']);}dst[i]=z;'
+#   13: 'maxend'
+#   14: (1,)
+#   15: 'var z=0.;for(var j=0u;j<'
+#   16: 'u;j++){z=max(z,a0[j]);}dst[0]=z;'
+# Names:
+#    0: n
+#    1: r
+#    2: o
+#    3: emit
+#    4: rt
+#    5: free
+# Varnames:
+#	self, v, step, n, chunks, addr, part, out
+# Positional arguments:
+#	self, v, step
+# Local variables:
+#    3: n
+#    4: chunks
+#    5: addr
+#    6: part
+#    7: out
+
+161:           0 LOAD_FAST            (self)
+               2 LOAD_ATTR            (n)
+               4 LOAD_FAST            (step)
+               6 LOAD_FAST            (step)
+               8 BINARY_MULTIPLY
+              10 BINARY_FLOOR_DIVIDE
+              12 STORE_FAST           (n)
+              14 LOAD_FAST            (n)
+              16 LOAD_CONST           (255)
+              18 BINARY_ADD
+              20 LOAD_CONST           (256)
+              22 BINARY_FLOOR_DIVIDE
+              24 STORE_FAST           (chunks)
+
+162:          26 LOAD_FAST            (step)
+              28 LOAD_CONST           (1)
+              30 COMPARE_OP           (==)
+              32 POP_JUMP_IF_FALSE    (to 38)
+              34 LOAD_CONST           ("p")
+              36 JUMP_FORWARD         (to 66)
+         >>   38 LOAD_CONST           ("((p/")
+              40 LOAD_FAST            (self)
+              42 LOAD_ATTR            (r)
+              44 FORMAT_VALUE         0
+              46 LOAD_CONST           ("u)*4u+1u)*")
+              48 LOAD_FAST            (self)
+              50 LOAD_ATTR            (o)
+              52 FORMAT_VALUE         0
+              54 LOAD_CONST           ("u+(p%")
+              56 LOAD_FAST            (self)
+              58 LOAD_ATTR            (r)
+              60 FORMAT_VALUE         0
+              62 LOAD_CONST           ("u)*4u+1u")
+              64 BUILD_STRING         7
+         >>   66 STORE_FAST           (addr)
+
+163:          68 LOAD_FAST            (self)
+              70 LOAD_METHOD          (emit)
+              72 LOAD_CONST           ("maxpart")
+              74 LOAD_FAST            (step)
+              76 BUILD_TUPLE          2
+              78 LOAD_FAST            (v)
+              80 BUILD_LIST           1
+              82 LOAD_FAST            (chunks)
+              84 BUILD_TUPLE          1
+              86 LOAD_CONST           ("var z=0.;for(var p=i*256u;p<min((i+1u)*256u,")
+              88 LOAD_FAST            (n)
+              90 FORMAT_VALUE         0
+              92 LOAD_CONST           ("u);p++){z=max(z,a0[")
+              94 LOAD_FAST            (addr)
+              96 FORMAT_VALUE         0
+              98 LOAD_CONST           ("]);}dst[i]=z;")
+             100 BUILD_STRING         5
+             102 CALL_METHOD          (4 positional arguments)
+             104 STORE_FAST           (part)
+
+164:         106 LOAD_FAST            (self)
+             108 LOAD_METHOD          (emit)
+             110 LOAD_CONST           ("maxend")
+             112 LOAD_FAST            (chunks)
+             114 BUILD_TUPLE          2
+             116 LOAD_FAST            (part)
+             118 BUILD_LIST           1
+             120 LOAD_CONST           ((1,))
+             122 LOAD_CONST           ("var z=0.;for(var j=0u;j<")
+             124 LOAD_FAST            (chunks)
+             126 FORMAT_VALUE         0
+             128 LOAD_CONST           ("u;j++){z=max(z,a0[j]);}dst[0]=z;")
+             130 BUILD_STRING         3
+             132 CALL_METHOD          (4 positional arguments)
+             134 STORE_FAST           (out)
+             136 LOAD_FAST            (self)
+             138 LOAD_ATTR            (rt)
+             140 LOAD_METHOD          (free)
+             142 LOAD_FAST            (part)
+             144 CALL_METHOD          (1 positional argument)
+             146 POP_TOP
+
+165:         148 LOAD_FAST            (out)
+             150 RETURN_VALUE
+
+
+# Method Name:       prepare
+# Filename:          v15_2\physical.py
+# Argument count:    4
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  23
+# Stack size:        25
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        167
+# Constants:
+#    0: None
+#    1: 'squares'
+#    2: 1
+#    3: 'dst[i]=(a0[i]*a0[i]+a0['
+#    4: 'u+i]*a0['
+#    5: 'u+i]+a0['
+#    6: 2
+#    7: 'u+i])/3.;'
+#    8: 'amplitude0'
+#    9: 'let e=a0['
+#   10: 6
+#   11: 7
+#   12: 8
+#   13: 'u+i];let c=a0['
+#   14: 9
+#   15: 10
+#   16: 11
+#   17: 'u+i];dst[i]=max(sqrt(max(a1[i],0.)),0.001*sqrt(e/max(c,1.)));'
+#   18: 'amplitude'
+#   19: 'dst[i]=max(a0[i],select(1.,a1[0]*0.000001,a1[0]>0.));'
+#   20: 4
+#   21: 'basecopy'
+#   22: 3
+#   23: 'dst[i]=a0[i];'
+#   24: 'support'
+#   25: 'dst[i]=a0['
+#   26: 'u+i];'
+#   27: 'let p=i%'
+#   28: 'u;let c=(i/'
+#   29: 'u)%4u;let k=i/'
+#   30: 'u;let colour=select(select(1u,2u,c==3u),0u,c==0u);\nlet hp=((p/'
+#   31: 'u)*4u+1u)*'
+#   32: 'u+(p%'
+#   33: 'u)*4u+1u;let phase=u32(a2[k*17u+1u+c]);let q=(coord(k,colour,hp)-vec2<f32>(f32(phase%2u),f32(phase/2u)))*0.5;\nlet cell=vec2<i32>(floor(q));let den=a2[k*17u]*a3[hp];let base=k*130u*'
+#   34: 'u+p;\nfor(var t=0u;t<4u;t++){let ij=cell+vec2<i32>(i32(t%2u),i32(t/2u));let x=ij.x*2+i32(phase%2u);let y=ij.y*2+i32(phase/2u);\nlet inside=x>=0&&y>=0&&x<'
+#   35: '&&y<'
+#   36: ';let ok=usable(k,x,y);let z=measurement(k,x,y);let vv=max(z,0.);let var_=a2[k*17u+13u]*vv+a2[k*17u+14u]+a2[k*17u+15u]+a2[k*17u+16u]*vv*vv;\nlet d=vec2<f32>(ij)-q;let val=select(0.,z,ok)/den;let variance=select(0.,var_,ok)/(den*den);\nlet f=array<f32,8>(ash(val),log(1.+variance),select(0.,1.,ok),select(0.,1.,valid(k,x,y)&&saturated(k,x,y)),select(0.,1.,valid(k,x,y)&&under(k,x,y)),d.x,d.y,(1.-abs(d.x))*(1.-abs(d.y))*select(0.,1.,inside));\nfor(var j=0u;j<8u;j++){dst[base+((c*4u+t)*8u+j)*'
+#   37: 'u]=f[j];}\n}\nif(c==0u){dst[base+128u*'
+#   38: 'u]=log2(a2[k*17u]);dst[base+129u*'
+#   39: 'u]=log(a3[hp]/a4[0]);}'
+#   40: 'evidence130'
+#   41: 130
+#   42: ('count',)
+#   43: 'white'
+#   44: 'u;let hp=((p/'
+#   45: 'u)*4u+1u;dst[i]=a0[k*17u+5u+c]/(a0[k*17u]*a1[hp]);'
+# Names:
+#    0: n
+#    1: o
+#    2: r
+#    3: nr
+#    4: k
+#    5: merge
+#    6: covariance
+#    7: rt
+#    8: free
+#    9: emit
+#   10: blur
+#   11: max_reduce
+#   12: w
+#   13: h
+#   14: helpers
+# Varnames:
+#	self, bank, G, meta, n, o, r, nr, k, seed, cov, fields, square, blurred, a, peak, amplitude, aqmax, base, support, body, evidence, white
+# Positional arguments:
+#	self, bank, G, meta
+# Local variables:
+#    4: n
+#    5: o
+#    6: r
+#    7: nr
+#    8: k
+#    9: seed
+#   10: cov
+#   11: fields
+#   12: square
+#   13: blurred
+#   14: a
+#   15: peak
+#   16: amplitude
+#   17: aqmax
+#   18: base
+#   19: support
+#   20: body
+#   21: evidence
+#   22: white
+
+168:           0 LOAD_FAST            (self)
+               2 LOAD_ATTR            (n)
+               4 LOAD_FAST            (self)
+               6 LOAD_ATTR            (o)
+               8 LOAD_FAST            (self)
+              10 LOAD_ATTR            (r)
+              12 LOAD_FAST            (self)
+              14 LOAD_ATTR            (nr)
+              16 LOAD_FAST            (self)
+              18 LOAD_ATTR            (k)
+              20 BUILD_TUPLE          5
+              22 UNPACK_SEQUENCE      5
+              24 STORE_FAST           (n)
+              26 STORE_FAST           (o)
+              28 STORE_FAST           (r)
+              30 STORE_FAST           (nr)
+              32 STORE_FAST           (k)
+
+169:          34 LOAD_FAST            (self)
+              36 LOAD_METHOD          (merge)
+              38 LOAD_FAST            (bank)
+              40 LOAD_FAST            (G)
+              42 LOAD_FAST            (meta)
+              44 CALL_METHOD          (3 positional arguments)
+              46 STORE_FAST           (seed)
+              48 LOAD_FAST            (self)
+              50 LOAD_METHOD          (covariance)
+              52 LOAD_FAST            (seed)
+              54 CALL_METHOD          (1 positional argument)
+              56 STORE_FAST           (cov)
+              58 LOAD_FAST            (self)
+              60 LOAD_ATTR            (rt)
+              62 LOAD_METHOD          (free)
+              64 LOAD_FAST            (seed)
+              66 CALL_METHOD          (1 positional argument)
+              68 POP_TOP
+
+170:          70 LOAD_FAST            (self)
+              72 LOAD_METHOD          (merge)
+              74 LOAD_FAST            (bank)
+              76 LOAD_FAST            (G)
+              78 LOAD_FAST            (meta)
+              80 LOAD_FAST            (cov)
+              82 CALL_METHOD          (4 positional arguments)
+              84 STORE_FAST           (fields)
+              86 LOAD_FAST            (self)
+              88 LOAD_ATTR            (rt)
+              90 LOAD_METHOD          (free)
+              92 LOAD_FAST            (cov)
+              94 CALL_METHOD          (1 positional argument)
+              96 POP_TOP
+
+171:          98 LOAD_FAST            (self)
+             100 LOAD_METHOD          (emit)
+             102 LOAD_CONST           ("squares")
+             104 LOAD_FAST            (fields)
+             106 BUILD_LIST           1
+             108 LOAD_CONST           (1)
+             110 LOAD_CONST           (1)
+             112 LOAD_FAST            (o)
+             114 LOAD_FAST            (o)
+             116 BUILD_TUPLE          4
+             118 LOAD_CONST           ("dst[i]=(a0[i]*a0[i]+a0[")
+             120 LOAD_FAST            (n)
+             122 FORMAT_VALUE         0
+             124 LOAD_CONST           ("u+i]*a0[")
+             126 LOAD_FAST            (n)
+             128 FORMAT_VALUE         0
+             130 LOAD_CONST           ("u+i]+a0[")
+             132 LOAD_CONST           (2)
+             134 LOAD_FAST            (n)
+             136 BINARY_MULTIPLY
+             138 FORMAT_VALUE         0
+             140 LOAD_CONST           ("u+i]*a0[")
+             142 LOAD_CONST           (2)
+             144 LOAD_FAST            (n)
+             146 BINARY_MULTIPLY
+             148 FORMAT_VALUE         0
+             150 LOAD_CONST           ("u+i])/3.;")
+             152 BUILD_STRING         9
+             154 CALL_METHOD          (4 positional arguments)
+             156 STORE_FAST           (square)
+
+172:         158 LOAD_FAST            (self)
+             160 LOAD_METHOD          (blur)
+             162 LOAD_FAST            (square)
+             164 CALL_METHOD          (1 positional argument)
+             166 STORE_FAST           (blurred)
+             168 LOAD_FAST            (self)
+             170 LOAD_ATTR            (rt)
+             172 LOAD_METHOD          (free)
+             174 LOAD_FAST            (square)
+             176 CALL_METHOD          (1 positional argument)
+             178 POP_TOP
+
+175:         180 LOAD_FAST            (self)
+             182 LOAD_METHOD          (emit)
+             184 LOAD_CONST           ("amplitude0")
+             186 LOAD_FAST            (fields)
+             188 LOAD_FAST            (blurred)
+             190 BUILD_LIST           2
+             192 LOAD_CONST           (1)
+             194 LOAD_CONST           (1)
+             196 LOAD_FAST            (o)
+             198 LOAD_FAST            (o)
+             200 BUILD_TUPLE          4
+             202 LOAD_CONST           ("let e=a0[")
+             204 LOAD_CONST           (6)
+             206 LOAD_FAST            (n)
+             208 BINARY_MULTIPLY
+             210 FORMAT_VALUE         0
+             212 LOAD_CONST           ("u+i]+a0[")
+             214 LOAD_CONST           (7)
+             216 LOAD_FAST            (n)
+             218 BINARY_MULTIPLY
+             220 FORMAT_VALUE         0
+             222 LOAD_CONST           ("u+i]+a0[")
+             224 LOAD_CONST           (8)
+             226 LOAD_FAST            (n)
+             228 BINARY_MULTIPLY
+             230 FORMAT_VALUE         0
+             232 LOAD_CONST           ("u+i];let c=a0[")
+             234 LOAD_CONST           (9)
+             236 LOAD_FAST            (n)
+             238 BINARY_MULTIPLY
+             240 FORMAT_VALUE         0
+             242 LOAD_CONST           ("u+i]+a0[")
+             244 LOAD_CONST           (10)
+             246 LOAD_FAST            (n)
+             248 BINARY_MULTIPLY
+             250 FORMAT_VALUE         0
+             252 LOAD_CONST           ("u+i]+a0[")
+             254 LOAD_CONST           (11)
+             256 LOAD_FAST            (n)
+             258 BINARY_MULTIPLY
+             260 FORMAT_VALUE         0
+             262 LOAD_CONST           ("u+i];dst[i]=max(sqrt(max(a1[i],0.)),0.001*sqrt(e/max(c,1.)));")
+             264 BUILD_STRING         13
+             266 CALL_METHOD          (4 positional arguments)
+             268 STORE_FAST           (a)
+
+176:         270 LOAD_FAST            (self)
+             272 LOAD_ATTR            (rt)
+             274 LOAD_METHOD          (free)
+             276 LOAD_FAST            (blurred)
+             278 CALL_METHOD          (1 positional argument)
+             280 POP_TOP
+             282 LOAD_FAST            (self)
+             284 LOAD_METHOD          (max_reduce)
+             286 LOAD_FAST            (a)
+             288 CALL_METHOD          (1 positional argument)
+             290 STORE_FAST           (peak)
+
+177:         292 LOAD_FAST            (self)
+             294 LOAD_METHOD          (emit)
+             296 LOAD_CONST           ("amplitude")
+             298 LOAD_FAST            (a)
+             300 LOAD_FAST            (peak)
+             302 BUILD_LIST           2
+             304 LOAD_CONST           (1)
+             306 LOAD_CONST           (1)
+             308 LOAD_FAST            (o)
+             310 LOAD_FAST            (o)
+             312 BUILD_TUPLE          4
+             314 LOAD_CONST           ("dst[i]=max(a0[i],select(1.,a1[0]*0.000001,a1[0]>0.));")
+             316 CALL_METHOD          (4 positional arguments)
+             318 STORE_FAST           (amplitude)
+
+178:         320 LOAD_FAST            (self)
+             322 LOAD_ATTR            (rt)
+             324 LOAD_METHOD          (free)
+             326 LOAD_FAST            (a)
+             328 CALL_METHOD          (1 positional argument)
+             330 POP_TOP
+             332 LOAD_FAST            (self)
+             334 LOAD_ATTR            (rt)
+             336 LOAD_METHOD          (free)
+             338 LOAD_FAST            (peak)
+             340 CALL_METHOD          (1 positional argument)
+             342 POP_TOP
+             344 LOAD_FAST            (self)
+             346 LOAD_METHOD          (max_reduce)
+             348 LOAD_FAST            (amplitude)
+             350 LOAD_CONST           (4)
+             352 CALL_METHOD          (2 positional arguments)
+             354 STORE_FAST           (aqmax)
+
+179:         356 LOAD_FAST            (self)
+             358 LOAD_METHOD          (emit)
+             360 LOAD_CONST           ("basecopy")
+             362 LOAD_FAST            (fields)
+             364 BUILD_LIST           1
+             366 LOAD_CONST           (1)
+             368 LOAD_CONST           (3)
+             370 LOAD_FAST            (o)
+             372 LOAD_FAST            (o)
+             374 BUILD_TUPLE          4
+             376 LOAD_CONST           ("dst[i]=a0[i];")
+             378 CALL_METHOD          (4 positional arguments)
+             380 STORE_FAST           (base)
+
+180:         382 LOAD_FAST            (self)
+             384 LOAD_METHOD          (emit)
+             386 LOAD_CONST           ("support")
+             388 LOAD_FAST            (fields)
+             390 BUILD_LIST           1
+             392 LOAD_CONST           (1)
+             394 LOAD_CONST           (3)
+             396 LOAD_FAST            (o)
+             398 LOAD_FAST            (o)
+             400 BUILD_TUPLE          4
+             402 LOAD_CONST           ("dst[i]=a0[")
+             404 LOAD_CONST           (3)
+             406 LOAD_FAST            (n)
+             408 BINARY_MULTIPLY
+             410 FORMAT_VALUE         0
+             412 LOAD_CONST           ("u+i];")
+             414 BUILD_STRING         3
+             416 CALL_METHOD          (4 positional arguments)
+             418 STORE_FAST           (support)
+             420 LOAD_FAST            (self)
+             422 LOAD_ATTR            (rt)
+             424 LOAD_METHOD          (free)
+             426 LOAD_FAST            (fields)
+             428 CALL_METHOD          (1 positional argument)
+             430 POP_TOP
+
+181:         432 LOAD_CONST           ("let p=i%")
+             434 LOAD_FAST            (nr)
+             436 FORMAT_VALUE         0
+             438 LOAD_CONST           ("u;let c=(i/")
+             440 LOAD_FAST            (nr)
+             442 FORMAT_VALUE         0
+             444 LOAD_CONST           ("u)%4u;let k=i/")
+             446 LOAD_CONST           (4)
+             448 LOAD_FAST            (nr)
+             450 BINARY_MULTIPLY
+             452 FORMAT_VALUE         0
+             454 LOAD_CONST           ("u;let colour=select(select(1u,2u,c==3u),0u,c==0u);\nlet hp=((p/")
+
+182:         456 LOAD_FAST            (r)
+
+181:         458 FORMAT_VALUE         0
+             460 LOAD_CONST           ("u)*4u+1u)*")
+
+182:         462 LOAD_FAST            (o)
+
+181:         464 FORMAT_VALUE         0
+             466 LOAD_CONST           ("u+(p%")
+
+182:         468 LOAD_FAST            (r)
+
+181:         470 FORMAT_VALUE         0
+             472 LOAD_CONST           ("u)*4u+1u;let phase=u32(a2[k*17u+1u+c]);let q=(coord(k,colour,hp)-vec2<f32>(f32(phase%2u),f32(phase/2u)))*0.5;\nlet cell=vec2<i32>(floor(q));let den=a2[k*17u]*a3[hp];let base=k*130u*")
+
+183:         474 LOAD_FAST            (nr)
+
+181:         476 FORMAT_VALUE         0
+             478 LOAD_CONST           ("u+p;\nfor(var t=0u;t<4u;t++){let ij=cell+vec2<i32>(i32(t%2u),i32(t/2u));let x=ij.x*2+i32(phase%2u);let y=ij.y*2+i32(phase/2u);\nlet inside=x>=0&&y>=0&&x<")
+
+185:         480 LOAD_FAST            (self)
+             482 LOAD_ATTR            (w)
+
+181:         484 FORMAT_VALUE         0
+             486 LOAD_CONST           ("&&y<")
+
+185:         488 LOAD_FAST            (self)
+             490 LOAD_ATTR            (h)
+
+181:         492 FORMAT_VALUE         0
+             494 LOAD_CONST           (";let ok=usable(k,x,y);let z=measurement(k,x,y);let vv=max(z,0.);let var_=a2[k*17u+13u]*vv+a2[k*17u+14u]+a2[k*17u+15u]+a2[k*17u+16u]*vv*vv;\nlet d=vec2<f32>(ij)-q;let val=select(0.,z,ok)/den;let variance=select(0.,var_,ok)/(den*den);\nlet f=array<f32,8>(ash(val),log(1.+variance),select(0.,1.,ok),select(0.,1.,valid(k,x,y)&&saturated(k,x,y)),select(0.,1.,valid(k,x,y)&&under(k,x,y)),d.x,d.y,(1.-abs(d.x))*(1.-abs(d.y))*select(0.,1.,inside));\nfor(var j=0u;j<8u;j++){dst[base+((c*4u+t)*8u+j)*")
+
+188:         496 LOAD_FAST            (nr)
+
+181:         498 FORMAT_VALUE         0
+             500 LOAD_CONST           ("u]=f[j];}\n}\nif(c==0u){dst[base+128u*")
+
+190:         502 LOAD_FAST            (nr)
+
+181:         504 FORMAT_VALUE         0
+             506 LOAD_CONST           ("u]=log2(a2[k*17u]);dst[base+129u*")
+
+190:         508 LOAD_FAST            (nr)
+
+181:         510 FORMAT_VALUE         0
+             512 LOAD_CONST           ("u]=log(a3[hp]/a4[0]);}")
+             514 BUILD_STRING         25
+             516 STORE_FAST           (body)
+
+191:         518 LOAD_FAST            (self)
+             520 LOAD_ATTR            (emit)
+             522 LOAD_CONST           ("evidence130")
+             524 LOAD_FAST            (bank)
+             526 LOAD_FAST            (G)
+             528 LOAD_FAST            (meta)
+             530 LOAD_FAST            (amplitude)
+             532 LOAD_FAST            (aqmax)
+             534 BUILD_LIST           5
+             536 LOAD_CONST           (1)
+             538 LOAD_FAST            (k)
+             540 LOAD_CONST           (130)
+             542 LOAD_FAST            (r)
+             544 LOAD_FAST            (r)
+             546 BUILD_TUPLE          5
+             548 LOAD_FAST            (body)
+             550 LOAD_FAST            (self)
+             552 LOAD_METHOD          (helpers)
+             554 CALL_METHOD          (0 positional arguments)
+             556 LOAD_FAST            (k)
+             558 LOAD_CONST           (4)
+             560 BINARY_MULTIPLY
+             562 LOAD_FAST            (nr)
+             564 BINARY_MULTIPLY
+             566 LOAD_CONST           (('count',))
+             568 CALL_FUNCTION_KW     (6 total positional and keyword args)
+             570 STORE_FAST           (evidence)
+
+192:         572 LOAD_FAST            (self)
+             574 LOAD_METHOD          (emit)
+             576 LOAD_CONST           ("white")
+             578 LOAD_FAST            (meta)
+             580 LOAD_FAST            (amplitude)
+             582 BUILD_LIST           2
+             584 LOAD_CONST           (1)
+             586 LOAD_FAST            (k)
+             588 LOAD_CONST           (4)
+             590 LOAD_FAST            (r)
+             592 LOAD_FAST            (r)
+             594 BUILD_TUPLE          5
+             596 LOAD_CONST           ("let p=i%")
+             598 LOAD_FAST            (nr)
+             600 FORMAT_VALUE         0
+             602 LOAD_CONST           ("u;let c=(i/")
+             604 LOAD_FAST            (nr)
+             606 FORMAT_VALUE         0
+             608 LOAD_CONST           ("u)%4u;let k=i/")
+             610 LOAD_CONST           (4)
+             612 LOAD_FAST            (nr)
+             614 BINARY_MULTIPLY
+             616 FORMAT_VALUE         0
+             618 LOAD_CONST           ("u;let hp=((p/")
+             620 LOAD_FAST            (r)
+             622 FORMAT_VALUE         0
+             624 LOAD_CONST           ("u)*4u+1u)*")
+             626 LOAD_FAST            (o)
+             628 FORMAT_VALUE         0
+             630 LOAD_CONST           ("u+(p%")
+             632 LOAD_FAST            (r)
+             634 FORMAT_VALUE         0
+             636 LOAD_CONST           ("u)*4u+1u;dst[i]=a0[k*17u+5u+c]/(a0[k*17u]*a1[hp]);")
+             638 BUILD_STRING         13
+             640 CALL_METHOD          (4 positional arguments)
+             642 STORE_FAST           (white)
+
+193:         644 LOAD_FAST            (self)
+             646 LOAD_ATTR            (rt)
+             648 LOAD_METHOD          (free)
+             650 LOAD_FAST            (aqmax)
+             652 CALL_METHOD          (1 positional argument)
+             654 POP_TOP
+
+194:         656 LOAD_FAST            (evidence)
+             658 LOAD_FAST            (base)
+             660 LOAD_FAST            (amplitude)
+             662 LOAD_FAST            (support)
+             664 LOAD_FAST            (white)
+             666 BUILD_LIST           5
+             668 RETURN_VALUE
+
+
+# Method Name:       <genexpr>
+# Filename:          v15_2\physical.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        4
+# Flags:             0x00000073 (NOFREE | GENERATOR | NESTED | NEWLOCALS | OPTIMIZED)
+# First Line:        149
+# Constants:
+#    0: '.10g'
+#    1: None
+# Names:
+#    0: format
+#    1: float
+# Varnames:
+#	.0, v
+# Positional arguments:
+#	.0
+# Local variables:
+#    1: v
+               0 GEN_START            0
+
+149:           2 LOAD_FAST            (.0)
+         >>    4 FOR_ITER             (to 26)
+               6 STORE_FAST           (v)
+               8 LOAD_GLOBAL          (format)
+              10 LOAD_GLOBAL          (float)
+              12 LOAD_FAST            (v)
+              14 CALL_FUNCTION        (1 positional argument)
+              16 LOAD_CONST           (".10g")
+              18 CALL_FUNCTION        (2 positional arguments)
+              20 YIELD_VALUE
+              22 POP_TOP
+              24 JUMP_ABSOLUTE        (to 4)
+         >>   26 LOAD_CONST           (None)
+              28 RETURN_VALUE
+

@@ -1,58 +1,35 @@
-# 松下 LUMIX 系统逆向研究
+# 相机固件研究工作区
 
-公开研究松下相机的更新包、引导与加载链、平台源码、USB/PTP 协议、设置格式和维护接口。当前主要样本为 Panasonic LUMIX DC-S1M2 V1.4，包含旧 GH2 阳性对照与 Leica SL3 封装比较。
+当前主要目标是**完整逆向 S1M2 固件**：恢复实际代码和数据，核实加载映射、启动/更新链、函数、数据结构和组件通信。当前62项已提取，49项 flags=3 仍无验证明文；未取得真机完整RAM。公开源码和QEMU只作辅助研究材料。
 
-**当前尚未获得 S1M2 专有程序的可信明文，也未取得完整 RAM 转储。** 容器提取、外层校验、协议解析和参考结构测试各自有明确的证据边界。
+2026-10-13已补齐后续研究档案、原理推导和复现条件；六份外部材料以带纠正评论的版本或内容复用映射公开。历史功能/接口实验保留为证据，已暂停独立功能解锁目标。
 
-## 贡献者研究分支
-
-点击以下链接可直接查看各贡献者提交的内容：
-
-| 分支 | 研究主题 |
-| :--- | :--- |
-| [williamwu1234](https://github.com/Siegfried82/lumix-s1m2-research/tree/contributors/williamwu1234) | **DC-S5 / LUMIX Sync**：相机 HTTP 控制协议、固件更新传输、UPD 容器分析与解密尝试记录；含研究总览、文件索引及接口资料压缩包。 |
-| [reveriel](https://github.com/Siegfried82/lumix-s1m2-research/tree/contributors/reveriel) | **S1M2 ROM BACKUP 与 LUMIX Flow**：S1M2 V1.4 服务菜单及 EEPROM 导出实测报告；LUMIX Flow v1.6.0 的 TLS 信任体系与 HTTP API 分析。 |
-| [kings1221-code](https://github.com/Siegfried82/lumix-s1m2-research/tree/contributors/kings1221-code) | **S5 / S5M2 固件研究**：PR #4 提交的研究交接资料与 LUMIX Lab 3.1.0 APK 静态分析；交接文档已并入 `docs/`，分支保留提交者原始内容。 |
-| [Yooglery](https://github.com/Siegfried82/lumix-s1m2-research/tree/contributors/Yooglery) | **S1RM2 (S1R II) 内核漏洞**：FunctionFS（`f_fs.c`）USB 索引越界及作者实机行为报告（尚未独立复现）；报告已并入 `docs/`。 |
-
-分支保留贡献者原提交；研究结论及其证据边界请结合各 PR 下的审核意见阅读。
+- [当前状态与覆盖](docs/CURRENT_STATUS_20261013.md)
+- [按处理链阅读全部研究](docs/RESEARCH_MAP_20261013.md)
+- [复现步骤、输入、依赖和验收](docs/REPRODUCE_20261013.md)
+- [原理与推导过程](docs/PRINCIPLES_AND_DERIVATIONS_20261013.md)
+- [六份外部材料与纠正评论](external_review/20261013/README.md)
+- [本轮实际完成的离线验证](docs/RELEASE_VALIDATION_20261013.md)
+- [全部公开文件索引](docs/PUBLIC_FILE_INDEX.md)
+- [原始输入、公开副本及排除范围](docs/PUBLICATION.md)
 
 
-## 相关外部研究
+**主要目的：完整逆向 Panasonic LUMIX S1M2 固件。** 先读 [需求与交接](S1M2固件研究需求与交接.md) 和 [当前状态](S1M2研究当前状态.md)。工作围绕载荷解码、实际代码与数据恢复、加载映射、启动/更新链、函数与数据结构分析展开。
 
-- [ShaoCI-Hz/lumix-fullframe-reverse](https://github.com/ShaoCI-Hz/lumix-fullframe-reverse)：独立进行的全画幅 LUMIX 固件逆向（6 机型 UPD 容器与分区表、AES 级加密与 ECDSA P-256 签名结论、MTP 厂商私有协议、镜头固件明文与符号表）。其 DC-S5 48 分区结论与上表 PR #4 交接报告一致，可作交叉参照；该项目为第三方独立仓库，结论以其自身证据边界为准。
+功能新增与解锁支线暂停。现有接口实验和 Linux 沙箱作为辅助材料保留；沙箱已能导出虚拟内存，受保护固件组件仍未解码。
 
-## 阅读入口
+| 要找什么 | 入口 | 保留理由 |
+|---|---|---|
+| 原始固件与解包组件 | [解包说明](analysis/unpacked/README.md)、[逐项核验](analysis/guest_dump_feasibility_20261012/components_current.json) | 62 项按实际目录提取，有输入与组件散列 |
+| 解包和研究工具 | [项目说明](s1m2_firmware_project/README.md) | 保留源码、测试与离线工具 |
+| 本地 Linux 沙箱及内存导出 | [使用说明](analysis/local_qemu_lab_20261012/使用说明.md) | 有真实启动、命令、关机、重启和 1 GiB 虚拟内存记录 |
+| 固件逆向接续点 | [主线重设](analysis/system_reverse_mainline_20261012/主线重设.md)、[阶段推进](研究推进_20261011_Ultra.md) | 明确实际消费者缺口及验收条件 |
+| 旧固件真实解码链 | [GH2/TZ10 证据](analysis/ultra_legacy_closure_20261011/旧固件真实解码链闭合报告.md)、[消费者复核](analysis/ultra_method0_consumer_verify_20261011/consumer_verification_report.md) | 保留可复现实验与纠错 |
+| 跨机型、版本差分 | [22 包分析](analysis/multimodel_diff_20261012/报告.md) | 有具体输入、目录项和有限阴性范围 |
+| 历史正常协议实验 | [LUT 上传实测](analysis/lut_upload_live_20261012_01/独立上传实机结论.md)、[USB 配对采集](analysis/usb_video_paired_20261012/采集报告.md) | 保留真实响应、前后状态和独立读回 |
+| 外部材料核验 | [沙箱原包](analysis/external_qemu_sandbox_20261012/核验结论.md)、[松下资料](analysis/desktop_panasonic_review_20261012/核验报告.md) | 原稿与核验分开，明确迁移限制 |
+| 文稿清理记录 | [删除与改写清单](analysis/workspace_cleanup_20261012/mutations.json) | 记录原因、散列和工作区外恢复位置 |
 
-- [全体参与者详细进度与 AI 接手地图（2026-10-10）](docs/PROGRESS_20261010.md)
-- [全部公共文件逐项索引](docs/PUBLIC_FILE_INDEX.md)
-- [本次发布验证](docs/RELEASE_VALIDATION_20261010.md)
+`analysis/` 保留各次实验的代码、响应和结果；未分发的原厂输入与完整依赖由来源及散列登记。`analysis/sources/` 与 `analysis/tools/` 保留选取的源码证据、工具与依赖信息。本仓库是公开归档，当前结论由最新状态和对应证据界定。
 
-- [已验证结论](docs/FINDINGS.md)
-- [已排除的方法与当前阻塞](docs/DEAD_ENDS.md)
-- [从零复现步骤](docs/REPRODUCE.md)
-- [系统逆向实验文件索引](docs/EXPERIMENTS.md)
-- [历史技术结论更正](docs/CORRECTIONS.md)
-- [公开材料与脱敏](docs/PUBLICATION.md)
-- [参与贡献](CONTRIBUTING.md)
-- [S5 / S5M2 固件研究交接报告](docs/S5与S5M2固件研究交接报告.md)
-- [LUMIX Lab APK 静态分析（DC-S5M2）](docs/LUMIX_LAB_S5M2_APK_ANALYSIS.md)
-- [S1RM2 FunctionFS 越界读写漏洞报告](docs/S1RM2-ffs-OOB-漏洞报告-中文.md)
-
-## 目录
-
-`analysis/`：固件结构、编码检验、跨版本比较、平台源码观察、宿主程序反汇编、协议响应与配置格式实验。
-
-`s1m2_firmware_project/`：UPD 提取/校验/重打包工具、离线解析器、结构参考与测试。候选平台地址和参考头文件的内部一致性不等于已验证本机硬件映射。
-
-`evidence/`：文件来源与散列、环境、依赖清单及实际重放结果。第三方原厂包和受限资料不随仓库分发；需要时按记录自行取得匹配样本。
-
-## 复现与贡献
-
-运行 `python3 evidence/verify_public.py` 校验随库档案和协议样本。完整重放方式见复现指南；所有默认入口均为离线分析。
-
-欢迎通过 Issues、Fork 和 Pull Requests 提交实验、失败结果或更正。每项结论应有输入散列、方法、结果与判定边界；不要把字符串、组件名、编译通过或宿主程序行为当成设备端实现证明。
-
-## 最新研究状态
-
-2026-10-10 的所有参与者进度、最新客户端/源码/跨机型/对象调查及错误路线见上述详细进度。历史阶段交接仍保留为时间记录；尚无 S1M2 程序明文、完整 RAM 或代码执行。
+历史模型报告属于待核验材料，确定性措辞不自动成为事实。当前授权为离线分析；后续设备通信、写入和刷写另需明确授权。Antigravity 与 gemini-delegate 已停用。

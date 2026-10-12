@@ -1,0 +1,603 @@
+{
+  "task_id": "06_lab_control",
+  "title": "LUMIX Lab 蓝牙开启 Wi-Fi 后的主控制通道、网络绑定与会话认证全链路分析",
+  "analysis_mode": "offline_static_decompilation_and_codec_verification",
+  "apk_and_manifest_inputs": [
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/com.panasonic.jp.lumixlab.apk",
+      "size_bytes": 189845077,
+      "sha256": "6ba873110d201675a905f7dac39bcda3291674e7440a484d6d5bd1a78447115f"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/config.arm64_v8a.apk",
+      "size_bytes": 42944168,
+      "sha256": "4e1a4fcbb9321bacfce69b6719146b5f8b249d5d9dded72044d23b99903fcdb4"
+    }
+  ],
+  "cited_source_files": {
+    "H5/d.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/H5/d.java",
+      "size_bytes": 92964,
+      "sha256": "84c644f0b4d20a4e452cc8dcfdb743f976b43fbd5aabb727e87f2f635c142725"
+    },
+    "H5/j.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/H5/j.java",
+      "size_bytes": 21497,
+      "sha256": "6402356521e7f5b9afdf12bc0ae37889d00ad6de6e53141b03bba6ca31905257"
+    },
+    "I5/c.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/I5/c.java",
+      "size_bytes": 6587,
+      "sha256": "f31e474820e771cb0d9ddbfc21e37260cd9da2db26c92be1d7110bffdc8e1ccc"
+    },
+    "I5/d.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/I5/d.java",
+      "size_bytes": 2420,
+      "sha256": "914d4b3527d94c30446ff9caff9fede1192860ccf96c0eca36ab86e1a3b95095"
+    },
+    "I5/e.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/I5/e.java",
+      "size_bytes": 1927,
+      "sha256": "fbba8f0acc70b165d879e1c947a1c6e02a40c49ca97b58aa8c2aaed2d0ba0cfd"
+    },
+    "K5/C0643o.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/K5/C0643o.java",
+      "size_bytes": 4900,
+      "sha256": "31f6bad476f540bb5047661e56fb2c7d2b4b0619686432183ad9dbc46e74fde5"
+    },
+    "K5/B.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/K5/B.java",
+      "size_bytes": 453,
+      "sha256": "6a1e3c8a0d620de4703f8c0fc28e5ddeca619fa9c0ff05c15b5bf9e0c3d79f08"
+    },
+    "K5/C0664z.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/K5/C0664z.java",
+      "size_bytes": 345,
+      "sha256": "6597fb60ca0dfcc2ce9f0f9298e0fd846cdc47bd9b97d92ae63f56c9452498e7"
+    },
+    "K5/W0.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/K5/W0.java",
+      "size_bytes": 448,
+      "sha256": "3b5828b3c59ef5b2333c30f9f399c8ff270f5b5f4ea8e9736157fda4c8160ea0"
+    },
+    "K5/U0.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/K5/U0.java",
+      "size_bytes": 273,
+      "sha256": "933205e7a3dba102b82820c27bb9f53b82647a03f265e56673b514dccbc07630"
+    },
+    "K5/V0.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/K5/V0.java",
+      "size_bytes": 403,
+      "sha256": "e0d27222beea7001159cdaaa3a9623e4c8ca906a5fbf1108e3cc40571bf6b583"
+    },
+    "R5/h.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/R5/h.java",
+      "size_bytes": 3743,
+      "sha256": "4de3a1fdcb844b355712248b46ad4069d89850fa790d6696b4f777d86626c258"
+    },
+    "Y5/h.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/Y5/h.java",
+      "size_bytes": 14306,
+      "sha256": "9d819718613ccb0a9106aa4288b94ffc92dbae583b5c1df757f8298ea6e387be"
+    },
+    "p041d6/c.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p041d6/c.java",
+      "size_bytes": 41644,
+      "sha256": "08369940da4460ab49aca20986a6ce49fe56f68a2799c9e349351dbde7b6f0ea"
+    },
+    "p052e6/c.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p052e6/c.java",
+      "size_bytes": 21201,
+      "sha256": "de5bbf531a4f384f90c74750ffac1b0b8d30c42ea3bdde59030913a31b567825"
+    },
+    "p062f5/P2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p062f5/P2.java",
+      "size_bytes": 16835,
+      "sha256": "01eab5cc6be73a9a8907e6a8bef667b53857ff9730b72d883c5c9a3caa746d03"
+    },
+    "p062f5/Q2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p062f5/Q2.java",
+      "size_bytes": 10249,
+      "sha256": "acac27dec95920455308b96275fa2067c0e29e21515ee33610c68d1895a47f98"
+    },
+    "p062f5/RunnableC1743t1.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p062f5/RunnableC1743t1.java",
+      "size_bytes": 13467,
+      "sha256": "18f63927ea85db985eca84bc21e4f94033acf320daeb4bf168550b43d93907af"
+    },
+    "p084h6/a.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p084h6/a.java",
+      "size_bytes": 12701,
+      "sha256": "53f9f8ec61d95915512a03a3cd5fcabe5ab5a75dd7ac6a19987f15576e3a5104"
+    },
+    "p084h6/b.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p084h6/b.java",
+      "size_bytes": 225,
+      "sha256": "52595c54395386024e58adc18e8647a759b0a2dadfc69890f884c8fc01751b59"
+    },
+    "p084h6/c.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p084h6/c.java",
+      "size_bytes": 1394,
+      "sha256": "954d45711f09a4dde494e81debd6bd9a4c2d8749226073a3fca472f75060ff0b"
+    },
+    "p084h6/d.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p084h6/d.java",
+      "size_bytes": 1876,
+      "sha256": "69e2d3bc60794c98b768c263d0648917dbfb8a644f924acade8127867cee575c"
+    },
+    "p084h6/e.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p084h6/e.java",
+      "size_bytes": 489,
+      "sha256": "a6c8fa6360646836234af6a25a209faeebddace4532cc9775e2961793587fdd6"
+    },
+    "p084h6/f.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p084h6/f.java",
+      "size_bytes": 673,
+      "sha256": "f373363c5c7b966e4f6dd888227026c419832dcbdfac2bf0b54c26da28b50990"
+    },
+    "p084h6/g.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p084h6/g.java",
+      "size_bytes": 893,
+      "sha256": "1d65b6389507a9b41e6101abafff7d06a8396f68d2504daa4d34937659792ccd"
+    },
+    "p084h6/h.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p084h6/h.java",
+      "size_bytes": 13495,
+      "sha256": "92d17709c45e8527392cba991c1801f525c9426a11c30b39adfd43fa45be30d9"
+    },
+    "p281z5/C2438a2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/C2438a2.java",
+      "size_bytes": 903,
+      "sha256": "afbfb288da98bcb640d933ab54ef576bffaa3d95f6af1194372cc674672f628c"
+    },
+    "p281z5/C2458c2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/C2458c2.java",
+      "size_bytes": 1617,
+      "sha256": "223eb91992599a4689495f237790078b8b153c9efb0a46e542a0996917aa1412"
+    },
+    "p281z5/C2468d2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/C2468d2.java",
+      "size_bytes": 2322,
+      "sha256": "2971e8d1c95e9fe5d6f925aee0cd3d88102016e8fea8d725778d405d5ec9768f"
+    },
+    "p281z5/C2478e2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/C2478e2.java",
+      "size_bytes": 2272,
+      "sha256": "f7757f95c6965b0e953045fb02512d4fe4c31656fd347abbc617aa3d73a905c6"
+    },
+    "p281z5/C2518i2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/C2518i2.java",
+      "size_bytes": 1077,
+      "sha256": "e0e2477890fecbae4df06d2a952fcfaadcf148212d6a9236fe3562d14ee12694"
+    },
+    "p281z5/C2538k2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/C2538k2.java",
+      "size_bytes": 49295,
+      "sha256": "79322ad693be6ec455cd86f7ece85491a36824f6e1acd9fd19778e1b53566dca"
+    },
+    "p281z5/C2607r2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/C2607r2.java",
+      "size_bytes": 3853,
+      "sha256": "6d48e998c70f1548fa7eba4734e3c22089392b7f8258d191ec242752d615c1bf"
+    },
+    "p281z5/C2617s2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/C2617s2.java",
+      "size_bytes": 2413,
+      "sha256": "22e717e1283f107f4ca7ca486b1201e55a24698d09453ee241375bc3aec7ae5f"
+    },
+    "p281z5/C2646v1.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/C2646v1.java",
+      "size_bytes": 1480,
+      "sha256": "f7e7274ce0ef96c094f41249f30d061ac83f67f2e3443c68b057d96c9df50e8e"
+    },
+    "p281z5/C2647v2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/C2647v2.java",
+      "size_bytes": 2537,
+      "sha256": "4b42df578eb3ec999e22eea470507e9250fe7af4349aeb0fce4e80c8cff2a8e5"
+    },
+    "p281z5/C2656w1.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/C2656w1.java",
+      "size_bytes": 1341,
+      "sha256": "1c949f37b86effa1d77dc5af40bc31c3265192e0e074741e8f5ef83fba29ab4d"
+    },
+    "p281z5/C2657w2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/C2657w2.java",
+      "size_bytes": 7060,
+      "sha256": "5c280d894d550cdb4fc85b7f72493fe549786dc95d9784849a81f6854738777b"
+    },
+    "p281z5/C2666x1.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/C2666x1.java",
+      "size_bytes": 926,
+      "sha256": "4794d055f3adf41bdb75374bc6094d9af3b7f81735c815c7ae4b02159083f166"
+    },
+    "p281z5/M1.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/M1.java",
+      "size_bytes": 20543,
+      "sha256": "5dfceec97e14b6d5b1f1eb8bf0d8eefb6301d541b657ce7c55a99e808506244e"
+    },
+    "p281z5/N1.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/N1.java",
+      "size_bytes": 823,
+      "sha256": "e71634ee4a41c4617d4f69d81d607592c8c4e3e298402f2b6e3dd1fd0b244898"
+    },
+    "p281z5/RunnableC2548l2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/RunnableC2548l2.java",
+      "size_bytes": 14280,
+      "sha256": "932cd11eb758e50743a92d00f745296bd4fea6647aa70a6b351e326c31600b40"
+    },
+    "p281z5/RunnableC2616s1.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/RunnableC2616s1.java",
+      "size_bytes": 1976,
+      "sha256": "f2c8f0fe7bfd9175810c91543fea04fe617cfb9b5633570c28415598ba942fb6"
+    },
+    "p281z5/RunnableC2627t2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/RunnableC2627t2.java",
+      "size_bytes": 2214,
+      "sha256": "13517aae81b40451753be791b174d479441fa35eb6ae3607566927462a2676a1"
+    },
+    "p281z5/RunnableC2667x2.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/RunnableC2667x2.java",
+      "size_bytes": 1830,
+      "sha256": "ceabf1164cde4d0483a5637a2a14fde19561be066a653538cebd7503e5fa33e7"
+    },
+    "p281z5/S1.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/S1.java",
+      "size_bytes": 823,
+      "sha256": "a03dc837b9709cc0780bba30cc3a3624392d55e179f674fd7d86d9b444cd315f"
+    },
+    "p281z5/Z1.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/Z1.java",
+      "size_bytes": 819,
+      "sha256": "c9be4667e96394f8e305952fe0352011f9fa7c96fc98d57766931c4cfa3ea48d"
+    },
+    "com/panasonic/jp/lumixlab/LlcApplication.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/LlcApplication.java",
+      "size_bytes": 70390,
+      "sha256": "4ea806f8bda2af3af6a249233936746b1465dc7de94c7f9c950260f493c7f602"
+    },
+    "com/panasonic/jp/lumixlab/bean/AuthRequestBean.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/bean/AuthRequestBean.java",
+      "size_bytes": 1052,
+      "sha256": "2304ca5d4c24c93365e5dc303a65027633b697c6551c54d117f72ec459372fb6"
+    },
+    "com/panasonic/jp/lumixlab/bean/AuthResponseBean.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/bean/AuthResponseBean.java",
+      "size_bytes": 1552,
+      "sha256": "d08afbb628c300720909903eb7f4c46d88c7eba50e3359692ab6665d641dd496"
+    },
+    "com/panasonic/jp/lumixlab/controller/activity/RemotePhotostyleActivity.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/controller/activity/RemotePhotostyleActivity.java",
+      "size_bytes": 56736,
+      "sha256": "57b74b524ed65c2d74bbb1230627af8f292aa8ea9150f0227fb328e76339ae8b"
+    },
+    "com/panasonic/jp/lumixlab/controller/activity/RemoteShootingActivity.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/controller/activity/RemoteShootingActivity.java",
+      "size_bytes": 206093,
+      "sha256": "0541decfe287d41f5e03877ce51854db3d8b8bc0acb70dd6570c02c02037af8e"
+    },
+    "com/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment.java",
+      "size_bytes": 24560,
+      "sha256": "d31c5a650e61c2fb3a79c214ea50c38690e5783bfedf868e2b7de98425c2058e"
+    },
+    "com/panasonic/jp/lumixlab/controller/fragment/FirmwareUpdateDetailFragment.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/controller/fragment/FirmwareUpdateDetailFragment.java",
+      "size_bytes": 92394,
+      "sha256": "58e986bf30262734745e60429aa4d76a9abeb442d9e63a837eeeed2b2d1c53d1"
+    },
+    "com/panasonic/jp/lumixlab/controller/fragment/LutFragment.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/controller/fragment/LutFragment.java",
+      "size_bytes": 313453,
+      "sha256": "b5fc545f8e58f5b70f3a71578a14e994b93d5a88a81fc3d28158bb308b961cc0"
+    },
+    "com/panasonic/jp/lumixlab/service/LlcService.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/service/LlcService.java",
+      "size_bytes": 140385,
+      "sha256": "c0a7705e66a8976ba234b2af11f8aa2734ac9613a72ceaf678fd13e97f882fcb"
+    },
+    "com/panasonic/jp/lumixlab/util/C1410v.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/util/C1410v.java",
+      "size_bytes": 131221,
+      "sha256": "90807752f6f18b973aa486938b177b465e105ef5216ca9f69acb741d49270ea8"
+    },
+    "com/panasonic/jp/lumixlab/util/M.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/util/M.java",
+      "size_bytes": 4562,
+      "sha256": "782eeebf30ff84da906cbff116a32c6ab05210c5af034f174f028960b89c2278"
+    }
+  },
+  "verification_script": {
+    "path": "<LOCAL_WORKSPACE>/analysis/agy_takeover_20261012/06_lab_control/verify_lab_control_codec.py",
+    "size_bytes": 32053,
+    "sha256": "29bda33729cc0993f71c582c3833ada89b0bc8c55c0df529f122460d90fd4344",
+    "self_test_result": {
+      "status": "PASS",
+      "test_vectors": {
+        "initial_inform_key_hex": "a1b2c3d4",
+        "sample_wifi_password": "LumixPass123",
+        "framed_wifi_password_hex": "0c4c756d69785061737331323300ffff",
+        "obfuscated_wifi_password_hex": "ccc78fd8c0e2bbbd9383b0a75e4dc3e7",
+        "recovered_wifi_password": "LumixPass123",
+        "uuid_hex": "00112233445566778899aabbccddeeff",
+        "framed_uuid_hex": "1000112233445566778899aabbccddeeff00ffff",
+        "obfuscated_uuid_hex": "83a3c3c4c7e787e70b2b4ba34f6f0f6f5e4dc32b",
+        "app_info_ble_hex": "4c554d4958204c55542043726561746f72732041505020332e312e3000000000",
+        "dhcp_gateway_0x0136A8C0": "192.168.54.1",
+        "auth_header_sample": "'Bearer 0123456789abcdef'"
+      }
+    }
+  },
+  "findings": {
+    "ble_to_wifi_handoff": {
+      "status": "确认",
+      "scan_filter_service_uuid": "054ac620-3214-11e6-ac0d-0002a5d5c51b",
+      "gatt_service_uuid": "1fe71b85-8344-4e6a-bf1a-ac7acdb3f8af",
+      "sequential_registration_and_read_chain": [
+        {
+          "step": 1,
+          "characteristic_field": "H5.d.f6993g (INITIAL_INFORM)",
+          "uuid": "239c7203-922f-43e9-bdf1-6d1fedf6f43f",
+          "direction": "BLE Read",
+          "caller": "p281z5/RunnableC2616s1.java:29 -> p281z5/S1.java:27",
+          "consumer": "p281z5/M1.java:200-209",
+          "purpose": "读取至少4字节的会话混淆密钥存入 C0643o.f8323d，供后续 BLE 写入(APP_UUID/FRIENDLY_NAME)与读取(WIFI_PASSWORD)按4字节块逆序异或加解密。"
+        },
+        {
+          "step": 2,
+          "characteristic_field": "H5.d.f6985c (APP_UUID)",
+          "uuid": "bff12e7f-5944-4eb6-a90f-48d8786157ea",
+          "direction": "BLE Write",
+          "caller": "p281z5/C2468d2.java:34-70",
+          "consumer": "Camera GATT Server -> paired with POST /auth Uuid",
+          "purpose": "生成或从 DataStore 读取 32位无连字符十六进制字符串 DATA_STORE_UUID (C1410v.C0())，经 I5.d.d() 解码为 16 字节，通过 C2538k2.d() 封装为 20 字节 ([0x10] + 16字节UUID + [0x00, 0xFF, 0xFF])，再用 C2538k2.e(f8323d, ...) 混淆后写入相机。"
+        },
+        {
+          "step": 3,
+          "characteristic_field": "H5.d.f6983b (APP_INFO)",
+          "uuid": "ed8b1352-5aa7-4155-b7c9-521292dd1932",
+          "direction": "BLE Write",
+          "caller": "p281z5/C2458c2.java:29-51",
+          "consumer": "Camera GATT Server -> paired with POST /auth AppInfo",
+          "purpose": "将明文 ASCII 字符串 'LUMIX LUT Creators APP ' + versionName (如 'LUMIX LUT Creators APP 3.1.0') 零填充至 32 字节直接写入相机（不经过 XOR 混淆）。"
+        },
+        {
+          "step": 4,
+          "characteristic_field": "H5.d.f6987d (FRIENDLY_NAME)",
+          "uuid": "05a797b6-9c2f-4d18-99a7-fa61a3880bfe",
+          "direction": "BLE Write",
+          "caller": "p281z5/C2478e2.java:33-65",
+          "consumer": "Camera GATT Server -> paired with POST /auth FriendlyName",
+          "purpose": "将 Build.MODEL (M.f17921z) 的 UTF-8 字节经过 C2538k2.d() 长度前缀封装与 C2538k2.e(f8323d, ...) 逆序异或混淆后写入相机。"
+        },
+        {
+          "step": 5,
+          "characteristic_field": "H5.d.f7022z (WIFI_WPA_DOWNGRADE)",
+          "uuid": "36f99090-e79b-4060-9ac7-89f3f8bf88d5",
+          "direction": "BLE Conditional Write",
+          "caller": "p281z5/C2666x1.java:24 -> p281z5/C2518i2.java:26-31",
+          "consumer": "Camera Wi-Fi AP Security Config",
+          "purpose": "若手机为 HarmonyOS (C1410v.R0()) 或不支持 WPA3 SAE (!I5.c.f())，写入单字节 new byte[]{2} 指示相机将 AP 降级为 WPA2；否则保持默认 WPA3。"
+        },
+        {
+          "step": 6,
+          "characteristic_field": "H5.d.f6989e (WIFI_SSID)",
+          "uuid": "657edba2-5bc8-42dd-974f-21871d7dbcd1",
+          "direction": "BLE Read",
+          "caller": "p281z5/C2656w1.java:30 -> p281z5/C2438a2.java:28",
+          "consumer": "p281z5/M1.java:421-432 -> C0643o.f8321b -> CameraWifiConnectFragment.f17574e0",
+          "purpose": "读取 UTF-8 明文 Wi-Fi SSID。"
+        },
+        {
+          "step": 7,
+          "characteristic_field": "H5.d.f6991f (WIFI_PASSWORD)",
+          "uuid": "42d509f7-f122-4816-92d1-5e402d9453cb",
+          "direction": "BLE Read",
+          "caller": "p281z5/Z1.java:27",
+          "consumer": "p281z5/M1.java:389-419 -> C0643o.f8322c -> CameraWifiConnectFragment.f17575f0",
+          "purpose": "读取混淆后的 Wi-Fi 密码字节流，按4字节块逆序并与 f8323d[3..0] 异或还原后，取首字节 length，截取 plain[1..length] 作为 ASCII 密码。"
+        },
+        {
+          "step": 8,
+          "characteristic_field": "H5.d.f7021y (CER_FINGER_PRINT)",
+          "uuid": "1be8a9e3-178b-46c4-b6b3-43d4a5311fc1",
+          "direction": "BLE Read",
+          "caller": "p281z5/N1.java:27",
+          "consumer": "p281z5/M1.java:130-142 -> LlcApplication.setCerFingerPrint() -> p084h6/d.java:30-35",
+          "purpose": "读取冒号分隔的 ASCII 十六进制 SHA-256 证书指纹，去除冒号并解码为 32 字节存入 LlcApplication.cerFingerPrint，供 HTTPS HostnameVerifier 校验相机 TLS 证书。"
+        },
+        {
+          "step": 9,
+          "characteristic_field": "H5.d.f6995h (ACTION_MODE) & f6999j (AP_STATE) & f7001k (ACTION_MODE_RESULT)",
+          "uuid": "7644371c-1ddc-4b16-832f-f07c322e311b / dcba3a74-80bc-4919-8ef4-0c9f99cc20dd / 6c875728-7636-425e-818a-f1d93a39e075",
+          "direction": "BLE Write + Notification",
+          "caller": "CameraWifiConnectFragment.java:536-545 -> H5/d.java:1968",
+          "consumer": "H5/d.java:781-913 -> CameraWifiConnectFragment.I() -> RunnableC2627t2",
+          "purpose": "向 ACTION_MODE 写入 1 字节模式值 (1=常规远程控制/LUT/固件/相册, 5=自动传输, 6=相机侧发起传图)，监听 AP_STATE 变为 1 且 isWifiInfoReadComplete 为 true 后触发 Wi-Fi 连接。"
+        }
+      ]
+    },
+    "wifi_network_binding": {
+      "status": "确认",
+      "caller": "CameraWifiConnectFragment.I() (CameraWifiConnectFragment.java:220-239) -> RunnableC2627t2.run() (p281z5/RunnableC2627t2.java:31-52)",
+      "standard_path": {
+        "method": "I5.c.b(String ssid, String password, ConnectivityManager.NetworkCallback)",
+        "file_lines": "I5/c.java:47-97",
+        "mechanism": "构造 WifiNetworkSpecifier (HarmonyOS 或 !isWpa3SaeSupported() 用 setWpa2Passphrase，否则 setWpa3Passphrase)，构建 NetworkRequest (addTransportType(TRANSPORT_WIFI=1), removeCapability(NET_CAPABILITY_INTERNET=12))，调用 ConnectivityManager.requestNetwork(request, C2617s2)。",
+        "binding_call": "在 p281z5/C2617s2.java:41 的 onAvailable(Network) 回调中，调用 I5.c.f7221a.bindProcessToNetwork(network) 将整个 App 进程绑定至相机 Wi-Fi 网络。"
+      },
+      "oppo_android13_fallback_path": {
+        "method": "I5.e.b(Context, C2607r2)",
+        "file_lines": "I5/e.java:27-43, p281z5/C2607r2.java:42-83",
+        "mechanism": "当 Build.MANUFACTURER 为 OPPO 且 SDK_INT == 33 时，跳转系统 Settings.ACTION_PICK_WIFI_NETWORK 并通过 registerDefaultNetworkCallback 监听 SSID 匹配。"
+      }
+    },
+    "control_channel_address_and_port": {
+      "status": "确认",
+      "protocol": "HTTPS (HTTP/1.1 or HTTP/2 via OkHttp3 + Retrofit2 over TLS)",
+      "port": 443,
+      "port_evidence": "p084h6/b.java:7 与 CameraWifiConnectFragment.java:328 拼接 URL 为 'https://' + strD + '/'，未指定显式端口，因此主控制通道固定使用 HTTPS 默认 TCP 443 端口。",
+      "address_sources": {
+        "default_fallback": {
+          "value": "https://192.168.54.1/",
+          "location": "p084h6/b.java:7 (public static String f22722a = \"https://192.168.54.1/\";)"
+        },
+        "dynamic_dhcp_gateway": {
+          "method": "I5.c.d()",
+          "location": "I5/c.java:119-128",
+          "derivation": "读取 WifiManager.getDhcpInfo().gateway (int)，转为 4 字节后按 byteArray[3..0] 逆序拼成点分十进制 IPv4 字符串。",
+          "callers_updating_base_url": [
+            "com/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment.java:325-329 (M() 中更新 b.f22722a = \"https://\" + strD + \"/\")",
+            "com/panasonic/jp/lumixlab/controller/fragment/FirmwareUpdateDetailFragment.java:1530-1532",
+            "R5/h.java:70-72",
+            "Y5/h.java:250-252"
+          ]
+        },
+        "hardcoded_exceptions_outside_https": [
+          {
+            "usage": "RemoteShooting UDP LiveView socket",
+            "location": "p062f5/Q2.java:68",
+            "code": "new InetSocketAddress(\"192.168.54.1\", i10) where i10 is LvPort from POST /remote/get-lvport, and local DatagramSocket binds to C1410v.f18185d (1234..2048)"
+          },
+          {
+            "usage": "RemotePhotostyle UDP LiveView socket",
+            "location": "p062f5/RunnableC1743t1.java:72",
+            "code": "new InetSocketAddress(\"192.168.54.1\", i10) where local DatagramSocket binds to C1410v.f18185d"
+          }
+        ]
+      },
+      "tls_verification": {
+        "trust_manager": "p084h6/f.java:10-23 (X509TrustManager 空实现，接受相机自签名证书链)",
+        "hostname_verifier_pinning": "p084h6/d.java:22-41 (HostnameVerifier.verify 取 sSLSession.getPeerCertificates()[0].getEncoded() 计算 SHA-256，与 BLE CER_FINGER_PRINT 特征读取的 LlcApplication.getContext().getCerFingerPrint() 执行 MessageDigest.isEqual 比对)",
+        "unpinned_client_variant": "p084h6/h.java:93-105 (h.g() 仅设置 TrustManager f 与 SSLSocketFactory g，未设置 HostnameVerifier d，仅在 LlcService.java:536 下载媒体文件时使用)"
+      }
+    },
+    "session_authentication": {
+      "status": "确认",
+      "endpoint": "POST /auth",
+      "retrofit_declaration": "p084h6/a.java:73-75 (@o(\"auth\") InterfaceC1962d<AuthResponseBean> F(@oa.x0.a AuthRequestBean))",
+      "caller_chain": "C2617s2.onAvailable (p281z5/C2617s2.java:42) -> CameraWifiConnectFragment.M() (CameraWifiConnectFragment.java:318-334) -> RunnableC2667x2.run() (p281z5/RunnableC2667x2.java:28-42)",
+      "request_json_schema": {
+        "bean_class": "com/panasonic/jp/lumixlab/bean/AuthRequestBean.java:10-25",
+        "fields": {
+          "AppInfo": "\"LUMIX LUT Creators APP \" + AppVersionName (AuthRequestBean 构造函数自动拼接空格与版本号，与 BLE APP_INFO 前缀一致)",
+          "Uuid": "32位十六进制无连字符字符串 (DataStore DATA_STORE_UUID，与 BLE APP_UUID 原始16字节对应)",
+          "FriendlyName": "Build.MODEL (M.f17921z，与 BLE FRIENDLY_NAME 明文一致)"
+        }
+      },
+      "response_json_schema": {
+        "bean_class": "com/panasonic/jp/lumixlab/bean/AuthResponseBean.java:8-52",
+        "fields": {
+          "Header.ResponseCode": "int (200 表示成功)",
+          "Header.Messages": "String",
+          "Data.AuthToken": "String (会话 Bearer Token)"
+        }
+      },
+      "response_consumer_and_retry": {
+        "primary_consumer": "p281z5/C2657w2.java:84-97 (校验 ResponseCode == 200 且 AuthToken 非空后调用 LlcApplication.getContext().setAuthToken(authToken))",
+        "retry_mechanism": "p281z5/C2657w2.java:123-135 (若首次响应 Data 为空，onComplete 休眠 5000ms 后重发一次 POST /auth，由 p281z5/C2647v2.java:36-47 处理)",
+        "post_auth_ble_gate": "CameraWifiConnectFragment.F() (CameraWifiConnectFragment.java:149-195)：当 f17569Z == 1 且 f17595y == \"camera\" 时，若 BLE 特征 f7003l (CAMERA_OPERATE_NOTIFICATION, 16726c35-52ef-4d00-868d-099549a90d9b) 尚未通知值 2 (f31592l == true)，则启动 30s 定时器等待用户或相机侧确认后再进入功能页。"
+      },
+      "authenticated_header_format": {
+        "formatter": "com/panasonic/jp/lumixlab/util/C1410v.java:300-302 -> B9/AbstractC0105t.java:88-90",
+        "header_name": "Authorization",
+        "header_value_template": "'Bearer <AuthToken>' (注意两端包含字面量单引号 ')",
+        "token_invalidation": "当任意受保护接口返回 Header.ResponseCode == 401 或 HTTP 错误体解析出 401 (p084h6/h.java:53-70) 时，清空 LlcApplication.authToken。"
+      }
+    },
+    "downstream_control_endpoints": {
+      "status": "确认",
+      "declaration_file": "p084h6/a.java:1-225",
+      "categories": {
+        "session": [
+          "POST /auth",
+          "POST /connect-cancel"
+        ],
+        "remote_shooting": [
+          "POST /remote/mode",
+          "POST /remote/get-lvport",
+          "POST /remote/start-stream",
+          "POST /remote/stop-stream",
+          "POST /remote/OnePushAf",
+          "POST /remote/TouchAf",
+          "POST /remote/TouchAe",
+          "POST /remote/Info",
+          "POST /remote/GetCapability",
+          "POST /remote/SetSetting",
+          "POST /remote/SettingInfo",
+          "POST /remote/Capture",
+          "POST /remote/CaptureCancel",
+          "POST /remote/RecStart",
+          "POST /remote/RecStop",
+          "POST /remote/StreamSendStop",
+          "POST /remote/StreamSendRestart",
+          "POST /remote/Polling"
+        ],
+        "photostyle": [
+          "POST /photostyle/mode",
+          "POST /photostyle/get-lvport",
+          "POST /photostyle/start-stream",
+          "POST /photostyle/stop-stream",
+          "POST /photostyle/OnePushAf",
+          "POST /photostyle/TouchAf",
+          "POST /photostyle/TouchAe",
+          "POST /photostyle/Info",
+          "POST /photostyle/GetCapability",
+          "POST /photostyle/SetSetting",
+          "POST /photostyle/SettingInfo",
+          "POST /photostyle/Capture",
+          "POST /photostyle/CaptureCancel",
+          "POST /photostyle/RecStart",
+          "POST /photostyle/RecStop",
+          "POST /photostyle/StreamSendStop",
+          "POST /photostyle/StreamSendRestart",
+          "POST /photostyle/Polling"
+        ],
+        "lut": [
+          "POST /lut/camera",
+          "POST /lut/upload",
+          "POST /lut/delete",
+          "POST /lut/order",
+          "POST /lut/update"
+        ],
+        "media": [
+          "POST /media/Status",
+          "POST /media/list",
+          "POST /media/Rating",
+          "GET /media/image (supports Range header)"
+        ],
+        "auto_transfer": [
+          "POST /auto-transfer/get-list",
+          "POST /auto-transfer/NotifyTranferStatus"
+        ],
+        "firmware": [
+          "POST /firmware/SetDataInfo",
+          "POST /firmware/SendData (multipart/form-data)"
+        ]
+      },
+      "liveview_stream_bootstrap_chain": {
+        "remote_shooting": "RemoteShootingActivity.java:2870-2886 -> P2.java:193-246: (1) POST /remote/Polling -> (2) POST /remote/mode {\"Command\":\"recmode\"} -> (3) 递增本地 UDP 端口 C1410v.f18185d (1234..2048) 并调用 POST /remote/start-stream {\"UDPPortNumber\": port} -> (4) v0(5) 调用 p052e6.c.a() 发送 POST /remote/get-lvport 获取相机端 LvPort -> (5) 启动线程 Q2 (p062f5/Q2.java:66-84) 绑定本地 UDP 端口 C1410v.f18185d，连接 192.168.54.1:LvPort，在其上建立 DTLS (ea.C1637v.b + C1661c3 PSK/TLS handler) 接收实时取景流。"
+      }
+    },
+    "epistemic_classification": {
+      "confirmed": [
+        "BLE GATT 服务 (1fe71b85-8344-4e6a-bf1a-ac7acdb3f8af) 在开启 Wi-Fi 前完成的完整配对写入与读取序列：INITIAL_INFORM -> APP_UUID -> APP_INFO -> FRIENDLY_NAME -> 条件降级 WPA2 -> WIFI_SSID -> WIFI_PASSWORD -> CER_FINGER_PRINT。",
+        "BLE 数据帧封装算法 (C2538k2.d) 与 4 字节逆序异或混淆算法 (C2538k2.e / M1.onCharacteristicRead)，已通过独立离线脚本 verify_lab_control_codec.py 自测验证。",
+        "BLE 开启相机 AP 的触发特征 (ACTION_MODE 7644371c-1ddc-4b16-832f-f07c322e311b) 及状态监听特征 (AP_STATE dcba3a74-80bc-4919-8ef4-0c9f99cc20dd)。",
+        "Android 端通过 WifiNetworkSpecifier + ConnectivityManager.requestNetwork 连接相机 AP，并在 C2617s2.onAvailable 中调用 bindProcessToNetwork(network) 绑定进程路由。",
+        "主控制通道并非只用硬编码 192.168.54.1：默认回退值为 https://192.168.54.1/ (p084h6/b.java:7)，但在连接建立后由 I5.c.d() 从 WifiManager.getDhcpInfo().gateway 动态解析网关 IP 并覆写 b.f22722a；端口固定为 HTTPS 默认 443。与此同时，UDP 实时取景 (Q2.java:68, RunnableC1743t1.java:72) 仍硬编码连接 192.168.54.1:LvPort。",
+        "HTTPS 通道的 TLS 校验机制：TrustManager (p084h6/f.java) 放行自签名证书链，HostnameVerifier (p084h6/d.java) 强制比对服务端叶证书 SHA-256 与 BLE CER_FINGER_PRINT 特征读取的 32 字节指纹。",
+        "会话认证接口 POST /auth 的请求体 (AppInfo, Uuid, FriendlyName) 与 BLE 写入特征严格对应，响应体 Data.AuthToken 被提取并由 C1410v.J() 格式化为带单引号的 'Bearer <token>' 用于全部后续控制请求。"
+      ],
+      "inferred": [
+        "相机侧 HTTPS 服务在收到 POST /auth 时，会将请求 JSON 中的 AppInfo、Uuid、FriendlyName 与此前 BLE 阶段写入 APP_INFO、APP_UUID、FRIENDLY_NAME 特征的值进行比对校验，一致后才签发 AuthToken。",
+        "当 f17569Z == 1 且首次连接相机时，BLE 特征 CAMERA_OPERATE_NOTIFICATION (16726c35-52ef-4d00-868d-099549a90d9b) 返回值 2 代表机身侧完成了连接确认/模式切换就绪。"
+      ],
+      "unknown_or_runtime_dependent": [
+        "INITIAL_INFORM (239c7203-922f-43e9-bdf1-6d1fedf6f43f) 每次连接由相机生成的 4 字节密钥在机身固件内部的随机数/派生源（需结合机身固件 BLE 栈分析）。",
+        "CER_FINGER_PRINT 对应的相机端 TLS 自签名证书是出厂固定、首次配对生成还是每次启动 AP 动态生成（App 端每次 BLE 连接均重新读取 CER_FINGER_PRINT）。",
+        "相机端签发的 AuthToken 的具体字符串长度、字符集与机身侧超时时间（App 端作为不透明字符串处理，仅在收到 ResponseCode == 401 时清空）。",
+        "各具体机型（如 S1M2 / S5M2 / G9M2 等）在 POST /remote/GetCapability 与 POST /remote/SettingInfo 下返回的能力全集差异（由相机运行时动态返回 JSON，App 根据 J0/L 枚举做交集渲染）。"
+      ]
+    }
+  }
+}

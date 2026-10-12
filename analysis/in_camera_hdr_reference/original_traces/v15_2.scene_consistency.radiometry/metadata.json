@@ -1,0 +1,150 @@
+{
+  "module": "v15_2.scene_consistency.radiometry",
+  "filename": "v15_2\\scene_consistency\\radiometry.py",
+  "sha256": "f24a88bb15a6a0aad33e65ea11cdc4c11b7f02ac94f66de3755c5d70a94357d2",
+  "functions": [
+    {
+      "scope": "v15_2.scene_consistency.radiometry",
+      "name": "<module>",
+      "line": 1,
+      "args": [],
+      "names": [
+        "__doc__",
+        "numpy",
+        "np",
+        "scene_evidence",
+        "SceneEvidence",
+        "ops",
+        "Ops",
+        "scene_policy_wgpu",
+        "ScenePolicyWGPU",
+        "SparseEvidence",
+        "Photometry",
+        "gain_tile"
+      ],
+      "imports": [
+        "numpy",
+        "scene_evidence",
+        "ops",
+        "scene_policy_wgpu"
+      ]
+    },
+    {
+      "scope": "v15_2.scene_consistency.radiometry.SparseEvidence",
+      "name": "SparseEvidence",
+      "line": 7,
+      "args": [],
+      "names": [
+        "__name__",
+        "__module__",
+        "__qualname__",
+        "compose",
+        "collect"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.radiometry.SparseEvidence.compose",
+      "name": "compose",
+      "line": 8,
+      "args": [
+        "self",
+        "flow",
+        "H",
+        "origin"
+      ],
+      "names": [
+        "spec",
+        "shape",
+        "emit"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.radiometry.SparseEvidence.collect",
+      "name": "collect",
+      "line": 15,
+      "args": [
+        "self",
+        "stats",
+        "output",
+        "box"
+      ],
+      "names": [
+        "spec",
+        "shape",
+        "join",
+        "emit"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.radiometry.Photometry",
+      "name": "Photometry",
+      "line": 26,
+      "args": [],
+      "names": [
+        "__name__",
+        "__module__",
+        "__qualname__",
+        "BINS",
+        "estimate"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.radiometry.Photometry.estimate",
+      "name": "estimate",
+      "line": 28,
+      "args": [
+        "self",
+        "samples"
+      ],
+      "names": [
+        "spec",
+        "shape",
+        "BINS",
+        "_u32",
+        "_clear_u32",
+        "_dispatch",
+        "buffer",
+        "Ops",
+        "rt",
+        "emit",
+        "dict",
+        "read",
+        "tolist",
+        "release_external",
+        "free"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.radiometry.gain_tile",
+      "name": "gain_tile",
+      "line": 61,
+      "args": [
+        "rt",
+        "field",
+        "shape",
+        "origin",
+        "full"
+      ],
+      "names": [
+        "float",
+        "Ops",
+        "emit"
+      ],
+      "imports": []
+    }
+  ],
+  "imports": [
+    "numpy",
+    "ops",
+    "scene_evidence",
+    "scene_policy_wgpu"
+  ],
+  "shaders": [
+    "carchive/jsr_backend/trace/v15_2.scene_consistency.radiometry/shader_000.wgsl"
+  ]
+}

@@ -1,0 +1,92 @@
+
+<LOCAL_WORKSPACE>/analysis/method0_review_20261011/decoded/GH1__121.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+400bba60 <.data+0xbba60>:
+400bba60:	fc de 00 00 	mov	-1264582656,a2
+400bba64:	a0 b4 
+400bba66:	fc cc 89 bb 	mov	1074510729,d0
+400bba6a:	0b 40 
+400bba6c:	42 04       	mov	d0,(4,sp)
+400bba6e:	99          	mov	a2,a1
+400bba6f:	3c          	mov	sp,a0
+400bba70:	f1 d0       	mov	a0,d0
+400bba72:	28 18       	add	24,d0
+400bba74:	fc cd c8 1d 	mov	1946230216,d1
+400bba78:	01 74 
+400bba7a:	9c          	mov	a3,a0
+400bba7b:	dd 4b cb 00 	call	0x400c85c6,[d2,d3,a2,a3],80
+400bba7f:	00 f0 50 
+400bba82:	a0 00       	cmp	0,d0
+400bba84:	c9 04       	bne	0x400bba88
+400bba86:	ca 06       	bra	0x400bba8c
+400bba88:	10          	extb	d0
+400bba89:	cc fd 00    	jmp	0x400bbb86
+400bba8c:	fc cd ec aa 	mov	1947577068,d1
+400bba90:	15 74 
+400bba92:	80 03       	mov	3,d0
+400bba94:	fc 82 ec aa 	movbu	d0,(0x7415aaec)
+400bba98:	15 74 
+400bba9a:	fc a8 c0 aa 	movbu	(0x7415aac0),d0
+400bba9e:	15 74 
+400bbaa0:	a0 01       	cmp	1,d0
+400bbaa2:	c8 04       	beq	0x400bbaa6
+400bbaa4:	ca 0a       	bra	0x400bbaae
+400bbaa6:	80 02       	mov	2,d0
+400bbaa8:	fc 82 ec aa 	movbu	d0,(0x7415aaec)
+400bbaac:	15 74 
+400bbaae:	fc 88 f0 aa 	mov	a2,(0x7415aaf0)
+400bbab2:	15 74 
+400bbab4:	58 18       	mov	(24,sp),d0
+400bbab6:	fc 81 f4 aa 	mov	d0,(0x7415aaf4)
+400bbaba:	15 74 
+400bbabc:	80 14       	mov	20,d0
+400bbabe:	fc 81 f8 aa 	mov	d0,(0x7415aaf8)
+400bbac2:	15 74 
+400bbac4:	80 5f       	mov	95,d0
+400bbac6:	fc 81 fc aa 	mov	d0,(0x7415aafc)
+400bbaca:	15 74 
+400bbacc:	fc cc 0b 34 	mov	78859,d0
+400bbad0:	01 00 
+400bbad2:	42 04       	mov	d0,(4,sp)
+400bbad4:	46 08       	mov	d1,(8,sp)
+400bbad6:	00          	clr	d0
+400bbad7:	42 0c       	mov	d0,(12,sp)
+400bbad9:	80 ff       	mov	-1,d0
+400bbadb:	42 10       	mov	d0,(16,sp)
+400bbadd:	80 1c       	mov	28,d0
+400bbadf:	85 04       	mov	4,d1
+400bbae1:	f1 e4       	mov	d1,a0
+400bbae3:	95 00       	mov	0,a1
+400bbae5:	dd ca b3 b8 	call	0x7bc46eaf,[d2,d3,a2,a3],32
+400bbae9:	3b f0 20 
+400bbaec:	80 01       	mov	1,d0
+400bbaee:	cc 98 00    	jmp	0x400bbb86
+400bbaf1:	fc a8 d4 aa 	movbu	(0x7415aad4),d0
+400bbaf5:	15 74 
+400bbaf7:	fc de 00 00 	mov	-1255145472,a2
+400bbafb:	30 b5 
+400bbafd:	a0 00       	cmp	0,d0
+400bbaff:	c8 04       	beq	0x400bbb03
+400bbb01:	ca 08       	bra	0x400bbb09
+400bbb03:	fc de 00 00 	mov	-1264582656,a2
+400bbb07:	a0 b4 
+400bbb09:	fc cc 89 bb 	mov	1074510729,d0
+400bbb0d:	0b 40 
+400bbb0f:	42 04       	mov	d0,(4,sp)
+400bbb11:	99          	mov	a2,a1
+400bbb12:	3c          	mov	sp,a0
+400bbb13:	f1 d0       	mov	a0,d0
+400bbb15:	28 18       	add	24,d0
+400bbb17:	fc cd c8 1d 	mov	1946230216,d1
+400bbb1b:	01 74 
+400bbb1d:	9c          	mov	a3,a0
+400bbb1e:	dd a8 ca 00 	call	0x400c85c6,[d2,d3,a2,a3],80
+400bbb22:	00 f0 50 
+400bbb25:	a0 00       	cmp	0,d0
+400bbb27:	c9 04       	bne	0x400bbb2b
+400bbb29:	ca 05       	bra	0x400bbb2e
+400bbb2b:	10          	extb	d0
+400bbb2c:	ca 5a       	bra	0x400bbb86

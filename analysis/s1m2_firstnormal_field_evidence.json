@@ -7,7 +7,8 @@
     "prohibitions_and_boundary_definitions": {
       "candidate_nature": "Serialized configuration backup record in PTP payload (.DAT/.CAM), strictly NOT a hardware MMIO register",
       "data_nature": "Menu state integer flag, strictly NOT raw sensor Bayer stream or all-input RAW buffer",
-      "protocol_tag_nature": "Internal serialization sub-record ID (0x030f), strictly NOT identical to PTP property codes (e.g. 0x0200xxxx / 0x94xx)"
+      "protocol_tag_nature": "Internal serialization sub-record ID (0x030f), strictly NOT identical to PTP property codes (e.g. 0x0200xxxx / 0x94xx)",
+      "goal_status": "Candidate setting localized in offline config dump; original technical goals (mechanical shutter pixel-shift, all-input RAW, in-camera HDR) remain unachieved"
     }
   },
   "verified_samples": {
@@ -28,21 +29,9 @@
           "full_sum_mod_256": 0
         }
       },
-      "subtag_030f_values": [
-        1,
-        1,
-        1
-      ],
-      "fan_045d_values": [
-        1,
-        1,
-        1
-      ],
-      "group_z_0291_values": [
-        1,
-        1,
-        1
-      ]
+      "subtag_030f_values": [1, 1, 1],
+      "fan_045d_values": [1, 1, 1],
+      "group_z_0291_values": [1, 1, 1]
     },
     "02_highres_on": {
       "directory": "analysis/highres_20261008_02",
@@ -61,21 +50,9 @@
           "full_sum_mod_256": 0
         }
       },
-      "subtag_030f_values": [
-        1,
-        1,
-        1
-      ],
-      "fan_045d_values": [
-        1,
-        1,
-        1
-      ],
-      "group_z_0291_values": [
-        1,
-        1,
-        1
-      ]
+      "subtag_030f_values": [1, 1, 1],
+      "fan_045d_values": [1, 1, 1],
+      "group_z_0291_values": [1, 1, 1]
     },
     "03_highres_off": {
       "directory": "analysis/highres_firstnormal_off_20261008_03",
@@ -94,21 +71,9 @@
           "full_sum_mod_256": 0
         }
       },
-      "subtag_030f_values": [
-        2,
-        2,
-        2
-      ],
-      "fan_045d_values": [
-        4,
-        4,
-        4
-      ],
-      "group_z_0291_values": [
-        1,
-        1,
-        1
-      ]
+      "subtag_030f_values": [2, 2, 2],
+      "fan_045d_values": [4, 4, 4],
+      "group_z_0291_values": [1, 1, 1]
     },
     "04_highres_on_fan": {
       "directory": "analysis/highres_firstnormal_on_fan_20261008_04",
@@ -127,21 +92,9 @@
           "full_sum_mod_256": 0
         }
       },
-      "subtag_030f_values": [
-        1,
-        1,
-        1
-      ],
-      "fan_045d_values": [
-        4,
-        4,
-        4
-      ],
-      "group_z_0291_values": [
-        2,
-        2,
-        2
-      ]
+      "subtag_030f_values": [1, 1, 1],
+      "fan_045d_values": [4, 4, 4],
+      "group_z_0291_values": [2, 2, 2]
     },
     "05_highres_off_fan": {
       "directory": "analysis/highres_firstnormal_off_fan_20261008_05",
@@ -160,21 +113,9 @@
           "full_sum_mod_256": 0
         }
       },
-      "subtag_030f_values": [
-        2,
-        2,
-        2
-      ],
-      "fan_045d_values": [
-        4,
-        4,
-        4
-      ],
-      "group_z_0291_values": [
-        2,
-        2,
-        2
-      ]
+      "subtag_030f_values": [2, 2, 2],
+      "fan_045d_values": [4, 4, 4],
+      "group_z_0291_values": [2, 2, 2]
     }
   },
   "micro_record_structure_evidence": {

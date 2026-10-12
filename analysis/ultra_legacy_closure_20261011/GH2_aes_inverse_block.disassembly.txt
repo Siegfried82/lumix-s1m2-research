@@ -1,0 +1,295 @@
+
+<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GH2__V11.bin.plaintext:     file format binary
+
+
+Disassembly of section .data:
+
+400609b2 <.data+0x60fb2>:
+400609b2:	5e 40       	mov	(64,sp),a2
+400609b4:	47 18       	mov	a1,(24,sp)
+400609b6:	78          	mov	(a0),d2
+400609b7:	72          	mov	(a2),d0
+400609b8:	29 ff       	add	-1,d1
+400609ba:	f2 22       	xor	d0,d2
+400609bc:	4a 08       	mov	d2,(8,sp)
+400609be:	f8 08 04    	mov	(4,a0),d2
+400609c1:	f8 02 04    	mov	(4,a2),d0
+400609c4:	f2 22       	xor	d0,d2
+400609c6:	4a 04       	mov	d2,(4,sp)
+400609c8:	f8 08 08    	mov	(8,a0),d2
+400609cb:	f8 02 08    	mov	(8,a2),d0
+400609ce:	f2 22       	xor	d0,d2
+400609d0:	4a 00       	mov	d2,(sp)
+400609d2:	f8 08 0c    	mov	(12,a0),d2
+400609d5:	f8 02 0c    	mov	(12,a2),d0
+400609d8:	46 10       	mov	d1,(16,sp)
+400609da:	f2 22       	xor	d0,d2
+400609dc:	f1 e9       	mov	d2,a1
+400609de:	f1 d8       	mov	a2,d0
+400609e0:	28 10       	add	16,d0
+400609e2:	42 40       	mov	d0,(64,sp)
+400609e4:	db          	setlb	
+400609e5:	58 08       	mov	(8,sp),d0
+400609e7:	fc de 88 c5 	mov	1075889544,a2
+400609eb:	20 40 
+400609ed:	f8 e0 ff    	and	255,d0
+400609f0:	54          	asl2	d0
+400609f1:	f8 c6 08    	lsr	8,d2
+400609f4:	f8 e2 ff    	and	255,d2
+400609f7:	56          	asl2	d2
+400609f8:	fc dc 88 c1 	mov	1075888520,a0
+400609fc:	20 40 
+400609fe:	f3 80       	mov	(d0,a0),a0
+40060a00:	f3 0a       	mov	(d2,a2),d0
+40060a02:	5a 00       	mov	(sp),d2
+40060a04:	fc de 88 c9 	mov	1075890568,a2
+40060a08:	20 40 
+40060a0a:	f8 c6 10    	lsr	16,d2
+40060a0d:	f8 e2 ff    	and	255,d2
+40060a10:	56          	asl2	d2
+40060a11:	f3 3a       	mov	(d2,a2),d3
+40060a13:	5a 04       	mov	(4,sp),d2
+40060a15:	fc de 88 cd 	mov	1075891592,a2
+40060a19:	20 40 
+40060a1b:	f8 c6 18    	lsr	24,d2
+40060a1e:	56          	asl2	d2
+40060a1f:	f3 2a       	mov	(d2,a2),d2
+40060a21:	5e 40       	mov	(64,sp),a2
+40060a23:	f1 d1       	mov	a0,d1
+40060a25:	f2 24       	xor	d1,d0
+40060a27:	76          	mov	(a2),d1
+40060a28:	f2 2c       	xor	d3,d0
+40060a2a:	46 1c       	mov	d1,(28,sp)
+40060a2c:	59 1c       	mov	(28,sp),d1
+40060a2e:	f2 28       	xor	d2,d0
+40060a30:	f2 24       	xor	d1,d0
+40060a32:	42 14       	mov	d0,(20,sp)
+40060a34:	58 04       	mov	(4,sp),d0
+40060a36:	5a 08       	mov	(8,sp),d2
+40060a38:	f8 e0 ff    	and	255,d0
+40060a3b:	54          	asl2	d0
+40060a3c:	f8 c6 08    	lsr	8,d2
+40060a3f:	f8 e2 ff    	and	255,d2
+40060a42:	56          	asl2	d2
+40060a43:	fc dc 88 c1 	mov	1075888520,a0
+40060a47:	20 40 
+40060a49:	f3 80       	mov	(d0,a0),a0
+40060a4b:	fc df 88 c5 	mov	1075889544,a3
+40060a4f:	20 40 
+40060a51:	f3 0b       	mov	(d2,a3),d0
+40060a53:	5a 00       	mov	(sp),d2
+40060a55:	fc df 88 cd 	mov	1075891592,a3
+40060a59:	20 40 
+40060a5b:	f8 c6 18    	lsr	24,d2
+40060a5e:	56          	asl2	d2
+40060a5f:	f3 1b       	mov	(d2,a3),d1
+40060a61:	f1 d6       	mov	a1,d2
+40060a63:	f8 c6 10    	lsr	16,d2
+40060a66:	f8 e2 ff    	and	255,d2
+40060a69:	56          	asl2	d2
+40060a6a:	fc df 88 c9 	mov	1075890568,a3
+40060a6e:	20 40 
+40060a70:	f3 3b       	mov	(d2,a3),d3
+40060a72:	f8 0a 04    	mov	(4,a2),d2
+40060a75:	fc df 88 c5 	mov	1075889544,a3
+40060a79:	20 40 
+40060a7b:	4a 20       	mov	d2,(32,sp)
+40060a7d:	f1 d2       	mov	a0,d2
+40060a7f:	f2 28       	xor	d2,d0
+40060a81:	5a 20       	mov	(32,sp),d2
+40060a83:	f2 2c       	xor	d3,d0
+40060a85:	f2 24       	xor	d1,d0
+40060a87:	f2 28       	xor	d2,d0
+40060a89:	42 0c       	mov	d0,(12,sp)
+40060a8b:	58 00       	mov	(sp),d0
+40060a8d:	fc dc 88 c1 	mov	1075888520,a0
+40060a91:	20 40 
+40060a93:	f8 e0 ff    	and	255,d0
+40060a96:	54          	asl2	d0
+40060a97:	f3 80       	mov	(d0,a0),a0
+40060a99:	58 04       	mov	(4,sp),d0
+40060a9b:	f8 c4 08    	lsr	8,d0
+40060a9e:	f8 e0 ff    	and	255,d0
+40060aa1:	54          	asl2	d0
+40060aa2:	f3 23       	mov	(d0,a3),d2
+40060aa4:	58 08       	mov	(8,sp),d0
+40060aa6:	fc df 88 c9 	mov	1075890568,a3
+40060aaa:	20 40 
+40060aac:	f8 c4 10    	lsr	16,d0
+40060aaf:	f8 e0 ff    	and	255,d0
+40060ab2:	54          	asl2	d0
+40060ab3:	f3 33       	mov	(d0,a3),d3
+40060ab5:	f1 d4       	mov	a1,d0
+40060ab7:	f8 c4 18    	lsr	24,d0
+40060aba:	54          	asl2	d0
+40060abb:	fc df 88 cd 	mov	1075891592,a3
+40060abf:	20 40 
+40060ac1:	f3 13       	mov	(d0,a3),d1
+40060ac3:	f8 02 08    	mov	(8,a2),d0
+40060ac6:	42 24       	mov	d0,(36,sp)
+40060ac8:	f1 d0       	mov	a0,d0
+40060aca:	fc dc 88 c1 	mov	1075888520,a0
+40060ace:	20 40 
+40060ad0:	f2 22       	xor	d0,d2
+40060ad2:	58 24       	mov	(36,sp),d0
+40060ad4:	f2 2e       	xor	d3,d2
+40060ad6:	f1 d7       	mov	a1,d3
+40060ad8:	f8 e3 ff    	and	255,d3
+40060adb:	57          	asl2	d3
+40060adc:	f3 8c       	mov	(d3,a0),a0
+40060ade:	f2 26       	xor	d1,d2
+40060ae0:	59 00       	mov	(sp),d1
+40060ae2:	f2 22       	xor	d0,d2
+40060ae4:	f1 eb       	mov	d2,a3
+40060ae6:	f8 c5 08    	lsr	8,d1
+40060ae9:	f8 e1 ff    	and	255,d1
+40060aec:	55          	asl2	d1
+40060aed:	5b 04       	mov	(4,sp),d3
+40060aef:	fc dd 88 c5 	mov	1075889544,a1
+40060af3:	20 40 
+40060af5:	f3 25       	mov	(d1,a1),d2
+40060af7:	f8 c7 10    	lsr	16,d3
+40060afa:	f8 e3 ff    	and	255,d3
+40060afd:	57          	asl2	d3
+40060afe:	58 08       	mov	(8,sp),d0
+40060b00:	fc dd 88 c9 	mov	1075890568,a1
+40060b04:	20 40 
+40060b06:	f3 3d       	mov	(d3,a1),d3
+40060b08:	f8 c4 18    	lsr	24,d0
+40060b0b:	54          	asl2	d0
+40060b0c:	fc dd 88 cd 	mov	1075891592,a1
+40060b10:	20 40 
+40060b12:	f3 11       	mov	(d0,a1),d1
+40060b14:	f8 02 0c    	mov	(12,a2),d0
+40060b17:	5d 14       	mov	(20,sp),a1
+40060b19:	42 28       	mov	d0,(40,sp)
+40060b1b:	47 08       	mov	a1,(8,sp)
+40060b1d:	5d 0c       	mov	(12,sp),a1
+40060b1f:	f1 d0       	mov	a0,d0
+40060b21:	f2 22       	xor	d0,d2
+40060b23:	58 28       	mov	(40,sp),d0
+40060b25:	f2 2e       	xor	d3,d2
+40060b27:	f2 26       	xor	d1,d2
+40060b29:	f2 22       	xor	d0,d2
+40060b2b:	47 04       	mov	a1,(4,sp)
+40060b2d:	f1 d8       	mov	a2,d0
+40060b2f:	28 10       	add	16,d0
+40060b31:	42 40       	mov	d0,(64,sp)
+40060b33:	58 10       	mov	(16,sp),d0
+40060b35:	4f 00       	mov	a3,(sp)
+40060b37:	f1 e9       	mov	d2,a1
+40060b39:	28 ff       	add	-1,d0
+40060b3b:	42 10       	mov	d0,(16,sp)
+40060b3d:	a0 00       	cmp	0,d0
+40060b3f:	d1          	lgt	
+40060b40:	fc de 88 b0 	mov	1075884168,a2
+40060b44:	20 40 
+40060b46:	58 08       	mov	(8,sp),d0
+40060b48:	5c 40       	mov	(64,sp),a0
+40060b4a:	f8 e0 ff    	and	255,d0
+40060b4d:	f4 12       	movbu	(d0,a2),d1
+40060b4f:	88          	mov	d2,d0
+40060b50:	f8 c4 08    	lsr	8,d0
+40060b53:	f1 de       	mov	a3,d2
+40060b55:	f8 c6 10    	lsr	16,d2
+40060b58:	f8 e2 ff    	and	255,d2
+40060b5b:	f4 3a       	movbu	(d2,a2),d3
+40060b5d:	5a 04       	mov	(4,sp),d2
+40060b5f:	f8 e0 ff    	and	255,d0
+40060b62:	f4 02       	movbu	(d0,a2),d0
+40060b64:	f8 c6 18    	lsr	24,d2
+40060b67:	f4 2a       	movbu	(d2,a2),d2
+40060b69:	f0 00       	mov	(a0),a0
+40060b6b:	f8 c3 10    	asl	16,d3
+40060b6e:	f8 c0 08    	asl	8,d0
+40060b71:	f2 21       	xor	d0,d1
+40060b73:	f2 2d       	xor	d3,d1
+40060b75:	f8 c2 18    	asl	24,d2
+40060b78:	f2 29       	xor	d2,d1
+40060b7a:	f1 d0       	mov	a0,d0
+40060b7c:	5c 18       	mov	(24,sp),a0
+40060b7e:	f2 21       	xor	d0,d1
+40060b80:	64          	mov	d1,(a0)
+40060b81:	58 04       	mov	(4,sp),d0
+40060b83:	5c 40       	mov	(64,sp),a0
+40060b85:	f8 e0 ff    	and	255,d0
+40060b88:	f4 32       	movbu	(d0,a2),d3
+40060b8a:	58 08       	mov	(8,sp),d0
+40060b8c:	f1 d6       	mov	a1,d2
+40060b8e:	f8 c6 10    	lsr	16,d2
+40060b91:	f8 e2 ff    	and	255,d2
+40060b94:	f4 1a       	movbu	(d2,a2),d1
+40060b96:	5a 00       	mov	(sp),d2
+40060b98:	f8 c4 08    	lsr	8,d0
+40060b9b:	f8 e0 ff    	and	255,d0
+40060b9e:	f4 02       	movbu	(d0,a2),d0
+40060ba0:	f8 c6 18    	lsr	24,d2
+40060ba3:	f4 2a       	movbu	(d2,a2),d2
+40060ba5:	f8 20 04    	mov	(4,a0),a0
+40060ba8:	f8 c1 10    	asl	16,d1
+40060bab:	f8 c0 08    	asl	8,d0
+40060bae:	f2 23       	xor	d0,d3
+40060bb0:	f2 27       	xor	d1,d3
+40060bb2:	f8 c2 18    	asl	24,d2
+40060bb5:	f2 2b       	xor	d2,d3
+40060bb7:	f1 d0       	mov	a0,d0
+40060bb9:	5c 18       	mov	(24,sp),a0
+40060bbb:	f2 23       	xor	d0,d3
+40060bbd:	f8 1c 04    	mov	d3,(4,a0)
+40060bc0:	58 00       	mov	(sp),d0
+40060bc2:	5c 40       	mov	(64,sp),a0
+40060bc4:	f8 e0 ff    	and	255,d0
+40060bc7:	f4 12       	movbu	(d0,a2),d1
+40060bc9:	58 04       	mov	(4,sp),d0
+40060bcb:	f1 d6       	mov	a1,d2
+40060bcd:	f8 c4 08    	lsr	8,d0
+40060bd0:	f8 e0 ff    	and	255,d0
+40060bd3:	f4 32       	movbu	(d0,a2),d3
+40060bd5:	58 08       	mov	(8,sp),d0
+40060bd7:	f8 c6 18    	lsr	24,d2
+40060bda:	f8 c4 10    	lsr	16,d0
+40060bdd:	f8 e0 ff    	and	255,d0
+40060be0:	f8 20 08    	mov	(8,a0),a0
+40060be3:	f1 e7       	mov	d1,a3
+40060be5:	f4 12       	movbu	(d0,a2),d1
+40060be7:	f4 0a       	movbu	(d2,a2),d0
+40060be9:	f8 c3 08    	asl	8,d3
+40060bec:	f1 de       	mov	a3,d2
+40060bee:	f2 2e       	xor	d3,d2
+40060bf0:	f8 c1 10    	asl	16,d1
+40060bf3:	f2 26       	xor	d1,d2
+40060bf5:	f8 c0 18    	asl	24,d0
+40060bf8:	f2 22       	xor	d0,d2
+40060bfa:	88          	mov	d2,d0
+40060bfb:	f1 d1       	mov	a0,d1
+40060bfd:	5c 18       	mov	(24,sp),a0
+40060bff:	f2 24       	xor	d1,d0
+40060c01:	f8 10 08    	mov	d0,(8,a0)
+40060c04:	59 00       	mov	(sp),d1
+40060c06:	58 04       	mov	(4,sp),d0
+40060c08:	5c 40       	mov	(64,sp),a0
+40060c0a:	f1 d7       	mov	a1,d3
+40060c0c:	f8 e3 ff    	and	255,d3
+40060c0f:	f4 3e       	movbu	(d3,a2),d3
+40060c11:	f8 c5 08    	lsr	8,d1
+40060c14:	f8 e1 ff    	and	255,d1
+40060c17:	f4 26       	movbu	(d1,a2),d2
+40060c19:	f8 c4 10    	lsr	16,d0
+40060c1c:	f8 e0 ff    	and	255,d0
+40060c1f:	f4 12       	movbu	(d0,a2),d1
+40060c21:	58 08       	mov	(8,sp),d0
+40060c23:	f8 20 0c    	mov	(12,a0),a0
+40060c26:	f8 c4 18    	lsr	24,d0
+40060c29:	f4 02       	movbu	(d0,a2),d0
+40060c2b:	f8 c2 08    	asl	8,d2
+40060c2e:	f2 2b       	xor	d2,d3
+40060c30:	f8 c1 10    	asl	16,d1
+40060c33:	f2 27       	xor	d1,d3
+40060c35:	f8 c0 18    	asl	24,d0
+40060c38:	8d          	mov	d3,d1
+40060c39:	f2 21       	xor	d0,d1
+40060c3b:	f1 d0       	mov	a0,d0
+40060c3d:	5c 18       	mov	(24,sp),a0
+40060c3f:	f2 21       	xor	d0,d1
+40060c41:	f8 14 0c    	mov	d1,(12,a0)
+40060c44:	de f0 3c    	retf	[d2,d3,a2,a3],60

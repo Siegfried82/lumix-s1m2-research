@@ -354,6 +354,7 @@ def main():
             "hypothesis_3_flags_2_components_contain_boot_tables": "FALSIFIED (All flags=2 non-empty components are uniform 0x00 or 0xFF filler buffers)",
             "hypothesis_4_open_source_configs_directly_anchor_firmware": "FALSIFIED (Public U-Boot MC8241/MC501 source code is not exposed in decrypted form in the UPD container)",
             "code_anchor_established": False,
+            "original_goals_status": "UNACCOMPLISHED (In-camera mechanical shutter pixel shift, full RAW export, and in-camera HDR cannot be established without decrypted executable firmware)"
         }
     }
 

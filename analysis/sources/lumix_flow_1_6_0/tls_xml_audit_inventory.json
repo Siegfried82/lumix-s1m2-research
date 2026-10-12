@@ -1,0 +1,275 @@
+{
+  "scope": "Flow 1.6.0 static mirror TLS and XML upload call chains; no device execution",
+  "files": [
+    {
+      "path": "analysis/sources/lumix_flow_1_6_0/decompiled/sources/p062z0/p.java",
+      "sha256": "7c671cc91bc83b6b1bcbea3988d83f048418dbb4660b0a3e98723f14da3562e5"
+    },
+    {
+      "path": "analysis/sources/lumix_flow_1_6_0/decompiled/sources/p062z0/h.java",
+      "sha256": "e6517185672154c33d0cd9f29cddb76a242c08103b835b0bb4a3f5364684bfdd"
+    },
+    {
+      "path": "analysis/sources/lumix_flow_1_6_0/decompiled/sources/p062z0/q.java",
+      "sha256": "6d8893e00957dedfa049b407c042fc08def1b2932dcb1d854acf1d40ef5aa72d"
+    },
+    {
+      "path": "analysis/sources/lumix_flow_1_6_0/decompiled/sources/p062z0/f.java",
+      "sha256": "556de031327330e035ca0b153b758bf2dac9a7a64b9a03f405cd3b849591b14c"
+    },
+    {
+      "path": "analysis/sources/lumix_flow_1_6_0/decompiled/sources/p062z0/E.java",
+      "sha256": "1718d5fc17c529485b6c34ef302985693301a192e939721ee17ec0f4fff0b2f8"
+    },
+    {
+      "path": "analysis/sources/lumix_flow_1_6_0/decompiled/sources/p017g1/i.java",
+      "sha256": "74b58bb39b6fa7c2d9cb299379493c70e1566ad32744616d095684ecbcb06ba7"
+    },
+    {
+      "path": "analysis/sources/lumix_flow_1_6_0/decompiled/sources/H0/a.java",
+      "sha256": "93a57b7fd9a14a1b8dc35bcaca248f81a0ba3dd4339eda884507e591bd807199"
+    },
+    {
+      "path": "analysis/sources/lumix_flow_1_6_0/decompiled/sources/H0/b.java",
+      "sha256": "0b7d7fb9731fc653698b6b4eebd3b5122a95c2324682cb3de15569eef37b7383"
+    },
+    {
+      "path": "analysis/sources/lumix_flow_1_6_0/decompiled/sources/com/panasonic/jp/flow/ui/activity/mirror/MirrorConnectActivity.java",
+      "sha256": "f3e824258dbe83772702af1b6f563e3aac0fc758a2b80bfdf7eb3fc983b06cd7"
+    },
+    {
+      "path": "analysis/sources/lumix_flow_1_6_0/decompiled/sources/com/panasonic/jp/flow/ui/activity/liveview/RecordActivity.java",
+      "sha256": "d1cb9a376c80ebd8e6efb2f9053e49035ae8e1373b4050986eb44a5783f217e2"
+    },
+    {
+      "path": "analysis/sources/lumix_flow_1_6_0/decompiled/sources/com/panasonic/jp/flow/wireless/util/WifiHelper.java",
+      "sha256": "81a0b667e65ddcf63dac628365e6d4abbf43ec4988391d24b480d99ded69cb80"
+    },
+    {
+      "path": "analysis/sources/lumix_flow_1_6_0/decompiled/sources/com/panasonic/jp/flow/wireless/util/SendXmlUtils.java",
+      "sha256": "6963a2515e075bb3cdf342c455b323927f492e0fd8bed914f9bd4c401e8345fa"
+    },
+    {
+      "path": "analysis/sources/lumix_flow_1_6_0/decompiled/sources/com/panasonic/jp/flow/wireless/http/ApiService.java",
+      "sha256": "805289b6603de3874fc7cfbbd5bc18c480de29545336e79dbe59ab754b40575a"
+    }
+  ],
+  "tls_request_enum": [
+    {
+      "name": "None",
+      "value_expression": "\"none\"",
+      "line": 7
+    },
+    {
+      "name": "ShootFinish",
+      "value_expression": "\"shootFinish\"",
+      "line": 8
+    },
+    {
+      "name": "Join",
+      "value_expression": "\"join\"",
+      "line": 9
+    },
+    {
+      "name": "ImageQuality",
+      "value_expression": "\"quality\"",
+      "line": 10
+    },
+    {
+      "name": "ApplyDirector",
+      "value_expression": "\"director\"",
+      "line": 11
+    },
+    {
+      "name": "TurnPage",
+      "value_expression": "\"turnPage\"",
+      "line": 12
+    },
+    {
+      "name": "DirectorRating",
+      "value_expression": "\"shootRating\"",
+      "line": 13
+    },
+    {
+      "name": "LocationChoose",
+      "value_expression": "HttpHeaders.LOCATION",
+      "line": 14
+    },
+    {
+      "name": "CutChoose",
+      "value_expression": "\"cutChoose\"",
+      "line": 15
+    },
+    {
+      "name": "CutAdd",
+      "value_expression": "\"cutAdd\"",
+      "line": 16
+    },
+    {
+      "name": "CutEdit",
+      "value_expression": "\"cutEdit\"",
+      "line": 17
+    },
+    {
+      "name": "MusicStatus",
+      "value_expression": "\"musicPlay\"",
+      "line": 18
+    },
+    {
+      "name": "MovieMove",
+      "value_expression": "\"playBackListMove\"",
+      "line": 19
+    },
+    {
+      "name": "ReplayStatus",
+      "value_expression": "\"playback\"",
+      "line": 20
+    },
+    {
+      "name": "ReplayPoint",
+      "value_expression": "\"playbackDrop\"",
+      "line": 21
+    },
+    {
+      "name": "ReplayDrag",
+      "value_expression": "\"playbackDrag\"",
+      "line": 22
+    },
+    {
+      "name": "playbackDragStart",
+      "value_expression": "\"playbackDragStart\"",
+      "line": 23
+    },
+    {
+      "name": "playbackDragEnd",
+      "value_expression": "\"playbackDragEnd\"",
+      "line": 24
+    },
+    {
+      "name": "ReplayRate",
+      "value_expression": "\"playbackRate\"",
+      "line": 25
+    },
+    {
+      "name": "ReplayMark",
+      "value_expression": "\"playbackMark\"",
+      "line": 26
+    },
+    {
+      "name": "ReplayTurn",
+      "value_expression": "\"playbackTurn\"",
+      "line": 27
+    },
+    {
+      "name": "ReplayExit",
+      "value_expression": "\"playbackQuit\"",
+      "line": 28
+    },
+    {
+      "name": "MirrorProject",
+      "value_expression": "\"project\"",
+      "line": 29
+    },
+    {
+      "name": "ShootingStatus",
+      "value_expression": "\"shoot\"",
+      "line": 30
+    },
+    {
+      "name": "Permissions",
+      "value_expression": "\"controllerType\"",
+      "line": 31
+    },
+    {
+      "name": "ToPlayback",
+      "value_expression": "\"ToPlayback\"",
+      "line": 32
+    },
+    {
+      "name": "CutThumbnail",
+      "value_expression": "\"cutImage\"",
+      "line": 33
+    },
+    {
+      "name": "MovieThumbnail",
+      "value_expression": "\"videoImage\"",
+      "line": 34
+    },
+    {
+      "name": "Heart",
+      "value_expression": "\"heart\"",
+      "line": 35
+    },
+    {
+      "name": "RateSet",
+      "value_expression": "\"isRate\"",
+      "line": 36
+    },
+    {
+      "name": "ImageStatus",
+      "value_expression": "\"imageStatus\"",
+      "line": 37
+    }
+  ],
+  "tls_response_enum": [
+    {
+      "name": "None",
+      "value_expression": "CoreConstants.Wrapper.Name.NONE",
+      "line": 7
+    },
+    {
+      "name": "Start",
+      "value_expression": "\"start\"",
+      "line": 8
+    },
+    {
+      "name": "Stop",
+      "value_expression": "\"stop\"",
+      "line": 9
+    },
+    {
+      "name": "Script",
+      "value_expression": "\"script\"",
+      "line": 10
+    },
+    {
+      "name": "ShootFinish",
+      "value_expression": "\"shootFinish\"",
+      "line": 11
+    },
+    {
+      "name": "ReplayStatus",
+      "value_expression": "\"playback\"",
+      "line": 12
+    },
+    {
+      "name": "ShootRating",
+      "value_expression": "\"shootRating\"",
+      "line": 13
+    },
+    {
+      "name": "LumixDisconnect",
+      "value_expression": "\"LumixDisconnect\"",
+      "line": 14
+    }
+  ],
+  "raw_dex_server_scan": {
+    "summary": true,
+    "dex_count": 5,
+    "class_count": 29265,
+    "implemented_method_count": 186134,
+    "instruction_count": 2781297,
+    "references": 10
+  },
+  "raw_dex_constructor_calls": [
+    {
+      "dex": "classes4.dex",
+      "class": "Lcom/panasonic/jp/flow/ui/activity/liveview/RecordActivity;",
+      "method": "init",
+      "code_unit_offset": 427,
+      "opcode": "invoke-direct",
+      "target_method": "<init>"
+    }
+  ],
+  "official_reference": "https://av.jpn.support.panasonic.com/support/global/cs/soft/lumix_flow/en/dc-s1m2/098.html"
+}

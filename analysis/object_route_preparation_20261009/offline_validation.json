@@ -1,0 +1,34 @@
+{
+  "scope": "offline helper validation and direct-child capture log inventory; not a device test",
+  "capture_logs_searched": 14,
+  "object_operation_matches": [],
+  "parser_checks": {
+    "device_error_preserved": true,
+    "successful_empty_array": true,
+    "two_handles": true,
+    "malformed_payloads_rejected": 4
+  },
+  "source_sha256": "34875416d3a4788870e608265a6f8e213a4bd4157cde086560c46a700cbda6b5",
+  "helper_executed": true,
+  "executable_sha256": "0bb99d921a32ca769e1a3b9457f6394cf8a074c19885b74491de0797efb65e2c",
+  "helper_execution_mode": "--validate-plan only, before device browser initialization",
+  "device_operations_executed": false,
+  "compiled_and_linked": true,
+  "invalid_plans_rejected": [
+    "write_opcode",
+    "truncated_opcode",
+    "fractional_opcode",
+    "wrong_arity",
+    "negative_param",
+    "oversize_param",
+    "fractional_param",
+    "path_traversal",
+    "wrong_type",
+    "empty_plan",
+    "non_dictionary"
+  ],
+  "validated_packets": [
+    "storage_ids 0c0000000100041001000000",
+    "all_object_handles 180000000100071002000000ffffffff0000000000000000"
+  ]
+}

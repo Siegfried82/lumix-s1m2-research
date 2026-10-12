@@ -1,0 +1,82 @@
+[
+  {
+    "purpose" : "allowlisted_read_inventory",
+    "read_count" : 4,
+    "event" : "started",
+    "time_utc" : "2026-10-12T16:07:50Z"
+  },
+  {
+    "event" : "device_found",
+    "model" : "DC-S1M2",
+    "time_utc" : "2026-10-12T16:07:50Z"
+  },
+  {
+    "event" : "session_opened",
+    "time_utc" : "2026-10-12T16:07:50Z"
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554560
+    ],
+    "data_bytes" : 80,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-12T16:07:50Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "drive_before",
+    "index" : 0
+  },
+  {
+    "opcode" : "0x9414",
+    "params" : [
+      1392508945
+    ],
+    "data_bytes" : 10751,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-12T16:07:50Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "lut_list_1",
+    "index" : 1
+  },
+  {
+    "opcode" : "0x9414",
+    "params" : [
+      1392508945
+    ],
+    "data_bytes" : 10751,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-12T16:07:50Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "lut_list_2",
+    "index" : 2
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554560
+    ],
+    "data_bytes" : 80,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-12T16:07:50Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "drive_after",
+    "index" : 3
+  },
+  {
+    "event" : "session_closed",
+    "error" : "",
+    "time_utc" : "2026-10-12T16:07:50Z"
+  }
+]

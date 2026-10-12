@@ -1,0 +1,1037 @@
+{
+  "G1___150.bin.decoded": {
+    "size_bytes": 8388608,
+    "sha256": "0cace0649d5028cbe125437a3585b059209aa96fc22b7dcc535c999072108224",
+    "architecture": {
+      "isa": "Matsushita/Panasonic MN10300 (AM33) 32-bit little-endian",
+      "reset_vector_offset": "0x00000000",
+      "reset_vector_bytes_hex": "fcdd50000040f0f5",
+      "reset_entry_va": "0x40000050",
+      "cached_rom_va_range": "0x40000000..0x407fffff",
+      "uncached_flash_va_base": "0x80000000",
+      "sdram_overlay_file_offset": "0x0600000",
+      "sdram_overlay_va_base": "0x7bc00000",
+      "uncached_sdram_update_staging_va": "0xb4a00000",
+      "rom_tail_32kb_copy_insn_offset": "0x02b8293",
+      "rom_tail_32kb_src_va": "0x407f4000",
+      "rom_tail_32kb_dst_ram_va": "0x7400343c"
+    },
+    "version_and_identity": {
+      "body_region_flag_offset": "0x00000016",
+      "body_region_flag_u16_le": "0x0000",
+      "rom_version_table_offset": "0x000006a0",
+      "rom_version_table_va": "0x400006a0",
+      "main_ver_bcd_u16_le": "0x0150",
+      "sub_ver_u16_le_0x6a2": "0x007b",
+      "model_hw_id_u16_le_0x6aa": "0x009a",
+      "raw_26b_hex": "50017b002603002101009a001021260300087b000001ffffffff",
+      "pana_flash_sector_headers": [
+        {
+          "offset": "0x07f0000",
+          "va": "0x407f0000",
+          "ver_u16_le": "0x0150",
+          "magic": "Pana"
+        },
+        {
+          "offset": "0x07f2000",
+          "va": "0x407f2000",
+          "ver_u16_le": "0x0150",
+          "magic": "Pana"
+        }
+      ],
+      "rom_identity_block": {
+        "file_offset": "0x07fbf00",
+        "rom_va": "0x407fbf00",
+        "mirrored_ram_va": "0x7400b33c",
+        "vendor_0x00": "Panasonic",
+        "model_0x10": "DMC-G1",
+        "tag_0x20": "_PANA",
+        "tag_0x28": "PANA",
+        "update_prefix_0x30": "G1___",
+        "brand_0x38": "LUMIX"
+      }
+    },
+    "confirmed_functions": {
+      "verify_34b_record_horizontal_checksum": [
+        "0x02b9403"
+      ],
+      "accumulate_16col_vertical_checksum": [
+        "0x02b97ab"
+      ],
+      "verify_16col_vertical_zero": [
+        "0x02b97d4"
+      ],
+      "decode_method0_34b_stream": [
+        {
+          "prologue": "0x02b9699",
+          "step_34_32_loop": "0x02b9740"
+        }
+      ],
+      "check_reset_vector_magic_fcdd": [
+        "0x02b4e09"
+      ],
+      "parse_motorola_s3_ahx": [
+        "0x02b9a1a"
+      ],
+      "nor_flash_unlock_bypass_erase_and_prog": [
+        "0x02b8fbb",
+        "0x02b9031"
+      ],
+      "sub_ver_0x400006a2_compare_sites": [
+        "0x0206548",
+        "0x02ae016",
+        "0x060ef7c",
+        "0x060ef8a",
+        "0x060ef98"
+      ],
+      "main_ver_0x400006a0_xref_sites": [
+        "0x0206513",
+        "0x0215124",
+        "0x022d54b",
+        "0x02912de",
+        "0x0291a50",
+        "0x0291cef"
+      ],
+      "update_prefix_5char_ram_xref_sites": [
+        "0x0287b28",
+        "0x02b2d75"
+      ]
+    },
+    "strings": {
+      "SD_UPDATER_WILDCARDS_ES_OL_SL": [
+        "0x0436c66"
+      ],
+      "ROMDATA_BIN": [
+        "0x0436f6c"
+      ],
+      "FIRMWARE_BIN": [
+        "0x0436f7b"
+      ],
+      "ESFFFFFF_BIN": [
+        "0x043a7f0"
+      ],
+      "FMT_4S_04D": [
+        "0x0436ea4",
+        "0x0436edb",
+        "0x0436eed",
+        "0x0438559",
+        "0x043856b"
+      ],
+      "EEPROM_AREA_UPDATE": [
+        "0x0310418"
+      ],
+      "PANA_MAGIC_TABLE": [
+        "0x043a766"
+      ],
+      "AHX_FILES": [
+        {
+          "offset": "0x043a7d8",
+          "string": "A:\\G1.AHX"
+        },
+        {
+          "offset": "0x043a7e2",
+          "string": "A:\\G1E.AHX"
+        }
+      ]
+    },
+    "constants_and_crypto": {
+      "crc32_normal_04c11db7_table": [],
+      "aes_sbox_or_te_tables": [],
+      "des_sboxes": [],
+      "sha1_sha256_md5_iv_or_k_tables": [],
+      "crc32_reflected_edb88320_table": [],
+      "ruled_out_coincidences": {
+        "mt19937_0x9908b0df_in_osd_data_table": [],
+        "mt19937_0x6c078965_cross_insn_boundary": []
+      }
+    }
+  },
+  "G2___V11.bin.decoded": {
+    "size_bytes": 16777216,
+    "sha256": "1e893ab3468cac6921fd796f9656706bbceecfe79e716b6aa644d0ed91966784",
+    "architecture": {
+      "isa": "Matsushita/Panasonic MN10300 (AM33) 32-bit little-endian",
+      "reset_vector_offset": "0x00000000",
+      "reset_vector_bytes_hex": "fcdd18000040f0f5",
+      "reset_entry_va": "0x40000018",
+      "cached_rom_va_range": "0x40000000..0x40ffffff",
+      "uncached_flash_va_base": "0x80000000",
+      "sdram_overlay_file_offset": "0x0900000",
+      "sdram_overlay_va_base": "0x7bc00000",
+      "uncached_sdram_update_staging_va": "0xb4a00000",
+      "rom_tail_32kb_copy_insn_offset": "0x00b48d1",
+      "rom_tail_32kb_src_va": "0x40fe0000",
+      "rom_tail_32kb_dst_ram_va": "0x74003a08"
+    },
+    "version_and_identity": {
+      "body_region_flag_offset": "0x00000016",
+      "body_region_flag_u16_le": "0x0000",
+      "rom_version_table_offset": "0x000006a0",
+      "rom_version_table_va": "0x400006a0",
+      "main_ver_bcd_u16_le": "0x0110",
+      "sub_ver_u16_le_0x6a2": "0x0110",
+      "model_hw_id_u16_le_0x6aa": "0x00c0",
+      "raw_26b_hex": "10011001101153208c13c0005320101100080000ffffffffffff",
+      "pana_flash_sector_headers": [
+        {
+          "offset": "0x0fa0000",
+          "va": "0x40fa0000",
+          "ver_u16_le": "0x0001",
+          "magic": "Pana"
+        },
+        {
+          "offset": "0x0fc0000",
+          "va": "0x40fc0000",
+          "ver_u16_le": "0x0001",
+          "magic": "Pana"
+        }
+      ],
+      "rom_identity_block": {
+        "file_offset": "0x0fe7f00",
+        "rom_va": "0x40fe7f00",
+        "mirrored_ram_va": "0x7400b908",
+        "vendor_0x00": "Panasonic",
+        "model_0x10": "DMC-G2",
+        "tag_0x20": "_PANA",
+        "tag_0x28": "PANA",
+        "update_prefix_0x30": "G2___",
+        "brand_0x38": "LUMIX"
+      }
+    },
+    "confirmed_functions": {
+      "verify_34b_record_horizontal_checksum": [
+        "0x00e3c58"
+      ],
+      "accumulate_16col_vertical_checksum": [
+        "0x00e4025"
+      ],
+      "verify_16col_vertical_zero": [
+        "0x00e404e"
+      ],
+      "decode_method0_34b_stream": [
+        {
+          "prologue": "0x00e3f13",
+          "step_34_32_loop": "0x00e3fba"
+        }
+      ],
+      "check_reset_vector_magic_fcdd": [
+        "0x00e3c8e",
+        "0x013b70f"
+      ],
+      "parse_motorola_s3_ahx": [
+        "0x00e4294"
+      ],
+      "nor_flash_unlock_bypass_erase_and_prog": [
+        "0x00b2bf1",
+        "0x00b2c5e",
+        "0x00b2cdf"
+      ],
+      "sub_ver_0x400006a2_compare_sites": [
+        "0x00c7c23",
+        "0x00e5a8f",
+        "0x01d3ec7",
+        "0x09933c1",
+        "0x09933cf",
+        "0x09933dd"
+      ],
+      "main_ver_0x400006a0_xref_sites": [
+        "0x003a9ee",
+        "0x00c7bee",
+        "0x00d15c5",
+        "0x0141161",
+        "0x01418c5",
+        "0x0141d89",
+        "0x0143cd0",
+        "0x0143e9e",
+        "0x01e76fd",
+        "0x01e770e",
+        "0x01e7fe9",
+        "0x01f040b",
+        "0x01f0438",
+        "0x01f045f"
+      ],
+      "update_prefix_5char_ram_xref_sites": [
+        "0x009435b",
+        "0x00b32bc",
+        "0x00b32d5",
+        "0x00b3324",
+        "0x00e5830"
+      ]
+    },
+    "strings": {
+      "SD_UPDATER_WILDCARDS_ES_OL_SL": [
+        "0x0223484"
+      ],
+      "ROMDATA_BIN": [
+        "0x021ec7b"
+      ],
+      "FIRMWARE_BIN": [
+        "0x021ec9a"
+      ],
+      "ESFFFFFF_BIN": [
+        "0x023042c"
+      ],
+      "VER_BIN": [
+        "0x0222bd0"
+      ],
+      "FMT_4S_04D": [
+        "0x0222658",
+        "0x0222bab",
+        "0x0222bbd"
+      ],
+      "EEPROM_AREA_UPDATE": [
+        "0x05ea204"
+      ],
+      "FROM_WR": [
+        "0x0290344"
+      ],
+      "FROM_RE": [
+        "0x029032e"
+      ],
+      "PANA_MAGIC_TABLE": [
+        "0x02234ee"
+      ],
+      "RESET_MAGIC_FCDD5000_FCDD1800": [
+        "0x0226d07"
+      ],
+      "AHX_FILES": [
+        {
+          "offset": "0x0206647",
+          "string": "@A:\\G2.AHX"
+        },
+        {
+          "offset": "0x0206652",
+          "string": "A:\\G2E.AHX"
+        }
+      ]
+    },
+    "constants_and_crypto": {
+      "crc32_normal_04c11db7_table": [
+        {
+          "table_offset": "0x0a288b8",
+          "table_va": "0x7bd288b8",
+          "size_bytes": 1024,
+          "code_xrefs": [
+            "0x09688b0"
+          ]
+        }
+      ],
+      "aes_sbox_or_te_tables": [],
+      "des_sboxes": [],
+      "sha1_sha256_md5_iv_or_k_tables": [],
+      "crc32_reflected_edb88320_table": [],
+      "ruled_out_coincidences": {
+        "mt19937_0x9908b0df_in_osd_data_table": [
+          "0x060bad0"
+        ],
+        "mt19937_0x6c078965_cross_insn_boundary": [
+          "0x01d710c"
+        ]
+      }
+    }
+  },
+  "GF1__110.bin.decoded": {
+    "size_bytes": 8388608,
+    "sha256": "a942fc7a1eb301e2eed7b2ae68e8ef3572355c48de49f1bad884137c6c0aa1df",
+    "architecture": {
+      "isa": "Matsushita/Panasonic MN10300 (AM33) 32-bit little-endian",
+      "reset_vector_offset": "0x00000000",
+      "reset_vector_bytes_hex": "fcdd18000040f0f5",
+      "reset_entry_va": "0x40000018",
+      "cached_rom_va_range": "0x40000000..0x407fffff",
+      "uncached_flash_va_base": "0x80000000",
+      "sdram_overlay_file_offset": "0x0510000",
+      "sdram_overlay_va_base": "0x7bc00000",
+      "uncached_sdram_update_staging_va": "0xb4a00000",
+      "rom_tail_32kb_copy_insn_offset": "0x00c6df5",
+      "rom_tail_32kb_src_va": "0x407f4000",
+      "rom_tail_32kb_dst_ram_va": "0x74003cb4"
+    },
+    "version_and_identity": {
+      "body_region_flag_offset": "0x00000016",
+      "body_region_flag_u16_le": "0x0000",
+      "rom_version_table_offset": "0x000006a0",
+      "rom_version_table_va": "0x400006a0",
+      "main_ver_bcd_u16_le": "0x0110",
+      "sub_ver_u16_le_0x6a2": "0x0029",
+      "model_hw_id_u16_le_0x6aa": "0x00b3",
+      "raw_26b_hex": "10012900121100110100b30003111211000829000100ffffffff",
+      "pana_flash_sector_headers": [
+        {
+          "offset": "0x07f0000",
+          "va": "0x407f0000",
+          "ver_u16_le": "0x0110",
+          "magic": "Pana"
+        },
+        {
+          "offset": "0x07f2000",
+          "va": "0x407f2000",
+          "ver_u16_le": "0x0110",
+          "magic": "Pana"
+        }
+      ],
+      "rom_identity_block": {
+        "file_offset": "0x07fbf00",
+        "rom_va": "0x407fbf00",
+        "mirrored_ram_va": "0x7400bbb4",
+        "vendor_0x00": "Panasonic",
+        "model_0x10": "DMC-GF1",
+        "tag_0x20": "_PANA",
+        "tag_0x28": "PANA",
+        "update_prefix_0x30": "GF1__",
+        "brand_0x38": "LUMIX"
+      }
+    },
+    "confirmed_functions": {
+      "verify_34b_record_horizontal_checksum": [
+        "0x00c80e5"
+      ],
+      "accumulate_16col_vertical_checksum": [
+        "0x00c84b2"
+      ],
+      "verify_16col_vertical_zero": [
+        "0x00c84db"
+      ],
+      "decode_method0_34b_stream": [
+        {
+          "prologue": "0x00c83a0",
+          "step_34_32_loop": "0x00c8447"
+        }
+      ],
+      "check_reset_vector_magic_fcdd": [
+        "0x00c37fe",
+        "0x00c811b"
+      ],
+      "parse_motorola_s3_ahx": [
+        "0x00c8721"
+      ],
+      "nor_flash_unlock_bypass_erase_and_prog": [
+        "0x00c7c9d",
+        "0x00c7d13"
+      ],
+      "sub_ver_0x400006a2_compare_sites": [
+        "0x0014ea0",
+        "0x00bbc07",
+        "0x00cd004",
+        "0x0564291",
+        "0x056429f",
+        "0x05642ad"
+      ],
+      "main_ver_0x400006a0_xref_sites": [
+        "0x0014e6b",
+        "0x0028df2",
+        "0x004aad6",
+        "0x016dcea",
+        "0x016e489",
+        "0x016e838",
+        "0x01702c4",
+        "0x0170496"
+      ],
+      "update_prefix_5char_ram_xref_sites": [
+        "0x00c17d7",
+        "0x0160a10",
+        "0x0160a63",
+        "0x0160ab8",
+        "0x0160ba6"
+      ]
+    },
+    "strings": {
+      "SD_UPDATER_WILDCARDS_ES_OL_SL": [
+        "0x04cc634"
+      ],
+      "ROMDATA_BIN": [
+        "0x04cc7a3"
+      ],
+      "FIRMWARE_BIN": [
+        "0x04cc7c2"
+      ],
+      "ESFFFFFF_BIN": [
+        "0x04a116c"
+      ],
+      "VER_BIN": [
+        "0x04ccc04"
+      ],
+      "FMT_4S_04D": [
+        "0x04cc7d4",
+        "0x04ccbe3",
+        "0x04ccbf5"
+      ],
+      "EEPROM_AREA_UPDATE": [
+        "0x03657c8"
+      ],
+      "FROM_WR": [
+        "0x037aba4"
+      ],
+      "FROM_RE": [
+        "0x037ab8e"
+      ],
+      "PANA_MAGIC_TABLE": [
+        "0x04a10de"
+      ],
+      "RESET_MAGIC_FCDD5000_FCDD1800": [
+        "0x04a112b"
+      ],
+      "AHX_FILES": [
+        {
+          "offset": "0x04a1154",
+          "string": "A:\\GF1.AHX"
+        },
+        {
+          "offset": "0x04a115f",
+          "string": "A:\\GF1E.AHX"
+        }
+      ]
+    },
+    "constants_and_crypto": {
+      "crc32_normal_04c11db7_table": [
+        {
+          "table_offset": "0x0616850",
+          "table_va": "0x7bd06850",
+          "size_bytes": 1024,
+          "code_xrefs": [
+            "0x052edf8"
+          ]
+        }
+      ],
+      "aes_sbox_or_te_tables": [],
+      "des_sboxes": [],
+      "sha1_sha256_md5_iv_or_k_tables": [],
+      "crc32_reflected_edb88320_table": [],
+      "ruled_out_coincidences": {
+        "mt19937_0x9908b0df_in_osd_data_table": [
+          "0x04d6d88"
+        ],
+        "mt19937_0x6c078965_cross_insn_boundary": [
+          "0x00b23b1"
+        ]
+      }
+    }
+  },
+  "GF1__122.bin.decoded": {
+    "size_bytes": 8388608,
+    "sha256": "1453917740734f5873b01640373fd2929b59c65b06a60c592eee3b88c5e8ec75",
+    "architecture": {
+      "isa": "Matsushita/Panasonic MN10300 (AM33) 32-bit little-endian",
+      "reset_vector_offset": "0x00000000",
+      "reset_vector_bytes_hex": "fcdd18000040f0f5",
+      "reset_entry_va": "0x40000018",
+      "cached_rom_va_range": "0x40000000..0x407fffff",
+      "uncached_flash_va_base": "0x80000000",
+      "sdram_overlay_file_offset": "0x0510000",
+      "sdram_overlay_va_base": "0x7bc00000",
+      "uncached_sdram_update_staging_va": "0xb4a00000",
+      "rom_tail_32kb_copy_insn_offset": "0x00c6fd8",
+      "rom_tail_32kb_src_va": "0x407f4000",
+      "rom_tail_32kb_dst_ram_va": "0x74003cb4"
+    },
+    "version_and_identity": {
+      "body_region_flag_offset": "0x00000016",
+      "body_region_flag_u16_le": "0x0000",
+      "rom_version_table_offset": "0x000006a0",
+      "rom_version_table_va": "0x400006a0",
+      "main_ver_bcd_u16_le": "0x0122",
+      "sub_ver_u16_le_0x6a2": "0x0030",
+      "model_hw_id_u16_le_0x6aa": "0x00b3",
+      "raw_26b_hex": "22013000200400210100b30022212004000830000100ffffffff",
+      "pana_flash_sector_headers": [
+        {
+          "offset": "0x07f0000",
+          "va": "0x407f0000",
+          "ver_u16_le": "0x0122",
+          "magic": "Pana"
+        },
+        {
+          "offset": "0x07f2000",
+          "va": "0x407f2000",
+          "ver_u16_le": "0x0122",
+          "magic": "Pana"
+        }
+      ],
+      "rom_identity_block": {
+        "file_offset": "0x07fbf00",
+        "rom_va": "0x407fbf00",
+        "mirrored_ram_va": "0x7400bbb4",
+        "vendor_0x00": "Panasonic",
+        "model_0x10": "DMC-GF1",
+        "tag_0x20": "_PANA",
+        "tag_0x28": "PANA",
+        "update_prefix_0x30": "GF1__",
+        "brand_0x38": "LUMIX"
+      }
+    },
+    "confirmed_functions": {
+      "verify_34b_record_horizontal_checksum": [
+        "0x00c82c8"
+      ],
+      "accumulate_16col_vertical_checksum": [
+        "0x00c8695"
+      ],
+      "verify_16col_vertical_zero": [
+        "0x00c86be"
+      ],
+      "decode_method0_34b_stream": [
+        {
+          "prologue": "0x00c8583",
+          "step_34_32_loop": "0x00c862a"
+        }
+      ],
+      "check_reset_vector_magic_fcdd": [
+        "0x00c39e1",
+        "0x00c82fe"
+      ],
+      "parse_motorola_s3_ahx": [
+        "0x00c8904"
+      ],
+      "nor_flash_unlock_bypass_erase_and_prog": [
+        "0x00c7e80",
+        "0x00c7ef6"
+      ],
+      "sub_ver_0x400006a2_compare_sites": [
+        "0x0014ea0",
+        "0x00bbdea",
+        "0x00cd1e7",
+        "0x056429b",
+        "0x05642a9",
+        "0x05642b7"
+      ],
+      "main_ver_0x400006a0_xref_sites": [
+        "0x0014e6b",
+        "0x0028e51",
+        "0x004ab8b",
+        "0x016df41",
+        "0x016e6e0",
+        "0x016ea8f",
+        "0x017051b",
+        "0x01706ed"
+      ],
+      "update_prefix_5char_ram_xref_sites": [
+        "0x00c19ba",
+        "0x0160c67",
+        "0x0160cba",
+        "0x0160d0f",
+        "0x0160dfd"
+      ]
+    },
+    "strings": {
+      "SD_UPDATER_WILDCARDS_ES_OL_SL": [
+        "0x04cc884"
+      ],
+      "ROMDATA_BIN": [
+        "0x04cc9f3"
+      ],
+      "FIRMWARE_BIN": [
+        "0x04cca12"
+      ],
+      "ESFFFFFF_BIN": [
+        "0x04a13bc"
+      ],
+      "VER_BIN": [
+        "0x04cce54"
+      ],
+      "FMT_4S_04D": [
+        "0x04cca24",
+        "0x04cce33",
+        "0x04cce45"
+      ],
+      "EEPROM_AREA_UPDATE": [
+        "0x0365a18"
+      ],
+      "FROM_WR": [
+        "0x037adf4"
+      ],
+      "FROM_RE": [
+        "0x037adde"
+      ],
+      "PANA_MAGIC_TABLE": [
+        "0x04a132e"
+      ],
+      "RESET_MAGIC_FCDD5000_FCDD1800": [
+        "0x04a137b"
+      ],
+      "AHX_FILES": [
+        {
+          "offset": "0x04a13a4",
+          "string": "A:\\GF1.AHX"
+        },
+        {
+          "offset": "0x04a13af",
+          "string": "A:\\GF1E.AHX"
+        }
+      ]
+    },
+    "constants_and_crypto": {
+      "crc32_normal_04c11db7_table": [
+        {
+          "table_offset": "0x0616b64",
+          "table_va": "0x7bd06b64",
+          "size_bytes": 1024,
+          "code_xrefs": [
+            "0x052edf8"
+          ]
+        }
+      ],
+      "aes_sbox_or_te_tables": [],
+      "des_sboxes": [],
+      "sha1_sha256_md5_iv_or_k_tables": [],
+      "crc32_reflected_edb88320_table": [],
+      "ruled_out_coincidences": {
+        "mt19937_0x9908b0df_in_osd_data_table": [
+          "0x04d6fd8"
+        ],
+        "mt19937_0x6c078965_cross_insn_boundary": [
+          "0x00b2466"
+        ]
+      }
+    }
+  },
+  "GH1__121.bin.decoded": {
+    "size_bytes": 8388608,
+    "sha256": "b7f5389498922f5bca597a1743f9508e00b1cf42080198ebe571f9fadc4421a5",
+    "architecture": {
+      "isa": "Matsushita/Panasonic MN10300 (AM33) 32-bit little-endian",
+      "reset_vector_offset": "0x00000000",
+      "reset_vector_bytes_hex": "fcdd18000040f0f5",
+      "reset_entry_va": "0x40000018",
+      "cached_rom_va_range": "0x40000000..0x407fffff",
+      "uncached_flash_va_base": "0x80000000",
+      "sdram_overlay_file_offset": "0x0510000",
+      "sdram_overlay_va_base": "0x7bc00000",
+      "uncached_sdram_update_staging_va": "0xb4a00000",
+      "rom_tail_32kb_copy_insn_offset": "0x00c7040",
+      "rom_tail_32kb_src_va": "0x407f4000",
+      "rom_tail_32kb_dst_ram_va": "0x740045c4"
+    },
+    "version_and_identity": {
+      "body_region_flag_offset": "0x00000016",
+      "body_region_flag_u16_le": "0x0000",
+      "rom_version_table_offset": "0x000006a0",
+      "rom_version_table_va": "0x400006a0",
+      "main_ver_bcd_u16_le": "0x0122",
+      "sub_ver_u16_le_0x6a2": "0x0062",
+      "model_hw_id_u16_le_0x6aa": "0x00aa",
+      "raw_26b_hex": "22016200180930080100aa0059081809000862000100ffffffff",
+      "pana_flash_sector_headers": [
+        {
+          "offset": "0x07f0000",
+          "va": "0x407f0000",
+          "ver_u16_le": "0x0122",
+          "magic": "Pana"
+        },
+        {
+          "offset": "0x07f2000",
+          "va": "0x407f2000",
+          "ver_u16_le": "0x0122",
+          "magic": "Pana"
+        }
+      ],
+      "rom_identity_block": {
+        "file_offset": "0x07fbf00",
+        "rom_va": "0x407fbf00",
+        "mirrored_ram_va": "0x7400c4c4",
+        "vendor_0x00": "Panasonic",
+        "model_0x10": "DMC-GH1",
+        "tag_0x20": "_PANA",
+        "tag_0x28": "PANA",
+        "update_prefix_0x30": "GH1__",
+        "brand_0x38": "LUMIX"
+      }
+    },
+    "confirmed_functions": {
+      "verify_34b_record_horizontal_checksum": [
+        "0x00c830b"
+      ],
+      "accumulate_16col_vertical_checksum": [
+        "0x00c86d8"
+      ],
+      "verify_16col_vertical_zero": [
+        "0x00c8701"
+      ],
+      "decode_method0_34b_stream": [
+        {
+          "prologue": "0x00c85c6",
+          "step_34_32_loop": "0x00c866d"
+        }
+      ],
+      "check_reset_vector_magic_fcdd": [
+        "0x00c361a",
+        "0x00c8341"
+      ],
+      "parse_motorola_s3_ahx": [
+        "0x00c8947"
+      ],
+      "nor_flash_unlock_bypass_erase_and_prog": [
+        "0x00c7ec3",
+        "0x00c7f39"
+      ],
+      "sub_ver_0x400006a2_compare_sites": [
+        "0x001ee62",
+        "0x00bb98b",
+        "0x0563c24",
+        "0x0563c32",
+        "0x0563c40"
+      ],
+      "main_ver_0x400006a0_xref_sites": [
+        "0x001ee2d",
+        "0x0030f52",
+        "0x00507b5",
+        "0x015e012",
+        "0x015e7ac",
+        "0x015eb5b",
+        "0x01605e4",
+        "0x01607b8"
+      ],
+      "update_prefix_5char_ram_xref_sites": [
+        "0x00c1609",
+        "0x01515c1",
+        "0x0151614",
+        "0x0151669"
+      ]
+    },
+    "strings": {
+      "SD_UPDATER_WILDCARDS_ES_OL_SL": [
+        "0x04bed18"
+      ],
+      "ROMDATA_BIN": [
+        "0x04bee67"
+      ],
+      "FIRMWARE_BIN": [
+        "0x04bee86"
+      ],
+      "ESFFFFFF_BIN": [
+        "0x04ae1fc"
+      ],
+      "VER_BIN": [
+        "0x04bf278"
+      ],
+      "FMT_4S_04D": [
+        "0x04bee98",
+        "0x04bf257",
+        "0x04bf269"
+      ],
+      "EEPROM_AREA_UPDATE": [
+        "0x035bbb8"
+      ],
+      "FROM_WR": [
+        "0x036f4ac"
+      ],
+      "FROM_RE": [
+        "0x036f496"
+      ],
+      "PANA_MAGIC_TABLE": [
+        "0x04ae16e"
+      ],
+      "RESET_MAGIC_FCDD5000_FCDD1800": [
+        "0x04ae1bb"
+      ],
+      "AHX_FILES": [
+        {
+          "offset": "0x04ae1e4",
+          "string": "A:\\GH1.AHX"
+        },
+        {
+          "offset": "0x04ae1ef",
+          "string": "A:\\GH1E.AHX"
+        }
+      ]
+    },
+    "constants_and_crypto": {
+      "crc32_normal_04c11db7_table": [
+        {
+          "table_offset": "0x0612ffc",
+          "table_va": "0x7bd02ffc",
+          "size_bytes": 1024,
+          "code_xrefs": [
+            "0x052ed7b"
+          ]
+        }
+      ],
+      "aes_sbox_or_te_tables": [],
+      "des_sboxes": [],
+      "sha1_sha256_md5_iv_or_k_tables": [],
+      "crc32_reflected_edb88320_table": [],
+      "ruled_out_coincidences": {
+        "mt19937_0x9908b0df_in_osd_data_table": [
+          "0x04c9254"
+        ],
+        "mt19937_0x6c078965_cross_insn_boundary": [
+          "0x00b2619"
+        ]
+      }
+    }
+  },
+  "GH1__132.bin.decoded": {
+    "size_bytes": 8388608,
+    "sha256": "9497f9f9185ac814637a532fd999edb8da92593559576a45a551f51234d19c07",
+    "architecture": {
+      "isa": "Matsushita/Panasonic MN10300 (AM33) 32-bit little-endian",
+      "reset_vector_offset": "0x00000000",
+      "reset_vector_bytes_hex": "fcdd18000040f0f5",
+      "reset_entry_va": "0x40000018",
+      "cached_rom_va_range": "0x40000000..0x407fffff",
+      "uncached_flash_va_base": "0x80000000",
+      "sdram_overlay_file_offset": "0x0510000",
+      "sdram_overlay_va_base": "0x7bc00000",
+      "uncached_sdram_update_staging_va": "0xb4a00000",
+      "rom_tail_32kb_copy_insn_offset": "0x00c717f",
+      "rom_tail_32kb_src_va": "0x407f4000",
+      "rom_tail_32kb_dst_ram_va": "0x740045c4"
+    },
+    "version_and_identity": {
+      "body_region_flag_offset": "0x00000016",
+      "body_region_flag_u16_le": "0x0000",
+      "rom_version_table_offset": "0x000006a0",
+      "rom_version_table_va": "0x400006a0",
+      "main_ver_bcd_u16_le": "0x0132",
+      "sub_ver_u16_le_0x6a2": "0x006a",
+      "model_hw_id_u16_le_0x6aa": "0x00aa",
+      "raw_26b_hex": "32016a00200400210100aa004621200400086a000100ffffffff",
+      "pana_flash_sector_headers": [
+        {
+          "offset": "0x07f0000",
+          "va": "0x407f0000",
+          "ver_u16_le": "0x0132",
+          "magic": "Pana"
+        },
+        {
+          "offset": "0x07f2000",
+          "va": "0x407f2000",
+          "ver_u16_le": "0x0132",
+          "magic": "Pana"
+        }
+      ],
+      "rom_identity_block": {
+        "file_offset": "0x07fbf00",
+        "rom_va": "0x407fbf00",
+        "mirrored_ram_va": "0x7400c4c4",
+        "vendor_0x00": "Panasonic",
+        "model_0x10": "DMC-GH1",
+        "tag_0x20": "_PANA",
+        "tag_0x28": "PANA",
+        "update_prefix_0x30": "GH1__",
+        "brand_0x38": "LUMIX"
+      }
+    },
+    "confirmed_functions": {
+      "verify_34b_record_horizontal_checksum": [
+        "0x00c844a"
+      ],
+      "accumulate_16col_vertical_checksum": [
+        "0x00c8817"
+      ],
+      "verify_16col_vertical_zero": [
+        "0x00c8840"
+      ],
+      "decode_method0_34b_stream": [
+        {
+          "prologue": "0x00c8705",
+          "step_34_32_loop": "0x00c87ac"
+        }
+      ],
+      "check_reset_vector_magic_fcdd": [
+        "0x00c3759",
+        "0x00c8480"
+      ],
+      "parse_motorola_s3_ahx": [
+        "0x00c8a86"
+      ],
+      "nor_flash_unlock_bypass_erase_and_prog": [
+        "0x00c8002",
+        "0x00c8078"
+      ],
+      "sub_ver_0x400006a2_compare_sites": [
+        "0x001ee62",
+        "0x00bbaca",
+        "0x0563cfa",
+        "0x0563d08",
+        "0x0563d16"
+      ],
+      "main_ver_0x400006a0_xref_sites": [
+        "0x001ee2d",
+        "0x0031011",
+        "0x00508ea",
+        "0x015e1d5",
+        "0x015e96f",
+        "0x015ed1e",
+        "0x01607a7",
+        "0x016097b"
+      ],
+      "update_prefix_5char_ram_xref_sites": [
+        "0x00c1748",
+        "0x0151784",
+        "0x01517d7",
+        "0x015182c"
+      ]
+    },
+    "strings": {
+      "SD_UPDATER_WILDCARDS_ES_OL_SL": [
+        "0x04bef10"
+      ],
+      "ROMDATA_BIN": [
+        "0x04bf05f"
+      ],
+      "FIRMWARE_BIN": [
+        "0x04bf07e"
+      ],
+      "ESFFFFFF_BIN": [
+        "0x04ae3f4"
+      ],
+      "VER_BIN": [
+        "0x04bf470"
+      ],
+      "FMT_4S_04D": [
+        "0x04bf090",
+        "0x04bf44f",
+        "0x04bf461"
+      ],
+      "EEPROM_AREA_UPDATE": [
+        "0x035bda4"
+      ],
+      "FROM_WR": [
+        "0x036f6a0"
+      ],
+      "FROM_RE": [
+        "0x036f68a"
+      ],
+      "PANA_MAGIC_TABLE": [
+        "0x04ae366"
+      ],
+      "RESET_MAGIC_FCDD5000_FCDD1800": [
+        "0x04ae3b3"
+      ],
+      "AHX_FILES": [
+        {
+          "offset": "0x04ae3dc",
+          "string": "A:\\GH1.AHX"
+        },
+        {
+          "offset": "0x04ae3e7",
+          "string": "A:\\GH1E.AHX"
+        }
+      ]
+    },
+    "constants_and_crypto": {
+      "crc32_normal_04c11db7_table": [
+        {
+          "table_offset": "0x0613434",
+          "table_va": "0x7bd03434",
+          "size_bytes": 1024,
+          "code_xrefs": [
+            "0x052ed7b"
+          ]
+        }
+      ],
+      "aes_sbox_or_te_tables": [],
+      "des_sboxes": [],
+      "sha1_sha256_md5_iv_or_k_tables": [],
+      "crc32_reflected_edb88320_table": [],
+      "ruled_out_coincidences": {
+        "mt19937_0x9908b0df_in_osd_data_table": [
+          "0x04c9454"
+        ],
+        "mt19937_0x6c078965_cross_insn_boundary": [
+          "0x00b2758"
+        ]
+      }
+    }
+  }
+}

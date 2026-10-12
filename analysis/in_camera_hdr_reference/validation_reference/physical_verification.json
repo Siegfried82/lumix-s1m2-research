@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "constant_radiance_base": true,
+    "constant_amplitude": true,
+    "all_colour_support": true,
+    "flat_covariance_diagonal": true,
+    "flat_covariance_cross": true,
+    "all_inputs_finite": true,
+    "empty_support": true,
+    "empty_base": true,
+    "empty_amplitude_floor": true
+  },
+  "all_passed": true,
+  "cpu_flat_prepare_seconds": 0.435859958990477,
+  "cpu_output_finite": true,
+  "scope": "Synthetic calibrated RAW bank and known coordinates; alignment and RAW decoding not included.",
+  "mps_prepare_seconds": 2.8891432079835795,
+  "input_max_differences": [
+    3.5762786865234375e-07,
+    2.384185791015625e-07,
+    8.940696716308594e-08,
+    0.0,
+    7.62939453125e-06
+  ],
+  "input_parity": true,
+  "network_max_difference": 5.066394805908203e-07,
+  "network_parity": true
+}

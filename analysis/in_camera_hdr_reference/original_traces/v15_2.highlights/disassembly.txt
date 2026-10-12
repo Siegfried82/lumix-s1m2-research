@@ -1,0 +1,352 @@
+# pydisasm version 6.3.0
+# CPython Python bytecode 3.10 (3439)
+#   Disassembled from CPython Python 3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]
+# Timestamp in code: 0 (1970-01-01 03:00:00)
+# Method Name:       <module>
+# Filename:          v15_2\highlights.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        3
+# Flags:             0x00000040 (NOFREE)
+# First Line:        1
+# Constants:
+#    0: 'Shared product contract for shortest-frame shoulders and the DNG white tag.'
+#    1: 0.95
+#    2: 0.999
+#    3: 65535
+#    4: None
+#    5: <Code310 code object shortest_slot at 0x1069fdeb0, file v15_2\highlights.py>, line 8
+#    6: 'shortest_slot'
+#    7: <Code310 code object audit at 0x1069ff290, file v15_2\highlights.py>, line 23
+#    8: 'audit'
+#    9: (None,)
+# Names:
+#    0: __doc__
+#    1: SHOULDER_START
+#    2: SHOULDER_CEILING
+#    3: UINT16_MAX
+#    4: DNG_WHITE_LEVEL
+#    5: shortest_slot
+#    6: audit
+
+  1:           0 LOAD_CONST           ("Shared product contract for shortest-frame shoulders and the DNG white tag.")
+               2 STORE_NAME           (__doc__)
+
+  2:           4 LOAD_CONST           (0.95)
+               6 STORE_NAME           (SHOULDER_START)
+
+  3:           8 LOAD_CONST           (0.999)
+              10 STORE_NAME           (SHOULDER_CEILING)
+
+  4:          12 LOAD_CONST           (65535)
+              14 STORE_NAME           (UINT16_MAX)
+
+  5:          16 LOAD_NAME            (UINT16_MAX)
+              18 STORE_NAME           (DNG_WHITE_LEVEL)
+
+  8:          20 LOAD_CONST           ((None,))
+              22 LOAD_CONST           (<Code310 code object shortest_slot at 0x1069fdeb0, file v15_2\highlights.py>, line 8)
+              24 LOAD_CONST           ("shortest_slot")
+              26 MAKE_FUNCTION        (default)
+              28 STORE_NAME           (shortest_slot)
+
+ 23:          30 LOAD_CONST           ((None,))
+              32 LOAD_CONST           (<Code310 code object audit at 0x1069ff290, file v15_2\highlights.py>, line 23)
+              34 LOAD_CONST           ("audit")
+              36 MAKE_FUNCTION        (default)
+              38 STORE_NAME           (audit)
+              40 LOAD_CONST           (None)
+              42 RETURN_VALUE
+
+
+# Method Name:       shortest_slot
+# Filename:          v15_2\highlights.py
+# Argument count:    2
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        5
+# Flags:             0x00000003 (NEWLOCALS | OPTIMIZED)
+# First Line:        8
+# Constants:
+#    0: 'Use the canonical acquisition identity for ties, also used by export.\n\n    Low-level legacy callers without identity ranks retain their explicit order.\n    All product manifests receive ranks at load_input.\n    '
+#    1: None
+#    2: 'Invalid frame order'
+#    3: <Code310 code object <genexpr> at 0x1069fc6e0, file v15_2\highlights.py>, line 16
+#    4: 'shortest_slot.<locals>.<genexpr>'
+#    5: <Code310 code object <listcomp> at 0x1069fd6d0, file v15_2\highlights.py>, line 17
+#    6: 'shortest_slot.<locals>.<listcomp>'
+#    7: 'Invalid canonical frame ranks'
+#    8: <Code310 code object <lambda> at 0x106b141a0, file v15_2\highlights.py>, line 20
+#    9: 'shortest_slot.<locals>.<lambda>'
+#   10: ('key',)
+# Names:
+#    0: list
+#    1: range
+#    2: len
+#    3: sorted
+#    4: ValueError
+#    5: all
+#    6: min
+# Varnames:
+#	entries, order
+# Positional arguments:
+#	entries, order
+# Free variables:
+#    0: entries
+#    1: rank
+
+ 14:           0 LOAD_FAST            (order)
+               2 LOAD_CONST           (None)
+               4 IS_OP                (is)
+               6 POP_JUMP_IF_FALSE    (to 24)
+               8 LOAD_GLOBAL          (list)
+              10 LOAD_GLOBAL          (range)
+              12 LOAD_GLOBAL          (len)
+              14 LOAD_DEREF           (entries)
+              16 CALL_FUNCTION        (1 positional argument)
+              18 CALL_FUNCTION        (1 positional argument)
+              20 CALL_FUNCTION        (1 positional argument)
+              22 JUMP_FORWARD         (to 26)
+         >>   24 LOAD_FAST            (order)
+         >>   26 STORE_FAST           (order)
+
+ 15:          28 LOAD_GLOBAL          (sorted)
+              30 LOAD_FAST            (order)
+              32 CALL_FUNCTION        (1 positional argument)
+              34 LOAD_GLOBAL          (list)
+              36 LOAD_GLOBAL          (range)
+              38 LOAD_GLOBAL          (len)
+              40 LOAD_DEREF           (entries)
+              42 CALL_FUNCTION        (1 positional argument)
+              44 CALL_FUNCTION        (1 positional argument)
+              46 CALL_FUNCTION        (1 positional argument)
+              48 COMPARE_OP           (!=)
+              50 POP_JUMP_IF_FALSE    (to 60)
+              52 LOAD_GLOBAL          (ValueError)
+              54 LOAD_CONST           ("Invalid frame order")
+              56 CALL_FUNCTION        (1 positional argument)
+              58 RAISE_VARARGS        (exception instance)
+
+ 16:     >>   60 LOAD_GLOBAL          (all)
+              62 LOAD_CONST           (<Code310 code object <genexpr> at 0x1069fc6e0, file v15_2\highlights.py>, line 16)
+              64 LOAD_CONST           ("shortest_slot.<locals>.<genexpr>")
+              66 MAKE_FUNCTION        (No arguments)
+              68 LOAD_DEREF           (entries)
+              70 GET_ITER
+              72 CALL_FUNCTION        (1 positional argument)
+              74 CALL_FUNCTION        (1 positional argument)
+              76 POP_JUMP_IF_FALSE    (to 126)
+
+ 17:          78 LOAD_CONST           (<Code310 code object <listcomp> at 0x1069fd6d0, file v15_2\highlights.py>, line 17)
+              80 LOAD_CONST           ("shortest_slot.<locals>.<listcomp>")
+              82 MAKE_FUNCTION        (No arguments)
+              84 LOAD_DEREF           (entries)
+              86 GET_ITER
+              88 CALL_FUNCTION        (1 positional argument)
+              90 STORE_DEREF          (rank)
+
+ 18:          92 LOAD_GLOBAL          (sorted)
+              94 LOAD_DEREF           (rank)
+              96 CALL_FUNCTION        (1 positional argument)
+              98 LOAD_GLOBAL          (list)
+             100 LOAD_GLOBAL          (range)
+             102 LOAD_GLOBAL          (len)
+             104 LOAD_DEREF           (entries)
+             106 CALL_FUNCTION        (1 positional argument)
+             108 CALL_FUNCTION        (1 positional argument)
+             110 CALL_FUNCTION        (1 positional argument)
+             112 COMPARE_OP           (!=)
+             114 POP_JUMP_IF_FALSE    (to 124)
+             116 LOAD_GLOBAL          (ValueError)
+             118 LOAD_CONST           ("Invalid canonical frame ranks")
+             120 CALL_FUNCTION        (1 positional argument)
+             122 RAISE_VARARGS        (exception instance)
+         >>  124 JUMP_FORWARD         (to 130)
+
+ 19:     >>  126 LOAD_FAST            (order)
+             128 STORE_DEREF          (rank)
+
+ 20:     >>  130 LOAD_GLOBAL          (min)
+             132 LOAD_GLOBAL          (range)
+             134 LOAD_GLOBAL          (len)
+             136 LOAD_DEREF           (entries)
+             138 CALL_FUNCTION        (1 positional argument)
+             140 CALL_FUNCTION        (1 positional argument)
+             142 LOAD_CLOSURE         (entries)
+             144 LOAD_CLOSURE         (rank)
+             146 BUILD_TUPLE          2
+             148 LOAD_CONST           (<Code310 code object <lambda> at 0x106b141a0, file v15_2\highlights.py>, line 20)
+             150 LOAD_CONST           ("shortest_slot.<locals>.<lambda>")
+             152 MAKE_FUNCTION        (closure)
+             154 LOAD_CONST           (('key',))
+             156 CALL_FUNCTION_KW     (2 total positional and keyword args)
+             158 RETURN_VALUE
+
+
+# Method Name:       audit
+# Filename:          v15_2\highlights.py
+# Argument count:    2
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  3
+# Stack size:        14
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        23
+# Constants:
+#    0: None
+#    1: 'SHORTEST_RAW_SHOULDER_0999_V1'
+#    2: 'individual R/Gr/Gb/B white after dark offset correction'
+#    3: 'WGPU recovery sampling only; motion alignment uses original observations'
+#    4: True
+#    5: ('schema', 'shortest_reference_first_slot', 'shortest_original_index', 'start_fraction', 'ceiling_fraction', 'phase_white', 'stage', 'below_start_and_negative_raw_unchanged', 'exposure_and_sensor_white_unchanged', 'support_includes_shortest_clipped_plateau', 'dng_white_level', 'output_quantization_max')
+# Names:
+#    0: shortest_slot
+#    1: dict
+#    2: SHOULDER_START
+#    3: SHOULDER_CEILING
+#    4: DNG_WHITE_LEVEL
+#    5: UINT16_MAX
+# Varnames:
+#	entries, order, k
+# Positional arguments:
+#	entries, order
+# Local variables:
+#    2: k
+
+ 24:           0 LOAD_GLOBAL          (shortest_slot)
+               2 LOAD_FAST            (entries)
+               4 LOAD_FAST            (order)
+               6 CALL_FUNCTION        (2 positional arguments)
+               8 STORE_FAST           (k)
+
+ 25:          10 LOAD_GLOBAL          (dict)
+              12 LOAD_CONST           ("SHORTEST_RAW_SHOULDER_0999_V1")
+              14 LOAD_FAST            (k)
+
+ 26:          16 LOAD_FAST            (order)
+              18 LOAD_CONST           (None)
+              20 IS_OP                (is)
+              22 POP_JUMP_IF_FALSE    (to 28)
+              24 LOAD_FAST            (k)
+              26 JUMP_FORWARD         (to 34)
+         >>   28 LOAD_FAST            (order)
+              30 LOAD_FAST            (k)
+              32 BINARY_SUBSCR
+
+ 27:     >>   34 LOAD_GLOBAL          (SHOULDER_START)
+              36 LOAD_GLOBAL          (SHOULDER_CEILING)
+
+ 28:          38 LOAD_CONST           ("individual R/Gr/Gb/B white after dark offset correction")
+
+ 29:          40 LOAD_CONST           ("WGPU recovery sampling only; motion alignment uses original observations")
+
+ 30:          42 LOAD_CONST           (True)
+              44 LOAD_CONST           (True)
+
+ 31:          46 LOAD_CONST           (True)
+
+ 32:          48 LOAD_GLOBAL          (DNG_WHITE_LEVEL)
+              50 LOAD_GLOBAL          (UINT16_MAX)
+
+ 25:          52 LOAD_CONST           (('schema', 'shortest_reference_first_slot', 'shortest_original_index', 'start_fraction', 'ceiling_fraction', 'phase_white', 'stage', 'below_start_and_negative_raw_unchanged', 'exposure_and_sensor_white_unchanged', 'support_includes_shortest_clipped_plateau', 'dng_white_level', 'output_quantization_max'))
+              54 CALL_FUNCTION_KW     (12 total positional and keyword args)
+              56 RETURN_VALUE
+
+
+# Method Name:       <genexpr>
+# Filename:          v15_2\highlights.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        3
+# Flags:             0x00000073 (NOFREE | GENERATOR | NESTED | NEWLOCALS | OPTIMIZED)
+# First Line:        16
+# Constants:
+#    0: 'canonical_rank'
+#    1: None
+# Varnames:
+#	.0, e
+# Positional arguments:
+#	.0
+# Local variables:
+#    1: e
+               0 GEN_START            0
+
+ 16:           2 LOAD_FAST            (.0)
+         >>    4 FOR_ITER             (to 20)
+               6 STORE_FAST           (e)
+               8 LOAD_CONST           ("canonical_rank")
+              10 LOAD_FAST            (e)
+              12 CONTAINS_OP          (in)
+              14 YIELD_VALUE
+              16 POP_TOP
+              18 JUMP_ABSOLUTE        (to 4)
+         >>   20 LOAD_CONST           (None)
+              22 RETURN_VALUE
+
+
+# Method Name:       <listcomp>
+# Filename:          v15_2\highlights.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        4
+# Flags:             0x00000053 (NOFREE | NESTED | NEWLOCALS | OPTIMIZED)
+# First Line:        17
+# Constants:
+#    0: 'canonical_rank'
+# Varnames:
+#	.0, e
+# Positional arguments:
+#	.0
+# Local variables:
+#    1: e
+
+ 17:           0 BUILD_LIST           0
+               2 LOAD_FAST            (.0)
+         >>    4 FOR_ITER             (to 18)
+               6 STORE_FAST           (e)
+               8 LOAD_FAST            (e)
+              10 LOAD_CONST           ("canonical_rank")
+              12 BINARY_SUBSCR
+              14 LIST_APPEND          2
+              16 JUMP_ABSOLUTE        (to 4)
+         >>   18 RETURN_VALUE
+
+
+# Method Name:       <lambda>
+# Filename:          v15_2\highlights.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  1
+# Stack size:        3
+# Flags:             0x00000013 (NESTED | NEWLOCALS | OPTIMIZED)
+# First Line:        20
+# Constants:
+#    0: None
+#    1: 'exposure'
+# Varnames:
+#	i
+# Positional arguments:
+#	i
+# Cell variables:
+#    0: entries
+#    1: rank
+
+ 20:           0 LOAD_DEREF           (entries)
+               2 LOAD_FAST            (i)
+               4 BINARY_SUBSCR
+               6 LOAD_CONST           ("exposure")
+               8 BINARY_SUBSCR
+              10 LOAD_DEREF           (rank)
+              12 LOAD_FAST            (i)
+              14 BINARY_SUBSCR
+              16 BUILD_TUPLE          2
+              18 RETURN_VALUE
+

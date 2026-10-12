@@ -1,0 +1,462 @@
+{
+  "module": "v15_2.registration",
+  "filename": "v15_2\\registration.py",
+  "sha256": "b497948f6fdf937d4d5fd29e3ec902ac2ea4732ed2c471e60a39a61284090843",
+  "functions": [
+    {
+      "scope": "v15_2.registration",
+      "name": "<module>",
+      "line": 1,
+      "args": [],
+      "names": [
+        "__doc__",
+        "__future__",
+        "annotations",
+        "cv2",
+        "numpy",
+        "np",
+        "MODELS",
+        "THRESHOLD",
+        "guides",
+        "features",
+        "matches",
+        "project",
+        "errors",
+        "fit",
+        "sane",
+        "estimate_pair",
+        "register"
+      ],
+      "imports": [
+        "__future__",
+        "cv2",
+        "numpy"
+      ]
+    },
+    {
+      "scope": "v15_2.registration.guides",
+      "name": "guides",
+      "line": 16,
+      "args": [
+        "data",
+        "max_side"
+      ],
+      "names": [
+        "min",
+        "max",
+        "round",
+        "cv2",
+        "getGaussianKernel",
+        "zip",
+        "np",
+        "asarray",
+        "float64",
+        "zeros",
+        "float32",
+        "zeros_like",
+        "ones_like",
+        "maximum",
+        "resize",
+        "INTER_AREA",
+        "get",
+        "minimum",
+        "astype",
+        "sepFilter2D",
+        "sqrt",
+        "erode",
+        "ones",
+        "uint8",
+        "float",
+        "mean",
+        "append",
+        "dict",
+        "array"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.features",
+      "name": "features",
+      "line": 59,
+      "args": [
+        "guide",
+        "ceiling"
+      ],
+      "names": [
+        "min",
+        "np",
+        "isfinite",
+        "sqrt",
+        "log",
+        "maximum",
+        "uint8",
+        "rint",
+        "clip",
+        "cv2",
+        "SIFT_create",
+        "detectAndCompute"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.matches",
+      "name": "matches",
+      "line": 75,
+      "args": [
+        "ref",
+        "src"
+      ],
+      "names": [
+        "cv2",
+        "BFMatcher",
+        "zip",
+        "min",
+        "len",
+        "knnMatch",
+        "queryIdx",
+        "trainIdx",
+        "append",
+        "distance",
+        "pt",
+        "set",
+        "sorted",
+        "tuple",
+        "np",
+        "rint",
+        "array",
+        "astype",
+        "int",
+        "add",
+        "asarray",
+        "float64",
+        "reshape"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.matches.<listcomp>",
+      "name": "<listcomp>",
+      "line": 81,
+      "args": [
+        ".0"
+      ],
+      "names": [
+        "len",
+        "distance"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.matches.<setcomp>",
+      "name": "<setcomp>",
+      "line": 83,
+      "args": [
+        ".0"
+      ],
+      "names": [
+        "len",
+        "distance",
+        "trainIdx",
+        "queryIdx"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.project",
+      "name": "project",
+      "line": 99,
+      "args": [
+        "H",
+        "points"
+      ],
+      "names": [
+        "np",
+        "c_",
+        "ones",
+        "len",
+        "T",
+        "errstate"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.errors",
+      "name": "errors",
+      "line": 105,
+      "args": [
+        "H",
+        "a",
+        "b"
+      ],
+      "names": [
+        "np",
+        "linalg",
+        "norm",
+        "project",
+        "inv",
+        "maximum",
+        "LinAlgError",
+        "full",
+        "len",
+        "inf"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.fit",
+      "name": "fit",
+      "line": 114,
+      "args": [
+        "kind",
+        "a",
+        "b",
+        "robust"
+      ],
+      "names": [
+        "len",
+        "np",
+        "eye",
+        "float64",
+        "linspace",
+        "min",
+        "astype",
+        "int",
+        "argmax",
+        "linalg",
+        "norm",
+        "THRESHOLD",
+        "median",
+        "T",
+        "zeros",
+        "c_",
+        "ones",
+        "lstsq",
+        "ravel",
+        "cv2",
+        "findHomography",
+        "USAC_MAGSAC",
+        "estimateAffinePartial2D",
+        "estimateAffine2D",
+        "RANSAC",
+        "isfinite",
+        "all"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.fit.<listcomp>",
+      "name": "<listcomp>",
+      "line": 122,
+      "args": [
+        ".0"
+      ],
+      "names": [
+        "np",
+        "count_nonzero",
+        "linalg",
+        "norm",
+        "THRESHOLD"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.sane",
+      "name": "sane",
+      "line": 152,
+      "args": [
+        "H",
+        "hw"
+      ],
+      "names": [
+        "np",
+        "array",
+        "c_",
+        "ones",
+        "isfinite",
+        "all",
+        "min",
+        "max",
+        "project",
+        "abs",
+        "linalg",
+        "norm",
+        "bool",
+        "cv2",
+        "isContourConvex",
+        "float32",
+        "det"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.estimate_pair",
+      "name": "estimate_pair",
+      "line": 172,
+      "args": [
+        "a",
+        "b",
+        "hw"
+      ],
+      "names": [
+        "len",
+        "ValueError",
+        "MODELS",
+        "fit",
+        "sane",
+        "errors",
+        "THRESHOLD",
+        "sum",
+        "max",
+        "np",
+        "lexsort",
+        "array",
+        "range",
+        "arange",
+        "append",
+        "float",
+        "extend",
+        "tolist",
+        "linalg",
+        "norm",
+        "project",
+        "isfinite",
+        "all",
+        "quantile",
+        "log1p",
+        "log",
+        "dict",
+        "int",
+        "median",
+        "min",
+        "items"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.estimate_pair.<genexpr>",
+      "name": "<genexpr>",
+      "line": 221,
+      "args": [
+        ".0"
+      ],
+      "names": [],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.estimate_pair.<listcomp>",
+      "name": "<listcomp>",
+      "line": 222,
+      "args": [
+        ".0"
+      ],
+      "names": [],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.estimate_pair.<lambda>",
+      "name": "<lambda>",
+      "line": 223,
+      "args": [
+        "c"
+      ],
+      "names": [],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.estimate_pair.<dictcomp>",
+      "name": "<dictcomp>",
+      "line": 224,
+      "args": [
+        ".0"
+      ],
+      "names": [],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.estimate_pair.<listcomp>",
+      "name": "<listcomp>",
+      "line": 225,
+      "args": [
+        ".0"
+      ],
+      "names": [
+        "items"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.estimate_pair.<listcomp>.<dictcomp>",
+      "name": "<dictcomp>",
+      "line": 225,
+      "args": [
+        ".0"
+      ],
+      "names": [],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.register",
+      "name": "register",
+      "line": 230,
+      "args": [
+        "data"
+      ],
+      "names": [
+        "np",
+        "eye",
+        "float32",
+        "len",
+        "guides",
+        "linalg",
+        "inv",
+        "range",
+        "min",
+        "features",
+        "matches",
+        "estimate_pair",
+        "shape",
+        "ValueError",
+        "str",
+        "astype",
+        "update",
+        "list",
+        "diagonal",
+        "tolist",
+        "all",
+        "stack",
+        "get",
+        "join",
+        "items"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.register.<genexpr>",
+      "name": "<genexpr>",
+      "line": 255,
+      "args": [
+        ".0"
+      ],
+      "names": [],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.registration.register.<genexpr>",
+      "name": "<genexpr>",
+      "line": 258,
+      "args": [
+        ".0"
+      ],
+      "names": [
+        "len"
+      ],
+      "imports": []
+    }
+  ],
+  "imports": [
+    "__future__",
+    "cv2",
+    "numpy"
+  ],
+  "shaders": []
+}

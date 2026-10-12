@@ -1,0 +1,44 @@
+
+analysis/sources/tether_windows_2_12/Lmxptpif.dll:	file format coff-x86-64
+
+Disassembly of section .text:
+
+000000018002d780 <LMX_func_api_Setup_Exec_Menu_Save_Comp>:
+18002d780: 48 89 5c 24 18              	movq	%rbx, 0x18(%rsp)
+18002d785: 57                          	pushq	%rdi
+18002d786: 48 81 ec 40 08 00 00        	subq	$0x840, %rsp            # imm = 0x840
+18002d78d: 48 8b 05 dc ba 22 00        	movq	0x22badc(%rip), %rax    # 0x180259270
+18002d794: 48 33 c4                    	xorq	%rsp, %rax
+18002d797: 48 89 84 24 30 08 00 00     	movq	%rax, 0x830(%rsp)
+18002d79f: 33 ff                       	xorl	%edi, %edi
+18002d7a1: 48 8b d9                    	movq	%rcx, %rbx
+18002d7a4: 48 85 d2                    	testq	%rdx, %rdx
+18002d7a7: 74 02                       	je	0x18002d7ab <LMX_func_api_Setup_Exec_Menu_Save_Comp+0x2b>
+18002d7a9: 89 3a                       	movl	%edi, (%rdx)
+18002d7ab: 48 8d 15 f6 b0 1f 00        	leaq	0x1fb0f6(%rip), %rdx    # 0x1802288a8
+18002d7b2: 89 3d 4c 0f 23 00           	movl	%edi, 0x230f4c(%rip)    # 0x18025e704
+18002d7b8: 48 8d 0d 91 21 1f 00        	leaq	0x1f2191(%rip), %rcx    # 0x18021f950
+18002d7bf: e8 0c 92 00 00              	callq	0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>
+18002d7c4: 4c 8b c3                    	movq	%rbx, %r8
+18002d7c7: c7 44 24 20 21 00 c0 15     	movl	$0x15c00021, 0x20(%rsp) # imm = 0x15C00021
+18002d7cf: 48 8d 54 24 20              	leaq	0x20(%rsp), %rdx
+18002d7d4: 66 89 7c 24 24              	movw	%di, 0x24(%rsp)
+18002d7d9: e8 c2 d8 00 00              	callq	0x18003b0a0 <LMX_func_api_Skip_Object_Transfer+0x3570>
+18002d7de: 0f b6 d8                    	movzbl	%al, %ebx
+18002d7e1: 48 8d 15 c0 b0 1f 00        	leaq	0x1fb0c0(%rip), %rdx    # 0x1802288a8
+18002d7e8: 44 8b c3                    	movl	%ebx, %r8d
+18002d7eb: 48 8d 0d c6 24 1f 00        	leaq	0x1f24c6(%rip), %rcx    # 0x18021fcb8
+18002d7f2: e8 d9 91 00 00              	callq	0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>
+18002d7f7: 0f b6 c3                    	movzbl	%bl, %eax
+18002d7fa: 48 8b 8c 24 30 08 00 00     	movq	0x830(%rsp), %rcx
+18002d802: 48 33 cc                    	xorq	%rsp, %rcx
+18002d805: e8 f6 d9 16 00              	callq	0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>
+18002d80a: 48 8b 9c 24 60 08 00 00     	movq	0x860(%rsp), %rbx
+18002d812: 48 81 c4 40 08 00 00        	addq	$0x840, %rsp            # imm = 0x840
+18002d819: 5f                          	popq	%rdi
+18002d81a: c3                          	retq
+18002d81b: cc                          	int3
+18002d81c: cc                          	int3
+18002d81d: cc                          	int3
+18002d81e: cc                          	int3
+18002d81f: cc                          	int3

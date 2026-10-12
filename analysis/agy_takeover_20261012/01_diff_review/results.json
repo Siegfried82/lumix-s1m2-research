@@ -1,0 +1,891 @@
+{
+  "task_id": "01_diff_review",
+  "task_name": "差分独立复核",
+  "verification_status": "completed",
+  "core_counts_verified": {
+    "total_firmware_samples": 22,
+    "modern_samples": 9,
+    "legacy_samples": 13,
+    "modern_directory_entries": 391,
+    "modern_nonempty_entries": 375,
+    "modern_empty_entries": 16,
+    "modern_flags3_nonempty_entries": 326,
+    "modern_flags2_entries_total": 65,
+    "modern_flags2_entries_nonempty": 49,
+    "same_candidate_digest_pairs_total": 404,
+    "same_candidate_digest_pairs_exact_match": true,
+    "tail_and_block_checks_exact_match": true,
+    "pairs_raw_and_tail_equal": 104,
+    "pairs_raw_and_tail_diff": 300,
+    "pairs_raw_tail_mismatch": 0,
+    "pairs_flags_breakdown": {
+      "flags_2_2": 104,
+      "flags_3_3": 236,
+      "flags_2_3_or_3_2": 64
+    },
+    "pairs_scope_breakdown": {
+      "within_same_sample_duplicates": 32,
+      "same_model_cross_version": 104,
+      "strictly_cross_model": 268,
+      "strictly_cross_model_flags3_only": 135
+    }
+  },
+  "gh5_s1_loader1_verification": {
+    "gh5_sample": "GH5__V28",
+    "gh5_index": 0,
+    "gh5_directory_offset": 748,
+    "gh5_relative_offset": 4096,
+    "gh5_actual_offset": 4608,
+    "gh5_raw_sha256": "6a654e0fae0c6df9ebd89ff26c1f7e6caf49c9e3904826a9931e5a66f8603572",
+    "gh5_tail32": "8d5ac04a01e34a03c605a24b3add452e00000000000000000000000000000000",
+    "s1_sample": "S1___V24",
+    "s1_index": 0,
+    "s1_directory_offset": 748,
+    "s1_relative_offset": 5120,
+    "s1_actual_offset": 5632,
+    "s1_raw_sha256": "84904a20f0562be8c626d671e43fb4be6af17a0b0d2dec418f8778d33fa1848b",
+    "s1_tail32": "bd51543305122cbd7340f3806785534500000000000000000000000000000000",
+    "shared_size": 4096,
+    "shared_candidate_digest": "4913f493636ed435d185ca3e5bea7a49eec28195606c99845d38ec68d91ccc5b",
+    "same_position_equal_bytes": 20,
+    "same_position_equal_byte_fraction": 0.0048828125,
+    "changed_bits": 16490,
+    "changed_bit_fraction": 0.50323486328125,
+    "same_position_aligned_16B_blocks": 0,
+    "any_position_shared_16B_blocks": 0,
+    "third_reference_instance_in_workspace": {
+      "reference_file": "analysis/s5_delivery_review_20261010/input/data/reference/S1H__V28.bin.parts.json",
+      "sample": "S1H__V28 (reference directory JSON only; binary not present)",
+      "index": 0,
+      "name": "loader1",
+      "stored_rel_off": 5120,
+      "size": 4096,
+      "candidate_digest": "4913f493636ed435d185ca3e5bea7a49eec28195606c99845d38ec68d91ccc5b",
+      "tail_first16_hex": "a2516b9b64b586db7c653bfbd94f1855"
+    },
+    "cross_decryption_5keys_x_5modes_matching_16B_blocks": 0
+  },
+  "legacy_aes_matrix_verification": {
+    "total_legacy_files": 13,
+    "ptool_method1_key_sources": [
+      "G3___V12.bin",
+      "GF2__V11.bin",
+      "GF3__V12.bin",
+      "GH2__V11.bin",
+      "GX1__V11.bin"
+    ],
+    "unique_keys_extracted": 5,
+    "aes_block_aligned_targets": [
+      "G3___V12.bin",
+      "GF2__V11.bin",
+      "GF3__V12.bin",
+      "GH2__V11.bin",
+      "GH2__V12.bin",
+      "GX1__V11.bin",
+      "TZ10_V12.bin"
+    ],
+    "unaligned_method0_targets_skipped": [
+      "G1___150.bin",
+      "G2___V11.bin",
+      "GF1__110.bin",
+      "GF1__122.bin",
+      "GH1__121.bin",
+      "GH1__132.bin"
+    ],
+    "matrix_tests_total": 35,
+    "matrix_passes_total": 6,
+    "matrix_passes_list": [
+      "G3___V12.bin -> G3___V12.bin",
+      "GF2__V11.bin -> GF2__V11.bin",
+      "GF3__V12.bin -> GF3__V12.bin",
+      "GH2__V11.bin -> GH2__V11.bin",
+      "GH2__V11.bin -> GH2__V12.bin",
+      "GX1__V11.bin -> GX1__V11.bin"
+    ],
+    "exact_match_with_results_json": true
+  },
+  "substantive_errors_and_findings": [
+    {
+      "id": "ERR-EXT-01",
+      "scope": "external_reports_and_scripts",
+      "severity": "high",
+      "title": "外部S5/S1/S1H目录JSON与脚本漏加+0x200内层容器原点，导致全表偏移错位512B并捏造重叠/零头/前导块",
+      "evidence_files": [
+        "analysis/s5_research_report_20261011/S5逆向_研究总报告_20261011/03-固件格式与启动链.md",
+        "analysis/s5_research_report_20261011/S5逆向_研究总报告_20261011/firmware/S5___V29.bin.parts.json",
+        "analysis/s5_research_report_20261011/S5逆向_研究总报告_20261011/firmware/s5_parts_v2.json",
+        "analysis/s5_delivery_review_20261010/input/data/reference/S1___V24.bin.parts.json",
+        "analysis/s5_delivery_review_20261010/input/data/reference/S1H__V28.bin.parts.json",
+        "analysis/s5_delivery_review_20261010/input/tools/analysis/xver.py",
+        "analysis/s5_delivery_review_20261010/input/tools/analysis/xver2.py",
+        "analysis/s5_delivery_review_20261010/input/tools/analysis/verify512.py",
+        "analysis/pasted_research_audit_20261011/offset_audit.json"
+      ],
+      "details": "现代UPD目录项+0x0C存储的是相对内层起点0x200(header[0x38]=512)的偏移。加0x200后9份现代固件全部首项起点严格大于目录表终点(0x2ec+92*count)，且全部65个flags=2目录项(含49个非空项)100%匹配candidate_digest；不加0x200会导致全部9份样本出现伪目录重叠(44B~504B不等)，49个非空flags=2项中39项摘要校验失败，并把前序分区末尾512B误判为loader1的512B零头或history/fileinfo的512B preamble。"
+    },
+    {
+      "id": "ERR-EXT-02",
+      "scope": "external_reports_and_scripts",
+      "severity": "high",
+      "title": "外部跨机型/跨版本脚本以分区名作唯一键，静默覆盖S1M2/S5M2重名目录项",
+      "evidence_files": [
+        "analysis/sources/lumix_sync_static/official_firmware_list/compare_s5m2.py",
+        "analysis/s5_delivery_review_20261010/input/tools/analysis/xver.py",
+        "analysis/s5_delivery_review_20261010/input/tools/analysis/xver2.py"
+      ],
+      "details": "S1m2_V13/V14各有5组重名项(postboot1_r/3_r/5_r, dsp_eisldc_, dsp_fstack_，62项仅57唯一名称)，S5m2_V31有4组重名项(54项仅50唯一名称)。直接用name作字典键或next()查找会丢弃occurrence=0并造成错位配对。"
+    },
+    {
+      "id": "FIND-DIFF-01",
+      "scope": "multimodel_diff_20261012",
+      "severity": "medium",
+      "title": "followup.py中CBC_tail_last16与CBC_zero在全部391项上100%退化重复（60组实为50组独立运算）",
+      "evidence_files": [
+        "analysis/multimodel_diff_20261012/followup.py",
+        "analysis/multimodel_diff_20261012/followup.json",
+        "analysis/transition_corpus_20261011/verified_old_key_probes.json"
+      ],
+      "details": "经对9份现代固件全部391个目录项核查，tail32后16字节(条目+76..+92)非零计数为0（恒为全0）。因此CBC_tail_last16与CBC_zero使用完全相同的16B全零IV，followup.json的60组测试中10对输出SHA-256逐字相同，实际仅50组独立密码运算（历史4500组同理仅3750组独立运算）。"
+    },
+    {
+      "id": "FIND-DIFF-02",
+      "scope": "multimodel_diff_20261012",
+      "severity": "low",
+      "title": "verification.json中prior_inventories_verified重复登记S1m2_V14且未列入S5m2_V31/S5___V29/S1___V24既有清单",
+      "evidence_files": [
+        "analysis/multimodel_diff_20261012/verification.json"
+      ],
+      "details": "prior_inventories_verified包含6个字符串但S1m2_V14重复两次(仅5个唯一样本)；工作区内已有的S5M2_full_inventory.json、s5_firmware_directory.json及参考S1___V24.bin.parts.json已由本轮独立复核补齐比对。"
+    },
+    {
+      "id": "FIND-DIFF-03",
+      "scope": "multimodel_diff_20261012",
+      "severity": "medium",
+      "title": "纳入S5___V29与S1___V24后，候选摘要等于全00/全FF的flags=3组件由7个增至11个，本轮已补齐其余4个实例的旧key验证",
+      "evidence_files": [
+        "analysis/multimodel_diff_20261012/results.json",
+        "analysis/multimodel_diff_20261012/followup.py"
+      ],
+      "details": "新增4个实例为S5___V29 idx33 ipu_data(全00)及S1___V24 idx33 apu0_data_e(全FF)、idx35 apu0_code_e(全FF)、idx38 ipu_data(全00)。这4个实例全载荷无重复16B块(排除无包裹直接ECB)，且补跑5把旧AES key×5种独立模式(100组)及128B前缀CFB128/CFB8/OFB(20对60组)均为0命中。"
+    }
+  ],
+  "script_sha256_checks": {
+    "followup.py": {
+      "recorded_sha256": "3eb51f0e9e14daf109cb8069a4229deb53c5de3ab9786a58b78abdab34c9892d",
+      "actual_sha256": "3eb51f0e9e14daf109cb8069a4229deb53c5de3ab9786a58b78abdab34c9892d",
+      "matches": true
+    },
+    "compare.py": {
+      "recorded_sha256": "cc234fef7650727d436cc62daa1fbfdf1aca0a38df0fc50cf6d0d25c28433444",
+      "actual_sha256": "cc234fef7650727d436cc62daa1fbfdf1aca0a38df0fc50cf6d0d25c28433444",
+      "matches": true
+    }
+  },
+  "modern_inputs_audit": [
+    {
+      "sample": "GH3__V12",
+      "source_meta": {
+        "type": "bin",
+        "path": "analysis/transition_corpus_20261011/GH3__V12.bin",
+        "file_bytes": 26609152,
+        "file_sha256": "74bbf6129350a636bcfbf3319ade22fa6860f709570ae6365ba19064ad6488f4"
+      },
+      "sha256_matches_results": true,
+      "header_magic_ok": true,
+      "header_size": 512,
+      "revision": 512,
+      "identifier": "GH3",
+      "selector": 3,
+      "outer_crc32_header_hex": "0x1094710e",
+      "outer_crc32_calculated_hex": "0x1094710e",
+      "outer_crc32_matches": true,
+      "directory_count": 6,
+      "directory_end_offset_hex": "0x514",
+      "first_entry_relative_offset_hex": "0x400",
+      "first_entry_actual_offset_hex": "0x600",
+      "false_overlap_bytes_if_missing_0x200": 276,
+      "nonempty_entries": 6,
+      "empty_entries": 0,
+      "flags3_nonempty": 6,
+      "flags2_total": 0,
+      "flags2_nonempty": 0,
+      "flags2_digest_matches_with_0x200": 0,
+      "flags2_digest_matches_without_0x200": 0,
+      "duplicate_names": {},
+      "component_mismatches_vs_results_json": 0
+    },
+    {
+      "sample": "GH4__V27",
+      "source_meta": {
+        "type": "bin",
+        "path": "analysis/transition_corpus_20261011/GH4__V27.bin",
+        "file_bytes": 37099008,
+        "file_sha256": "e75fb8237ff2de4d1e8d970de8eb8e563e9756939b3320849f1c9017f4d956c0"
+      },
+      "sha256_matches_results": true,
+      "header_magic_ok": true,
+      "header_size": 512,
+      "revision": 512,
+      "identifier": "GH4",
+      "selector": 3,
+      "outer_crc32_header_hex": "0x676c01be",
+      "outer_crc32_calculated_hex": "0x676c01be",
+      "outer_crc32_matches": true,
+      "directory_count": 18,
+      "directory_end_offset_hex": "0x964",
+      "first_entry_relative_offset_hex": "0x800",
+      "first_entry_actual_offset_hex": "0xa00",
+      "false_overlap_bytes_if_missing_0x200": 356,
+      "nonempty_entries": 18,
+      "empty_entries": 0,
+      "flags3_nonempty": 18,
+      "flags2_total": 0,
+      "flags2_nonempty": 0,
+      "flags2_digest_matches_with_0x200": 0,
+      "flags2_digest_matches_without_0x200": 0,
+      "duplicate_names": {},
+      "component_mismatches_vs_results_json": 0
+    },
+    {
+      "sample": "GH5__V28",
+      "source_meta": {
+        "type": "bin",
+        "path": "analysis/transition_corpus_20261011/GH5__V28.bin",
+        "file_bytes": 68246016,
+        "file_sha256": "1c7e7538aea0a0009f17be56374b92ab1f77a29d271446ddd771bd5b14bc4442"
+      },
+      "sha256_matches_results": true,
+      "header_magic_ok": true,
+      "header_size": 512,
+      "revision": 512,
+      "identifier": "MC561",
+      "selector": 3,
+      "outer_crc32_header_hex": "0xe0b542ed",
+      "outer_crc32_calculated_hex": "0xe0b542ed",
+      "outer_crc32_matches": true,
+      "directory_count": 40,
+      "directory_end_offset_hex": "0x114c",
+      "first_entry_relative_offset_hex": "0x1000",
+      "first_entry_actual_offset_hex": "0x1200",
+      "false_overlap_bytes_if_missing_0x200": 332,
+      "nonempty_entries": 39,
+      "empty_entries": 1,
+      "flags3_nonempty": 36,
+      "flags2_total": 4,
+      "flags2_nonempty": 3,
+      "flags2_digest_matches_with_0x200": 4,
+      "flags2_digest_matches_without_0x200": 2,
+      "duplicate_names": {},
+      "component_mismatches_vs_results_json": 0
+    },
+    {
+      "sample": "S5___V28",
+      "source_meta": {
+        "type": "bin",
+        "path": "analysis/transition_corpus_20261011/S5___V28.bin",
+        "file_bytes": 90238464,
+        "file_sha256": "44944f9bd0fc72b2d612f1acb714f735ca70cea58c2265ac60ec7fca08131939"
+      },
+      "sha256_matches_results": true,
+      "header_magic_ok": true,
+      "header_size": 512,
+      "revision": 512,
+      "identifier": "MC801",
+      "selector": 3,
+      "outer_crc32_header_hex": "0x6a0b11c8",
+      "outer_crc32_calculated_hex": "0x6a0b11c8",
+      "outer_crc32_matches": true,
+      "directory_count": 48,
+      "directory_end_offset_hex": "0x142c",
+      "first_entry_relative_offset_hex": "0x1400",
+      "first_entry_actual_offset_hex": "0x1600",
+      "false_overlap_bytes_if_missing_0x200": 44,
+      "nonempty_entries": 47,
+      "empty_entries": 1,
+      "flags3_nonempty": 41,
+      "flags2_total": 7,
+      "flags2_nonempty": 6,
+      "flags2_digest_matches_with_0x200": 7,
+      "flags2_digest_matches_without_0x200": 2,
+      "duplicate_names": {},
+      "component_mismatches_vs_results_json": 0
+    },
+    {
+      "sample": "S1m2_V14",
+      "source_meta": {
+        "type": "bin",
+        "path": "S1m2_V14.bin",
+        "file_bytes": 171867648,
+        "file_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f"
+      },
+      "sha256_matches_results": true,
+      "header_magic_ok": true,
+      "header_size": 512,
+      "revision": 512,
+      "identifier": "MC8243",
+      "selector": 3,
+      "outer_crc32_header_hex": "0x5d6f7ff7",
+      "outer_crc32_calculated_hex": "0x5d6f7ff7",
+      "outer_crc32_matches": true,
+      "directory_count": 62,
+      "directory_end_offset_hex": "0x1934",
+      "first_entry_relative_offset_hex": "0x1800",
+      "first_entry_actual_offset_hex": "0x1a00",
+      "false_overlap_bytes_if_missing_0x200": 308,
+      "nonempty_entries": 58,
+      "empty_entries": 4,
+      "flags3_nonempty": 49,
+      "flags2_total": 13,
+      "flags2_nonempty": 9,
+      "flags2_digest_matches_with_0x200": 13,
+      "flags2_digest_matches_without_0x200": 6,
+      "duplicate_names": {
+        "postboot1_r": 2,
+        "postboot3_r": 2,
+        "postboot5_r": 2,
+        "dsp_eisldc_": 2,
+        "dsp_fstack_": 2
+      },
+      "component_mismatches_vs_results_json": 0
+    },
+    {
+      "sample": "S1m2_V13",
+      "source_meta": {
+        "type": "bin",
+        "path": "analysis/sources/S1m2_V13.bin",
+        "file_bytes": 171605504,
+        "file_sha256": "cc512f22374005ec99cbe458809b996f3d9ee441b2a8034330708463739c9c66"
+      },
+      "sha256_matches_results": true,
+      "header_magic_ok": true,
+      "header_size": 512,
+      "revision": 512,
+      "identifier": "MC8243",
+      "selector": 3,
+      "outer_crc32_header_hex": "0xb1e1c7d0",
+      "outer_crc32_calculated_hex": "0xb1e1c7d0",
+      "outer_crc32_matches": true,
+      "directory_count": 62,
+      "directory_end_offset_hex": "0x1934",
+      "first_entry_relative_offset_hex": "0x1800",
+      "first_entry_actual_offset_hex": "0x1a00",
+      "false_overlap_bytes_if_missing_0x200": 308,
+      "nonempty_entries": 58,
+      "empty_entries": 4,
+      "flags3_nonempty": 49,
+      "flags2_total": 13,
+      "flags2_nonempty": 9,
+      "flags2_digest_matches_with_0x200": 13,
+      "flags2_digest_matches_without_0x200": 6,
+      "duplicate_names": {
+        "postboot1_r": 2,
+        "postboot3_r": 2,
+        "postboot5_r": 2,
+        "dsp_eisldc_": 2,
+        "dsp_fstack_": 2
+      },
+      "component_mismatches_vs_results_json": 0
+    },
+    {
+      "sample": "S5___V29",
+      "source_meta": {
+        "type": "bin",
+        "path": "analysis/s5_research_report_20261011/S5逆向_研究总报告_20261011/firmware/S5___V29.bin",
+        "file_bytes": 90238464,
+        "file_sha256": "b2ec4aeec209693b874df8dfdf11fc85b38fa4675b44ec554b7a167f430827e1"
+      },
+      "sha256_matches_results": true,
+      "header_magic_ok": true,
+      "header_size": 512,
+      "revision": 512,
+      "identifier": "MC801",
+      "selector": 3,
+      "outer_crc32_header_hex": "0x8e73aac0",
+      "outer_crc32_calculated_hex": "0x8e73aac0",
+      "outer_crc32_matches": true,
+      "directory_count": 48,
+      "directory_end_offset_hex": "0x142c",
+      "first_entry_relative_offset_hex": "0x1400",
+      "first_entry_actual_offset_hex": "0x1600",
+      "false_overlap_bytes_if_missing_0x200": 44,
+      "nonempty_entries": 47,
+      "empty_entries": 1,
+      "flags3_nonempty": 41,
+      "flags2_total": 7,
+      "flags2_nonempty": 6,
+      "flags2_digest_matches_with_0x200": 7,
+      "flags2_digest_matches_without_0x200": 2,
+      "duplicate_names": {},
+      "component_mismatches_vs_results_json": 0
+    },
+    {
+      "sample": "S5m2_V31",
+      "source_meta": {
+        "type": "zip",
+        "archive": "analysis/sources/lumix_sync_static/official_firmware_list/S5m2_V31.zip",
+        "archive_bytes": 186598983,
+        "archive_sha256": "2e3a5ce15e71079a3cba6acf412393fba30270389409bf637f8d285fef7b518a",
+        "member": "S5m2_V31.bin",
+        "member_crc32_hex": "0x2e50464c",
+        "member_bytes": 205683712,
+        "member_sha256": "3ce8a371c2a3c088e573a5716ab92dd6a095a780b1d58420d4d6856ed75afd58"
+      },
+      "sha256_matches_results": true,
+      "header_magic_ok": true,
+      "header_size": 512,
+      "revision": 512,
+      "identifier": "MC8223",
+      "selector": 3,
+      "outer_crc32_header_hex": "0xbeee6883",
+      "outer_crc32_calculated_hex": "0xbeee6883",
+      "outer_crc32_matches": true,
+      "directory_count": 54,
+      "directory_end_offset_hex": "0x1654",
+      "first_entry_relative_offset_hex": "0x1600",
+      "first_entry_actual_offset_hex": "0x1800",
+      "false_overlap_bytes_if_missing_0x200": 84,
+      "nonempty_entries": 50,
+      "empty_entries": 4,
+      "flags3_nonempty": 40,
+      "flags2_total": 14,
+      "flags2_nonempty": 10,
+      "flags2_digest_matches_with_0x200": 14,
+      "flags2_digest_matches_without_0x200": 8,
+      "duplicate_names": {
+        "postboot1_r": 2,
+        "postboot3_r": 2,
+        "postboot5_r": 2,
+        "dsp_eisldc_": 2
+      },
+      "component_mismatches_vs_results_json": 0
+    },
+    {
+      "sample": "S1___V24",
+      "source_meta": {
+        "type": "zip",
+        "archive": "analysis/agy_breakthrough_batch_20261011/03_cross_model/S1___V24.zip",
+        "archive_bytes": 88129170,
+        "archive_sha256": "a4bb56afe92ce767b5d12b9a03d29482106ff9ee84106811a7d84a6b303d0883",
+        "member": "S1___V24.bin",
+        "member_crc32_hex": "0xa5a7f1fc",
+        "member_bytes": 90226176,
+        "member_sha256": "1c54dd84bddb4ebf041713eb47a1d37b6996162479055153a4699459b21ee0bd"
+      },
+      "sha256_matches_results": true,
+      "header_magic_ok": true,
+      "header_size": 512,
+      "revision": 512,
+      "identifier": "MC892",
+      "selector": 3,
+      "outer_crc32_header_hex": "0x48830b6a",
+      "outer_crc32_calculated_hex": "0x48830b6a",
+      "outer_crc32_matches": true,
+      "directory_count": 53,
+      "directory_end_offset_hex": "0x15f8",
+      "first_entry_relative_offset_hex": "0x1400",
+      "first_entry_actual_offset_hex": "0x1600",
+      "false_overlap_bytes_if_missing_0x200": 504,
+      "nonempty_entries": 52,
+      "empty_entries": 1,
+      "flags3_nonempty": 46,
+      "flags2_total": 7,
+      "flags2_nonempty": 6,
+      "flags2_digest_matches_with_0x200": 7,
+      "flags2_digest_matches_without_0x200": 2,
+      "duplicate_names": {},
+      "component_mismatches_vs_results_json": 0
+    }
+  ],
+  "uniform_candidate_digest_flags3_instances": [
+    {
+      "sample": "GH5__V28",
+      "index": 31,
+      "name": "apu0_code_e",
+      "occurrence": 0,
+      "absolute_offset": 57965056,
+      "size": 65536,
+      "candidate_digest": "71189f7fb6aed638640078fba3a35fda6c39c8962e74dcc75935aac948da9063",
+      "candidate_plaintext_type": "ALL_FF",
+      "raw_sha256": "666086501a2e41b338de16f5019e72cd5bfbf78ee38220fbf992f178a65b81df",
+      "tail_first16_hex": "7182ed72acb49a4ea654cfb2da66b41c",
+      "total_aligned_16B_blocks": 4096,
+      "duplicate_aligned_16B_blocks_in_full_payload": 0
+    },
+    {
+      "sample": "GH5__V28",
+      "index": 32,
+      "name": "ipu_data",
+      "occurrence": 0,
+      "absolute_offset": 58030592,
+      "size": 262144,
+      "candidate_digest": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+      "candidate_plaintext_type": "ALL_00",
+      "raw_sha256": "84930d497452d78e6e9f0b430f4d3c249f7eab24271f2c69361407cd251d2196",
+      "tail_first16_hex": "ab87408a3d2fd28c6a535debe7b1aad4",
+      "total_aligned_16B_blocks": 16384,
+      "duplicate_aligned_16B_blocks_in_full_payload": 0
+    },
+    {
+      "sample": "S5___V28",
+      "index": 33,
+      "name": "ipu_data",
+      "occurrence": 0,
+      "absolute_offset": 75492864,
+      "size": 262144,
+      "candidate_digest": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+      "candidate_plaintext_type": "ALL_00",
+      "raw_sha256": "cc1c94493a4b9dd989ed9968c93c407c60a7e5df7044f6c92a378b90529d84ea",
+      "tail_first16_hex": "1724a60f366e3b5d6dc5d3398b1efffb",
+      "total_aligned_16B_blocks": 16384,
+      "duplicate_aligned_16B_blocks_in_full_payload": 0
+    },
+    {
+      "sample": "S1m2_V14",
+      "index": 8,
+      "name": "postboot2_r",
+      "occurrence": 0,
+      "absolute_offset": 70785536,
+      "size": 131072,
+      "candidate_digest": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+      "candidate_plaintext_type": "ALL_FF",
+      "raw_sha256": "c965df4a17b25f35e1ce6544e4a75cb4c0fc60d6e112493ccd30fd5a7b1f7f39",
+      "tail_first16_hex": "8e8447d6acfceab3c2bfd4cf9d0ad6b2",
+      "total_aligned_16B_blocks": 8192,
+      "duplicate_aligned_16B_blocks_in_full_payload": 0
+    },
+    {
+      "sample": "S1m2_V14",
+      "index": 10,
+      "name": "postboot4_r",
+      "occurrence": 0,
+      "absolute_offset": 79174144,
+      "size": 131072,
+      "candidate_digest": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+      "candidate_plaintext_type": "ALL_FF",
+      "raw_sha256": "7e906a40f15d4f7a51db7cece8bf7928f98def136d68a81a35c2cee7e28ef235",
+      "tail_first16_hex": "77f70bb01f8123bd1607d283092f79b5",
+      "total_aligned_16B_blocks": 8192,
+      "duplicate_aligned_16B_blocks_in_full_payload": 0
+    },
+    {
+      "sample": "S1m2_V13",
+      "index": 8,
+      "name": "postboot2_r",
+      "occurrence": 0,
+      "absolute_offset": 70785536,
+      "size": 131072,
+      "candidate_digest": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+      "candidate_plaintext_type": "ALL_FF",
+      "raw_sha256": "e4d4bd2b5e8fed0fa3295838e2e52cba4501a5ed8ea27dacc484c81b6d4720bf",
+      "tail_first16_hex": "11861762586b38bb40b97f6c3cbb870a",
+      "total_aligned_16B_blocks": 8192,
+      "duplicate_aligned_16B_blocks_in_full_payload": 0
+    },
+    {
+      "sample": "S1m2_V13",
+      "index": 10,
+      "name": "postboot4_r",
+      "occurrence": 0,
+      "absolute_offset": 79174144,
+      "size": 131072,
+      "candidate_digest": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+      "candidate_plaintext_type": "ALL_FF",
+      "raw_sha256": "c42313e2bdacd4b7afee004669020137ca40a6251dcfffe32141a8eb2a34637b",
+      "tail_first16_hex": "50071f4924e9c83b8a67e038510acfdf",
+      "total_aligned_16B_blocks": 8192,
+      "duplicate_aligned_16B_blocks_in_full_payload": 0
+    },
+    {
+      "sample": "S5___V29",
+      "index": 33,
+      "name": "ipu_data",
+      "occurrence": 0,
+      "absolute_offset": 75492864,
+      "size": 262144,
+      "candidate_digest": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+      "candidate_plaintext_type": "ALL_00",
+      "raw_sha256": "5ff049e5847b4ed01eed4ee827627e587d36d368f1565d8ad51e043532a20468",
+      "tail_first16_hex": "0e43dbd57c2da5fbc9c59ba5a71f9f37",
+      "total_aligned_16B_blocks": 16384,
+      "duplicate_aligned_16B_blocks_in_full_payload": 0
+    },
+    {
+      "sample": "S1___V24",
+      "index": 33,
+      "name": "apu0_data_e",
+      "occurrence": 0,
+      "absolute_offset": 75218432,
+      "size": 131072,
+      "candidate_digest": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+      "candidate_plaintext_type": "ALL_FF",
+      "raw_sha256": "db6ae39c8d37ddf0cc3a87cefd6538c182437e0583a2db029c9644b39a9dce4e",
+      "tail_first16_hex": "267d3f4b02d3e636d7e0a3a367865421",
+      "total_aligned_16B_blocks": 8192,
+      "duplicate_aligned_16B_blocks_in_full_payload": 0
+    },
+    {
+      "sample": "S1___V24",
+      "index": 35,
+      "name": "apu0_code_e",
+      "occurrence": 0,
+      "absolute_offset": 75415040,
+      "size": 65536,
+      "candidate_digest": "71189f7fb6aed638640078fba3a35fda6c39c8962e74dcc75935aac948da9063",
+      "candidate_plaintext_type": "ALL_FF",
+      "raw_sha256": "f8e8492e024ddf9e157f9ffe7d72942ebb5a7e4eae59d2c40b5ee3ea0b33426c",
+      "tail_first16_hex": "96c3b9f2c577bbfcf95b430456cfd3e3",
+      "total_aligned_16B_blocks": 4096,
+      "duplicate_aligned_16B_blocks_in_full_payload": 0
+    },
+    {
+      "sample": "S1___V24",
+      "index": 38,
+      "name": "ipu_data",
+      "occurrence": 0,
+      "absolute_offset": 75742720,
+      "size": 262144,
+      "candidate_digest": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+      "candidate_plaintext_type": "ALL_00",
+      "raw_sha256": "692ab9316abcc3fff4282fc0ff12f44fae497959f2b686b24ce7caab536279f6",
+      "tail_first16_hex": "a897bfe9aa3793e9492cac4221487b50",
+      "total_aligned_16B_blocks": 16384,
+      "duplicate_aligned_16B_blocks_in_full_payload": 0
+    }
+  ],
+  "new_uniform_flags3_legacy_key_probes_summary": {
+    "instances_tested": 4,
+    "distinct_standard_modes_tested": 5,
+    "legacy_keys_tested": 5,
+    "total_standard_probes": 100,
+    "candidate_digest_matches": 0,
+    "second_block_uniform_matches": 0,
+    "feedback_mode_pairs_tested": 20,
+    "feedback_mode_pass_counts": {
+      "CFB128": 0,
+      "CFB8": 0,
+      "OFB": 0
+    }
+  },
+  "legacy_inputs_audit": [
+    {
+      "file": "G1___150.bin",
+      "bytes": 8912930,
+      "body_bytes_after_512": 8912418,
+      "body_mod16": 2,
+      "sha256": "c216f32811dc78343e953e9946ce3abcd91f99c539a48f400d14aec3528e483b",
+      "md5": "6678ffaff7b458dfb6a4558eec3e9450",
+      "header_revision_hex": "0x10bcc",
+      "header_selector": 3917372,
+      "matches_results_json": true,
+      "ptool_matches": [
+        {
+          "index": 3,
+          "method": 0
+        }
+      ],
+      "extracted_method1_key_hex": null
+    },
+    {
+      "file": "G2___V11.bin",
+      "bytes": 17825826,
+      "body_bytes_after_512": 17825314,
+      "body_mod16": 2,
+      "sha256": "ad6cc6acaa57ca6a08cdcde5c109a695eaad3aa628082e31355d96790ef3965f",
+      "md5": "dcde6bc0614116304e96aef1065dbe9e",
+      "header_revision_hex": "0x2aca",
+      "header_selector": 2147500747,
+      "matches_results_json": true,
+      "ptool_matches": [
+        {
+          "index": 5,
+          "method": 0
+        }
+      ],
+      "extracted_method1_key_hex": null
+    },
+    {
+      "file": "G3___V12.bin",
+      "bytes": 15599104,
+      "body_bytes_after_512": 15598592,
+      "body_mod16": 0,
+      "sha256": "470a2e7facb75985e2a1a993096f18aafc1fb043792dbea4c9d94b66fe27ec9a",
+      "md5": "7cf563a3b11f99e3a0f2893b6cb59411",
+      "header_revision_hex": "0x101",
+      "header_selector": 2,
+      "matches_results_json": true,
+      "ptool_matches": [
+        {
+          "index": 10,
+          "method": 1
+        }
+      ],
+      "extracted_method1_key_hex": "e686c04a4336f0bf23fd56f925ee553e"
+    },
+    {
+      "file": "GF1__110.bin",
+      "bytes": 8912930,
+      "body_bytes_after_512": 8912418,
+      "body_mod16": 2,
+      "sha256": "daa3fde180f1774fc4e5bc0c5aa58c4a908e83a89bdfc97ff96ad6b89b055e63",
+      "md5": "f4c283d454c752eabbb8913b83eafe78",
+      "header_revision_hex": "0x2aca",
+      "header_selector": 2147500747,
+      "matches_results_json": true,
+      "ptool_matches": [],
+      "extracted_method1_key_hex": null
+    },
+    {
+      "file": "GF1__122.bin",
+      "bytes": 8912930,
+      "body_bytes_after_512": 8912418,
+      "body_mod16": 2,
+      "sha256": "c100997454c731a79c22995376ef893af01c5fd562bfc15527b4bda02681b9b3",
+      "md5": "179682fb49dcabc5ea1de4ebba686c1c",
+      "header_revision_hex": "0x2aca",
+      "header_selector": 2147500747,
+      "matches_results_json": true,
+      "ptool_matches": [
+        {
+          "index": 2,
+          "method": 0
+        }
+      ],
+      "extracted_method1_key_hex": null
+    },
+    {
+      "file": "GF2__V11.bin",
+      "bytes": 15599104,
+      "body_bytes_after_512": 15598592,
+      "body_mod16": 0,
+      "sha256": "39403bcf70db42549ac6a29622c768f3c7f6e1e3fa0f769c2ed690ae2ab148c1",
+      "md5": "6fd8205db6b57f0786208eded27cd50b",
+      "header_revision_hex": "0x101",
+      "header_selector": 2,
+      "matches_results_json": true,
+      "ptool_matches": [
+        {
+          "index": 8,
+          "method": 1
+        }
+      ],
+      "extracted_method1_key_hex": "4b8ba02b85110dcec98b591f5528fbc2"
+    },
+    {
+      "file": "GF3__V12.bin",
+      "bytes": 15599104,
+      "body_bytes_after_512": 15598592,
+      "body_mod16": 0,
+      "sha256": "5c7b235d5b55c95d8e6a6db1b24dd2f4013bc46e611aa1bf38b60ee45b875124",
+      "md5": "45e76ee3ada7e4c850b07a2b86aa8cd7",
+      "header_revision_hex": "0x101",
+      "header_selector": 2,
+      "matches_results_json": true,
+      "ptool_matches": [
+        {
+          "index": 9,
+          "method": 1
+        }
+      ],
+      "extracted_method1_key_hex": "3f7e85394912a4d81247c9af4e20ce81"
+    },
+    {
+      "file": "GH1__121.bin",
+      "bytes": 8912930,
+      "body_bytes_after_512": 8912418,
+      "body_mod16": 2,
+      "sha256": "2cbc1b2977caaed52a12e6d91eefbefdd239c64dacec7fefee81c7771063aa14",
+      "md5": "d6380d59838964f9492a67f5f1e27521",
+      "header_revision_hex": "0x2aca",
+      "header_selector": 2147500747,
+      "matches_results_json": true,
+      "ptool_matches": [],
+      "extracted_method1_key_hex": null
+    },
+    {
+      "file": "GH1__132.bin",
+      "bytes": 8912930,
+      "body_bytes_after_512": 8912418,
+      "body_mod16": 2,
+      "sha256": "5f2a050f3daa9bf119e4af0a9e043ead26a84a092b82f7ed00c87944285ea4e6",
+      "md5": "0c39d4ab5957ef9122e510a573e02d62",
+      "header_revision_hex": "0x2aca",
+      "header_selector": 2147500747,
+      "matches_results_json": true,
+      "ptool_matches": [
+        {
+          "index": 1,
+          "method": 0
+        }
+      ],
+      "extracted_method1_key_hex": null
+    },
+    {
+      "file": "GH2__V11.bin",
+      "bytes": 15599104,
+      "body_bytes_after_512": 15598592,
+      "body_mod16": 0,
+      "sha256": "5756a37304b2453982b977d250806e1056cd9dfc5acf9de07a53fa3e2973400d",
+      "md5": "0be86add14ebb1bca79a9c6222a1d617",
+      "header_revision_hex": "0x101",
+      "header_selector": 2,
+      "matches_results_json": true,
+      "ptool_matches": [
+        {
+          "index": 7,
+          "method": 1
+        }
+      ],
+      "extracted_method1_key_hex": "90b43b5ce34c6e667fb28376b5fa5c27"
+    },
+    {
+      "file": "GH2__V12.bin",
+      "bytes": 15599104,
+      "body_bytes_after_512": 15598592,
+      "body_mod16": 0,
+      "sha256": "e192ba2a7dba4167e4100efc896c5475faffd51164bd949e600964430454e817",
+      "md5": "3f4b96d961eee703a5ee22b9fef439e9",
+      "header_revision_hex": "0x101",
+      "header_selector": 2,
+      "matches_results_json": true,
+      "ptool_matches": [],
+      "extracted_method1_key_hex": null
+    },
+    {
+      "file": "GX1__V11.bin",
+      "bytes": 15599104,
+      "body_bytes_after_512": 15598592,
+      "body_mod16": 0,
+      "sha256": "75725a6876702909dbd6396527113f5a6e40187a34369624be30844cdeb302cf",
+      "md5": "88703276ae63afd2f915811bd0694305",
+      "header_revision_hex": "0x101",
+      "header_selector": 2,
+      "matches_results_json": true,
+      "ptool_matches": [
+        {
+          "index": 11,
+          "method": 1
+        }
+      ],
+      "extracted_method1_key_hex": "e4252eb939691d4af1084995691e6151"
+    },
+    {
+      "file": "TZ10_V12.bin",
+      "bytes": 16592384,
+      "body_bytes_after_512": 16591872,
+      "body_mod16": 0,
+      "sha256": "2809f6b33e499853f4d1992027e9053c7f2355302cd6d22654f121e346917a12",
+      "md5": "c60819c421735ac58454862b66f26586",
+      "header_revision_hex": "0x101",
+      "header_selector": 1,
+      "matches_results_json": true,
+      "ptool_matches": [
+        {
+          "index": 12,
+          "method": 2
+        }
+      ],
+      "extracted_method1_key_hex": null
+    }
+  ],
+  "s1_followup_probes_exact_match": true
+}

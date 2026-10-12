@@ -1,0 +1,1365 @@
+{
+  "date": "2026-10-12",
+  "scope": "Root *.md; analysis/*.md; analysis/cleanup_20261010/{changes.json,validation.md}",
+  "agent_operations": "Read-only on original files; wrote only this review JSON; no device communication or execution, no AGY delegation.",
+  "summary": {
+    "keep": 44,
+    "compact": 9,
+    "delete": 13
+  },
+  "withdrawal_shells_to_delete": 11,
+  "compilation_duplicate_check": {
+    "source_records": 40,
+    "source_paths_exist": 40,
+    "current_bodies_exactly_embedded": 38,
+    "outdated_embedded_sources": [
+      "S1M2研究当前状态.md",
+      "AGENTS.md"
+    ]
+  },
+  "risks": [
+    "Repair inbound links before deleting shells or giant summaries.",
+    "Keep old cleanup changes/validation and original inputs/logs/JSON/disassembly.",
+    "Keep current status as the sole current entry; a historical next step is not an active requirement.",
+    "Compacted drafts retain observed tables and mark unsupported claims as withdrawn; authorship alone never determines deletion.",
+    "Two giant summaries require an external backup before deletion; retained source reports are the evidence authority."
+  ],
+  "items": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 2378,
+      "sha256": "fd38ac3f4467636af40ccc727c283a78a0200117331972b6b4ecbaa69cde316b",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        7,
+        12,
+        14
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "当前证据规则及AGY停用要求；这是执行入口，不是历史流水账。"
+    },
+    {
+      "path": "S1M2固件研究需求与交接.md",
+      "bytes": 8287,
+      "sha256": "cdf609d438ec731ef9deaf7164246668e0bb648f8cb3bfd9481b90dd3d31e93f",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        13,
+        22,
+        31,
+        42,
+        74,
+        106
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "原用户需求、不可拆机约束及功能验收边界；保留历史目标，当前主线以状态入口为准。"
+    },
+    {
+      "path": "S1M2固件逆向_阶段结果汇总.md",
+      "bytes": 35755,
+      "sha256": "bf43014a14470aef7e719132e8bf81e5b63464d7efc7e38624a90b8bca0133e1",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        5,
+        26,
+        78,
+        113,
+        201,
+        318,
+        361,
+        432
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "阶段技术汇总含输入摘要、GH2正对照、限定模式测试、组件索引及复现入口；保留作为技术记录。"
+    },
+    {
+      "path": "S1M2研究当前状态.md",
+      "bytes": 16629,
+      "sha256": "3915a657be2aba20b9e94325fb9c8322927ed4072e8ef2d345918ecf0c1fd090",
+      "action": "compact",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        7,
+        49,
+        57,
+        71,
+        81
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "有具体事实/定位表；应保存这些，去除重复流水账或未经核验的全称断言。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [
+        "analysis/local_qemu_lab_20261012/使用说明.md",
+        "analysis/system_reverse_mainline_20261012/主线重设.md",
+        "研究推进_20261011_Ultra.md"
+      ],
+      "compact_reason": "保留入口、当前系统逆向主线、最新实验结果和证据索引；删除重复逐次LUT流水账、旧暂停/委派状态，旧研究记录留在专题目录。"
+    },
+    {
+      "path": "相机固件与协议研究完整汇总报告_20261012.md",
+      "bytes": 631047,
+      "sha256": "5cf68ed1970511f13dd9942b5836e9ac8eb40df20f6144799b558dbd3cd26bf6",
+      "action": "delete",
+      "delete_reason": "工作区外备份后删除：40篇源文原文拼接，40源文件均存在，38个当前正文仍逐字被收录；其余是已过时状态/AGENTS，传播旧指令和已撤回报告风险高。开头综合表是便利摘要，无新的原始测量/代码证据。",
+      "key_lines": [
+        5,
+        36,
+        146,
+        225,
+        255,
+        3129,
+        4386
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "有独有综合编排/便利表格，未发现独有原始研究证据；删除前必须完整备份到工作区外。",
+      "review_mode": "structure_sample_and_exact_source_body_check",
+      "replacement_paths": [
+        "S1M2研究当前状态.md",
+        "AGENTS.md",
+        "analysis/agy_takeover_20261012/12_handoff/report.md",
+        "研究推进_20261011_Ultra.md"
+      ],
+      "backup_outside_workspace_required": true
+    },
+    {
+      "path": "研究恢复进度_20261010.md",
+      "bytes": 3050,
+      "sha256": "9c48e53684775043f8c9ac273e9705b7b0d8b2461181c17d40bb31fb944c43d8",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        7,
+        10,
+        11,
+        15,
+        23,
+        25,
+        34
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "带日期的Sync纠错、输入取得、源码/JNI边界和2593对象完成记录；历史结论有来源索引，建议移到历史文稿目录而非销毁。"
+    },
+    {
+      "path": "研究推进_20261011_Ultra.md",
+      "bytes": 16081,
+      "sha256": "6059f78caf90686d271501dfbc369406904c7964bbd15a76644501ab0be187b7",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        11,
+        17,
+        19,
+        21,
+        83,
+        94,
+        96,
+        106
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "真实旧消费者、完整摘要重放及新格式边界的实质技术交接；应保留。"
+    },
+    {
+      "path": "研究暂停交接_20261010.md",
+      "bytes": 3257,
+      "sha256": "9700e6b68e0ab6f2a002c5b78d3d340d9b8ed4a034315f63b99b191bc528c418",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        8,
+        12,
+        21,
+        22,
+        23,
+        24,
+        30,
+        32
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "带日期的暂停状态及Sync未闭合接续点/源码行号；部分已被新研究覆盖，可移到历史目录，勿用它决定当前暂停状态。"
+    },
+    {
+      "path": "项目当前进度_20261010.md",
+      "bytes": 591386,
+      "sha256": "8d8a8317e6a27f6e84a7272b0198f7eda5ad64520bda8b4857ce553219d32b3e",
+      "action": "delete",
+      "delete_reason": "工作区外备份后删除：591KB主要由过时全路径/全脚本/报告索引扩张，且第13行旧默认AGY指令已被用户停用要求覆盖。原技术报告、全文件MD/TSV索引、历史清理与handoff验证分别存在；不让旧大型交接继续充当当前入口。",
+      "key_lines": [
+        13,
+        14,
+        21,
+        264,
+        372,
+        374,
+        6726,
+        6838,
+        6886
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "有独有综合编排/便利表格，未发现独有原始研究证据；删除前必须完整备份到工作区外。",
+      "review_mode": "structure_sample_and_exact_source_body_check",
+      "replacement_paths": [
+        "S1M2研究当前状态.md",
+        "S1M2固件研究需求与交接.md",
+        "analysis/ai_handoff_20261010/全部文件索引.md",
+        "analysis/ai_handoff_20261010/全部文件清单.tsv",
+        "analysis/ai_handoff_20261010/handoff_validation.md",
+        "analysis/cleanup_20261010/changes.json"
+      ],
+      "backup_outside_workspace_required": true
+    },
+    {
+      "path": "analysis/051f结构_Codex核验_20261009.md",
+      "bytes": 2140,
+      "sha256": "87f6f2e87e5cea0f795dd340675b4c83e94b8ad042ce99eacc04808bf6709647",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        5,
+        7,
+        9,
+        17,
+        19
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "原始DAT槽宽/计数/两种边界假设及算术纠错；后续LUT闭环升级了语义，但该负证据和旧结构纠正有价值。"
+    },
+    {
+      "path": "analysis/9421载荷_Codex核验_20261009.md",
+      "bytes": 1780,
+      "sha256": "acd7e5e272d7f44fae5153cb5005e93379b0a021ccc3b5f2d3c90c992adce091",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        7,
+        9,
+        11,
+        15,
+        17
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "严格3076记录遍历、包装边界与旧启发式解析器反证；保留。"
+    },
+    {
+      "path": "analysis/Antigravity复核_核验结果.md",
+      "bytes": 2744,
+      "sha256": "630dbaa68ff93b015dcc0bc0b7c6a9dafe269f58acf6e693a893c936c97c38c7",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        12,
+        22,
+        30
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "区分空/未终态委派与返回文本，给SL3/S1M2摘要及具体纠错、有限复现文件；作者名不是删除理由。"
+    },
+    {
+      "path": "analysis/Gemini_CAM公开资料检索_20261008.md",
+      "bytes": 6593,
+      "sha256": "6474ad825c8757ce78fcbccd5b4c404e07b05aeab201b42862544daa8c39b368",
+      "action": "compact",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        38,
+        40,
+        60,
+        71
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "有具体事实/定位表；应保存这些，去除重复流水账或未经核验的全称断言。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [
+        "analysis/Gemini_CAM静态审计_20261008.md",
+        "analysis/9421载荷_Codex核验_20261009.md",
+        "analysis/sources/lumix_settings_samples/verified_inventory.json"
+      ],
+      "compact_reason": "保留样本来源/摘要/头结构与顶部纠错；删除把兼容性或低熵当作全明文证明及建议直接在未解码固件中定位函数的叙述。"
+    },
+    {
+      "path": "analysis/Gemini_CAM静态审计_20261008.md",
+      "bytes": 7029,
+      "sha256": "0761fe075131a2803b7546edb28c2766a3ac7cf98331e968c0383e1406c3157e",
+      "action": "compact",
+      "delete_reason": null,
+      "key_lines": [
+        9,
+        11,
+        13,
+        22,
+        23,
+        46
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "有具体事实/定位表；应保存这些，去除重复流水账或未经核验的全称断言。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [
+        "analysis/Gemini_原厂软件深查_纠错_20261008.md",
+        "analysis/Gemini_采集清单_Codex核验_20261008.md",
+        "analysis/9421载荷_Codex核验_20261009.md"
+      ],
+      "compact_reason": "汇编定位表有价值；零格式检查/电脑绝无解析器等全称断言超出覆盖，兼容性tag与低熵明文推论也需纠正，不传播其未核验结论。"
+    },
+    {
+      "path": "analysis/Gemini_PTP配置字段映射_20261008.md",
+      "bytes": 593,
+      "sha256": "c43889092d11e2f19796b85b8da337f47e0b66a3e91d90c7ea7bd10ba7bce7a9",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        5,
+        7
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "包含0x02000081/+8/0x9403具体修正；可合并入专题纠错索引，合并前保留。"
+    },
+    {
+      "path": "analysis/Gemini_全维度逆向审计与终局可行性判定_20261008.md",
+      "bytes": 801,
+      "sha256": "6991e1797e2ffcaf3a0d65b7b532aa8d5d10af7e6c09be2f7fe90b862bdda1b2",
+      "action": "delete",
+      "delete_reason": "正文已经删除，仅剩撤回说明/跳转；有效内容见保留的限定核验。旧撤回原因和前后SHA已在cleanup记录中保存，先在新入口集中登记撤回与替代路径。",
+      "key_lines": [
+        3,
+        5,
+        7
+      ],
+      "contains_unique_information": false,
+      "unique_information_note": "仅撤回原因、现状和跳转；无独有原始研究证据。",
+      "review_mode": "full_text",
+      "replacement_paths": [
+        "analysis/固件解码审计_Codex核验_20261008.md",
+        "analysis/ultra_legacy_closure_20261011/旧固件真实解码链闭合报告.md",
+        "analysis/cleanup_20261010/changes.json"
+      ]
+    },
+    {
+      "path": "analysis/Gemini_加载器锚点实验_20261008.md",
+      "bytes": 644,
+      "sha256": "b7c92cb26f5a06dae643b7b1a4fd092d63a717a864975cdc9a56f4d84e3fd60a",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        5,
+        7
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "记录阴性实验适用范围和EL3密钥断言撤回；可合并但不是空报告。"
+    },
+    {
+      "path": "analysis/Gemini_原厂软件深查_20261008.md",
+      "bytes": 499,
+      "sha256": "ff43346895f556b81119648becf4e7f0934c9bec27cbadc7cd7e1637b306ca3a",
+      "action": "delete",
+      "delete_reason": "正文已经删除，仅剩撤回说明/跳转；有效内容见保留的限定核验。旧撤回原因和前后SHA已在cleanup记录中保存，先在新入口集中登记撤回与替代路径。",
+      "key_lines": [
+        3,
+        5,
+        5
+      ],
+      "contains_unique_information": false,
+      "unique_information_note": "仅撤回原因、现状和跳转；无独有原始研究证据。",
+      "review_mode": "full_text",
+      "replacement_paths": [
+        "analysis/Gemini_原厂软件深查_纠错_20261008.md",
+        "analysis/cleanup_20261010/changes.json"
+      ]
+    },
+    {
+      "path": "analysis/Gemini_原厂软件深查_纠错_20261008.md",
+      "bytes": 5750,
+      "sha256": "644927ae511f69afae850c7395169baac7831e363108ab6b26c228bf766d881b",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        8,
+        10,
+        37,
+        39,
+        46
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "有UPD透传范围、摘要假设边界和配置导出准确调用行号，纠错正文有实质信息。"
+    },
+    {
+      "path": "analysis/Gemini_同代平台公开实现检索_20261008.md",
+      "bytes": 501,
+      "sha256": "65610baf59ac77348795afecaef25c308c8e2b9f7208444b7b7645fb9d5f08f9",
+      "action": "delete",
+      "delete_reason": "正文已经删除，仅剩撤回说明/跳转；有效内容见保留的限定核验。旧撤回原因和前后SHA已在cleanup记录中保存，先在新入口集中登记撤回与替代路径。",
+      "key_lines": [
+        3,
+        5,
+        5
+      ],
+      "contains_unique_information": false,
+      "unique_information_note": "仅撤回原因、现状和跳转；无独有原始研究证据。",
+      "review_mode": "full_text",
+      "replacement_paths": [
+        "analysis/加载器源码审查_Codex核验_20261009.md",
+        "analysis/loader_ipcufs_review_20261011/结论.md",
+        "analysis/cleanup_20261010/changes.json"
+      ]
+    },
+    {
+      "path": "analysis/Gemini_设置结构解析_20261008.md",
+      "bytes": 656,
+      "sha256": "f6729cc57de1c31995ad3e83ee27504a8959b53ca86ec7fa85b669476b5dfe2b",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        5,
+        7
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "保留966/978记录、304B差异及补码边界的具体更正；不能把标题作者当作无价值证据。"
+    },
+    {
+      "path": "analysis/Gemini_远程菜单路径_20261008.md",
+      "bytes": 618,
+      "sha256": "00d8a77b577bd3256012f154dd8e58e81d8903c14b32a4096f1efdc4f613fdeb",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        5,
+        7
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "含Rec_Ctrl_Menu/Touch_Down精确码与首张保存语义纠正。"
+    },
+    {
+      "path": "analysis/Gemini_采集清单_Codex核验_20261008.md",
+      "bytes": 1910,
+      "sha256": "c827511e6bb55a93835cae108491da8bca93e24b164a1dc66d63698b635e58a5",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        7,
+        8,
+        9,
+        13
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "纠正白名单参数错误与未支持查询，包含实际92次采集结果；必须保留。"
+    },
+    {
+      "path": "analysis/Gemini_首张保存字段与固件关联_20261008.md",
+      "bytes": 646,
+      "sha256": "9b3fd833bd8e837ce47c5ea040e1c1d09f8bbb7392d8372f86356d3e2b346a7b",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        5,
+        7
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "0x00010000语义未定、缓存/解析器覆盖边界的具体纠正；可合并后再删重复入口。"
+    },
+    {
+      "path": "analysis/LUMIX_Lab更新路径_Codex核验_20261008.md",
+      "bytes": 3733,
+      "sha256": "30a747ad9af135da22fd01430c22cd8bfe1489aa3ad5e363976302deaef8fdf4",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        8,
+        10,
+        15,
+        35,
+        37,
+        43
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "具体APK摘要、下载/ZIP/发送链、公式网页本次响应与源码清单；后续报告不替代这次来源记录。"
+    },
+    {
+      "path": "analysis/LUMIX_Lab读取入口_Codex核验_20261008.md",
+      "bytes": 2498,
+      "sha256": "e5d8d4bd263646e69bde7a7af5fd9ec629374ddd0ff67b61c28d2d1f2c8ed93a",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        5,
+        9,
+        19,
+        22,
+        23
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "已定位实际请求字段/范围、对象vs内存及主机图像库内存命名纠错。"
+    },
+    {
+      "path": "analysis/ROMBACKUP_SD路径_证据边界_20261009.md",
+      "bytes": 3088,
+      "sha256": "b5edfe1d5c37d5a5c55bdbdf2536246e193b6ac7acd7e2d4a46fe00af0b64538",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        7,
+        10,
+        11,
+        17,
+        27,
+        33
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "TS2证据与S1M2维修手册页39的区别、临时状态/错误记录边界；不能因旧模板被撤回删这份精确限定核验。"
+    },
+    {
+      "path": "analysis/S1M2_RAM读取入口_核查结果_20261008.md",
+      "bytes": 4451,
+      "sha256": "195520717134877c80a31f942e2df87f7b57c88420b0f82fd0402bcaaa69da08",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        11,
+        12,
+        26,
+        27,
+        44
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "实际六路径参数/代码位置、读取范围缺口及过滤返回不能充当复核证据；保留。"
+    },
+    {
+      "path": "analysis/S1M2_ROM_BACKUP与原厂维修协议逆向推导报告_20261009.md",
+      "bytes": 894,
+      "sha256": "2ef1526b1c04cb8eefe82d889394367dfaef3e8bdbaa8d8596d4d5a93943a44f",
+      "action": "delete",
+      "delete_reason": "正文已经删除，仅剩撤回说明/跳转；有效内容见保留的限定核验。旧撤回原因和前后SHA已在cleanup记录中保存，先在新入口集中登记撤回与替代路径。",
+      "key_lines": [
+        3,
+        5,
+        7
+      ],
+      "contains_unique_information": false,
+      "unique_information_note": "仅撤回原因、现状和跳转；无独有原始研究证据。",
+      "review_mode": "full_text",
+      "replacement_paths": [
+        "analysis/S1M2维修手册_Codex核验_20261009.md",
+        "analysis/ROMBACKUP_SD路径_证据边界_20261009.md",
+        "analysis/cleanup_20261010/changes.json"
+      ]
+    },
+    {
+      "path": "analysis/S1M2_V1.4_初步分析.md",
+      "bytes": 5480,
+      "sha256": "77cc89c1c7973e3d24a6fda8ee73e53c8b282bf771461e86d84150c68aaa21fd",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        16,
+        40,
+        53,
+        63
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "最初输入摘要/组件候选表及inspect_firmware复现入口；名称语义是候选，含历史来源价值。"
+    },
+    {
+      "path": "analysis/S1M2_候选功能深度评估与技术边界终局报告_20261009.md",
+      "bytes": 755,
+      "sha256": "abf3c1f0cdcdbedb6c8882f7e76014521a27ee612941f3badc863cab4155cee9",
+      "action": "delete",
+      "delete_reason": "正文已经删除，仅剩撤回说明/跳转；有效内容见保留的限定核验。旧撤回原因和前后SHA已在cleanup记录中保存，先在新入口集中登记撤回与替代路径。",
+      "key_lines": [
+        3,
+        5,
+        7
+      ],
+      "contains_unique_information": false,
+      "unique_information_note": "仅撤回原因、现状和跳转；无独有原始研究证据。",
+      "review_mode": "full_text",
+      "replacement_paths": [
+        "S1M2固件研究需求与交接.md",
+        "analysis/S1M2_公开入口核查与下一步.md",
+        "analysis/cleanup_20261010/changes.json"
+      ]
+    },
+    {
+      "path": "analysis/S1M2_公开入口核查与下一步.md",
+      "bytes": 36952,
+      "sha256": "c74aa2440759a23c343fc953206a74dc9e9a2ae2e7a38da07ab2f5ea1dafd33a",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        58,
+        66,
+        78,
+        126,
+        205,
+        237,
+        301,
+        305
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "源码/假转储反证、平台构建边界和旧DLL/Tether真实调用窗口，绝非仅泛泛结论；保留并按最新状态降级旧未知版本表述。"
+    },
+    {
+      "path": "analysis/S1M2_固件全量解析与逆向工程终局报告.md",
+      "bytes": 646,
+      "sha256": "1bab02e1e4dec6f7254f5929749984e2210ff529e64887e206eb9d7c80cca489",
+      "action": "delete",
+      "delete_reason": "正文已经删除，仅剩撤回说明/跳转；有效内容见保留的限定核验。旧撤回原因和前后SHA已在cleanup记录中保存，先在新入口集中登记撤回与替代路径。",
+      "key_lines": [
+        3,
+        5,
+        7
+      ],
+      "contains_unique_information": false,
+      "unique_information_note": "仅撤回原因、现状和跳转；无独有原始研究证据。",
+      "review_mode": "full_text",
+      "replacement_paths": [
+        "analysis/S1M2_解码突破记录.md",
+        "研究推进_20261011_Ultra.md",
+        "analysis/cleanup_20261010/changes.json"
+      ]
+    },
+    {
+      "path": "analysis/S1M2_机内系统架构与功能实现深度解析.md",
+      "bytes": 722,
+      "sha256": "41c1277d2c3c61f637a3696decf4757c68c5ef59e389ff1378ce1b48eba36860",
+      "action": "delete",
+      "delete_reason": "正文已经删除，仅剩撤回说明/跳转；有效内容见保留的限定核验。旧撤回原因和前后SHA已在cleanup记录中保存，先在新入口集中登记撤回与替代路径。",
+      "key_lines": [
+        3,
+        5,
+        7
+      ],
+      "contains_unique_information": false,
+      "unique_information_note": "仅撤回原因、现状和跳转；无独有原始研究证据。",
+      "review_mode": "full_text",
+      "replacement_paths": [
+        "analysis/S1M2_公开入口核查与下一步.md",
+        "analysis/loader_ipcufs_review_20261011/结论.md",
+        "analysis/cleanup_20261010/changes.json"
+      ]
+    },
+    {
+      "path": "analysis/S1M2_机身数据采集结果_20261008.md",
+      "bytes": 3458,
+      "sha256": "61553c089eed0292ece5a304ce997a09fba0c429d73d5878e17a48aea7eb8002",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        12,
+        14,
+        18,
+        24,
+        34
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "92次原始结果/184文件清单及前后配置完整摘要，保留实机记录。"
+    },
+    {
+      "path": "analysis/S1M2_解码突破记录.md",
+      "bytes": 10147,
+      "sha256": "f4ce97cb89a2216410951d43db3322815d390d96cad577b40a869d8d74448bd8",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        11,
+        12,
+        14,
+        16,
+        63,
+        102,
+        151
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "官方来源比对、GH2完整MD5正对照、跨版本与限定试验/复现入口；题名不代表S1M2已解码。"
+    },
+    {
+      "path": "analysis/S1M2_逆向进度与隐藏功能调查.md",
+      "bytes": 11113,
+      "sha256": "6e33e867e9b6a66f74a559582f378b2d306b813921ba7025910fe3e5cc9c1495",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        17,
+        18,
+        26,
+        49,
+        91,
+        96,
+        109
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "容器阴性条件、平台源码调查及历史案例区别，有实质输入/复现记录，保留。"
+    },
+    {
+      "path": "analysis/S1M2固件存储拓扑与离线解码技术边界终局报告_20261008.md",
+      "bytes": 824,
+      "sha256": "96f2ce0bfa69808788663f4144b698d7642bdb4ee80588a4c65f879afc6d33a8",
+      "action": "delete",
+      "delete_reason": "正文已经删除，仅剩撤回说明/跳转；有效内容见保留的限定核验。旧撤回原因和前后SHA已在cleanup记录中保存，先在新入口集中登记撤回与替代路径。",
+      "key_lines": [
+        3,
+        5,
+        7
+      ],
+      "contains_unique_information": false,
+      "unique_information_note": "仅撤回原因、现状和跳转；无独有原始研究证据。",
+      "review_mode": "full_text",
+      "replacement_paths": [
+        "analysis/S1M2存储布局_Codex核验_20261009.md",
+        "analysis/agy_takeover_20261012/02_modern_consumer/report.md",
+        "analysis/cleanup_20261010/changes.json"
+      ]
+    },
+    {
+      "path": "analysis/S1M2存储布局_Codex核验_20261009.md",
+      "bytes": 1803,
+      "sha256": "0123bb5d4df6f7e8b5ab706cc7435d8f7df59552b7683838e89e9969c14dfe7c",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        7,
+        14,
+        16,
+        22
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "逐文件配置改名和MC8243边界、BOOTDELAY解释及Flash未知范围；保留。"
+    },
+    {
+      "path": "analysis/S1M2电路图检索_20261010.md",
+      "bytes": 3574,
+      "sha256": "de1770d174cd3db08b0f5234ec6a7b942cb0368ac780ff0abab68768a5fe5ccc",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        11,
+        29,
+        33,
+        39,
+        41
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "已取得官方overall/互连图与未找到boardview的不同证据，具体HTTP状态和检索条件；保留。"
+    },
+    {
+      "path": "analysis/S1M2维修手册_Codex核验_20261009.md",
+      "bytes": 3997,
+      "sha256": "1554448e3d2303ab62921308f83de7fb368b9da0f02dbea82ae914a2c77f2666",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        8,
+        9,
+        14,
+        18,
+        30,
+        34
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "同款维修手册来源/完整摘要及页码限定，是后续纠正旧搜索报告的重要证据。"
+    },
+    {
+      "path": "analysis/S1M2调整软件获取_Codex核验_20261009.md",
+      "bytes": 1721,
+      "sha256": "80d278d7639913cdeda9daebb3d76100516017d83acb701fac20bdb3aa366641",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        5,
+        10,
+        17,
+        21
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "纠正访问失败为所有渠道关闭的推论，包含原结果路径；保留历史检索范围。"
+    },
+    {
+      "path": "analysis/Tether应用维护审计_Codex核验_20261008.md",
+      "bytes": 2206,
+      "sha256": "8f412ec3bc6bf4371e6ff0e06fb52af4e8a06be3c598f6255d1805f4f132453b",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        7,
+        8,
+        15,
+        17,
+        18
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "真正维护调用者/参数和动态加载覆盖边界，比未限定原稿优先。"
+    },
+    {
+      "path": "analysis/Windows_Tether初步_Codex核验_20261009.md",
+      "bytes": 728,
+      "sha256": "1e7a6271d926d04f07bc433b0f4761c935f46c9def6df802ba1213eeb089cbde",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        3,
+        5,
+        7
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "独立样本尺寸核验、初筛范围及PE ordinal/index潜在混淆；短文仍有实质更正。"
+    },
+    {
+      "path": "analysis/firmware_decode_next_evidence_gemini_20261008.md",
+      "bytes": 495,
+      "sha256": "4dfd366ddbf5eed52406d8aaad3f2ea59857ed45f6d6d4440538e4b62ce3169e",
+      "action": "delete",
+      "delete_reason": "正文已经删除，仅剩撤回说明/跳转；有效内容见保留的限定核验。旧撤回原因和前后SHA已在cleanup记录中保存，先在新入口集中登记撤回与替代路径。",
+      "key_lines": [
+        3,
+        5,
+        5
+      ],
+      "contains_unique_information": false,
+      "unique_information_note": "仅撤回原因、现状和跳转；无独有原始研究证据。",
+      "review_mode": "full_text",
+      "replacement_paths": [
+        "analysis/固件解码审计_Codex核验_20261008.md",
+        "analysis/agy_takeover_20261012/02_modern_consumer/report.md",
+        "analysis/cleanup_20261010/changes.json"
+      ]
+    },
+    {
+      "path": "analysis/firmware_loader_source_next_experiment_20261008.md",
+      "bytes": 501,
+      "sha256": "65610baf59ac77348795afecaef25c308c8e2b9f7208444b7b7645fb9d5f08f9",
+      "action": "delete",
+      "delete_reason": "正文已经删除，仅剩撤回说明/跳转；有效内容见保留的限定核验。旧撤回原因和前后SHA已在cleanup记录中保存，先在新入口集中登记撤回与替代路径。",
+      "key_lines": [
+        3,
+        5,
+        5
+      ],
+      "contains_unique_information": false,
+      "unique_information_note": "仅撤回原因、现状和跳转；无独有原始研究证据。",
+      "review_mode": "full_text",
+      "replacement_paths": [
+        "analysis/加载器源码审查_Codex核验_20261009.md",
+        "analysis/loader_ipcufs_review_20261011/结论.md",
+        "analysis/cleanup_20261010/changes.json"
+      ]
+    },
+    {
+      "path": "analysis/lumix_lab_acquisition_gemini_20261008.md",
+      "bytes": 4133,
+      "sha256": "2c9f494c85866babe8ad3e81a5064627904a95b78fa770c11fca8f482e399a49",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        35,
+        36,
+        38,
+        39,
+        40,
+        44
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "原APK/XAPK/分包来源、完整SHA和身份限制的样本取得记录；保留事实清单，签名归属以Codex限定核验优先。"
+    },
+    {
+      "path": "analysis/lumix_lab_ptp_read_audit_gemini_20261008.md",
+      "bytes": 4561,
+      "sha256": "47dd80c96c2dcd4dfc4a40a72fb33530a9417911016d1de207740e18fbd04b5f",
+      "action": "compact",
+      "delete_reason": null,
+      "key_lines": [
+        14,
+        15,
+        19,
+        36,
+        42
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "有具体事实/定位表；应保存这些，去除重复流水账或未经核验的全称断言。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [
+        "analysis/lumix_lab_ptp_read_audit_gemini_20261008.json",
+        "analysis/LUMIX_Lab读取入口_Codex核验_20261008.md",
+        "analysis/agy_takeover_20261012/06_lab_control/report.md"
+      ],
+      "compact_reason": "14项读取构造有对应JSON；完全无其他调用/残留定义等全局结论不可直接采纳，保留已定位具体调用的字段表与范围。"
+    },
+    {
+      "path": "analysis/oss_refresh_gemini_20261009.md",
+      "bytes": 4565,
+      "sha256": "81be1bb22543693e2e89530b0cae39bdac9cdeccf36ce5e6dea13e84c935fe8a",
+      "action": "compact",
+      "delete_reason": null,
+      "key_lines": [
+        28,
+        45,
+        56,
+        63,
+        64
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "有具体事实/定位表；应保存这些，去除重复流水账或未经核验的全称断言。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [
+        "analysis/oss_refresh_gemini_20261009.json",
+        "analysis/官方源码刷新_Codex核验_20261009.md",
+        "analysis/S1M2存储布局_Codex核验_20261009.md"
+      ],
+      "compact_reason": "4个完整SHA均有JSON同值记录；保留官方来源清单，删除BootROM已证实装载及destination_field已知物理烧录地址的未经证实映射。"
+    },
+    {
+      "path": "analysis/service_alternatives_gemini_20261009.md",
+      "bytes": 3882,
+      "sha256": "859411b979549ef2959f884596751d377c3f09efc186744d969a0c4b2e5c81fe",
+      "action": "compact",
+      "delete_reason": null,
+      "key_lines": [
+        14,
+        16,
+        17,
+        18,
+        25,
+        36,
+        37
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "有具体事实/定位表；应保存这些，去除重复流水账或未经核验的全称断言。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [
+        "analysis/service_alternatives_gemini_20261009.json",
+        "analysis/维修资料替代入口_Codex核验_20261009.md"
+      ],
+      "compact_reason": "无新增下载及访问失败属历史记录；GH7无维修手册结论被限定核验反证，不能继续作为搜索终局。保留JSON来源状态，正文改为准确日期快照和纠错索引。"
+    },
+    {
+      "path": "analysis/service_materials_gemini_20261008.md",
+      "bytes": 6701,
+      "sha256": "fc7e080b2df240857341bb128aacbff77344a4662e4f513fc2faf21e7ebb4336",
+      "action": "compact",
+      "delete_reason": null,
+      "key_lines": [
+        17,
+        18,
+        19,
+        21,
+        24,
+        49,
+        54,
+        64,
+        65,
+        66
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "有具体事实/定位表；应保存这些，去除重复流水账或未经核验的全称断言。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [
+        "analysis/service_materials_gemini_20261008.json",
+        "analysis/维修资料搜索结果_20261008.md",
+        "analysis/S1M2维修手册_Codex核验_20261009.md"
+      ],
+      "compact_reason": "TS2资料来源可保留；所有现代工具封闭、无合法公开源、唯一第三方、G9M2编号等未由原件覆盖，且同型号手册后来已取得。用已核验检索记录替代这些全称结论。"
+    },
+    {
+      "path": "analysis/subagent_full_report.md",
+      "bytes": 799,
+      "sha256": "3041a68829d04b937925cba348a0986f18a3e919bf625e67e568f2cc75a6698e",
+      "action": "delete",
+      "delete_reason": "正文已经删除，仅剩撤回说明/跳转；有效内容见保留的限定核验。旧撤回原因和前后SHA已在cleanup记录中保存，先在新入口集中登记撤回与替代路径。",
+      "key_lines": [
+        3,
+        5,
+        7
+      ],
+      "contains_unique_information": false,
+      "unique_information_note": "仅撤回原因、现状和跳转；无独有原始研究证据。",
+      "review_mode": "full_text",
+      "replacement_paths": [
+        "analysis/加载器源码审查_Codex核验_20261009.md",
+        "analysis/S1M2_公开入口核查与下一步.md",
+        "analysis/cleanup_20261010/changes.json"
+      ]
+    },
+    {
+      "path": "analysis/tether_app_maintenance_audit_gemini_20261008.md",
+      "bytes": 5105,
+      "sha256": "549a22144156cbe70fd240d0272e479817d54cb9ef0f0335c991d217f045df22",
+      "action": "compact",
+      "delete_reason": null,
+      "key_lines": [
+        29,
+        35,
+        38,
+        40,
+        41,
+        51
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "有具体事实/定位表；应保存这些，去除重复流水账或未经核验的全称断言。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [
+        "analysis/tether_app_maintenance_audit_gemini_20261008.json",
+        "analysis/Tether应用维护审计_Codex核验_20261008.md"
+      ],
+      "compact_reason": "保留具体调用/反汇编表；无动态加载、无所有调用者与已有固件解码数据等叙述已被限定核验纠正。0x9706/0x9707表项未在本审计重新核实，保留候选标签而非已验证读取入口。"
+    },
+    {
+      "path": "analysis/保存首张普通照片_初步差分_20261008.md",
+      "bytes": 15580,
+      "sha256": "8848b866d8699c1b729f2f47bafe22c795d965991c3effbf21765276f29cbffa",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        9,
+        10,
+        52,
+        120,
+        157,
+        163
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "多组采样状态、字节表、回返验证与字段边界实质记录；保留原始输入和报告。"
+    },
+    {
+      "path": "analysis/加载器源码审查_Codex核验_20261009.md",
+      "bytes": 2374,
+      "sha256": "dab1089838812ad325587c8eb4e5b6947fc507395be578de0f56454b630eb10e",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        5,
+        14,
+        17,
+        18,
+        20
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "RAM数据消费者与目标字段地址语义等纠正；有确切源码条目，保留。"
+    },
+    {
+      "path": "analysis/单张高分辨率_受控对照_20261008.md",
+      "bytes": 2236,
+      "sha256": "f27a39712a9f79def9442c6e583ce945331a5df14e3452cdca86b914a25e87f9",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        7,
+        8,
+        11,
+        14,
+        17
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "4份DAT完全相同与旧9B模式关联未重现的阴性控制；保留避免重复错误。"
+    },
+    {
+      "path": "analysis/固件解码审计_Codex核验_20261008.md",
+      "bytes": 2292,
+      "sha256": "3f30dc84650a36ce3aeb2cd6084eeee7967351e80ddbb5b6b04d62c85be59a97",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        5,
+        10,
+        12,
+        18,
+        22
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "限定算法/平台/软件覆盖及旧阶段后续输入入口；后来的APK已取得，应标日期，但纠错有价值。"
+    },
+    {
+      "path": "analysis/官方源码刷新_Codex核验_20261009.md",
+      "bytes": 2223,
+      "sha256": "985feece10ce32119e26df0ef6b0778b9aa33c40e2e37bb720af71c106bcc828",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        7,
+        12,
+        17,
+        18,
+        20,
+        24
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "源码压缩散列与逐文件比较、BootROM/目标字段含义的反证；保留。"
+    },
+    {
+      "path": "analysis/机身有限时间_采集清单.md",
+      "bytes": 27788,
+      "sha256": "ce6cf5cb727383fa05a38a338e2a3469bf2b512ce6046141b8561480306af2b6",
+      "action": "compact",
+      "delete_reason": null,
+      "key_lines": [
+        4,
+        5,
+        10,
+        342,
+        382,
+        385
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "有具体事实/定位表；应保存这些，去除重复流水账或未经核验的全称断言。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [
+        "analysis/s1m2_readonly_acquisition_plan.json",
+        "analysis/Gemini_采集清单_Codex核验_20261008.md",
+        "analysis/S1M2_机身数据采集结果_20261008.md"
+      ],
+      "compact_reason": "保留候选接口定位和对应机器清单；删除零副作用/零风险承诺，错误tag及未支持查询顺序。明确这不是可直接执行白名单，实际安全采集以限定核验和已发送清单为准。"
+    },
+    {
+      "path": "analysis/机身能力数据解码_20261008.md",
+      "bytes": 2113,
+      "sha256": "c98f4891e6f0b3ff59ab67dd7ff73bf2988e02f3bf9bb6c3f5c242f8c7089fbb",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        9,
+        10,
+        13,
+        17,
+        18
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "实际能力parser/roundtrip产物、源代码结构和BurstBracket语义纠正；保留。"
+    },
+    {
+      "path": "analysis/维修样本请求草稿_20261010.md",
+      "bytes": 1144,
+      "sha256": "e79657f3951512bc4b2fe6d54717e9a22dde30a03d65d1f95d0bf9a0495943af",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        1,
+        5,
+        6,
+        8
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "脱敏保留布局和分区摘要请求的可复用文本；未发送的草稿，不是研究成果，建议移到草稿目录。"
+    },
+    {
+      "path": "analysis/维修资料搜索结果_20261008.md",
+      "bytes": 3304,
+      "sha256": "6f03a35e066de39e075aff279834aa12edaa0e0c4ff1a56651f8b8606c62f569",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        12,
+        20,
+        28,
+        31,
+        32,
+        33
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "TS2原件页码及搜索全称/403误分类纠正，保留具体来源核验。"
+    },
+    {
+      "path": "analysis/维修资料替代入口_Codex核验_20261009.md",
+      "bytes": 2180,
+      "sha256": "f6b7b491eff6f4bb28fe7b503ac3686653614881c05dc5ea0498cddc2347a2eb",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        7,
+        13,
+        17,
+        23,
+        25
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "DGDSC32实际为视频修复、GH7公开索引存在以及正文取得状态的精确纠正；保留。"
+    },
+    {
+      "path": "analysis/维护接口跨版本比较_20261008.md",
+      "bytes": 1550,
+      "sha256": "628cb65d8d9e4b4b6dcd5d31322aadd92568cf46ad54d97d1d9a7158bef621c1",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        5,
+        9,
+        13
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "12函数对比、7归一化一致、字面值静态读回与可复现脚本；保留。"
+    },
+    {
+      "path": "analysis/cleanup_20261010/changes.json",
+      "bytes": 33413,
+      "sha256": "a108a07d8ebb85e38c5083da881effde22eb79f5d4523de2515a0137da437d57",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        1,
+        4,
+        8
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "旧清理91项的前后摘要/移除原因及废纸篓来源；必须保留作为撤回追溯，不因含AGY元数据删除。"
+    },
+    {
+      "path": "analysis/cleanup_20261010/validation.md",
+      "bytes": 972,
+      "sha256": "bc794d29cad3188ae99b8cd07bfb00ee881aa5f515293c2a75a415c40afafec8",
+      "action": "keep",
+      "delete_reason": null,
+      "key_lines": [
+        5,
+        6,
+        8,
+        9,
+        11,
+        13
+      ],
+      "contains_unique_information": true,
+      "unique_information_note": "具体来源/纠错/实验条件信息；没有证明完全被其他源文替代。",
+      "review_mode": "structure_and_evidence_sampling",
+      "replacement_paths": [],
+      "keep_reason": "真实离线测试与封装往返结果，明确模拟不证明实机；保留旧清理验收边界。"
+    }
+  ]
+}

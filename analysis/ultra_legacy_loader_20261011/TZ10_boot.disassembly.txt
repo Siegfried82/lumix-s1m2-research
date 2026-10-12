@@ -1,0 +1,339 @@
+
+<LOCAL_WORKSPACE>/analysis/method2_review_20261011/decoded/TZ10_V12.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+00000600 <.data+0x600>:
+     600:	fc dc f0 ff 	mov	1957691376,a0
+     604:	af 74 
+     606:	f2 f0       	mov	a0,sp
+     608:	80 00       	mov	0,d0
+     60a:	fc 83 1c 50 	movhu	d0,(0x9c01501c)
+     60e:	01 9c 
+     610:	2c fb 47    	mov	18427,d0
+     613:	fc 83 1a 50 	movhu	d0,(0x9c01501a)
+     617:	01 9c 
+     619:	80 00       	mov	0,d0
+     61b:	03 20 84    	movhu	d0,(0x8420)
+     61e:	80 02       	mov	2,d0
+     620:	03 22 84    	movhu	d0,(0x8422)
+     623:	80 02       	mov	2,d0
+     625:	03 28 84    	movhu	d0,(0x8428)
+     628:	80 22       	mov	34,d0
+     62a:	03 2c 84    	movhu	d0,(0x842c)
+     62d:	80 02       	mov	2,d0
+     62f:	03 2e 84    	movhu	d0,(0x842e)
+     632:	2c 55 1f    	mov	8021,d0
+     635:	fc 83 62 c0 	movhu	d0,(0x9c00c062)
+     639:	00 9c 
+     63b:	2c 88 00    	mov	136,d0
+     63e:	fc 83 08 c0 	movhu	d0,(0x9c00c008)
+     642:	00 9c 
+     644:	00          	clr	d0
+     645:	fc 83 10 50 	movhu	d0,(0x9c015010)
+     649:	01 9c 
+     64b:	fc 83 12 50 	movhu	d0,(0x9c015012)
+     64f:	01 9c 
+     651:	fc 83 14 50 	movhu	d0,(0x9c015014)
+     655:	01 9c 
+     657:	fc 83 16 50 	movhu	d0,(0x9c015016)
+     65b:	01 9c 
+     65d:	fc 83 18 50 	movhu	d0,(0x9c015018)
+     661:	01 9c 
+     663:	80 00       	mov	0,d0
+     665:	fc 83 04 50 	movhu	d0,(0x9c015004)
+     669:	01 9c 
+     66b:	2d 30 75    	mov	30000,d1
+     66e:	db          	setlb	
+     66f:	29 ff       	add	-1,d1
+     671:	cb          	nop	
+     672:	c8 0d       	beq	0x67f
+     674:	fc ac 04 50 	movhu	(0x9c015004),d0
+     678:	01 9c 
+     67a:	fa e0 00 80 	and	32768,d0
+     67e:	d9          	lne	
+     67f:	80 33       	mov	51,d0
+     681:	fc 83 02 f4 	movhu	d0,(0x9c00f402)
+     685:	00 9c 
+     687:	80 20       	mov	32,d0
+     689:	fc 83 04 f4 	movhu	d0,(0x9c00f404)
+     68d:	00 9c 
+     68f:	2c 31 23    	mov	9009,d0
+     692:	fc 83 00 f4 	movhu	d0,(0x9c00f400)
+     696:	00 9c 
+     698:	2c 21 43    	mov	17185,d0
+     69b:	fc 83 14 f4 	movhu	d0,(0x9c00f414)
+     69f:	00 9c 
+     6a1:	2c 02 21    	mov	8450,d0
+     6a4:	fc 83 16 f4 	movhu	d0,(0x9c00f416)
+     6a8:	00 9c 
+     6aa:	2c 0a 22    	mov	8714,d0
+     6ad:	fc 83 18 f4 	movhu	d0,(0x9c00f418)
+     6b1:	00 9c 
+     6b3:	2c 00 02    	mov	512,d0
+     6b6:	85 03       	mov	3,d1
+     6b8:	fc 83 1a f4 	movhu	d0,(0x9c00f41a)
+     6bc:	00 9c 
+     6be:	fc 87 1c f4 	movhu	d1,(0x9c00f41c)
+     6c2:	00 9c 
+     6c4:	80 0a       	mov	10,d0
+     6c6:	fc 83 22 f4 	movhu	d0,(0x9c00f422)
+     6ca:	00 9c 
+     6cc:	80 0a       	mov	10,d0
+     6ce:	fc 83 24 f4 	movhu	d0,(0x9c00f424)
+     6d2:	00 9c 
+     6d4:	fc cc 01 b0 	mov	45057,d0
+     6d8:	00 00 
+     6da:	fc 83 3a f4 	movhu	d0,(0x9c00f43a)
+     6de:	00 9c 
+     6e0:	80 00       	mov	0,d0
+     6e2:	fc 83 3c f4 	movhu	d0,(0x9c00f43c)
+     6e6:	00 9c 
+     6e8:	80 00       	mov	0,d0
+     6ea:	fc 83 3e f4 	movhu	d0,(0x9c00f43e)
+     6ee:	00 9c 
+     6f0:	2c e0 01    	mov	480,d0
+     6f3:	fc 83 46 f4 	movhu	d0,(0x9c00f446)
+     6f7:	00 9c 
+     6f9:	80 00       	mov	0,d0
+     6fb:	fc 83 12 f4 	movhu	d0,(0x9c00f412)
+     6ff:	00 9c 
+     701:	80 30       	mov	48,d0
+     703:	fc 83 0a f4 	movhu	d0,(0x9c00f40a)
+     707:	00 9c 
+     709:	80 01       	mov	1,d0
+     70b:	fc 83 0a f4 	movhu	d0,(0x9c00f40a)
+     70f:	00 9c 
+     711:	2d 30 75    	mov	30000,d1
+     714:	db          	setlb	
+     715:	29 ff       	add	-1,d1
+     717:	cb          	nop	
+     718:	c8 0c       	beq	0x724
+     71a:	fc ac 0c f4 	movhu	(0x9c00f40c),d0
+     71e:	00 9c 
+     720:	f8 e0 01    	and	1,d0
+     723:	d9          	lne	
+     724:	80 00       	mov	0,d0
+     726:	fc 83 e0 11 	movhu	d0,(0x9c0111e0)
+     72a:	01 9c 
+     72c:	80 01       	mov	1,d0
+     72e:	fc 83 e2 11 	movhu	d0,(0x9c0111e2)
+     732:	01 9c 
+     734:	80 01       	mov	1,d0
+     736:	fc 83 e6 11 	movhu	d0,(0x9c0111e6)
+     73a:	01 9c 
+     73c:	80 10       	mov	16,d0
+     73e:	fc 83 12 10 	movhu	d0,(0x9c011012)
+     742:	01 9c 
+     744:	80 05       	mov	5,d0
+     746:	fc 83 00 00 	movhu	d0,(0x9c010000)
+     74a:	01 9c 
+     74c:	80 01       	mov	1,d0
+     74e:	fc 83 04 00 	movhu	d0,(0x9c010004)
+     752:	01 9c 
+     754:	80 05       	mov	5,d0
+     756:	fc 83 08 00 	movhu	d0,(0x9c010008)
+     75a:	01 9c 
+     75c:	fc 83 0e 00 	movhu	d0,(0x9c01000e)
+     760:	01 9c 
+     762:	80 01       	mov	1,d0
+     764:	fc 83 02 00 	movhu	d0,(0x9c010002)
+     768:	01 9c 
+     76a:	fc 83 06 00 	movhu	d0,(0x9c010006)
+     76e:	01 9c 
+     770:	fc 83 0c 00 	movhu	d0,(0x9c01000c)
+     774:	01 9c 
+     776:	fc 83 12 00 	movhu	d0,(0x9c010012)
+     77a:	01 9c 
+     77c:	fc cc e0 ff 	mov	65504,d0
+     780:	00 00 
+     782:	fc 83 14 00 	movhu	d0,(0x9c010014)
+     786:	01 9c 
+     788:	2c ff 03    	mov	1023,d0
+     78b:	fc 83 16 00 	movhu	d0,(0x9c010016)
+     78f:	01 9c 
+     791:	80 00       	mov	0,d0
+     793:	fc 83 18 00 	movhu	d0,(0x9c010018)
+     797:	01 9c 
+     799:	2c 87 13    	mov	4999,d0
+     79c:	fc 83 4a f2 	movhu	d0,(0x9c00f24a)
+     7a0:	00 9c 
+     7a2:	2c 5b 21    	mov	8539,d0
+     7a5:	fc 83 4a f2 	movhu	d0,(0x9c00f24a)
+     7a9:	00 9c 
+     7ab:	fc cc 14 81 	mov	33044,d0
+     7af:	00 00 
+     7b1:	fc 83 42 f2 	movhu	d0,(0x9c00f242)
+     7b5:	00 9c 
+     7b7:	2c 38 12    	mov	4664,d0
+     7ba:	fc 83 46 f2 	movhu	d0,(0x9c00f246)
+     7be:	00 9c 
+     7c0:	2c 91 19    	mov	6545,d0
+     7c3:	fc 83 40 f2 	movhu	d0,(0x9c00f240)
+     7c7:	00 9c 
+     7c9:	80 30       	mov	48,d0
+     7cb:	03 70 80    	movhu	d0,(0x8070)
+     7ce:	cb          	nop	
+     7cf:	cb          	nop	
+     7d0:	80 03       	mov	3,d0
+     7d2:	03 70 80    	movhu	d0,(0x8070)
+     7d5:	fc dd 18 05 	mov	1073743128,a1
+     7d9:	00 40 
+     7db:	fc dc 18 05 	mov	1073743128,a0
+     7df:	00 40 
+     7e1:	fc ff 3e 00 	calls	0x81f
+     7e5:	00 00 
+     7e7:	fc dd 44 02 	mov	1073742404,a1
+     7eb:	00 40 
+     7ed:	fc dc 44 02 	mov	1073742404,a0
+     7f1:	00 40 
+     7f3:	fc de 18 05 	mov	1073743128,a2
+     7f7:	00 40 
+     7f9:	fc ff 37 00 	calls	0x830
+     7fd:	00 00 
+     7ff:	fc dc f0 fe 	mov	1957691120,a0
+     803:	af 74 
+     805:	00          	clr	d0
+     806:	db          	setlb	
+     807:	60          	mov	d0,(a0)
+     808:	50          	inc4	a0
+     809:	fc d8 f0 ff 	cmp	1957691376,a0
+     80d:	af 74 
+     80f:	d4          	lcs	
+     810:	00          	clr	d0
+     811:	f1 e0       	mov	d0,a0
+     813:	f1 e1       	mov	d0,a1
+     815:	f1 e2       	mov	d0,a2
+     817:	f1 e3       	mov	d0,a3
+     819:	81          	mov	d0,d1
+     81a:	82          	mov	d0,d2
+     81b:	83          	mov	d0,d3
+     81c:	cc c7 00    	jmp	0x8e3
+     81f:	f1 d0       	mov	a0,d0
+     821:	f1 14       	sub	a1,d0
+     823:	c8 0b       	beq	0x82e
+     825:	85 04       	mov	4,d1
+     827:	08          	clr	d2
+     828:	69          	mov	d2,(a1)
+     829:	51          	inc4	a1
+     82a:	f1 04       	sub	d1,d0
+     82c:	c1 fc       	bgt	0x828
+     82e:	f0 fc       	rets	
+     830:	f1 d0       	mov	a0,d0
+     832:	f1 14       	sub	a1,d0
+     834:	c8 0c       	beq	0x840
+     836:	85 04       	mov	4,d1
+     838:	79          	mov	(a1),d2
+     839:	51          	inc4	a1
+     83a:	6a          	mov	d2,(a2)
+     83b:	52          	inc4	a2
+     83c:	f1 04       	sub	d1,d0
+     83e:	c1 fa       	bgt	0x838
+     840:	f0 fc       	rets	
+     842:	ff          	break	
+     843:	ff          	break	
+     844:	00          	clr	d0
+     845:	08          	clr	d2
+     846:	fc dd 1c 21 	mov	-1677647588,a1
+     84a:	01 9c 
+     84c:	db          	setlb	
+     84d:	f0 65       	movhu	(a1),d1
+     84f:	1c          	exthu	d0
+     850:	e0          	add	d0,d0
+     851:	f4 d0       	movhu	d1,(d0,a0)
+     853:	48          	inc	d2
+     854:	88          	mov	d2,d0
+     855:	f0 69       	movhu	(a1),d2
+     857:	81          	mov	d0,d1
+     858:	1d          	exthu	d1
+     859:	e5          	add	d1,d1
+     85a:	f4 e4       	movhu	d2,(d1,a0)
+     85c:	40          	inc	d0
+     85d:	f0 69       	movhu	(a1),d2
+     85f:	81          	mov	d0,d1
+     860:	1d          	exthu	d1
+     861:	e5          	add	d1,d1
+     862:	f4 e4       	movhu	d2,(d1,a0)
+     864:	40          	inc	d0
+     865:	f0 69       	movhu	(a1),d2
+     867:	81          	mov	d0,d1
+     868:	1d          	exthu	d1
+     869:	e5          	add	d1,d1
+     86a:	f4 e4       	movhu	d2,(d1,a0)
+     86c:	40          	inc	d0
+     86d:	f0 69       	movhu	(a1),d2
+     86f:	81          	mov	d0,d1
+     870:	1d          	exthu	d1
+     871:	e5          	add	d1,d1
+     872:	f4 e4       	movhu	d2,(d1,a0)
+     874:	40          	inc	d0
+     875:	f0 69       	movhu	(a1),d2
+     877:	81          	mov	d0,d1
+     878:	1d          	exthu	d1
+     879:	e5          	add	d1,d1
+     87a:	f4 e4       	movhu	d2,(d1,a0)
+     87c:	40          	inc	d0
+     87d:	f0 69       	movhu	(a1),d2
+     87f:	81          	mov	d0,d1
+     880:	1d          	exthu	d1
+     881:	e5          	add	d1,d1
+     882:	f4 e4       	movhu	d2,(d1,a0)
+     884:	40          	inc	d0
+     885:	f0 69       	movhu	(a1),d2
+     887:	81          	mov	d0,d1
+     888:	1d          	exthu	d1
+     889:	e5          	add	d1,d1
+     88a:	f4 e4       	movhu	d2,(d1,a0)
+     88c:	40          	inc	d0
+     88d:	82          	mov	d0,d2
+     88e:	1e          	exthu	d2
+     88f:	fa ca 00 01 	cmp	256,d2
+     893:	d0          	llt	
+     894:	fc dd 04 21 	mov	-1677647612,a1
+     898:	01 9c 
+     89a:	f0 61       	movhu	(a1),d0
+     89c:	2d 00 04    	mov	1024,d1
+     89f:	f2 04       	and	d1,d0
+     8a1:	c8 08       	beq	0x8a9
+     8a3:	db          	setlb	
+     8a4:	f0 61       	movhu	(a1),d0
+     8a6:	f2 04       	and	d1,d0
+     8a8:	d9          	lne	
+     8a9:	fc dd 22 21 	mov	-1677647582,a1
+     8ad:	01 9c 
+     8af:	f0 61       	movhu	(a1),d0
+     8b1:	a0 00       	cmp	0,d0
+     8b3:	c8 2c       	beq	0x8df
+     8b5:	f0 61       	movhu	(a1),d0
+     8b7:	f8 ec 02    	btst	2,d0
+     8ba:	c8 07       	beq	0x8c1
+     8bc:	2c ff 00    	mov	255,d0
+     8bf:	ca 21       	bra	0x8e0
+     8c1:	f0 61       	movhu	(a1),d0
+     8c3:	f8 ec 04    	btst	4,d0
+     8c6:	c8 19       	beq	0x8df
+     8c8:	fc ac 2c 21 	movhu	(0x9c01212c),d0
+     8cc:	01 9c 
+     8ce:	fc ae 28 21 	movhu	(0x9c012128),d2
+     8d2:	01 9c 
+     8d4:	81          	mov	d0,d1
+     8d5:	e1          	add	d0,d1
+     8d6:	1d          	exthu	d1
+     8d7:	f1 64       	add	d1,a0
+     8d9:	f0 64       	movhu	(a0),d1
+     8db:	f2 26       	xor	d1,d2
+     8dd:	f0 78       	movhu	d2,(a0)
+     8df:	00          	clr	d0
+     8e0:	de 80 04    	retf	[d2],4
+     8e3:	cf f0       	movm	[d2,d3,a2,a3],(sp)
+     8e5:	f8 fe f8    	add	-8,sp
+     8e8:	2c a3 00    	mov	163,d0
+     8eb:	fc 83 00 21 	movhu	d0,(0x9c012100)
+     8ef:	01 9c 
+     8f1:	80 08       	mov	8,d0
+     8f3:	fc 83 06 21 	movhu	d0,(0x9c012106)
+     8f7:	01 9c 
+     8f9:	fc ac 06 21 	movhu	(0x9c012106),d0
+     8fd:	01 9c 
+     8ff:	f8      	asr	8,d0

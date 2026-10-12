@@ -1,0 +1,125 @@
+[
+  {
+    "clip": "P1022640",
+    "raw_media_present": false,
+    "metadata_tracks": [
+      {
+        "handler": "vide",
+        "codec": "avc1",
+        "timescale": 90000,
+        "duration_ticks": 648000,
+        "duration_seconds": 7.2,
+        "sample_count": 180,
+        "sample_rate_average": 25.0,
+        "timing_runs": [
+          [
+            180,
+            3600
+          ]
+        ],
+        "width": 1280,
+        "height": 720,
+        "avc_profile_idc": 100,
+        "avc_level_idc": 31,
+        "avcc_hex": "0164001fffe100b36764001fad9444d421b8202100f00c40dd28521c1a3012706181b807fca1487068c049c18606e01ff4322b15c2d81e20fa1004105034602ce06a01ff080208281a3016703500ff949264eab26dc892e6edb620820444c203060d1a34300b008102081001f03f02081001f00ffa112344e4f255c95b9295b9a23131008010410821020010302081f807ff602802dff80b7010101400000fa000030d43a30001005800166ea1ffe346000200b0002cdd43ffc28001000468ee3cb0fdf8f800"
+      },
+      {
+        "handler": "soun",
+        "codec": "mp4a",
+        "timescale": 48000,
+        "duration_ticks": 348160,
+        "duration_seconds": 7.253333333333333,
+        "sample_count": 340,
+        "sample_rate_average": 46.875,
+        "timing_runs": [
+          [
+            340,
+            1024
+          ]
+        ]
+      }
+    ],
+    "claimed_hash": "b83395a3902c5a1b4cd73a30913f69436e36bbea53742297d3870b961802bd7d",
+    "showinfo_frames": 0,
+    "indices_contiguous": null,
+    "all_logged_intra": null,
+    "logged_pixel_formats": [],
+    "logged_geometries": [],
+    "pts_steps": [],
+    "frames_count_matches_claim": null,
+    "file_average_bitrate_computed": 979566.1764705883,
+    "limitation": "No source MP4: hashes, actual decode and authenticity cannot be independently verified here."
+  },
+  {
+    "clip": "P1022641",
+    "raw_media_present": false,
+    "metadata_tracks": [
+      {
+        "handler": "vide",
+        "codec": "avc1",
+        "timescale": 90000,
+        "duration_ticks": 604800,
+        "duration_seconds": 6.72,
+        "sample_count": 168,
+        "sample_rate_average": 25.0,
+        "timing_runs": [
+          [
+            168,
+            3600
+          ]
+        ],
+        "width": 3840,
+        "height": 2160,
+        "avc_profile_idc": 122,
+        "avc_level_idc": 51,
+        "avcc_hex": "017a1033ffe1001b677a1033b6cf00f0010fb01e30101014000003000400000300ca1001004368ce3133881120812102c806c04208016705016822c2dc2983683a8280b411616e14c1b41d088248d790899447f210a588c444e100401cc220840a105905b059fff823fefafa00"
+      },
+      {
+        "handler": "soun",
+        "codec": "twos",
+        "timescale": 48000,
+        "duration_ticks": 322560,
+        "duration_seconds": 6.72,
+        "sample_count": 322560,
+        "sample_rate_average": 48000.0,
+        "timing_runs": [
+          [
+            322560,
+            1
+          ]
+        ]
+      },
+      {
+        "handler": "tmcd",
+        "codec": "tmcd",
+        "timescale": 90000,
+        "duration_ticks": 604800,
+        "duration_seconds": 6.72,
+        "sample_count": 168,
+        "sample_rate_average": 25.0,
+        "timing_runs": [
+          [
+            168,
+            3600
+          ]
+        ]
+      }
+    ],
+    "claimed_hash": "a579a0ff325ed380ac8f6162421f8a382a19c9597e997fd6cf53aed072f19059",
+    "showinfo_frames": 168,
+    "indices_contiguous": true,
+    "all_logged_intra": true,
+    "logged_pixel_formats": [
+      "yuv422p10le"
+    ],
+    "logged_geometries": [
+      "3840x2160"
+    ],
+    "pts_steps": [
+      3600
+    ],
+    "frames_count_matches_claim": true,
+    "file_average_bitrate_computed": 266460207.14285716,
+    "limitation": "No source MP4: hashes, actual decode and authenticity cannot be independently verified here."
+  }
+]

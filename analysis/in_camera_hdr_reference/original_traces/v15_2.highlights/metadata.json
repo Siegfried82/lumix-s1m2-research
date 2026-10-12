@@ -1,0 +1,92 @@
+{
+  "module": "v15_2.highlights",
+  "filename": "v15_2\\highlights.py",
+  "sha256": "caaca85c0fc4185e5d01bff1c720ba19cc821e1e62a44164651d01153f0ea422",
+  "functions": [
+    {
+      "scope": "v15_2.highlights",
+      "name": "<module>",
+      "line": 1,
+      "args": [],
+      "names": [
+        "__doc__",
+        "SHOULDER_START",
+        "SHOULDER_CEILING",
+        "UINT16_MAX",
+        "DNG_WHITE_LEVEL",
+        "shortest_slot",
+        "audit"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.highlights.shortest_slot",
+      "name": "shortest_slot",
+      "line": 8,
+      "args": [
+        "entries",
+        "order"
+      ],
+      "names": [
+        "list",
+        "range",
+        "len",
+        "sorted",
+        "ValueError",
+        "all",
+        "min"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.highlights.shortest_slot.<genexpr>",
+      "name": "<genexpr>",
+      "line": 16,
+      "args": [
+        ".0"
+      ],
+      "names": [],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.highlights.shortest_slot.<listcomp>",
+      "name": "<listcomp>",
+      "line": 17,
+      "args": [
+        ".0"
+      ],
+      "names": [],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.highlights.shortest_slot.<lambda>",
+      "name": "<lambda>",
+      "line": 20,
+      "args": [
+        "i"
+      ],
+      "names": [],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.highlights.audit",
+      "name": "audit",
+      "line": 23,
+      "args": [
+        "entries",
+        "order"
+      ],
+      "names": [
+        "shortest_slot",
+        "dict",
+        "SHOULDER_START",
+        "SHOULDER_CEILING",
+        "DNG_WHITE_LEVEL",
+        "UINT16_MAX"
+      ],
+      "imports": []
+    }
+  ],
+  "imports": [],
+  "shaders": []
+}

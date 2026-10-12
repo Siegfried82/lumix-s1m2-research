@@ -1,0 +1,145 @@
+[
+  {
+    "purpose" : "allowlisted_read_inventory",
+    "read_count" : 7,
+    "event" : "started",
+    "time_utc" : "2026-10-11T22:16:50Z"
+  },
+  {
+    "event" : "device_found",
+    "model" : "DC-S1M2",
+    "time_utc" : "2026-10-11T22:16:50Z"
+  },
+  {
+    "event" : "session_opened",
+    "time_utc" : "2026-10-11T22:16:50Z"
+  },
+  {
+    "data_bytes" : 233,
+    "index" : 0,
+    "opcode" : "0x1001",
+    "event" : "plan_read_response",
+    "params" : [
+
+    ],
+    "error" : "",
+    "response_tid" : 2,
+    "response_code" : "0x2001",
+    "submitted_tid" : 1,
+    "ok" : 1,
+    "time_utc" : "2026-10-11T22:16:50Z",
+    "name" : "device_info",
+    "transport_ok" : true
+  },
+  {
+    "data_bytes" : 152,
+    "index" : 1,
+    "opcode" : "0x9402",
+    "event" : "plan_read_response",
+    "params" : [
+      33554448
+    ],
+    "error" : "",
+    "response_tid" : 3,
+    "response_code" : "0x2001",
+    "submitted_tid" : 2,
+    "ok" : 1,
+    "time_utc" : "2026-10-11T22:16:50Z",
+    "name" : "mode_1",
+    "transport_ok" : true
+  },
+  {
+    "data_bytes" : 2852,
+    "index" : 2,
+    "opcode" : "0x9408",
+    "event" : "plan_read_response",
+    "params" : [
+      100663312
+    ],
+    "error" : "",
+    "response_tid" : 4,
+    "response_code" : "0x2001",
+    "submitted_tid" : 3,
+    "ok" : 1,
+    "time_utc" : "2026-10-11T22:16:50Z",
+    "name" : "video_1",
+    "transport_ok" : true
+  },
+  {
+    "data_bytes" : 924,
+    "index" : 3,
+    "opcode" : "0x9108",
+    "event" : "plan_read_response",
+    "params" : [
+      100663312,
+      0,
+      0
+    ],
+    "error" : "",
+    "response_tid" : 5,
+    "response_code" : "0x2001",
+    "submitted_tid" : 4,
+    "ok" : 1,
+    "time_utc" : "2026-10-11T22:16:50Z",
+    "name" : "capability_1",
+    "transport_ok" : true
+  },
+  {
+    "data_bytes" : 152,
+    "index" : 4,
+    "opcode" : "0x9402",
+    "event" : "plan_read_response",
+    "params" : [
+      33554448
+    ],
+    "error" : "",
+    "response_tid" : 6,
+    "response_code" : "0x2001",
+    "submitted_tid" : 5,
+    "ok" : 1,
+    "time_utc" : "2026-10-11T22:16:50Z",
+    "name" : "mode_2",
+    "transport_ok" : true
+  },
+  {
+    "data_bytes" : 2852,
+    "index" : 5,
+    "opcode" : "0x9408",
+    "event" : "plan_read_response",
+    "params" : [
+      100663312
+    ],
+    "error" : "",
+    "response_tid" : 7,
+    "response_code" : "0x2001",
+    "submitted_tid" : 6,
+    "ok" : 1,
+    "time_utc" : "2026-10-11T22:16:50Z",
+    "name" : "video_2",
+    "transport_ok" : true
+  },
+  {
+    "data_bytes" : 924,
+    "index" : 6,
+    "opcode" : "0x9108",
+    "event" : "plan_read_response",
+    "params" : [
+      100663312,
+      0,
+      0
+    ],
+    "error" : "",
+    "response_tid" : 8,
+    "response_code" : "0x2001",
+    "submitted_tid" : 7,
+    "ok" : 1,
+    "time_utc" : "2026-10-11T22:16:50Z",
+    "name" : "capability_2",
+    "transport_ok" : true
+  },
+  {
+    "event" : "session_closed",
+    "error" : "",
+    "time_utc" : "2026-10-11T22:16:50Z"
+  }
+]

@@ -1,0 +1,14 @@
+This documents shows bindings information for milbeaut noc driver.
+
+Required properties:
+- compatible: set "socionext,noc-m20v".
+- reg: set three ranges.
+       <0x14c0a000 0x80>, <0x14c0d000 0x80>, <0x14c0e000 0x80>
+- reg-names : set three ranges, "bar02", "bar11", "bar12";
+
+Example:
+	noc: noc@14c0a000 {
+		compatible = "socionext,noc-m20v";
+		reg = <0x14c0a000 0x80>, <0x14c0d000 0x80>, <0x14c0e000 0x80>;
+		reg-names = "bar02", "bar11", "bar12";
+	};

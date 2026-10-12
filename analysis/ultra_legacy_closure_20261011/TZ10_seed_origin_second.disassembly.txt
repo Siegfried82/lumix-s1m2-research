@@ -1,0 +1,42 @@
+
+<LOCAL_WORKSPACE>/analysis/method2_review_20261011/decoded/TZ10_V12.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+77b62f52 <.data+0x2e7552>:
+77b62f52:	3c          	mov	sp,a0
+77b62f53:	f1 d2       	mov	a0,d2
+77b62f55:	2a 04       	add	4,d2
+77b62f57:	f1 e8       	mov	d2,a0
+77b62f59:	00          	clr	d0
+77b62f5a:	85 34       	mov	52,d1
+77b62f5c:	dd df 27 dd 	call	0x7793573b,[a2],4
+77b62f60:	ff 20 04 
+77b62f63:	4b 04       	mov	a2,(4,sp)
+77b62f65:	4e 08       	mov	d3,(8,sp)
+77b62f67:	fc cc ff ff 	mov	65535,d0
+77b62f6b:	00 00 
+77b62f6d:	bf 00       	cmp	0,a3
+77b62f6f:	c9 08       	bne	0x77b62f77
+77b62f71:	fc cc 6f 80 	mov	98415,d0
+77b62f75:	01 00 
+77b62f77:	42 14       	mov	d0,(20,sp)
+77b62f79:	00          	clr	d0
+77b62f7a:	42 10       	mov	d0,(16,sp)
+77b62f7c:	f8 92 0c    	movbu	d0,(12,sp)
+77b62f7f:	90 14       	mov	20,a0
+77b62f81:	f1 68       	add	d2,a0
+77b62f83:	80 20       	mov	32,d0
+77b62f85:	dd 9d 8a d3 	call	0x7789ba22,[d2,d3,a2],12
+77b62f89:	ff e0 0c 
+77b62f8c:	f1 e8       	mov	d2,a0
+77b62f8e:	dd 5f 8e 02 	call	0x77b8bded,[d2,d3,a2,a3],124
+77b62f92:	00 f0 7c 
+77b62f95:	a0 00       	cmp	0,d0
+77b62f97:	c8 05       	beq	0x77b62f9c
+77b62f99:	08          	clr	d2
+77b62f9a:	ca 04       	bra	0x77b62f9e
+77b62f9c:	8a 01       	mov	1,d2
+77b62f9e:	16          	extbu	d2
+77b62f9f:	16          	extbu	d2

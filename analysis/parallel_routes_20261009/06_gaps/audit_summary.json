@@ -1,0 +1,120 @@
+{
+  "tested_summary": {
+    "total_operations": 92,
+    "status_distribution": {
+      "0x2001": 85,
+      "0x2008": 2,
+      "0x2006": 2,
+      "0x2002": 2,
+      "0x2005": 1
+    },
+    "opcode_distribution": {
+      "0x1001": 1,
+      "0x9402": 40,
+      "0x9421": 4,
+      "0x1004": 1,
+      "0x1014": 1,
+      "0x1015": 1,
+      "0x1005": 2,
+      "0x9108": 28,
+      "0x9414": 10,
+      "0x9408": 3,
+      "0x9114": 1
+    },
+    "failed_operations": [
+      {
+        "name": "storage_info_10000",
+        "opcode": "0x1005",
+        "property_code": null,
+        "response_code": "0x2008",
+        "error": ""
+      },
+      {
+        "name": "storage_info_20000",
+        "opcode": "0x1005",
+        "property_code": null,
+        "response_code": "0x2008",
+        "error": ""
+      },
+      {
+        "name": "capability_12010040",
+        "opcode": "0x9108",
+        "property_code": null,
+        "response_code": "0x2006",
+        "error": ""
+      },
+      {
+        "name": "capability_03000081",
+        "opcode": "0x9108",
+        "property_code": null,
+        "response_code": "0x2006",
+        "error": ""
+      },
+      {
+        "name": "current_020001d8",
+        "opcode": "0x9402",
+        "property_code": null,
+        "response_code": "0x2002",
+        "error": ""
+      },
+      {
+        "name": "get_9414_12800110",
+        "opcode": "0x9414",
+        "property_code": null,
+        "response_code": "0x2002",
+        "error": ""
+      },
+      {
+        "name": "vendor_storage_ids",
+        "opcode": "0x9114",
+        "property_code": null,
+        "response_code": "0x2005",
+        "error": ""
+      }
+    ]
+  },
+  "disassembly_summary": {
+    "total_disassembly_points": 85,
+    "unique_opcodes": {
+      "0x9402": 23,
+      "0x9110": 1,
+      "0x9112": 1,
+      "0x9113": 1,
+      "0x940a": 6,
+      "0x9414": 12,
+      "0x9107": 1,
+      "0x9108": 1,
+      "0x9408": 3,
+      "0x9421": 1,
+      "0x9422": 1,
+      "0x9423": 1,
+      "0x940b": 4,
+      "0x9114": 1,
+      "0x9115": 1,
+      "0x9403": 6,
+      "0x9409": 2,
+      "0x9415": 1,
+      "0x9706": 2,
+      "0x9707": 1,
+      "0x9704": 1,
+      "0x9411": 1,
+      "0x9116": 1,
+      "0x9117": 1,
+      "0x9118": 1,
+      "0x9401": 1,
+      "0x9603": 1,
+      "0x9605": 1,
+      "0x9606": 1,
+      "0x9607": 1,
+      "0x9417": 1,
+      "0x9102": 2,
+      "0x9103": 1,
+      "0x9104": 1
+    }
+  },
+  "config_summary": {
+    "file_size": 9197409,
+    "magic": "Panasonic",
+    "model": "DC-S1M2"
+  }
+}

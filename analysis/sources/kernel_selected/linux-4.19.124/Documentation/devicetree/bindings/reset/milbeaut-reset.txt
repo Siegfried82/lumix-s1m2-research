@@ -1,0 +1,41 @@
+Milbeaut reset controller
+
+Reset EXS macros (UHS-I/II, Nand Flash, USB e.t.c.) and control
+their registers on EXSTOP.
+------------
+
+oncell_IDs are listed below,
+include/dt-bindings/reset/milbeaut,m20v.reset.h
+
+Required properties:
+- compatible: should be "socionext,milbeaut-m20v-reset"
+- reg: should be two regs
+- reg-names: should be below names
+	"exstop" - EM_SRSTX of EXS
+	"pcie_apb" - pcie subsystem reset part of EXS
+- #reset-cells: should be 1.
+
+Example:
+
+rst: reset{
+	compatible = "socionext,milbeaut-m20v-reset";
+	reg = <0x1ba00200 0x20>, <0x1bb00e00 0x80>;
+	reg-names = "exstop", "pcie_apb";
+	#reset-cells = <1>;
+};
+
+Consumer node example:
+
+pcie0: pcie@1b000000 {
+	compatible = "socionext,milbeaut-pcie-rc", "snps,dw-pcie";
+
+	...[snip]...
+
+	resets = <&rst M20V_PCIE_RESET_PWR>, <&rst M20V_PCIE_RESET_SOFT0>,
+		 <&rst M20V_PCIE_RESET_BIFU>, <&rst M20V_PCIE_RESET_CNT0_MODE>;
+	reset-names = "pwr", "soft",
+		      "bifu", "dev";
+
+	...[snip]...
+
+};

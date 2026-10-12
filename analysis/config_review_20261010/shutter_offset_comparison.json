@@ -1,0 +1,783 @@
+{
+  "samples": [
+    {
+      "path": "analysis/baseline_20261008_01/config_1.DAT",
+      "sha256": "ca848c6889b222a2d7e0039aee945e9afe522cda0997e8053b1a3537820304e2",
+      "model": "DC-S1M2",
+      "targets": [
+        {
+          "offset_DAT": "0xde48",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002e0201001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde30",
+              "tag": "0x22e",
+              "slot": 0,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2e0201001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0xde64",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002e0202001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde4c",
+              "tag": "0x22e",
+              "slot": 1,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2e0202001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0xde80",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002f0200001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde68",
+              "tag": "0x22e",
+              "slot": 2,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2f0200001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cf64",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008ab090007ab09",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cf4c",
+              "tag": "0x3b5",
+              "slot": 0,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b50301002c00000003000100"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cf90",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008000700070007",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cf78",
+              "tag": "0x3b5",
+              "slot": 1,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b50302002c00000003000100"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cfbc",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008000800080008",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cfa4",
+              "tag": "0x3b5",
+              "slot": 2,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b70300001c00000000000100"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/device_inventory_20261008_06/config_1.DAT",
+      "sha256": "caf0fc191ce18bd5f0dc276647595f8d778e370afb8cdafb187f8ba7a80e10f7",
+      "model": "DC-S1M2",
+      "targets": [
+        {
+          "offset_DAT": "0xde48",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002e0201001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde30",
+              "tag": "0x22e",
+              "slot": 0,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2e0201001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0xde64",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002e0202001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde4c",
+              "tag": "0x22e",
+              "slot": 1,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2e0202001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0xde80",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002f0200001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde68",
+              "tag": "0x22e",
+              "slot": 2,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2f0200001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cf64",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008ab090007ab09",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cf4c",
+              "tag": "0x3b5",
+              "slot": 0,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b50301002c00000003000100"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cf90",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008000700070007",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cf78",
+              "tag": "0x3b5",
+              "slot": 1,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b50302002c00000003000100"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cfbc",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008000800080008",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cfa4",
+              "tag": "0x3b5",
+              "slot": 2,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b70300001c00000000000100"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/highres_firstnormal_off_20261008_03/config_1.DAT",
+      "sha256": "3bac47236253971c597980af339d7de5489e89a77d62a672639284a754fa7025",
+      "model": "DC-S1M2",
+      "targets": [
+        {
+          "offset_DAT": "0xde48",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002e0201001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde30",
+              "tag": "0x22e",
+              "slot": 0,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2e0201001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0xde64",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002e0202001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde4c",
+              "tag": "0x22e",
+              "slot": 1,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2e0202001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0xde80",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002f0200001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde68",
+              "tag": "0x22e",
+              "slot": 2,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2f0200001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cf64",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008ab090007ab09",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cf4c",
+              "tag": "0x3b5",
+              "slot": 0,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b50301002c00000003000100"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cf90",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008000700070007",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cf78",
+              "tag": "0x3b5",
+              "slot": 1,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b50302002c00000003000100"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cfbc",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008000800080008",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cfa4",
+              "tag": "0x3b5",
+              "slot": 2,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b70300001c00000000000100"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/highres_firstnormal_off_fan_20261008_05/config_1.DAT",
+      "sha256": "fe2cec28a5c105f590718034583af998d61f9ee8cc045169629539915705b11f",
+      "model": "DC-S1M2",
+      "targets": [
+        {
+          "offset_DAT": "0xde48",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002e0201001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde30",
+              "tag": "0x22e",
+              "slot": 0,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2e0201001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0xde64",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002e0202001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde4c",
+              "tag": "0x22e",
+              "slot": 1,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2e0202001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0xde80",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002f0200001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde68",
+              "tag": "0x22e",
+              "slot": 2,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2f0200001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cf64",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008ab090007ab09",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cf4c",
+              "tag": "0x3b5",
+              "slot": 0,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b50301002c00000003000100"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cf90",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008000700070007",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cf78",
+              "tag": "0x3b5",
+              "slot": 1,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b50302002c00000003000100"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cfbc",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008000800080008",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cfa4",
+              "tag": "0x3b5",
+              "slot": 2,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b70300001c00000000000100"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/highres_firstnormal_on_fan_20261008_04/config_1.DAT",
+      "sha256": "7ce284f173a793bf22d3852fc42f652c9268134570c39cde1379d33e13a38aba",
+      "model": "DC-S1M2",
+      "targets": [
+        {
+          "offset_DAT": "0xde48",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002e0201001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde30",
+              "tag": "0x22e",
+              "slot": 0,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2e0201001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0xde64",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002e0202001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde4c",
+              "tag": "0x22e",
+              "slot": 1,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2e0202001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0xde80",
+          "u16_le": 0,
+          "window": "010000000000000000000000000000002f0200001c00000000000000",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0xde68",
+              "tag": "0x22e",
+              "slot": 2,
+              "length": 28,
+              "flags": "0x0",
+              "next_header_hex": "2f0200001c00000000000000"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cf64",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008ab090007ab09",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cf4c",
+              "tag": "0x3b5",
+              "slot": 0,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b50301002c00000003000100"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cf90",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008000700070007",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cf78",
+              "tag": "0x3b5",
+              "slot": 1,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b50302002c00000003000100"
+            }
+          ]
+        },
+        {
+          "offset_DAT": "0x1cfbc",
+          "u16_le": 2048,
+          "window": "00070008000800080008000800080008000800080008000800080008",
+          "bounded_header_candidates_not_semantic_proof": [
+            {
+              "start": "0x1cfa4",
+              "tag": "0x3b5",
+              "slot": 2,
+              "length": 44,
+              "flags": "0x10003",
+              "next_header_hex": "b70300001c00000000000100"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "offset_basis": "Assumed pure DAT offsets from supplied S1RM2 report; origin in report not independently confirmed.",
+  "limits": "Raw comparison only; matching values or heuristic headers do not establish setting identity.",
+  "strict_triple_checks": [
+    {
+      "sample": "analysis/baseline_20261008_01/config_1.DAT",
+      "tag": "0x22e",
+      "headers": [
+        [
+          558,
+          0,
+          28,
+          0
+        ],
+        [
+          558,
+          1,
+          28,
+          0
+        ],
+        [
+          558,
+          2,
+          28,
+          0
+        ]
+      ],
+      "values_u16_at_record_plus24": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "sample": "analysis/baseline_20261008_01/config_1.DAT",
+      "tag": "0x3b5",
+      "headers": [
+        [
+          949,
+          0,
+          44,
+          65539
+        ],
+        [
+          949,
+          1,
+          44,
+          65539
+        ],
+        [
+          949,
+          2,
+          44,
+          65539
+        ]
+      ],
+      "values_u16_at_record_plus24": [
+        2048,
+        2048,
+        2048
+      ]
+    },
+    {
+      "sample": "analysis/device_inventory_20261008_06/config_1.DAT",
+      "tag": "0x22e",
+      "headers": [
+        [
+          558,
+          0,
+          28,
+          0
+        ],
+        [
+          558,
+          1,
+          28,
+          0
+        ],
+        [
+          558,
+          2,
+          28,
+          0
+        ]
+      ],
+      "values_u16_at_record_plus24": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "sample": "analysis/device_inventory_20261008_06/config_1.DAT",
+      "tag": "0x3b5",
+      "headers": [
+        [
+          949,
+          0,
+          44,
+          65539
+        ],
+        [
+          949,
+          1,
+          44,
+          65539
+        ],
+        [
+          949,
+          2,
+          44,
+          65539
+        ]
+      ],
+      "values_u16_at_record_plus24": [
+        2048,
+        2048,
+        2048
+      ]
+    },
+    {
+      "sample": "analysis/highres_firstnormal_off_20261008_03/config_1.DAT",
+      "tag": "0x22e",
+      "headers": [
+        [
+          558,
+          0,
+          28,
+          0
+        ],
+        [
+          558,
+          1,
+          28,
+          0
+        ],
+        [
+          558,
+          2,
+          28,
+          0
+        ]
+      ],
+      "values_u16_at_record_plus24": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "sample": "analysis/highres_firstnormal_off_20261008_03/config_1.DAT",
+      "tag": "0x3b5",
+      "headers": [
+        [
+          949,
+          0,
+          44,
+          65539
+        ],
+        [
+          949,
+          1,
+          44,
+          65539
+        ],
+        [
+          949,
+          2,
+          44,
+          65539
+        ]
+      ],
+      "values_u16_at_record_plus24": [
+        2048,
+        2048,
+        2048
+      ]
+    },
+    {
+      "sample": "analysis/highres_firstnormal_off_fan_20261008_05/config_1.DAT",
+      "tag": "0x22e",
+      "headers": [
+        [
+          558,
+          0,
+          28,
+          0
+        ],
+        [
+          558,
+          1,
+          28,
+          0
+        ],
+        [
+          558,
+          2,
+          28,
+          0
+        ]
+      ],
+      "values_u16_at_record_plus24": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "sample": "analysis/highres_firstnormal_off_fan_20261008_05/config_1.DAT",
+      "tag": "0x3b5",
+      "headers": [
+        [
+          949,
+          0,
+          44,
+          65539
+        ],
+        [
+          949,
+          1,
+          44,
+          65539
+        ],
+        [
+          949,
+          2,
+          44,
+          65539
+        ]
+      ],
+      "values_u16_at_record_plus24": [
+        2048,
+        2048,
+        2048
+      ]
+    },
+    {
+      "sample": "analysis/highres_firstnormal_on_fan_20261008_04/config_1.DAT",
+      "tag": "0x22e",
+      "headers": [
+        [
+          558,
+          0,
+          28,
+          0
+        ],
+        [
+          558,
+          1,
+          28,
+          0
+        ],
+        [
+          558,
+          2,
+          28,
+          0
+        ]
+      ],
+      "values_u16_at_record_plus24": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "sample": "analysis/highres_firstnormal_on_fan_20261008_04/config_1.DAT",
+      "tag": "0x3b5",
+      "headers": [
+        [
+          949,
+          0,
+          44,
+          65539
+        ],
+        [
+          949,
+          1,
+          44,
+          65539
+        ],
+        [
+          949,
+          2,
+          44,
+          65539
+        ]
+      ],
+      "values_u16_at_record_plus24": [
+        2048,
+        2048,
+        2048
+      ]
+    }
+  ]
+}

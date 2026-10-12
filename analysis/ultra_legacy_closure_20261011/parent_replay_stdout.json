@@ -1,0 +1,71 @@
+{
+  "positives": [
+    {
+      "input": "analysis/legacy_corpus_20261011/GH2__V11.bin",
+      "input_size": 15599104,
+      "input_sha256": "5756a37304b2453982b977d250806e1056cd9dfc5acf9de07a53fa3e2973400d",
+      "body_start": "0x200",
+      "body_end_exclusive": "0xee0600",
+      "iv_hex": "905ea095470c2977cb5f8dcf7622881c",
+      "md5_actual": "d88f4506546ce8e2ab264a7548c3dee0",
+      "md5_expected": "d88f4506546ce8e2ab264a7548c3dee0",
+      "md5_matches": true,
+      "existing_plaintext_exact_match": true
+    },
+    {
+      "input": "analysis/legacy_corpus_20261011/GH2__V12.bin",
+      "input_size": 15599104,
+      "input_sha256": "e192ba2a7dba4167e4100efc896c5475faffd51164bd949e600964430454e817",
+      "body_start": "0x200",
+      "body_end_exclusive": "0xee0600",
+      "iv_hex": "eaefe7eee29547706360c431f8452b50",
+      "md5_actual": "35cb77e2ef08df9ef334ff1e496b0b02",
+      "md5_expected": "35cb77e2ef08df9ef334ff1e496b0b02",
+      "md5_matches": true,
+      "existing_plaintext_exact_match": true
+    }
+  ],
+  "tz10_resident_seed_replay": {
+    "seed_file": "0x341bc4",
+    "seed_va": "0x77bbd5c4",
+    "seed_hex": "0c9ef8efe6cd114f1f441e3e6735c285",
+    "getter_xor_mask_file": "0x341ba4",
+    "initializer_xor_mask_file": "0x341b84",
+    "masks_equal": true,
+    "length_file": "0x341bd4",
+    "length": 16,
+    "sampled_offsets": [
+      "0x394",
+      "0x4c4",
+      "0x614",
+      "0x876",
+      "0xca2",
+      "0xfc5",
+      "0xec8",
+      "0x10c8",
+      "0x126c",
+      "0x14bd",
+      "0x1804",
+      "0x1a66",
+      "0x1a27",
+      "0x1d1a",
+      "0x1e2e",
+      "0x20d3"
+    ],
+    "sampled_seed_hex": "0c9ef8efe6cd114f1f441e3e6735c285",
+    "resident_seed_equals_sampled": true,
+    "mt_generator_source": "analysis/method2_review_20261011/decode_method2.py",
+    "mt_generator_source_sha256": "0a04f69e385ba352a881538ab65acbe743876004698234cfa76269bd1ae3e285",
+    "generator_source": "reuses previously verified transparent Python MT implementation; firmware not executed",
+    "body_start": "0x200",
+    "body_end_exclusive": "0xfd2e00",
+    "word_count": 4147968,
+    "parity_extra_discards": 1593097,
+    "decoded_body_md5": "7125ec82bbc118824b0a41d9d86a8716",
+    "expected_body_md5": "7125ec82bbc118824b0a41d9d86a8716",
+    "md5_matches": true,
+    "existing_decoded_exact_match": true
+  },
+  "tz10_call_candidates_count": 21,
+  "windows": 37
+}

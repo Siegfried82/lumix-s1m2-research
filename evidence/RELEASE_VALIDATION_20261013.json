@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-13",
+  "executed_by": "Codex; offline release verification",
+  "device_access": false,
+  "external_device_tools_executed": false,
+  "historical_experiments_all_rerun": false,
+  "pipeline": {
+    "entry": "evidence/reproduce_offline.py",
+    "firmware_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+    "result": "passed",
+    "captured_output": "evidence/REPLAY_EXECUTION_20261013.json",
+    "captured_output_sha256": "dcb0a6525fd45f2124c8e29ab9b6cafb7b03adfcdd6e209097ea95ae64f89426",
+    "archived_files_verified_before_additional_release_metadata": 8847,
+    "capability_files": 26,
+    "subtags": 144,
+    "settings": 5,
+    "maintenance_comparisons": 12,
+    "maintenance_normalized_equal": 7,
+    "offline_suites": 4,
+    "firmware_components": 62,
+    "repack_results": "Both repacks bit-identical to original input; protected component plaintext not established"
+  },
+  "external_configuration": {
+    "observations": 42,
+    "blob_bytes": 65533,
+    "raw_blob_files": 28,
+    "ptp_wrapped_files": 14,
+    "ptp_prefix_bytes": 12,
+    "checksum_mod256": 0,
+    "records_each": 831,
+    "record_end": 65528,
+    "result": "passed",
+    "artifact": "evidence/EXTERNAL_CONFIGURATION_REPLAY_20261013.json",
+    "limits": "Bytes/checksum/record traversal only; no persistence or media verification"
+  },
+  "container_inputs": [
+    {
+      "name": "S5___V29.bin",
+      "bytes": 90238464,
+      "sha256": "b2ec4aeec209693b874df8dfdf11fc85b38fa4675b44ec554b7a167f430827e1",
+      "directory_records": 48,
+      "stored_candidate_digest_matches": 7,
+      "directory_payload_overlap_bytes": 0,
+      "crc_matches": true
+    },
+    {
+      "name": "S1m2_V14.bin",
+      "bytes": 171867648,
+      "sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+      "directory_records": 62,
+      "stored_candidate_digest_matches": 13,
+      "directory_payload_overlap_bytes": 0,
+      "crc_matches": true
+    }
+  ],
+  "replay_preparation": {
+    "source_archive_unchanged": true,
+    "path_mapped_files": 273,
+    "experiment_execution": false
+  },
+  "additional_zip_capture": {
+    "zip_full_hashes_matched_expected": true,
+    "all_original_file_entries_crc_and_sha_read": 714,
+    "toolbox_exact_path_and_bytes_reused": 489,
+    "report_exact_path_and_bytes_reused": 218,
+    "new_source_hashes_reverified": 7,
+    "public_redacted_sources": 7,
+    "python_syntax_checked_without_execution": 4,
+    "privacy_scan_findings": [],
+    "original_archive_presence_at_followup": {
+      "08_总结与工具箱_20261013.zip": false,
+      "S5逆向_研究总报告_20261011.zip": false
+    },
+    "comments": "No device, network, external PowerShell/Python execution. AST checks not experimental success."
+  },
+  "final_tree_hash_manifest": "evidence/FILE_MANIFEST.csv; generated after publication metadata and additions",
+  "not_claimed": [
+    "Complete S1M2 firmware reverse engineering",
+    "Real camera RAM capture",
+    "Proprietary plaintext recovery",
+    "Device feature/ABI/installability",
+    "Independent replay of all external reports"
+  ]
+}

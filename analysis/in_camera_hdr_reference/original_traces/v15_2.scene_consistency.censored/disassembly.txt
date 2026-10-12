@@ -1,0 +1,775 @@
+# pydisasm version 6.3.0
+# CPython Python bytecode 3.10 (3439)
+#   Disassembled from CPython Python 3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]
+# Timestamp in code: 0 (1970-01-01 03:00:00)
+# Method Name:       <module>
+# Filename:          v15_2\scene_consistency\censored.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        4
+# Flags:             0x00000040 (NOFREE)
+# First Line:        1
+# Constants:
+#    0: 'WGPU geometry evidence for connected censored footprints.\n\nScene-confirmed boundaries with a displaced common-capped intensity centroid\nselect coherent support across the censored interior, including identical cores.\n64-bit unsigned accumulations are emulated with atomic low/high u32 limbs.\n'
+#    1: 0
+#    2: None
+#    3: 2
+#    4: ('ScenePolicyWGPU',)
+#    5: <Code310 code object CensoredShape at 0x10694d460, file v15_2\scene_consistency\censored.py>, line 10
+#    6: 'CensoredShape'
+# Names:
+#    0: __doc__
+#    1: numpy
+#    2: np
+#    3: scene_policy_wgpu
+#    4: ScenePolicyWGPU
+#    5: CensoredShape
+
+  1:           0 LOAD_CONST           ("WGPU geometry evidence for connected censored footprints.\n\nScene-confirmed boundaries with a displaced common-capped intensity centroid\nselect coherent support across the censored interior, including identical cores.\n64-bit unsigned accumulations are emulated with atomic low/high u32 limbs.\n")
+               2 STORE_NAME           (__doc__)
+
+  7:           4 LOAD_CONST           (0)
+               6 LOAD_CONST           (None)
+               8 IMPORT_NAME          (numpy)
+              10 STORE_NAME           (np)
+
+  8:          12 LOAD_CONST           (2)
+              14 LOAD_CONST           (('ScenePolicyWGPU',))
+              16 IMPORT_NAME          (scene_policy_wgpu)
+              18 IMPORT_FROM          (ScenePolicyWGPU)
+              20 STORE_NAME           (ScenePolicyWGPU)
+              22 POP_TOP
+
+ 10:          24 LOAD_BUILD_CLASS
+              26 LOAD_CONST           (<Code310 code object CensoredShape at 0x10694d460, file v15_2\scene_consistency\censored.py>, line 10)
+              28 LOAD_CONST           ("CensoredShape")
+              30 MAKE_FUNCTION        (No arguments)
+              32 LOAD_CONST           ("CensoredShape")
+              34 LOAD_NAME            (ScenePolicyWGPU)
+              36 CALL_FUNCTION        (3 positional arguments)
+              38 STORE_NAME           (CensoredShape)
+              40 LOAD_CONST           (None)
+              42 RETURN_VALUE
+
+
+# Method Name:       CensoredShape
+# Filename:          v15_2\scene_consistency\censored.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        2
+# Flags:             0x00000040 (NOFREE)
+# First Line:        10
+# Constants:
+#    0: 'CensoredShape'
+#    1: <Code310 code object apply at 0x106b14ce0, file v15_2\scene_consistency\censored.py>, line 11
+#    2: 'CensoredShape.apply'
+#    3: None
+# Names:
+#    0: __name__
+#    1: __module__
+#    2: __qualname__
+#    3: apply
+
+ 10:           0 LOAD_NAME            (__name__)
+               2 STORE_NAME           (__module__)
+               4 LOAD_CONST           ("CensoredShape")
+               6 STORE_NAME           (__qualname__)
+
+ 11:           8 LOAD_CONST           (<Code310 code object apply at 0x106b14ce0, file v15_2\scene_consistency\censored.py>, line 11)
+              10 LOAD_CONST           ("CensoredShape.apply")
+              12 MAKE_FUNCTION        (No arguments)
+              14 STORE_NAME           (apply)
+              16 LOAD_CONST           (None)
+              18 RETURN_VALUE
+
+
+# Method Name:       apply
+# Filename:          v15_2\scene_consistency\censored.py
+# Argument count:    4
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  19
+# Stack size:        24
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        11
+# Constants:
+#    0: None
+#    1: 1
+#    2: 7
+#    3: '@group(0) @binding(0) var<storage,read> field:array<f32>;\n@group(0) @binding(1) var<storage,read_write> dst:array<u32>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p>='
+#    4: 'u){return;}dst[p]=select(0u,1u,field['
+#    5: 3
+#    6: 'u+p]>.5);}'
+#    7: 'censored_support'
+#    8: ('a', 'w')
+#    9: 8
+#   10: 'censored_'
+#   11: 19
+#   12: '@group(0) @binding(0) var<storage,read_write> stats:array<u32>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p<'
+#   13: 'u){stats[p*19u+14u]=0xffffffffu;}}'
+#   14: 'censored_floor_init'
+#   15: ('w',)
+#   16: '@group(0) @binding(0) var<storage,read> labels:array<u32>;\n@group(0) @binding(1) var<storage,read> base:array<f32>;\n@group(0) @binding(2) var<storage,read> field:array<f32>;\n@group(0) @binding(3) var<storage,read_write> stats:array<atomic<u32>>;\nfn add64(j:u32,v:u32){let old=atomicAdd(&stats[j],v);if(old>0xffffffffu-v){atomicAdd(&stats[j+1u],1u);}}\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p>='
+#   17: 'u||labels[p]==0u){return;}let j=(labels[p]-1u)*19u;let x=p%'
+#   18: 'u;let y=p/'
+#   19: 'u;\nlet r=select(0u,1u,base['
+#   20: 4
+#   21: 'u+p]>.2);let green=select(0u,1u,base['
+#   22: 'u+p]>.2&&base['
+#   23: 2
+#   24: 'u+p]>.2);let b=select(0u,1u,base['
+#   25: 'u+p]>.2);\natomicAdd(&stats[j],1u);if(r+green+b>=2u||base['
+#   26: 'u+p]>1.5||base['
+#   27: 'u+p]>1.5){atomicAdd(&stats[j+1u],1u);}\nlet rv=u32(round(clamp(field['
+#   28: 'u+p],0.,16.)*4096.));let sv=u32(round(clamp(field['
+#   29: 'u+p],0.,16.)*4096.));\nadd64(j+2u,rv);add64(j+4u,rv*x);add64(j+6u,rv*y);add64(j+8u,sv);add64(j+10u,sv*x);add64(j+12u,sv*y);\natomicMin(&stats[j+14u],min(rv,sv));add64(j+15u,x);add64(j+17u,y);}'
+#   30: 'censored_moments'
+#   31: ('a', 'a', 'a', 'w')
+#   32: '@group(0) @binding(0) var<storage,read> stats:array<u32>;\n@group(0) @binding(1) var<storage,read_write> dst:array<f32>;\nfn number(j:u32)->f32{return f32(stats[j])+4294967296.*f32(stats[j+1u]);}\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p>='
+#   33: 'u){return;}let j=p*19u;let area=stats[j];let votes=stats[j+1u];let floor_v=select(0.,f32(stats[j+14u]),area>0u);let rs=number(j+2u)-floor_v*f32(area);let ss=number(j+8u)-floor_v*f32(area);\nlet background=floor_v*vec2<f32>(number(j+15u),number(j+17u));\nvar delta=vec2<f32>(0.);if(min(rs,ss)>1.){delta=4.*((vec2<f32>(number(j+10u),number(j+12u))-background)/ss-(vec2<f32>(number(j+4u),number(j+6u))-background)/rs);}let shift=length(delta);\nlet reject=area>=4u&&f32(votes)>=max(4.,.03*f32(area))&&shift>1.25&&min(rs,ss)>1.;\ndst[p*8u]=select(0.,1.,reject);dst[p*8u+1u]=shift;dst[p*8u+2u]=f32(votes);dst[p*8u+3u]=f32(area);dst[p*8u+4u]=delta.x;dst[p*8u+5u]=delta.y;dst[p*8u+6u]=0.;dst[p*8u+7u]=0.;}'
+#   34: 'censored_classify_v4'
+#   35: 'censored_classify'
+#   36: '@group(0) @binding(0) var<storage,read> labels:array<u32>;\n@group(0) @binding(1) var<storage,read> field:array<f32>;\n@group(0) @binding(2) var<storage,read> decision:array<f32>;\n@group(0) @binding(3) var<storage,read_write> errors:array<atomic<u32>>;\nfn val(x:u32,y:u32)->f32{return field['
+#   37: 'u+y*'
+#   38: 'u+x];}\nfn add64(j:u32,v:u32){let old=atomicAdd(&errors[j],v);if(old>0xffffffffu-v){atomicAdd(&errors[j+1u],1u);}}\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p>='
+#   39: 'u||labels[p]==0u){return;}let label=labels[p]-1u;let j=label*8u;if(decision[j]<.5){return;}\nlet pos=vec2<f32>(f32(p%'
+#   40: 'u),f32(p/'
+#   41: 'u))+.25*vec2<f32>(decision[j+4u],decision[j+5u]);\nlet q=clamp(pos,vec2<f32>(0.),vec2<f32>('
+#   42: ','
+#   43: '));let lo=vec2<u32>(floor(q));let hi=min(lo+vec2<u32>(1u),vec2<u32>('
+#   44: 'u,'
+#   45: 'u));let t=q-vec2<f32>(lo);\nlet shifted=mix(mix(val(lo.x,lo.y),val(hi.x,lo.y),t.x),mix(val(lo.x,hi.y),val(hi.x,hi.y),t.x),t.y);\nlet reference_value=field['
+#   46: 'u+p];let src=field['
+#   47: 'u+p];\nadd64(label*4u,u32(round(min(abs(src-reference_value),16.)*65536.)));add64(label*4u+2u,u32(round(min(abs(shifted-reference_value),16.)*65536.)));}'
+#   48: 'censored_translation_error'
+#   49: '@group(0) @binding(0) var<storage,read> errors:array<u32>;\n@group(0) @binding(1) var<storage,read_write> decision:array<f32>;\nfn number(j:u32)->f32{return f32(errors[j])+4294967296.*f32(errors[j+1u]);}\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p>='
+#   50: 'u){return;}let before=number(p*4u);let after=number(p*4u+2u);\ndecision[p*8u]=select(0.,decision[p*8u],before>1.&&after<.75*before);decision[p*8u+6u]=before/65536.;decision[p*8u+7u]=after/65536.;}'
+#   51: 'censored_translation_confirm'
+#   52: '@group(0) @binding(0) var<storage,read> labels:array<u32>;\n@group(0) @binding(1) var<storage,read> decision:array<f32>;\n@group(0) @binding(2) var<storage,read_write> mask:array<f32>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p>='
+#   53: 'u||labels[p]==0u){return;}if(decision[(labels[p]-1u)*8u]>.5){for(var c=0u;c<4u;c++){mask[('
+#   54: 'u*4u+c)*'
+#   55: 'u+p]=1.;}}}'
+#   56: 'censored_apply_v4'
+#   57: ('a', 'a', 'w')
+#   58: 'censored_apply'
+#   59: (3,)
+#   60: '@group(0) @binding(0) var<storage,read> decision:array<f32>;\n@group(0) @binding(1) var<storage,read_write> summary:array<atomic<u32>>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p>='
+#   61: 'u){return;}if(decision[p*8u]>.5){atomicAdd(&summary[0],1u);atomicAdd(&summary[1],u32(decision[p*8u+3u]));atomicMax(&summary[2],u32(round(decision[p*8u+1u]*1000.)));}}'
+#   62: 'censored_summary_v4'
+#   63: 'censored_summary'
+#   64: 0
+#   65: 1000
+#   66: ('frame', 'components', 'support_queries', 'max_centroid_delta_native')
+# Names:
+#    0: spec
+#    1: shape
+#    2: range
+#    3: _u32
+#    4: _dispatch
+#    5: buffer
+#    6: _connected
+#    7: str
+#    8: _clear_u32
+#    9: rt
+#   10: empty
+#   11: float
+#   12: _read_u32
+#   13: append
+#   14: dict
+#   15: int
+#   16: release_external
+# Varnames:
+#	self, mask, base, field, _, h, w, n, reports, frame, support, code, labels, stats, decision, errors, summary, val, v
+# Positional arguments:
+#	self, mask, base, field
+# Local variables:
+#    4: _
+#    5: h
+#    6: w
+#    7: n
+#    8: reports
+#    9: frame
+#   10: support
+#   11: code
+#   12: labels
+#   13: stats
+#   14: decision
+#   15: errors
+#   16: summary
+#   17: val
+#   18: v
+
+ 12:           0 LOAD_FAST            (base)
+               2 LOAD_ATTR            (spec)
+               4 LOAD_ATTR            (shape)
+               6 UNPACK_SEQUENCE      4
+               8 STORE_FAST           (_)
+              10 STORE_FAST           (_)
+              12 STORE_FAST           (h)
+              14 STORE_FAST           (w)
+              16 LOAD_FAST            (h)
+              18 LOAD_FAST            (w)
+              20 BINARY_MULTIPLY
+              22 STORE_FAST           (n)
+              24 BUILD_LIST           0
+              26 STORE_FAST           (reports)
+
+ 13:          28 LOAD_GLOBAL          (range)
+              30 LOAD_CONST           (1)
+              32 LOAD_CONST           (7)
+              34 CALL_FUNCTION        (2 positional arguments)
+              36 GET_ITER
+         >>   38 EXTENDED_ARG         (256)
+              40 FOR_ITER             (to 960)
+              42 STORE_FAST           (frame)
+
+ 14:          44 LOAD_FAST            (self)
+              46 LOAD_METHOD          (_u32)
+              48 LOAD_CONST           (1)
+              50 LOAD_FAST            (h)
+              52 LOAD_FAST            (w)
+              54 BUILD_TUPLE          3
+              56 CALL_METHOD          (1 positional argument)
+              58 STORE_FAST           (support)
+
+ 15:          60 LOAD_CONST           ("@group(0) @binding(0) var<storage,read> field:array<f32>;\n@group(0) @binding(1) var<storage,read_write> dst:array<u32>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p>=")
+
+ 17:          62 LOAD_FAST            (n)
+
+ 15:          64 FORMAT_VALUE         0
+              66 LOAD_CONST           ("u){return;}dst[p]=select(0u,1u,field[")
+
+ 17:          68 LOAD_FAST            (frame)
+              70 LOAD_CONST           (3)
+              72 BINARY_MULTIPLY
+              74 LOAD_FAST            (n)
+              76 BINARY_MULTIPLY
+
+ 15:          78 FORMAT_VALUE         0
+              80 LOAD_CONST           ("u+p]>.5);}")
+              82 BUILD_STRING         5
+              84 STORE_FAST           (code)
+
+ 18:          86 LOAD_FAST            (self)
+              88 LOAD_METHOD          (_dispatch)
+              90 LOAD_CONST           ("censored_support")
+              92 LOAD_FAST            (frame)
+              94 LOAD_FAST            (h)
+              96 LOAD_FAST            (w)
+              98 BUILD_TUPLE          4
+             100 LOAD_FAST            (code)
+             102 LOAD_CONST           (('a', 'w'))
+             104 LOAD_FAST            (field)
+             106 LOAD_ATTR            (buffer)
+             108 LOAD_FAST            (support)
+             110 LOAD_ATTR            (buffer)
+             112 BUILD_LIST           2
+             114 LOAD_FAST            (n)
+             116 LOAD_CONST           ("censored_support")
+             118 CALL_METHOD          (6 positional arguments)
+             120 POP_TOP
+
+ 19:         122 LOAD_FAST            (self)
+             124 LOAD_METHOD          (_connected)
+             126 LOAD_FAST            (support)
+             128 LOAD_CONST           (1)
+             130 LOAD_FAST            (h)
+             132 LOAD_FAST            (w)
+             134 LOAD_CONST           (8)
+             136 LOAD_CONST           ("censored_")
+             138 LOAD_GLOBAL          (str)
+             140 LOAD_FAST            (frame)
+             142 CALL_FUNCTION        (1 positional argument)
+             144 BINARY_ADD
+             146 CALL_METHOD          (6 positional arguments)
+             148 STORE_FAST           (labels)
+             150 LOAD_FAST            (self)
+             152 LOAD_METHOD          (_u32)
+             154 LOAD_FAST            (n)
+             156 LOAD_CONST           (19)
+             158 BUILD_TUPLE          2
+             160 CALL_METHOD          (1 positional argument)
+             162 STORE_FAST           (stats)
+             164 LOAD_FAST            (self)
+             166 LOAD_METHOD          (_clear_u32)
+             168 LOAD_FAST            (stats)
+             170 CALL_METHOD          (1 positional argument)
+             172 POP_TOP
+
+ 20:         174 LOAD_CONST           ("@group(0) @binding(0) var<storage,read_write> stats:array<u32>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p<")
+
+ 21:         176 LOAD_FAST            (n)
+
+ 20:         178 FORMAT_VALUE         0
+             180 LOAD_CONST           ("u){stats[p*19u+14u]=0xffffffffu;}}")
+             182 BUILD_STRING         3
+             184 STORE_FAST           (code)
+
+ 22:         186 LOAD_FAST            (self)
+             188 LOAD_METHOD          (_dispatch)
+             190 LOAD_CONST           ("censored_floor_init")
+             192 LOAD_FAST            (n)
+             194 BUILD_TUPLE          2
+             196 LOAD_FAST            (code)
+             198 LOAD_CONST           (('w',))
+             200 LOAD_FAST            (stats)
+             202 LOAD_ATTR            (buffer)
+             204 BUILD_LIST           1
+             206 LOAD_FAST            (n)
+             208 LOAD_CONST           ("censored_floor_init")
+             210 CALL_METHOD          (6 positional arguments)
+             212 POP_TOP
+
+ 23:         214 LOAD_CONST           ("@group(0) @binding(0) var<storage,read> labels:array<u32>;\n@group(0) @binding(1) var<storage,read> base:array<f32>;\n@group(0) @binding(2) var<storage,read> field:array<f32>;\n@group(0) @binding(3) var<storage,read_write> stats:array<atomic<u32>>;\nfn add64(j:u32,v:u32){let old=atomicAdd(&stats[j],v);if(old>0xffffffffu-v){atomicAdd(&stats[j+1u],1u);}}\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p>=")
+
+ 28:         216 LOAD_FAST            (n)
+
+ 23:         218 FORMAT_VALUE         0
+             220 LOAD_CONST           ("u||labels[p]==0u){return;}let j=(labels[p]-1u)*19u;let x=p%")
+
+ 28:         222 LOAD_FAST            (w)
+
+ 23:         224 FORMAT_VALUE         0
+             226 LOAD_CONST           ("u;let y=p/")
+
+ 28:         228 LOAD_FAST            (w)
+
+ 23:         230 FORMAT_VALUE         0
+             232 LOAD_CONST           ("u;\nlet r=select(0u,1u,base[")
+
+ 29:         234 LOAD_FAST            (frame)
+             236 LOAD_CONST           (4)
+             238 BINARY_MULTIPLY
+             240 LOAD_FAST            (n)
+             242 BINARY_MULTIPLY
+
+ 23:         244 FORMAT_VALUE         0
+             246 LOAD_CONST           ("u+p]>.2);let green=select(0u,1u,base[")
+
+ 29:         248 LOAD_FAST            (frame)
+             250 LOAD_CONST           (4)
+             252 BINARY_MULTIPLY
+             254 LOAD_CONST           (1)
+             256 BINARY_ADD
+             258 LOAD_FAST            (n)
+             260 BINARY_MULTIPLY
+
+ 23:         262 FORMAT_VALUE         0
+             264 LOAD_CONST           ("u+p]>.2&&base[")
+
+ 29:         266 LOAD_FAST            (frame)
+             268 LOAD_CONST           (4)
+             270 BINARY_MULTIPLY
+             272 LOAD_CONST           (2)
+             274 BINARY_ADD
+             276 LOAD_FAST            (n)
+             278 BINARY_MULTIPLY
+
+ 23:         280 FORMAT_VALUE         0
+             282 LOAD_CONST           ("u+p]>.2);let b=select(0u,1u,base[")
+
+ 29:         284 LOAD_FAST            (frame)
+             286 LOAD_CONST           (4)
+             288 BINARY_MULTIPLY
+             290 LOAD_CONST           (3)
+             292 BINARY_ADD
+             294 LOAD_FAST            (n)
+             296 BINARY_MULTIPLY
+
+ 23:         298 FORMAT_VALUE         0
+             300 LOAD_CONST           ("u+p]>.2);\natomicAdd(&stats[j],1u);if(r+green+b>=2u||base[")
+
+ 30:         302 LOAD_FAST            (frame)
+             304 LOAD_CONST           (4)
+             306 BINARY_MULTIPLY
+             308 LOAD_FAST            (n)
+             310 BINARY_MULTIPLY
+
+ 23:         312 FORMAT_VALUE         0
+             314 LOAD_CONST           ("u+p]>1.5||base[")
+
+ 30:         316 LOAD_FAST            (frame)
+             318 LOAD_CONST           (4)
+             320 BINARY_MULTIPLY
+             322 LOAD_CONST           (3)
+             324 BINARY_ADD
+             326 LOAD_FAST            (n)
+             328 BINARY_MULTIPLY
+
+ 23:         330 FORMAT_VALUE         0
+             332 LOAD_CONST           ("u+p]>1.5){atomicAdd(&stats[j+1u],1u);}\nlet rv=u32(round(clamp(field[")
+
+ 31:         334 LOAD_FAST            (frame)
+             336 LOAD_CONST           (3)
+             338 BINARY_MULTIPLY
+             340 LOAD_CONST           (1)
+             342 BINARY_ADD
+             344 LOAD_FAST            (n)
+             346 BINARY_MULTIPLY
+
+ 23:         348 FORMAT_VALUE         0
+             350 LOAD_CONST           ("u+p],0.,16.)*4096.));let sv=u32(round(clamp(field[")
+
+ 31:         352 LOAD_FAST            (frame)
+             354 LOAD_CONST           (3)
+             356 BINARY_MULTIPLY
+             358 LOAD_CONST           (2)
+             360 BINARY_ADD
+             362 LOAD_FAST            (n)
+             364 BINARY_MULTIPLY
+
+ 23:         366 FORMAT_VALUE         0
+             368 LOAD_CONST           ("u+p],0.,16.)*4096.));\nadd64(j+2u,rv);add64(j+4u,rv*x);add64(j+6u,rv*y);add64(j+8u,sv);add64(j+10u,sv*x);add64(j+12u,sv*y);\natomicMin(&stats[j+14u],min(rv,sv));add64(j+15u,x);add64(j+17u,y);}")
+             370 BUILD_STRING         23
+             372 STORE_FAST           (code)
+
+ 34:         374 LOAD_FAST            (self)
+             376 LOAD_METHOD          (_dispatch)
+             378 LOAD_CONST           ("censored_moments")
+             380 LOAD_FAST            (frame)
+             382 LOAD_FAST            (h)
+             384 LOAD_FAST            (w)
+             386 BUILD_TUPLE          4
+             388 LOAD_FAST            (code)
+             390 LOAD_CONST           (('a', 'a', 'a', 'w'))
+             392 LOAD_FAST            (labels)
+             394 LOAD_ATTR            (buffer)
+             396 LOAD_FAST            (base)
+             398 LOAD_ATTR            (buffer)
+             400 LOAD_FAST            (field)
+             402 LOAD_ATTR            (buffer)
+             404 LOAD_FAST            (stats)
+             406 LOAD_ATTR            (buffer)
+             408 BUILD_LIST           4
+             410 LOAD_FAST            (n)
+             412 LOAD_CONST           ("censored_moments")
+             414 CALL_METHOD          (6 positional arguments)
+             416 POP_TOP
+
+ 35:         418 LOAD_FAST            (self)
+             420 LOAD_ATTR            (rt)
+             422 LOAD_METHOD          (empty)
+             424 LOAD_FAST            (n)
+             426 LOAD_CONST           (8)
+             428 BUILD_TUPLE          2
+             430 CALL_METHOD          (1 positional argument)
+             432 STORE_FAST           (decision)
+
+ 36:         434 LOAD_CONST           ("@group(0) @binding(0) var<storage,read> stats:array<u32>;\n@group(0) @binding(1) var<storage,read_write> dst:array<f32>;\nfn number(j:u32)->f32{return f32(stats[j])+4294967296.*f32(stats[j+1u]);}\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p>=")
+
+ 39:         436 LOAD_FAST            (n)
+
+ 36:         438 FORMAT_VALUE         0
+             440 LOAD_CONST           ("u){return;}let j=p*19u;let area=stats[j];let votes=stats[j+1u];let floor_v=select(0.,f32(stats[j+14u]),area>0u);let rs=number(j+2u)-floor_v*f32(area);let ss=number(j+8u)-floor_v*f32(area);\nlet background=floor_v*vec2<f32>(number(j+15u),number(j+17u));\nvar delta=vec2<f32>(0.);if(min(rs,ss)>1.){delta=4.*((vec2<f32>(number(j+10u),number(j+12u))-background)/ss-(vec2<f32>(number(j+4u),number(j+6u))-background)/rs);}let shift=length(delta);\nlet reject=area>=4u&&f32(votes)>=max(4.,.03*f32(area))&&shift>1.25&&min(rs,ss)>1.;\ndst[p*8u]=select(0.,1.,reject);dst[p*8u+1u]=shift;dst[p*8u+2u]=f32(votes);dst[p*8u+3u]=f32(area);dst[p*8u+4u]=delta.x;dst[p*8u+5u]=delta.y;dst[p*8u+6u]=0.;dst[p*8u+7u]=0.;}")
+             442 BUILD_STRING         3
+             444 STORE_FAST           (code)
+
+ 44:         446 LOAD_FAST            (self)
+             448 LOAD_METHOD          (_dispatch)
+             450 LOAD_CONST           ("censored_classify_v4")
+             452 LOAD_FAST            (frame)
+             454 LOAD_FAST            (h)
+             456 LOAD_FAST            (w)
+             458 BUILD_TUPLE          4
+             460 LOAD_FAST            (code)
+             462 LOAD_CONST           (('a', 'w'))
+             464 LOAD_FAST            (stats)
+             466 LOAD_ATTR            (buffer)
+             468 LOAD_FAST            (decision)
+             470 LOAD_ATTR            (buffer)
+             472 BUILD_LIST           2
+             474 LOAD_FAST            (n)
+             476 LOAD_CONST           ("censored_classify")
+             478 CALL_METHOD          (6 positional arguments)
+             480 POP_TOP
+
+ 47:         482 LOAD_FAST            (self)
+             484 LOAD_METHOD          (_u32)
+             486 LOAD_FAST            (n)
+             488 LOAD_CONST           (4)
+             490 BUILD_TUPLE          2
+             492 CALL_METHOD          (1 positional argument)
+             494 STORE_FAST           (errors)
+             496 LOAD_FAST            (self)
+             498 LOAD_METHOD          (_clear_u32)
+             500 LOAD_FAST            (errors)
+             502 CALL_METHOD          (1 positional argument)
+             504 POP_TOP
+
+ 48:         506 LOAD_CONST           ("@group(0) @binding(0) var<storage,read> labels:array<u32>;\n@group(0) @binding(1) var<storage,read> field:array<f32>;\n@group(0) @binding(2) var<storage,read> decision:array<f32>;\n@group(0) @binding(3) var<storage,read_write> errors:array<atomic<u32>>;\nfn val(x:u32,y:u32)->f32{return field[")
+
+ 52:         508 LOAD_FAST            (frame)
+             510 LOAD_CONST           (3)
+             512 BINARY_MULTIPLY
+             514 LOAD_CONST           (2)
+             516 BINARY_ADD
+             518 LOAD_FAST            (n)
+             520 BINARY_MULTIPLY
+
+ 48:         522 FORMAT_VALUE         0
+             524 LOAD_CONST           ("u+y*")
+
+ 52:         526 LOAD_FAST            (w)
+
+ 48:         528 FORMAT_VALUE         0
+             530 LOAD_CONST           ("u+x];}\nfn add64(j:u32,v:u32){let old=atomicAdd(&errors[j],v);if(old>0xffffffffu-v){atomicAdd(&errors[j+1u],1u);}}\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p>=")
+
+ 54:         532 LOAD_FAST            (n)
+
+ 48:         534 FORMAT_VALUE         0
+             536 LOAD_CONST           ("u||labels[p]==0u){return;}let label=labels[p]-1u;let j=label*8u;if(decision[j]<.5){return;}\nlet pos=vec2<f32>(f32(p%")
+
+ 55:         538 LOAD_FAST            (w)
+
+ 48:         540 FORMAT_VALUE         0
+             542 LOAD_CONST           ("u),f32(p/")
+
+ 55:         544 LOAD_FAST            (w)
+
+ 48:         546 FORMAT_VALUE         0
+             548 LOAD_CONST           ("u))+.25*vec2<f32>(decision[j+4u],decision[j+5u]);\nlet q=clamp(pos,vec2<f32>(0.),vec2<f32>(")
+
+ 56:         550 LOAD_GLOBAL          (float)
+             552 LOAD_FAST            (w)
+             554 LOAD_CONST           (1)
+             556 BINARY_SUBTRACT
+             558 CALL_FUNCTION        (1 positional argument)
+
+ 48:         560 FORMAT_VALUE         0
+             562 LOAD_CONST           (",")
+
+ 56:         564 LOAD_GLOBAL          (float)
+             566 LOAD_FAST            (h)
+             568 LOAD_CONST           (1)
+             570 BINARY_SUBTRACT
+             572 CALL_FUNCTION        (1 positional argument)
+
+ 48:         574 FORMAT_VALUE         0
+             576 LOAD_CONST           ("));let lo=vec2<u32>(floor(q));let hi=min(lo+vec2<u32>(1u),vec2<u32>(")
+
+ 56:         578 LOAD_FAST            (w)
+             580 LOAD_CONST           (1)
+             582 BINARY_SUBTRACT
+
+ 48:         584 FORMAT_VALUE         0
+             586 LOAD_CONST           ("u,")
+
+ 56:         588 LOAD_FAST            (h)
+             590 LOAD_CONST           (1)
+             592 BINARY_SUBTRACT
+
+ 48:         594 FORMAT_VALUE         0
+             596 LOAD_CONST           ("u));let t=q-vec2<f32>(lo);\nlet shifted=mix(mix(val(lo.x,lo.y),val(hi.x,lo.y),t.x),mix(val(lo.x,hi.y),val(hi.x,hi.y),t.x),t.y);\nlet reference_value=field[")
+
+ 58:         598 LOAD_FAST            (frame)
+             600 LOAD_CONST           (3)
+             602 BINARY_MULTIPLY
+             604 LOAD_CONST           (1)
+             606 BINARY_ADD
+             608 LOAD_FAST            (n)
+             610 BINARY_MULTIPLY
+
+ 48:         612 FORMAT_VALUE         0
+             614 LOAD_CONST           ("u+p];let src=field[")
+
+ 58:         616 LOAD_FAST            (frame)
+             618 LOAD_CONST           (3)
+             620 BINARY_MULTIPLY
+             622 LOAD_CONST           (2)
+             624 BINARY_ADD
+             626 LOAD_FAST            (n)
+             628 BINARY_MULTIPLY
+
+ 48:         630 FORMAT_VALUE         0
+             632 LOAD_CONST           ("u+p];\nadd64(label*4u,u32(round(min(abs(src-reference_value),16.)*65536.)));add64(label*4u+2u,u32(round(min(abs(shifted-reference_value),16.)*65536.)));}")
+             634 BUILD_STRING         23
+             636 STORE_FAST           (code)
+
+ 60:         638 LOAD_FAST            (self)
+             640 LOAD_METHOD          (_dispatch)
+             642 LOAD_CONST           ("censored_translation_error")
+             644 LOAD_FAST            (frame)
+             646 LOAD_FAST            (h)
+             648 LOAD_FAST            (w)
+             650 BUILD_TUPLE          4
+             652 LOAD_FAST            (code)
+             654 LOAD_CONST           (('a', 'a', 'a', 'w'))
+             656 LOAD_FAST            (labels)
+             658 LOAD_ATTR            (buffer)
+             660 LOAD_FAST            (field)
+             662 LOAD_ATTR            (buffer)
+             664 LOAD_FAST            (decision)
+             666 LOAD_ATTR            (buffer)
+             668 LOAD_FAST            (errors)
+             670 LOAD_ATTR            (buffer)
+             672 BUILD_LIST           4
+             674 LOAD_FAST            (n)
+             676 LOAD_CONST           ("censored_translation_error")
+             678 CALL_METHOD          (6 positional arguments)
+             680 POP_TOP
+
+ 61:         682 LOAD_CONST           ("@group(0) @binding(0) var<storage,read> errors:array<u32>;\n@group(0) @binding(1) var<storage,read_write> decision:array<f32>;\nfn number(j:u32)->f32{return f32(errors[j])+4294967296.*f32(errors[j+1u]);}\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p>=")
+
+ 64:         684 LOAD_FAST            (n)
+
+ 61:         686 FORMAT_VALUE         0
+             688 LOAD_CONST           ("u){return;}let before=number(p*4u);let after=number(p*4u+2u);\ndecision[p*8u]=select(0.,decision[p*8u],before>1.&&after<.75*before);decision[p*8u+6u]=before/65536.;decision[p*8u+7u]=after/65536.;}")
+             690 BUILD_STRING         3
+             692 STORE_FAST           (code)
+
+ 66:         694 LOAD_FAST            (self)
+             696 LOAD_METHOD          (_dispatch)
+             698 LOAD_CONST           ("censored_translation_confirm")
+             700 LOAD_FAST            (frame)
+             702 LOAD_FAST            (h)
+             704 LOAD_FAST            (w)
+             706 BUILD_TUPLE          4
+             708 LOAD_FAST            (code)
+             710 LOAD_CONST           (('a', 'w'))
+             712 LOAD_FAST            (errors)
+             714 LOAD_ATTR            (buffer)
+             716 LOAD_FAST            (decision)
+             718 LOAD_ATTR            (buffer)
+             720 BUILD_LIST           2
+             722 LOAD_FAST            (n)
+             724 LOAD_CONST           ("censored_translation_confirm")
+             726 CALL_METHOD          (6 positional arguments)
+             728 POP_TOP
+
+ 67:         730 LOAD_CONST           ("@group(0) @binding(0) var<storage,read> labels:array<u32>;\n@group(0) @binding(1) var<storage,read> decision:array<f32>;\n@group(0) @binding(2) var<storage,read_write> mask:array<f32>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p>=")
+
+ 70:         732 LOAD_FAST            (n)
+
+ 67:         734 FORMAT_VALUE         0
+             736 LOAD_CONST           ("u||labels[p]==0u){return;}if(decision[(labels[p]-1u)*8u]>.5){for(var c=0u;c<4u;c++){mask[(")
+
+ 70:         738 LOAD_FAST            (frame)
+
+ 67:         740 FORMAT_VALUE         0
+             742 LOAD_CONST           ("u*4u+c)*")
+
+ 70:         744 LOAD_FAST            (n)
+
+ 67:         746 FORMAT_VALUE         0
+             748 LOAD_CONST           ("u+p]=1.;}}}")
+             750 BUILD_STRING         7
+             752 STORE_FAST           (code)
+
+ 71:         754 LOAD_FAST            (self)
+             756 LOAD_METHOD          (_dispatch)
+             758 LOAD_CONST           ("censored_apply_v4")
+             760 LOAD_FAST            (frame)
+             762 LOAD_FAST            (h)
+             764 LOAD_FAST            (w)
+             766 BUILD_TUPLE          4
+             768 LOAD_FAST            (code)
+             770 LOAD_CONST           (('a', 'a', 'w'))
+             772 LOAD_FAST            (labels)
+             774 LOAD_ATTR            (buffer)
+             776 LOAD_FAST            (decision)
+             778 LOAD_ATTR            (buffer)
+             780 LOAD_FAST            (mask)
+             782 LOAD_ATTR            (buffer)
+             784 BUILD_LIST           3
+             786 LOAD_FAST            (n)
+             788 LOAD_CONST           ("censored_apply")
+             790 CALL_METHOD          (6 positional arguments)
+             792 POP_TOP
+
+ 73:         794 LOAD_FAST            (self)
+             796 LOAD_METHOD          (_u32)
+             798 LOAD_CONST           ((3,))
+             800 CALL_METHOD          (1 positional argument)
+             802 STORE_FAST           (summary)
+             804 LOAD_FAST            (self)
+             806 LOAD_METHOD          (_clear_u32)
+             808 LOAD_FAST            (summary)
+             810 CALL_METHOD          (1 positional argument)
+             812 POP_TOP
+
+ 74:         814 LOAD_CONST           ("@group(0) @binding(0) var<storage,read> decision:array<f32>;\n@group(0) @binding(1) var<storage,read_write> summary:array<atomic<u32>>;\n@compute @workgroup_size(128) fn main(@builtin(global_invocation_id) g:vec3<u32>){let p=g.x+g.y*4194304u;if(p>=")
+
+ 76:         816 LOAD_FAST            (n)
+
+ 74:         818 FORMAT_VALUE         0
+             820 LOAD_CONST           ("u){return;}if(decision[p*8u]>.5){atomicAdd(&summary[0],1u);atomicAdd(&summary[1],u32(decision[p*8u+3u]));atomicMax(&summary[2],u32(round(decision[p*8u+1u]*1000.)));}}")
+             822 BUILD_STRING         3
+             824 STORE_FAST           (code)
+
+ 77:         826 LOAD_FAST            (self)
+             828 LOAD_METHOD          (_dispatch)
+             830 LOAD_CONST           ("censored_summary_v4")
+             832 LOAD_FAST            (frame)
+             834 LOAD_FAST            (h)
+             836 LOAD_FAST            (w)
+             838 BUILD_TUPLE          4
+             840 LOAD_FAST            (code)
+             842 LOAD_CONST           (('a', 'w'))
+             844 LOAD_FAST            (decision)
+             846 LOAD_ATTR            (buffer)
+             848 LOAD_FAST            (summary)
+             850 LOAD_ATTR            (buffer)
+             852 BUILD_LIST           2
+             854 LOAD_FAST            (n)
+             856 LOAD_CONST           ("censored_summary")
+             858 CALL_METHOD          (6 positional arguments)
+             860 POP_TOP
+
+ 78:         862 LOAD_FAST            (self)
+             864 LOAD_METHOD          (_read_u32)
+             866 LOAD_FAST            (summary)
+             868 CALL_METHOD          (1 positional argument)
+             870 STORE_FAST           (val)
+             872 LOAD_FAST            (reports)
+             874 LOAD_METHOD          (append)
+             876 LOAD_GLOBAL          (dict)
+             878 LOAD_FAST            (frame)
+             880 LOAD_GLOBAL          (int)
+             882 LOAD_FAST            (val)
+             884 LOAD_CONST           (0)
+             886 BINARY_SUBSCR
+             888 CALL_FUNCTION        (1 positional argument)
+             890 LOAD_GLOBAL          (int)
+             892 LOAD_FAST            (val)
+             894 LOAD_CONST           (1)
+             896 BINARY_SUBSCR
+             898 CALL_FUNCTION        (1 positional argument)
+             900 LOAD_GLOBAL          (float)
+             902 LOAD_FAST            (val)
+             904 LOAD_CONST           (2)
+             906 BINARY_SUBSCR
+             908 LOAD_CONST           (1000)
+             910 BINARY_TRUE_DIVIDE
+             912 CALL_FUNCTION        (1 positional argument)
+             914 LOAD_CONST           (('frame', 'components', 'support_queries', 'max_centroid_delta_native'))
+             916 CALL_FUNCTION_KW     (4 total positional and keyword args)
+             918 CALL_METHOD          (1 positional argument)
+             920 POP_TOP
+
+ 79:         922 LOAD_FAST            (support)
+             924 LOAD_FAST            (labels)
+             926 LOAD_FAST            (stats)
+             928 LOAD_FAST            (decision)
+             930 LOAD_FAST            (summary)
+             932 LOAD_FAST            (errors)
+             934 BUILD_TUPLE          6
+             936 GET_ITER
+         >>  938 FOR_ITER             (to 958)
+             940 STORE_FAST           (v)
+             942 LOAD_FAST            (self)
+             944 LOAD_ATTR            (rt)
+             946 LOAD_METHOD          (release_external)
+             948 LOAD_FAST            (v)
+             950 CALL_METHOD          (1 positional argument)
+             952 POP_TOP
+             954 EXTENDED_ARG         (256)
+             956 JUMP_ABSOLUTE        (to 938)
+         >>  958 JUMP_ABSOLUTE        (to 38)
+
+ 80:     >>  960 LOAD_FAST            (reports)
+             962 RETURN_VALUE
+

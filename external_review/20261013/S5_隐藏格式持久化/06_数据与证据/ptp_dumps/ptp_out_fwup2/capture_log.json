@@ -1,0 +1,30 @@
+[
+  {
+    "purpose" : "readonly_0x9421_dump",
+    "model_filter" : "S5",
+    "event" : "started",
+    "mode" : "fwup",
+    "time_utc" : "2026-10-10T18:40:07Z"
+  },
+  {
+    "event" : "device_found",
+    "model" : "DC-S5",
+    "time_utc" : "2026-10-10T18:40:07Z"
+  },
+  {
+    "event" : "session_opened",
+    "time_utc" : "2026-10-10T18:40:07Z"
+  },
+  {
+    "opcode" : "0x9605",
+    "data_bytes" : 0,
+    "ok" : false,
+    "event" : "read_response",
+    "response_bytes" : 12,
+    "time_utc" : "2026-10-10T18:40:07Z",
+    "transport_ok" : true,
+    "response_code" : "0x2002",
+    "error" : "",
+    "name" : "fwup_ev_0x41000012"
+  }
+]

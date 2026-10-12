@@ -1,0 +1,71 @@
+{
+  "scope": "Only redaction categories/counts and byte hashes are public; original sensitive values deliberately not listed. Source archive SHA/member index mapping is in intake metadata.",
+  "files": [
+    {
+      "file": "01_研究报告_全集/17_相机热点与蓝牙Windows侧勘察_20261013.md",
+      "original_sha256": "6ce8ae93f5e7640c4b9e1b80f827f2795ff628e7a461af373f4888b3cfdea62c",
+      "public_sha256": "b155ad3369fac42c4364233372ef849141012553cb777a8bbf29ad026d52ff06",
+      "redaction_kinds_and_counts": {
+        "device_ssid": 10,
+        "quoted_ssid_bytes": 1,
+        "device_mac": 14,
+        "derived_device_identifier": 4,
+        "private_ipv4": 6,
+        "private_host_suffix": 11,
+        "private_windows_user": 1,
+        "device_advertising_payload": 1
+      },
+      "codex_comments_inserted": true
+    },
+    {
+      "file": "02_工具与脚本/ble_win/s5_ble.py",
+      "original_sha256": "9e5312965cfde56d0bcb8e148ab7bb97f4fd8ed47bebed49f1b5accf1efb7515",
+      "public_sha256": "9e5312965cfde56d0bcb8e148ab7bb97f4fd8ed47bebed49f1b5accf1efb7515",
+      "redaction_kinds_and_counts": {},
+      "codex_comments_inserted": false
+    },
+    {
+      "file": "02_工具与脚本/ble_win/s5_ble_handshake.py",
+      "original_sha256": "0fb49364b6a3ccb054bc44c189eb9a882af8e007ac5dd3f1f0d0e5426327807a",
+      "public_sha256": "0fb49364b6a3ccb054bc44c189eb9a882af8e007ac5dd3f1f0d0e5426327807a",
+      "redaction_kinds_and_counts": {},
+      "codex_comments_inserted": false
+    },
+    {
+      "file": "02_工具与脚本/ble_win/s5_ble_pair.ps1",
+      "original_sha256": "9d0bea152d36c7a6364b7f1cae5bf157a65d26d1f533ba6e50a0d2f87bd240b2",
+      "public_sha256": "47e5753a2adc8889cf82848ffb1074579714bf7f586be1c7e93a3edbb5ef9192",
+      "redaction_kinds_and_counts": {
+        "device_ssid": 1
+      },
+      "codex_comments_inserted": false
+    },
+    {
+      "file": "02_工具与脚本/ble_win/s5_ble_watch.py",
+      "original_sha256": "18293c38d4f6ec3402030b290ad8ce67b604becf9c766f5c1fa19cd337d2b745",
+      "public_sha256": "18293c38d4f6ec3402030b290ad8ce67b604becf9c766f5c1fa19cd337d2b745",
+      "redaction_kinds_and_counts": {},
+      "codex_comments_inserted": false
+    },
+    {
+      "file": "02_工具与脚本/wifi_win/s5_autoconnect.py",
+      "original_sha256": "fc1a8a88fa96ca69110798ca358b0f3371593e7eea99ff8748f4708116dacdaa",
+      "public_sha256": "b7865b748f124484769a6931bab3e6b2ef7573b55669e25f4ea287f084f7407d",
+      "redaction_kinds_and_counts": {
+        "device_ssid": 1,
+        "private_ipv4": 3
+      },
+      "codex_comments_inserted": false
+    },
+    {
+      "file": "02_工具与脚本/wifi_win/s5_wlan.ps1",
+      "original_sha256": "d126ab5029808723dc6b31534b2cbc0ac1a0c575fd568d87575be36dbec1e599",
+      "public_sha256": "da70634c58a172ed5b0d2a13acf9d4dbbb3f0622d328563689d5304330175377",
+      "redaction_kinds_and_counts": {
+        "device_ssid": 1
+      },
+      "codex_comments_inserted": false
+    }
+  ],
+  "hash_scope": "Final integrated public source files; source-byte hashes remain original inputs. Link normalization may change annotated document bytes."
+}

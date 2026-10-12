@@ -1,0 +1,442 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "package_root": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013",
+    "date": "2026-10-13",
+    "authorization": "offline static audit only; no original code or binaries executed; no devices/network/firmware writes; AGY disabled",
+    "output_directory": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/tool_audit",
+    "inventory_coverage": "all code in cam_cgi/ble/usb_ptp was read as bytes/AST/line markers; targeted semantic reads identified below; firmware_crypto semantic audit delegated elsewhere",
+    "source_inventory": "static_source_inventory.json",
+    "device_source_files": 70
+  },
+  "conclusion": {
+    "complete_s1m2_firmware_reverse_progress": "No verified proprietary firmware plaintext, real camera RAM image, modern UPD0x200/selector3 consumer, or true image-loading producer found in this tool scope.",
+    "actual_material": "S5 host-side settings/protocol/USB/BLE tools and historical reports; direct program/Flash consumer still absent.",
+    "new_high_value_fact": "s5_ptp_raw.c sends an uninitialized command array; its by-construction read-only/exact-container claim is false for the delivered source.",
+    "not_proven": [
+      "runtime effects of any packaged script",
+      "source/binary correspondence",
+      "cross-model applicability to S1M2",
+      "OTP/eFuse key location",
+      "ROMBACKUP exact range",
+      "signature coverage or recovery availability"
+    ]
+  },
+  "findings": [
+    {
+      "id": "TA01",
+      "priority": "P1",
+      "title": "C原始PTP客户端发送未初始化缓冲",
+      "conclusion": "ptp()声明cmd后未赋length/type/opcode/TID/params就WritePipeTO；op/params/g_tid从未构造发送包。源码不支持其精确长度/白名单请求断言，保存二进制与此源码的对应关系未知。收包也未匹配事务号/数据操作码，OpenSession只看有没有响应，不看0x2001。不可自动运行。",
+      "evidence": [
+        {
+          "file": "02_工具与脚本/usb_ptp/s5_ptp_raw.c",
+          "line_start": 191,
+          "line_end": 213
+        },
+        {
+          "file": "02_工具与脚本/usb_ptp/s5_ptp_raw.c",
+          "line_start": 221,
+          "line_end": 241
+        },
+        {
+          "file": "02_工具与脚本/usb_ptp/s5_ptp_raw.c",
+          "line_start": 292,
+          "line_end": 304
+        },
+        {
+          "file": "02_工具与脚本/TOOLS.md",
+          "line_start": 81,
+          "line_end": 81
+        }
+      ],
+      "value_for_complete_firmware_reverse": "没有有效可复现的固件或RAM读取请求，更没有消费0x200目录的代码"
+    },
+    {
+      "id": "TA02",
+      "priority": "P1",
+      "title": "默认安全Campaign实际枚举动作/写入类接口",
+      "conclusion": "默认phase A不需confirm，却遍历setsetting/camctrl/editcmd/camcmd/stream/senddata/endsenddata等及delete/shot/rec等动作词；请求未证明不会改变状态。A-G标签、GET和getstate健康检查均不能证明只读/零风险；F调用访问申请、升级模式门控，G创建和中止上传状态。",
+      "evidence": [
+        {
+          "file": "02_工具与脚本/cam_cgi/campaign.py",
+          "line_start": 40,
+          "line_end": 45
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/campaign.py",
+          "line_start": 81,
+          "line_end": 104
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/campaign.py",
+          "line_start": 158,
+          "line_end": 174
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/campaign.py",
+          "line_start": 337,
+          "line_end": 390
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/campaign.py",
+          "line_start": 455,
+          "line_end": 471
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/README.md",
+          "line_start": 33,
+          "line_end": 41
+        }
+      ],
+      "value_for_complete_firmware_reverse": "词表枚举不是实际ROM/RAM读取消费者；仅可保留历史原始响应作线索"
+    },
+    {
+      "id": "TA03",
+      "priority": "P1",
+      "title": "BLE纯只读总述与配对写入矛盾",
+      "conclusion": "TOOLS把整个BLE组称纯只读；ble_pair实际写通知描述符/订阅及UUID、friendly name，并读取配对网络资料。ble_scan/ble_read会连接设备；连接/配对状态不等于零副作用。",
+      "evidence": [
+        {
+          "file": "02_工具与脚本/TOOLS.md",
+          "line_start": 60,
+          "line_end": 66
+        },
+        {
+          "file": "02_工具与脚本/ble/ble_pair.swift",
+          "line_start": 169,
+          "line_end": 176
+        },
+        {
+          "file": "02_工具与脚本/ble/ble_pair.swift",
+          "line_start": 194,
+          "line_end": 217
+        },
+        {
+          "file": "02_工具与脚本/ble/ble_read.swift",
+          "line_start": 42,
+          "line_end": 45
+        }
+      ],
+      "value_for_complete_firmware_reverse": "客户端会话/配对线索；INITIAL_INFORM会话混淆参数不是固件AES/OTP密钥，未提供主系统明文"
+    },
+    {
+      "id": "TA04",
+      "priority": "P1",
+      "title": "USB探针包含真实越界写/故意挂死且无单独批准门",
+      "conclusion": "usb_oob不是只读：detach/claim后发越界SET_INTERFACE控制写，再读；s5_ptp_dump.m的fuzz含未知操作码、lenprobe故意长度不匹配，按mode直接执行，没有confirm gate。不存在读操作码保证设备安全的推论。",
+      "evidence": [
+        {
+          "file": "02_工具与脚本/cam_cgi/usb_oob.py",
+          "line_start": 68,
+          "line_end": 78
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/usb_oob.py",
+          "line_start": 100,
+          "line_end": 140
+        },
+        {
+          "file": "02_工具与脚本/usb_ptp/s5_ptp_dump.m",
+          "line_start": 235,
+          "line_end": 247
+        },
+        {
+          "file": "02_工具与脚本/usb_ptp/s5_ptp_dump.m",
+          "line_start": 267,
+          "line_end": 282
+        },
+        {
+          "file": "02_工具与脚本/usb_ptp/s5_ptp_dump.m",
+          "line_start": 335,
+          "line_end": 342
+        }
+      ],
+      "value_for_complete_firmware_reverse": "故障/弱字节响应不能等于可靠相机RAM转储；本轮没有执行验证"
+    },
+    {
+      "id": "TA05",
+      "priority": "P2",
+      "title": "枚举接受条件包含未知错误/空结果",
+      "conclusion": "api_enum仅排除err_param/error，异常和其他错误可能进LIVE；enum_videoquality采用4项错误黑名单，err_reject/err_busy/EMPTY/?等可判accepted；enum_vq2还可将错误读回(非BASELINE)判REACHABLE。必须将传输成功、result==ok、匹配读回、实际媒体输出逐项区分。",
+      "evidence": [
+        {
+          "file": "02_工具与脚本/cam_cgi/api_enum.py",
+          "line_start": 11,
+          "line_end": 30
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/enum_videoquality.py",
+          "line_start": 104,
+          "line_end": 110
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/enum_vq2.py",
+          "line_start": 115,
+          "line_end": 132
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/common.py",
+          "line_start": 38,
+          "line_end": 51
+        }
+      ],
+      "value_for_complete_firmware_reverse": "不能由这些汇总指标推出隐藏功能或新的固件处理链"
+    },
+    {
+      "id": "TA06",
+      "priority": "P2",
+      "title": "恢复并非用户真实基线且存在仅注释恢复",
+      "conclusion": "enum_videoquality读取base却恢复硬编码mp4_50p_28mbps；enum_vq2亦恢复该常量；enum_video_use结尾仅有restore注释；hidden_features.restore强制standard/mov/C4K等默认。probe_format_slots保存原字段且finally恢复较好，但只打印读回/片段，未断言整包回到b0。",
+      "evidence": [
+        {
+          "file": "02_工具与脚本/cam_cgi/enum_videoquality.py",
+          "line_start": 21,
+          "line_end": 22
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/enum_videoquality.py",
+          "line_start": 97,
+          "line_end": 128
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/enum_vq2.py",
+          "line_start": 22,
+          "line_end": 22
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/enum_vq2.py",
+          "line_start": 93,
+          "line_end": 100
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/enum_video_use.py",
+          "line_start": 78,
+          "line_end": 83
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/hidden_features.py",
+          "line_start": 125,
+          "line_end": 132
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/probe_format_slots.py",
+          "line_start": 109,
+          "line_end": 150
+        }
+      ],
+      "value_for_complete_firmware_reverse": "可借鉴对照思路，不构成可逆性证明，也不能用于S1M2当前设置"
+    },
+    {
+      "id": "TA07",
+      "priority": "P2",
+      "title": "persist_quality的dry run仍写设置并在修改后备份",
+      "conclusion": "confirm只控制flash提交：125行以前已经setsetting，若读取失败/拒绝等没有还原；备份135–138保存的是修改后的blob而非blob_before，不能恢复原质量。container_switch同样先改设置再备份，--persist直接调用上传帮助函数。",
+      "evidence": [
+        {
+          "file": "02_工具与脚本/cam_cgi/persist_quality.py",
+          "line_start": 97,
+          "line_end": 138
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/container_switch.py",
+          "line_start": 97,
+          "line_end": 131
+        }
+      ],
+      "value_for_complete_firmware_reverse": "数据层配置改写不解密专有固件，也不支持安全移植其他型号"
+    },
+    {
+      "id": "TA08",
+      "priority": "P2",
+      "title": "配置restore实际是固定目标重写",
+      "conclusion": "persist.restore下载当前配置后强制ntsc/MOV/0x9b再重算checksum和上传，不是还原历史原包；仅固定65533长度/单字节checksum，没有机型版本匹配。AC只是文档假设。",
+      "evidence": [
+        {
+          "file": "02_工具与脚本/cam_cgi/persist.py",
+          "line_start": 19,
+          "line_end": 19
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/persist.py",
+          "line_start": 251,
+          "line_end": 292
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/persist.py",
+          "line_start": 295,
+          "line_end": 345
+        },
+        {
+          "file": "02_工具与脚本/TOOLS.md",
+          "line_start": 110,
+          "line_end": 113
+        }
+      ],
+      "value_for_complete_firmware_reverse": "读取/写回相机设置块，不能称Flash系统或RAM读取；S1M2配置9MB布局不同"
+    },
+    {
+      "id": "TA09",
+      "priority": "P2",
+      "title": "配置上传返回ok不足以证明完整提交和恢复",
+      "conclusion": "帮助函数在丢响应时可重发块，未证明幂等；requestsenddata响应未检查；非ok断言NOT committed与物理结果无必然对应，cmd_verify只显示几个固定字段，没有整包与目标精确比较。备份文件存在不等于恢复成功。",
+      "evidence": [
+        {
+          "file": "02_工具与脚本/cam_cgi/persist.py",
+          "line_start": 431,
+          "line_end": 465
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/persist.py",
+          "line_start": 142,
+          "line_end": 183
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/common.py",
+          "line_start": 365,
+          "line_end": 375
+        }
+      ],
+      "value_for_complete_firmware_reverse": "分块链可作客户端消费者研究，但不提供机内固件解码或加载生产者"
+    },
+    {
+      "id": "TA10",
+      "priority": "P2",
+      "title": "升级预言机将返回码直接解释成签名覆盖",
+      "conclusion": "upload Phase I把ok解释不覆盖版本、err_reject解释ECDSA门、err_fw_same解释读取inner字段；单一响应无法排除传输、版本、格式/认证/异步失败等原因。回归getinfo(allmenu)未核实实际镜像和重启状态，不证明升级写入。README所谓可重刷恢复/不是变砖缺具体已验证恢复能力。",
+      "evidence": [
+        {
+          "file": "02_工具与脚本/cam_cgi/upload.py",
+          "line_start": 585,
+          "line_end": 612
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/upload.py",
+          "line_start": 724,
+          "line_end": 727
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/README.md",
+          "line_start": 79,
+          "line_end": 97
+        }
+      ],
+      "value_for_complete_firmware_reverse": "发送修改固件有真实写入风险，只保留过去原始日志，不作为获得固件明文的方法"
+    },
+    {
+      "id": "TA11",
+      "priority": "P2",
+      "title": "ROMBACKUP报告把用途升级成确定覆盖范围",
+      "conclusion": "作者照片/列表最多支持S5服务菜单与灰色ROM BACKUP存在。所引S1M2维修步骤未定义导出地址/格式/长度；不能确定只含校准、必不含程序，更不能确定MC801 OTP密钥位置或离线绝不可能。灰态原因、纯机身UI、私有Tether归属都未以实际消费者或状态对照闭合。",
+      "evidence": [
+        {
+          "file": "01_研究报告_全集/13_服务模式与ROMBACKUP_20261013.md",
+          "line_start": 13,
+          "line_end": 18
+        },
+        {
+          "file": "01_研究报告_全集/13_服务模式与ROMBACKUP_20261013.md",
+          "line_start": 35,
+          "line_end": 68
+        },
+        {
+          "file": "01_研究报告_全集/13_服务模式与ROMBACKUP_20261013.md",
+          "line_start": 106,
+          "line_end": 116
+        },
+        {
+          "file": "01_研究报告_全集/13_服务模式与ROMBACKUP_20261013.md",
+          "line_start": 152,
+          "line_end": 167
+        }
+      ],
+      "value_for_complete_firmware_reverse": "缺同款调整程序/备份样本/调用链，不是新的完整系统读取入口；范围保持未知"
+    },
+    {
+      "id": "TA12",
+      "priority": "P2",
+      "title": "OOB读探针没有可靠地址映射或完整RAM消费者",
+      "conclusion": "oob_read_probe只在固定PID尝试GET_INTERFACE单字节请求；由非零/变化字节推断内核读出，未核对运行内核、接口绑定、数据源或地址映射。文稿直接声称S1M2已实机POC不由此代码证明。当前源的f_fs=get_alt和主USB请求层关系还须另审。",
+      "evidence": [
+        {
+          "file": "02_工具与脚本/cam_cgi/oob_read_probe.py",
+          "line_start": 3,
+          "line_end": 17
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/oob_read_probe.py",
+          "line_start": 29,
+          "line_end": 31
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/oob_read_probe.py",
+          "line_start": 79,
+          "line_end": 92
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/oob_read_probe.py",
+          "line_start": 127,
+          "line_end": 136
+        }
+      ],
+      "value_for_complete_firmware_reverse": "最多条件性的驱动缺陷线索，不是 arbitrary physical read 或完整RAM导出"
+    },
+    {
+      "id": "TA13",
+      "priority": "P3",
+      "title": "标准库/白名单客户端声明不完整",
+      "conclusion": "TOOLS称所有Python仅标准库，但USB脚本导入usb1/usb.core；Python PTP客户端detach驱动/claim接口，事务匹配TID但不核对DATA opcode，公开transaction/send_command无读取操作码白名单，close不reattach驱动。仅当前调用序列可核对，不能由类名或注释保证只读。",
+      "evidence": [
+        {
+          "file": "02_工具与脚本/TOOLS.md",
+          "line_start": 3,
+          "line_end": 4
+        },
+        {
+          "file": "02_工具与脚本/usb_ptp/s5_ptp_dump.py",
+          "line_start": 48,
+          "line_end": 51
+        },
+        {
+          "file": "02_工具与脚本/usb_ptp/s5_ptp_dump.py",
+          "line_start": 223,
+          "line_end": 244
+        },
+        {
+          "file": "02_工具与脚本/usb_ptp/s5_ptp_dump.py",
+          "line_start": 287,
+          "line_end": 301
+        },
+        {
+          "file": "02_工具与脚本/cam_cgi/oob_read_probe.py",
+          "line_start": 19,
+          "line_end": 20
+        }
+      ],
+      "value_for_complete_firmware_reverse": "协议结构可参考；完整工具成熟度和S1M2兼容性未验证"
+    }
+  ],
+  "usable_offline_only": [
+    "Raw existing responses and logs can be parsed with independently reviewed code; preserve capture dates/status/model.",
+    "Setting blob/checksum and protocol structure are references, not new firmware decoding.",
+    "BLE source/UUID list provides client-side pairing sequence; pair script itself writes and stored evidence may include network credentials.",
+    "Service screenshots support visible menu/state only; use same-model adjustment consumer or original backup to determine range."
+  ],
+  "not_authorized_to_run": {
+    "all_external_tools": "This review authorizes no execution; even legitimate readers communicate with devices and need separate scope.",
+    "particularly_unsafe": [
+      "raw C PTP sender with uninitialized buffer",
+      "USB OOB/lenprobe/fuzz/unknown opcode scans",
+      "campaign A-G action/overflow/injection probes",
+      "firmware upload/oracle tools",
+      "configuration flash persistence/restore tools",
+      "BLE pair/notification writes"
+    ],
+    "dry_run_caveat": "persist_quality dry run already mutates live setting; do not equate missing --confirm with no device effect"
+  },
+  "reference_boundary": {
+    "local_manual_correction": "<LOCAL_WORKSPACE>/analysis/S1M2维修手册_Codex核验_20261009.md:15,31",
+    "manual_correction_used": "Already verified local manual review says ROMBACKUP scope/format/byte count undefined and specifically retracts only-calibration exclusion; manual PDF not re-extracted in this subtask.",
+    "future_research": "Locate actual same-model consumer/load map or independently sourced real ROM/RAM image; do not expand speculative writes or key enumeration."
+  }
+}

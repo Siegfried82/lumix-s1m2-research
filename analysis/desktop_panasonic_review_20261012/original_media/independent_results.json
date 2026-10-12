@@ -1,0 +1,100 @@
+[
+  {
+    "file": "P1022640.MP4",
+    "bytes": 888140,
+    "sha256": "b83395a3902c5a1b4cd73a30913f69436e36bbea53742297d3870b961802bd7d",
+    "decode_exit_code": 0,
+    "full_video_audio_decode_passed": true,
+    "decoded_frames": 180,
+    "contiguous_indices": true,
+    "pixel_formats": [
+      "yuvj420p"
+    ],
+    "geometries": [
+      "1280x720"
+    ],
+    "frame_types": [
+      "B",
+      "I",
+      "P"
+    ],
+    "all_intra_keyframes": false,
+    "pts_steps": [
+      3600
+    ],
+    "stream_lines": [
+      "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuvj420p(pc, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 569 kb/s, 25 fps, 25 tbr, 90k tbn (default)",
+      "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 124 kb/s (default)",
+      "Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))"
+    ],
+    "input_duration_line": "Duration: 00:00:07.20, start: 0.000000, bitrate: 986 kb/s",
+    "decoder": "<LOCAL_WORKSPACE>/analysis/desktop_panasonic_review_20261012/media_tools/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+    "command": [
+      "<LOCAL_WORKSPACE>/analysis/desktop_panasonic_review_20261012/media_tools/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+      "-nostdin",
+      "-v",
+      "info",
+      "-xerror",
+      "-i",
+      "<LOCAL_WORKSPACE>/analysis/desktop_panasonic_review_20261012/original_media/P1022640.MP4",
+      "-map",
+      "0:v:0",
+      "-map",
+      "0:a?",
+      "-vf",
+      "showinfo",
+      "-f",
+      "null",
+      "-"
+    ],
+    "major_brand": "mp42"
+  },
+  {
+    "file": "P1022641.MP4",
+    "bytes": 223826574,
+    "sha256": "a579a0ff325ed380ac8f6162421f8a382a19c9597e997fd6cf53aed072f19059",
+    "decode_exit_code": 0,
+    "full_video_audio_decode_passed": true,
+    "decoded_frames": 168,
+    "contiguous_indices": true,
+    "pixel_formats": [
+      "yuv422p10le"
+    ],
+    "geometries": [
+      "3840x2160"
+    ],
+    "frame_types": [
+      "I"
+    ],
+    "all_intra_keyframes": true,
+    "pts_steps": [
+      3600
+    ],
+    "stream_lines": [
+      "Stream #0:0[0x1](und): Video: h264 (High 4:2:2 Intra) (avc1 / 0x31637661), yuv422p10le(pc, bt709, progressive), 3840x2160 [SAR 1:1 DAR 16:9], 252128 kb/s, 25 fps, 25 tbr, 90k tbn (default)",
+      "Stream #0:1[0x2](und): Audio: pcm_s16be (twos / 0x736F7774), 48000 Hz, stereo, s16, 1536 kb/s (default)",
+      "Stream #0:2[0x3](und): Data: none (tmcd / 0x64636D74), 0 kb/s (default)"
+    ],
+    "input_duration_line": "Duration: 00:00:06.72, start: 0.000000, bitrate: 266460 kb/s",
+    "decoder": "<LOCAL_WORKSPACE>/analysis/desktop_panasonic_review_20261012/media_tools/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+    "command": [
+      "<LOCAL_WORKSPACE>/analysis/desktop_panasonic_review_20261012/media_tools/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+      "-nostdin",
+      "-v",
+      "info",
+      "-xerror",
+      "-i",
+      "<LOCAL_WORKSPACE>/analysis/desktop_panasonic_review_20261012/original_media/P1022641.MP4",
+      "-map",
+      "0:v:0",
+      "-map",
+      "0:a?",
+      "-vf",
+      "showinfo",
+      "-f",
+      "null",
+      "-"
+    ],
+    "major_brand": "mp42"
+  }
+]

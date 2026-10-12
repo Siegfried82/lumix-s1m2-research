@@ -1,0 +1,122 @@
+{
+  "module": "v15_2.scene_consistency.physical",
+  "filename": "v15_2\\scene_consistency\\physical.py",
+  "sha256": "360a69064cf992e122fca2a5f246c1c92a606b2bf9e281eacb04736fb040d430",
+  "functions": [
+    {
+      "scope": "v15_2.scene_consistency.physical",
+      "name": "<module>",
+      "line": 1,
+      "args": [],
+      "names": [
+        "__doc__",
+        "numpy",
+        "np",
+        "physical",
+        "Physical",
+        "ConsistentPhysical"
+      ],
+      "imports": [
+        "numpy",
+        "physical"
+      ]
+    },
+    {
+      "scope": "v15_2.scene_consistency.physical.ConsistentPhysical",
+      "name": "ConsistentPhysical",
+      "line": 10,
+      "args": [],
+      "names": [
+        "__name__",
+        "__module__",
+        "__qualname__",
+        "__init__",
+        "prepare",
+        "emit",
+        "__classcell__"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.physical.ConsistentPhysical.__init__",
+      "name": "__init__",
+      "line": 11,
+      "args": [
+        "self",
+        "rt",
+        "native"
+      ],
+      "names": [
+        "super",
+        "__init__",
+        "rejection",
+        "upload",
+        "np",
+        "asarray",
+        "float32",
+        "query_origin",
+        "spec",
+        "shape",
+        "qh",
+        "qw",
+        "ValueError"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.physical.ConsistentPhysical.prepare",
+      "name": "prepare",
+      "line": 17,
+      "args": [
+        "self",
+        "bank",
+        "G",
+        "meta"
+      ],
+      "names": [
+        "super",
+        "prepare",
+        "rt",
+        "release_external",
+        "query_origin"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.physical.ConsistentPhysical.emit",
+      "name": "emit",
+      "line": 21,
+      "args": [
+        "self",
+        "tag",
+        "inputs",
+        "shape",
+        "body",
+        "helpers",
+        "count",
+        "out"
+      ],
+      "names": [
+        "len",
+        "r",
+        "o",
+        "replace",
+        "shortest_rolloff",
+        "h",
+        "w",
+        "qw",
+        "qh",
+        "rejection",
+        "query_origin",
+        "super",
+        "emit"
+      ],
+      "imports": []
+    }
+  ],
+  "imports": [
+    "numpy",
+    "physical"
+  ],
+  "shaders": []
+}

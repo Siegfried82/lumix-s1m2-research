@@ -1,0 +1,53 @@
+
+analysis/sources/tether_windows_2_12/Lmxptpif.dll:	file format coff-x86-64
+
+Disassembly of section .text:
+
+000000018002fb70 <LMX_func_api_SetupRangeSet_Get_ExposureComp>:
+18002fb70: 48 89 5c 24 08              	movq	%rbx, 0x8(%rsp)
+18002fb75: 57                          	pushq	%rdi
+18002fb76: 48 83 ec 60                 	subq	$0x60, %rsp
+18002fb7a: 48 8b f9                    	movq	%rcx, %rdi
+18002fb7d: 48 8b da                    	movq	%rdx, %rbx
+18002fb80: 33 c9                       	xorl	%ecx, %ecx
+18002fb82: 4d 85 c9                    	testq	%r9, %r9
+18002fb85: 74 03                       	je	0x18002fb8a <LMX_func_api_SetupRangeSet_Get_ExposureComp+0x1a>
+18002fb87: 41 89 09                    	movl	%ecx, (%r9)
+18002fb8a: 0f 57 c0                    	xorps	%xmm0, %xmm0
+18002fb8d: 33 c0                       	xorl	%eax, %eax
+18002fb8f: 48 89 44 24 50              	movq	%rax, 0x50(%rsp)
+18002fb94: 0f 11 44 24 20              	movups	%xmm0, 0x20(%rsp)
+18002fb99: 0f 11 44 24 30              	movups	%xmm0, 0x30(%rsp)
+18002fb9e: 0f 11 44 24 40              	movups	%xmm0, 0x40(%rsp)
+18002fba3: 48 85 ff                    	testq	%rdi, %rdi
+18002fba6: 74 47                       	je	0x18002fbef <LMX_func_api_SetupRangeSet_Get_ExposureComp+0x7f>
+18002fba8: 48 85 db                    	testq	%rbx, %rbx
+18002fbab: 74 42                       	je	0x18002fbef <LMX_func_api_SetupRangeSet_Get_ExposureComp+0x7f>
+18002fbad: 4d 85 c9                    	testq	%r9, %r9
+18002fbb0: 74 03                       	je	0x18002fbb5 <LMX_func_api_SetupRangeSet_Get_ExposureComp+0x45>
+18002fbb2: 41 89 09                    	movl	%ecx, (%r9)
+18002fbb5: 89 0d 49 eb 22 00           	movl	%ecx, 0x22eb49(%rip)    # 0x18025e704
+18002fbbb: ba b0 00 00 08              	movl	$0x80000b0, %edx        # imm = 0x80000B0
+18002fbc0: 48 8d 4c 24 20              	leaq	0x20(%rsp), %rcx
+18002fbc5: e8 d6 05 00 00              	callq	0x1800301a0 <LMX_func_api_SetupRangeSet_Set_Info+0x330>
+18002fbca: 0f b6 c8                    	movzbl	%al, %ecx
+18002fbcd: 84 c0                       	testb	%al, %al
+18002fbcf: 74 34                       	je	0x18002fc05 <LMX_func_api_SetupRangeSet_Get_ExposureComp+0x95>
+18002fbd1: 0f b7 44 24 44              	movzwl	0x44(%rsp), %eax
+18002fbd6: 66 89 07                    	movw	%ax, (%rdi)
+18002fbd9: 0f b7 44 24 46              	movzwl	0x46(%rsp), %eax
+18002fbde: 66 89 03                    	movw	%ax, (%rbx)
+18002fbe1: 0f b6 c1                    	movzbl	%cl, %eax
+18002fbe4: 48 8b 5c 24 70              	movq	0x70(%rsp), %rbx
+18002fbe9: 48 83 c4 60                 	addq	$0x60, %rsp
+18002fbed: 5f                          	popq	%rdi
+18002fbee: c3                          	retq
+18002fbef: 4d 85 c9                    	testq	%r9, %r9
+18002fbf2: 74 07                       	je	0x18002fbfb <LMX_func_api_SetupRangeSet_Get_ExposureComp+0x8b>
+18002fbf4: 41 c7 01 00 00 01 00        	movl	$0x10000, (%r9)         # imm = 0x10000
+18002fbfb: c7 05 ff ea 22 00 00 00 01 00       	movl	$0x10000, 0x22eaff(%rip) # imm = 0x10000
+                                                                        # 0x18025e704
+18002fc05: 48 8b 5c 24 70              	movq	0x70(%rsp), %rbx
+18002fc0a: 48 83 c4 60                 	addq	$0x60, %rsp
+18002fc0e: 5f                          	popq	%rdi
+18002fc0f: c3                          	retq

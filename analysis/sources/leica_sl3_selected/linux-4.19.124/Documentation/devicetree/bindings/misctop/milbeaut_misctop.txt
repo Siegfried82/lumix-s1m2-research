@@ -1,0 +1,12 @@
+This documents shows bindings information for milbeaut misctop driver.
+
+Required properties:
+- compatible: "socionext,misctop-m20v"
+- reg: <0x0d150000 0x800>;
+
+Example:
+	misc_top: misc_top@d150000 {
+		compatible = "socionext,misctop-m20v";
+		reg = <0x0d150000 0x800>;
+	}
+

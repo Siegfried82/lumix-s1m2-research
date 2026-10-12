@@ -1,0 +1,12 @@
+
+## Phase CONTROL @ 2026-10-11 21:10:01  PRISTINE V29 (2.90) no-edit upload -- same version, no flash. Discriminates content-vs-transport cause of the final-chunk err_critical.
+  MODE: fast(keep-alive) target_ms=0
+  [healthcontrol-start] getstate=ok
+  [gate] opening firmware-update gate (gate_version=V3.00, no req_acc)
+- [UP] gate fw_update_mode(V3.00) #1 -> ok -> `ok` (0.04s)  **<== GATE OPEN**
+  [gate] OPEN: upload may proceed
+  [upload] loaded 90238464 bytes into RAM in 0.08s; edits+CRC applied once
+  [upload] transform: PRISTINE V29: zero byte edits (outer=0x1C inner=0x2BC untouched, CRC 0x8E73AAC0 unchanged, original signature); CRC32 unchanged 0x8E73AAC0 (0x1C is outside [0x200..end])
+- [UP] startsenddata(size=90238464) attempt 1/8 -> `ok` (0.02s)
+  [upload] method=separate bufsize=61460
+    ... 0% (0/90238464) t=0s avg_sd=100ms

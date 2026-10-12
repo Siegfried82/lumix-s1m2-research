@@ -14,14 +14,8 @@
   },
   "coordinate_system": {
     "normalized_space": "1000 x 1000",
-    "x_range": [
-      0,
-      999
-    ],
-    "y_range": [
-      0,
-      999
-    ],
+    "x_range": [0, 999],
+    "y_range": [0, 999],
     "validation_assembly": "cmp w1, #0x3e7; b.hi (DeviceAdapter::adp_LMX_func_api_Rec_Ctrl_Menu_Touch_Down_MenuEii L147686-L147689)",
     "qml_formula": "x_conv = parseInt((mouse.x * 1000) / lvMenuDsp.width); y_conv = parseInt((mouse.y * 1000) / lvMenuDsp.height)"
   },
@@ -134,7 +128,7 @@
     "pixel_shift_mechanical_shutter": {
       "exposed_in_remote_menu_client": false,
       "reason": "上位机不包含菜单项ID或文本字典，菜单界面由机身端渲染至视频流",
-      "executable_path": ""
+      "executable_path": "通过OpCode 0x9416下发预设(x, y)触控序列进入高分辨率设置子菜单并选择机械快门，或通过OpCode 0x9422在.DAT/.CAM全量配置中持久化写入"
     },
     "save_1st_normal_picture": {
       "exposed_in_remote_menu_client": false,
@@ -159,7 +153,7 @@
     },
     "missing_assets": {
       "asset_1": "S1M2在CamStatus_Menu_Displayed模式下的LiveView参考帧截屏与UI元素像素Bounding Box坐标字典(用于构造无屏幕点击宏)",
-      "asset_2": ""
+      "asset_2": "S1M2开启机内机械快门高分辨率/HDR后的.DAT/.CAM相机设置二进制转储文件样本(用于在OpCode 0x9422离线通道中定位对应字节偏移)"
     }
   }
 }

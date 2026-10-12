@@ -1,0 +1,1586 @@
+[
+  {
+    "path": "analysis/audit_bootloader_anchors.py",
+    "docstring": "audit_bootloader_anchors.py",
+    "imports": [
+      "glob",
+      "hashlib",
+      "json",
+      "os",
+      "typing"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/audit_buffer_interface.py",
+    "docstring": "Read vendor archive to preserve evidence for an internal buffer interface.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "tarfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/audit_lumix_sdk_binary.py",
+    "docstring": "Static PE metadata/exports and bounded x64 function disassembly.",
+    "imports": [
+      "capstone",
+      "capstone.x86_const",
+      "hashlib",
+      "json",
+      "pathlib",
+      "pefile",
+      "subprocess"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "含网络字符串/API，运行前查调用条件",
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/audit_public_decoder.py",
+    "docstring": "Offline structural check of a public Panasonic A/V cipher hypothesis.",
+    "imports": [
+      "collections",
+      "hashlib",
+      "json",
+      "pathlib",
+      "subprocess"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "含网络字符串/API，运行前查调用条件",
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/audit_tether_aw_update_path.py",
+    "docstring": "Extract pinned AW Tether update functions using static otool output only.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "subprocess"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/audit_tether_client_transport.py",
+    "docstring": "Record bounded, static standard Tether application/transport call paths.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "re"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/capture_s1m2_baseline.m",
+    "docstring": "",
+    "imports": [],
+    "arguments": [],
+    "static_flags": [
+      "设备/注册信息/模拟相关，不能直接视作离线安全入口"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/compare_maintenance_functions.py",
+    "docstring": "Compare ARM64 maintenance functions without executing vendor software.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "re"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/compare_sl3_payloads.py",
+    "docstring": "Fetch bounded official SL3 payload ranges and compare encoded bytes.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "struct",
+      "urllib.request"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "含网络字符串/API，运行前查调用条件",
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/compare_tether_update_paths.py",
+    "docstring": "Compare named AW 2.8 and standard 2.12 update functions, statically.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "re"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/compare_versions.py",
+    "docstring": "Offline comparison of directory fields, not a plaintext code diff.",
+    "imports": [
+      "collections",
+      "hashlib",
+      "json",
+      "pathlib",
+      "struct",
+      "zlib"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/decode_acquired_capabilities.py",
+    "docstring": "Offline capability decoding; never communicates with a camera.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "struct"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/diff_s1m2_modes.py",
+    "docstring": "",
+    "imports": [
+      "inspect_lumix_settings",
+      "json",
+      "struct"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/extract_gh2_control.py",
+    "docstring": "Extract the stored RAR4 BIN member from a legacy SFX; never execute it.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "struct",
+      "zlib"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/reference_code/alignment.py",
+    "docstring": "Recovered Transformer CFA proxy and original six-level SPyNet + HDR branch.",
+    "imports": [
+      "graph",
+      "hashlib",
+      "json",
+      "math"
+    ],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/reference_code/evidence.py",
+    "docstring": "Recovered v15.2 evidence130/white stage, after physical amplitude estimation.",
+    "imports": [
+      "graph"
+    ],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/reference_code/geometry.py",
+    "docstring": "v15.2 native reference -> source flow/projective/LCA coordinate composition.",
+    "imports": [
+      "alignment",
+      "graph",
+      "raw_input"
+    ],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/reference_code/highlights.py",
+    "docstring": "Original shortest-frame censoring lower-bound guard, recovered WGSL equations.",
+    "imports": [
+      "graph"
+    ],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/reference_code/physical.py",
+    "docstring": "Static reconstruction of v15.2 Physical merge/covariance/blur/prepare.",
+    "imports": [
+      "evidence",
+      "graph"
+    ],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/reference_code/raw_input.py",
+    "docstring": "Portable v15.2 signed Bayer RAW contract, restored from static traces.",
+    "imports": [
+      "exifread",
+      "graph",
+      "json",
+      "pathlib",
+      "rawpy"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/reference_code/reconstruction_guard.py",
+    "docstring": "Calibrated RAW radiance envelope for unsupported neural overshoot.",
+    "imports": [
+      "graph"
+    ],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/reference_code/registration.py",
+    "docstring": "Static reconstruction of v15.2 noise-qualified SIFT/global model selection.",
+    "imports": [
+      "cv2",
+      "graph"
+    ],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/reference_code/stitch.py",
+    "docstring": "Original v15.1 fixed Bayer lattice schedule and sine-square overlap weights.",
+    "imports": [
+      "graph"
+    ],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/validation_reference/frame_order.py",
+    "docstring": "v15.2 reference-first exposure/acquisition ordering (model is order sensitive).",
+    "imports": [
+      "pathlib",
+      "re",
+      "unicodedata"
+    ],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/validation_reference/verify_alignment.py",
+    "docstring": "",
+    "imports": [
+      "alignment",
+      "argparse",
+      "graph",
+      "json",
+      "registration",
+      "time"
+    ],
+    "arguments": [
+      "--mps"
+    ],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/validation_reference/verify_artifacts.py",
+    "docstring": "Image-quality regression and calibrated guard invariants, not device parity alone.",
+    "imports": [
+      "diagnose_artifacts",
+      "geometry",
+      "graph",
+      "json",
+      "physical",
+      "reconstruction_guard"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/validation_reference/verify_consistency.py",
+    "docstring": "Independent geometric roundtrip and signed/HDR observation regressions.",
+    "imports": [
+      "alignment",
+      "geometry",
+      "graph",
+      "json",
+      "reconstruction_consistency"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/validation_reference/verify_evidence.py",
+    "docstring": "",
+    "imports": [
+      "argparse",
+      "evidence",
+      "graph",
+      "json",
+      "math"
+    ],
+    "arguments": [
+      "--mps"
+    ],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/validation_reference/verify_failures.py",
+    "docstring": "Verify meaningful failure modes and preservation of completed output artifacts.",
+    "imports": [
+      "graph",
+      "hashlib",
+      "json",
+      "pathlib",
+      "pipeline",
+      "raw_input",
+      "registration",
+      "stitch"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/validation_reference/verify_physical.py",
+    "docstring": "",
+    "imports": [
+      "argparse",
+      "graph",
+      "json",
+      "physical",
+      "time"
+    ],
+    "arguments": [
+      "--mps"
+    ],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/in_camera_hdr_reference/validation_reference/verify_raw.py",
+    "docstring": "Create standards-based Bayer DNGs and exercise the actual LibRaw decoder.",
+    "imports": [
+      "graph",
+      "json",
+      "pathlib",
+      "raw_input",
+      "tifffile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/inspect_firmware.py",
+    "docstring": "Read-only S1M2 UPD inventory; field meanings are provisional.",
+    "imports": [
+      "collections",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "struct",
+      "zipfile",
+      "zlib"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/inspect_leica_oss.py",
+    "docstring": "Static cross-platform source comparison; never executes vendor code.",
+    "imports": [
+      "hashlib",
+      "io",
+      "json",
+      "pathlib",
+      "re",
+      "tarfile",
+      "zipfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "含网络字符串/API，运行前查调用条件",
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/inspect_lumix_settings.py",
+    "docstring": "inspect_lumix_settings.py - LUMIX Camera Settings (.DAT / .CAM) Read-Only Structural Inspector",
+    "imports": [
+      "argparse",
+      "hashlib",
+      "json",
+      "os",
+      "struct",
+      "sys",
+      "typing"
+    ],
+    "arguments": [
+      "--s5ii",
+      "--s5iix",
+      "--out"
+    ],
+    "static_flags": [
+      "含网络字符串/API，运行前查调用条件",
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/inspect_oss_sources.py",
+    "docstring": "Static inventory of the official source archives; never runs vendor code.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "tarfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/new_pr_review_20261010/read_usb_inventory.py",
+    "docstring": "Read macOS registry only. No USB control transfers, opens, resets, or writes.",
+    "imports": [
+      "json",
+      "pathlib",
+      "plistlib",
+      "subprocess"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径",
+      "设备/注册信息/模拟相关，不能直接视作离线安全入口"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/object_route_preparation_20261009/capture_object_inventory.m",
+    "docstring": "",
+    "imports": [],
+    "arguments": [],
+    "static_flags": [
+      "设备/注册信息/模拟相关，不能直接视作离线安全入口"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/object_route_preparation_20261009/capture_object_metadata.m",
+    "docstring": "",
+    "imports": [],
+    "arguments": [],
+    "static_flags": [
+      "设备/注册信息/模拟相关，不能直接视作离线安全入口"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/object_route_preparation_20261009/capture_remaining_metadata.py",
+    "docstring": "",
+    "imports": [
+      "json",
+      "pathlib",
+      "subprocess"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/object_route_preparation_20261009/parse_handles.py",
+    "docstring": "Parse saved PTP handle payloads offline; never contacts a camera.",
+    "imports": [
+      "argparse",
+      "json",
+      "pathlib",
+      "struct"
+    ],
+    "arguments": [
+      "payload",
+      "--response-code"
+    ],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/object_route_preparation_20261009/parse_metadata_full.py",
+    "docstring": "",
+    "imports": [
+      "collections",
+      "hashlib",
+      "json",
+      "pathlib",
+      "struct"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/01_container/01_container_structure_audit.py",
+    "docstring": "Container structure audit for Panasonic UPD firmware containers (S1M2 V1.4, V1.3, Leica SL3).",
+    "imports": [
+      "json",
+      "pathlib",
+      "struct",
+      "zlib"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/01_container/02_nested_loader_and_framing_scan.py",
+    "docstring": "Scan all 49 encoded components for nested loaders, unencrypted headers, and framing boundaries.",
+    "imports": [
+      "collections",
+      "json",
+      "math",
+      "os",
+      "pathlib"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/01_container/03_twin_and_cross_version_differential.py",
+    "docstring": "Differential analysis of twin components and cross-version components with identical plaintext.",
+    "imports": [
+      "collections",
+      "cryptography.hazmat.primitives.ciphers",
+      "json",
+      "math",
+      "pathlib",
+      "struct"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/01_container/04_toc_trailing_field_cryptanalysis.py",
+    "docstring": "Cryptanalysis of the 32-byte trailing field (+60) across all 62 TOC components.",
+    "imports": [
+      "hashlib",
+      "hmac",
+      "json",
+      "pathlib",
+      "struct",
+      "zlib"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/01_container/05_chunked_and_offset_cbc_probes.py",
+    "docstring": "Offset-header and chunked AES-CBC probes independent of the IV.",
+    "imports": [
+      "cryptography.hazmat.primitives.ciphers",
+      "hashlib",
+      "json",
+      "pathlib",
+      "struct"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/01_container/codex_field_audit.py",
+    "docstring": "Recheck UPD raw fields and equal-directory-digest pairs; no decryption.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "struct"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/02_host/audit_dynamic_and_strings.py",
+    "docstring": "Step 1: Audit Dynamic APIs, PE Imports, Command-line Switches, Registry keys,",
+    "imports": [
+      "json",
+      "os",
+      "re",
+      "struct",
+      "subprocess"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/02_host/codex_maintenance_contract.py",
+    "docstring": "Extract evidence for the host maintenance query contract; never contacts a device.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "re"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/02_host/codex_pointer_xrefs.py",
+    "docstring": "Bounded static PE address-reference audit. Never runs the inspected binaries.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "struct",
+      "subprocess"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/02_host/codex_pr1_archive_inventory.py",
+    "docstring": "Inspect the submitted Git blob in memory; do not extract or execute archive members.",
+    "imports": [
+      "hashlib",
+      "io",
+      "json",
+      "pathlib",
+      "re",
+      "subprocess",
+      "xml.etree.ElementTree",
+      "zipfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/02_host/codex_pr1_document_audit.py",
+    "docstring": "Read PR1 archive from a local Git object, not executable content.",
+    "imports": [
+      "collections",
+      "hashlib",
+      "io",
+      "json",
+      "pathlib",
+      "re",
+      "subprocess",
+      "xml.etree.ElementTree",
+      "zipfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/02_host/codex_windows_maintenance.py",
+    "docstring": "Static Windows maintenance query evidence and direct-call inventory. No DLL loading.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "struct",
+      "subprocess"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/02_host/extract_qml.py",
+    "docstring": "Extract all embedded Qt QML/JS resources from LUMIXTether.exe",
+    "imports": [
+      "os",
+      "struct",
+      "zlib"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/02_host/trace_ptp_calls.py",
+    "docstring": "Systematic PTP OpCode & Call Chain Tracer for Tether libLmxptpif",
+    "imports": [
+      "json",
+      "os",
+      "re"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/03_flow/audit_flow_sync_http_tls.py",
+    "docstring": "audit_flow_sync_http_tls.py",
+    "imports": [
+      "hashlib",
+      "json",
+      "os",
+      "pathlib",
+      "re"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/04_backup/audit_config_dump.py",
+    "docstring": "Audit script for s1m2_config_0x9421.bin",
+    "imports": [
+      "json",
+      "os",
+      "re",
+      "struct",
+      "sys"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/04_backup/eeprom_format_checker.py",
+    "docstring": "Panasonic LUMIX EEPROM / ROM BACKUP Text Dump Format Checker (Read-Only)",
+    "imports": [
+      "os",
+      "re",
+      "sys",
+      "typing"
+    ],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/04_backup/test_suite.py",
+    "docstring": "Synthetic Positive and Negative Test Suite for EEPROM Format Checker",
+    "imports": [
+      "eeprom_format_checker",
+      "json",
+      "os"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/05_sources/audit_sources_dedup.py",
+    "docstring": "Route 5 Evidence Script: Sources Deduplication and Inventory Analysis",
+    "imports": [
+      "hashlib",
+      "json",
+      "os",
+      "sys"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "含网络字符串/API，运行前查调用条件",
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/05_sources/parse_flash_layout.py",
+    "docstring": "Route 5 Evidence Script: Parse NAND Flash partition layout from firmware metadata",
+    "imports": [
+      "json",
+      "os",
+      "sys"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/06_gaps/audit_gaps.py",
+    "docstring": "Route 6: Omission and Gap Audit Script",
+    "imports": [
+      "collections",
+      "glob",
+      "json",
+      "os"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parallel_routes_20261009/run.py",
+    "docstring": "",
+    "imports": [
+      "concurrent.futures",
+      "json",
+      "pathlib",
+      "subprocess"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parse_ptp_device_info.py",
+    "docstring": "Offline parser for the standard PTP GetDeviceInfo dataset.",
+    "imports": [
+      "json",
+      "pathlib",
+      "struct",
+      "sys"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/parse_s1m2_live.py",
+    "docstring": "",
+    "imports": [
+      "inspect_lumix_settings",
+      "json",
+      "sys"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/probe_cbc_without_iv.py",
+    "docstring": "Known-fill AES probe independent of the unknown IV.",
+    "imports": [
+      "cryptography.hazmat.primitives.ciphers",
+      "hashlib",
+      "json",
+      "pathlib"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/probe_encoding.py",
+    "docstring": "Reproducible structural probes; no decryption or device access.",
+    "imports": [
+      "collections",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "zlib"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/probe_metadata_keys.py",
+    "docstring": "Finite offline hypothesis test, not a general key recovery algorithm.",
+    "imports": [
+      "cryptography.hazmat.decrepit.ciphers",
+      "cryptography.hazmat.primitives.ciphers",
+      "hashlib",
+      "json",
+      "pathlib"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/probe_sl3_cross_header.py",
+    "docstring": "Finite cross-header AES-CBC key hypotheses, with no IV guess.",
+    "imports": [
+      "cryptography.hazmat.primitives.ciphers",
+      "hashlib",
+      "json",
+      "pathlib",
+      "struct"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/read_s1m2_known_setting.py",
+    "docstring": "read_s1m2_known_setting.py - Bounded, Verifiable Reader for Known S1M2 Setting Records",
+    "imports": [
+      "argparse",
+      "json",
+      "os",
+      "struct",
+      "sys",
+      "typing"
+    ],
+    "arguments": [
+      "paths",
+      "--json"
+    ],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/recover_ptool_crypto.py",
+    "docstring": "Static extraction of PTool's old-camera crypto tables, then bounded probes.",
+    "imports": [
+      "cryptography.hazmat.decrepit.ciphers.algorithms",
+      "cryptography.hazmat.primitives.ciphers",
+      "hashlib",
+      "json",
+      "pathlib",
+      "struct"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/DumpDownloadDex.java",
+    "docstring": "",
+    "imports": [],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/ListNativeDex.java",
+    "docstring": "",
+    "imports": [],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/audit_dlna_branches.py",
+    "docstring": "",
+    "imports": [
+      "json",
+      "pathlib",
+      "struct",
+      "zipfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/audit_dlna_implementation.py",
+    "docstring": "",
+    "imports": [
+      "json",
+      "pathlib",
+      "struct",
+      "zipfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/audit_dlna_implementation_plt.py",
+    "docstring": "",
+    "imports": [
+      "json",
+      "pathlib",
+      "struct",
+      "zipfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/audit_dlna_plt.py",
+    "docstring": "",
+    "imports": [
+      "json",
+      "pathlib",
+      "struct",
+      "zipfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/audit_jni_exports.py",
+    "docstring": "",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "struct",
+      "zipfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/official_firmware_list/audit_full_oss.py",
+    "docstring": "",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "tarfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/official_firmware_list/audit_numeric_oss.py",
+    "docstring": "",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "tarfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/official_firmware_list/check_config_plaintext.py",
+    "docstring": "",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "time"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/official_firmware_list/compare_s5m2.py",
+    "docstring": "",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "struct"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/official_firmware_list/fetch_s5m2.py",
+    "docstring": "",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "struct",
+      "urllib.request",
+      "xml.etree.ElementTree",
+      "zipfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "含网络字符串/API，运行前查调用条件",
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/official_firmware_list/probe_small_plaintext.py",
+    "docstring": "Finite plaintext-layout hypotheses; no cipher or device operations.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/official_firmware_list/probe_tv_keys.py",
+    "docstring": "Finite cross-product public-key-material probe, not a TV decoder port.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "struct",
+      "subprocess"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "含网络字符串/API，运行前查调用条件",
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/sources/lumix_sync_static/read_manifest.py",
+    "docstring": "Read only Android binary-XML string pool and manifest attributes.",
+    "imports": [
+      "json",
+      "pathlib",
+      "struct",
+      "zipfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/tether_windows_review_20261009/extract_and_compare.py",
+    "docstring": "Offline Static PE Export Inventory & Windows vs Mac Vendor Comparison Script",
+    "imports": [
+      "json",
+      "os",
+      "re",
+      "struct",
+      "subprocess"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/unpack_all.py",
+    "docstring": "Unpack all headers and components from Panasonic LUMIX S1M2 firmware (S1m2_V14.bin).",
+    "imports": [
+      "collections",
+      "csv",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "struct"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "analysis/verify_s1m2_baseline.py",
+    "docstring": "Verify captured configuration responses offline; never communicates with devices.",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "struct",
+      "sys"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "outputs/publication-tools/export_public.py",
+    "docstring": "",
+    "imports": [
+      "csv",
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "shutil"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "s1m2_firmware_project/tests/run_all_tests.py",
+    "docstring": "Run four offline suites; no device support or firmware function is inferred.",
+    "imports": [
+      "pathlib",
+      "subprocess",
+      "sys"
+    ],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "s1m2_firmware_project/tests/test_dump_parser.py",
+    "docstring": "Automated tests for Panasonic LUMIX S1M2 physical memory dump parser.",
+    "imports": [
+      "json",
+      "pathlib",
+      "struct",
+      "subprocess",
+      "sys",
+      "tempfile"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "s1m2_firmware_project/tests/test_ptp_sequencer.py",
+    "docstring": "Unit tests for Panasonic LUMIX S1M2 External PTP Interval & Bracket Sequencer.",
+    "imports": [
+      "json",
+      "pathlib",
+      "s1m2_ptp_interval_bracket",
+      "sys",
+      "tempfile",
+      "unittest"
+    ],
+    "arguments": [],
+    "static_flags": [
+      "设备/注册信息/模拟相关，不能直接视作离线安全入口"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "s1m2_firmware_project/tests/test_ptp_wire_parser.py",
+    "docstring": "Unit tests for Panasonic LUMIX S1M2 PTP property parser against real wire captures.",
+    "imports": [
+      "pathlib",
+      "ptp_property_parser",
+      "sys",
+      "unittest"
+    ],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "s1m2_firmware_project/tests/test_toolchain.py",
+    "docstring": "Toolchain automated test suite for Panasonic LUMIX S1M2.",
+    "imports": [
+      "hashlib",
+      "json",
+      "os",
+      "pathlib",
+      "shutil",
+      "subprocess",
+      "sys",
+      "tempfile"
+    ],
+    "arguments": [],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "s1m2_firmware_project/tools/dump_memory_parser.py",
+    "docstring": "Candidate-layout parser for externally supplied files and synthetic tests.",
+    "imports": [
+      "argparse",
+      "json",
+      "os",
+      "pathlib",
+      "struct",
+      "sys"
+    ],
+    "arguments": [
+      "dump",
+      "--base-addr",
+      "-o, --output"
+    ],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "s1m2_firmware_project/tools/ptp_property_parser.py",
+    "docstring": "Panasonic LUMIX S1M2 PTP Vendor Property Wire Stream Parser.",
+    "imports": [
+      "argparse",
+      "json",
+      "pathlib",
+      "struct",
+      "sys",
+      "typing"
+    ],
+    "arguments": [
+      "file",
+      "--json"
+    ],
+    "static_flags": [],
+    "syntax_error": null
+  },
+  {
+    "path": "s1m2_firmware_project/tools/repack_upd.py",
+    "docstring": "Panasonic LUMIX S1M2 Firmware Package (UPD) Repacker.",
+    "imports": [
+      "argparse",
+      "hashlib",
+      "json",
+      "pathlib",
+      "struct",
+      "sys",
+      "zlib"
+    ],
+    "arguments": [
+      "source",
+      "-o, --output",
+      "--no-recompute-hash"
+    ],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "s1m2_firmware_project/tools/s1m2_ptp_interval_bracket.py",
+    "docstring": "Offline exposure-sequence simulator for S1M2 research.",
+    "imports": [
+      "argparse",
+      "datetime",
+      "fractions",
+      "json",
+      "pathlib",
+      "struct",
+      "sys",
+      "time",
+      "typing"
+    ],
+    "arguments": [
+      "--base-ss",
+      "--ev-steps",
+      "--interval",
+      "--cycles",
+      "--delay",
+      "--mock",
+      "--output-log"
+    ],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径",
+      "设备/注册信息/模拟相关，不能直接视作离线安全入口",
+      "有未实现分支"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "s1m2_firmware_project/tools/unpack_upd.py",
+    "docstring": "Panasonic LUMIX S1M2 Firmware Package (UPD) Unpacker.",
+    "imports": [
+      "argparse",
+      "collections",
+      "csv",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "struct",
+      "sys",
+      "zlib"
+    ],
+    "arguments": [
+      "input",
+      "-o, --output"
+    ],
+    "static_flags": [
+      "可能写电脑文件，先查输出路径"
+    ],
+    "syntax_error": null
+  },
+  {
+    "path": "s1m2_firmware_project/tools/verify_components.py",
+    "docstring": "Panasonic LUMIX S1M2 Component Verification Tool.",
+    "imports": [
+      "argparse",
+      "hashlib",
+      "json",
+      "pathlib",
+      "sys"
+    ],
+    "arguments": [
+      "directory",
+      "-q, --quiet"
+    ],
+    "static_flags": [],
+    "syntax_error": null
+  }
+]

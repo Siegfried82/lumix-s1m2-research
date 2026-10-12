@@ -1,0 +1,18 @@
+Milbeaut I2C
+
+Required properties:
+- compatible:        Must be "socionext,m20v-i2c".
+- clocks:            Phandle to the clock used by the I2C module.
+- interrupts:        Shared peripheral interrupt number of the device's set.
+- reg:               Offset and length of the device's register set.
+- clock-frequency:   SCL clock frequency.
+
+Example:
+
+	i2c0: i2c@1e003000 {
+		compatible = "socionext,m20v-i2c";
+		reg = <0x1e003000 0x400>;
+		interrupts = <0 101 4>;
+		clocks = <&pclk>;
+		clock-frequency = <100000>;
+	};

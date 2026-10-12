@@ -144,9 +144,9 @@ def main():
 | 06 | compress_pr | `06_compress_pr.bin` | 16.00 MiB | 压缩 Linux 内核/SquashFS 根文件系统 |
 | 25 | osdover | `25_osdover.bin` | 16.50 MiB | OSD 图形与界面资源 |
 | 26 | osddata | `26_osddata.bin` | 19.37 MiB | 菜单与系统数据 |
-| 34 | hr_c_prog | `34_hr_c_prog.bin` | 64 KiB | 高分辨率处理 (High-Res) 控制微码 |
-| 35 | hr_d_prog | `35_hr_d_prog.bin` | 512 KiB | 高分辨率处理 (High-Res) 数据处理程序 |
-| 36 | hr_c_ddr | `36_hr_c_ddr.bin` | 512 KiB | 高分辨率处理 DDR 缓冲区配置 |
+| 34 | hr_c_prog | `34_hr_c_prog.bin` | 64 KiB | 摇摇乐 (High-Res) 控制微码 |
+| 35 | hr_d_prog | `35_hr_d_prog.bin` | 512 KiB | 摇摇乐 (High-Res) 数据处理程序 |
+| 36 | hr_c_ddr | `36_hr_c_ddr.bin` | 512 KiB | 摇摇乐 DDR 缓冲区配置 |
 | 44 | dsp_fstack_ | `44_dsp_fstack_.bin` | 64 KiB | 焦点堆叠 (Focus Stacking) 算法微码 A |
 | 45 | dsp_fstack_ | `45_dsp_fstack_.bin` | 64 KiB | 焦点堆叠 (Focus Stacking) 算法微码 B |
 | 46 | fstack_c_ex | `46_fstack_c_ex.bin` | 512 KiB | 焦点堆叠扩展模块 |

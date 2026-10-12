@@ -1,0 +1,5 @@
+{
+  "command": "test ! -e /tmp/lab-proof.txt && echo FRESH_RAM_OK; uname -r; cat /proc/net/dev",
+  "exit_code": 0,
+  "output": "FRESH_RAM_OK\n4.19.124\nInter-|   Receive                                                |  Transmit\n face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed\n    lo:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0\n"
+}

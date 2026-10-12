@@ -1,0 +1,23 @@
+S5 separate-mode PARTIAL-FINAL probe @ 192.168.1.131
+getstate -> ok
+
+=== total=102648 bytes (2 chunks: 1 full + 1 partial-final) ===
+    gate fw_update_mode #1 -> ok (0.03s)
+    startsenddata -> ok method=separate bufsize=61460
+    senddata @61192 attempt 1/8 -> ok (0.18s)
+    requestsenddata -> ok (0.02s)
+    senddata @102648 [FINAL partial] attempt 1/8 -> err_reject (0.10s)
+    abortsenddata -> error (0.04s)   [FINAL-CHUNK FAILED -> no endsenddata]
+
+=== total=163840 bytes (3 chunks: 2 full + 1 partial-final) ===
+    gate fw_update_mode #1 -> err_reject (0.02s)
+    gate not open; skipping
+
+=== total=225032 bytes (4 chunks: 3 full + 1 partial-final) ===
+    gate fw_update_mode #1 -> EXC URLError: <urlopen error [Errno 60] Operation timed out> (25.14s)
+    gate not open; skipping
+
+=== SUMMARY (separate-mode partial-final per total) ===
+  total=102648  final_chunk=err_reject   endsenddata=None
+
+VERDICT: mixed/unexpected. See per-chunk output above.

@@ -1,0 +1,5 @@
+{
+  "command": "qoob status; qoob \"cfg 1\"; qoob \"get 0\"; cat /tmp/usb_configured /tmp/usb_maxpacketBULK_IN /tmp/usb_maxpacketBULK_OUT",
+  "exit_code": 0,
+  "output": "[   14.396181] qoob: gadget=qoob speed=3 composite_bound=yes setup_calls=0\ngadget=qoob speed=3 composite_bound=yes setup_calls=0\n[   14.407724] configfs-gadget gadget: high-speed config #1: c\n[   14.411886] qoob: SET_CONFIGURATION(1) ret=0\nSET_CONFIGURATION(1) ret=0\n[   14.420371] qoob: GET_INTERFACE wIndex=0x0000 ret=0 byte=0x00\nGET_INTERFACE wIndex=0x0000 ret=0 byte=0x00\nconfigfs-gadget gadget: high-speed config #1: c512512"
+}

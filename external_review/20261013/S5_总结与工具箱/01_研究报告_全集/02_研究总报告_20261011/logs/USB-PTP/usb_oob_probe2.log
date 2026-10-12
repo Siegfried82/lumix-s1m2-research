@@ -1,0 +1,39 @@
+=== PROBE 1: Baseline (valid requests) ===
+  SET_IFACE(iface=0, alt=0): OK(ret=0)
+  GET_IFACE(iface=0):        OK(0x00)
+
+=== PROBE 2: Slightly OOB wIndex (0x10-0x20) ===
+  SET_IFACE wIndex=0x0010: USBERR(USBErrorIO)
+  SET_IFACE wIndex=0x0012: USBERR(USBErrorIO)
+  SET_IFACE wIndex=0x0014: USBERR(USBErrorIO)
+  SET_IFACE wIndex=0x0016: USBERR(USBErrorIO)
+  SET_IFACE wIndex=0x0018: USBERR(USBErrorIO)
+  SET_IFACE wIndex=0x001A: USBERR(USBErrorIO)
+  SET_IFACE wIndex=0x001C: USBERR(USBErrorIO)
+  SET_IFACE wIndex=0x001E: USBERR(USBErrorIO)
+  SET_IFACE wIndex=0x0020: USBERR(USBErrorIO)
+
+=== PROBE 3: 0x100-range OOB wIndex ===
+  SET_IFACE wIndex=0x0100 wValue=0x0001: USBERR(USBErrorIO)
+  SET_IFACE wIndex=0x0101 wValue=0x0001: USBERR(USBErrorIO)
+  SET_IFACE wIndex=0x0110 wValue=0x0001: USBERR(USBErrorIO)
+  SET_IFACE wIndex=0x01FF wValue=0x0001: USBERR(USBErrorIO)
+  SET_IFACE wIndex=0x0200 wValue=0x0001: USBERR(USBErrorIO)
+  SET_IFACE wIndex=0x0300 wValue=0x0001: USBERR(USBErrorIO)
+
+=== PROBE 4: GET_INTERFACE with OOB wIndex ===
+  GET_IFACE wIndex=0x0010: USBERR(USBErrorPipe)
+  GET_IFACE wIndex=0x0020: USBERR(USBErrorPipe)
+  GET_IFACE wIndex=0x0100: USBERR(USBErrorPipe)
+  GET_IFACE wIndex=0x0200: USBERR(USBErrorPipe)
+  GET_IFACE wIndex=0x0300: USBERR(USBErrorPipe)
+  GET_IFACE wIndex=0x1000: USBERR(USBErrorPipe)
+
+=== PROBE 5: Rapid burst (20 SET_IFACE at 0x100) ===
+  Burst 5/20: USBERR(USBErrorIO)
+  Burst 10/20: USBERR(USBErrorIO)
+  Burst 15/20: USBERR(USBErrorIO)
+  Burst 20/20: USBERR(USBErrorIO)
+  Device alive after burst
+
+Done.

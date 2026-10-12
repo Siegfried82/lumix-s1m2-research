@@ -1,0 +1,12 @@
+在 <LOCAL_WORKSPACE> 进行一项有边界的离线审计。用户提供 https://pastebin.com/mHG1T5Ph，raw原文已保存 analysis/pastebin_mHG1T5Ph_20261011/source.txt（HTML源码作为文本读取，绝对不要打开或请求其中192.168.54.1相机链接）。它声称GX9 FW1.5通过cam.cgi的setsetting/videoquality选择未在菜单呈现的MOV视频参数，并保存自定义模式。没有原始响应或视频样本。
+
+任务：找到本项目已有客户端/菜单材料中与此经验有真实联系的代码或命令枚举，判断对S1M2当前研究的具体参考价值，尤其能否把‘请求ok’推进到‘真实功能改变’的验收。重点材料：
+- analysis/sources/lumix_sync_static/decompiled/sources/B5/o.java（videoquality属性约382行）
+- analysis/sources/lumix_sync_static/decompiled/sources/p188x5/o.java（videoquality元素约353行）
+- analysis/sources/lumix_sync_static/dex_cgi_references.jsonl 及静态原生库证据（只定点看真实调用）
+- analysis/parallel_routes_20261009/02_host/PR1鉴权与菜单资料复核.md、codex_pr1_document_audit.json（S5菜单样本，不是S1M2）
+- analysis/acquired_capabilities_decoded_20261008.json、curated_vendor_capabilities_20261008.json（已有PTP能力整数；不是HTTP字符串兼容证明）
+- 研究推进_20261011_Ultra.md 当前状态。
+
+允许在 analysis/pastebin_mHG1T5Ph_20261011/agy_review 新建审计/定位产物，禁止修改其他文件、删除、发布、向其他人发消息、通信相机或执行供应商二进制。不要整库重读，不用常数出现证明接口可用。写清已确认、来源作者主张、推断、缺口，所有关键结论带真实文件/行号/调用定位。不要把GX9设置路径说成AES固件解密或S1M2支持。
+返回<=450中文字，给报告路径、关键定位和可以下一步独立验证的输入，不复制整份原文；不提出无限枚举陌生写命令。若只找到解析器而不是发送器，明确这个区别。

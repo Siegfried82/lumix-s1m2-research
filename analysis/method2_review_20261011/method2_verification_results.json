@@ -1,0 +1,102 @@
+{
+  "file": "TZ10_V12.bin",
+  "input_size": 16592384,
+  "input_md5": "c60819c421735ac58454862b66f26586",
+  "input_sha256": "2809f6b33e499853f4d1992027e9053c7f2355302cd6d22654f121e346917a12",
+  "decoded_output": "<LOCAL_WORKSPACE>/analysis/method2_review_20261011/decoded/TZ10_V12.bin.decoded",
+  "decoded_size": 16592384,
+  "decoded_md5": "ea91d2f903919d0ec99bd39ff5d3d678",
+  "decoded_sha256": "c4128ef8c4a7f9576a35423e6d806d6a047b17ad649bab93b7362c1e7849c032",
+  "decoded_body_md5": "7125ec82bbc118824b0a41d9d86a8716",
+  "header_stored_body_md5_0x40": "7125ec82bbc118824b0a41d9d86a8716",
+  "header_stored_body_md5_matches": true,
+  "decoded_body_head_32b_hex": "545a313000000000000000000000000022012201040000002014080900000000",
+  "decoded_body_head_ascii": "TZ10",
+  "seed_sample_file_offsets_hex": [
+    "0x394",
+    "0x4c4",
+    "0x614",
+    "0x876",
+    "0xca2",
+    "0xfc5",
+    "0xec8",
+    "0x10c8",
+    "0x126c",
+    "0x14bd",
+    "0x1804",
+    "0x1a66",
+    "0x1a27",
+    "0x1d1a",
+    "0x1e2e",
+    "0x20d3"
+  ],
+  "seed_bytes_hex": "0c9ef8efe6cd114f1f441e3e6735c285",
+  "init_key_uint32_le": [
+    "0xeff89e0c",
+    "0x4f11cde6",
+    "0x3e1e441f",
+    "0x85c23567"
+  ],
+  "body_uint32_words": 4147968,
+  "parity_extra_discards": 1593097,
+  "total_mt19937_outputs_consumed": 5741065,
+  "roundtrip_reencode_exact_match": true,
+  "reencoded_sampled_seed_matches": true,
+  "ptool_patch_validation": {
+    "ptool_table_index": 12,
+    "model_name": "TZ10 v1.22",
+    "model_name_va": "0x4f1cac",
+    "table_record_va": "0x6ae474",
+    "table_md5_va": "0x6ae47c",
+    "method": 2,
+    "expected_file_size": 16592384,
+    "expected_file_md5": "c60819c421735ac58454862b66f26586",
+    "offsets_va": "0x6ae4e0",
+    "offsets": [
+      404,
+      196,
+      20,
+      118,
+      674,
+      965,
+      200,
+      200,
+      108,
+      189,
+      516,
+      614,
+      39,
+      282,
+      46,
+      211
+    ],
+    "va_translation_ranges": [
+      {
+        "start_va": "0x77880000",
+        "end_va": "0x78000000",
+        "delta": "-0x7787ba00"
+      },
+      {
+        "start_va": "0x7bbc0000",
+        "end_va": "0x7cd00000",
+        "delta": "-0x7b2ffa00"
+      }
+    ],
+    "patch_table_va": "0x647d40",
+    "patch_entries": 51,
+    "expected_value_checks_matched": 111,
+    "expected_value_checks_total": 111,
+    "body_expected_value_checks_matched": 109,
+    "body_expected_value_checks_total": 109,
+    "min_body_patch_offset_hex": "0x210"
+  },
+  "naive_unstepped_mt19937_comparison": {
+    "first_divergent_file_offset_hex": "0x218",
+    "first_odd_parity_plaintext_word_offset_hex": "0x214",
+    "first_odd_parity_plaintext_word_hex": "0x00000004",
+    "naive_body_md5": "d23b7097cea09e4cdd4b6201465eac4e",
+    "header_stored_body_md5_matches": false,
+    "expected_value_checks_matched": 4,
+    "body_expected_value_checks_matched": 2
+  }
+}

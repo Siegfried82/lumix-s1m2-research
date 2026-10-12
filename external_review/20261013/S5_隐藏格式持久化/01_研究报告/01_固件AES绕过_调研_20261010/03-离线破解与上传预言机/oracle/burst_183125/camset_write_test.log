@@ -1,0 +1,37 @@
+
+=========== CAMSET WRITE-VERIFICATION ORACLE ===========
+live bytes=65533 checksum=0x6a
+pre: getstate=ok <?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>ok</result><state><batt>5/5</batt><batt_per>-1</batt_per><cammo
+
+----- TEST A: exact live (valid ck) -----
+[A-valid] startsenddata -> {'result': 'ok', 'method': 'separate', 'bufsize': '61460'} (0.55s)
+[A-valid]   method=separate bufsize=61460
+[A-valid]   senddata @61192 a1 -> {'result': 'ok'} (0.85s)
+[A-valid]   senddata @65533 a1 -> {'result': 'ok'} (0.73s)
+[A-valid] endsenddata -> {'result': 'ok'} (0.03s)
+post-A getstate=ok <?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>ok</result><state><batt>5/5</batt><batt_per>-1</batt_per><cammo
+
+----- TEST B: flip data byte @0x40, KEEP old ck (invalid) -----
+[B-badck] startsenddata -> {'result': 'ok', 'method': 'separate', 'bufsize': '61460'} (0.02s)
+[B-badck]   method=separate bufsize=61460
+[B-badck]   senddata @61192 a1 -> {'result': 'ok'} (0.61s)
+[B-badck]   senddata @65533 a1 -> {'result': 'err_reject'} (0.03s)
+post-B getstate=ok <?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>ok</result><state><batt>5/5</batt><batt_per>-1</batt_per><cammo
+
+----- TEST C: flip data byte @0x40, FIX ck (valid) -----
+[C-goodck] startsenddata -> {'result': 'ok', 'method': 'separate', 'bufsize': '61460'} (0.01s)
+[C-goodck]   method=separate bufsize=61460
+[C-goodck]   senddata @61192 a1 -> {'result': 'ok'} (0.46s)
+[C-goodck]   senddata @65533 a1 -> {'result': 'ok'} (0.08s)
+[C-goodck] endsenddata -> {'result': 'ok'} (0.02s)
+post-C getstate=ok <?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>ok</result><state><batt>5/5</batt><batt_per>-1</batt_per><cammo
+
+SUMMARY:
+  A valid-ck   -> ok
+  B invalid-ck -> err_reject
+  C valid-ck   -> ok
+DONE

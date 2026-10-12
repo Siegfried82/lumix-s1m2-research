@@ -1,0 +1,167 @@
+{
+  "manifest_sha256": "0020c345091a719d780262a8983e6f862fb4e335e849617a914c238199d575d1",
+  "records": [
+    {
+      "index": 0,
+      "name": "boot",
+      "path": "analysis/unpacked/components/00_boot.bin",
+      "size": 0,
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "directory_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "directory_hash_matches": true,
+      "unique_byte_values": [],
+      "classification": "empty"
+    },
+    {
+      "index": 2,
+      "name": "loader2",
+      "path": "analysis/unpacked/components/02_loader2.bin",
+      "size": 0,
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "directory_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "directory_hash_matches": true,
+      "unique_byte_values": [],
+      "classification": "empty"
+    },
+    {
+      "index": 3,
+      "name": "loader3",
+      "path": "analysis/unpacked/components/03_loader3.bin",
+      "size": 0,
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "directory_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "directory_hash_matches": true,
+      "unique_byte_values": [],
+      "classification": "empty"
+    },
+    {
+      "index": 4,
+      "name": "storage",
+      "path": "analysis/unpacked/components/04_storage.bin",
+      "size": 0,
+      "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "directory_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "directory_hash_matches": true,
+      "unique_byte_values": [],
+      "classification": "empty"
+    },
+    {
+      "index": 24,
+      "name": "lens_hist",
+      "path": "analysis/unpacked/components/24_lens_hist.bin",
+      "size": 393216,
+      "actual_sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+      "directory_sha256": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+      "directory_hash_matches": true,
+      "unique_byte_values": [
+        0
+      ],
+      "classification": "uniform_fill"
+    },
+    {
+      "index": 27,
+      "name": "wifi_info",
+      "path": "analysis/unpacked/components/27_wifi_info.bin",
+      "size": 262144,
+      "actual_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+      "directory_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+      "directory_hash_matches": true,
+      "unique_byte_values": [
+        0
+      ],
+      "classification": "uniform_fill"
+    },
+    {
+      "index": 28,
+      "name": "menu_save",
+      "path": "analysis/unpacked/components/28_menu_save.bin",
+      "size": 524288,
+      "actual_sha256": "043e238a765f7cfbc62596a50e53c8ffb6b188a99357b0ebede251725d67589f",
+      "directory_sha256": "043e238a765f7cfbc62596a50e53c8ffb6b188a99357b0ebede251725d67589f",
+      "directory_hash_matches": true,
+      "unique_byte_values": [
+        255
+      ],
+      "classification": "uniform_fill"
+    },
+    {
+      "index": 29,
+      "name": "kizu_data",
+      "path": "analysis/unpacked/components/29_kizu_data.bin",
+      "size": 524288,
+      "actual_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+      "directory_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+      "directory_hash_matches": true,
+      "unique_byte_values": [
+        0
+      ],
+      "classification": "uniform_fill"
+    },
+    {
+      "index": 30,
+      "name": "vkizu_data",
+      "path": "analysis/unpacked/components/30_vkizu_data.bin",
+      "size": 9437184,
+      "actual_sha256": "d2ee4703cd9698945ca7b9fe1689ea3095597eac1a0afd8dba00cac7894fdc43",
+      "directory_sha256": "d2ee4703cd9698945ca7b9fe1689ea3095597eac1a0afd8dba00cac7894fdc43",
+      "directory_hash_matches": true,
+      "unique_byte_values": [
+        0
+      ],
+      "classification": "uniform_fill"
+    },
+    {
+      "index": 38,
+      "name": "xtk",
+      "path": "analysis/unpacked/components/38_xtk.bin",
+      "size": 131072,
+      "actual_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+      "directory_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+      "directory_hash_matches": true,
+      "unique_byte_values": [
+        0
+      ],
+      "classification": "uniform_fill"
+    },
+    {
+      "index": 39,
+      "name": "lut_data",
+      "path": "analysis/unpacked/components/39_lut_data.bin",
+      "size": 8781824,
+      "actual_sha256": "6217bc4155fa384f23c6e11e7823877d36d13419e7941b5bcd25ed8e9d4644ee",
+      "directory_sha256": "6217bc4155fa384f23c6e11e7823877d36d13419e7941b5bcd25ed8e9d4644ee",
+      "directory_hash_matches": true,
+      "unique_byte_values": [
+        0
+      ],
+      "classification": "uniform_fill"
+    },
+    {
+      "index": 49,
+      "name": "dsh_adj",
+      "path": "analysis/unpacked/components/49_dsh_adj.bin",
+      "size": 131072,
+      "actual_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+      "directory_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+      "directory_hash_matches": true,
+      "unique_byte_values": [
+        0
+      ],
+      "classification": "uniform_fill"
+    },
+    {
+      "index": 61,
+      "name": "mbr_dummy_d",
+      "path": "analysis/unpacked/components/61_mbr_dummy_d.bin",
+      "size": 131072,
+      "actual_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+      "directory_sha256": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+      "directory_hash_matches": true,
+      "unique_byte_values": [
+        255
+      ],
+      "classification": "uniform_fill"
+    }
+  ],
+  "device_access": false
+}

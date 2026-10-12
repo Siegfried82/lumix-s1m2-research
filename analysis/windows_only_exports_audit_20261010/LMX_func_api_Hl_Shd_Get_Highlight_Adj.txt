@@ -1,0 +1,73 @@
+
+analysis/sources/tether_windows_2_12/Lmxptpif.dll:	file format coff-x86-64
+
+Disassembly of section .text:
+
+00000001800150d0 <LMX_func_api_Hl_Shd_Get_Highlight_Adj>:
+1800150d0: 48 89 5c 24 08              	movq	%rbx, 0x8(%rsp)
+1800150d5: 48 89 6c 24 10              	movq	%rbp, 0x10(%rsp)
+1800150da: 48 89 74 24 18              	movq	%rsi, 0x18(%rsp)
+1800150df: 57                          	pushq	%rdi
+1800150e0: 48 83 ec 40                 	subq	$0x40, %rsp
+1800150e4: 33 c0                       	xorl	%eax, %eax
+1800150e6: 49 8b d8                    	movq	%r8, %rbx
+1800150e9: 48 8b ea                    	movq	%rdx, %rbp
+1800150ec: 48 8b f1                    	movq	%rcx, %rsi
+1800150ef: 4d 85 c0                    	testq	%r8, %r8
+1800150f2: 74 03                       	je	0x1800150f7 <LMX_func_api_Hl_Shd_Get_Highlight_Adj+0x27>
+1800150f4: 41 89 00                    	movl	%eax, (%r8)
+1800150f7: 0f 57 c0                    	xorps	%xmm0, %xmm0
+1800150fa: 89 05 04 96 24 00           	movl	%eax, 0x249604(%rip)    # 0x18025e704
+180015100: 48 8d 15 f9 ef 20 00        	leaq	0x20eff9(%rip), %rdx    # 0x180224100
+180015107: 48 89 44 24 30              	movq	%rax, 0x30(%rsp)
+18001510c: 48 8d 0d 3d a8 20 00        	leaq	0x20a83d(%rip), %rcx    # 0x18021f950
+180015113: 89 44 24 38                 	movl	%eax, 0x38(%rsp)
+180015117: 0f 11 44 24 20              	movups	%xmm0, 0x20(%rsp)
+18001511c: 66 89 44 24 3c              	movw	%ax, 0x3c(%rsp)
+180015121: 40 32 ff                    	xorb	%dil, %dil
+180015124: e8 a7 18 02 00              	callq	0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>
+180015129: 48 85 f6                    	testq	%rsi, %rsi
+18001512c: 75 17                       	jne	0x180015145 <LMX_func_api_Hl_Shd_Get_Highlight_Adj+0x75>
+18001512e: 48 85 db                    	testq	%rbx, %rbx
+180015131: 74 06                       	je	0x180015139 <LMX_func_api_Hl_Shd_Get_Highlight_Adj+0x69>
+180015133: c7 03 00 00 01 00           	movl	$0x10000, (%rbx)        # imm = 0x10000
+180015139: c7 05 c1 95 24 00 00 00 01 00       	movl	$0x10000, 0x2495c1(%rip) # imm = 0x10000
+                                                                        # 0x18025e704
+180015143: eb 30                       	jmp	0x180015175 <LMX_func_api_Hl_Shd_Get_Highlight_Adj+0xa5>
+180015145: 4c 8b c5                    	movq	%rbp, %r8
+180015148: 48 8d 4c 24 20              	leaq	0x20(%rsp), %rcx
+18001514d: e8 de f8 ff ff              	callq	0x180014a30 <LMX_func_api_GPS_Set_GPS_Data_Info+0x300>
+180015152: 0f b6 f8                    	movzbl	%al, %edi
+180015155: 84 c0                       	testb	%al, %al
+180015157: 75 15                       	jne	0x18001516e <LMX_func_api_Hl_Shd_Get_Highlight_Adj+0x9e>
+180015159: 48 8d 15 a0 ef 20 00        	leaq	0x20efa0(%rip), %rdx    # 0x180224100
+180015160: 48 8d 0d a1 af 20 00        	leaq	0x20afa1(%rip), %rcx    # 0x180220108
+180015167: e8 64 18 02 00              	callq	0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>
+18001516c: eb 07                       	jmp	0x180015175 <LMX_func_api_Hl_Shd_Get_Highlight_Adj+0xa5>
+18001516e: 0f b7 44 24 32              	movzwl	0x32(%rsp), %eax
+180015173: 89 06                       	movl	%eax, (%rsi)
+180015175: 48 8d 15 84 ef 20 00        	leaq	0x20ef84(%rip), %rdx    # 0x180224100
+18001517c: 48 8d 0d dd a7 20 00        	leaq	0x20a7dd(%rip), %rcx    # 0x18021f960
+180015183: e8 48 18 02 00              	callq	0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>
+180015188: 48 8b 5c 24 50              	movq	0x50(%rsp), %rbx
+18001518d: 40 0f b6 c7                 	movzbl	%dil, %eax
+180015191: 48 8b 6c 24 58              	movq	0x58(%rsp), %rbp
+180015196: 48 8b 74 24 60              	movq	0x60(%rsp), %rsi
+18001519b: 48 83 c4 40                 	addq	$0x40, %rsp
+18001519f: 5f                          	popq	%rdi
+1800151a0: c3                          	retq
+1800151a1: cc                          	int3
+1800151a2: cc                          	int3
+1800151a3: cc                          	int3
+1800151a4: cc                          	int3
+1800151a5: cc                          	int3
+1800151a6: cc                          	int3
+1800151a7: cc                          	int3
+1800151a8: cc                          	int3
+1800151a9: cc                          	int3
+1800151aa: cc                          	int3
+1800151ab: cc                          	int3
+1800151ac: cc                          	int3
+1800151ad: cc                          	int3
+1800151ae: cc                          	int3
+1800151af: cc                          	int3

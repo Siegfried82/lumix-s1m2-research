@@ -1,0 +1,29 @@
+SOCIONEXT Milbeaut Updown
+
+functions:
+- updown counter, phase difference counter
+
+Required properties:
+- #address-cells:	Should be '<1>'.
+- #size-cells:		Should be '<0>'.
+- compatible:		Must be "socionext,milbeaut-updown".
+- reg:				Offset and length of the device's register set.
+- clocks:			Must be "rclk".
+- clock-names:		Must be "mux".
+
+Example:
+
+	updown0: updown@1e002000 {
+		#address-cells = <1>;
+		#size-cells = <0>;
+		compatible = "socionext,milbeaut-updown";
+		reg = <0x1e002000 0x20>;
+		clocks = <&rclk>;
+		clock-names = "mux";
+
+		counter {
+			compatible = "socionext,milbeaut-updown-counter";
+			interrupts = <0 104 0x4>;
+			cms_type = <1>;
+		};
+	};

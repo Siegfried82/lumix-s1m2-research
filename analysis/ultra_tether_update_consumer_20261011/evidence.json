@@ -1,0 +1,64 @@
+{
+  "firmware_or_library_executed": false,
+  "library_version": "2.12",
+  "library_build": "2.12.0.5",
+  "library_path": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/Frameworks/libLmxptpif.dylib",
+  "library_sha256": "b767e5680676eefdc05d02a4772c4120a45916e246169b79393356499c07ec97",
+  "disassembly_path": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+  "disassembly_sha256": "f0beab04bef63508de6492cf263f62199548bda97911ab5852b371474537af1d",
+  "windows": [
+    {
+      "name": "file_read",
+      "first_line": 70891,
+      "last_line": 70976,
+      "file": "file_read.source_window.txt"
+    },
+    {
+      "name": "caller_read",
+      "first_line": 70418,
+      "last_line": 70462,
+      "file": "caller_read.source_window.txt"
+    },
+    {
+      "name": "caller_send",
+      "first_line": 70612,
+      "last_line": 70645,
+      "file": "caller_send.source_window.txt"
+    },
+    {
+      "name": "send_data",
+      "first_line": 71156,
+      "last_line": 71291,
+      "file": "send_data.source_window.txt"
+    },
+    {
+      "name": "ready_info_wrapper",
+      "first_line": 71048,
+      "last_line": 71155,
+      "file": "ready_info_wrapper.source_window.txt"
+    },
+    {
+      "name": "event_receive",
+      "first_line": 71292,
+      "last_line": 71478,
+      "file": "event_receive.source_window.txt"
+    },
+    {
+      "name": "data_info_sender",
+      "first_line": 71479,
+      "last_line": 71620,
+      "file": "data_info_sender.source_window.txt"
+    }
+  ],
+  "manual_dataflow": {
+    "file_read_buffer": "Get_FileData_FileSize outputs original read buffer and stat size; caller loads x24 and w25",
+    "send_buffer": "same x24/x25 forwarded to Send_FWUP_Data",
+    "ready_info_opcode": "0x9605",
+    "metadata_opcode": "0x9606",
+    "data_opcode": "0x9607",
+    "address64_cache": "0x49e744",
+    "address32_cache": "0x49e730",
+    "cache_object_base": "0x49e724",
+    "address_origin": "copied from returned Get_Event_Info buffer, not a field read from the firmware file"
+  }
+}

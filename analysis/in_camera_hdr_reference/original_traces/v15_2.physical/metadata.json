@@ -1,0 +1,297 @@
+{
+  "module": "v15_2.physical",
+  "filename": "v15_2\\physical.py",
+  "sha256": "40d61a1614d9bad1ec4f8f20f62bd518d652f2067dde1b3df91454e2412f6784",
+  "functions": [
+    {
+      "scope": "v15_2.physical",
+      "name": "<module>",
+      "line": 1,
+      "args": [],
+      "names": [
+        "__doc__",
+        "numpy",
+        "np",
+        "ops",
+        "Ops",
+        "highlights",
+        "SHOULDER_START",
+        "SHOULDER_CEILING",
+        "Physical",
+        "metadata"
+      ],
+      "imports": [
+        "numpy",
+        "ops",
+        "highlights"
+      ]
+    },
+    {
+      "scope": "v15_2.physical.Physical",
+      "name": "Physical",
+      "line": 6,
+      "args": [],
+      "names": [
+        "__name__",
+        "__module__",
+        "__qualname__",
+        "__init__",
+        "emit",
+        "helpers",
+        "guard_fully_clipped",
+        "merge",
+        "covariance",
+        "blur",
+        "max_reduce",
+        "prepare",
+        "__classcell__"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.physical.Physical.__init__",
+      "name": "__init__",
+      "line": 7,
+      "args": [
+        "self",
+        "rt",
+        "native",
+        "frames",
+        "source_hw",
+        "colours",
+        "shortest_rolloff"
+      ],
+      "names": [
+        "super",
+        "__init__",
+        "int",
+        "t",
+        "k",
+        "gc",
+        "h",
+        "w",
+        "o",
+        "n",
+        "r",
+        "nr",
+        "min",
+        "ValueError",
+        "shortest_rolloff"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.physical.Physical.emit",
+      "name": "emit",
+      "line": 15,
+      "args": [
+        "self",
+        "tag"
+      ],
+      "names": [
+        "shortest_rolloff",
+        "super",
+        "emit"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.physical.Physical.helpers",
+      "name": "helpers",
+      "line": 20,
+      "args": [
+        "self",
+        "compact"
+      ],
+      "names": [
+        "k",
+        "h",
+        "w",
+        "n",
+        "gc",
+        "join",
+        "shortest_rolloff",
+        "SHOULDER_START",
+        "SHOULDER_CEILING",
+        "replace"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.physical.Physical.guard_fully_clipped",
+      "name": "guard_fully_clipped",
+      "line": 59,
+      "args": [
+        "self",
+        "bank",
+        "G",
+        "meta",
+        "prediction",
+        "tag_white"
+      ],
+      "names": [
+        "n",
+        "shortest_rolloff",
+        "helpers",
+        "k",
+        "h",
+        "w",
+        "emit",
+        "o"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.physical.Physical.merge",
+      "name": "merge",
+      "line": 105,
+      "args": [
+        "self",
+        "bank",
+        "G",
+        "meta",
+        "cov"
+      ],
+      "names": [
+        "o",
+        "n",
+        "k",
+        "gc",
+        "emit",
+        "helpers"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.physical.Physical.covariance",
+      "name": "covariance",
+      "line": 128,
+      "args": [
+        "self",
+        "seed"
+      ],
+      "names": [
+        "t",
+        "o",
+        "n",
+        "emit",
+        "rt",
+        "free"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.physical.Physical.blur",
+      "name": "blur",
+      "line": 146,
+      "args": [
+        "self",
+        "value"
+      ],
+      "names": [
+        "o",
+        "np",
+        "exp",
+        "arange",
+        "float32",
+        "sum",
+        "join",
+        "range",
+        "emit",
+        "rt",
+        "free"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.physical.Physical.blur.<genexpr>",
+      "name": "<genexpr>",
+      "line": 149,
+      "args": [
+        ".0"
+      ],
+      "names": [
+        "format",
+        "float"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.physical.Physical.max_reduce",
+      "name": "max_reduce",
+      "line": 160,
+      "args": [
+        "self",
+        "v",
+        "step"
+      ],
+      "names": [
+        "n",
+        "r",
+        "o",
+        "emit",
+        "rt",
+        "free"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.physical.Physical.prepare",
+      "name": "prepare",
+      "line": 167,
+      "args": [
+        "self",
+        "bank",
+        "G",
+        "meta"
+      ],
+      "names": [
+        "n",
+        "o",
+        "r",
+        "nr",
+        "k",
+        "merge",
+        "covariance",
+        "rt",
+        "free",
+        "emit",
+        "blur",
+        "max_reduce",
+        "w",
+        "h",
+        "helpers"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.physical.metadata",
+      "name": "metadata",
+      "line": 196,
+      "args": [
+        "exposure",
+        "index",
+        "white",
+        "under",
+        "calibration"
+      ],
+      "names": [
+        "np",
+        "asarray",
+        "float32",
+        "reshape",
+        "len",
+        "c_",
+        "broadcast_to",
+        "astype"
+      ],
+      "imports": []
+    }
+  ],
+  "imports": [
+    "highlights",
+    "numpy",
+    "ops"
+  ],
+  "shaders": []
+}

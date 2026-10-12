@@ -1,0 +1,100 @@
+
+<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GH2__V11.bin.plaintext:     file format binary
+
+
+Disassembly of section .data:
+
+001dfd90 <.data+0x1dfd90>:
+  1dfd90:	04          	clr	d1
+  1dfd91:	5c 10       	mov	(16,sp),a0
+  1dfd93:	dd 03 23 a7 	call	0x3bc52096,[],0
+  1dfd97:	3b 00 00 
+  1dfd9a:	04          	clr	d1
+  1dfd9b:	0c          	clr	d3
+  1dfd9c:	14          	extbu	d0
+  1dfd9d:	a4          	cmp	d1,d0
+  1dfd9e:	c3 11       	ble	0x1dfdaf
+  1dfda0:	db          	setlb	
+  1dfda1:	5c 10       	mov	(16,sp),a0
+  1dfda3:	15          	extbu	d1
+  1dfda4:	f4 24       	movbu	(d1,a0),d2
+  1dfda6:	4d          	inc	a3
+  1dfda7:	f0 5a       	movbu	d2,(a2)
+  1dfda9:	49          	inc	a2
+  1dfdaa:	4c          	inc	d3
+  1dfdab:	8d          	mov	d3,d1
+  1dfdac:	17          	extbu	d3
+  1dfdad:	a3          	cmp	d0,d3
+  1dfdae:	d0          	llt	
+  1dfdaf:	80 0d       	mov	13,d0
+  1dfdb1:	f0 52       	movbu	d0,(a2)
+  1dfdb3:	49          	inc	a2
+  1dfdb4:	80 0a       	mov	10,d0
+  1dfdb6:	f0 52       	movbu	d0,(a2)
+  1dfdb8:	58 14       	mov	(20,sp),d0
+  1dfdba:	49          	inc	a2
+  1dfdbb:	23 02       	add	2,a3
+  1dfdbd:	a0 00       	cmp	0,d0
+  1dfdbf:	c8 0c       	beq	0x1dfdcb
+  1dfdc1:	a0 01       	cmp	1,d0
+  1dfdc3:	c8 12       	beq	0x1dfdd5
+  1dfdc5:	a0 02       	cmp	2,d0
+  1dfdc7:	c8 18       	beq	0x1dfddf
+  1dfdc9:	ca 20       	bra	0x1dfde9
+  1dfdcb:	5c 10       	mov	(16,sp),a0
+  1dfdcd:	fc dd 6c 9f 	mov	1082040172,a1
+  1dfdd1:	7e 40 
+  1dfdd3:	ca 1e       	bra	0x1dfdf1
+  1dfdd5:	5c 10       	mov	(16,sp),a0
+  1dfdd7:	fc dd 91 9f 	mov	1082040209,a1
+  1dfddb:	7e 40 
+  1dfddd:	ca 14       	bra	0x1dfdf1
+  1dfddf:	5c 10       	mov	(16,sp),a0
+  1dfde1:	fc dd ba 9f 	mov	1082040250,a1
+  1dfde5:	7e 40 
+  1dfde7:	ca 0a       	bra	0x1dfdf1
+  1dfde9:	5c 10       	mov	(16,sp),a0
+  1dfdeb:	fc dd e0 9f 	mov	1082040288,a1
+  1dfdef:	7e 40 
+  1dfdf1:	dd 8d 22 a7 	call	0x3bc5207e,[a2],4
+  1dfdf5:	3b 20 04 
+  1dfdf8:	5c 10       	mov	(16,sp),a0
+  1dfdfa:	dd 9c 22 a7 	call	0x3bc52096,[],0
+  1dfdfe:	3b 00 00 
+  1dfe01:	04          	clr	d1
+  1dfe02:	08          	clr	d2
+  1dfe03:	14          	extbu	d0
+  1dfe04:	a4          	cmp	d1,d0
+  1dfe05:	c3 11       	ble	0x1dfe16
+  1dfe07:	db          	setlb	
+  1dfe08:	5c 10       	mov	(16,sp),a0
+  1dfe0a:	15          	extbu	d1
+  1dfe0b:	f4 14       	movbu	(d1,a0),d1
+  1dfe0d:	4d          	inc	a3
+  1dfe0e:	f0 56       	movbu	d1,(a2)
+  1dfe10:	49          	inc	a2
+  1dfe11:	48          	inc	d2
+  1dfe12:	89          	mov	d2,d1
+  1dfe13:	16          	extbu	d2
+  1dfe14:	a2          	cmp	d0,d2
+  1dfe15:	d0          	llt	
+  1dfe16:	80 0d       	mov	13,d0
+  1dfe18:	f0 52       	movbu	d0,(a2)
+  1dfe1a:	49          	inc	a2
+  1dfe1b:	80 0a       	mov	10,d0
+  1dfe1d:	f0 52       	movbu	d0,(a2)
+  1dfe1f:	49          	inc	a2
+  1dfe20:	23 02       	add	2,a3
+  1dfe22:	5c 10       	mov	(16,sp),a0
+  1dfe24:	fc dd 06 a0 	mov	1082040326,a1
+  1dfe28:	7e 40 
+  1dfe2a:	dd 54 22 a7 	call	0x3bc5207e,[a2],4
+  1dfe2e:	3b 20 04 
+  1dfe31:	5c 10       	mov	(16,sp),a0
+  1dfe33:	dd 63 22 a7 	call	0x3bc52096,[],0
+  1dfe37:	3b 00 00 
+  1dfe3a:	08          	clr	d2
+  1dfe3b:	0c          	clr	d3
+  1dfe3c:	14          	extbu	d0
+  1dfe3d:	ac          	cmp	d3,d0
+  1dfe3e:	c3 11       	ble	0x1dfe4f

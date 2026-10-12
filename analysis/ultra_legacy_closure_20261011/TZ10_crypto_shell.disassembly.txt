@@ -1,0 +1,657 @@
+
+<LOCAL_WORKSPACE>/analysis/method2_review_20261011/decoded/TZ10_V12.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+7789b870 <.data+0x1fe70>:
+7789b870:	c9 1e       	bne	0x7789b88e
+7789b872:	5c 10       	mov	(16,sp),a0
+7789b874:	f1 ed       	mov	d3,a1
+7789b876:	59 14       	mov	(20,sp),d1
+7789b878:	88          	mov	d2,d0
+7789b879:	cd ab fb 00 	call	0x7789b424,[],0
+7789b87d:	00 
+7789b87e:	a0 ff       	cmp	-1,d0
+7789b880:	c9 0e       	bne	0x7789b88e
+7789b882:	5c 4c       	mov	(76,sp),a0
+7789b884:	cd a4 fb 00 	call	0x7789b428,[],0
+7789b888:	00 
+7789b889:	80 ff       	mov	-1,d0
+7789b88b:	df f0 64    	ret	[d2,d3,a2,a3],100
+7789b88e:	5c 4c       	mov	(76,sp),a0
+7789b890:	f1 d8       	mov	a2,d0
+7789b892:	43 04       	mov	a0,(4,sp)
+7789b894:	5c 10       	mov	(16,sp),a0
+7789b896:	f1 ed       	mov	d3,a1
+7789b898:	89          	mov	d2,d1
+7789b899:	cd b1 f7 f0 	call	0x7789b04a,[d2,d3,a2,a3],112
+7789b89d:	70 
+7789b89e:	42 38       	mov	d0,(56,sp)
+7789b8a0:	a0 00       	cmp	0,d0
+7789b8a2:	c8 0d       	beq	0x7789b8af
+7789b8a4:	5c 4c       	mov	(76,sp),a0
+7789b8a6:	cd 82 fb 00 	call	0x7789b428,[],0
+7789b8aa:	00 
+7789b8ab:	58 38       	mov	(56,sp),d0
+7789b8ad:	ca 3f       	bra	0x7789b8ec
+7789b8af:	ba 03       	cmp	3,a2
+7789b8b1:	c9 0f       	bne	0x7789b8c0
+7789b8b3:	59 4c       	mov	(76,sp),d1
+7789b8b5:	5c 10       	mov	(16,sp),a0
+7789b8b7:	f1 ed       	mov	d3,a1
+7789b8b9:	80 01       	mov	1,d0
+7789b8bb:	cd db fa b0 	call	0x7789b396,[d2,a2,a3],16
+7789b8bf:	10 
+7789b8c0:	f8 b8 29    	movbu	(41,sp),d0
+7789b8c3:	ba 02       	cmp	2,a2
+7789b8c5:	f0 53       	movbu	d0,(a3)
+7789b8c7:	c8 06       	beq	0x7789b8cd
+7789b8c9:	ba 03       	cmp	3,a2
+7789b8cb:	c9 07       	bne	0x7789b8d2
+7789b8cd:	58 08       	mov	(8,sp),d0
+7789b8cf:	40          	inc	d0
+7789b8d0:	42 08       	mov	d0,(8,sp)
+7789b8d2:	58 08       	mov	(8,sp),d0
+7789b8d4:	e3          	add	d0,d3
+7789b8d5:	58 0c       	mov	(12,sp),d0
+7789b8d7:	f1 ec       	mov	d3,a0
+7789b8d9:	f1 20       	sub	d0,a0
+7789b8db:	f1 12       	sub	a0,d2
+7789b8dd:	4e 0c       	mov	d3,(12,sp)
+7789b8df:	c8 0a       	beq	0x7789b8e9
+7789b8e1:	58 2c       	mov	(44,sp),d0
+7789b8e3:	a2          	cmp	d0,d2
+7789b8e4:	c5 05       	bhi	0x7789b8e9
+7789b8e6:	cc 0f fe    	jmp	0x7789b6f5
+7789b8e9:	cc 66 ff    	jmp	0x7789b84f
+7789b8ec:	df f0 64    	ret	[d2,d3,a2,a3],100
+7789b8ef:	43 0c       	mov	a0,(12,sp)
+7789b8f1:	42 10       	mov	d0,(16,sp)
+7789b8f3:	46 14       	mov	d1,(20,sp)
+7789b8f5:	58 50       	mov	(80,sp),d0
+7789b8f7:	97          	mov	a1,a3
+7789b8f8:	42 20       	mov	d0,(32,sp)
+7789b8fa:	58 48       	mov	(72,sp),d0
+7789b8fc:	3e          	mov	sp,a2
+7789b8fd:	42 18       	mov	d0,(24,sp)
+7789b8ff:	58 4c       	mov	(76,sp),d0
+7789b901:	22 08       	add	8,a2
+7789b903:	42 1c       	mov	d0,(28,sp)
+7789b905:	00          	clr	d0
+7789b906:	42 24       	mov	d0,(36,sp)
+7789b908:	58 58       	mov	(88,sp),d0
+7789b90a:	98          	mov	a2,a0
+7789b90b:	42 28       	mov	d0,(40,sp)
+7789b90d:	58 5c       	mov	(92,sp),d0
+7789b90f:	95 00       	mov	0,a1
+7789b911:	42 2c       	mov	d0,(44,sp)
+7789b913:	58 54       	mov	(84,sp),d0
+7789b915:	04          	clr	d1
+7789b916:	42 30       	mov	d0,(48,sp)
+7789b918:	58 60       	mov	(96,sp),d0
+7789b91a:	42 34       	mov	d0,(52,sp)
+7789b91c:	80 01       	mov	1,d0
+7789b91e:	f8 92 08    	movbu	d0,(8,sp)
+7789b921:	00          	clr	d0
+7789b922:	42 04       	mov	d0,(4,sp)
+7789b924:	cd 26 f7 f0 	call	0x7789b04a,[d2,d3,a2,a3],112
+7789b928:	70 
+7789b929:	a0 00       	cmp	0,d0
+7789b92b:	c9 1e       	bne	0x7789b949
+7789b92d:	98          	mov	a2,a0
+7789b92e:	00          	clr	d0
+7789b92f:	9d          	mov	a3,a1
+7789b930:	cd 7c fd f0 	call	0x7789b6ac,[d2,d3,a2,a3],100
+7789b934:	64 
+7789b935:	82          	mov	d0,d2
+7789b936:	aa 00       	cmp	0,d2
+7789b938:	c9 10       	bne	0x7789b948
+7789b93a:	00          	clr	d0
+7789b93b:	42 04       	mov	d0,(4,sp)
+7789b93d:	80 01       	mov	1,d0
+7789b93f:	95 00       	mov	0,a1
+7789b941:	04          	clr	d1
+7789b942:	98          	mov	a2,a0
+7789b943:	cd 07 f7 f0 	call	0x7789b04a,[d2,d3,a2,a3],112
+7789b947:	70 
+7789b948:	88          	mov	d2,d0
+7789b949:	df b0 44    	ret	[d2,a2,a3],68
+7789b94c:	43 08       	mov	a0,(8,sp)
+7789b94e:	f1 e7       	mov	d1,a3
+7789b950:	f8 e1 03    	and	3,d1
+7789b953:	c9 37       	bne	0x7789b98a
+7789b955:	a0 00       	cmp	0,d0
+7789b957:	c8 3b       	beq	0x7789b992
+7789b959:	bf 20       	cmp	32,a3
+7789b95b:	c1 2f       	bgt	0x7789b98a
+7789b95d:	f1 dc       	mov	a3,d0
+7789b95f:	3c          	mov	sp,a0
+7789b960:	20 0c       	add	12,a0
+7789b962:	43 04       	mov	a0,(4,sp)
+7789b964:	a0 20       	cmp	32,d0
+7789b966:	c4 06       	bcs	0x7789b96c
+7789b968:	8a ff       	mov	-1,d2
+7789b96a:	ca 1c       	bra	0x7789b986
+7789b96c:	04          	clr	d1
+7789b96d:	a4          	cmp	d1,d0
+7789b96e:	c7 17       	bls	0x7789b985
+7789b970:	fc de 84 d5 	mov	2008798596,a2
+7789b974:	bb 77 
+7789b976:	db          	setlb	
+7789b977:	f0 49       	movbu	(a1),d2
+7789b979:	f0 4e       	movbu	(a2),d3
+7789b97b:	44          	inc	d1
+7789b97c:	f2 2e       	xor	d3,d2
+7789b97e:	f0 58       	movbu	d2,(a0)
+7789b980:	41          	inc	a0
+7789b981:	49          	inc	a2
+7789b982:	45          	inc	a1
+7789b983:	a1          	cmp	d0,d1
+7789b984:	d4          	lcs	
+7789b985:	08          	clr	d2
+7789b986:	aa 00       	cmp	0,d2
+7789b988:	c8 06       	beq	0x7789b98e
+7789b98a:	80 ff       	mov	-1,d0
+7789b98c:	ca 17       	bra	0x7789b9a3
+7789b98e:	5c 08       	mov	(8,sp),a0
+7789b990:	5d 04       	mov	(4,sp),a1
+7789b992:	f1 dc       	mov	a3,d0
+7789b994:	f8 c8 02    	asr	2,d0
+7789b997:	cd 4d 9d f0 	call	0x778956e4,[d2,d3,a2,a3],36
+7789b99b:	24 
+7789b99c:	5c 08       	mov	(8,sp),a0
+7789b99e:	00          	clr	d0
+7789b99f:	fa 10 c4 09 	mov	d0,(2500,a0)
+7789b9a3:	df f0 3c    	ret	[d2,d3,a2,a3],60
+7789b9a6:	42 0c       	mov	d0,(12,sp)
+7789b9a8:	f1 d0       	mov	a0,d0
+7789b9aa:	fa c0 c4 09 	add	2500,d0
+7789b9ae:	96          	mov	a1,a2
+7789b9af:	43 04       	mov	a0,(4,sp)
+7789b9b1:	42 10       	mov	d0,(16,sp)
+7789b9b3:	f1 e0       	mov	d0,a0
+7789b9b5:	58 0c       	mov	(12,sp),d0
+7789b9b7:	78          	mov	(a0),d2
+7789b9b8:	a0 00       	cmp	0,d0
+7789b9ba:	c1 07       	bgt	0x7789b9c1
+7789b9bc:	f8 ec 03    	btst	3,d0
+7789b9bf:	c9 09       	bne	0x7789b9c8
+7789b9c1:	f1 d4       	mov	a1,d0
+7789b9c3:	f8 ec 03    	btst	3,d0
+7789b9c6:	c8 05       	beq	0x7789b9cb
+7789b9c8:	00          	clr	d0
+7789b9c9:	ca 56       	bra	0x7789ba1f
+7789b9cb:	58 0c       	mov	(12,sp),d0
+7789b9cd:	0c          	clr	d3
+7789b9ce:	f8 c8 02    	asr	2,d0
+7789b9d1:	42 08       	mov	d0,(8,sp)
+7789b9d3:	ac          	cmp	d3,d0
+7789b9d4:	c3 46       	ble	0x7789ba1a
+7789b9d6:	f0 0e       	mov	(a2),a3
+7789b9d8:	04          	clr	d1
+7789b9d9:	db          	setlb	
+7789b9da:	80 01       	mov	1,d0
+7789b9dc:	f2 08       	and	d2,d0
+7789b9de:	e1          	add	d0,d1
+7789b9df:	f8 c6 01    	lsr	1,d2
+7789b9e2:	80 01       	mov	1,d0
+7789b9e4:	f2 08       	and	d2,d0
+7789b9e6:	e1          	add	d0,d1
+7789b9e7:	f8 c6 01    	lsr	1,d2
+7789b9ea:	80 01       	mov	1,d0
+7789b9ec:	f2 08       	and	d2,d0
+7789b9ee:	e1          	add	d0,d1
+7789b9ef:	f8 c6 01    	lsr	1,d2
+7789b9f2:	80 01       	mov	1,d0
+7789b9f4:	f2 08       	and	d2,d0
+7789b9f6:	e1          	add	d0,d1
+7789b9f7:	f8 c6 01    	lsr	1,d2
+7789b9fa:	d9          	lne	
+7789b9fb:	f8 ed 01    	btst	1,d1
+7789b9fe:	c8 09       	beq	0x7789ba07
+7789ba00:	5c 04       	mov	(4,sp),a0
+7789ba02:	cd d6 9d f0 	call	0x778957d8,[d2,d3,a2,a3],24
+7789ba06:	18 
+7789ba07:	5c 04       	mov	(4,sp),a0
+7789ba09:	cd cf 9d f0 	call	0x778957d8,[d2,d3,a2,a3],24
+7789ba0d:	18 
+7789ba0e:	f1 de       	mov	a3,d2
+7789ba10:	f2 22       	xor	d0,d2
+7789ba12:	6a          	mov	d2,(a2)
+7789ba13:	58 08       	mov	(8,sp),d0
+7789ba15:	52          	inc4	a2
+7789ba16:	4c          	inc	d3
+7789ba17:	a3          	cmp	d0,d3
+7789ba18:	c0 be       	blt	0x7789b9d6
+7789ba1a:	5c 10       	mov	(16,sp),a0
+7789ba1c:	68          	mov	d2,(a0)
+7789ba1d:	58 0c       	mov	(12,sp),d0
+7789ba1f:	df f0 24    	ret	[d2,d3,a2,a3],36
+7789ba22:	fc a6 d4 d5 	mov	(0x77bbd5d4),d2
+7789ba26:	bb 77 
+7789ba28:	a2          	cmp	d0,d2
+7789ba29:	c5 2e       	bhi	0x7789ba57
+7789ba2b:	aa 20       	cmp	32,d2
+7789ba2d:	c4 06       	bcs	0x7789ba33
+7789ba2f:	80 ff       	mov	-1,d0
+7789ba31:	ca 22       	bra	0x7789ba53
+7789ba33:	0c          	clr	d3
+7789ba34:	ae          	cmp	d3,d2
+7789ba35:	c7 1d       	bls	0x7789ba52
+7789ba37:	fc de c4 d5 	mov	2008798660,a2
+7789ba3b:	bb 77 
+7789ba3d:	fc dd a4 d5 	mov	2008798628,a1
+7789ba41:	bb 77 
+7789ba43:	db          	setlb	
+7789ba44:	f0 46       	movbu	(a2),d1
+7789ba46:	f0 41       	movbu	(a1),d0
+7789ba48:	4c          	inc	d3
+7789ba49:	f2 21       	xor	d0,d1
+7789ba4b:	f0 54       	movbu	d1,(a0)
+7789ba4d:	41          	inc	a0
+7789ba4e:	45          	inc	a1
+7789ba4f:	49          	inc	a2
+7789ba50:	ab          	cmp	d2,d3
+7789ba51:	d4          	lcs	
+7789ba52:	00          	clr	d0
+7789ba53:	a0 00       	cmp	0,d0
+7789ba55:	c8 05       	beq	0x7789ba5a
+7789ba57:	00          	clr	d0
+7789ba58:	ca 08       	bra	0x7789ba60
+7789ba5a:	fc a4 d4 d5 	mov	(0x77bbd5d4),d0
+7789ba5e:	bb 77 
+7789ba60:	de e0 0c    	retf	[d2,d3,a2],12
+7789ba63:	f8 00 08    	mov	(8,a0),d0
+7789ba66:	78          	mov	(a0),d2
+7789ba67:	f8 04 0c    	mov	(12,a0),d1
+7789ba6a:	f8 20 04    	mov	(4,a0),a0
+7789ba6d:	f1 08       	sub	d2,d0
+7789ba6f:	40          	inc	d0
+7789ba70:	f1 11       	sub	a0,d1
+7789ba72:	44          	inc	d1
+7789ba73:	f6 04       	udf00	d1,d0
+7789ba75:	de 80 04    	retf	[d2],4
+7789ba78:	00          	clr	d0
+7789ba79:	de 00 00    	retf	[],0
+7789ba7c:	00          	clr	d0
+7789ba7d:	de 00 00    	retf	[],0
+7789ba80:	43 04       	mov	a0,(4,sp)
+7789ba82:	97          	mov	a1,a3
+7789ba83:	f8 03 08    	mov	(8,a3),d0
+7789ba86:	04          	clr	d1
+7789ba87:	f8 c4 10    	lsr	16,d0
+7789ba8a:	f8 ec 0f    	btst	15,d0
+7789ba8d:	c8 04       	beq	0x7789ba91
+7789ba8f:	85 01       	mov	1,d1
+7789ba91:	fc cc 00 00 	mov	20971520,d0
+7789ba95:	40 01 
+7789ba97:	90 58       	mov	88,a0
+7789ba99:	f1 74       	add	a1,a0
+7789ba9b:	f8 10 08    	mov	d0,(8,a0)
+7789ba9e:	fa 13 a4 00 	mov	d0,(164,a3)
+7789baa2:	fc cc 00 00 	mov	29360128,d0
+7789baa6:	c0 01 
+7789baa8:	fa 13 a8 00 	mov	d0,(168,a3)
+7789baac:	2c 33 15    	mov	5427,d0
+7789baaf:	fa 13 ac 00 	mov	d0,(172,a3)
+7789bab3:	fc cc 3a e4 	mov	2005525562,d0
+7789bab7:	89 77 
+7789bab9:	fa 13 94 00 	mov	d0,(148,a3)
+7789babd:	fc cc 59 de 	mov	2005524057,d0
+7789bac1:	89 77 
+7789bac3:	fa 13 98 00 	mov	d0,(152,a3)
+7789bac7:	fc cc cf fb 	mov	2005531599,d0
+7789bacb:	89 77 
+7789bacd:	fa 13 9c 00 	mov	d0,(156,a3)
+7789bad1:	a5 00       	cmp	0,d1
+7789bad3:	c8 12       	beq	0x7789bae5
+7789bad5:	fc cc 2c f9 	mov	2008807724,d0
+7789bad9:	bb 77 
+7789badb:	60          	mov	d0,(a0)
+7789badc:	fc cc 2c 05 	mov	2008810796,d0
+7789bae0:	bc 77 
+7789bae2:	f8 10 04    	mov	d0,(4,a0)
+7789bae5:	5c 04       	mov	(4,sp),a0
+7789bae7:	f8 00 04    	mov	(4,a0),d0
+7789baea:	f8 04 08    	mov	(8,a0),d1
+7789baed:	f6 14       	udf01	d1,d0
+7789baef:	85 0a       	mov	10,d1
+7789baf1:	dd 24 8e 00 	call	0x778a4915,[d2,d3],8
+7789baf5:	00 c0 08 
+7789baf8:	f1 e0       	mov	d0,a0
+7789bafa:	f1 e5       	mov	d1,a1
+7789bafc:	fc cc 00 00 	mov	786432,d0
+7789bb00:	0c 00 
+7789bb02:	dd 6e 8d 00 	call	0x778a4870,[d2,d3,a2],12
+7789bb06:	00 e0 0c 
+7789bb09:	dd ef 8d 00 	call	0x778a48f8,[],0
+7789bb0d:	00 00 00 
+7789bb10:	f1 e1       	mov	d0,a1
+7789bb12:	82          	mov	d0,d2
+7789bb13:	89          	mov	d2,d1
+7789bb14:	f8 c1 07    	asl	7,d1
+7789bb17:	e9          	add	d2,d1
+7789bb18:	f8 c1 03    	asl	3,d1
+7789bb1b:	fa c1 00 02 	add	512,d1
+7789bb1f:	f8 c5 0a    	lsr	10,d1
+7789bb22:	87          	mov	d1,d3
+7789bb23:	2c 96 00    	mov	150,d0
+7789bb26:	a1          	cmp	d0,d1
+7789bb27:	c1 03       	bgt	0x7789bb2a
+7789bb29:	83          	mov	d0,d3
+7789bb2a:	90 38       	mov	56,a0
+7789bb2c:	f1 7c       	add	a3,a0
+7789bb2e:	43 0c       	mov	a0,(12,sp)
+7789bb30:	6c          	mov	d3,(a0)
+7789bb31:	90 44       	mov	68,a0
+7789bb33:	f1 7c       	add	a3,a0
+7789bb35:	43 08       	mov	a0,(8,sp)
+7789bb37:	6c          	mov	d3,(a0)
+7789bb38:	90 3c       	mov	60,a0
+7789bb3a:	f1 7c       	add	a3,a0
+7789bb3c:	89          	mov	d2,d1
+7789bb3d:	fb 15 2c 01 	udfu01	300,d1
+7789bb41:	fa c1 00 02 	add	512,d1
+7789bb45:	f8 c5 0a    	lsr	10,d1
+7789bb48:	64          	mov	d1,(a0)
+7789bb49:	2c 00 02    	mov	512,d0
+7789bb4c:	e8          	add	d2,d0
+7789bb4d:	f8 c8 0a    	asr	10,d0
+7789bb50:	a0 06       	cmp	6,d0
+7789bb52:	c2 0e       	bge	0x7789bb60
+7789bb54:	f8 c2 03    	asl	3,d2
+7789bb57:	fa c2 00 02 	add	512,d2
+7789bb5b:	f8 c6 0a    	lsr	10,d2
+7789bb5e:	ca 10       	bra	0x7789bb6e
+7789bb60:	88          	mov	d2,d0
+7789bb61:	f8 c0 03    	asl	3,d0
+7789bb64:	f1 14       	sub	a1,d0
+7789bb66:	fa c0 00 02 	add	512,d0
+7789bb6a:	f8 c4 0a    	lsr	10,d0
+7789bb6d:	82          	mov	d0,d2
+7789bb6e:	89          	mov	d2,d1
+7789bb6f:	a5 05       	cmp	5,d1
+7789bb71:	c1 04       	bgt	0x7789bb75
+7789bb73:	85 05       	mov	5,d1
+7789bb75:	f8 17 40    	mov	d1,(64,a3)
+7789bb78:	78          	mov	(a0),d2
+7789bb79:	84          	mov	d1,d0
+7789bb7a:	a8          	cmp	d2,d0
+7789bb7b:	c1 03       	bgt	0x7789bb7e
+7789bb7d:	88          	mov	d2,d0
+7789bb7e:	60          	mov	d0,(a0)
+7789bb7f:	5e 04       	mov	(4,sp),a2
+7789bb81:	22 28       	add	40,a2
+7789bb83:	72          	mov	(a2),d0
+7789bb84:	a0 00       	cmp	0,d0
+7789bb86:	c9 05       	bne	0x7789bb8b
+7789bb88:	cc be 00    	jmp	0x7789bc46
+7789bb8b:	5c 04       	mov	(4,sp),a0
+7789bb8d:	70          	mov	(a0),d0
+7789bb8e:	a0 40       	cmp	64,d0
+7789bb90:	c6 05       	bcc	0x7789bb95
+7789bb92:	cc b4 00    	jmp	0x7789bc46
+7789bb95:	f0 02       	mov	(a2),a0
+7789bb97:	f8 00 08    	mov	(8,a0),d0
+7789bb9a:	a0 00       	cmp	0,d0
+7789bb9c:	c9 05       	bne	0x7789bba1
+7789bb9e:	df f0 20    	ret	[d2,d3,a2,a3],32
+7789bba1:	f8 00 0c    	mov	(12,a0),d0
+7789bba4:	fc c8 40 42 	cmp	1000000,d0
+7789bba8:	0f 00 
+7789bbaa:	c7 05       	bls	0x7789bbaf
+7789bbac:	cc 9a 00    	jmp	0x7789bc46
+7789bbaf:	a0 00       	cmp	0,d0
+7789bbb1:	c9 05       	bne	0x7789bbb6
+7789bbb3:	cc 93 00    	jmp	0x7789bc46
+7789bbb6:	f8 00 18    	mov	(24,a0),d0
+7789bbb9:	85 50       	mov	80,d1
+7789bbbb:	a0 54       	cmp	84,d0
+7789bbbd:	c4 14       	bcs	0x7789bbd1
+7789bbbf:	85 14       	mov	20,d1
+7789bbc1:	a0 74       	cmp	116,d0
+7789bbc3:	c5 0e       	bhi	0x7789bbd1
+7789bbc5:	85 54       	mov	84,d1
+7789bbc7:	f1 04       	sub	d1,d0
+7789bbc9:	fc dc 2e d6 	mov	2008798766,a0
+7789bbcd:	bb 77 
+7789bbcf:	f4 10       	movbu	(d0,a0),d1
+7789bbd1:	f0 02       	mov	(a2),a0
+7789bbd3:	f8 0f 04    	mov	(4,a3),d3
+7789bbd6:	f8 00 0c    	mov	(12,a0),d0
+7789bbd9:	15          	extbu	d1
+7789bbda:	fb 14 74 03 	udfu01	884,d0
+7789bbde:	fc c0 71 66 	add	91761,d0
+7789bbe2:	01 00 
+7789bbe4:	f8 c4 0a    	lsr	10,d0
+7789bbe7:	f1 e0       	mov	d0,a0
+7789bbe9:	2c 22 01    	mov	290,d0
+7789bbec:	f1 04       	sub	d1,d0
+7789bbee:	e0          	add	d0,d0
+7789bbef:	f1 e1       	mov	d0,a1
+7789bbf1:	73          	mov	(a3),d0
+7789bbf2:	82          	mov	d0,d2
+7789bbf3:	ac          	cmp	d3,d0
+7789bbf4:	c1 03       	bgt	0x7789bbf7
+7789bbf6:	8e          	mov	d3,d2
+7789bbf7:	f6 06       	udf00	d1,d2
+7789bbf9:	f1 d1       	mov	a0,d1
+7789bbfb:	fb 15 b1 01 	udfu01	433,d1
+7789bbff:	80 49       	mov	73,d0
+7789bc01:	0c          	clr	d3
+7789bc02:	f2 fe       	mov	d3,mdr
+7789bc04:	f2 71       	divu	d0,d1
+7789bc06:	80 64       	mov	100,d0
+7789bc08:	f2 fe       	mov	d3,mdr
+7789bc0a:	f2 71       	divu	d0,d1
+7789bc0c:	f6 16       	udf01	d1,d2
+7789bc0e:	2c 5e 01    	mov	350,d0
+7789bc11:	04          	clr	d1
+7789bc12:	f2 f6       	mov	d1,mdr
+7789bc14:	f2 72       	divu	d0,d2
+7789bc16:	00          	clr	d0
+7789bc17:	f2 f2       	mov	d0,mdr
+7789bc19:	f1 d4       	mov	a1,d0
+7789bc1b:	f2 72       	divu	d0,d2
+7789bc1d:	f6 1a       	udf01	d2,d2
+7789bc1f:	fb 16 91 0c 	udfu01	3217,d2
+7789bc23:	f8 c6 02    	lsr	2,d2
+7789bc26:	fa c2 00 02 	add	512,d2
+7789bc2a:	f8 c6 0a    	lsr	10,d2
+7789bc2d:	f2 f6       	mov	d1,mdr
+7789bc2f:	8f 0a       	mov	10,d3
+7789bc31:	88          	mov	d2,d0
+7789bc32:	f2 7c       	divu	d3,d0
+7789bc34:	8f 05       	mov	5,d3
+7789bc36:	ac          	cmp	d3,d0
+7789bc37:	c0 03       	blt	0x7789bc3a
+7789bc39:	83          	mov	d0,d3
+7789bc3a:	5c 0c       	mov	(12,sp),a0
+7789bc3c:	eb          	add	d2,d3
+7789bc3d:	74          	mov	(a0),d1
+7789bc3e:	8c          	mov	d3,d0
+7789bc3f:	a7          	cmp	d1,d3
+7789bc40:	c0 03       	blt	0x7789bc43
+7789bc42:	84          	mov	d1,d0
+7789bc43:	5c 08       	mov	(8,sp),a0
+7789bc45:	60          	mov	d0,(a0)
+7789bc46:	5c 04       	mov	(4,sp),a0
+7789bc48:	70          	mov	(a0),d0
+7789bc49:	a0 24       	cmp	36,d0
+7789bc4b:	c4 1d       	bcs	0x7789bc68
+7789bc4d:	a0 40       	cmp	64,d0
+7789bc4f:	c4 06       	bcs	0x7789bc55
+7789bc51:	f0 02       	mov	(a2),a0
+7789bc53:	ca 05       	bra	0x7789bc58
+7789bc55:	f8 20 18    	mov	(24,a0),a0
+7789bc58:	b0 00       	cmp	0,a0
+7789bc5a:	c8 0e       	beq	0x7789bc68
+7789bc5c:	70          	mov	(a0),d0
+7789bc5d:	a0 14       	cmp	20,d0
+7789bc5f:	c4 09       	bcs	0x7789bc68
+7789bc61:	f8 00 08    	mov	(8,a0),d0
+7789bc64:	a0 00       	cmp	0,d0
+7789bc66:	c8 04       	beq	0x7789bc6a
+7789bc68:	80 01       	mov	1,d0
+7789bc6a:	df f0 20    	ret	[d2,d3,a2,a3],32
+7789bc6d:	f1 d2       	mov	a0,d2
+7789bc6f:	b5 00       	cmp	0,a1
+7789bc71:	c8 6d       	beq	0x7789bcde
+7789bc73:	75          	mov	(a1),d1
+7789bc74:	f8 01 04    	mov	(4,a1),d0
+7789bc77:	9f 24       	mov	36,a3
+7789bc79:	f1 6b       	add	d2,a3
+7789bc7b:	67          	mov	d1,(a3)
+7789bc7c:	f8 13 04    	mov	d0,(4,a3)
+7789bc7f:	f8 01 08    	mov	(8,a1),d0
+7789bc82:	f8 05 0c    	mov	(12,a1),d1
+7789bc85:	f8 13 08    	mov	d0,(8,a3)
+7789bc88:	f8 17 0c    	mov	d1,(12,a3)
+7789bc8b:	73          	mov	(a3),d0
+7789bc8c:	90 08       	mov	8,a0
+7789bc8e:	f1 7c       	add	a3,a0
+7789bc90:	74          	mov	(a0),d1
+7789bc91:	a1          	cmp	d0,d1
+7789bc92:	c2 04       	bge	0x7789bc96
+7789bc94:	60          	mov	d0,(a0)
+7789bc95:	67          	mov	d1,(a3)
+7789bc96:	9d          	mov	a3,a1
+7789bc97:	51          	inc4	a1
+7789bc98:	71          	mov	(a1),d0
+7789bc99:	9a 0c       	mov	12,a2
+7789bc9b:	f1 7e       	add	a3,a2
+7789bc9d:	76          	mov	(a2),d1
+7789bc9e:	a1          	cmp	d0,d1
+7789bc9f:	c2 04       	bge	0x7789bca3
+7789bca1:	62          	mov	d0,(a2)
+7789bca2:	65          	mov	d1,(a1)
+7789bca3:	73          	mov	(a3),d0
+7789bca4:	a0 00       	cmp	0,d0
+7789bca6:	c0 15       	blt	0x7789bcbb
+7789bca8:	71          	mov	(a1),d0
+7789bca9:	a0 00       	cmp	0,d0
+7789bcab:	c0 10       	blt	0x7789bcbb
+7789bcad:	74          	mov	(a0),d1
+7789bcae:	f1 e8       	mov	d2,a0
+7789bcb0:	70          	mov	(a0),d0
+7789bcb1:	a1          	cmp	d0,d1
+7789bcb2:	c2 09       	bge	0x7789bcbb
+7789bcb4:	76          	mov	(a2),d1
+7789bcb5:	f8 00 04    	mov	(4,a0),d0
+7789bcb8:	a1          	cmp	d0,d1
+7789bcb9:	c0 05       	blt	0x7789bcbe
+7789bcbb:	00          	clr	d0
+7789bcbc:	ca 3d       	bra	0x7789bcf9
+7789bcbe:	f8 00 08    	mov	(8,a0),d0
+7789bcc1:	f8 c4 10    	lsr	16,d0
+7789bcc4:	f8 e0 0f    	and	15,d0
+7789bcc7:	a0 02       	cmp	2,d0
+7789bcc9:	c9 2e       	bne	0x7789bcf7
+7789bccb:	73          	mov	(a3),d0
+7789bccc:	90 2c       	mov	44,a0
+7789bcce:	fc e0 fe ff 	and	-2,d0
+7789bcd2:	ff ff 
+7789bcd4:	63          	mov	d0,(a3)
+7789bcd5:	f1 68       	add	d2,a0
+7789bcd7:	70          	mov	(a0),d0
+7789bcd8:	f8 e4 01    	or	1,d0
+7789bcdb:	60          	mov	d0,(a0)
+7789bcdc:	ca 1b       	bra	0x7789bcf7
+7789bcde:	00          	clr	d0
+7789bcdf:	95 24       	mov	36,a1
+7789bce1:	f1 69       	add	d2,a1
+7789bce3:	f8 11 04    	mov	d0,(4,a1)
+7789bce6:	61          	mov	d0,(a1)
+7789bce7:	70          	mov	(a0),d0
+7789bce8:	85 01       	mov	1,d1
+7789bcea:	f1 04       	sub	d1,d0
+7789bcec:	f8 11 08    	mov	d0,(8,a1)
+7789bcef:	f8 00 04    	mov	(4,a0),d0
+7789bcf2:	f1 04       	sub	d1,d0
+7789bcf4:	f8 11 0c    	mov	d0,(12,a1)
+7789bcf7:	80 01       	mov	1,d0
+7789bcf9:	de b0 0c    	retf	[d2,a2,a3],12
+7789bcfc:	46 14       	mov	d1,(20,sp)
+7789bcfe:	47 10       	mov	a1,(16,sp)
+7789bd00:	42 08       	mov	d0,(8,sp)
+7789bd02:	43 04       	mov	a0,(4,sp)
+7789bd04:	5c 2c       	mov	(44,sp),a0
+7789bd06:	00          	clr	d0
+7789bd07:	2d bc 00    	mov	188,d1
+7789bd0a:	dd 31 9a 09 	call	0x7793573b,[a2],4
+7789bd0e:	00 20 04 
+7789bd11:	58 04       	mov	(4,sp),d0
+7789bd13:	a0 00       	cmp	0,d0
+7789bd15:	c8 09       	beq	0x7789bd1e
+7789bd17:	f1 e0       	mov	d0,a0
+7789bd19:	70          	mov	(a0),d0
+7789bd1a:	a0 18       	cmp	24,d0
+7789bd1c:	c6 0b       	bcc	0x7789bd27
+7789bd1e:	fc cc 02 00 	mov	-1073741822,d0
+7789bd22:	00 c0 
+7789bd24:	df f0 28    	ret	[d2,d3,a2,a3],40
+7789bd27:	f8 04 04    	mov	(4,a0),d1
+7789bd2a:	5c 2c       	mov	(44,sp),a0
+7789bd2c:	fa 14 b0 00 	mov	d1,(176,a0)
+7789bd30:	5c 2c       	mov	(44,sp),a0
+7789bd32:	64          	mov	d1,(a0)
+7789bd33:	5c 04       	mov	(4,sp),a0
+7789bd35:	f8 08 08    	mov	(8,a0),d2
+7789bd38:	5c 2c       	mov	(44,sp),a0
+7789bd3a:	fa 18 b4 00 	mov	d2,(180,a0)
+7789bd3e:	58 2c       	mov	(44,sp),d0
+7789bd40:	28 04       	add	4,d0
+7789bd42:	42 0c       	mov	d0,(12,sp)
+7789bd44:	f1 e0       	mov	d0,a0
+7789bd46:	68          	mov	d2,(a0)
+7789bd47:	5d 04       	mov	(4,sp),a1
+7789bd49:	f1 e8       	mov	d2,a0
+7789bd4b:	71          	mov	(a1),d0
+7789bd4c:	a0 28       	cmp	40,d0
+7789bd4e:	c7 05       	bls	0x7789bd53
+7789bd50:	cc 94 00    	jmp	0x7789bde4
+7789bd53:	f1 d7       	mov	a1,d3
+7789bd55:	2b 0c       	add	12,d3
+7789bd57:	f1 ed       	mov	d3,a1
+7789bd59:	71          	mov	(a1),d0
+7789bd5a:	5e 2c       	mov	(44,sp),a2
+7789bd5c:	22 0c       	add	12,a2
+7789bd5e:	62          	mov	d0,(a2)
+7789bd5f:	5d 04       	mov	(4,sp),a1
+7789bd61:	5a 2c       	mov	(44,sp),d2
+7789bd63:	f8 01 10    	mov	(16,a1),d0
+7789bd66:	2a 08       	add	8,d2
+7789bd68:	f1 e9       	mov	d2,a1
+7789bd6a:	61          	mov	d0,(a1)
+7789bd6b:	5f 04       	mov	(4,sp),a3
+7789bd6d:	23 14       	add	20,a3
+7789bd6f:	73          	mov	(a3),d0
+7789bd70:	a0 00       	cmp	0,d0
+7789bd72:	c8 17       	beq	0x7789bd89
+7789bd74:	a5 00       	cmp	0,d1
+7789bd76:	c8 13       	beq	0x7789bd89
+7789bd78:	b0 00       	cmp	0,a0
+7789bd7a:	c8 0f       	beq	0x7789bd89
+7789bd7c:	5c 2c       	mov	(44,sp),a0
+7789bd7e:	dd b0 87 00 	call	0x778a452e,[d2,d3,a2,a3],24
+7789bd82:	00 f0 18 
+7789bd85:	a0 00       	cmp	0,d0
+7789bd87:	c9 0b       	bne	0x7789bd92
+7789bd89:	fc cc 02 00 	mov	-1073741822,d0
+7789bd8d:	00 c0 
+7789bd8f:	df f0 28    	ret	[d2,d3,a2,a3],40
+7789bd92:	f1 e8       	mov	d2,a0
+7789bd94:	70          	mov	(a0),d0
+7789bd95:	f8 c4 10    	lsr	16,d0
+7789bd98:	f8 ec 80    	btst	128,d0
+7789bd9b:	c8 43       	beq	0x7789bdde
+7789bd9d:	f0 07       	mov	(a3),a1
+7789bd9f:	9f 08       	mov	8,a3
+7789bda1:	71          	mov	(a1),d0
+7789bda2:	f1 7b       	add	a2,a3
+7789bda4:	f8 12 04    	mov	d0,(4,a2)
+7789bda7:	f8 21 04    	mov	(4,a1),a0
+7789bdaa:	22 10       	add	16,a2
+7789bdac:	f8 33 04    	mov	a0,(4,a3)
+7789bdaf:	f8      	mov	(8,a1),a0

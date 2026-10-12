@@ -1,0 +1,410 @@
+{
+  "date": "2026-10-13",
+  "source_document": {
+    "path": "<USER_DESKTOP>/LUMIX_FunctionFS物理内存读写_进展总结(1).md",
+    "sha256": "33bbbc5600b25427264436404256a3981dcaab85e52d7ead8ce3a8ef4a422cc0",
+    "lines": 214
+  },
+  "scope": "只读文稿、官方源码及已有普通沙箱记录。未运行PoC/原稿实验/固件/设备命令，未调用AGY。",
+  "summary": "物理地址分支是源码事实；原稿仅声称修改自制daemon后的QEMU崩溃，未附原始产物，不能证明成功任意读写、实机rootfs导出或USB主机控制。常规iter调用的buf传入亦未闭合。",
+  "findings": [
+    {
+      "id": "F01",
+      "document_lines": [
+        1,
+        5,
+        15,
+        16
+      ],
+      "status": "作者宣称；实机能力未验证",
+      "assessment": "标题把修改自制daemon后的沙箱实验升级为实机任意读写和rootfs导出。正文92–95说明沙箱flags补丁；125–136、172–174又明确真机flags及buf控制尚未解决。没有实际rootfs或双向读写基线。",
+      "evidence": [],
+      "missing": [
+        "实机型号/版本/时间",
+        "实际返回数据及读写基线",
+        "rootfs长度/摘要/格式"
+      ]
+    },
+    {
+      "id": "F02",
+      "document_lines": [
+        63,
+        69
+      ],
+      "status": "源码分支已验证；运行时适用未知",
+      "assessment": "官方源码确有PHYSICAL_ADDR=256、PHYADDR_REMAP=512和对应地址转换分支。源码存在不证明本机启用、节点权限、daemon使用、外部控制或地址有效。",
+      "evidence": [
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/functionfs.h",
+          "lines": [
+            33,
+            43
+          ]
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "lines": [
+            907,
+            989
+          ]
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "lines": [
+            2543,
+            2549
+          ]
+        }
+      ],
+      "missing": [
+        "实际运行二进制/模块对应",
+        "权限和端点状态",
+        "真实flags/buf/length来源"
+      ]
+    },
+    {
+      "id": "F03",
+      "document_lines": [
+        92,
+        95
+      ],
+      "status": "作者沙箱崩溃宣称；原始证据缺失",
+      "assessment": "地址转换寄存器值和kfree崩溃不证明目标数据已经成功I/O。异步回调读取req.status，仅ret>0才复制数据，之后仍kfree(buf)，失败I/O也可清理崩溃。因此“物理内存访问成功铁证”不成立。",
+      "evidence": [
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "lines": [
+            779,
+            807
+          ]
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "lines": [
+            982,
+            988
+          ]
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "lines": [
+            1080,
+            1103
+          ]
+        }
+      ],
+      "missing": [
+        "完整崩溃日志",
+        "req.status/actual",
+        "实际返回字节和方向",
+        "test_phys.c及匹配镜像"
+      ]
+    },
+    {
+      "id": "F04",
+      "document_lines": [
+        92,
+        95,
+        131,
+        133
+      ],
+      "status": "调用路径未闭合；与所核源码存在冲突",
+      "assessment": "普通read_iter/write_iter先kzalloc或memset，未从iov赋入p->buf；物理分支取io_data->buf时并非自动得到用户指定物理地址。同步read/write helper才明确赋buf，需核对测试实际调用了专用IOCTL还是有额外内核修改。没有test_phys.c不能据此证明AIO任意地址kfree链。",
+      "evidence": [
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "lines": [
+            1116,
+            1146
+          ]
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "lines": [
+            1186,
+            1259
+          ]
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "lines": [
+            1372,
+            1411
+          ]
+        }
+      ],
+      "missing": [
+        "test_phys.c精确系统调用",
+        "实际IOCTL调用记录",
+        "完整内核diff/配置/镜像摘要"
+      ]
+    },
+    {
+      "id": "F05",
+      "document_lines": [
+        80,
+        104,
+        156,
+        161
+      ],
+      "status": "旧本地记录范围已核实；本轮产物未附",
+      "assessment": "本次进展MD未附所列test_phys/guest.bin/0x103补丁镜像和原始崩溃日志。现有13文件原包ffs_min flags是0x03，不能代替本轮0x103实验。已有核验只覆盖普通Linux、虚拟USB基线及QMP采集。",
+      "evidence": [
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/external_qemu_sandbox_20261012/qemu_sandbox/ffs_min.c",
+          "lines": [
+            24,
+            31
+          ]
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/local_qemu_lab_20261012/verification.json",
+          "lines": [
+            2,
+            21
+          ]
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/external_qemu_sandbox_20261012/核验结论.md",
+          "lines": [
+            7,
+            26
+          ]
+        }
+      ],
+      "missing": [
+        "本轮实验包",
+        "完整日志和修改记录",
+        "匹配vmlinux/System.map"
+      ]
+    },
+    {
+      "id": "F06",
+      "document_lines": [
+        104,
+        157
+      ],
+      "status": "已有QMP客体dump已验证；非本轮F3证明",
+      "assessment": "现有1GiB导出由宿主QMP pmemsave取得，metadata明确camera_ram=false，内容是修改公开Linux和自制initramfs。相同大小不证明原稿guest.bin身份，更不证明相机RAM或利用FunctionFS读出。",
+      "evidence": [
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/local_qemu_lab_20261012/sandbox.py",
+          "lines": [
+            241,
+            258
+          ]
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/local_qemu_lab_20261012/runs/20261012-165728-ca21e15d9176/ram-f1a6547c.bin.gz.json",
+          "lines": [
+            1,
+            25
+          ]
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/local_qemu_lab_20261012/verification.json",
+          "lines": [
+            16,
+            21
+          ]
+        }
+      ],
+      "missing": [
+        "原稿guest.bin摘要及采集方法",
+        "真实对象结构/符号映射"
+      ]
+    },
+    {
+      "id": "F07",
+      "document_lines": [
+        112,
+        117,
+        125,
+        174
+      ],
+      "status": "主机到本地daemon控制边界未跨越",
+      "assessment": "文稿自身承认flags和buf由相机本地进程提供，USB bulk只控制载荷。没有从外部请求到本地flags及地址指针的控制数据流；修改沙箱自制daemon不能证明真机daemon支持相同控制。",
+      "evidence": [
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "lines": [
+            982,
+            988
+          ]
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+          "lines": [
+            2543,
+            2549
+          ]
+        }
+      ],
+      "missing": [
+        "真实daemon消费者",
+        "flags/buf/length控制来源",
+        "受控数据成功返回"
+      ]
+    },
+    {
+      "id": "F08",
+      "document_lines": [
+        115,
+        116,
+        203
+      ],
+      "status": "公开源码地址候选；非真机实测映射",
+      "assessment": "当前依据是公开MC8241.dts的slram声明，未有对应MC8243/MC8244运行时DTB或bootlog。缺少填充这些区域的真实生产者，不能确认它们已有解密rootfs/apps。nokaslr不证明物理内容和跨机型映射。现有QEMU RAM仅0x40000000–0x7fffffff，不能验证这两处相机候选地址。",
+      "evidence": [
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/loader_ipcufs_review_20261011/结论.md",
+          "lines": [
+            29,
+            49
+          ]
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/system_reverse_mainline_20261012/主线重设.md",
+          "lines": [
+            9,
+            23
+          ]
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/local_qemu_lab_20261012/runs/20261012-165728-ca21e15d9176/ram-f1a6547c.bin.gz.json",
+          "lines": [
+            2,
+            18
+          ]
+        }
+      ],
+      "missing": [
+        "对应型号运行时DTB/内存图",
+        "真实范围数据/摘要/格式",
+        "载荷生产者及地址转换"
+      ]
+    },
+    {
+      "id": "F09",
+      "document_lines": [
+        180,
+        197
+      ],
+      "status": "源码候选；运行时消费者未知",
+      "assessment": "scullp源码保留在证据目录。本轮未执行ioctl；模块源码存在不能证明实机加载、节点权限、daemon调用或任意范围有效。不同堆对象和16位写约束只限定给定方案，不能证明全局不可行。",
+      "evidence": [
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/manifest.json",
+          "lines": [
+            2,
+            33
+          ]
+        }
+      ],
+      "missing": [
+        "真机模块/节点及权限",
+        "daemon实际调用链",
+        "地址检查及返回数据"
+      ]
+    },
+    {
+      "id": "F10",
+      "document_lines": [
+        195,
+        213
+      ],
+      "status": "无依据全称结论和未测假设",
+      "assessment": "“纯USB不能root”“硬件唯一现实”没有全部路径覆盖或硬件入口可用证据。SCSI整数溢出仅作者假设，未有消费者/复现。本审阅不运行异常请求、不补全利用链。",
+      "evidence": [],
+      "missing": [
+        "真实处理代码及覆盖",
+        "合法已取得运行时材料",
+        "独立证据"
+      ]
+    },
+    {
+      "id": "F11",
+      "document_lines": [
+        117,
+        204
+      ],
+      "status": "完整逆向验收未满足",
+      "assessment": "即使未来取得rootfs，也只覆盖部分镜像；仍须输入身份、分段映射、未加载组件、函数/结构及启动更新/跨组件通信分析。当前49受保护组件仍无验证明文。",
+      "evidence": [
+        {
+          "path": "<LOCAL_WORKSPACE>/S1M2研究当前状态.md",
+          "lines": [
+            5,
+            11
+          ]
+        },
+        {
+          "path": "<LOCAL_WORKSPACE>/analysis/system_reverse_mainline_20261012/主线重设.md",
+          "lines": [
+            17,
+            27
+          ]
+        }
+      ],
+      "missing": [
+        "全目录覆盖",
+        "真实消费者与明文验证",
+        "关键处理链分析"
+      ]
+    }
+  ],
+  "source_evidence_verified_hashes": [
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/scullpp.h",
+      "sha256": "74a05a5f67dda96887aaa5236c69656c746f59377c62c76f74f62541b34a9a6a",
+      "matches": true
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/scullp.h",
+      "sha256": "6096197dc2195377dff16cb91cad6c1e213eed58c0d1f82feb2379262f965f21",
+      "matches": true
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/main.c",
+      "sha256": "ee5d531276ca5d02a967315185ed00ed2b9efd15766f364825ead6c3cedcb512",
+      "matches": true
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/Makefile",
+      "sha256": "34213994c704a8b5bf990333fd0f8bc2a8426cb99c8e83f1545e94e6de4e9af6",
+      "matches": true
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/Kconfig",
+      "sha256": "396b25a1ca4726d8f6ed4238f768c4095323bbec013b210e65d08156c43dcc3a",
+      "matches": true
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+      "sha256": "09e684e66b715948916c9627ee3416caf4b508684c0e90afd9014bee518bdc2c",
+      "matches": true
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/composite.c",
+      "sha256": "3146053ea44a0555d1bb847e7b090e93b91dbd30193094511fe5d0cfa3c1823f",
+      "matches": true
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/source_evidence/functionfs.h",
+      "sha256": "340790c786dc5d1da1fb30aa012e18906d162f88adca1a6701a1cbdad436287b",
+      "matches": true
+    }
+  ],
+  "missing_supplied_artifacts": [
+    "qemu_sb/test_phys.c",
+    "qemu_sb/test_phys",
+    "qemu_sb/guest.bin",
+    "qemu_sb/initramfs_phys.cpio.gz",
+    "qemu_sb/initramfs_test.cpio.gz",
+    "完整崩溃日志及req.status/actual/返回字节",
+    "匹配内核完整diff/配置/摘要",
+    "对应机型实测bootargs/DTB和rootfs数据"
+  ],
+  "missing_artifacts_scope": "这些未随本次审阅输入提供；未扫描用户桌面其他目录，不声称别处不存在。",
+  "recommended_current_label": "公开源码物理地址模式与清理缺陷线索；作者声称QEMU修改用户态后的崩溃，I/O数据和实际调用路径待核验；实机触发及rootfs导出未完成。"
+}

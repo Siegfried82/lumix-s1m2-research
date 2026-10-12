@@ -1,0 +1,21 @@
+S5 final-chunk small-total probe @ 192.168.1.131
+getstate -> ok
+
+=== total=61192 bytes (1 chunk) ===
+    gate fw_update_mode #1 -> ok
+    startsenddata -> ok method=once bufsize=61460
+    senddata @61192 [FINAL] attempt 1/8 -> err_reject (0.12s)
+    abortsenddata -> error
+
+=== total=122384 bytes (2 chunks) ===
+    gate fw_update_mode #1 -> EXC timeout: timed out
+    gate not open; skipping this total
+
+=== total=183576 bytes (3 chunks) ===
+    gate fw_update_mode #1 -> EXC URLError: <urlopen error timed out>
+    gate not open; skipping this total
+
+=== SUMMARY (final-chunk result per total) ===
+  total=61192  final-chunk=err_reject
+
+VERDICT: mixed/unexpected. See per-chunk output above.

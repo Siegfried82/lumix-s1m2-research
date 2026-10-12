@@ -1,0 +1,649 @@
+{
+  "date": "2026-10-10",
+  "backup_directory": "<LOCAL_BACKUP>/S1M2错误报告清理-20261010-180055",
+  "changes": [
+    {
+      "path": "analysis/S1M2_固件全量解析与逆向工程终局报告.md",
+      "action": "rewritten",
+      "reason": "删除把容器解析等同完整逆向，以及硬件安全链、性能与功能解锁的确定断言",
+      "before_sha256": "bc38f04f156b2822df9a9970f1d4bdb80653beb1e4e829f3c606d539bf488817",
+      "after_sha256": "1bab02e1e4dec6f7254f5929749984e2210ff529e64887e206eb9d7c80cca489"
+    },
+    {
+      "path": "analysis/S1M2_机内系统架构与功能实现深度解析.md",
+      "action": "rewritten",
+      "reason": "删除虚构的机内性能、AF 阈值和功能实现机理",
+      "before_sha256": "5dd0bb24e02b05a5a6f75c1170db81076c9c8a56f9a2135cb7352f90d61893e8",
+      "after_sha256": "41c1277d2c3c61f637a3696decf4757c68c5ef59e389ff1378ce1b48eba36860"
+    },
+    {
+      "path": "analysis/S1M2_候选功能深度评估与技术边界终局报告_20261009.md",
+      "action": "rewritten",
+      "reason": "删除把猜测写成可行性终局结论及模拟工具的实机完成声明",
+      "before_sha256": "9c84b4382889369ed7c44ba48e43f2389c0434ac625354ba5ab89dd35193e3fb",
+      "after_sha256": "abf3c1f0cdcdbedb6c8882f7e76014521a27ee612941f3badc863cab4155cee9"
+    },
+    {
+      "path": "analysis/S1M2固件存储拓扑与离线解码技术边界终局报告_20261008.md",
+      "action": "rewritten",
+      "reason": "删除确定签名、IV、硬件密钥和 Flash 布局断言",
+      "before_sha256": "9bb70a99233b872277adb502ec102a4f7a0a20c38111947962632edeed956b03",
+      "after_sha256": "96f2ce0bfa69808788663f4144b698d7642bdb4ee80588a4c65f879afc6d33a8"
+    },
+    {
+      "path": "analysis/S1M2_ROM_BACKUP与原厂维修协议逆向推导报告_20261009.md",
+      "action": "rewritten",
+      "reason": "删除备份仅含参数、穷尽搜索与未经确认的维修操作推断",
+      "before_sha256": "300f1b7ea4a26eb18cc3f9aab8f476e7be1c8736de9be704b16a2b0e2ce65d89",
+      "after_sha256": "2ef1526b1c04cb8eefe82d889394367dfaef3e8bdbaa8d8596d4d5a93943a44f"
+    },
+    {
+      "path": "analysis/Gemini_全维度逆向审计与终局可行性判定_20261008.md",
+      "action": "rewritten",
+      "reason": "删除 AES/ECDSA/eFuse 和所有路径穷尽排除结论",
+      "before_sha256": "d551eac2dc1a6ca696e054e125613673d91b1d51b08412b1cf81e656a6ab5ba1",
+      "after_sha256": "6991e1797e2ffcaf3a0d65b7b532aa8d5d10af7e6c09be2f7fe90b862bdda1b2"
+    },
+    {
+      "path": "analysis/subagent_full_report.md",
+      "action": "rewritten",
+      "reason": "删除残留代理消息标记、整机内存读取及平台确定映射断言",
+      "before_sha256": "5368be687dfce2141512c8bd1c470a59c242609a45890eeeda7098d7459de0cf",
+      "after_sha256": "3041a68829d04b937925cba348a0986f18a3e919bf625e67e568f2cc75a6698e"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/05_sources/report.md",
+      "action": "rewritten",
+      "reason": "删除推演出的硬件安全启动链和备份范围全称断言",
+      "before_sha256": "3bef82fbbc46a1f32e7ded4ba70e3b66e8c85a786e9fb478264c0741c2752ce1",
+      "after_sha256": "eafd03e82338723cece47258cbae47a10b2b04ff15215b1faf4e0ebc25509c10"
+    },
+    {
+      "path": "analysis/parallel_routes_20261009/06_gaps/report.md",
+      "action": "rewritten",
+      "reason": "删除伪架构图并更新已完成对象枚举状态",
+      "before_sha256": "e8482716fe4a095f214b07e215c9b190b7d172ae5d939fdad1f6eea79f5bb5a0",
+      "after_sha256": "cd04638e300ff05412c8e542b37e8075367fe49362eee8bad2323f2f98e5b6ca"
+    },
+    {
+      "path": "analysis/Gemini_原厂软件深查_20261008.md",
+      "action": "rewritten",
+      "reason": "删除已被限定核验纠正的模型报告正文",
+      "before_sha256": "5a470113711d36521b91a033743478f98f19deb0c1935819b139713bf0b4b2bd",
+      "after_sha256": "ff43346895f556b81119648becf4e7f0934c9bec27cbadc7cd7e1637b306ca3a"
+    },
+    {
+      "path": "analysis/Gemini_同代平台公开实现检索_20261008.md",
+      "action": "rewritten",
+      "reason": "删除已被限定核验纠正的模型报告正文",
+      "before_sha256": "39d7293de6034f4f5390819044e8c539a3d8fc1036345ac56aa9cca207564a1e",
+      "after_sha256": "65610baf59ac77348795afecaef25c308c8e2b9f7208444b7b7645fb9d5f08f9"
+    },
+    {
+      "path": "analysis/firmware_decode_next_evidence_gemini_20261008.md",
+      "action": "rewritten",
+      "reason": "删除已被限定核验纠正的模型报告正文",
+      "before_sha256": "21a9285e0ea393b7daeaeb7a9c161d20ec9d0344c228958ad20355d25c930a49",
+      "after_sha256": "4dfd366ddbf5eed52406d8aaad3f2ea59857ed45f6d6d4440538e4b62ce3169e"
+    },
+    {
+      "path": "analysis/firmware_loader_source_next_experiment_20261008.md",
+      "action": "rewritten",
+      "reason": "删除已被限定核验纠正的模型报告正文",
+      "before_sha256": "040e96bacc53e862f0a04332a3d65c0edaed431d4ec905e2275c50d80eeef6d7",
+      "after_sha256": "65610baf59ac77348795afecaef25c308c8e2b9f7208444b7b7645fb9d5f08f9"
+    },
+    {
+      "path": "s1m2_firmware_project/README.md",
+      "action": "rewritten",
+      "reason": "重写工程说明，删除错误架构与性能完成声明",
+      "before_sha256": "39431c82edbd8dcceb9547b47260ba2327124cf84ccf26e07f2501a612e4e3cc",
+      "after_sha256": "700ec4066446003166dc78852ed3a938c3c8c3c113ac9b8882c318b938aea2ed"
+    },
+    {
+      "path": "s1m2_firmware_project/Kconfig",
+      "action": "removed_to_trash",
+      "reason": "删除假解锁配置帮助，标记未实现并默认关闭功能占位符",
+      "before_sha256": "5de0d7368841494da9d57e21033f32e085b0d12c30f713cf6e8339377f78f893",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/s1m2_defconfig",
+      "action": "removed_to_trash",
+      "reason": "关闭未实现功能的示意默认配置",
+      "before_sha256": "848a02e60d095e44a275d57205a3c088d5ebe6d562acb23714a2708ee31d33c1",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/include/s1m2_dsp_xm6.h",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "d11889fca338ebb44942fb5582852c26b35193756464244837deae9065f5bc84",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/include/s1m2_npu_cnn.h",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "44cea7ca047760ed79ad202b2d26bc2d846418ebe36801c2cee9ca0daddb1e39",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/include/s1m2_eeprom.h",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "7f8bd03ee005a7009670e634d3e67996307396353a83017605857cf04bf999b0",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/include/s1m2_ptp_proto.h",
+      "action": "rewritten",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "61462740dd76ca47214341169f99470feb842f35a7a89e412e3d8396658df371",
+      "after_sha256": "bc6cf0f85077dab1539437c7daaf779c520b3c329051cde9e3598755b2904fa6"
+    },
+    {
+      "path": "s1m2_firmware_project/include/s1m2_mmap.h",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "8630b08ac0031d8ce4da6b8616c321210ac1ddfafed8140f5d25e824efb7bf7f",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/include/s1m2_ipcu.h",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "ff2fd219f4d154054fb221693886f5ec01d0c6ce491d3a34040da99700dab3ff",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/include/s1m2_types.h",
+      "action": "rewritten",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "7ff68c3d391bf31cdade567e14abb2d71ade96012ed61bd81e9b5dbd443aa55d",
+      "after_sha256": "85e835107f4c8c09a2faa0ea8378df82aaacb141109b79fa7e27207f6a0b92e2"
+    },
+    {
+      "path": "s1m2_firmware_project/dts/s1m2-socionext-m20v.dts",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "f38b2cde7773c3bccf16961179f06f516a356dc3b33f4492cb034ad89276592d",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/dts/s1m2-socionext-m20v.dtsi",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "d3a2714e605a0909fd9563da042295ff1f5ce3de5361630717be09d36cc1697e",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/dts/s1m2-m20v-rtos.h",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "b94967fcf56ba3de3f457c1d353abe7c59d06f4a9f7c7817bea9f89d189df2df",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/dts/s1m2-m20v-gpio.h",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "03d1e673e11704b9f06a7b917c548858ac795e54b4527cac9b59f07b05d0684a",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/ld/rtos_memory.ld",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "1be0be66aec8bad85e7f9b96bc852885188bbc4654a55ce918b197718a418e0b",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/ld/dsp_xm6.ld",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "d7d21c98d461d0d1a8979d82f13f29d595e6e1adf0952c519e4f4758d521f5ad",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/ld/linux_memory.ld",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "6dae006d2495826d4665c95844c2a1b043795d757e3ef567a24cc64f84b3351a",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/src/rtos_entry_stub.c",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "35a5c3d76fdb768ce9e68431f4285cb5f5894244c212bf61915cb5389cfaa181",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/src/main_verify.c",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "9b0a69d7bf0c1d9167ba797798d75a18e3e0464e0f3127385ce1b12c26738741",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/src/ipcu_protocol.c",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "08da5846f33860f98a351d273738902bbb4a3ddd6391ab0feaad5a3cac6e44dd",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/src/dsp_xm6_stub.c",
+      "action": "removed_to_trash",
+      "reason": "明确参考定义证据边界；纠正 RAW 大小注释（适用文件）",
+      "before_sha256": "52f9b5d16b7c8917393db62c1bd8a1169c89f575728bb30dc7b27211ae413db4",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/tools/s1m2_ptp_interval_bracket.py",
+      "action": "rewritten",
+      "reason": "删除模拟工具的实机能力与零风险完成声明",
+      "before_sha256": "c1c789d3df3f6430db5c286dec598b9814678bd88fff89038b29038da328915e",
+      "after_sha256": "915bde40262a84a7c706b4f95d4066486ae8dac10a4559f7cd4b7f876df50ebb"
+    },
+    {
+      "path": "s1m2_firmware_project/tools/dump_memory_parser.py",
+      "action": "rewritten",
+      "reason": "删除模拟工具的实机能力与零风险完成声明",
+      "before_sha256": "c2170f4aa76427f177e2ae58f72a6048a1a2aeccbc10a271fc9adf9b435d449f",
+      "after_sha256": "b3ba7cdfc621fa45504763f587d6b6075d74d665df55606a14ab06a38448146b"
+    },
+    {
+      "path": "analysis/Gemini_原厂软件深查_纠错_20261008.md",
+      "action": "rewritten",
+      "reason": "纠正纠错报告自身的全集、绕过限制和全部客户端断言",
+      "before_sha256": "f265effde6ef4aa4ca82aca528c5a88607fb1b22b49ae007a81d8053aaa0895e",
+      "after_sha256": "644927ae511f69afae850c7395169baac7831e363108ab6b26c228bf766d881b"
+    },
+    {
+      "path": "analysis/Gemini_PTP配置字段映射_20261008.md",
+      "action": "rewritten",
+      "reason": "删除混合报告中已识别的全称判断与未证实语义",
+      "before_sha256": "0b3444cbf99c15c3f7e1b0e95e512a519e3ada6447ea09256436894585355cc5",
+      "after_sha256": "c43889092d11e2f19796b85b8da337f47e0b66a3e91d90c7ea7bd10ba7bce7a9"
+    },
+    {
+      "path": "analysis/Gemini_设置结构解析_20261008.md",
+      "action": "rewritten",
+      "reason": "删除混合报告中已识别的全称判断与未证实语义",
+      "before_sha256": "a4c6bed73f01c94d1c11e73c079c297047e774d10af0d70d0e1c6e922a083bd6",
+      "after_sha256": "f6729cc57de1c31995ad3e83ee27504a8959b53ca86ec7fa85b669476b5dfe2b"
+    },
+    {
+      "path": "analysis/Gemini_首张保存字段与固件关联_20261008.md",
+      "action": "rewritten",
+      "reason": "删除混合报告中已识别的全称判断与未证实语义",
+      "before_sha256": "58382b8b0e3148e8fa349b6f7e465757062ed00646118493e1c1639c9f864794",
+      "after_sha256": "9b3fd833bd8e837ce47c5ea040e1c1d09f8bbb7392d8372f86356d3e2b346a7b"
+    },
+    {
+      "path": "analysis/Gemini_远程菜单路径_20261008.md",
+      "action": "rewritten",
+      "reason": "删除混合报告中已识别的全称判断与未证实语义",
+      "before_sha256": "a40bce58f5efcb3df7b7b0877e1372fb46d2be18de1ffab526afdeac5b4aa8d8",
+      "after_sha256": "00d8a77b577bd3256012f154dd8e58e81d8903c14b32a4096f1efdc4f613fdeb"
+    },
+    {
+      "path": "analysis/Gemini_加载器锚点实验_20261008.md",
+      "action": "rewritten",
+      "reason": "删除混合报告中已识别的全称判断与未证实语义",
+      "before_sha256": "3291252458c24bf93d42c9ee7b007cee3bea3e6b1aee4aef538d021353ee8955",
+      "after_sha256": "b7c92cb26f5a06dae643b7b1a4fd092d63a717a864975cdc9a56f4d84e3fd60a"
+    },
+    {
+      "path": "S1M2研究当前状态.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "0c6d43e77218bb6997a82043aed61c97d0ba886e0b646121f077cb6e186dacea",
+      "after_sha256": "a106dce8e658aebb372312193f12bf434fb95bb248f26a573540faa056ff3469"
+    },
+    {
+      "path": "s1m2_firmware_project/CMakeLists.txt",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "e787254cb1cb4ca55d6ef8d77e25b7572f7df2c3f191d9716b013de9072c22e0",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/Makefile",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "8f75dcf99c534d8676d5457bd58d1cfb450f5e9b38bf6bf6598b77df6dc50346",
+      "after_sha256": "74d4d8316df1337302e34b04f454fc1942cc20058b179f2e4c58c9b1647309f7"
+    },
+    {
+      "path": "s1m2_firmware_project/bin/s1m2_verify",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "57026d3521645ad13e585f99baaf457891069a76db518cf73579068a3911303c",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/bin/test_headers",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "372f274a9a3b6c6218eb5042cfc81b81bf25fbc4125cbea3db20f72fd9131c5c",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/tests/test_headers.c",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "2023056236aafd9e1296f58f4c2603664c88a680f813ae90a5ae3d7620a6dc0b",
+      "after_sha256": null
+    },
+    {
+      "path": "s1m2_firmware_project/tests/run_all_tests.py",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "f41522eaa3962de9e5021126461a2d770ea6097164df5f90452e34fb126e9ae5",
+      "after_sha256": "0e4bd493c6e84ec984eaedcd647a0add46584b28fb26bf153ef44ed4cbdc717e"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/analysis/Gemini_远程菜单路径_20261008.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "22fc2b77aae7c63631c067056eda991c56170b527d5c8eff96dbbe07b8153e82",
+      "after_sha256": "4b9882c7cd381ce8dd5b8e5177fc3df501a979ac0f8c5888dae5c7d4b7a5dadd"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/analysis/Gemini_原厂软件深查_纠错_20261008.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "1838194212ea5d77460d2f9fdafab265c1dbe1a2e9f6fd9154af16dc8e44c83b",
+      "after_sha256": "9f7c1dad5435c610a34846dd26a8946afe27261566da95dcc219728ee85231ef"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/analysis/Gemini_加载器锚点实验_20261008.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "de7c9d435fa4c0712dd27f9fe43f5870a063ee006721e536eda723904c6092c7",
+      "after_sha256": "6d559f589c18ad43f7dbfe61a69f084c72e09f1c46229b349df4ca65b3543332"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/analysis/firmware_decode_next_evidence_gemini_20261008.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "21a9285e0ea393b7daeaeb7a9c161d20ec9d0344c228958ad20355d25c930a49",
+      "after_sha256": "4dfd366ddbf5eed52406d8aaad3f2ea59857ed45f6d6d4440538e4b62ce3169e"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/analysis/Gemini_设置结构解析_20261008.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "d0d05c1de1dd3792133d33b77552f6ddb31e7dfad1b88c4ed29f956faf070793",
+      "after_sha256": "74137fa7419cf0ede863920874aa36ee3b490ef059ff7dfb996b92ae986f6454"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/analysis/firmware_loader_source_next_experiment_20261008.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "4b1ca9637a092e641d0be1bebbe3e34d7124ba248bfc5736edf3e0fb495c7854",
+      "after_sha256": "65610baf59ac77348795afecaef25c308c8e2b9f7208444b7b7645fb9d5f08f9"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/analysis/S1M2固件存储拓扑与离线解码技术边界终局报告_20261008.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "94a4d03152d820d5f59df397f6109e1ed29d1454e157b8a57f5a42e6dcd15b22",
+      "after_sha256": "a1778911a200a361baaa963f5d9fa2f97062dfb427109aa5bfa46f33973b5663"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/analysis/Gemini_PTP配置字段映射_20261008.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "5bc34e19e6ffa8412f61075c8aa0983d04c184be5fd19a04e5c05514c22e0e05",
+      "after_sha256": "184fae25bb0699808aa2e5496f3e340e530f75456d88687b7510bca2541969e1"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/analysis/Gemini_原厂软件深查_20261008.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "5acc6d9d2bf1eea8d29df33b5fcce14e42735f149a38e88c5a3c952e1845b1da",
+      "after_sha256": "ff43346895f556b81119648becf4e7f0934c9bec27cbadc7cd7e1637b306ca3a"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/analysis/Gemini_首张保存字段与固件关联_20261008.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "37edec2bf096ae529eddc7a7e8e3d44b2c8214a213439e7ec503e18cbfd6728d",
+      "after_sha256": "486bd2e7775f533129334976fb9f89da0c5aa948c7b9f53c1bd88350a9931a75"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/analysis/S1M2_ROM_BACKUP与原厂维修协议逆向推导报告_20261009.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "5681eed760581320829f817d0d76ffe2320e5642ac28d38e392760b81b15f2ad",
+      "after_sha256": "369c76b60f31f484dd0b510b4e2e76a65fcd91747058d523e08f2bf3ce0e4d3d"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/analysis/Gemini_同代平台公开实现检索_20261008.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "408975756722db63b481dc52256a586d5df8ac1c85d9047252fe7ef57abb36d7",
+      "after_sha256": "65610baf59ac77348795afecaef25c308c8e2b9f7208444b7b7645fb9d5f08f9"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/CMakeLists.txt",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "4b8baa468f1d10ec78b0a7eb69b952b410e2349b1dfb1024085503b4d42845e8",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/Makefile",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "b292203f13f17cd5daab381fb9ac9ed055bb1b0cf994711346e5f00414d3f4a8",
+      "after_sha256": "74d4d8316df1337302e34b04f454fc1942cc20058b179f2e4c58c9b1647309f7"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/README.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "8160e97ccfc562ec39c0e81e8b49231f1ffc2fbe06d6d68aab8d0187b9ac4d02",
+      "after_sha256": "6371578fc2c9e7db9a12b08d6fe6c888b6180d3e8724fa5347738452828d5a35"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/dts/s1m2-socionext-m20v.dts",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "f38b2cde7773c3bccf16961179f06f516a356dc3b33f4492cb034ad89276592d",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/dts/s1m2-socionext-m20v.dtsi",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "d3a2714e605a0909fd9563da042295ff1f5ce3de5361630717be09d36cc1697e",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/dts/s1m2-m20v-rtos.h",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "b94967fcf56ba3de3f457c1d353abe7c59d06f4a9f7c7817bea9f89d189df2df",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/dts/s1m2-m20v-gpio.h",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "03d1e673e11704b9f06a7b917c548858ac795e54b4527cac9b59f07b05d0684a",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/tools/dump_memory_parser.py",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "c2170f4aa76427f177e2ae58f72a6048a1a2aeccbc10a271fc9adf9b435d449f",
+      "after_sha256": "b3ba7cdfc621fa45504763f587d6b6075d74d665df55606a14ab06a38448146b"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/ld/rtos_memory.ld",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "1be0be66aec8bad85e7f9b96bc852885188bbc4654a55ce918b197718a418e0b",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/ld/dsp_xm6.ld",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "d7d21c98d461d0d1a8979d82f13f29d595e6e1adf0952c519e4f4758d521f5ad",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/ld/linux_memory.ld",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "6dae006d2495826d4665c95844c2a1b043795d757e3ef567a24cc64f84b3351a",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/include/s1m2_dsp_xm6.h",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "72afef1ba06e779e7e38546c639da53a315dcb4a6ad7de7a4f4b0a233cf9e921",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/include/s1m2_npu_cnn.h",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "44cea7ca047760ed79ad202b2d26bc2d846418ebe36801c2cee9ca0daddb1e39",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/include/s1m2_eeprom.h",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "7f8bd03ee005a7009670e634d3e67996307396353a83017605857cf04bf999b0",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/include/s1m2_ptp_proto.h",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "61462740dd76ca47214341169f99470feb842f35a7a89e412e3d8396658df371",
+      "after_sha256": "bc6cf0f85077dab1539437c7daaf779c520b3c329051cde9e3598755b2904fa6"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/include/s1m2_mmap.h",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "8630b08ac0031d8ce4da6b8616c321210ac1ddfafed8140f5d25e824efb7bf7f",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/include/s1m2_ipcu.h",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "ff2fd219f4d154054fb221693886f5ec01d0c6ce491d3a34040da99700dab3ff",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/include/s1m2_types.h",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "7ff68c3d391bf31cdade567e14abb2d71ade96012ed61bd81e9b5dbd443aa55d",
+      "after_sha256": "85e835107f4c8c09a2faa0ea8378df82aaacb141109b79fa7e27207f6a0b92e2"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/tests/test_headers.c",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "2023056236aafd9e1296f58f4c2603664c88a680f813ae90a5ae3d7620a6dc0b",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/tests/run_all_tests.py",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "957eff5250d1374e6e7eb3b054799b0872f72edd0026dd12c738b529b34aae62",
+      "after_sha256": "0e4bd493c6e84ec984eaedcd647a0add46584b28fb26bf153ef44ed4cbdc717e"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/src/rtos_entry_stub.c",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "35a5c3d76fdb768ce9e68431f4285cb5f5894244c212bf61915cb5389cfaa181",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/src/main_verify.c",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "9b0a69d7bf0c1d9167ba797798d75a18e3e0464e0f3127385ce1b12c26738741",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/s1m2_firmware_project/src/ipcu_protocol.c",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "removed_to_trash",
+      "before_sha256": "08da5846f33860f98a351d273738902bbb4a3ddd6391ab0feaad5a3cac6e44dd",
+      "after_sha256": null
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/docs/CORRECTIONS.md",
+      "reason": "清理无依据结论或生成框架，按更正证据维护当前内容",
+      "action": "rewritten",
+      "before_sha256": "21d06ba6d7bb686c47d34f248d0b35dfb61f2c0c78b5de93ecaa06823ae5c200",
+      "after_sha256": "fb35c8066ea2b38fbe7e8db8b92a6ad020902eefd577416f5da9b03c2cbb71b7"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/analysis/S1M2存储布局_Codex核验_20261009.md",
+      "action": "created",
+      "reason": "补齐限定核验入口，避免引用不存在的公开文件",
+      "before_sha256": null,
+      "after_sha256": "0123bb5d4df6f7e8b5ab706cc7435d8f7df59552b7683838e89e9969c14dfe7c"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/docs/EXPERIMENTS.md",
+      "action": "rewritten",
+      "reason": "移除索引中指向已撤回文件的条目",
+      "before_sha256": "f2d1ef369ed6c05d74693ae86c538be396df29c96f997e64723284789d4a7b33",
+      "after_sha256": "70956b667260cc40c98db9ac4f83e065f8d5db8e6d2beee502e84c35b9224312"
+    },
+    {
+      "path": "analysis/cleanup_20261010/validation.md",
+      "action": "created",
+      "reason": "记录实际验证结果",
+      "before_sha256": null,
+      "after_sha256": "bc794d29cad3188ae99b8cd07bfb00ee881aa5f515293c2a75a415c40afafec8"
+    },
+    {
+      "path": "项目当前进度_20261010.md",
+      "action": "rewritten",
+      "reason": "将检查计划更新为实际通过结果",
+      "before_sha256": "531f2219b53a9cf3cb19c78f096fccb2013f7ff42f840e48abf6f1bde0844dc9",
+      "after_sha256": "315ad20e14a076182f64e5dd0f07e459e38471560cb1b8551c7ad22df9afb351"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/evidence/FILE_MANIFEST.csv",
+      "action": "rewritten",
+      "reason": "补充修复后的公开清单",
+      "before_sha256": "cf4df7d0ebe58b8d199d45556f1179def9a8b79eca38b5751ddeab014f99e76d",
+      "after_sha256": "5bda83614523bf99058e79fb927cf99501f1251fab6c584099552a6c87996dd8"
+    },
+    {
+      "path": "outputs/lumix-s1m2-research-public/evidence/EXPORT_SUMMARY.json",
+      "action": "rewritten",
+      "reason": "清理后文件统计一致性",
+      "before_sha256": "c6ced3076798e7470ff47138a5d64ce01f700c0f9ca4ccb5084f3351ebbdecda",
+      "after_sha256": "c4f6af90694baa0af604ae3c5d34e5c90418e0ca382f786c35b4bd3329d3d081"
+    }
+  ],
+  "delegate": {
+    "conversation_id": "39437b5e-c2e8-47fb-a00c-db10e640cbbf",
+    "finished": true,
+    "model": "gemini-3.8-flash-high",
+    "model_verified": true
+  }
+}

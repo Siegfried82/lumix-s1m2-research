@@ -1,0 +1,20 @@
+--- linux-4.19.124/drivers/irqchip/irq-gic.c
++++ irq-gic.c.patched
+@@ -539,7 +539,7 @@
+ 	bypass = readl(cpu_base + GIC_CPU_CTRL);
+ 	bypass &= (GICC_DIS_BYPASS_MASK | 0x1f);
+ 
+-	writel_relaxed(bypass | mode | (1 << 1), cpu_base + GIC_CPU_CTRL);
++	writel_relaxed(bypass | mode | GICC_ENABLE | (1 << 1), cpu_base + GIC_CPU_CTRL);
+ }
+ 
+ 
+@@ -630,7 +630,7 @@
+ 
+ 	cpu_base = gic_data_cpu_base(&gic_data[gic_nr]);
+ 	val = readl(cpu_base + GIC_CPU_CTRL);
+-	val &= ~(1 << 1);
++	val &= ~(GICC_ENABLE | (1 << 1));
+ 	writel_relaxed(val, cpu_base + GIC_CPU_CTRL);
+ 
+ 	return 0;

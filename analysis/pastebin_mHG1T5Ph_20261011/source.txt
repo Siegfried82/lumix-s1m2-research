@@ -1,0 +1,108 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>High Bitrate Video Deployer</title>
+
+</head>
+
+<body>
+  <style type="text/css">
+    *{
+      text-align: center;
+    }
+    p{
+      width: 50%;
+      margin:auto;
+      padding:20px;
+    }
+    hr{
+      width:30%;
+    }
+    a{
+      font-size:18pt;
+    }
+    .handshake{
+      color: #f54242;
+    }
+    .pal{
+      color: #49a7cc;
+    }
+    .ntsc{
+      color: #49cc68;
+    }
+    @media only screen and (max-width: 600px) {
+      p{
+        width: 90%;
+      }
+    }
+
+  </style>
+
+  <h1>High Bitrate Video Deployer</h1>
+  <p>
+    This script may be used to access hidden video quality settings in
+     Lumix GX9 camera. Make sure to activate the cameras WIFI and connect it to your device
+     before proceeding. Always open the commands in a new tab, so you keep access to this page!
+  </p>
+  <p>
+    <b>Use at your own risk.</b><br>All changes should be revertable.<br>Tested on FW 1.5.
+  </p>
+  <hr>
+
+  <h2>1. Handshake & Connect</h2>
+  <p>
+    First we need to establish a connection by sending a handshake and a connection command
+    to the camera. Sequentially execute the <b class="handshake">orange</b> commands.
+  </p>
+  <a href="http://192.168.54.1:80/cam.cgi?mode=accctrl&type=req_acc&value=4D454930-0100-1000-8001-020000025AD6&value2=iPhone" class="handshake"><b>cmd</b> send handshake part 1</a>
+  <br>
+  <a href="http://192.168.54.1:80/cam.cgi?mode=accctrl&type=req_acc&value=4D454930-0100-1000-8001-020000025AD6&value2=iPhone" class="handshake"><b>cmd</b> send handshake part 2</a>
+  <br>
+  <a href="http://192.168.54.1:80/cam.cgi?mode=camcmd&value=recmode" class="handshake"><b>cmd</b> establish connection</a>
+  <br>
+  <p>
+    The camera might tell you that it is not connected to the app. Which is no problem as long
+    you get no "err" messages returned.
+  </p>
+  <hr>
+
+  <h2>2. Deploy Video Setting</h2>
+  <p>
+    Depending on the wanted setting the following cmds are available.
+    If your camera is set to PAL mode (25p,50p modes) use the <b class="pal">blue</b> commands, if
+    it set to NTSC mode (30p,60p modes) use the <b class="ntsc">green</b> commands.
+  </p>
+  <p>
+    Recording seems stable up to 100mbps. File analysis showed that the 100mbps even achieves a higher actual bitrate
+    when compared to the 200mbps setting (Note: targeted bitrate and achieved bitrate are usually different).
+  </p>
+  <a href="http://192.168.54.1:80/cam.cgi?mode=setsetting&type=videoquality&value=mov_25p_100mbps_4k" class="pal"><b>cmd</b> set mov_25p_100mbps_4k</a><br>
+  <a href="http://192.168.54.1:80/cam.cgi?mode=setsetting&type=videoquality&value=mov_50p_50mbps" class="pal"><b>cmd</b> set mov_50p_50mbps</a><br>
+  <a href="http://192.168.54.1:80/cam.cgi?mode=setsetting&type=videoquality&value=mov_50p_100mbps" class="pal"><b>cmd</b> set mov_50p_100mbps</a><br>
+  <a href="http://192.168.54.1:80/cam.cgi?mode=setsetting&type=videoquality&value=mov_50p_200mbps" class="pal"><b>cmd</b> set mov_50p_200mbps</a><br>
+  <p></p>
+  <a href="http://192.168.54.1:80/cam.cgi?mode=setsetting&type=videoquality&value=mov_24p_100mbps_4k" class="ntsc"><b>cmd</b> set mov_24p_100mbps_4k</a><br>
+  <a href="http://192.168.54.1:80/cam.cgi?mode=setsetting&type=videoquality&value=mov_60p_50mbps" class="ntsc"><b>cmd</b> set mov_60p_50mbps</a><br>
+  <a href="http://192.168.54.1:80/cam.cgi?mode=setsetting&type=videoquality&value=mov_60p_100mbps" class="ntsc"><b>cmd</b> set mov_60p_100mbps</a><br>
+  <a href="http://192.168.54.1:80/cam.cgi?mode=setsetting&type=videoquality&value=mov_60p_200mbps" class="ntsc"><b>cmd</b> set mov_60p_200mbps</a><br>
+  <p>
+    If the settings are properly transmitted, the camera will respond with "ok".
+    Since it does not officially support the *.mov format, it won't show a symbol
+    for the current video quality (i.e. MP4_4k_30p).
+  </p>
+  <br>
+  <hr>
+
+  <h2>3. Save & Revert</h2>
+  <p>
+    Save the current setting to a custom mode (C1,C2 or C3) in camera to keep
+    the video quality set. Simply enter the Q-Menu on camera an touch a standart video quality,
+    if you want to revert to a standart setting. You will need this script or a custom mode to return to the hidden video qualities.
+  </p>
+
+</body>
+
+</html>

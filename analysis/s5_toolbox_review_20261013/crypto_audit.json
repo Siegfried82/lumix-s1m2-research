@@ -1,0 +1,459 @@
+{
+  "date": "2026-10-13",
+  "scope": "firmware_crypto全部13个Python脚本与固件逆向报告定点审计",
+  "authorization": "只读外稿；独立离线验证；未运行外部脚本/原生二进制/固件，未进行设备或网络请求，未调用AGY，未做密钥枚举",
+  "summary": "工具箱没有提供S5/S1M2新格式解码突破；目录载荷取数普遍漏加0x200，导致虚构重叠/512B头、假已知明文和不可靠阴性。真实消费者、完整解码校验、key来源和验签链仍缺失。",
+  "verification_artifacts": [
+    "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/verify_crypto_container.py",
+    "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/crypto_container_verification.json"
+  ],
+  "verified_inputs": [
+    {
+      "path": "analysis/s5_research_report_20261011/S5逆向_研究总报告_20261011/firmware/S5___V29.bin",
+      "bytes": 90238464,
+      "sha256": "b2ec4aeec209693b874df8dfdf11fc85b38fa4675b44ec554b7a167f430827e1",
+      "revision": 512,
+      "selector": 3,
+      "count": 48,
+      "directory_end": 5164,
+      "first_payload": 5632,
+      "directory_payload_overlap_bytes": 0,
+      "flags_counts": {
+        "3": 41,
+        "2": 7
+      },
+      "stored_matches_candidate": 7,
+      "wrong_matches_candidate": 2,
+      "duplicate_names": {},
+      "crc_expected": 2389945024,
+      "crc_computed": 2389945024,
+      "supplied_table_count": 48,
+      "supplied_sig_bytes": 512,
+      "supplied_sig_sha256": "76bfa404cc0e056971d19b42e3de188d9c56fde0b429cdf437d73541009a806a",
+      "supplied_sig_equals_tail": true,
+      "tail_starts_with_0001": false
+    },
+    {
+      "path": "S1m2_V14.bin",
+      "bytes": 171867648,
+      "sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+      "revision": 512,
+      "selector": 3,
+      "count": 62,
+      "directory_end": 6452,
+      "first_payload": 6656,
+      "directory_payload_overlap_bytes": 0,
+      "flags_counts": {
+        "2": 13,
+        "3": 49
+      },
+      "stored_matches_candidate": 13,
+      "wrong_matches_candidate": 6,
+      "duplicate_names": {
+        "postboot1_r": 2,
+        "postboot3_r": 2,
+        "postboot5_r": 2,
+        "dsp_eisldc_": 2,
+        "dsp_fstack_": 2
+      },
+      "crc_expected": 1567588343,
+      "crc_computed": 1567588343
+    }
+  ],
+  "verified_table_fields_all_48": true,
+  "script_inventory": [
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/exp_cipher.py",
+      "sha256": "8aac57d341c46acedbc17e19b32661e9591181f005194d1889151d0e2f3597e9",
+      "lines": 47,
+      "review": "static_only; not imported or executed"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/ivsig.py",
+      "sha256": "9b30bb17c05712b5ae523978755577b2413c4abaa445b35b0bdb3a25c3b3bf4e",
+      "lines": 53,
+      "review": "static_only; not imported or executed"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/keyhunt.py",
+      "sha256": "c5122eca868ca6e03033328818af8ef57f8db61cbeb81c0361cbd282336f71eb",
+      "lines": 109,
+      "review": "static_only; not imported or executed"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/keyhunt2.py",
+      "sha256": "0ffe758327fb3642ceb0e8a7f1de1e3cba921792a2135efd99777493cf5a3f6d",
+      "lines": 79,
+      "review": "static_only; not imported or executed"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/ks_extract.py",
+      "sha256": "9a47e85233c3f2e40ab7c1584b1125fb6271702b8d9b4cd6f53cf07104b19d9e",
+      "lines": 33,
+      "review": "static_only; not imported or executed"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/parse_all.py",
+      "sha256": "a5887283b68be7bbfec7a32994d7ebb49d12a88f9df7e27dc24f5442ee5066b4",
+      "lines": 31,
+      "review": "static_only; not imported or executed"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/parse_upd.py",
+      "sha256": "8ec7e056398e4c586752df387bd455251f2624b37071d33cdaa58b1ec076b5f9",
+      "lines": 48,
+      "review": "static_only; not imported or executed"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/rawtest.py",
+      "sha256": "61fc0e06d7a81a7aa91bf5d4c5f1ddd7063909efcd957d3fe5cf58b389046851",
+      "lines": 53,
+      "review": "static_only; not imported or executed"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/verify512.py",
+      "sha256": "53766a074a3b463185ab8241a7dd87710c26590df989470c592fa5aa0e2bfcce",
+      "lines": 30,
+      "review": "static_only; not imported or executed"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/verify_sha.py",
+      "sha256": "d19f9a02d0db08d5bfdedf283b8978bed18e825e6f0e80b5a52bec40dbf9501b",
+      "lines": 31,
+      "review": "static_only; not imported or executed"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/xver.py",
+      "sha256": "897c926c94af8b1daa49523cc43c75145797e5b96a8a2e1a1f09b8e9311e21b7",
+      "lines": 59,
+      "review": "static_only; not imported or executed"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/xver2.py",
+      "sha256": "70e9de6c72b4591124710c1e534aa869d6a03b80effaf159f33a41e666a94535",
+      "lines": 55,
+      "review": "static_only; not imported or executed"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/xver_fixed.py",
+      "sha256": "3e71355a884a7f028f424ab11a1d648b4e7bfc646aa6186647fe9127c1672768",
+      "lines": 83,
+      "review": "static_only; not imported or executed"
+    }
+  ],
+  "findings": [
+    {
+      "id": "C01",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/parse_upd.py",
+      "lines": [
+        14,
+        26
+      ],
+      "status": "已验证错误",
+      "author_claim": "目录off是文件绝对偏移；48项表与loader1重叠44B。",
+      "verified_finding": "读取实际S5 V2.9后确认off为相对0x200偏移；目录结束0x142c，首载荷0x1600，无重叠。48条提供表字段均与正确目录一致，但必须加512后才能取载荷。",
+      "evidence_boundary": "目录字段物理布局已验证，密码、目标地址、加载和认证语义未知。",
+      "s1m2_value": "可保留目录字段线索，取数逻辑需重写。",
+      "source_sha256": "8ec7e056398e4c586752df387bd455251f2624b37071d33cdaa58b1ec076b5f9"
+    },
+    {
+      "id": "C02",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/parse_upd.py",
+      "lines": [
+        9,
+        16
+      ],
+      "status": "已验证实现限制",
+      "author_claim": "函数可通用解析UPD并取ECDSA。",
+      "verified_finding": "n硬编码48，S1M2实际62；0x220:0x280切出96B，与报告64B不符。只验文件尾范围，不核magic/revision/count/载荷起点。",
+      "evidence_boundary": "这不是经过校验的通用容器解析器，也无签名验证。",
+      "s1m2_value": "不得直接用于S1M2。",
+      "source_sha256": "8ec7e056398e4c586752df387bd455251f2624b37071d33cdaa58b1ec076b5f9"
+    },
+    {
+      "id": "C03",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/parse_all.py",
+      "lines": [
+        20,
+        31
+      ],
+      "status": "已验证有限能力",
+      "author_claim": "从5版S5读头字段。",
+      "verified_finding": "静态实现确实读取0x2e8数量字段并打印原始值；无载荷切片、CRC验证、完整输入摘要、消费者核验。",
+      "evidence_boundary": "未运行此脚本；5版真实输出与计数未独立重验。",
+      "s1m2_value": "可作头部字段观察参考。",
+      "source_sha256": "a5887283b68be7bbfec7a32994d7ebb49d12a88f9df7e27dc24f5442ee5066b4"
+    },
+    {
+      "id": "C04",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/verify_sha.py",
+      "lines": [
+        8,
+        31
+      ],
+      "status": "已验证错误",
+      "author_claim": "目录SHA与实际数据的对照证明逻辑明文校验。",
+      "verified_finding": "漏加0x200；正确读取S5时全部7项flags2含零长项与目录摘要匹配，错误取数仅2项匹配。lens_hist错误取数仍匹配，是相邻全零区的偶然掩盖。按名称字典会覆盖重复项。",
+      "evidence_boundary": "对flags3摘要对象仍缺少真正消费者；flags2阳性不能证明所有字段都针对解码后原始明文。",
+      "s1m2_value": "不可复用旧不匹配结论；S1M2还须保留index与重复出现序号。",
+      "source_sha256": "d19f9a02d0db08d5bfdedf283b8978bed18e825e6f0e80b5a52bec40dbf9501b"
+    },
+    {
+      "id": "C05",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/keyhunt.py",
+      "lines": [
+        28,
+        109
+      ],
+      "status": "已验证实现错误及未验证结果",
+      "author_claim": "5240候选×3IV的CBC/CTR/ECB均无命中。",
+      "verified_finding": "td来自漏加512的取数；94行CTR传iv参数，PyCryptodome本地_mode_ctr.py:319–323明确拒绝该参数，97–98吞异常。因此CTR分支没有有效解密。摘要oracle未建立现代消费者。无保存候选、异常、真实覆盖和阳性控制。",
+      "evidence_boundary": "未执行keyhunt；5240和零命中为作者历史宣称，不能用异常当阴性。",
+      "s1m2_value": "不扩大盲目枚举；旧结果不能封死静态路线。",
+      "source_sha256": "c5122eca868ca6e03033328818af8ef57f8db61cbeb81c0361cbd282336f71eb"
+    },
+    {
+      "id": "C06",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/keyhunt2.py",
+      "lines": [
+        16,
+        79
+      ],
+      "status": "已验证错误",
+      "author_claim": "history是ipu_data真实明文，211候选全量确认无命中。",
+      "verified_finding": "两项漏加512。正确history为262144B全零，错误history有508B非零；ipu_data也错取512B。59行注释称全量确认，实际60–74只比较首64B；没有后续完整摘要验证。",
+      "evidence_boundary": "history与ipu_data的候选摘要同为SHA256(262144B零)，支持均匀明文候选，不证明ipu_data已解密、真实算法或摘要消费者。CTR仅单一8B nonce+64bit大端计数器；零IV只跑CBC。",
+      "s1m2_value": "保留均匀候选假设；未恢复S5或S1M2密钥。",
+      "source_sha256": "0ffe758327fb3642ceb0e8a7f1de1e3cba921792a2135efd99777493cf5a3f6d"
+    },
+    {
+      "id": "C07",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/ks_extract.py",
+      "lines": [
+        12,
+        33
+      ],
+      "status": "已验证方法边界及错误",
+      "author_claim": "提取256KB真实keystream，熵近8证明真加密流。",
+      "verified_finding": "脚本只对两个错位载荷XOR。已知明文与流密码假设未成立；CBC下C XOR P也不是密码生成的keystream。508B非零来自前组件尾512B混入。",
+      "evidence_boundary": "未执行；异或结果或高熵不识别AES/CBC/CTR，也不定位key。",
+      "s1m2_value": "不能作为真实密码流或解码突破。",
+      "source_sha256": "9a47e85233c3f2e40ab7c1584b1125fb6271702b8d9b4cd6f53cf07104b19d9e"
+    },
+    {
+      "id": "C08",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/exp_cipher.py",
+      "lines": [
+        26,
+        47
+      ],
+      "status": "已验证错误与越界推断",
+      "author_claim": "相同明文的密文异或熵证明真正AES-CBC/CTR而非固定XOR。",
+      "verified_finding": "组件offset/index/size均手写且未绑定输入摘要，漏加512；同摘要只作为明文相同候选。高熵差分不能区分AES、其他变换、不同key或随机化。",
+      "evidence_boundary": "报告熵值未重跑；有限差分不排除全部XOR/流模式。",
+      "s1m2_value": "仅可保留为修正范围后有限差分方法，不是算法判定。",
+      "source_sha256": "8aac57d341c46acedbc17e19b32661e9591181f005194d1889151d0e2f3597e9"
+    },
+    {
+      "id": "C09",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/ivsig.py",
+      "lines": [
+        7,
+        53
+      ],
+      "status": "已验证不足",
+      "author_claim": "0/41哈希派生未命中意味着逐构建随机IV；r/s范围合法证明ECDSA；尾块无0001说明非PKCS1.5。",
+      "verified_finding": "只测试6种不同确定性构造（7标签有1重复），未命中不证明随机。r/s小于P256阶仅长度/数值相容，绝非验签。原始RSA签名字节须公钥运算后才检查编码，直接看尾块不能辨别PKCS1.5/PSS。",
+      "evidence_boundary": "无公钥、签名覆盖范围、实际验签或BootROM调用代码。所附512B.sig确与已知S5文件尾相同，仅证明拷贝一致。",
+      "s1m2_value": "认证算法、位置与流程仍未知。",
+      "source_sha256": "9b30bb17c05712b5ae523978755577b2413c4abaa445b35b0bdb3a25c3b3bf4e"
+    },
+    {
+      "id": "C10",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/rawtest.py",
+      "lines": [
+        10,
+        53
+      ],
+      "status": "已验证不足",
+      "author_claim": "各type3分区跳过512后尝试解压排除明文压缩。",
+      "verified_finding": "错位取数再跳512恰到正确起点，但总长短512，未尝试完整组件。decompressobj未检查eof/unused_data；无输出摘要/格式验证和资源上限。48行fd377a58为XZ前缀，却标zstd。",
+      "evidence_boundary": "未执行；错误/部分解压与魔数仅有限候选，阴性不排除压缩封装。",
+      "s1m2_value": "不支持组件已知解码或全部压缩路线排除。",
+      "source_sha256": "61fc0e06d7a81a7aa91bf5d4c5f1ddd7063909efcd957d3fe5cf58b389046851"
+    },
+    {
+      "id": "C11",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/verify512.py",
+      "lines": [
+        9,
+        30
+      ],
+      "status": "已验证错误",
+      "author_claim": "loader等存在512B明文头、随后均匀/重复结构。",
+      "verified_finding": "取数漏加512；从512开始其实才进入正确组件起点。统一512B头推断来自误读前一组件/目录尾。",
+      "evidence_boundary": "只对所列5项查重复；未执行该脚本。",
+      "s1m2_value": "应撤回512B头结构结论。",
+      "source_sha256": "53766a074a3b463185ab8241a7dd87710c26590df989470c592fa5aa0e2bfcce"
+    },
+    {
+      "id": "C12",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/xver.py",
+      "lines": [
+        8,
+        51
+      ],
+      "status": "已验证实现限制",
+      "author_claim": "5版本按名称对齐并从IV/SHA/CT判同key、不同key或静态路线封死。",
+      "verified_finding": "计数取自0x2e8这一点正确；载荷仍漏加512。xver_fixed仅前256B，xver2仅前8192B。按名字取首项/覆盖项，缺index及出现序号；S1M2有5组重复名称，62项会丢成57名。无flags3限定的key判定会把未加密均匀项记为同key。",
+      "evidence_boundary": "未重跑5版本；相同候选摘要、16B字段及有限密文不能独立确定全部明文和key机制。",
+      "s1m2_value": "参考逐项比较思想，不能迁移旧结论；本项目已有22包更严谨解析。",
+      "source_sha256": "897c926c94af8b1daa49523cc43c75145797e5b96a8a2e1a1f09b8e9311e21b7"
+    },
+    {
+      "id": "C13",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/xver2.py",
+      "lines": [
+        43,
+        54
+      ],
+      "status": "已验证实现限制",
+      "author_claim": "5版本按名称对齐并从IV/SHA/CT判同key、不同key或静态路线封死。",
+      "verified_finding": "计数取自0x2e8这一点正确；载荷仍漏加512。xver_fixed仅前256B，xver2仅前8192B。按名字取首项/覆盖项，缺index及出现序号；S1M2有5组重复名称，62项会丢成57名。无flags3限定的key判定会把未加密均匀项记为同key。",
+      "evidence_boundary": "未重跑5版本；相同候选摘要、16B字段及有限密文不能独立确定全部明文和key机制。",
+      "s1m2_value": "参考逐项比较思想，不能迁移旧结论；本项目已有22包更严谨解析。",
+      "source_sha256": "70e9de6c72b4591124710c1e534aa869d6a03b80effaf159f33a41e666a94535"
+    },
+    {
+      "id": "C14",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/02_工具与脚本/firmware_crypto/xver_fixed.py",
+      "lines": [
+        13,
+        74
+      ],
+      "status": "已验证实现限制",
+      "author_claim": "5版本按名称对齐并从IV/SHA/CT判同key、不同key或静态路线封死。",
+      "verified_finding": "计数取自0x2e8这一点正确；载荷仍漏加512。xver_fixed仅前256B，xver2仅前8192B。按名字取首项/覆盖项，缺index及出现序号；S1M2有5组重复名称，62项会丢成57名。无flags3限定的key判定会把未加密均匀项记为同key。",
+      "evidence_boundary": "未重跑5版本；相同候选摘要、16B字段及有限密文不能独立确定全部明文和key机制。",
+      "s1m2_value": "参考逐项比较思想，不能迁移旧结论；本项目已有22包更严谨解析。",
+      "source_sha256": "3e71355a884a7f028f424ab11a1d648b4e7bfc646aa6186647fe9127c1672768"
+    },
+    {
+      "id": "R01",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/01_研究报告_全集/02_研究总报告_20261011/03-固件格式与启动链.md",
+      "lines": [
+        3,
+        130
+      ],
+      "status": "作者宣称与已验证纠错",
+      "author_claim": "三重签名、全部容器字段及boot链完成；条目绝对off、44B重叠、512B明文头、type2可写、RAM加载用途。",
+      "verified_finding": "48项92B目录、MC801字符串、外层CRC0x8e73aac0、41项flags3和7项flags2可独立验证。off必须加0x200；header0x2e8是实际数量，不是每项48B校验块宽度。loader1/zboot正确起点均无统一512B均匀头。BootROM、加载、核架构、资源用途由名称/连续范围推断。",
+      "evidence_boundary": "64B/512B字段不能证明ECDSA/RSA、BootROM归属、签名覆盖、防回滚、公钥位置；CRC不是数字签名。",
+      "s1m2_value": "字段线索有限价值；关键错误与语义强断言不能入当前权威结论。",
+      "source_sha256": "b22b9fdee22fa7aceaf3c2174044723570959f2556abe9da0e10568299c763e3"
+    },
+    {
+      "id": "R02",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/01_研究报告_全集/02_研究总报告_20261011/参考报告/S5_AES破解可行性评估_20261011.md",
+      "lines": [
+        12,
+        157,
+        535,
+        573
+      ],
+      "status": "作者宣称与推断",
+      "author_claim": "真AES、固定128bit硬件key、无keyblob、静态穷尽、真实keystream及唯一硬件路线。",
+      "verified_finding": "包内实现及有限测试没有真实S5 revision0x200/selector3/92B消费者、key来源链、完整解码阳性或验签。关联脚本错位/异常/仅前缀验证使阴性覆盖进一步不可靠。",
+      "evidence_boundary": "固定发布包不唯一确定key层级/派生；有限猜测不定位OTP，不排除封装/KDF/其他消费者；已有S1M249项仍无验证明文。",
+      "s1m2_value": "对完整逆向不构成突破；应推进实际消费者与明文来源，不把拆机当用户必须执行路线。",
+      "source_sha256": "55eedcd6d9bf5c01b32a9fa969055c35bbda9b276b8cc45569b18d20379efdbe"
+    },
+    {
+      "id": "R03",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/01_研究报告_全集/01_固件AES绕过_调研_20261010/01-固件格式与启动/FIRMWARE_FORMAT.md",
+      "lines": [
+        81,
+        92
+      ],
+      "status": "作者宣称",
+      "author_claim": "格式全解析、每项明文SHA+随机IV、BootROMECDSA、平台隔离硬件key及软件不可行。",
+      "verified_finding": "与R01/R02相同证据不足及偏移错误。S5/S1M2确属0x200/selector3同族92B目录，不能由格式相同或平台名证明密码同/异。",
+      "evidence_boundary": "公开头字段、熵与摘要候选不证明真实算法/私钥/OTP位置。",
+      "s1m2_value": "保留原稿作追溯，不传播终局断言。",
+      "source_sha256": "3741675bd916264b3c1474b018f03c938bce487d757acd4265104850103b2810"
+    },
+    {
+      "id": "R04",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/01_研究报告_全集/01_固件AES绕过_调研_20261010/03-离线破解与上传预言机/S1M2固件存储拓扑与离线解码技术边界终局报告_20261008.md",
+      "lines": [
+        76,
+        114
+      ],
+      "status": "作者宣称且与当前核验冲突",
+      "author_claim": "64B证明P256/BootROM公钥；无keyblob所以100%硬件key；全源码无任何解码函数；RAMdump彻底破解。",
+      "verified_finding": "这是项目已撤回的旧结论再打包；本次无新消费者、真实明文或签名验算。脚本候选标签和有限阴性不能支持全称排除或硬件定位。",
+      "evidence_boundary": "取得RAM仍须映射、缺失覆盖及实际代码分析，不自动完整逆向。",
+      "s1m2_value": "不得恢复为当前结论。",
+      "source_sha256": "94a4d03152d820d5f59df397f6109e1ed29d1454e157b8a57f5a42e6dcd15b22"
+    },
+    {
+      "id": "R05",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/01_研究报告_全集/01_固件AES绕过_调研_20261010/03-离线破解与上传预言机/S1M2_解码突破记录.md",
+      "lines": [
+        101,
+        131
+      ],
+      "status": "已存在的有界历史记录",
+      "author_claim": "有限120组合、33090候选、132360试验未匹配，不能排除KDF/封装/其他模式，不证明S1M2使用AES。",
+      "verified_finding": "正文明确记录旧GH2阳性不能迁移、49项未解码和阴性假设，证据边界较其他汇总准确。",
+      "evidence_boundary": "本次未重跑这些历史探测或GH2重放；不当作新增实验。",
+      "s1m2_value": "可保留历史方法与限制，本项目现有真实旧机消费者链证据更强。",
+      "source_sha256": "64c12eb909004646f26064d857f73ee7454584ff78dca530dc3849ef281c9d85"
+    },
+    {
+      "id": "R06",
+      "path": "<LOCAL_WORKSPACE>/analysis/s5_toolbox_review_20261013/originals/08_总结与工具箱_20261013/01_研究报告_全集/06_S1R2移交_20261012/00_S5结合点与AES路径总结.md",
+      "lines": [
+        55,
+        92
+      ],
+      "status": "作者宣称与未知",
+      "author_claim": "JTAG唯一确定到终点、S5完全适用、软件贡献封顶、取运行时明文即目标达成。",
+      "verified_finding": "该文P1–P8明确未做，未附S5实际JTAG访问、debug权限/熔丝、完整RAM获取或运行时载荷映射证据。其他型号/GoPro经验不能代替S5，更不能代替S1M2。",
+      "evidence_boundary": "不执行任何硬件/设备动作；用户不拆机条件继续有效。",
+      "s1m2_value": "只作材料需求候选，不能当确定可行或完整逆向交付。",
+      "source_sha256": "41a0fedf02a99cd2175c61ed38f4926ddfff8c8681c1d5a2a8ba15b01810821a"
+    }
+  ],
+  "existing_project_evidence": [
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/multimodel_diff_20261012/compare.py",
+      "lines": [
+        15,
+        25
+      ],
+      "finding": "正确相对offset+512，保留索引/重复序号/完整摘要和tail32"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/multimodel_diff_20261012/报告.md",
+      "lines": [
+        7,
+        34
+      ],
+      "finding": "22包391目录项，摘要/尾字段语义未闭合，有限阴性不能排除静态路线"
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/unpacked/README.md",
+      "lines": [
+        20,
+        26
+      ],
+      "finding": "49flags3未解码；历史IV/目标地址标签及组件用途仍需消费者"
+    }
+  ],
+  "next_steps": [
+    "不复用错位keyhunt阴性，不追加无消费者依据的旧key枚举。",
+    "从合法离线新代升级器/前级代码或可读运行时产物定位真正接受revision0x200/selector3/92B目录的消费者，核实摘要对象、16B字段及认证/解码顺序。",
+    "取得验证明文后识别架构、加载分段和函数/数据流；本工具箱尚未补齐该关键输入。"
+  ]
+}

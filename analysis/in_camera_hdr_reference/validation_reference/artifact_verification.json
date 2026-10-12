@@ -1,0 +1,128 @@
+{
+  "checks": {
+    "flat_finite": true,
+    "flat_quality_no_regression": true,
+    "step_finite": true,
+    "step_quality_no_regression": true,
+    "step_ring_below_noise_margin": true,
+    "smooth_texture_finite": true,
+    "smooth_texture_quality_no_regression": true,
+    "texture_error_below_one_percent": true,
+    "negative_finite": true,
+    "negative_quality_no_regression": true,
+    "negative_signal_preserved": true,
+    "hdr_finite": true,
+    "hdr_quality_no_regression": true,
+    "hdr_above_one_preserved": true,
+    "in_range_identity": true,
+    "unsupported_values_unchanged": true,
+    "cfa_0123": true,
+    "cfa_1032": true,
+    "cfa_2301": true,
+    "cfa_3210": true,
+    "all_saturated_does_not_invent_bounds": true,
+    "burst7_mae_reduced_35_percent": true,
+    "burst7_peak_overshoot_reduced_65_percent": true
+  },
+  "all_passed": true,
+  "quality": {
+    "flat": {
+      "before": {
+        "mae": 0.0008286403608508408,
+        "rmse": 0.0010140355443581939,
+        "high_overshoot_max": 0.003982901573181152,
+        "low_overshoot_max": 0.002160310745239258,
+        "outside_envelope_fraction": 0.0
+      },
+      "after": {
+        "mae": 0.0008286403608508408,
+        "rmse": 0.0010140355443581939,
+        "high_overshoot_max": 0.003982901573181152,
+        "low_overshoot_max": 0.002160310745239258,
+        "outside_envelope_fraction": 0.0
+      }
+    },
+    "step": {
+      "before": {
+        "mae": 0.006202032323926687,
+        "rmse": 0.023333502933382988,
+        "high_overshoot_max": 0.3294876217842102,
+        "low_overshoot_max": 0.08681277930736542,
+        "outside_envelope_fraction": 0.07270093688362919
+      },
+      "after": {
+        "mae": 0.0028448225930333138,
+        "rmse": 0.010130200535058975,
+        "high_overshoot_max": 0.02144157886505127,
+        "low_overshoot_max": 0.010000407695770264,
+        "outside_envelope_fraction": 0.019569773175542406
+      },
+      "plateau_error_max": 0.009080648422241211
+    },
+    "smooth_texture": {
+      "before": {
+        "mae": 0.0016942087095230818,
+        "rmse": 0.002032439922913909,
+        "high_overshoot_max": 0.005725383758544922,
+        "low_overshoot_max": 0.004465311765670776,
+        "outside_envelope_fraction": 0.0
+      },
+      "after": {
+        "mae": 0.001694199861958623,
+        "rmse": 0.002032421762123704,
+        "high_overshoot_max": 0.005725383758544922,
+        "low_overshoot_max": 0.004345834255218506,
+        "outside_envelope_fraction": 0.0
+      }
+    },
+    "negative": {
+      "before": {
+        "mae": 0.06610037386417389,
+        "rmse": 0.06639508157968521,
+        "high_overshoot_max": 0.0839698314666748,
+        "low_overshoot_max": 0.0,
+        "outside_envelope_fraction": 1.0
+      },
+      "after": {
+        "mae": 0.0015837550163269043,
+        "rmse": 0.0015837551327422261,
+        "high_overshoot_max": 0.0015837550163269043,
+        "low_overshoot_max": 0.0,
+        "outside_envelope_fraction": 0.0
+      }
+    },
+    "hdr": {
+      "before": {
+        "mae": 0.003270701039582491,
+        "rmse": 0.003928216174244881,
+        "high_overshoot_max": 0.015305519104003906,
+        "low_overshoot_max": 0.008641481399536133,
+        "outside_envelope_fraction": 0.011341222879684419
+      },
+      "after": {
+        "mae": 0.0032668476924300194,
+        "rmse": 0.003916130401194096,
+        "high_overshoot_max": 0.011415243148803711,
+        "low_overshoot_max": 0.008641481399536133,
+        "outside_envelope_fraction": 0.011341222879684419
+      }
+    },
+    "burst7": {
+      "before": {
+        "mae": 0.0350072979927063,
+        "rmse": 0.047971393913030624,
+        "high_overshoot_max": 0.5222662687301636,
+        "low_overshoot_max": 0.17736002802848816,
+        "outside_envelope_fraction": 0.38287752675386444
+      },
+      "after": {
+        "mae": 0.020115423947572708,
+        "rmse": 0.028676798567175865,
+        "high_overshoot_max": 0.13994228839874268,
+        "low_overshoot_max": 0.11979377269744873,
+        "outside_envelope_fraction": 0.10212296868806976
+      }
+    }
+  },
+  "scope": "Synthetic image-quality regression; real-camera and Windows-client equality not established."
+}

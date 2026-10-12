@@ -1,0 +1,84 @@
+[
+  {
+    "purpose" : "allowlisted_read_inventory",
+    "read_count" : 4,
+    "event" : "started",
+    "time_utc" : "2026-10-12T16:08:36Z"
+  },
+  {
+    "event" : "device_found",
+    "model" : "DC-S1M2",
+    "time_utc" : "2026-10-12T16:08:36Z"
+  },
+  {
+    "event" : "session_opened",
+    "time_utc" : "2026-10-12T16:08:36Z"
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554560
+    ],
+    "data_bytes" : 80,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-12T16:08:36Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "drive_before",
+    "index" : 0
+  },
+  {
+    "opcode" : "0x9921",
+    "params" : [
+      1392508946,
+      2
+    ],
+    "data_bytes" : 0,
+    "ok" : 0,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-12T16:08:36Z",
+    "transport_ok" : true,
+    "response_code" : "0x2005",
+    "error" : "",
+    "name" : "slot2_1",
+    "index" : 1
+  },
+  {
+    "opcode" : "0x9921",
+    "params" : [
+      1392508946,
+      2
+    ],
+    "data_bytes" : 0,
+    "ok" : 0,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-12T16:08:36Z",
+    "transport_ok" : true,
+    "response_code" : "0x2005",
+    "error" : "",
+    "name" : "slot2_2",
+    "index" : 2
+  },
+  {
+    "opcode" : "0x9402",
+    "params" : [
+      33554560
+    ],
+    "data_bytes" : 80,
+    "ok" : 1,
+    "event" : "plan_read_response",
+    "time_utc" : "2026-10-12T16:08:36Z",
+    "transport_ok" : true,
+    "response_code" : "0x2001",
+    "error" : "",
+    "name" : "drive_after",
+    "index" : 3
+  },
+  {
+    "event" : "session_closed",
+    "error" : "",
+    "time_utc" : "2026-10-12T16:08:36Z"
+  }
+]

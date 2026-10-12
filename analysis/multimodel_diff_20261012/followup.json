@@ -1,0 +1,620 @@
+{
+  "S1_additional_legacy_probes": [
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "G3___V12.bin",
+      "mode": "CBC_zero",
+      "complete_output_sha256": "1eb6457827d267de64fe9efc1074d3bd6f5065530476fa6f40ff3e9eb34efce2",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "G3___V12.bin",
+      "mode": "CBC_tail_first16",
+      "complete_output_sha256": "e2dfee1e7093f3e10904f91537340a99afa6b1ab0c23d84b403b19f297bcb557",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "G3___V12.bin",
+      "mode": "CBC_tail_last16",
+      "complete_output_sha256": "1eb6457827d267de64fe9efc1074d3bd6f5065530476fa6f40ff3e9eb34efce2",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "G3___V12.bin",
+      "mode": "ECB",
+      "complete_output_sha256": "a579432c44abf4a8f027d81c000946467b9b00ff70b44d479006c803bd793c79",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "G3___V12.bin",
+      "mode": "CTR_tail_first16_big",
+      "complete_output_sha256": "de205447e81dc64d49dde87816c91f2cf691faa8bacb5b3d5e1eaa07e859c938",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "G3___V12.bin",
+      "mode": "CTR_tail_first16_little",
+      "complete_output_sha256": "90e3e58e7d4246722c384910265d51d18cddea8266aed4ee6e6949dfb83784c5",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GF2__V11.bin",
+      "mode": "CBC_zero",
+      "complete_output_sha256": "cea8c34abfdd0e2bffc7ddb0d510437449e90a11a99197587566be4a8fbaef98",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GF2__V11.bin",
+      "mode": "CBC_tail_first16",
+      "complete_output_sha256": "38f736023512b4a0de8c27d9a2bfe6c0bc6813cef2851147fbcd9a375384c5da",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GF2__V11.bin",
+      "mode": "CBC_tail_last16",
+      "complete_output_sha256": "cea8c34abfdd0e2bffc7ddb0d510437449e90a11a99197587566be4a8fbaef98",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GF2__V11.bin",
+      "mode": "ECB",
+      "complete_output_sha256": "0dfddb80ac8802a493911204ad1e963b27fb90d6cd7c184dea60b799781eb7de",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GF2__V11.bin",
+      "mode": "CTR_tail_first16_big",
+      "complete_output_sha256": "ef4154e1e7cf4d26e816f079c409f2dcb351b9ffad990939ff4f060d201f5c1a",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GF2__V11.bin",
+      "mode": "CTR_tail_first16_little",
+      "complete_output_sha256": "ab70a833ba0c767f27b37d1c796b4923e80227ac8ecab8331b3c96215a12c84c",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GF3__V12.bin",
+      "mode": "CBC_zero",
+      "complete_output_sha256": "e787f08d8cc311bcbe55b2a6569e9a0569a714ba9bfc897d9dc949e878c1b041",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GF3__V12.bin",
+      "mode": "CBC_tail_first16",
+      "complete_output_sha256": "4cb688ad8f21f6acf0d1e903a1809d8b69d862f88ffb1989410538350a5e1156",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GF3__V12.bin",
+      "mode": "CBC_tail_last16",
+      "complete_output_sha256": "e787f08d8cc311bcbe55b2a6569e9a0569a714ba9bfc897d9dc949e878c1b041",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GF3__V12.bin",
+      "mode": "ECB",
+      "complete_output_sha256": "df25c9d37a20494c536527d140617882f3bf9239372ea63d8602455d40091bb4",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GF3__V12.bin",
+      "mode": "CTR_tail_first16_big",
+      "complete_output_sha256": "bff4b30bd865264b9a6b8dc3b5a19b25e0af2612e7151b26cab9b74304cc4cbc",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GF3__V12.bin",
+      "mode": "CTR_tail_first16_little",
+      "complete_output_sha256": "16975300d629bc42bb977b9b9c6559a9401d0cc1dbb41fe7ec9e645e49217daf",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GH2__V11.bin",
+      "mode": "CBC_zero",
+      "complete_output_sha256": "2665a7a5d24a6c61f40daab2e3d3a9093d0576c4bd2d5b022c74f9fa38a538b5",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GH2__V11.bin",
+      "mode": "CBC_tail_first16",
+      "complete_output_sha256": "9ac5c759acc5f97ada4d589e641ea1a617f9c89c5d18f1713f8aea4bc59c977a",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GH2__V11.bin",
+      "mode": "CBC_tail_last16",
+      "complete_output_sha256": "2665a7a5d24a6c61f40daab2e3d3a9093d0576c4bd2d5b022c74f9fa38a538b5",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GH2__V11.bin",
+      "mode": "ECB",
+      "complete_output_sha256": "369a9da0601dcdbd737e9a1770ce8d78009765f929905a62f09cccedf5b9aaa5",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GH2__V11.bin",
+      "mode": "CTR_tail_first16_big",
+      "complete_output_sha256": "4d58957eb112d4adeb9c8da5edc09cedc00fc77ecc73e8bee83ac6b6d75eb1cc",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GH2__V11.bin",
+      "mode": "CTR_tail_first16_little",
+      "complete_output_sha256": "5f7d361fb1c4586fe643e733ea98905683cb4d0a0a3b713a87b438d808b000aa",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GX1__V11.bin",
+      "mode": "CBC_zero",
+      "complete_output_sha256": "7fa8e3541779379e93bf3453ff95532d6b13a73330f028444d01785a187237a4",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GX1__V11.bin",
+      "mode": "CBC_tail_first16",
+      "complete_output_sha256": "db260f81c3a286f80f1e3823c26242f71de79a11e728423755fd636e4962d826",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GX1__V11.bin",
+      "mode": "CBC_tail_last16",
+      "complete_output_sha256": "7fa8e3541779379e93bf3453ff95532d6b13a73330f028444d01785a187237a4",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GX1__V11.bin",
+      "mode": "ECB",
+      "complete_output_sha256": "5087a3e704a9329dd9e49e8e8efd0824dd60d8bf8c0e475c172ae847dc0c18e4",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GX1__V11.bin",
+      "mode": "CTR_tail_first16_big",
+      "complete_output_sha256": "87f363950174221ce8ffdfc8571bb8bca454b2768d69e0200ad448380c56ed9e",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 0,
+      "name": "loader1",
+      "bytes": 4096,
+      "key_source": "GX1__V11.bin",
+      "mode": "CTR_tail_first16_little",
+      "complete_output_sha256": "63fe1302f1e8978083e71bbd1359dd078b28a32cce498666f9e261ea18ce16cb",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "G3___V12.bin",
+      "mode": "CBC_zero",
+      "complete_output_sha256": "44a4161c80177abe7af72b5f76845834eec2d97b536c603508a855b3ad0494b0",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "G3___V12.bin",
+      "mode": "CBC_tail_first16",
+      "complete_output_sha256": "b94278321ddb4c91a428d551a62d1285a026f672df0dc28a5812a4340b950aa2",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "G3___V12.bin",
+      "mode": "CBC_tail_last16",
+      "complete_output_sha256": "44a4161c80177abe7af72b5f76845834eec2d97b536c603508a855b3ad0494b0",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "G3___V12.bin",
+      "mode": "ECB",
+      "complete_output_sha256": "2dec152f7b49675862bc11dea815cd325669326e51d02c881657841bc0f74e34",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "G3___V12.bin",
+      "mode": "CTR_tail_first16_big",
+      "complete_output_sha256": "68e43891ee0dd705e1c1338d13fa5cac384e90294ba43c5ef3e030685a2deda7",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "G3___V12.bin",
+      "mode": "CTR_tail_first16_little",
+      "complete_output_sha256": "7eb4b42e21db6f8e424b6060deee86a2c9dc85e089efb6bad1f0fb703d570e21",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GF2__V11.bin",
+      "mode": "CBC_zero",
+      "complete_output_sha256": "00ee0018850c744df4a6d72dc9428c79d44afdd14786ed3b32cbd4094cc381bc",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GF2__V11.bin",
+      "mode": "CBC_tail_first16",
+      "complete_output_sha256": "3df888a88037f3318bff1d7f68311ab17f7138292ab66103c73dfea5d43af39d",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GF2__V11.bin",
+      "mode": "CBC_tail_last16",
+      "complete_output_sha256": "00ee0018850c744df4a6d72dc9428c79d44afdd14786ed3b32cbd4094cc381bc",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GF2__V11.bin",
+      "mode": "ECB",
+      "complete_output_sha256": "7de9eaece018e39f253a34630c8ea9155e07ef0f4dead20c2b361505228dbe21",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GF2__V11.bin",
+      "mode": "CTR_tail_first16_big",
+      "complete_output_sha256": "d2f6990aa36aee36dd4ed3508d4383314ab190e84fc776630af00953a48b0325",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GF2__V11.bin",
+      "mode": "CTR_tail_first16_little",
+      "complete_output_sha256": "2854a73f842e4232c108c34b99b155dbd8feec0dbd491d8056299849eb65fd17",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GF3__V12.bin",
+      "mode": "CBC_zero",
+      "complete_output_sha256": "f1b49ef95909bd4951cb6362582e455052adaa5367640f598ab63de51bff1b87",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GF3__V12.bin",
+      "mode": "CBC_tail_first16",
+      "complete_output_sha256": "9793c3da52fd652a1ba6ee9b76e077cdf2d7c6cd0a6a2562e8980a3937c38034",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GF3__V12.bin",
+      "mode": "CBC_tail_last16",
+      "complete_output_sha256": "f1b49ef95909bd4951cb6362582e455052adaa5367640f598ab63de51bff1b87",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GF3__V12.bin",
+      "mode": "ECB",
+      "complete_output_sha256": "d36b7e8cd55b24bf86ec611997d3d2ade16d1f4ab223335be7132633cdeebcb9",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GF3__V12.bin",
+      "mode": "CTR_tail_first16_big",
+      "complete_output_sha256": "2ba9f8b8dade4ae2900d543d3df0d26edda56b5d291b98cf26a6968ce888f463",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GF3__V12.bin",
+      "mode": "CTR_tail_first16_little",
+      "complete_output_sha256": "7fd6fa7c06420e6c078f916e53819d11832bc672a15095a01aa1ea37eeaebeae",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GH2__V11.bin",
+      "mode": "CBC_zero",
+      "complete_output_sha256": "9bb00ef66563c25b1fe4ead8415c6ceccb0c1eb8aa6e348b50658c2c4eb0b4b1",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GH2__V11.bin",
+      "mode": "CBC_tail_first16",
+      "complete_output_sha256": "4eaba45efc2206da6c591c2a66cf2c57ec8b8d87ce683bf62d734925067c82d0",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GH2__V11.bin",
+      "mode": "CBC_tail_last16",
+      "complete_output_sha256": "9bb00ef66563c25b1fe4ead8415c6ceccb0c1eb8aa6e348b50658c2c4eb0b4b1",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GH2__V11.bin",
+      "mode": "ECB",
+      "complete_output_sha256": "7520acb585778ea7a7926a8949de4e7aaf05b24fcbc627191fce6edba401e030",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GH2__V11.bin",
+      "mode": "CTR_tail_first16_big",
+      "complete_output_sha256": "7e83f2527ee4fffeb4c3bd0c900110c0ec7a4c07c5e041e496ffb484eba3eba1",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GH2__V11.bin",
+      "mode": "CTR_tail_first16_little",
+      "complete_output_sha256": "64b5b6f546d4f7b12cdb5761dc7e3c46755364d12e7c25b1ab478b3e85e6a44e",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GX1__V11.bin",
+      "mode": "CBC_zero",
+      "complete_output_sha256": "49f7593a983394f7555569cfdd9670765bd8edabf06368644c61647c955be21c",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GX1__V11.bin",
+      "mode": "CBC_tail_first16",
+      "complete_output_sha256": "750e7b39891d443f81d77504a1fa3668f9700c22d4d9b2df55385db840053069",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GX1__V11.bin",
+      "mode": "CBC_tail_last16",
+      "complete_output_sha256": "49f7593a983394f7555569cfdd9670765bd8edabf06368644c61647c955be21c",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GX1__V11.bin",
+      "mode": "ECB",
+      "complete_output_sha256": "c1e82848370172a78786f1452350d38a3cbd7183877eaa57feddfbb7e0090ec3",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GX1__V11.bin",
+      "mode": "CTR_tail_first16_big",
+      "complete_output_sha256": "7b962132eb1d89add289b99bd2efcba02952a1c9166c6733c11144aa7476a720",
+      "candidate_digest_matches": false
+    },
+    {
+      "index": 18,
+      "name": "music",
+      "bytes": 3538944,
+      "key_source": "GX1__V11.bin",
+      "mode": "CTR_tail_first16_little",
+      "complete_output_sha256": "b1a63da09fc9a90d1556a2cdc47606025bad30f7bda7b020e7855772fa0db751",
+      "candidate_digest_matches": false
+    }
+  ],
+  "controls": "each legacy key passes source complete body MD5; modes use PyCryptodome",
+  "assumptions": "raw 128-bit keys without KDF; directory digest assumed decoded output SHA256; component origin and no extra wrapper",
+  "tail_and_block_checks": [
+    {
+      "sample": "GH3__V12",
+      "protected_entries": 6,
+      "duplicate_tail_first16": {},
+      "sampled_16B_blocks": 24576,
+      "duplicate_sampled_16B_values": 0,
+      "scope": "first min(64KiB,size), aligned 16B blocks per nonempty flags3 entry; not full-payload scan"
+    },
+    {
+      "sample": "GH4__V27",
+      "protected_entries": 18,
+      "duplicate_tail_first16": {},
+      "sampled_16B_blocks": 57536,
+      "duplicate_sampled_16B_values": 0,
+      "scope": "first min(64KiB,size), aligned 16B blocks per nonempty flags3 entry; not full-payload scan"
+    },
+    {
+      "sample": "GH5__V28",
+      "protected_entries": 36,
+      "duplicate_tail_first16": {},
+      "sampled_16B_blocks": 120448,
+      "duplicate_sampled_16B_values": 0,
+      "scope": "first min(64KiB,size), aligned 16B blocks per nonempty flags3 entry; not full-payload scan"
+    },
+    {
+      "sample": "S5___V28",
+      "protected_entries": 41,
+      "duplicate_tail_first16": {},
+      "sampled_16B_blocks": 141952,
+      "duplicate_sampled_16B_values": 0,
+      "scope": "first min(64KiB,size), aligned 16B blocks per nonempty flags3 entry; not full-payload scan"
+    },
+    {
+      "sample": "S1m2_V14",
+      "protected_entries": 49,
+      "duplicate_tail_first16": {},
+      "sampled_16B_blocks": 185920,
+      "duplicate_sampled_16B_values": 0,
+      "scope": "first min(64KiB,size), aligned 16B blocks per nonempty flags3 entry; not full-payload scan"
+    },
+    {
+      "sample": "S1m2_V13",
+      "protected_entries": 49,
+      "duplicate_tail_first16": {},
+      "sampled_16B_blocks": 185920,
+      "duplicate_sampled_16B_values": 0,
+      "scope": "first min(64KiB,size), aligned 16B blocks per nonempty flags3 entry; not full-payload scan"
+    },
+    {
+      "sample": "S5___V29",
+      "protected_entries": 41,
+      "duplicate_tail_first16": {},
+      "sampled_16B_blocks": 141952,
+      "duplicate_sampled_16B_values": 0,
+      "scope": "first min(64KiB,size), aligned 16B blocks per nonempty flags3 entry; not full-payload scan"
+    },
+    {
+      "sample": "S5m2_V31",
+      "protected_entries": 40,
+      "duplicate_tail_first16": {},
+      "sampled_16B_blocks": 149056,
+      "duplicate_sampled_16B_values": 0,
+      "scope": "first min(64KiB,size), aligned 16B blocks per nonempty flags3 entry; not full-payload scan"
+    },
+    {
+      "sample": "S1___V24",
+      "protected_entries": 46,
+      "duplicate_tail_first16": {},
+      "sampled_16B_blocks": 162432,
+      "duplicate_sampled_16B_values": 0,
+      "scope": "first min(64KiB,size), aligned 16B blocks per nonempty flags3 entry; not full-payload scan"
+    }
+  ]
+}

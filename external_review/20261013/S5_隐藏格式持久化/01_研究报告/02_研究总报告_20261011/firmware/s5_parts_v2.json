@@ -1,0 +1,482 @@
+[
+ {
+  "i": 0,
+  "name": "loader1",
+  "off": 5120,
+  "sz": 4096,
+  "la": 0,
+  "ty": 3,
+  "sha": "e009d688fb152a70d90fb4df88705b29f441e3dc50c57e4ea1fddf1a49c19d32",
+  "iv": "12df6817ad363cdb5f6eeda8db2a63c2"
+ },
+ {
+  "i": 1,
+  "name": "loader2",
+  "off": 9216,
+  "sz": 38912,
+  "la": 4096,
+  "ty": 3,
+  "sha": "4a925f2e019310a9a8f2029df652cc7a5e93be5fb8ee4b6b29c6c6d3805cea85",
+  "iv": "ceb3f10fa1aca92335d36c896fdcf58c"
+ },
+ {
+  "i": 2,
+  "name": "loader3",
+  "off": 48128,
+  "sz": 49152,
+  "la": 43008,
+  "ty": 3,
+  "sha": "67d44d7c2bb2091b7a56ca5118345e0ee604e6b2c6c31769cd6de06ae752d838",
+  "iv": "c2c9ef05034ffc1d2ad91402c66096a7"
+ },
+ {
+  "i": 3,
+  "name": "program",
+  "off": 97280,
+  "sz": 16674816,
+  "la": 524288,
+  "ty": 3,
+  "sha": "fc496d62a91f6e9b1b84807183bb805bc546c9105d2938546b58a66ad9d132fe",
+  "iv": "1198b52525a4a0d03c6b9eee4d650bdf"
+ },
+ {
+  "i": 4,
+  "name": "storage",
+  "off": 16772096,
+  "sz": 0,
+  "la": 19136512,
+  "ty": 2,
+  "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "iv": "00000000000000000000000000000000"
+ },
+ {
+  "i": 5,
+  "name": "postboot1",
+  "off": 16772096,
+  "sz": 4718592,
+  "la": 19136512,
+  "ty": 3,
+  "sha": "e14b32e80c50d52e39edd6f7b725aba34b9f0a4ee12ad38987593f5cc8a8ec5f",
+  "iv": "d546a9f7ffb04ccb074fea79d08c4096"
+ },
+ {
+  "i": 6,
+  "name": "postboot2",
+  "off": 21490688,
+  "sz": 131072,
+  "la": 23855104,
+  "ty": 3,
+  "sha": "76a627dc813626668f242f3da0001e9c7df6cb6983a68093951b42d4b8a81284",
+  "iv": "8ac0206c82e34362754abe6ef485cc8f"
+ },
+ {
+  "i": 7,
+  "name": "postboot3",
+  "off": 21621760,
+  "sz": 8257536,
+  "la": 23986176,
+  "ty": 3,
+  "sha": "435f3b6a4f2f3368107885025dc698acc333f6f048875727bed25b93d49b4dbc",
+  "iv": "3a3a619d8316c86a5ae73a7a5e73abc2"
+ },
+ {
+  "i": 8,
+  "name": "postboot4",
+  "off": 29879296,
+  "sz": 131072,
+  "la": 32243712,
+  "ty": 3,
+  "sha": "a328d5508102bdb141469c4b6a6dc84b584f14dfbc34cfde54d5837a4f42f444",
+  "iv": "427f05cc570839e9ed873986f38b39bd"
+ },
+ {
+  "i": 9,
+  "name": "postboot5",
+  "off": 30010368,
+  "sz": 917504,
+  "la": 32374784,
+  "ty": 3,
+  "sha": "8912a67ac38cba6edd4f15810322dd0142f3497c20cb077dbfaa203001896286",
+  "iv": "1901daca6b7104f5580ba8a6337717cc"
+ },
+ {
+  "i": 10,
+  "name": "dram_sleep",
+  "off": 30927872,
+  "sz": 6144,
+  "la": 33292288,
+  "ty": 3,
+  "sha": "d2bc9022b49fd9bfd908e5e95039604ab925d143b568ffc2964ed0355681bbee",
+  "iv": "67b9135c05966c7f384668569cce222a"
+ },
+ {
+  "i": 11,
+  "name": "eep_ow_a",
+  "off": 30934016,
+  "sz": 131072,
+  "la": 33423360,
+  "ty": 3,
+  "sha": "6c4be51bd4c8fb00919ba3460313f31ea2f69bbc107ec4ce5f26ec1ab44ed013",
+  "iv": "4c9979264b52d21e61413387ccd81945"
+ },
+ {
+  "i": 12,
+  "name": "eep_ow_b",
+  "off": 31065088,
+  "sz": 131072,
+  "la": 33554432,
+  "ty": 3,
+  "sha": "6c4be51bd4c8fb00919ba3460313f31ea2f69bbc107ec4ce5f26ec1ab44ed013",
+  "iv": "07cd0906eb67f16a52ebc6f936fb82e1"
+ },
+ {
+  "i": 13,
+  "name": "eep_adj",
+  "off": 31196160,
+  "sz": 131072,
+  "la": 33685504,
+  "ty": 3,
+  "sha": "3a611abac2442339574ace1c359b801de15ba2c0c5cde42ed4471597505d204b",
+  "iv": "4f5502f3ecd42ed6e44859a38152336d"
+ },
+ {
+  "i": 14,
+  "name": "eep_fix",
+  "off": 31327232,
+  "sz": 131072,
+  "la": 33816576,
+  "ty": 3,
+  "sha": "725b5876e98704a75d0395cb97bf7e68d4e1a2ef5014b30ea5990792074e5d04",
+  "iv": "957402974a26c66b3548c4406c712d24"
+ },
+ {
+  "i": 15,
+  "name": "eep_act_a",
+  "off": 31458304,
+  "sz": 2048,
+  "la": 33947648,
+  "ty": 3,
+  "sha": "59aa79d1fdaa9ed58e3eb53b3bad24ca7301ad21fd2f967af4ec8a7c518ecf4a",
+  "iv": "cd4d14574e1332b3d909cb9c5c7dcbb3"
+ },
+ {
+  "i": 16,
+  "name": "eep_act_b",
+  "off": 31460352,
+  "sz": 2048,
+  "la": 34078720,
+  "ty": 3,
+  "sha": "59aa79d1fdaa9ed58e3eb53b3bad24ca7301ad21fd2f967af4ec8a7c518ecf4a",
+  "iv": "558339ab648a0296c2f926afd30124ad"
+ },
+ {
+  "i": 17,
+  "name": "history",
+  "off": 31462400,
+  "sz": 262144,
+  "la": 34209792,
+  "ty": 2,
+  "sha": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+  "iv": "00000000000000000000000000000000"
+ },
+ {
+  "i": 18,
+  "name": "lens_hist",
+  "off": 31724544,
+  "sz": 393216,
+  "la": 34471936,
+  "ty": 2,
+  "sha": "a6619f482fee91a315f76cdcd8705d39b6ce11077c435ccc696142e130c27762",
+  "iv": "00000000000000000000000000000000"
+ },
+ {
+  "i": 19,
+  "name": "music",
+  "off": 32117760,
+  "sz": 3538944,
+  "la": 34865152,
+  "ty": 3,
+  "sha": "5dcc34ae10f9d7be2150752d7fbf4e7bae58d585ea3b3eeff93e985cf557c723",
+  "iv": "32cf8c97d1b5cf482a10bce227f8ef70"
+ },
+ {
+  "i": 20,
+  "name": "osdover",
+  "off": 35656704,
+  "sz": 10485760,
+  "la": 38404096,
+  "ty": 3,
+  "sha": "f0305598ea9cac9ba916e5a8a6d0c4f62aad590f181b1908937676743ac15ab8",
+  "iv": "16261b47a44e3cc6c1675a4baed8180f"
+ },
+ {
+  "i": 21,
+  "name": "osddata",
+  "off": 46142464,
+  "sz": 11010048,
+  "la": 48889856,
+  "ty": 3,
+  "sha": "9581b1d535c8f3eb20f5f51d7d33c4c5e4106a3024c0ba7bf2b231a480e29f5b",
+  "iv": "93d87f83ec4328890a6c47ab3cbbd71a"
+ },
+ {
+  "i": 22,
+  "name": "fileinfo",
+  "off": 57152512,
+  "sz": 917504,
+  "la": 59899904,
+  "ty": 2,
+  "sha": "03cdeacb6a286652f8b3a2e4a6d6a3f81d4952762eb12b1659338722c7ab4a5b",
+  "iv": "00000000000000000000000000000000"
+ },
+ {
+  "i": 23,
+  "name": "ninsho_db",
+  "off": 58070016,
+  "sz": 655360,
+  "la": 60817408,
+  "ty": 2,
+  "sha": "ff6335069b6e140eb47149d847aea80bf7e2b06bd80ae9708aa382efb3ae21ee",
+  "iv": "00000000000000000000000000000000"
+ },
+ {
+  "i": 24,
+  "name": "koutei_kao",
+  "off": 58725376,
+  "sz": 114688,
+  "la": 61472768,
+  "ty": 3,
+  "sha": "0fb19aef2e26fbb568abce93c300cb41b2754c6e309726c880fd11c2a1f7776d",
+  "iv": "eb1153bd87594c272fe91a343aa7693a"
+ },
+ {
+  "i": 25,
+  "name": "wifi_info",
+  "off": 58840064,
+  "sz": 131072,
+  "la": 61603840,
+  "ty": 2,
+  "sha": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+  "iv": "00000000000000000000000000000000"
+ },
+ {
+  "i": 26,
+  "name": "menu_save",
+  "off": 58971136,
+  "sz": 131072,
+  "la": 61734912,
+  "ty": 2,
+  "sha": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+  "iv": "00000000000000000000000000000000"
+ },
+ {
+  "i": 27,
+  "name": "zboot",
+  "off": 59102208,
+  "sz": 2048,
+  "la": 61865984,
+  "ty": 3,
+  "sha": "014dad699b15c269e9905ccfbffe1f73963bbef1301298ba230bb9cf8b34fd9f",
+  "iv": "5c4655b04fc2b9c90a93a997aeab7fc6"
+ },
+ {
+  "i": 28,
+  "name": "dtb",
+  "off": 59104256,
+  "sz": 4096,
+  "la": 61868032,
+  "ty": 3,
+  "sha": "f1a4d16edaadbda1940fa95994acd5d69a3e90f5c25daaa68c7151535df8e188",
+  "iv": "9f313b17dc6e27a82921c5462564f6fe"
+ },
+ {
+  "i": 29,
+  "name": "zimage",
+  "off": 59108352,
+  "sz": 2621440,
+  "la": 61997056,
+  "ty": 3,
+  "sha": "72b6633d7f20009c5067af6faa5549d52a581c4a55915695e616d666220f7ef0",
+  "iv": "a9039b6b5741cb3eb48dad38d0c06de9"
+ },
+ {
+  "i": 30,
+  "name": "rootfs1",
+  "off": 61729792,
+  "sz": 3145728,
+  "la": 64618496,
+  "ty": 3,
+  "sha": "4a41552e007d5048e32c542899324935c762ae8583b818712cb78b028ba49bf0",
+  "iv": "2a72875cc0184159f7190717906008f1"
+ },
+ {
+  "i": 31,
+  "name": "rootfs2",
+  "off": 64875520,
+  "sz": 10485760,
+  "la": 67764224,
+  "ty": 3,
+  "sha": "4121e7d7503c68d108453ece3016553f5d1ec90cf7bcc79aaf5e3b4234147215",
+  "iv": "ccea25c335885ec9115b75526db896b1"
+ },
+ {
+  "i": 32,
+  "name": "usbcharge",
+  "off": 75361280,
+  "sz": 131072,
+  "la": 78249984,
+  "ty": 3,
+  "sha": "fc6d177cdc31bd35c45e964617eda6c630423657c89794bccaaff2cbd31a89a7",
+  "iv": "b406bf110be81e5573fdfb59b09f116c"
+ },
+ {
+  "i": 33,
+  "name": "ipu_data",
+  "off": 75492352,
+  "sz": 262144,
+  "la": 78381056,
+  "ty": 3,
+  "sha": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+  "iv": "0e43dbd57c2da5fbc9c59ba5a71f9f37"
+ },
+ {
+  "i": 34,
+  "name": "ipu_code",
+  "off": 75754496,
+  "sz": 65536,
+  "la": 78643200,
+  "ty": 3,
+  "sha": "c8958782feff19752e0b81122b79f742d06d102343f08a2101fa4e8b1e2f572c",
+  "iv": "2a484281b1fea7b0c119330455249ee9"
+ },
+ {
+  "i": 35,
+  "name": "rc_data",
+  "off": 75820032,
+  "sz": 262144,
+  "la": 78774272,
+  "ty": 3,
+  "sha": "736424438c98bbe9fde213cc237c09aff94003fa1b62bf39d80bf7a854eda718",
+  "iv": "906d18149d3338bba8774c6b7cfd0140"
+ },
+ {
+  "i": 36,
+  "name": "rc_code",
+  "off": 76082176,
+  "sz": 65536,
+  "la": 79036416,
+  "ty": 3,
+  "sha": "fc306a4463c9784a2f8f7f16f473bacc6f75ae0f49a69357c8d6c2cd805918c2",
+  "iv": "8248395f38e93662a64f3b5b09acee72"
+ },
+ {
+  "i": 37,
+  "name": "nr_data",
+  "off": 76147712,
+  "sz": 262144,
+  "la": 79167488,
+  "ty": 3,
+  "sha": "e235e38856489970ba0cff0a6128391b7e56aa0f13f65ca06d2f2ce9b96ac76a",
+  "iv": "d3899fbf93cd29cf84b517aeb24d49c3"
+ },
+ {
+  "i": 38,
+  "name": "nr_code",
+  "off": 76409856,
+  "sz": 65536,
+  "la": 79429632,
+  "ty": 3,
+  "sha": "2553aa1d7cc21e0750d81b0c671abbf361acd35d69d96b9d2f6ba47c52c434cf",
+  "iv": "654cad23f92ae0e0d669a94e02e8aa7e"
+ },
+ {
+  "i": 39,
+  "name": "hm_c_prog",
+  "off": 76475392,
+  "sz": 65536,
+  "la": 79560704,
+  "ty": 3,
+  "sha": "06e44fbb2c38f7b389ff71a85dd66ebf06ad1138e2fd8f4aebf3bfc6a97a0d47",
+  "iv": "fcc98b721c0595c9af3474a6b06a8579"
+ },
+ {
+  "i": 40,
+  "name": "hm_d_prog",
+  "off": 76540928,
+  "sz": 262144,
+  "la": 79691776,
+  "ty": 3,
+  "sha": "dc4064303a8eab1bd7f374aa8d8df52834ace9873dce1f1087458ff2ff75beaf",
+  "iv": "b3404057c1ccc03148a9d2924b7db08c"
+ },
+ {
+  "i": 41,
+  "name": "hm_c_ddr",
+  "off": 76803072,
+  "sz": 3145728,
+  "la": 79953920,
+  "ty": 3,
+  "sha": "b26f3b3d07c411f1b7e641b03aec415f8ae2068edd8746b8ac71d50db143415f",
+  "iv": "83d8ffb40f211efc4964db775634c0f9"
+ },
+ {
+  "i": 42,
+  "name": "hm_d_ddr",
+  "off": 79948800,
+  "sz": 1048576,
+  "la": 83099648,
+  "ty": 3,
+  "sha": "e9688a52f4371814874321f244516d809d36d8fa16f1895b26a6e0224de734e2",
+  "iv": "cd90b4a0f3a04f8f09a55424984b9d3e"
+ },
+ {
+  "i": 43,
+  "name": "hm_d_nw",
+  "off": 80997376,
+  "sz": 4194304,
+  "la": 84148224,
+  "ty": 3,
+  "sha": "d74e1f38fa7ce7a40ed49e6ffc3fd65bae70ae77eb9d37add2f896abc52897d6",
+  "iv": "79e8efc710882fdaa75f58f9734d9543"
+ },
+ {
+  "i": 44,
+  "name": "hm_d_nw_sng",
+  "off": 85191680,
+  "sz": 4194304,
+  "la": 88342528,
+  "ty": 3,
+  "sha": "b510989f1e12fd1e6a2efbc5306b125289cb796c48e5ffefe7e4d4ce26390a50",
+  "iv": "06165c6f13079b670d82d7966b573bb2"
+ },
+ {
+  "i": 45,
+  "name": "hr_c_prog",
+  "off": 89385984,
+  "sz": 65536,
+  "la": 92536832,
+  "ty": 3,
+  "sha": "79ea2664e742c6a0bc7005052473c7c4f04292eaafab625b2774ffad0e8db9aa",
+  "iv": "56a5a4a954ccbbab12e8e3f33fedd47f"
+ },
+ {
+  "i": 46,
+  "name": "hr_d_prog",
+  "off": 89451520,
+  "sz": 262144,
+  "la": 92667904,
+  "ty": 3,
+  "sha": "805be6894a099e740c4aac0931db28f2fcfa0f105b0bc3fe448c0354174cc586",
+  "iv": "e68c5d2596609f68ac4975cf14ed345b"
+ },
+ {
+  "i": 47,
+  "name": "hr_c_ddr",
+  "off": 89713664,
+  "sz": 524288,
+  "la": 92930048,
+  "ty": 3,
+  "sha": "d4478e26b8b7b385f5f1483bba7d4a89a51005be45c07d280ba270b9996963c6",
+  "iv": "ff0bebb956078576a4678df1ea86c71b"
+ }
+]

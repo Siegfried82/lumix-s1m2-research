@@ -1,0 +1,78 @@
+{
+  "scope": "Static single-LUT UI upload chain; no device experiment or file transfer executed",
+  "sources": [
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/C2604q8.java",
+      "sha256": "23d41dbf83edf0a2a4a81c024f04f744573b101887066707f16f801d5147dd17",
+      "hits": {
+        "public final void S(": [
+          244
+        ],
+        "public final void T(": [
+          353
+        ],
+        "public final void l(": [
+          402
+        ]
+      }
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/p281z5/RunnableC2534j8.java",
+      "sha256": "677acfd6dfbd9dfeb732ed4076d4aca165868aeaab159e0168ab081bb966a622",
+      "hits": {
+        "setTransferPath(": [
+          40
+        ],
+        "setFileSize(": [
+          37
+        ]
+      }
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/Y5/l.java",
+      "sha256": "a95e67bcfafea9aed0ad92a9a665c0699a5f6238cc58ba7035f857683bbaafcb",
+      "hits": {
+        "A6.r.O(": [
+          37
+        ],
+        "dataBean.setBufsize(fileSize)": [
+          62
+        ]
+      }
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/A6/r.java",
+      "sha256": "0aea42d1d912de206ffe62cd0fbec9931391ccc45fea4325a886a6f10399fb85",
+      "hits": {
+        "public static a N(": [
+          584
+        ],
+        "aVar2.c(bArr)": [
+          601,
+          1624
+        ]
+      }
+    },
+    {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/util/C1410v.java",
+      "sha256": "90807752f6f18b973aa486938b177b465e105ef5216ca9f69acb741d49270ea8",
+      "hits": {
+        "public static String j0(": [
+          1700
+        ],
+        "public static String I(": [
+          263
+        ],
+        "public static void q(": [
+          2273
+        ]
+      }
+    }
+  ],
+  "findings": [
+    "Non-asset LUT path is passed through unchanged by j0; asset branch copies bytes via q.",
+    "S reads file bytes and passes byte array directly to r.N; N places unchanged bytes in 0x9924 DATA.",
+    "USB start callback reports local fileSize as bufsize; single-file uploads normally result in one file-sized chunk, not fixed 61440 bytes.",
+    "No observed numeric table conversion in this located chain; earlier file creation, other routes, and camera conversion remain open."
+  ]
+}

@@ -1,0 +1,123 @@
+
+<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GH2__V11.bin.plaintext:     file format binary
+
+
+Disassembly of section .data:
+
+7bcd6107 <.data+0x9d6707>:
+7bcd6107:	fa fe f4 fe 	add	-268,sp
+7bcd610b:	47 24       	mov	a1,(36,sp)
+7bcd610d:	00          	clr	d0
+7bcd610e:	42 0c       	mov	d0,(12,sp)
+7bcd6110:	42 08       	mov	d0,(8,sp)
+7bcd6112:	fc a8 18 c1 	movbu	(0x7435c118),d0
+7bcd6116:	35 74 
+7bcd6118:	f1 d3       	mov	a0,d3
+7bcd611a:	42 18       	mov	d0,(24,sp)
+7bcd611c:	f8 40 09    	movbu	(9,a0),d0
+7bcd611f:	3c          	mov	sp,a0
+7bcd6120:	f8 92 2c    	movbu	d0,(44,sp)
+7bcd6123:	20 38       	add	56,a0
+7bcd6125:	43 28       	mov	a0,(40,sp)
+7bcd6127:	47 38       	mov	a1,(56,sp)
+7bcd6129:	94          	mov	a1,a0
+7bcd612a:	00          	clr	d0
+7bcd612b:	81          	mov	d0,d1
+7bcd612c:	95 00       	mov	0,a1
+7bcd612e:	cd 00 06 a0 	call	0x7bcd672e,[d2,a2],12
+7bcd6132:	0c 
+7bcd6133:	f1 ec       	mov	d3,a0
+7bcd6135:	70          	mov	(a0),d0
+7bcd6136:	3f          	mov	sp,a3
+7bcd6137:	23 50       	add	80,a3
+7bcd6139:	9c          	mov	a3,a0
+7bcd613a:	f1 e1       	mov	d0,a1
+7bcd613c:	80 02       	mov	2,d0
+7bcd613e:	04          	clr	d1
+7bcd613f:	dd 18 f8 47 	call	0x40155957,[d2,d3,a2,a3],52
+7bcd6143:	c4 f0 34 
+7bcd6146:	82          	mov	d0,d2
+7bcd6147:	aa 00       	cmp	0,d2
+7bcd6149:	c8 05       	beq	0x7bcd614e
+7bcd614b:	cc a3 05    	jmp	0x7bcd66ee
+7bcd614e:	80 01       	mov	1,d0
+7bcd6150:	42 08       	mov	d0,(8,sp)
+7bcd6152:	3c          	mov	sp,a0
+7bcd6153:	20 74       	add	116,a0
+7bcd6155:	43 1c       	mov	a0,(28,sp)
+7bcd6157:	cd 9d f8 00 	call	0x7bcd59f4,[],4
+7bcd615b:	04 
+7bcd615c:	82          	mov	d0,d2
+7bcd615d:	aa 00       	cmp	0,d2
+7bcd615f:	c8 05       	beq	0x7bcd6164
+7bcd6161:	cc 8d 05    	jmp	0x7bcd66ee
+7bcd6164:	80 01       	mov	1,d0
+7bcd6166:	42 0c       	mov	d0,(12,sp)
+7bcd6168:	80 09       	mov	9,d0
+7bcd616a:	dd d7 f1 47 	call	0x40155341,[d2,d3,a2,a3],56
+7bcd616e:	c4 f0 38 
+7bcd6171:	5c 1c       	mov	(28,sp),a0
+7bcd6173:	fc dd 00 00 	mov	-1254096896,a1
+7bcd6177:	40 b5 
+7bcd6179:	fc cc 00 00 	mov	20971520,d0
+7bcd617d:	40 01 
+7bcd617f:	cd bb f8 b0 	call	0x7bcd5a3a,[d2,a2,a3],12
+7bcd6183:	0c 
+7bcd6184:	82          	mov	d0,d2
+7bcd6185:	aa 00       	cmp	0,d2
+7bcd6187:	c8 05       	beq	0x7bcd618c
+7bcd6189:	cc 65 05    	jmp	0x7bcd66ee
+7bcd618c:	5c 1c       	mov	(28,sp),a0
+7bcd618e:	9d          	mov	a3,a1
+7bcd618f:	cd 77 f8 30 	call	0x7bcd5a06,[a2,a3],12
+7bcd6193:	0c 
+7bcd6194:	82          	mov	d0,d2
+7bcd6195:	aa 00       	cmp	0,d2
+7bcd6197:	c8 05       	beq	0x7bcd619c
+7bcd6199:	cc 55 05    	jmp	0x7bcd66ee
+7bcd619c:	5c 1c       	mov	(28,sp),a0
+7bcd619e:	cd 18 f9 f0 	call	0x7bcd5ab6,[d2,d3,a2,a3],32
+7bcd61a2:	20 
+7bcd61a3:	82          	mov	d0,d2
+7bcd61a4:	aa 00       	cmp	0,d2
+7bcd61a6:	c8 05       	beq	0x7bcd61ab
+7bcd61a8:	cc 46 05    	jmp	0x7bcd66ee
+7bcd61ab:	5c 1c       	mov	(28,sp),a0
+7bcd61ad:	cd 42 fd 00 	call	0x7bcd5eef,[],0
+7bcd61b1:	00 
+7bcd61b2:	92          	mov	a0,a2
+7bcd61b3:	f1 ed       	mov	d3,a1
+7bcd61b5:	58 18       	mov	(24,sp),d0
+7bcd61b7:	cd f3 fd f0 	call	0x7bcd5faa,[d2,d3,a2,a3],88
+7bcd61bb:	58 
+7bcd61bc:	82          	mov	d0,d2
+7bcd61bd:	aa 00       	cmp	0,d2
+7bcd61bf:	c8 05       	beq	0x7bcd61c4
+7bcd61c1:	cc 2d 05    	jmp	0x7bcd66ee
+7bcd61c4:	5c 1c       	mov	(28,sp),a0
+7bcd61c6:	fc dd 28 00 	mov	1946157096,a1
+7bcd61ca:	00 74 
+7bcd61cc:	80 10       	mov	16,d0
+7bcd61ce:	cd bc f8 a0 	call	0x7bcd5a8a,[d2,a2],12
+7bcd61d2:	0c 
+7bcd61d3:	4a 3c       	mov	d2,(60,sp)
+7bcd61d5:	58 28       	mov	(40,sp),d0
+7bcd61d7:	3d          	mov	sp,a1
+7bcd61d8:	42 cc       	mov	d0,(204,sp)
+7bcd61da:	fa d1 cc 00 	add	204,a1
+7bcd61de:	fc cc 3d 67 	mov	2077058877,d0
+7bcd61e2:	cd 7b 
+7bcd61e4:	42 d0       	mov	d0,(208,sp)
+7bcd61e6:	4a 40       	mov	d2,(64,sp)
+7bcd61e8:	80 64       	mov	100,d0
+7bcd61ea:	42 44       	mov	d0,(68,sp)
+7bcd61ec:	4a 48       	mov	d2,(72,sp)
+7bcd61ee:	80 1e       	mov	30,d0
+7bcd61f0:	42 4c       	mov	d0,(76,sp)
+7bcd61f2:	5c 1c       	mov	(28,sp),a0
+7bcd61f4:	cd 73 f9 f0 	call	0x7bcd5b67,[d2,d3,a2,a3],160
+7bcd61f8:	a0 
+7bcd61f9:	82          	mov	d0,d2
+7bcd61fa:	aa 00       	cmp	0,d2
+7bcd61fc:	c8 05       	beq	0x7bcd6201
+7bcd61fe:	cc f0 04    	jmp	0x7bcd66ee

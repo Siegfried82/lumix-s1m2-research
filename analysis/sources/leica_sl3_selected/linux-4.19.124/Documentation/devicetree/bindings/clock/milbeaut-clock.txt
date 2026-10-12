@@ -1,0 +1,87 @@
+Milbeaut SoCs Clock Controller Binding
+----------------------------------------
+Milbeaut SoCs Clock controller is an integrated clock controller, which
+generates and supplies to all modules.
+
+This binding uses common clock bindings
+[1] Documentation/devicetree/bindings/clock/clock-bindings.txt
+[2] include/dt-bindings/clock/milbeaut,m20v-clock.h
+[3] include/dt-bindings/clock/milbeaut,m10v-clock.h
+
+Required properties:
+- compatible: should be one of the following:
+    "socionext,milbeaut-m10v-ccu" - for M10V SoC
+    "socionext,milbeaut-m20v-ccu" - for M20V SoC
+- reg: shall contain base address and length of clock registers
+- #clock-cells: shall be 1 for M10V SoC
+- clocks:
+    shall be an external clock for M10V SoC
+    shall be three(two) external clock for M20V SoC
+- clock-names:
+    shall be "UCLKXI", "AUMCLKI" for M20V SoC
+    and "GENCLK" is an optional.
+
+Example: Clock controller node:
+
+	clk: m10v-clk-ctrl@1d021000 {
+		compatible = "socionext,milbeaut-m10v-clk-ccu";
+		reg = <0x1d021000 0x4000>;
+		#clock-cells = <1>
+		clocks = <&clki40mhz>
+	};
+
+	clk: m20v-clk-ctrl@d152000 {
+		compatible = "socionext,milbeaut-m20v-clk-ccu";
+		reg = <0xd152000 0x5000>;
+		clocks = <&clki48mhz>, <&clki196mhz>, <&clki27mhz>;
+		clock-names = "UCLKXI", "AUMCLKI", GENCLK";
+	};
+
+Example: Required an external clock for Clock controller node:
+
+	clocks {
+		clki40mhz: clki40mhz {
+			compatible = "fixed-clock";
+			#clock-cells = <0>;
+			clock-frequency = <40000000>;
+		};
+		clki48mhz: clki48mhz {
+			compatible = "fixed-clock";
+			#clock-cells = <0>;
+			clock-frequency = <48000000>;
+		};
+		clki196mhz: clki196mhz {
+			compatible = "fixed-clock";
+			#clock-cells = <0>;
+			clock-frequency = <196000000>;
+		};
+		clki27mhz: clki27mhz {
+			compatible = "fixed-clock";
+			#clock-cells = <0>;
+			clock-frequency = <27000000>;
+		};
+	};
+
+The clock consumer shall specify the desired clock-output of the clock
+controller as below by specifying output-id in its "clk" phandle cell.
+For M10V SoC:
+    see [3]
+For M20V SoC:
+    see [2]
+
+Example: uart1 node in M10V SoC
+	uart1: serial@1e700010 {
+		compatible = "socionext,milbeaut-usio-uart";
+		reg = <0x1e700010 0x10>;
+		interrupts = <0 141 0x4>, <0 149 0x4>;
+		interrupt-names = "rx", "tx";
+		clocks = <&clk M10V_HCLK_ID>;
+	};
+
+Example: 32-bit timer node in M20V SoC
+	timer: timer@e000000
+		compatible = "socionext,milbeaut-timer";
+		reg = <0xe000000 0x20>;
+		interrupts = <0 247 0x4>;
+		clocks = <&clk M20V_RCLK_ID>;
+	};

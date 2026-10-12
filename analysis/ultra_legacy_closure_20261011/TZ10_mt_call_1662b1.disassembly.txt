@@ -1,0 +1,112 @@
+
+<LOCAL_WORKSPACE>/analysis/method2_review_20261011/decoded/TZ10_V12.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+779e1c61 <.data+0x166261>:
+779e1c61:	ca 08       	bra	0x779e1c69
+779e1c63:	98          	mov	a2,a0
+779e1c64:	cd 7a 00 f0 	call	0x779e1cde,[d2,d3,a2,a3],56
+779e1c68:	38 
+779e1c69:	f8 22 04    	mov	(4,a2),a0
+779e1c6c:	f8 04 34    	mov	(52,a0),d1
+779e1c6f:	a5 00       	cmp	0,d1
+779e1c71:	c9 03       	bne	0x779e1c74
+779e1c73:	84          	mov	d1,d0
+779e1c74:	df 20 08    	ret	[a2],8
+779e1c77:	a0 01       	cmp	1,d0
+779e1c79:	c8 10       	beq	0x779e1c89
+779e1c7b:	a0 02       	cmp	2,d0
+779e1c7d:	c8 20       	beq	0x779e1c9d
+779e1c7f:	a0 03       	cmp	3,d0
+779e1c81:	c8 30       	beq	0x779e1cb1
+779e1c83:	a0 04       	cmp	4,d0
+779e1c85:	c8 40       	beq	0x779e1cc5
+779e1c87:	ca 52       	bra	0x779e1cd9
+779e1c89:	dd 5a ef 19 	call	0x77b80be3,[d2,d3,a2],16
+779e1c8d:	00 e0 10 
+779e1c90:	85 06       	mov	6,d1
+779e1c92:	08          	clr	d2
+779e1c93:	f2 fa       	mov	d2,mdr
+779e1c95:	f2 74       	divu	d1,d0
+779e1c97:	f2 e0       	mov	mdr,d0
+779e1c99:	28 0f       	add	15,d0
+779e1c9b:	ca 40       	bra	0x779e1cdb
+779e1c9d:	dd 46 ef 19 	call	0x77b80be3,[d2,d3,a2],16
+779e1ca1:	00 e0 10 
+779e1ca4:	85 06       	mov	6,d1
+779e1ca6:	08          	clr	d2
+779e1ca7:	f2 fa       	mov	d2,mdr
+779e1ca9:	f2 74       	divu	d1,d0
+779e1cab:	f2 e0       	mov	mdr,d0
+779e1cad:	28 10       	add	16,d0
+779e1caf:	ca 2c       	bra	0x779e1cdb
+779e1cb1:	dd 32 ef 19 	call	0x77b80be3,[d2,d3,a2],16
+779e1cb5:	00 e0 10 
+779e1cb8:	85 03       	mov	3,d1
+779e1cba:	08          	clr	d2
+779e1cbb:	f2 fa       	mov	d2,mdr
+779e1cbd:	f2 74       	divu	d1,d0
+779e1cbf:	f2 e0       	mov	mdr,d0
+779e1cc1:	28 16       	add	22,d0
+779e1cc3:	ca 18       	bra	0x779e1cdb
+779e1cc5:	dd 1e ef 19 	call	0x77b80be3,[d2,d3,a2],16
+779e1cc9:	00 e0 10 
+779e1ccc:	85 07       	mov	7,d1
+779e1cce:	08          	clr	d2
+779e1ccf:	f2 fa       	mov	d2,mdr
+779e1cd1:	f2 74       	divu	d1,d0
+779e1cd3:	f2 e0       	mov	mdr,d0
+779e1cd5:	28 19       	add	25,d0
+779e1cd7:	ca 04       	bra	0x779e1cdb
+779e1cd9:	80 6c       	mov	108,d0
+779e1cdb:	df 80 08    	ret	[d2],8
+779e1cde:	92          	mov	a0,a2
+779e1cdf:	50          	inc4	a0
+779e1ce0:	43 04       	mov	a0,(4,sp)
+779e1ce2:	f0 00       	mov	(a0),a0
+779e1ce4:	f8 00 34    	mov	(52,a0),d0
+779e1ce7:	cd 90 ff 80 	call	0x779e1c77,[d2],8
+779e1ceb:	08 
+779e1cec:	5c 04       	mov	(4,sp),a0
+779e1cee:	f8 0e 5c    	mov	(92,a2),d3
+779e1cf1:	f0 00       	mov	(a0),a0
+779e1cf3:	82          	mov	d0,d2
+779e1cf4:	f8 00 34    	mov	(52,a0),d0
+779e1cf7:	3c          	mov	sp,a0
+779e1cf8:	f8 92 08    	movbu	d0,(8,sp)
+779e1cfb:	20 0c       	add	12,a0
+779e1cfd:	dd 68 c0 00 	call	0x779edd65,[a2],8
+779e1d01:	00 20 08 
+779e1d04:	58 0c       	mov	(12,sp),d0
+779e1d06:	a0 02       	cmp	2,d0
+779e1d08:	c8 06       	beq	0x779e1d0e
+779e1d0a:	a0 03       	cmp	3,d0
+779e1d0c:	c9 3f       	bne	0x779e1d4b
+779e1d0e:	f8 06 38    	mov	(56,a2),d1
+779e1d11:	a5 00       	cmp	0,d1
+779e1d13:	c8 0e       	beq	0x779e1d21
+779e1d15:	22 4c       	add	76,a2
+779e1d17:	72          	mov	(a2),d0
+779e1d18:	a0 01       	cmp	1,d0
+779e1d1a:	c8 07       	beq	0x779e1d21
+779e1d1c:	76          	mov	(a2),d1
+779e1d1d:	a5 03       	cmp	3,d1
+779e1d1f:	c9 07       	bne	0x779e1d26
+779e1d21:	80 6c       	mov	108,d0
+779e1d23:	df f0 38    	ret	[d2,d3,a2,a3],56
+779e1d26:	88          	mov	d2,d0
+779e1d27:	cd 89 01 80 	call	0x779e1eb0,[d2],4
+779e1d2b:	04 
+779e1d2c:	14          	extbu	d0
+779e1d2d:	a0 01       	cmp	1,d0
+779e1d2f:	c9 19       	bne	0x779e1d48
+779e1d31:	5c 04       	mov	(4,sp),a0
+779e1d33:	f0 00       	mov	(a0),a0
+779e1d35:	f8 00 34    	mov	(52,a0),d0
+779e1d38:	cd 3f ff 80 	call	0x779e1c77,[d2],8
+779e1d3c:	08 
+779e1d3d:	82          	mov	d0,d2
+779e1d3e:	cd 72 01  	call	0x779e1eb0,[d2],4
+779e1d42:	 

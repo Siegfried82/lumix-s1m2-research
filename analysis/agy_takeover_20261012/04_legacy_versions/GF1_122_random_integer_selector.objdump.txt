@@ -1,0 +1,75 @@
+
+<LOCAL_WORKSPACE>/analysis/method0_review_20261011/decoded/GF1__122.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+4013a88c <.data+0x13a88c>:
+4013a88c:	14          	extbu	d0
+4013a88d:	a0 01       	cmp	1,d0
+4013a88f:	c2 05       	bge	0x4013a894
+4013a891:	cc 8c 00    	jmp	0x4013a91d
+4013a894:	a0 0a       	cmp	10,d0
+4013a896:	c3 05       	ble	0x4013a89b
+4013a898:	cc 85 00    	jmp	0x4013a91d
+4013a89b:	28 ff       	add	-1,d0
+4013a89d:	54          	asl2	d0
+4013a89e:	fc dc ac 69 	mov	1078684076,a0
+4013a8a2:	4b 40 
+4013a8a4:	f3 80       	mov	(d0,a0),a0
+4013a8a6:	f0 f4       	jmp	(a0)
+4013a8a8:	00          	clr	d0
+4013a8a9:	df 80 08    	ret	[d2],8
+4013a8ac:	80 01       	mov	1,d0
+4013a8ae:	df 80 08    	ret	[d2],8
+4013a8b1:	80 05       	mov	5,d0
+4013a8b3:	ca 6c       	bra	0x4013a91f
+4013a8b5:	80 06       	mov	6,d0
+4013a8b7:	ca 68       	bra	0x4013a91f
+4013a8b9:	dd c2 7b f7 	call	0x400b247b,[d2,d3,a2],16
+4013a8bd:	ff e0 10 
+4013a8c0:	85 06       	mov	6,d1
+4013a8c2:	08          	clr	d2
+4013a8c3:	f2 fa       	mov	d2,mdr
+4013a8c5:	f2 74       	divu	d1,d0
+4013a8c7:	f2 e0       	mov	mdr,d0
+4013a8c9:	28 07       	add	7,d0
+4013a8cb:	ca 54       	bra	0x4013a91f
+4013a8cd:	dd ae 7b f7 	call	0x400b247b,[d2,d3,a2],16
+4013a8d1:	ff e0 10 
+4013a8d4:	85 06       	mov	6,d1
+4013a8d6:	08          	clr	d2
+4013a8d7:	f2 fa       	mov	d2,mdr
+4013a8d9:	f2 74       	divu	d1,d0
+4013a8db:	f2 e0       	mov	mdr,d0
+4013a8dd:	28 0d       	add	13,d0
+4013a8df:	ca 40       	bra	0x4013a91f
+4013a8e1:	dd 9a 7b f7 	call	0x400b247b,[d2,d3,a2],16
+4013a8e5:	ff e0 10 
+4013a8e8:	85 06       	mov	6,d1
+4013a8ea:	08          	clr	d2
+4013a8eb:	f2 fa       	mov	d2,mdr
+4013a8ed:	f2 74       	divu	d1,d0
+4013a8ef:	f2 e0       	mov	mdr,d0
+4013a8f1:	28 0e       	add	14,d0
+4013a8f3:	ca 2c       	bra	0x4013a91f
+4013a8f5:	dd 86 7b f7 	call	0x400b247b,[d2,d3,a2],16
+4013a8f9:	ff e0 10 
+4013a8fc:	85 03       	mov	3,d1
+4013a8fe:	08          	clr	d2
+4013a8ff:	f2 fa       	mov	d2,mdr
+4013a901:	f2 74       	divu	d1,d0
+4013a903:	f2 e0       	mov	mdr,d0
+4013a905:	28 14       	add	20,d0
+4013a907:	ca 18       	bra	0x4013a91f
+4013a909:	dd 72 7b f7 	call	0x400b247b,[d2,d3,a2],16
+4013a90d:	ff e0 10 
+4013a910:	85 07       	mov	7,d1
+4013a912:	08          	clr	d2
+4013a913:	f2 fa       	mov	d2,mdr
+4013a915:	f2 74       	divu	d1,d0
+4013a917:	f2 e0       	mov	mdr,d0
+4013a919:	28 17       	add	23,d0
+4013a91b:	ca 04       	bra	0x4013a91f
+4013a91d:	80 1e       	mov	30,d0
+4013a91f:	df 80 08    	ret	[d2],8

@@ -1,0 +1,53 @@
+
+analysis/sources/tether_windows_2_12/Lmxptpif.dll:	file format coff-x86-64
+
+Disassembly of section .text:
+
+0000000180010530 <Lmx_func_api_Get_Error>:
+180010530: 8b 05 ce e1 24 00           	movl	0x24e1ce(%rip), %eax    # 0x18025e704
+180010536: c3                          	retq
+180010537: cc                          	int3
+180010538: cc                          	int3
+180010539: cc                          	int3
+18001053a: cc                          	int3
+18001053b: cc                          	int3
+18001053c: cc                          	int3
+18001053d: cc                          	int3
+18001053e: cc                          	int3
+18001053f: cc                          	int3
+180010540: 48 89 5c 24 08              	movq	%rbx, 0x8(%rsp)
+180010545: 8d 82 00 00 ff ef           	leal	-0x10010000(%rdx), %eax
+18001054b: 33 db                       	xorl	%ebx, %ebx
+18001054d: 3d fe ff 00 00              	cmpl	$0xfffe, %eax           # imm = 0xFFFE
+180010552: 4c 8d 0d 97 8e 24 00        	leaq	0x248e97(%rip), %r9     # 0x1802593f0
+180010559: 44 8b d2                    	movl	%edx, %r10d
+18001055c: 44 0f b6 d9                 	movzbl	%cl, %r11d
+180010560: 48 8d 0d a9 91 24 00        	leaq	0x2491a9(%rip), %rcx    # 0x180259710
+180010567: ba ff ff 01 10              	movl	$0x1001ffff, %edx       # imm = 0x1001FFFF
+18001056c: 4c 0f 47 c9                 	cmovaq	%rcx, %r9
+180010570: 44 0f b7 c3                 	movzwl	%bx, %r8d
+180010574: b9 00 00 00 ff              	movl	$0xff000000, %ecx       # imm = 0xFF000000
+180010579: 0f 47 d1                    	cmoval	%ecx, %edx
+18001057c: 41 8b 01                    	movl	(%r9), %eax
+18001057f: 41 3b c2                    	cmpl	%r10d, %eax
+180010582: 74 19                       	je	0x18001059d <Lmx_func_api_Get_Error+0x6d>
+180010584: 3b c2                       	cmpl	%edx, %eax
+180010586: 74 2a                       	je	0x1800105b2 <Lmx_func_api_Get_Error+0x82>
+180010588: 66 41 ff c0                 	incw	%r8w
+18001058c: 41 0f b7 c0                 	movzwl	%r8w, %eax
+180010590: 48 8d 0c 40                 	leaq	(%rax,%rax,2), %rcx
+180010594: 41 8b 04 89                 	movl	(%r9,%rcx,4), %eax
+180010598: 41 3b c2                    	cmpl	%r10d, %eax
+18001059b: 75 e7                       	jne	0x180010584 <Lmx_func_api_Get_Error+0x54>
+18001059d: 41 0f b7 c8                 	movzwl	%r8w, %ecx
+1800105a1: 8b c3                       	movl	%ebx, %eax
+1800105a3: 48 8d 14 49                 	leaq	(%rcx,%rcx,2), %rdx
+1800105a7: 45 88 5c 91 08              	movb	%r11b, 0x8(%r9,%rdx,4)
+1800105ac: 48 8b 5c 24 08              	movq	0x8(%rsp), %rbx
+1800105b1: c3                          	retq
+1800105b2: 48 8b 5c 24 08              	movq	0x8(%rsp), %rbx
+1800105b7: b8 05 00 02 00              	movl	$0x20005, %eax          # imm = 0x20005
+1800105bc: c3                          	retq
+1800105bd: cc                          	int3
+1800105be: cc                          	int3
+1800105bf: cc                          	int3

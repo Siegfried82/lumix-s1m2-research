@@ -1,0 +1,14 @@
+=== camsetting WRITE probe 18:43:10 ===
+--- getstate (health) ---
+<?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>ok</result><state><batt>5/5</batt><batt_per>-1</batt_per><cammode>play</cammode><sdcardstatus>write_enable</sdcardstatus><sd_memory>unset</sd_memory><version>VD4.30</version><play>stop</play><temperature>low</temperature><sd_access>off</sd_acc
+--- startsenddata type=camsetting value=65533 (NO session) ---
+<?xml version="1.0" encoding="UTF-8"?>
+<camrply>
+<result>ok</result>
+<method>separate</method>
+<bufsize>61460</bufsize>
+</camrply>
+--- getstate (after) ---
+<?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>ok</result><state><batt>5/5</batt><batt_per>-1</batt_per><cammode>play</cammode><sdcardstatus>write_enable</sdcardstatus><sd_memory>unset</sd_memory><version>VD4.30</version><play>stop</play><temperature>low</temperature><sd_access>off</sd_acc

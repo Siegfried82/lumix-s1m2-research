@@ -1,0 +1,63 @@
+Milbeaut Updown counter driver.
+
+1. Overview
+
+This driver runs Updown counter in one of the following modes.
+ - Updown count mode
+ - Phase difference count mode (2 multiplication)
+ - Phase difference count mode (4 multiplication)
+
+The following settings are fixed within the driver. (User can not change)
+ - Counter value is reloaded with overflow or underflow
+ - Rising edge detection
+ - Overflow or underflow interrupt enabled (compare interrupt not support)
+
+2. Usage
+
+ 2.1 Basic flow : wait until the counter will be changed to the specified value.
+   1) Set user preset reload value
+   2) Start Updown counter
+   3) Wait for an interrupt in the user program
+
+ 2.1 Basic flow : check counter value while running
+   1) Set user preset reload value
+   2) Start Updown counter
+   3) Get current count value while you want to read value
+   4) Stop Updown counter
+
+   Each procedures can be done by next command. 
+    - Set user preset reload value (sample preset counter value is 9)
+      $ echo 9 > /sys/bus/iio/devices/iio\:device0/in_count0_preset
+
+      note: If you don't set in_count0_preset, default value "0xffff" will be set in the driver.
+            The timing reflected in the register is at start Updown counter.
+
+    - Start Updown counter
+      $ echo 1 > /sys/bus/iio/devices/iio\:device0/in_count0_en
+
+    - Wait for an interrupt in the user program
+      $ Please refer to "/tools/iio/iio_event_monitor.c"
+
+    - Get current count value
+      $ cat /sys/bus/iio/devices/iio\:device0/in_count0_raw
+
+    - Stop Updown counter
+      $ echo 0 > /sys/bus/iio/devices/iio\:device0/in_count0_en
+
+ 2.3 option
+   Get user preset reload value
+   Get Updown counter active status
+
+    - Get user preset reload value
+      cat /sys/bus/iio/devices/iio\:device0/in_count0_preset
+
+    - Get Updown counter active status
+      cat /sys/bus/iio/devices/iio\:device0/in_count0_en
+
+3. Supplement
+
+The mode is confirmed with the <> value of cms_type on devicetree.
+ 1: Updown button (updown counter mode)
+ 2: Rotary encoder (phase difference counter mode)
+
+See Documentation/devicetree/bindings/iio/counter/milbeaut-updown_cnt.txt for details.

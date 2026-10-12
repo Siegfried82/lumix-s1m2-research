@@ -1,0 +1,346 @@
+[
+  {
+    "role": "controller",
+    "identical_tensor_keys": true,
+    "different_tensors": [
+      {
+        "tensor": "net.dec.0.0.bias",
+        "max_abs": 0.0028232391923666
+      },
+      {
+        "tensor": "net.dec.0.0.weight",
+        "max_abs": 0.004855413921177387
+      },
+      {
+        "tensor": "net.dec.0.2.bias",
+        "max_abs": 0.0029904423281550407
+      },
+      {
+        "tensor": "net.dec.0.2.weight",
+        "max_abs": 0.007570147514343262
+      },
+      {
+        "tensor": "net.dec.1.0.bias",
+        "max_abs": 0.004065260291099548
+      },
+      {
+        "tensor": "net.dec.1.0.weight",
+        "max_abs": 0.007985500618815422
+      },
+      {
+        "tensor": "net.dec.1.2.bias",
+        "max_abs": 0.00258520245552063
+      },
+      {
+        "tensor": "net.dec.1.2.weight",
+        "max_abs": 0.009192216210067272
+      },
+      {
+        "tensor": "net.dec.2.0.bias",
+        "max_abs": 0.001909727230668068
+      },
+      {
+        "tensor": "net.dec.2.0.weight",
+        "max_abs": 0.008325554430484772
+      },
+      {
+        "tensor": "net.dec.2.2.bias",
+        "max_abs": 0.0032365992665290833
+      },
+      {
+        "tensor": "net.dec.2.2.weight",
+        "max_abs": 0.011941339820623398
+      },
+      {
+        "tensor": "net.enc.0.0.bias",
+        "max_abs": 0.0032905638217926025
+      },
+      {
+        "tensor": "net.enc.0.0.weight",
+        "max_abs": 0.010371878743171692
+      },
+      {
+        "tensor": "net.enc.0.2.bias",
+        "max_abs": 0.0018472597002983093
+      },
+      {
+        "tensor": "net.enc.0.2.weight",
+        "max_abs": 0.007721789181232452
+      },
+      {
+        "tensor": "net.enc.1.0.bias",
+        "max_abs": 0.0018773153424263
+      },
+      {
+        "tensor": "net.enc.1.0.weight",
+        "max_abs": 0.003893683897331357
+      },
+      {
+        "tensor": "net.enc.1.2.bias",
+        "max_abs": 0.0034362971782684326
+      },
+      {
+        "tensor": "net.enc.1.2.weight",
+        "max_abs": 0.005759239196777344
+      },
+      {
+        "tensor": "net.enc.2.0.bias",
+        "max_abs": 0.004337180405855179
+      },
+      {
+        "tensor": "net.enc.2.0.weight",
+        "max_abs": 0.004596801474690437
+      },
+      {
+        "tensor": "net.enc.2.2.bias",
+        "max_abs": 0.003745848312973976
+      },
+      {
+        "tensor": "net.enc.2.2.weight",
+        "max_abs": 0.0042520686984062195
+      },
+      {
+        "tensor": "net.mid.0.bias",
+        "max_abs": 0.0022303909063339233
+      },
+      {
+        "tensor": "net.mid.0.weight",
+        "max_abs": 0.003542160615324974
+      },
+      {
+        "tensor": "net.mid.2.bias",
+        "max_abs": 0.00234236940741539
+      },
+      {
+        "tensor": "net.mid.2.weight",
+        "max_abs": 0.0036434531211853027
+      },
+      {
+        "tensor": "net.out.bias",
+        "max_abs": 0.0073282718658447266
+      },
+      {
+        "tensor": "net.out.weight",
+        "max_abs": 0.03063872456550598
+      }
+    ],
+    "only_embedded": [],
+    "only_public": []
+  },
+  {
+    "role": "rarm",
+    "identical_tensor_keys": true,
+    "different_tensors": [
+      {
+        "tensor": "betas.0.bias",
+        "max_abs": 0.0038358778692781925
+      },
+      {
+        "tensor": "betas.1.bias",
+        "max_abs": 0.002958381548523903
+      },
+      {
+        "tensor": "betas.2.bias",
+        "max_abs": 0.0042368401773273945
+      },
+      {
+        "tensor": "betas.3.bias",
+        "max_abs": 0.004571929108351469
+      },
+      {
+        "tensor": "betas.4.bias",
+        "max_abs": 0.003399790031835437
+      },
+      {
+        "tensor": "betas.5.bias",
+        "max_abs": 0.006049830466508865
+      },
+      {
+        "tensor": "betas.6.bias",
+        "max_abs": 0.006986985914409161
+      },
+      {
+        "tensor": "betas.7.bias",
+        "max_abs": 0.006195164285600185
+      },
+      {
+        "tensor": "body.0.c1.bias",
+        "max_abs": 0.006719223223626614
+      },
+      {
+        "tensor": "body.0.c1.weight",
+        "max_abs": 0.015628572553396225
+      },
+      {
+        "tensor": "body.0.c2.bias",
+        "max_abs": 0.0038359351456165314
+      },
+      {
+        "tensor": "body.0.c2.weight",
+        "max_abs": 0.01638133078813553
+      },
+      {
+        "tensor": "body.1.c1.bias",
+        "max_abs": 0.0055620381608605385
+      },
+      {
+        "tensor": "body.1.c1.weight",
+        "max_abs": 0.015768393874168396
+      },
+      {
+        "tensor": "body.1.c2.bias",
+        "max_abs": 0.0029584160074591637
+      },
+      {
+        "tensor": "body.1.c2.weight",
+        "max_abs": 0.015987973660230637
+      },
+      {
+        "tensor": "body.2.c1.bias",
+        "max_abs": 0.0031388476490974426
+      },
+      {
+        "tensor": "body.2.c1.weight",
+        "max_abs": 0.015387127175927162
+      },
+      {
+        "tensor": "body.2.c2.bias",
+        "max_abs": 0.004236954730004072
+      },
+      {
+        "tensor": "body.2.c2.weight",
+        "max_abs": 0.014522026292979717
+      },
+      {
+        "tensor": "body.3.c1.bias",
+        "max_abs": 0.006841784343123436
+      },
+      {
+        "tensor": "body.3.c1.weight",
+        "max_abs": 0.016557365655899048
+      },
+      {
+        "tensor": "body.3.c2.bias",
+        "max_abs": 0.004571974277496338
+      },
+      {
+        "tensor": "body.3.c2.weight",
+        "max_abs": 0.015655770897865295
+      },
+      {
+        "tensor": "body.4.c1.bias",
+        "max_abs": 0.004040751606225967
+      },
+      {
+        "tensor": "body.4.c1.weight",
+        "max_abs": 0.021063437685370445
+      },
+      {
+        "tensor": "body.4.c2.bias",
+        "max_abs": 0.0033999551087617874
+      },
+      {
+        "tensor": "body.4.c2.weight",
+        "max_abs": 0.02090778574347496
+      },
+      {
+        "tensor": "body.5.c1.bias",
+        "max_abs": 0.005304398015141487
+      },
+      {
+        "tensor": "body.5.c1.weight",
+        "max_abs": 0.015341486781835556
+      },
+      {
+        "tensor": "body.5.c2.bias",
+        "max_abs": 0.006049868650734425
+      },
+      {
+        "tensor": "body.5.c2.weight",
+        "max_abs": 0.018342938274145126
+      },
+      {
+        "tensor": "body.6.c1.bias",
+        "max_abs": 0.005293717607855797
+      },
+      {
+        "tensor": "body.6.c1.weight",
+        "max_abs": 0.02887798845767975
+      },
+      {
+        "tensor": "body.6.c2.bias",
+        "max_abs": 0.006986669730395079
+      },
+      {
+        "tensor": "body.6.c2.weight",
+        "max_abs": 0.014669042080640793
+      },
+      {
+        "tensor": "body.7.c1.bias",
+        "max_abs": 0.005770709365606308
+      },
+      {
+        "tensor": "body.7.c1.weight",
+        "max_abs": 0.01679389178752899
+      },
+      {
+        "tensor": "body.7.c2.bias",
+        "max_abs": 0.006194860674440861
+      },
+      {
+        "tensor": "body.7.c2.weight",
+        "max_abs": 0.013513363897800446
+      },
+      {
+        "tensor": "gammas.0.bias",
+        "max_abs": 0.007413952611386776
+      },
+      {
+        "tensor": "gammas.1.bias",
+        "max_abs": 0.0068366434425115585
+      },
+      {
+        "tensor": "gammas.2.bias",
+        "max_abs": 0.006369980983436108
+      },
+      {
+        "tensor": "gammas.3.bias",
+        "max_abs": 0.008255034685134888
+      },
+      {
+        "tensor": "gammas.4.bias",
+        "max_abs": 0.008009030483663082
+      },
+      {
+        "tensor": "gammas.5.bias",
+        "max_abs": 0.01127060316503048
+      },
+      {
+        "tensor": "gammas.6.bias",
+        "max_abs": 0.012706289067864418
+      },
+      {
+        "tensor": "gammas.7.bias",
+        "max_abs": 0.008770765736699104
+      },
+      {
+        "tensor": "inp.bias",
+        "max_abs": 0.005160104483366013
+      },
+      {
+        "tensor": "inp.weight",
+        "max_abs": 0.008123025298118591
+      },
+      {
+        "tensor": "out.bias",
+        "max_abs": 0.0022620558738708496
+      },
+      {
+        "tensor": "out.weight",
+        "max_abs": 0.002671693917363882
+      }
+    ],
+    "only_embedded": [],
+    "only_public": []
+  }
+]

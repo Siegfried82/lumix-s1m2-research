@@ -1,0 +1,47 @@
+
+<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GH2__V12.bin.plaintext:     file format binary
+
+
+Disassembly of section .data:
+
+40139360 <.data+0x139960>:
+40139360:	90 c6       	mov	198,a0
+40139362:	35 74 df    	movbu	(0xdf74),d1
+40139365:	c0 1c       	blt	0x40139381
+40139367:	3e          	mov	sp,a2
+40139368:	52          	inc4	a2
+40139369:	00          	clr	d0
+4013936a:	f0 72       	movhu	d0,(a2)
+4013936c:	fc ac a2 25 	movhu	(0x740025a2),d0
+40139370:	00 74 
+40139372:	8a 01       	mov	1,d2
+40139374:	fa c8 00 10 	cmp	4096,d0
+40139378:	c9 12       	bne	0x4013938a
+4013937a:	fc a4 30 bf 	mov	(0x7400bf30),d0
+4013937e:	00 74 
+40139380:	fa e4 00 10 	or	4096,d0
+40139384:	fc 81 30 bf 	mov	d0,(0x7400bf30)
+40139388:	00 74 
+4013938a:	fc ac 58 3e 	movhu	(0x74003e58),d0
+4013938e:	00 74 
+40139390:	a8          	cmp	d2,d0
+40139391:	c8 06       	beq	0x40139397
+40139393:	80 03       	mov	3,d0
+40139395:	f0 72       	movhu	d0,(a2)
+40139397:	f0 62       	movhu	(a2),d0
+40139399:	a0 00       	cmp	0,d0
+4013939b:	c8 05       	beq	0x401393a0
+4013939d:	cc cc 00    	jmp	0x40139469
+401393a0:	2c 00 10    	mov	4096,d0
+401393a3:	dd 0a 6d f6 	call	0x400a00ad,[d2],4
+401393a7:	ff 80 04 
+401393aa:	14          	extbu	d0
+401393ab:	a0 00       	cmp	0,d0
+401393ad:	c8 1a       	beq	0x401393c7
+401393af:	fc ac b8 25 	movhu	(0x740025b8),d0
+401393b3:	00 74 
+401393b5:	a0 02       	cmp	2,d0
+401393b7:	c9 54       	bne	0x4013940b
+401393b9:	fc a4 90 c6 	mov	(0x7435c690),d0
+401393bd:	35 74 
+401393bf:	a8          	cmp	d2,d0

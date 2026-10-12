@@ -1,0 +1,6 @@
+{
+  "command": "uname -a; cat /proc/meminfo | head -n 5; cat /proc/net/dev; mount; printf '%s\\n' LUMIX_LOCAL_LINUX_PROOF_f5d41d2d54ed419baadd99c983835659 > /tmp/lab-proof.txt; cat /tmp/lab-proof.txt; test -s /tmp/lab-proof.txt",
+  "exit_code": 0,
+  "output": "Linux mlbel 4.19.124 #10 SMP Mon Oct 12 23:10:27 CST 2026 aarch64 GNU/Linux\nMemTotal:        1016836 kB\nMemFree:          995096 kB\nMemAvailable:     990848 kB\nBuffers:               0 kB\nCached:             3320 kB\nInter-|   Receive                                                |  Transmit\n face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed\n    lo:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0\nrootfs on / type rootfs (rw,size=498344k,nr_inodes=124586)\nsysfs on /sys type sysfs (rw,relatime)\nproc on /proc type proc (rw,relatime)\nconfigfs on /sys/kernel/config type configfs (rw,relatime)\ndevtmpfs on /dev type devtmpfs (rw,relatime,size=498344k,nr_inodes=124586,mode=755)\nffs0 on /dev/ffs0 type functionfs (rw,relatime)\nLUMIX_LOCAL_LINUX_PROOF_f5d41d2d54ed419baadd99c983835659\n",
+  "proof": "LUMIX_LOCAL_LINUX_PROOF_f5d41d2d54ed419baadd99c983835659"
+}

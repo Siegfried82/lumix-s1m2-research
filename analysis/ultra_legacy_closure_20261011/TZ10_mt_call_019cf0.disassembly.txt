@@ -1,0 +1,123 @@
+
+<LOCAL_WORKSPACE>/analysis/method2_review_20261011/decoded/TZ10_V12.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+778956a0 <.data+0x19ca0>:
+778956a0:	2a 86       	add	-122,d2
+778956a2:	f8 c2 0f    	asl	15,d2
+778956a5:	f8 c5 11    	lsr	17,d1
+778956a8:	f2 16       	or	d1,d2
+778956aa:	77          	mov	(a3),d1
+778956ab:	f1 52       	add	a0,d2
+778956ad:	f1 d4       	mov	a1,d0
+778956af:	f2 30       	not	d0
+778956b1:	f2 18       	or	d2,d0
+778956b3:	f1 d3       	mov	a0,d3
+778956b5:	f2 2c       	xor	d3,d0
+778956b7:	e4          	add	d1,d0
+778956b8:	f1 58       	add	a2,d0
+778956ba:	5e 0c       	mov	(12,sp),a2
+778956bc:	fc c0 91 d3 	add	-343485551,d0
+778956c0:	86 eb 
+778956c2:	76          	mov	(a2),d1
+778956c3:	f1 55       	add	a1,d1
+778956c5:	66          	mov	d1,(a2)
+778956c6:	5d 2c       	mov	(44,sp),a1
+778956c8:	81          	mov	d0,d1
+778956c9:	7d          	mov	(a1),d3
+778956ca:	f8 c1 15    	asl	21,d1
+778956cd:	f8 c4 0b    	lsr	11,d0
+778956d0:	f2 11       	or	d0,d1
+778956d2:	ed          	add	d3,d1
+778956d3:	88          	mov	d2,d0
+778956d4:	e4          	add	d1,d0
+778956d5:	61          	mov	d0,(a1)
+778956d6:	5d 24       	mov	(36,sp),a1
+778956d8:	71          	mov	(a1),d0
+778956d9:	e8          	add	d2,d0
+778956da:	61          	mov	d0,(a1)
+778956db:	5d 28       	mov	(40,sp),a1
+778956dd:	71          	mov	(a1),d0
+778956de:	f1 50       	add	a0,d0
+778956e0:	61          	mov	d0,(a1)
+778956e1:	de f0 90    	retf	[d2,d3,a2,a3],144
+778956e4:	47 10       	mov	a1,(16,sp)
+778956e6:	42 0c       	mov	d0,(12,sp)
+778956e8:	43 08       	mov	a0,(8,sp)
+778956ea:	fc cc aa d6 	mov	19650218,d0
+778956ee:	2b 01 
+778956f0:	cd a9 00 a0 	call	0x77895799,[d2,a2],8
+778956f4:	08 
+778956f5:	58 0c       	mov	(12,sp),d0
+778956f7:	95 01       	mov	1,a1
+778956f9:	9a 00       	mov	0,a2
+778956fb:	2f 70 02    	mov	624,d3
+778956fe:	a3          	cmp	d0,d3
+778956ff:	c1 03       	bgt	0x77895702
+77895701:	83          	mov	d0,d3
+77895702:	4e 04       	mov	d3,(4,sp)
+77895704:	af 00       	cmp	0,d3
+77895706:	c8 4e       	beq	0x77895754
+77895708:	db          	setlb	
+77895709:	5f 08       	mov	(8,sp),a3
+7789570b:	f1 d4       	mov	a1,d0
+7789570d:	54          	asl2	d0
+7789570e:	f1 63       	add	d0,a3
+77895710:	fc dc fc ff 	mov	-4,a0
+77895714:	ff ff 
+77895716:	f1 7c       	add	a3,a0
+77895718:	74          	mov	(a0),d1
+77895719:	78          	mov	(a0),d2
+7789571a:	5c 10       	mov	(16,sp),a0
+7789571c:	7f          	mov	(a3),d3
+7789571d:	f1 d8       	mov	a2,d0
+7789571f:	54          	asl2	d0
+77895720:	f3 80       	mov	(d0,a0),a0
+77895722:	f8 c6 1e    	lsr	30,d2
+77895725:	f2 29       	xor	d2,d1
+77895727:	fd 15 0d 66 	udfu01	1664525,d1
+7789572b:	19 00 
+7789572d:	f2 2d       	xor	d3,d1
+7789572f:	f1 59       	add	a2,d1
+77895731:	f1 51       	add	a0,d1
+77895733:	67          	mov	d1,(a3)
+77895734:	45          	inc	a1
+77895735:	49          	inc	a2
+77895736:	fa d9 70 02 	cmp	624,a1
+7789573a:	c0 0b       	blt	0x77895745
+7789573c:	5c 08       	mov	(8,sp),a0
+7789573e:	95 01       	mov	1,a1
+77895740:	fa 00 bc 09 	mov	(2492,a0),d0
+77895744:	60          	mov	d0,(a0)
+77895745:	58 0c       	mov	(12,sp),d0
+77895747:	f1 a2       	cmp	d0,a2
+77895749:	c0 04       	blt	0x7789574d
+7789574b:	9a 00       	mov	0,a2
+7789574d:	58 04       	mov	(4,sp),d0
+7789574f:	28 ff       	add	-1,d0
+77895751:	42 04       	mov	d0,(4,sp)
+77895753:	d9          	lne	
+77895754:	2f 6f 02    	mov	623,d3
+77895757:	db          	setlb	
+77895758:	5e 08       	mov	(8,sp),a2
+7789575a:	f1 d4       	mov	a1,d0
+7789575c:	54          	asl2	d0
+7789575d:	f1 62       	add	d0,a2
+7789575f:	fc dc fc ff 	mov	-4,a0
+77895763:	ff ff 
+77895765:	f1 78       	add	a2,a0
+77895767:	74          	mov	(a0),d1
+77895768:	70          	mov	(a0),d0
+77895769:	7a          	mov	(a2),d2
+7789576a:	f8 c4 1e    	lsr	30,d0
+7789576d:	f2 21       	xor	d0,d1
+7789576f:	fd 15 65 8b 	udfu01	1566083941,d1
+77895773:	58 5d 
+77895775:	f2 29       	xor	d2,d1
+77895777:	f1 15       	sub	a1,d1
+77895779:	66          	mov	d1,(a2)
+7789577a:	45          	inc	a1
+7789577b:	fa d9 70 02 	cmp	624,a1
+7789577f:	c0        	blt	0x7789578a

@@ -1,0 +1,326 @@
+
+analysis/sources/tether_windows_2_12/Lmxptpif.dll:	file format coff-x86-64
+
+Disassembly of section .text:
+
+0000000180034030 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower>:
+180034480: 40 55                       	pushq	%rbp
+180034482: 56                          	pushq	%rsi
+180034483: 41 57                       	pushq	%r15
+180034485: 48 83 ec 20                 	subq	$0x20, %rsp
+180034489: 40 32 ed                    	xorb	%bpl, %bpl
+18003448c: 4d 8b f9                    	movq	%r9, %r15
+18003448f: 8b f2                       	movl	%edx, %esi
+180034491: 4d 85 c0                    	testq	%r8, %r8
+180034494: 0f 84 9f 00 00 00           	je	0x180034539 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x509>
+18003449a: 48 89 5c 24 40              	movq	%rbx, 0x40(%rsp)
+18003449f: 48 8d 59 1c                 	leaq	0x1c(%rcx), %rbx
+1800344a3: 48 89 7c 24 48              	movq	%rdi, 0x48(%rsp)
+1800344a8: 33 ff                       	xorl	%edi, %edi
+1800344aa: 4c 89 74 24 50              	movq	%r14, 0x50(%rsp)
+1800344af: 45 8b 70 14                 	movl	0x14(%r8), %r14d
+1800344b3: 45 85 f6                    	testl	%r14d, %r14d
+1800344b6: 74 4e                       	je	0x180034506 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x4d6>
+1800344b8: 66 83 ff 1e                 	cmpw	$0x1e, %di
+1800344bc: 73 48                       	jae	0x180034506 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x4d6>
+1800344be: 3b 33                       	cmpl	(%rbx), %esi
+1800344c0: 74 2b                       	je	0x1800344ed <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x4bd>
+1800344c2: 8b 53 18                    	movl	0x18(%rbx), %edx
+1800344c5: 4c 8d 05 0c 56 1f 00        	leaq	0x1f560c(%rip), %r8     # 0x180229ad8
+1800344cc: 83 c2 1c                    	addl	$0x1c, %edx
+1800344cf: 48 8d 0d 52 56 1f 00        	leaq	0x1f5652(%rip), %rcx    # 0x180229b28
+1800344d6: 8b c2                       	movl	%edx, %eax
+1800344d8: 48 03 d8                    	addq	%rax, %rbx
+1800344db: e8 f0 24 00 00              	callq	0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>
+1800344e0: 66 ff c7                    	incw	%di
+1800344e3: 0f b7 c7                    	movzwl	%di, %eax
+1800344e6: 41 3b c6                    	cmpl	%r14d, %eax
+1800344e9: 72 cd                       	jb	0x1800344b8 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x488>
+1800344eb: eb 19                       	jmp	0x180034506 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x4d6>
+1800344ed: 48 8d 15 e4 55 1f 00        	leaq	0x1f55e4(%rip), %rdx    # 0x180229ad8
+1800344f4: 49 89 1f                    	movq	%rbx, (%r15)
+1800344f7: 48 8d 0d ca 55 1f 00        	leaq	0x1f55ca(%rip), %rcx    # 0x180229ac8
+1800344fe: 40 b5 01                    	movb	$0x1, %bpl
+180034501: e8 ca 24 00 00              	callq	0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>
+180034506: 40 0f b6 d5                 	movzbl	%bpl, %edx
+18003450a: 4c 8d 05 c7 55 1f 00        	leaq	0x1f55c7(%rip), %r8     # 0x180229ad8
+180034511: 48 8d 0d f8 55 1f 00        	leaq	0x1f55f8(%rip), %rcx    # 0x180229b10
+180034518: e8 b3 24 00 00              	callq	0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>
+18003451d: 4c 8b 74 24 50              	movq	0x50(%rsp), %r14
+180034522: 40 0f b6 c5                 	movzbl	%bpl, %eax
+180034526: 48 8b 7c 24 48              	movq	0x48(%rsp), %rdi
+18003452b: 48 8b 5c 24 40              	movq	0x40(%rsp), %rbx
+180034530: 48 83 c4 20                 	addq	$0x20, %rsp
+180034534: 41 5f                       	popq	%r15
+180034536: 5e                          	popq	%rsi
+180034537: 5d                          	popq	%rbp
+180034538: c3                          	retq
+180034539: 48 8d 15 98 55 1f 00        	leaq	0x1f5598(%rip), %rdx    # 0x180229ad8
+180034540: 48 8d 0d c1 bb 1e 00        	leaq	0x1ebbc1(%rip), %rcx    # 0x180220108
+180034547: e8 84 24 00 00              	callq	0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>
+18003454c: 32 c0                       	xorb	%al, %al
+18003454e: 48 83 c4 20                 	addq	$0x20, %rsp
+180034552: 41 5f                       	popq	%r15
+180034554: 5e                          	popq	%rsi
+180034555: 5d                          	popq	%rbp
+180034556: c3                          	retq
+180034557: cc                          	int3
+180034558: cc                          	int3
+180034559: cc                          	int3
+18003455a: cc                          	int3
+18003455b: cc                          	int3
+18003455c: cc                          	int3
+18003455d: cc                          	int3
+18003455e: cc                          	int3
+18003455f: cc                          	int3
+180034560: 48 83 ec 08                 	subq	$0x8, %rsp
+180034564: 48 85 c9                    	testq	%rcx, %rcx
+180034567: 0f 84 16 02 00 00           	je	0x180034783 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x753>
+18003456d: 48 85 d2                    	testq	%rdx, %rdx
+180034570: 0f 84 0d 02 00 00           	je	0x180034783 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x753>
+180034576: 4d 85 c9                    	testq	%r9, %r9
+180034579: 0f 84 04 02 00 00           	je	0x180034783 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x753>
+18003457f: 44 0f b7 52 14              	movzwl	0x14(%rdx), %r10d
+180034584: 48 83 c1 1c                 	addq	$0x1c, %rcx
+180034588: 48 89 3c 24                 	movq	%rdi, (%rsp)
+18003458c: 33 ff                       	xorl	%edi, %edi
+18003458e: 0f b7 d7                    	movzwl	%di, %edx
+180034591: 66 41 3b fa                 	cmpw	%r10w, %di
+180034595: 0f 83 dd 01 00 00           	jae	0x180034778 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x748>
+18003459b: 0f 1f 44 00 00              	nopl	(%rax,%rax)
+1800345a0: 8b 01                       	movl	(%rcx), %eax
+1800345a2: 41 3b c0                    	cmpl	%r8d, %eax
+1800345a5: 74 1d                       	je	0x1800345c4 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x594>
+1800345a7: 8b 41 04                    	movl	0x4(%rcx), %eax
+1800345aa: 66 ff c2                    	incw	%dx
+1800345ad: 83 c0 08                    	addl	$0x8, %eax
+1800345b0: 48 03 c8                    	addq	%rax, %rcx
+1800345b3: 66 41 3b d2                 	cmpw	%r10w, %dx
+1800345b7: 72 e7                       	jb	0x1800345a0 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x570>
+1800345b9: 48 8b 3c 24                 	movq	(%rsp), %rdi
+1800345bd: b0 01                       	movb	$0x1, %al
+1800345bf: 48 83 c4 08                 	addq	$0x8, %rsp
+1800345c3: c3                          	retq
+1800345c4: 41 89 01                    	movl	%eax, (%r9)
+1800345c7: 4c 8d 59 20                 	leaq	0x20(%rcx), %r11
+1800345cb: 8b 41 04                    	movl	0x4(%rcx), %eax
+1800345ce: 4c 8b c7                    	movq	%rdi, %r8
+1800345d1: 41 89 41 04                 	movl	%eax, 0x4(%r9)
+1800345d5: 8b 41 08                    	movl	0x8(%rcx), %eax
+1800345d8: 41 89 41 08                 	movl	%eax, 0x8(%r9)
+1800345dc: 8b 41 0c                    	movl	0xc(%rcx), %eax
+1800345df: 41 89 41 0c                 	movl	%eax, 0xc(%r9)
+1800345e3: 8b 41 10                    	movl	0x10(%rcx), %eax
+1800345e6: 41 89 41 10                 	movl	%eax, 0x10(%r9)
+1800345ea: 8b 41 14                    	movl	0x14(%rcx), %eax
+1800345ed: 41 89 41 14                 	movl	%eax, 0x14(%r9)
+1800345f1: 8b 51 18                    	movl	0x18(%rcx), %edx
+1800345f4: 44 0f b7 d2                 	movzwl	%dx, %r10d
+1800345f8: 48 89 5c 24 10              	movq	%rbx, 0x10(%rsp)
+1800345fd: 41 89 51 18                 	movl	%edx, 0x18(%r9)
+180034601: 8b 59 1c                    	movl	0x1c(%rcx), %ebx
+180034604: 48 89 74 24 18              	movq	%rsi, 0x18(%rsp)
+180034609: 48 8d 35 f0 b9 fc ff        	leaq	-0x34610(%rip), %rsi    # 0x180000000
+180034610: 41 89 59 1c                 	movl	%ebx, 0x1c(%r9)
+180034614: 41 89 79 20                 	movl	%edi, 0x20(%r9)
+180034618: 4d 85 db                    	testq	%r11, %r11
+18003461b: 74 46                       	je	0x180034663 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x633>
+18003461d: 0f b7 c2                    	movzwl	%dx, %eax
+180034620: 3d ff ff 00 00              	cmpl	$0xffff, %eax           # imm = 0xFFFF
+180034625: 77 3c                       	ja	0x180034663 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x633>
+180034627: 74 3a                       	je	0x180034663 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x633>
+180034629: ff c8                       	decl	%eax
+18003462b: 83 f8 05                    	cmpl	$0x5, %eax
+18003462e: 77 33                       	ja	0x180034663 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x633>
+180034630: 48 98                       	cltq
+180034632: 8b 8c 86 8c 47 03 00        	movl	0x3478c(%rsi,%rax,4), %ecx
+180034639: 48 03 ce                    	addq	%rsi, %rcx
+18003463c: ff e1                       	jmpq	*%rcx
+18003463e: 41 0f b6 03                 	movzbl	(%r11), %eax
+180034642: 41 b8 01 00 00 00           	movl	$0x1, %r8d
+180034648: eb 15                       	jmp	0x18003465f <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x62f>
+18003464a: 41 0f b7 03                 	movzwl	(%r11), %eax
+18003464e: 41 b8 02 00 00 00           	movl	$0x2, %r8d
+180034654: eb 09                       	jmp	0x18003465f <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x62f>
+180034656: 41 8b 03                    	movl	(%r11), %eax
+180034659: 41 b8 04 00 00 00           	movl	$0x4, %r8d
+18003465f: 41 89 41 20                 	movl	%eax, 0x20(%r9)
+180034663: 4d 03 c3                    	addq	%r11, %r8
+180034666: 83 fb 02                    	cmpl	$0x2, %ebx
+180034669: 75 14                       	jne	0x18003467f <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x64f>
+18003466b: 41 8b 00                    	movl	(%r8), %eax
+18003466e: 41 89 41 24                 	movl	%eax, 0x24(%r9)
+180034672: 49 8d 40 04                 	leaq	0x4(%r8), %rax
+180034676: 49 89 41 28                 	movq	%rax, 0x28(%r9)
+18003467a: e9 ef 00 00 00              	jmp	0x18003476e <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x73e>
+18003467f: 83 fb 01                    	cmpl	$0x1, %ebx
+180034682: 0f 85 e6 00 00 00           	jne	0x18003476e <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x73e>
+180034688: 41 89 79 30                 	movl	%edi, 0x30(%r9)
+18003468c: 48 8b d7                    	movq	%rdi, %rdx
+18003468f: 4d 85 c0                    	testq	%r8, %r8
+180034692: 74 44                       	je	0x1800346d8 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x6a8>
+180034694: 41 0f b7 c2                 	movzwl	%r10w, %eax
+180034698: 3d ff ff 00 00              	cmpl	$0xffff, %eax           # imm = 0xFFFF
+18003469d: 77 39                       	ja	0x1800346d8 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x6a8>
+18003469f: 74 37                       	je	0x1800346d8 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x6a8>
+1800346a1: ff c8                       	decl	%eax
+1800346a3: 83 f8 05                    	cmpl	$0x5, %eax
+1800346a6: 77 30                       	ja	0x1800346d8 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x6a8>
+1800346a8: 48 98                       	cltq
+1800346aa: 8b 8c 86 a4 47 03 00        	movl	0x347a4(%rsi,%rax,4), %ecx
+1800346b1: 48 03 ce                    	addq	%rsi, %rcx
+1800346b4: ff e1                       	jmpq	*%rcx
+1800346b6: 41 0f b6 00                 	movzbl	(%r8), %eax
+1800346ba: ba 01 00 00 00              	movl	$0x1, %edx
+1800346bf: eb 13                       	jmp	0x1800346d4 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x6a4>
+1800346c1: 41 0f b7 00                 	movzwl	(%r8), %eax
+1800346c5: ba 02 00 00 00              	movl	$0x2, %edx
+1800346ca: eb 08                       	jmp	0x1800346d4 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x6a4>
+1800346cc: 41 8b 00                    	movl	(%r8), %eax
+1800346cf: ba 04 00 00 00              	movl	$0x4, %edx
+1800346d4: 41 89 41 30                 	movl	%eax, 0x30(%r9)
+1800346d8: 4e 8d 1c 02                 	leaq	(%rdx,%r8), %r11
+1800346dc: 41 89 79 34                 	movl	%edi, 0x34(%r9)
+1800346e0: 48 8b d7                    	movq	%rdi, %rdx
+1800346e3: 4d 85 db                    	testq	%r11, %r11
+1800346e6: 74 44                       	je	0x18003472c <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x6fc>
+1800346e8: 41 0f b7 c2                 	movzwl	%r10w, %eax
+1800346ec: 3d ff ff 00 00              	cmpl	$0xffff, %eax           # imm = 0xFFFF
+1800346f1: 77 39                       	ja	0x18003472c <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x6fc>
+1800346f3: 74 37                       	je	0x18003472c <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x6fc>
+1800346f5: ff c8                       	decl	%eax
+1800346f7: 83 f8 05                    	cmpl	$0x5, %eax
+1800346fa: 77 30                       	ja	0x18003472c <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x6fc>
+1800346fc: 48 98                       	cltq
+1800346fe: 8b 8c 86 bc 47 03 00        	movl	0x347bc(%rsi,%rax,4), %ecx
+180034705: 48 03 ce                    	addq	%rsi, %rcx
+180034708: ff e1                       	jmpq	*%rcx
+18003470a: 41 0f b6 03                 	movzbl	(%r11), %eax
+18003470e: ba 01 00 00 00              	movl	$0x1, %edx
+180034713: eb 13                       	jmp	0x180034728 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x6f8>
+180034715: 41 0f b7 03                 	movzwl	(%r11), %eax
+180034719: ba 02 00 00 00              	movl	$0x2, %edx
+18003471e: eb 08                       	jmp	0x180034728 <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x6f8>
+180034720: 41 8b 03                    	movl	(%r11), %eax
+180034723: ba 04 00 00 00              	movl	$0x4, %edx
+180034728: 41 89 41 34                 	movl	%eax, 0x34(%r9)
+18003472c: 4e 8d 04 1a                 	leaq	(%rdx,%r11), %r8
+180034730: 41 89 79 38                 	movl	%edi, 0x38(%r9)
+180034734: 4d 85 c0                    	testq	%r8, %r8
+180034737: 74 35                       	je	0x18003476e <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x73e>
+180034739: 41 0f b7 c2                 	movzwl	%r10w, %eax
+18003473d: 3d ff ff 00 00              	cmpl	$0xffff, %eax           # imm = 0xFFFF
+180034742: 77 2a                       	ja	0x18003476e <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x73e>
+180034744: 74 28                       	je	0x18003476e <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x73e>
+180034746: ff c8                       	decl	%eax
+180034748: 83 f8 05                    	cmpl	$0x5, %eax
+18003474b: 77 21                       	ja	0x18003476e <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x73e>
+18003474d: 48 98                       	cltq
+18003474f: 8b 8c 86 d4 47 03 00        	movl	0x347d4(%rsi,%rax,4), %ecx
+180034756: 48 03 ce                    	addq	%rsi, %rcx
+180034759: ff e1                       	jmpq	*%rcx
+18003475b: 41 0f b6 00                 	movzbl	(%r8), %eax
+18003475f: eb 09                       	jmp	0x18003476a <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x73a>
+180034761: 41 0f b7 00                 	movzwl	(%r8), %eax
+180034765: eb 03                       	jmp	0x18003476a <LMX_func_api_RecInfo_Flash_Set_Wireless_ComPower+0x73a>
+180034767: 41 8b 00                    	movl	(%r8), %eax
+18003476a: 41 89 41 38                 	movl	%eax, 0x38(%r9)
+18003476e: 48 8b 5c 24 10              	movq	0x10(%rsp), %rbx
+180034773: 48 8b 74 24 18              	movq	0x18(%rsp), %rsi
+180034778: 48 8b 3c 24                 	movq	(%rsp), %rdi
+18003477c: b0 01                       	movb	$0x1, %al
+18003477e: 48 83 c4 08                 	addq	$0x8, %rsp
+180034782: c3                          	retq
+180034783: 32 c0                       	xorb	%al, %al
+180034785: 48 83 c4 08                 	addq	$0x8, %rsp
+180034789: c3                          	retq
+18003478a: 66 90                       	nop
+18003478c: 3e 46 03 00                 	addl	%ds:(%rax), %r8d
+180034790: 3e 46 03 00                 	addl	%ds:(%rax), %r8d
+180034794: 4a 46 03 00                 	addl	(%rax), %r8d
+180034798: 4a 46 03 00                 	addl	(%rax), %r8d
+18003479c: 56                          	pushq	%rsi
+18003479d: 46 03 00                    	addl	(%rax), %r8d
+1800347a0: 56                          	pushq	%rsi
+1800347a1: 46 03 00                    	addl	(%rax), %r8d
+1800347a4: b6 46                       	movb	$0x46, %dh
+1800347a6: 03 00                       	addl	(%rax), %eax
+1800347a8: b6 46                       	movb	$0x46, %dh
+1800347aa: 03 00                       	addl	(%rax), %eax
+1800347ac: c1 46 03 00                 	roll	$0x0, 0x3(%rsi)
+1800347b0: c1 46 03 00                 	roll	$0x0, 0x3(%rsi)
+1800347b4: cc                          	int3
+1800347b5: 46 03 00                    	addl	(%rax), %r8d
+1800347b8: cc                          	int3
+1800347b9: 46 03 00                    	addl	(%rax), %r8d
+1800347bc: 0a 47 03                    	orb	0x3(%rdi), %al
+1800347bf: 00 0a                       	addb	%cl, (%rdx)
+1800347c1: 47 03 00                    	addl	(%r8), %r8d
+1800347c4: 15 47 03 00 15              	adcl	$0x15000347, %eax       # imm = 0x15000347
+1800347c9: 47 03 00                    	addl	(%r8), %r8d
+1800347cc: 20 47 03                    	andb	%al, 0x3(%rdi)
+1800347cf: 00 20                       	addb	%ah, (%rax)
+1800347d1: 47 03 00                    	addl	(%r8), %r8d
+1800347d4: 5b                          	popq	%rbx
+1800347d5: 47 03 00                    	addl	(%r8), %r8d
+1800347d8: 5b                          	popq	%rbx
+1800347d9: 47 03 00                    	addl	(%r8), %r8d
+1800347dc: 61                          	<unknown>
+1800347dd: 47 03 00                    	addl	(%r8), %r8d
+1800347e0: 61                          	<unknown>
+1800347e1: 47 03 00                    	addl	(%r8), %r8d
+1800347e4: 67 47 03 00                 	addl	(%r8d), %r8d
+1800347e8: 67 47 03 00                 	addl	(%r8d), %r8d
+1800347ec: cc                          	int3
+1800347ed: cc                          	int3
+1800347ee: cc                          	int3
+1800347ef: cc                          	int3
+
+00000001800347f0 <LMX_func_api_Get_Tag_CapabilityInfo_Size>:
+1800347f0: 48 89 5c 24 08              	movq	%rbx, 0x8(%rsp)
+1800347f5: 48 89 6c 24 10              	movq	%rbp, 0x10(%rsp)
+1800347fa: 48 89 74 24 20              	movq	%rsi, 0x20(%rsp)
+1800347ff: 57                          	pushq	%rdi
+180034800: 48 83 ec 30                 	subq	$0x30, %rsp
+180034804: 49 8b f1                    	movq	%r9, %rsi
+180034807: 49 8b f8                    	movq	%r8, %rdi
+18003480a: 48 8b da                    	movq	%rdx, %rbx
+18003480d: 8b e9                       	movl	%ecx, %ebp
+18003480f: 4d 85 c0                    	testq	%r8, %r8
+180034812: 74 4d                       	je	0x180034861 <LMX_func_api_Get_Tag_CapabilityInfo_Size+0x71>
+180034814: 33 c0                       	xorl	%eax, %eax
+180034816: 48 8d 0d 1b 53 1f 00        	leaq	0x1f531b(%rip), %rcx    # 0x180229b38
+18003481d: 89 02                       	movl	%eax, (%rdx)
+18003481f: 48 8d 15 3a 53 1f 00        	leaq	0x1f533a(%rip), %rdx    # 0x180229b60
+180034826: e8 a5 21 00 00              	callq	0x1800369d0 <LMX_func_api_WB_Ctrl_WBSET+0x250>
+18003482b: 48 8d 44 24 50              	leaq	0x50(%rsp), %rax
+180034830: 48 89 74 24 28              	movq	%rsi, 0x28(%rsp)
+180034835: 4c 8b c3                    	movq	%rbx, %r8
+180034838: 48 89 44 24 20              	movq	%rax, 0x20(%rsp)
+18003483d: 8b cd                       	movl	%ebp, %ecx
+18003483f: c7 44 24 50 00 00 00 00     	movl	$0x0, 0x50(%rsp)
+180034847: e8 94 00 00 00              	callq	0x1800348e0 <LMX_func_api_Get_Tag_CapabilityInfo+0x60>
+18003484c: 84 c0                       	testb	%al, %al
+18003484e: 74 13                       	je	0x180034863 <LMX_func_api_Get_Tag_CapabilityInfo_Size+0x73>
+180034850: 48 85 db                    	testq	%rbx, %rbx
+180034853: 74 0c                       	je	0x180034861 <LMX_func_api_Get_Tag_CapabilityInfo_Size+0x71>
+180034855: 8b 43 18                    	movl	0x18(%rbx), %eax
+180034858: 83 c0 1c                    	addl	$0x1c, %eax
+18003485b: 89 07                       	movl	%eax, (%rdi)
+18003485d: b0 01                       	movb	$0x1, %al
+18003485f: eb 02                       	jmp	0x180034863 <LMX_func_api_Get_Tag_CapabilityInfo_Size+0x73>
+180034861: 32 c0                       	xorb	%al, %al
+180034863: 48 8b 5c 24 40              	movq	0x40(%rsp), %rbx
+180034868: 48 8b 6c 24 48              	movq	0x48(%rsp), %rbp
+18003486d: 48 8b 74 24 58              	movq	0x58(%rsp), %rsi
+180034872: 48 83 c4 30                 	addq	$0x30, %rsp
+180034876: 5f                          	popq	%rdi
+180034877: c3                          	retq
+180034878: cc                          	int3
+180034879: cc                          	int3
+18003487a: cc                          	int3
+18003487b: cc                          	int3
+18003487c: cc                          	int3
+18003487d: cc                          	int3
+18003487e: cc                          	int3
+18003487f: cc                          	int3

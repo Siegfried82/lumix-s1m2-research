@@ -1,0 +1,54 @@
+{
+  "source_archive": "<LOCAL_WORKSPACE>/analysis/sources/linux-4.19.124.tar.gz",
+  "sha256": "2067822653621ff9f3e1acdad99d7777812d0dc1036007921014da18fc9c6fce",
+  "files": [
+    {
+      "tar_entry": "linux-4.19.124/drivers/pvc/buffer/scullpp.h",
+      "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/scullpp.h",
+      "sha256": "74a05a5f67dda96887aaa5236c69656c746f59377c62c76f74f62541b34a9a6a",
+      "bytes": 1683
+    },
+    {
+      "tar_entry": "linux-4.19.124/drivers/pvc/buffer/scullp.h",
+      "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/scullp.h",
+      "sha256": "6096197dc2195377dff16cb91cad6c1e213eed58c0d1f82feb2379262f965f21",
+      "bytes": 1602
+    },
+    {
+      "tar_entry": "linux-4.19.124/drivers/pvc/buffer/main.c",
+      "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/main.c",
+      "sha256": "ee5d531276ca5d02a967315185ed00ed2b9efd15766f364825ead6c3cedcb512",
+      "bytes": 13905
+    },
+    {
+      "tar_entry": "linux-4.19.124/drivers/pvc/buffer/Makefile",
+      "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/Makefile",
+      "sha256": "34213994c704a8b5bf990333fd0f8bc2a8426cb99c8e83f1545e94e6de4e9af6",
+      "bytes": 621
+    },
+    {
+      "tar_entry": "linux-4.19.124/drivers/pvc/buffer/Kconfig",
+      "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/Kconfig",
+      "sha256": "396b25a1ca4726d8f6ed4238f768c4095323bbec013b210e65d08156c43dcc3a",
+      "bytes": 1237
+    },
+    {
+      "tar_entry": "linux-4.19.124/drivers/usb/gadget/function/f_fs.c",
+      "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/f_fs.c",
+      "sha256": "09e684e66b715948916c9627ee3416caf4b508684c0e90afd9014bee518bdc2c",
+      "bytes": 97199
+    },
+    {
+      "tar_entry": "linux-4.19.124/drivers/usb/gadget/composite.c",
+      "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/composite.c",
+      "sha256": "3146053ea44a0555d1bb847e7b090e93b91dbd30193094511fe5d0cfa3c1823f",
+      "bytes": 68613
+    },
+    {
+      "tar_entry": "linux-4.19.124/include/uapi/linux/usb/functionfs.h",
+      "saved_copy": "analysis/s5_toolbox_review_20261013/source_evidence/functionfs.h",
+      "sha256": "340790c786dc5d1da1fb30aa012e18906d162f88adca1a6701a1cbdad436287b",
+      "bytes": 11425
+    }
+  ]
+}

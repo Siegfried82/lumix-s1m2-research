@@ -1,12 +1,14 @@
 # Offline tests only. No camera firmware build or installation target.
 PYTHON ?= python3
-.PHONY: test test-parser test-ptp-wire test-tools help
+.PHONY: test test-parser test-ptp-wire test-ptp-seq test-tools help
 test:
 	$(PYTHON) tests/run_all_tests.py
 test-parser:
 	$(PYTHON) tests/test_dump_parser.py
 test-ptp-wire:
 	$(PYTHON) tests/test_ptp_wire_parser.py
+test-ptp-seq:
+	$(PYTHON) tests/test_ptp_sequencer.py
 test-tools:
 	$(PYTHON) tests/test_toolchain.py
 help:

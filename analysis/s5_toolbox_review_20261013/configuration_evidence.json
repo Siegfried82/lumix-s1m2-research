@@ -1,0 +1,1480 @@
+{
+  "method": "Read every .bin under saved input copies; recognize Panasonic header in first32 bytes and 65533-byte bounded blob, then traverse exact record lengths from52 to65528. No alignment or semantic assumptions added.",
+  "observations": [
+    {
+      "path": "originals/08_总结与工具箱_20261013/01_研究报告_全集/01_固件AES绕过_调研_20261010/03-离线破解与上传预言机/oracle/burst_183125/live_camsetting_full.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "f2d639681bc6431de989965018df0e5104e6772a566ad5729cd48fe03e9c66c0",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/08_总结与工具箱_20261013/01_研究报告_全集/02_研究总报告_20261011/data/config_0x9421.bin",
+      "file_bytes": 65545,
+      "blob_offset": 12,
+      "blob_sha256": "7ea14e645ffeefdbc508ec5038fc279dd347c8d4169aea773b217bd58da058ef",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/08_总结与工具箱_20261013/01_研究报告_全集/02_研究总报告_20261011/data/s5_config_0x9421_DC-S5_v2.9.bin",
+      "file_bytes": 65545,
+      "blob_offset": 12,
+      "blob_sha256": "7ea14e645ffeefdbc508ec5038fc279dd347c8d4169aea773b217bd58da058ef",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/08_总结与工具箱_20261013/01_研究报告_全集/03_隐藏格式_可分发版_20261012/reference/camsetting.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "84171981fdd871af5f9b3e76a79447531a784aba15adca528d5b341213e8d740",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/08_总结与工具箱_20261013/02_工具与脚本/usb_ptp/s5_config_0x9421_DC-S5_v2.9.bin",
+      "file_bytes": 65545,
+      "blob_offset": 12,
+      "blob_sha256": "7ea14e645ffeefdbc508ec5038fc279dd347c8d4169aea773b217bd58da058ef",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/08_总结与工具箱_20261013/03_数据与证据_精选/blob/blob_GOLD_mov_persisted_20261013_020600.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "13b5925487913288043503d76a5ed257e164052540da38f50a4cebd3c107745c",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/08_总结与工具箱_20261013/03_数据与证据_精选/blob/blob_app_online_20261013.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "310b6a30d59acabc8f7f6e28a71a5b09388926c23a654961698693f3c65d20f3",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 146,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/08_总结与工具箱_20261013/03_数据与证据_精选/ptp/ptp_out/config_0x9421.bin",
+      "file_bytes": 65545,
+      "blob_offset": 12,
+      "blob_sha256": "7ea14e645ffeefdbc508ec5038fc279dd347c8d4169aea773b217bd58da058ef",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/08_总结与工具箱_20261013/03_数据与证据_精选/ptp/ptp_out_fuzz1/fuzz_0x9421_p1_t00000005.bin",
+      "file_bytes": 65545,
+      "blob_offset": 12,
+      "blob_sha256": "b88bc02e1e9a75c1a6e402abbb4acb46838b76db2843daaf0dba1743408f42d5",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/08_总结与工具箱_20261013/03_数据与证据_精选/ptp/ptp_out_fuzz1/fuzz_0x9421_p2_t0000000e.bin",
+      "file_bytes": 65545,
+      "blob_offset": 12,
+      "blob_sha256": "b88bc02e1e9a75c1a6e402abbb4acb46838b76db2843daaf0dba1743408f42d5",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/08_总结与工具箱_20261013/03_数据与证据_精选/ptp/ptp_out_fuzz1/fuzz_0x9421_p3_t0000000f.bin",
+      "file_bytes": 65545,
+      "blob_offset": 12,
+      "blob_sha256": "b88bc02e1e9a75c1a6e402abbb4acb46838b76db2843daaf0dba1743408f42d5",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/01_研究报告/01_固件AES绕过_调研_20261010/03-离线破解与上传预言机/oracle/burst_183125/live_camsetting_full.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "f2d639681bc6431de989965018df0e5104e6772a566ad5729cd48fe03e9c66c0",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/01_研究报告/02_研究总报告_20261011/data/config_0x9421.bin",
+      "file_bytes": 65545,
+      "blob_offset": 12,
+      "blob_sha256": "7ea14e645ffeefdbc508ec5038fc279dd347c8d4169aea773b217bd58da058ef",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/01_研究报告/02_研究总报告_20261011/data/s5_config_0x9421_DC-S5_v2.9.bin",
+      "file_bytes": 65545,
+      "blob_offset": 12,
+      "blob_sha256": "7ea14e645ffeefdbc508ec5038fc279dd347c8d4169aea773b217bd58da058ef",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/01_研究报告/03_隐藏格式_可分发版_20261012/reference/camsetting.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "84171981fdd871af5f9b3e76a79447531a784aba15adca528d5b341213e8d740",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/backup_pre_movshadow_20261013_015703.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "cbb9d01eb8fe342ea3d864f875ace9da9a631c687579c3dbc8f20ee0c47ac934",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/backup_pre_movshadow_20261013_020428.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "cbb9d01eb8fe342ea3d864f875ace9da9a631c687579c3dbc8f20ee0c47ac934",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/backup_pre_quality_20261013_024240.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "c06895393a76be62391a5ac722c077ef9bf54186ca16c2a19cc54471798cfcde",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 244,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/backup_pre_quality_20261013_025134.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "89c00f7fb24541cb85f5f631f7333ce6ac807f38c6ba6a936ed3785474126bdc",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 146,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/backup_pre_restorefrom_mp4ed_20261013_031327.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "c9879543651bc144ef7b240413823580e7ed17778e1d65058db0817231bd9766",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 146,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/blob_GOLD_mov_persisted_20261013_020600.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "13b5925487913288043503d76a5ed257e164052540da38f50a4cebd3c107745c",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/blob_postreboot_20261013_000547.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "cbb9d01eb8fe342ea3d864f875ace9da9a631c687579c3dbc8f20ee0c47ac934",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/blob_postreboot_59k_20261013_024511.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "c06895393a76be62391a5ac722c077ef9bf54186ca16c2a19cc54471798cfcde",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 244,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/blob_postreboot_movshadow_20261013_020304.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "cbb9d01eb8fe342ea3d864f875ace9da9a631c687579c3dbc8f20ee0c47ac934",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/diff_blob_mov.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "2202fca00555793aafb95fa1d15486af4d94475968555b3d9834d5f95608610f",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/diff_blob_mp4.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "cbb9d01eb8fe342ea3d864f875ace9da9a631c687579c3dbc8f20ee0c47ac934",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/mov_shadow_dryrun_20261013_012941.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "13b5925487913288043503d76a5ed257e164052540da38f50a4cebd3c107745c",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/mov_shadow_dryrun_20261013_013146.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "13b5925487913288043503d76a5ed257e164052540da38f50a4cebd3c107745c",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/mov_shadow_dryrun_20261013_020722.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "13b5925487913288043503d76a5ed257e164052540da38f50a4cebd3c107745c",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/mov_shadow_test_20261013_015703.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "13b5925487913288043503d76a5ed257e164052540da38f50a4cebd3c107745c",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/mov_shadow_test_20261013_020428.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "13b5925487913288043503d76a5ed257e164052540da38f50a4cebd3c107745c",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/probe_baseline_013743.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "cbb9d01eb8fe342ea3d864f875ace9da9a631c687579c3dbc8f20ee0c47ac934",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/probe_mov_013809.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "2202fca00555793aafb95fa1d15486af4d94475968555b3d9834d5f95608610f",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 139,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/quality_payload_mov_30p_200mbps_5_9k_10bit_20261013_024240.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "c06895393a76be62391a5ac722c077ef9bf54186ca16c2a19cc54471798cfcde",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 244,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/quality_payload_mov_60p_150mbps_c4k_20261013_022201.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "7bc12a5dda333fc9abfcabaf7a065b24e03ad3c574562d196b72e44b5726020b",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 146,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/campaign2/out/quality_payload_mov_60p_150mbps_c4k_20261013_025134.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "89c00f7fb24541cb85f5f631f7333ce6ac807f38c6ba6a936ed3785474126bdc",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 6,
+        "6986": 146,
+        "65230": 0
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/04_工具与脚本/ptp/s5_config_0x9421_DC-S5_v2.9.bin",
+      "file_bytes": 65545,
+      "blob_offset": 12,
+      "blob_sha256": "7ea14e645ffeefdbc508ec5038fc279dd347c8d4169aea773b217bd58da058ef",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/06_数据与证据/camera_settings/camsetting.bin",
+      "file_bytes": 65533,
+      "blob_offset": 0,
+      "blob_sha256": "84171981fdd871af5f9b3e76a79447531a784aba15adca528d5b341213e8d740",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/06_数据与证据/ptp_dumps/ptp_out/config_0x9421.bin",
+      "file_bytes": 65545,
+      "blob_offset": 12,
+      "blob_sha256": "7ea14e645ffeefdbc508ec5038fc279dd347c8d4169aea773b217bd58da058ef",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/06_数据与证据/ptp_dumps/ptp_out_fuzz1/fuzz_0x9421_p1_t00000005.bin",
+      "file_bytes": 65545,
+      "blob_offset": 12,
+      "blob_sha256": "b88bc02e1e9a75c1a6e402abbb4acb46838b76db2843daaf0dba1743408f42d5",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/06_数据与证据/ptp_dumps/ptp_out_fuzz1/fuzz_0x9421_p2_t0000000e.bin",
+      "file_bytes": 65545,
+      "blob_offset": 12,
+      "blob_sha256": "b88bc02e1e9a75c1a6e402abbb4acb46838b76db2843daaf0dba1743408f42d5",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    },
+    {
+      "path": "originals/S5_隐藏格式持久化_成果包_20261013/06_数据与证据/ptp_dumps/ptp_out_fuzz1/fuzz_0x9421_p3_t0000000f.bin",
+      "file_bytes": 65545,
+      "blob_offset": 12,
+      "blob_sha256": "b88bc02e1e9a75c1a6e402abbb4acb46838b76db2843daaf0dba1743408f42d5",
+      "additive_checksum_mod256": 0,
+      "record_count": 831,
+      "record_end": 65528,
+      "record_error": null,
+      "selected_byte_observations": {
+        "3062": 5,
+        "6986": 193,
+        "65230": 1
+      },
+      "records_at_reported_offsets": [
+        {
+          "offset": 3056,
+          "id": 94,
+          "length": 20,
+          "flags": 1
+        },
+        {
+          "offset": 6980,
+          "id": 292,
+          "length": 32,
+          "flags": 1
+        },
+        {
+          "offset": 65224,
+          "id": 1173,
+          "length": 20,
+          "flags": 1
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "This verifies bytes/checksum/record traversal only. Filenames do not prove reboot or flash write.",
+    "Checksummed CAMSET blocks are configuration data, not proof of proprietary program or full camera RAM.",
+    "Selected byte meanings require independent consumer evidence."
+  ]
+}

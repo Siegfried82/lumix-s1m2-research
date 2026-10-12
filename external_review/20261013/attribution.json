@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-13",
+  "external_sources": [
+    {
+      "file": "S5_总结与工具箱_20261013.zip",
+      "sha256": "fb1c741dbb9772abccdaa71e59d7f8937989b060a04cb920cba2447b644a7670",
+      "bytes": 7146345,
+      "file_count": 489,
+      "author": "未注明；用户提供",
+      "license": "未明确；不假定许可",
+      "review": "密码脚本13项语义审查、工具70项静态清单与定点审查、配置数据独立校验；非全报告独立复验"
+    },
+    {
+      "file": "S5_隐藏格式持久化_成果包_20261013.zip",
+      "sha256": "eb8cb5baf1c9065269356f387fc4f67e26c5ef38d6d2502abef5da2fb712c9ef",
+      "file_count": 513,
+      "author": "未注明；用户提供",
+      "license": "未明确；不假定许可",
+      "review": "新增材料和配置独立校验；相同SHA复制件沿用同内容审查，新增不同内容不冒充全量语义复核"
+    },
+    {
+      "file": "FunctionFS漏洞链路复核与S5迁移性结论_20261013.md",
+      "sha256": "1c858088577888b0517dc8b6146a813cbcad272782d9e7d819c0ad6723ad548e",
+      "bytes": 11444,
+      "author": "未署名；用户提供",
+      "license": "未明确；不假定许可",
+      "review": "FunctionFS相关声明逐段注释；未运行作者实验"
+    },
+    {
+      "file": "LUMIX_FunctionFS物理内存读写_进展总结(1).md",
+      "sha256": "33bbbc5600b25427264436404256a3981dcaab85e52d7ead8ce3a8ef4a422cc0",
+      "bytes": 8446,
+      "author": "未署名；用户提供",
+      "license": "未明确；不假定许可",
+      "review": "FunctionFS相关声明逐段注释；未运行作者实验"
+    },
+    {
+      "file": "08_总结与工具箱_20261013.zip",
+      "sha256": "441a25c8dc7c5d3f1446f9d40b2224725f48a5fc8ca3b18bd61ef309fb4de8e8",
+      "bytes": 7220081,
+      "file_count": 496,
+      "author": "未注明；用户提供",
+      "license": "未明确；保留已有版权及许可声明",
+      "review": "原始内容一致性与复用登记；7个新增文件静态审查并脱敏，未运行作者设备实验",
+      "capture_status": {
+        "byte_comparison_completed": true,
+        "source_archive_present_at_original_desktop_path_after_capture": false,
+        "note": "Follow-up existence check after successful complete original SHA/CRC/member read; if missing, new archive location is not established here.",
+        "metadata_check_time": "2026-10-13T01:30:41"
+      }
+    },
+    {
+      "file": "S5逆向_研究总报告_20261011.zip",
+      "sha256": "b56a04af48c3769a4dacbcb842b732b15e4fe1b8381d9291989963ad3312b476",
+      "bytes": 88542337,
+      "file_count": 218,
+      "author": "未注明；用户提供",
+      "license": "未明确；保留已有版权及许可声明",
+      "review": "原始内容一致性与复用登记；7个新增文件静态审查并脱敏，未运行作者设备实验",
+      "capture_status": {
+        "byte_comparison_completed": true,
+        "source_archive_present_at_original_desktop_path_after_capture": false,
+        "note": "Follow-up existence check after successful complete original SHA/CRC/member read; if missing, new archive location is not established here.",
+        "metadata_check_time": "2026-10-13T01:30:41"
+      }
+    }
+  ],
+  "reviewer": "Codex静态/离线核验；正文原作者与旁注分开",
+  "original_author_endorsement": false,
+  "licensing": "原作者及许可未知，保留来源声明，不把这些外稿纳入本项目统一许可证；GNU/Linux等第三方源码继续按其已有许可处理。",
+  "private_input_locations_published": false,
+  "code_execution": "未运行外部脚本或设备实验；只生成注释文稿。"
+}

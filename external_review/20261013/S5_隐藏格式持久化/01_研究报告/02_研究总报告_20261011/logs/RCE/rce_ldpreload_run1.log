@@ -1,0 +1,27 @@
+[20:26:27] S5 LD_PRELOAD RCE test (CVE-2017-17562)
+[20:26:27] target=192.168.1.131 marker=S5_RCE_PROOF
+[20:26:27] camera ready.
+[20:26:27] 
+== payload s5pre_mipsel.so (1968 bytes) ==
+[20:26:28]   status=200 bodylen=88 marker=False (629ms)
+[20:26:28]   body head: '<?xml version="1.0" encoding="UTF-8"?>\r <camrply><result>err_critical</result></camrply>'
+[20:26:29]   status=200 bodylen=88 marker=False (633ms)
+[20:26:29]   body head: '<?xml version="1.0" encoding="UTF-8"?>\r <camrply><result>err_critical</result></camrply>'
+[20:26:31]   status=200 bodylen=88 marker=False (626ms)
+[20:26:31]   body head: '<?xml version="1.0" encoding="UTF-8"?>\r <camrply><result>err_critical</result></camrply>'
+[20:26:33]   status=200 bodylen=88 marker=False (682ms)
+[20:26:33]   body head: '<?xml version="1.0" encoding="UTF-8"?>\r <camrply><result>err_critical</result></camrply>'
+[20:26:34]   status=200 bodylen=88 marker=False (689ms)
+[20:26:34]   body head: '<?xml version="1.0" encoding="UTF-8"?>\r <camrply><result>err_critical</result></camrply>'
+[20:26:36]   status=200 bodylen=88 marker=False (693ms)
+[20:26:36]   body head: '<?xml version="1.0" encoding="UTF-8"?>\r <camrply><result>err_critical</result></camrply>'
+[20:26:38]   status=200 bodylen=88 marker=False (697ms)
+[20:26:38]   body head: '<?xml version="1.0" encoding="UTF-8"?>\r <camrply><result>err_critical</result></camrply>'
+[20:26:39]   status=200 bodylen=88 marker=False (630ms)
+[20:26:39]   body head: '<?xml version="1.0" encoding="UTF-8"?>\r <camrply><result>err_critical</result></camrply>'
+[20:26:41]   status=200 bodylen=88 marker=False (746ms)
+[20:26:41]   body head: '<?xml version="1.0" encoding="UTF-8"?>\r <camrply><result>err_critical</result></camrply>'
+[20:26:42]   status=200 bodylen=88 marker=False (644ms)
+[20:26:42]   body head: '<?xml version="1.0" encoding="UTF-8"?>\r <camrply><result>err_critical</result></camrply>'
+[20:26:43] 
+DONE: no RCE marker observed across all payload/preload/mode combos

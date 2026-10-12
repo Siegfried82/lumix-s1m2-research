@@ -1,0 +1,10 @@
+<string>:6: DeprecationWarning: Use "with USBContext() as context:" for safer cleanup on interpreter shutdown. See also USBContext.open().
+Traceback (most recent call last):
+  File "<string>", line 18, in <module>
+  File "<LOCAL_USER>/Library/Python/3.9/lib/python/site-packages/usb1/__init__.py", line 1239, in setInterfaceAltSetting
+    mayRaiseUSBError(libusb1.libusb_set_interface_alt_setting(
+  File "<LOCAL_USER>/Library/Python/3.9/lib/python/site-packages/usb1/__init__.py", line 129, in mayRaiseUSBError
+    __raiseUSBError(value)
+  File "<LOCAL_USER>/Library/Python/3.9/lib/python/site-packages/usb1/__init__.py", line 121, in raiseUSBError
+    raise __STATUS_TO_EXCEPTION_DICT.get(value, __USBError)(value)
+usb1.USBErrorOther: LIBUSB_ERROR_OTHER [-99]

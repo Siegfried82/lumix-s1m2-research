@@ -1,0 +1,153 @@
+
+<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GX1__V11.bin.plaintext:     file format binary
+
+
+Disassembly of section .data:
+
+7bb80000 <.data+0x880600>:
+7bb80000:	fc dd 50 00 	mov	2075656272,a1
+7bb80004:	b8 7b 
+7bb80006:	f0 f5       	jmp	(a1)
+	...
+7bb80018:	dc 3f a5 17 	jmp	0x7bcfa557
+7bb8001c:	00 
+7bb8001d:	00          	clr	d0
+7bb8001e:	00          	clr	d0
+7bb8001f:	00          	clr	d0
+7bb80020:	dc 37 a5 17 	jmp	0x7bcfa557
+7bb80024:	00 
+7bb80025:	00          	clr	d0
+7bb80026:	00          	clr	d0
+7bb80027:	00          	clr	d0
+7bb80028:	dc 2f a5 17 	jmp	0x7bcfa557
+7bb8002c:	00 
+7bb8002d:	00          	clr	d0
+7bb8002e:	00          	clr	d0
+7bb8002f:	00          	clr	d0
+7bb80030:	dc 27 a5 17 	jmp	0x7bcfa557
+7bb80034:	00 
+7bb80035:	00          	clr	d0
+7bb80036:	00          	clr	d0
+7bb80037:	00          	clr	d0
+7bb80038:	dc 1f a5 17 	jmp	0x7bcfa557
+7bb8003c:	00 
+7bb8003d:	00          	clr	d0
+7bb8003e:	00          	clr	d0
+7bb8003f:	00          	clr	d0
+7bb80040:	dc 17 a5 17 	jmp	0x7bcfa557
+7bb80044:	00 
+7bb80045:	00          	clr	d0
+7bb80046:	00          	clr	d0
+7bb80047:	00          	clr	d0
+7bb80048:	dc 0f a5 17 	jmp	0x7bcfa557
+7bb8004c:	00 
+7bb8004d:	00          	clr	d0
+7bb8004e:	00          	clr	d0
+7bb8004f:	00          	clr	d0
+7bb80050:	04          	clr	d1
+7bb80051:	f2 f7       	mov	d1,psw
+7bb80053:	cb          	nop	
+7bb80054:	cb          	nop	
+7bb80055:	cc c6 00    	jmp	0x7bb8011b
+7bb80058:	fc df 61 00 	mov	2075656289,a3
+7bb8005c:	b8 7b 
+7bb8005e:	cc 85 00    	jmp	0x7bb800e3
+7bb80061:	fc df 6a 00 	mov	2075656298,a3
+7bb80065:	b8 7b 
+7bb80067:	cc 3a 01    	jmp	0x7bb801a1
+7bb8006a:	fc dd 04 30 	mov	-1677643772,a1
+7bb8006e:	01 9c 
+7bb80070:	85 01       	mov	1,d1
+7bb80072:	f0 75       	movhu	d1,(a1)
+7bb80074:	25 50 89    	mov	35152,a1
+7bb80077:	85 10       	mov	16,d1
+7bb80079:	8a 01       	mov	1,d2
+7bb8007b:	f0 61       	movhu	(a1),d0
+7bb8007d:	f2 04       	and	d1,d0
+7bb8007f:	c8 fc       	beq	0x7bb8007b
+7bb80081:	f0 79       	movhu	d2,(a1)
+7bb80083:	f0 61       	movhu	(a1),d0
+7bb80085:	24 00 02    	mov	512,a0
+7bb80088:	fc d0 54 63 	add	1953129300,a0
+7bb8008c:	6a 74 
+7bb8008e:	f2 f0       	mov	a0,sp
+7bb80090:	fc ff 89 00 	calls	0x7bb80119
+7bb80094:	00 00 
+7bb80096:	fc cc 00 00 	mov	2075656192,d0
+7bb8009a:	b8 7b 
+7bb8009c:	01 1c 80    	mov	d0,(0x801c)
+7bb8009f:	fc cc 18 00 	mov	2075656216,d0
+7bb800a3:	b8 7b 
+7bb800a5:	03 00 80    	movhu	d0,(0x8000)
+7bb800a8:	fc cc 20 00 	mov	2075656224,d0
+7bb800ac:	b8 7b 
+7bb800ae:	03 04 80    	movhu	d0,(0x8004)
+7bb800b1:	fc cc 28 00 	mov	2075656232,d0
+7bb800b5:	b8 7b 
+7bb800b7:	03 08 80    	movhu	d0,(0x8008)
+7bb800ba:	fc cc 30 00 	mov	2075656240,d0
+7bb800be:	b8 7b 
+7bb800c0:	03 0c 80    	movhu	d0,(0x800c)
+7bb800c3:	fc cc 38 00 	mov	2075656248,d0
+7bb800c7:	b8 7b 
+7bb800c9:	03 10 80    	movhu	d0,(0x8010)
+7bb800cc:	fc cc 40 00 	mov	2075656256,d0
+7bb800d0:	b8 7b 
+7bb800d2:	03 14 80    	movhu	d0,(0x8014)
+7bb800d5:	fc cc 48 00 	mov	2075656264,d0
+7bb800d9:	b8 7b 
+7bb800db:	03 18 80    	movhu	d0,(0x8018)
+7bb800de:	dc d5 a5 17 	jmp	0x7bcfa6b3
+7bb800e2:	00 
+7bb800e3:	fc dc 00 60 	mov	1952997376,a0
+7bb800e7:	68 74 
+7bb800e9:	fc dd 58 63 	mov	1953129304,a1
+7bb800ed:	6a 74 
+7bb800ef:	b1          	cmp	a0,a1
+7bb800f0:	c8 09       	beq	0x7bb800f9
+7bb800f2:	00          	clr	d0
+7bb800f3:	db          	setlb	
+7bb800f4:	60          	mov	d0,(a0)
+7bb800f5:	50          	inc4	a0
+7bb800f6:	b4          	cmp	a1,a0
+7bb800f7:	cb          	nop	
+7bb800f8:	d4          	lcs	
+7bb800f9:	fc dc 7c 46 	mov	2078033532,a0
+7bb800fd:	dc 7b 
+7bb800ff:	fc cd 7c 56 	mov	2078037628,d1
+7bb80103:	dc 7b 
+7bb80105:	f1 91       	cmp	a0,d1
+7bb80107:	c8 10       	beq	0x7bb80117
+7bb80109:	fc dd 00 50 	mov	1952993280,a1
+7bb8010d:	68 74 
+7bb8010f:	db          	setlb	
+7bb80110:	70          	mov	(a0),d0
+7bb80111:	61          	mov	d0,(a1)
+7bb80112:	50          	inc4	a0
+7bb80113:	51          	inc4	a1
+7bb80114:	f1 a4       	cmp	d1,a0
+7bb80116:	d4          	lcs	
+7bb80117:	f0 f7       	jmp	(a3)
+7bb80119:	f0 fc       	rets	
+7bb8011b:	80 00       	mov	0,d0
+7bb8011d:	03 20 84    	movhu	d0,(0x8420)
+7bb80120:	80 02       	mov	2,d0
+7bb80122:	03 22 84    	movhu	d0,(0x8422)
+7bb80125:	80 02       	mov	2,d0
+7bb80127:	03 28 84    	movhu	d0,(0x8428)
+7bb8012a:	80 22       	mov	34,d0
+7bb8012c:	03 2c 84    	movhu	d0,(0x842c)
+7bb8012f:	80 02       	mov	2,d0
+7bb80131:	03 2e 84    	movhu	d0,(0x842e)
+7bb80134:	fc cc 00 00 	mov	2075656192,d0
+7bb80138:	b8 7b 
+7bb8013a:	01 1c 80    	mov	d0,(0x801c)
+7bb8013d:	80 05       	mov	5,d0
+7bb8013f:	fc 83 00 02 	movhu	d0,(0x9c010200)
+7bb80143:	01 9c 
+7bb80145:	80 01       	mov	1,d0
+7bb80147:	fc 83 04 02 	movhu	d0,(0x9c010204)
+7bb8014b:	01 9c 
+7bb8014d:	80 05       	mov	5,d0
+7bb8014f:	fc 83 08 02 	movhu	d0,(0x9c010208)
+7bb80153:	  

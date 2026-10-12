@@ -1,0 +1,209 @@
+
+<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GH2__V11.bin.plaintext:     file format binary
+
+
+Disassembly of section .data:
+
+00000600 <.data+0x600>:
+     600:	fc dd 18 00 	mov	1073741848,a1
+     604:	00 40 
+     606:	f0 f5       	jmp	(a1)
+     608:	ca 30       	bra	0x638
+     60a:	00          	clr	d0
+     60b:	00          	clr	d0
+     60c:	00          	clr	d0
+     60d:	00          	clr	d0
+     60e:	00          	clr	d0
+     60f:	00          	clr	d0
+     610:	f0 fd       	rti	
+     612:	00          	clr	d0
+     613:	00          	clr	d0
+     614:	00          	clr	d0
+     615:	00          	clr	d0
+     616:	00          	clr	d0
+     617:	00          	clr	d0
+     618:	30 50 80    	mov	(0x8050),d0
+     61b:	f8 c0 03    	asl	3,d0
+     61e:	fc dc 28 00 	mov	1073741864,a0
+     622:	00 40 
+     624:	f1 60       	add	d0,a0
+     626:	f0 f4       	jmp	(a0)
+     628:	ca 54       	bra	0x67c
+     62a:	00          	clr	d0
+     62b:	00          	clr	d0
+     62c:	00          	clr	d0
+     62d:	00          	clr	d0
+     62e:	00          	clr	d0
+     62f:	00          	clr	d0
+     630:	dc d0 ff bb 	jmp	0x3bbc0600
+     634:	3b 
+     635:	00          	clr	d0
+     636:	00          	clr	d0
+     637:	00          	clr	d0
+     638:	cb          	nop	
+     639:	42 00       	mov	d0,(sp)
+     63b:	80 40       	mov	64,d0
+     63d:	fc 83 80 50 	movhu	d0,(0x9c005080)
+     641:	00 9c 
+     643:	fc 83 90 50 	movhu	d0,(0x9c005090)
+     647:	00 9c 
+     649:	38 00 89    	movhu	(0x8900),d0
+     64c:	fa c0 a0 55 	add	21920,d0
+     650:	fc 83 88 50 	movhu	d0,(0x9c005088)
+     654:	00 9c 
+     656:	f8 bc 04    	movhu	(4,sp),d0
+     659:	fc 83 96 50 	movhu	d0,(0x9c005096)
+     65d:	00 9c 
+     65f:	f8 bc 06    	movhu	(6,sp),d0
+     662:	fc 83 98 50 	movhu	d0,(0x9c005098)
+     666:	00 9c 
+     668:	80 07       	mov	7,d0
+     66a:	03 00 89    	movhu	d0,(0x8900)
+     66d:	38 00 89    	movhu	(0x8900),d0
+     670:	fc dc 65 41 	mov	1074544997,a0
+     674:	0c 40 
+     676:	f0 f0       	calls	(a0)
+     678:	58 00       	mov	(sp),d0
+     67a:	f0 fd       	rti	
+     67c:	fc dd cc 00 	mov	1073742028,a1
+     680:	00 40 
+     682:	f0 f5       	jmp	(a1)
+	...
+     694:	dc 95 58 d1 	jmp	0x3bd15f29
+     698:	3b 
+     699:	00          	clr	d0
+     69a:	00          	clr	d0
+     69b:	00          	clr	d0
+     69c:	dc 8d 58 d1 	jmp	0x3bd15f29
+     6a0:	3b 
+     6a1:	00          	clr	d0
+     6a2:	00          	clr	d0
+     6a3:	00          	clr	d0
+     6a4:	dc 85 58 d1 	jmp	0x3bd15f29
+     6a8:	3b 
+     6a9:	00          	clr	d0
+     6aa:	00          	clr	d0
+     6ab:	00          	clr	d0
+     6ac:	dc 7d 58 d1 	jmp	0x3bd15f29
+     6b0:	3b 
+     6b1:	00          	clr	d0
+     6b2:	00          	clr	d0
+     6b3:	00          	clr	d0
+     6b4:	dc 75 58 d1 	jmp	0x3bd15f29
+     6b8:	3b 
+     6b9:	00          	clr	d0
+     6ba:	00          	clr	d0
+     6bb:	00          	clr	d0
+     6bc:	dc 6d 58 d1 	jmp	0x3bd15f29
+     6c0:	3b 
+     6c1:	00          	clr	d0
+     6c2:	00          	clr	d0
+     6c3:	00          	clr	d0
+     6c4:	dc 65 58 d1 	jmp	0x3bd15f29
+     6c8:	3b 
+     6c9:	00          	clr	d0
+     6ca:	00          	clr	d0
+     6cb:	00          	clr	d0
+     6cc:	04          	clr	d1
+     6cd:	f2 f7       	mov	d1,psw
+     6cf:	cb          	nop	
+     6d0:	cb          	nop	
+     6d1:	24 00 04    	mov	1024,a0
+     6d4:	fc d0 dc 61 	add	1948803548,a0
+     6d8:	28 74 
+     6da:	f2 f0       	mov	a0,sp
+     6dc:	cc 24 06    	jmp	0xd00
+     6df:	fc df e8 00 	mov	1073742056,a3
+     6e3:	00 40 
+     6e5:	cc 9a 00    	jmp	0x77f
+     6e8:	fc df f1 00 	mov	1073742065,a3
+     6ec:	00 40 
+     6ee:	cc 12 1f    	jmp	0x2600
+     6f1:	25 50 89    	mov	35152,a1
+     6f4:	85 20       	mov	32,d1
+     6f6:	8a 02       	mov	2,d2
+     6f8:	f0 61       	movhu	(a1),d0
+     6fa:	f2 04       	and	d1,d0
+     6fc:	c8 fc       	beq	0x6f8
+     6fe:	f0 79       	movhu	d2,(a1)
+     700:	f0 61       	movhu	(a1),d0
+     702:	fc dd 02 30 	mov	-1677643774,a1
+     706:	01 9c 
+     708:	85 01       	mov	1,d1
+     70a:	f0 75       	movhu	d1,(a1)
+     70c:	24 00 04    	mov	1024,a0
+     70f:	fc d0 dc 61 	add	1948803548,a0
+     713:	28 74 
+     715:	f2 f0       	mov	a0,sp
+     717:	8a 48       	mov	72,d2
+     719:	aa 00       	cmp	0,d2
+     71b:	c3 11       	ble	0x72c
+     71d:	fc de 88 4c 	mov	1082084488,a2
+     721:	7f 40 
+     723:	f0 06       	mov	(a2),a1
+     725:	f0 f1       	calls	(a1)
+     727:	52          	inc4	a2
+     728:	2a fc       	add	-4,d2
+     72a:	c1 f9       	bgt	0x723
+     72c:	fc ff 89 00 	calls	0x7b5
+     730:	00 00 
+     732:	fc cc 00 00 	mov	1073741824,d0
+     736:	00 40 
+     738:	01 1c 80    	mov	d0,(0x801c)
+     73b:	fc cc 94 00 	mov	1073741972,d0
+     73f:	00 40 
+     741:	03 00 80    	movhu	d0,(0x8000)
+     744:	fc cc 9c 00 	mov	1073741980,d0
+     748:	00 40 
+     74a:	03 04 80    	movhu	d0,(0x8004)
+     74d:	fc cc a4 00 	mov	1073741988,d0
+     751:	00 40 
+     753:	03 08 80    	movhu	d0,(0x8008)
+     756:	fc cc ac 00 	mov	1073741996,d0
+     75a:	00 40 
+     75c:	03 0c 80    	movhu	d0,(0x800c)
+     75f:	fc cc b4 00 	mov	1073742004,d0
+     763:	00 40 
+     765:	03 10 80    	movhu	d0,(0x8010)
+     768:	fc cc bc 00 	mov	1073742012,d0
+     76c:	00 40 
+     76e:	03 14 80    	movhu	d0,(0x8014)
+     771:	fc cc c4 00 	mov	1073742020,d0
+     775:	00 40 
+     777:	03 18 80    	movhu	d0,(0x8018)
+     77a:	dc fe 58 d1 	jmp	0x3bd16078
+     77e:	3b 
+     77f:	fc dc b4 16 	mov	1946162868,a0
+     783:	00 74 
+     785:	fc dd e0 61 	mov	1948803552,a1
+     789:	28 74 
+     78b:	b1          	cmp	a0,a1
+     78c:	c8 09       	beq	0x795
+     78e:	00          	clr	d0
+     78f:	db          	setlb	
+     790:	60          	mov	d0,(a0)
+     791:	50          	inc4	a0
+     792:	b4          	cmp	a1,a0
+     793:	cb          	nop	
+     794:	d4          	lcs	
+     795:	fc dc d0 4c 	mov	1082084560,a0
+     799:	7f 40 
+     79b:	fc cd 84 63 	mov	1082090372,d1
+     79f:	7f 40 
+     7a1:	f1 91       	cmp	a0,d1
+     7a3:	c8 10       	beq	0x7b3
+     7a5:	fc dd 00 00 	mov	1946157056,a1
+     7a9:	00 74 
+     7ab:	db          	setlb	
+     7ac:	70          	mov	(a0),d0
+     7ad:	61          	mov	d0,(a1)
+     7ae:	50          	inc4	a0
+     7af:	51          	inc4	a1
+     7b0:	f1 a4       	cmp	d1,a0
+     7b2:	d4          	lcs	
+     7b3:	f0 f7       	jmp	(a3)
+     7b5:	f8 fe ec    	add	-20,sp
+     7b8:	cd b1 45 80 	call	0x4d69,[d2],4
+     7bc:	04 
+     7bd:	f8 fe 14    	add	20,sp
+     7c0:	f0 fc       	rets	

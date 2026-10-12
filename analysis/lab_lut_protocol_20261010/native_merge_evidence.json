@@ -1,0 +1,36 @@
+{
+  "executed_native_code": false,
+  "libraries": {
+    "libllc_static.so": "7433d705215bb92e7a87b9005277127e5851c7a4638ca8f6a3db17d2a00927df",
+    "libcube_merge_static.so": "91c35f56413f0e6fd8108000104a4270b6beee64121bfd954ada56e510c03d2f"
+  },
+  "call_chain": [
+    {
+      "function": "Java_com_panasonic_jp_lumixlab_LlcApplication_mergeCubeFiles",
+      "address": "0x122ac",
+      "size": 240,
+      "call_instruction": "0x12330",
+      "target": "cube_merge_files@plt"
+    },
+    {
+      "function": "cube_merge_files",
+      "library": "libcube_merge.so",
+      "address": "0x51d0",
+      "size": 268,
+      "direct_calls": [
+        "0x4dac",
+        "0x4dac",
+        "0x4e60",
+        "0x4fdc",
+        "0x5198",
+        "0x5198",
+        "0x5198"
+      ]
+    }
+  ],
+  "boundaries": [
+    "Internal function roles inferred from repeated path inputs/output and control flow; arithmetic not yet decoded.",
+    "objdump labels main+offset do not establish internal function names.",
+    "No firmware decoder or camera configuration encoder established."
+  ]
+}

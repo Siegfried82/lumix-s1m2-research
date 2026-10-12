@@ -1,0 +1,175 @@
+Socionext Milbeaut PCIe host and endpoint controller binding
+
+This describes the devicetree bindings for PCIe host and endpoint(EP)
+controller implemented on Socionext Milbeaut SoC.
+
+Milbeaut PCIe host and EP controller is based on the Synopsys DesignWare
+PCI core. It shares common functions with the PCIe DesignWare core driver and
+inherits common properties defined in
+Documentation/devicetree/bindings/pci/designware-pcie.txt.
+
+In M20V, there are two PCIe host controllers, but they can not be driven at
+the same time unless enabling bifurcation mode.
+On the other hand, PCIe EP controller can not be available bifurcation.
+
+Required properties:
+- compatible: Should be either
+	"socionext,milbeaut-pcie-rc" - host not using bifurcaiton
+	"socionext,milbeaut-pcie-rc-bifur" - host using bifurcation
+	"socionext,milbeaut-pcie-ep" - EP
+- reg: Specifies offset and length of the register set for the device.
+	According to the reg-names, appropriate register sets are required.
+- reg-names: Must include the following entries:
+	"dbi" - controller configuration registers
+	"config" - PCIe configuration space for host
+	"addr_space" - PCIe configuration space for EP
+	"ctrl" - PCIe subsystem registers
+- clocks: A phandle to the clocks for PCIe glue layer including
+	   the PCIe controller.
+- clock-names: Must include the following entries:
+	"auxclk" - PCIe AUX clk
+	"busclk" - PCIe bus clk
+- resets: A phandle to the reset line and sequence for PCIe glue layer
+	including the PCIe controller.
+- reset-names: Must include the following entries:
+	"pwr" - PCIe power
+	"soft" - PCIe software reset by cold reset
+	"bifu" - PCIe bifucation switch(No setting required for karine)
+	"dev" - PCIe device_type switch
+- interrupts: A list of interrupt specifiers. According to the
+	       interrupt-names, appropriate interrupts are required.
+- interrupt-names: Must include the following entries:
+	"msi" - msi interrupt for host
+	"dma" - dma interrupt
+
+Required sub-node for host:
+- legacy-interrupt-controller: Specifies interrupt controller for legacy PCI
+				interrupts.
+
+Required properties for legacy-interrupt-controller:
+- interrupt-controller: identifies the node as an interrupt controller.
+- #interrupt-cells: specifies the number of cells needed to encode an
+		     interrupt source. The value must be 1.
+- interrupt-parent: Phandle to the parent interrupt controller.
+- interrupts: An interrupt specifier for legacy interrupt.
+
+Optional properties for non bifurcaiton host:
+- bifur-node: A phandle of the bifurcation host, if exist.
+- prsnt2-gpios: A GPIO pin of PRSNT2 which needs to be LOW output
+		for card detection if needed. Note that this will be
+		ignored if "bifur-node" is enabled.
+
+Example host without bifurcation:
+
+pcie0: pcie@1b000000 {
+	compatible = "socionext,milbeaut-pcie-rc", "snps,dw-pcie";
+	device_type = "pci";
+	reg = <0x1b000000 0x400000>, <0x1a7f0000 0x10000>,
+	      <0x1bb00000 0x100>;
+	reg-names = "dbi", "config",
+		    "ctrl",
+	#address-cells = <3>;
+	#size-cells = <2>;
+	clocks = <&clk M20V_PCIE_AUX_ID>, <&clk M20V_ACLK_PCIE0_ID>;
+	clock-names = "auxclk", "busclk";
+	resets = <&rst M20V_PCIE_RESET_PWR>, <&rst M20V_PCIE_RESET_SOFT0>,
+		 <&rst M20V_PCIE_RESET_BIFU>, <&rst M20V_PCIE_RESET_CNT0_MODE>;
+	reset-names = "pwr", "soft",
+		      "bifu", "dev";
+	num-lanes = <4>;
+	num-viewport = <4>;
+	bus-range = <0x0 0xff>;
+	ranges = <0x81000000 0 0x00000000 0x1a7e0000 0 0x00010000>.
+		 <0x82000000 0 0x1a000000 0x1a000000 0 0x007e0000>;
+	interrupts = <0 386 4>, <0 387 4>;
+	interrupt-names ="msi", "dma";
+	#interrupt-cells = <1>;
+	interrupt-map-mask = <0 0 0 0x7>;
+	interrupt-map = <0 0 0 1 &pcie_intc 3>, /* int_a */
+			<0 0 0 2 &pcie_intc 2>, /* int_b */
+			<0 0 0 3 &pcie_intc 1>, /* int_c */
+			<0 0 0 4 &pcie_intc 0>; /* int_d */
+	pcie_intc: legacy-interrupt-controller {
+		interrupt-controller;
+		#interrupt-cells = <1>;
+		interrupt-parent = <&gic>;
+		interrupts = <0 385 4>;
+	};
+};
+
+Example host with bifurcation:
+
+ Most of them are same as not bifurcation
+ the compatible and the num-lanes are different
+ "num-lanes" must be <2>
+
+pcie0: pcie@1b000000 {
+	compatible = "socionext,milbeaut-pcie-rc-bifur", "snps,dw-pcie";
+
+	...[snip]...
+
+	num-lanes = <2>;
+
+	...[snip]...
+};
+
+ As controller 1 has different addresses and SPIs from 0,
+ it is not abbreviated
+
+pcie1: pcie@1b400000 {
+	compatible = "socionext,milbeaut-pcie-rc-bifur", "snps,dw-pcie";
+	status = "disabled";
+	device_type = "pci";
+	reg = <0x1b400000 0x400000>, <0x1aff0000 0x10000>,
+	      <0x1bb00200 0x100>;
+	reg-names = "dbi", "config",
+		    "ctrl";
+	#address-cells = <3>;
+	#size-cells = <2>;
+	clocks = <&clk M20V_PCIE_AUX_ID>, <&clk M20V_ACLK_PCIE1_ID>;
+	clock-names = "auxclk", "busclk";
+	resets = <&rst M20V_PCIE_RESET_PWR>, <&rst M20V_PCIE_RESET_SOFT1>,
+		 <&rst M20V_PCIE_RESET_BIFU>, <&rst M20V_PCIE_RESET_CNT1_MODE>;
+	reset-names = "pwr", "soft",
+		      "bifu", "dev";
+	num-lanes = <2>;
+	num-viewport = <4>;
+	ranges = <0x81000000 0 0x00000000 0x1afe0000 0 0x00010000>.
+		 <0x82000000 0 0x1a800000 0x1a800000 0 0x007e0000>;
+	interrupts = <0 389 4>, <0 390 4>;
+	interrupt-names ="msi", "dma";
+	#interrupt-cells = <1>;
+	interrupt-map-mask = <0 0 0 0x7>;
+	interrupt-map = <0 0 0 1 &pcie_intc 3>, /* int_a */
+			<0 0 0 2 &pcie_intc 2>, /* int_b */
+			<0 0 0 3 &pcie_intc 1>, /* int_c */
+			<0 0 0 4 &pcie_intc 0>; /* int_d */
+	pcie_intc: legacy-interrupt-controller {
+		interrupt-controller;
+		#interrupt-cells = <1>;
+		interrupt-parent = <&gic>;
+		interrupts = <0 388 4>;
+	};
+};
+
+Example EP:
+
+pcie0: pcie@1b000000 {
+	compatible = "socionext,milbeaut-pcie-ep", "snps,dw-pcie";
+	status = "disabled";
+	reg = <0x1b000000 0x400000>, <0x1a000000 0x800000>,
+	      <0x1bb00000 0x100>;
+	reg-names = "dbi", "addr_space",
+		    "ctrl",
+	clocks = <&clk M20V_PCIE_AUX_ID>, <&clk M20V_ACLK_PCIE0_ID>;
+	clock-names = "auxclk", "busclk";
+	resets = <&rst M20V_PCIE_RESET_PWR>, <&rst M20V_PCIE_RESET_SOFT0>,
+		 <&rst M20V_PCIE_RESET_BIFU>, <&rst M20V_PCIE_RESET_CNT0_MODE>;
+	reset-names = "pwr", "soft",
+		      "bifu", "dev";
+	num-ib-windows = <8>;
+	num-ob-windows = <8>;
+	num-lanes = <4>;
+	interrupts = <0 422 4>;
+	interrupt-names ="dma";
+};

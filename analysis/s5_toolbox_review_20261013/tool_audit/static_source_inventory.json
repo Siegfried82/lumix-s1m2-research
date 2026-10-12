@@ -1,0 +1,2550 @@
+{
+  "method": "File bytes/SHA and static AST/line markers; markers are not proof of safety or effects on a device",
+  "files": [
+    {
+      "path": "02_工具与脚本/ble/ble_pair.swift",
+      "bytes": 11336,
+      "sha256": "151bcf5324ff8098c5a2e30df18416344e50847115171d5631d653922cd64400",
+      "lines": 250,
+      "method": "static source inventory; not execution",
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          240
+        ],
+        "ble_write": [
+          173,
+          175,
+          176,
+          201,
+          204
+        ],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/ble/ble_read.swift",
+      "bytes": 4396,
+      "sha256": "b6a5b26ef12aaba8ffcfa4bae0c5c099198fa7bc162495690a48e3e9b4882fe3",
+      "lines": 87,
+      "method": "static source inventory; not execution",
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/ble/ble_scan.swift",
+      "bytes": 5717,
+      "sha256": "e10153b1d3e1ace3045bfc830f00eeed8d271f1f7f4a7d68874d0772f4bcf1bf",
+      "lines": 127,
+      "method": "static source inventory; not execution",
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/api_enum.py",
+      "bytes": 1846,
+      "sha256": "302e7a945bf1d8ce8801d2700b23d23654d28a65a53c1a554aaa10f6d3ea6d3a",
+      "lines": 42,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "sys",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        6,
+        24,
+        31,
+        34,
+        41,
+        42
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/api_enum2.py",
+      "bytes": 1893,
+      "sha256": "9e2c4ed1aba1c7354da42bbb24c6be8db7fe2c769701fc0d325b4902d36acc08",
+      "lines": 43,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "sys",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        5,
+        18,
+        24,
+        30,
+        37
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [
+          33,
+          34
+        ],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/batch_enable.py",
+      "bytes": 4998,
+      "sha256": "a15a1cd22d44df6846a8ea89e9984c830427c378ddd8e8859859c6af88b06169",
+      "lines": 130,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "json",
+        "os",
+        "re",
+        "sys",
+        "time",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [
+        11,
+        17
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          98
+        ],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          5,
+          92,
+          106,
+          110
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/ble_pair.swift",
+      "bytes": 11336,
+      "sha256": "151bcf5324ff8098c5a2e30df18416344e50847115171d5631d653922cd64400",
+      "lines": 250,
+      "method": "static source inventory; not execution",
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          240
+        ],
+        "ble_write": [
+          173,
+          175,
+          176,
+          201,
+          204
+        ],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/ble_read.swift",
+      "bytes": 4396,
+      "sha256": "b6a5b26ef12aaba8ffcfa4bae0c5c099198fa7bc162495690a48e3e9b4882fe3",
+      "lines": 87,
+      "method": "static source inventory; not execution",
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/ble_scan.swift",
+      "bytes": 5717,
+      "sha256": "e10153b1d3e1ace3045bfc830f00eeed8d271f1f7f4a7d68874d0772f4bcf1bf",
+      "lines": 127,
+      "method": "static source inventory; not execution",
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/blindwrite.py",
+      "bytes": 5677,
+      "sha256": "59ef2c6def4f3def81c97e3d9f72bd32309c109082c16b56d152130da4a1d550",
+      "lines": 136,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "sys",
+        "time",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [
+        25,
+        31,
+        75,
+        91,
+        96,
+        104,
+        110,
+        127,
+        132,
+        134,
+        135,
+        136
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          73,
+          90
+        ],
+        "session_mutation": [
+          12,
+          87,
+          88
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          7,
+          14,
+          19,
+          98,
+          105,
+          116,
+          124,
+          128,
+          129,
+          132
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/campaign.py",
+      "bytes": 25336,
+      "sha256": "1db4d4ebcbf7c419e3adc20fa5b0ec724b9a40473dbc11cd1fcb5bd46ffe3c98",
+      "lines": 522,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "argparse",
+        "common",
+        "re",
+        "time",
+        "urllib.parse",
+        "uuid"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          205,
+          362,
+          407
+        ],
+        "session_mutation": [
+          16,
+          89,
+          340,
+          343,
+          344,
+          345,
+          348,
+          349,
+          350
+        ],
+        "upload_protocol": [
+          380,
+          384,
+          390,
+          391,
+          424
+        ],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          144,
+          145,
+          147,
+          161,
+          177,
+          182,
+          183,
+          188,
+          189,
+          211,
+          212,
+          247,
+          248,
+          402,
+          403
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/common.py",
+      "bytes": 15495,
+      "sha256": "d5226e2ddb665ddbac8c9c2988082d85e3caf9bf3a99a053a8a64622d3492e16",
+      "lines": 411,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "json",
+        "os",
+        "socket",
+        "time",
+        "urllib.error",
+        "urllib.request",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          167,
+          172
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/container_switch.py",
+      "bytes": 5005,
+      "sha256": "85ebae7ff02ba2588523ff39d3a3934cb21ca902581ceeb632508d3a3d9767e2",
+      "lines": 138,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "os",
+        "persist",
+        "re",
+        "sys",
+        "time",
+        "urllib.parse",
+        "urllib.request"
+      ],
+      "direct_module_call_lines": [
+        41
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          73
+        ],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          125
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/control.py",
+      "bytes": 6061,
+      "sha256": "f49fbb0792cf4f7b6de5e5a5bb26a71b14f05cc6b329549f700bb0e2a0ba2726",
+      "lines": 115,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "argparse",
+        "common",
+        "time",
+        "upload"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/crash_cam.py",
+      "bytes": 14023,
+      "sha256": "bac89a54df1ee0fe733d33dc423ce698edbf5f59cf343a28e0d7d365b30bd8d6",
+      "lines": 365,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "socket",
+        "struct",
+        "sys",
+        "threading",
+        "time",
+        "zlib"
+      ],
+      "direct_module_call_lines": [
+        28
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          67,
+          200
+        ],
+        "session_mutation": [],
+        "upload_protocol": [
+          55,
+          74,
+          95,
+          99,
+          118,
+          125,
+          151,
+          154,
+          157,
+          186,
+          194,
+          196,
+          198,
+          219,
+          220,
+          262
+        ],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          258,
+          344
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/crash_v3.py",
+      "bytes": 23163,
+      "sha256": "9f5eee7ead0465870d44bc5a65644e3710ed6dcb9169b203d206cba7f6abebff",
+      "lines": 613,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "signal",
+        "socket",
+        "struct",
+        "sys",
+        "threading",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        25
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          207,
+          316,
+          504
+        ],
+        "session_mutation": [],
+        "upload_protocol": [
+          93,
+          126,
+          136,
+          146,
+          154,
+          162,
+          210,
+          222,
+          232,
+          275,
+          276,
+          317,
+          333,
+          342,
+          500,
+          502,
+          506
+        ],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          5,
+          547,
+          549,
+          598,
+          599
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/crash_v3b.py",
+      "bytes": 11608,
+      "sha256": "3528a02a9bb6a41ae30ecef485ec57d4bb18edda56851aa79311f8b5bc00183d",
+      "lines": 351,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "socket",
+        "struct",
+        "sys",
+        "threading",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        25
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          89,
+          144
+        ],
+        "session_mutation": [],
+        "upload_protocol": [
+          94,
+          99,
+          104,
+          116,
+          126,
+          141,
+          142,
+          143
+        ],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          184,
+          345
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/crash_v3c.py",
+      "bytes": 18825,
+      "sha256": "fb50e5741457de2923fd8fe9ac0ebe4c78f406793439cd33703f5522ba4ac436",
+      "lines": 461,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "socket",
+        "struct",
+        "sys",
+        "threading",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        29
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          74,
+          136,
+          177,
+          222,
+          280,
+          340,
+          383
+        ],
+        "session_mutation": [],
+        "upload_protocol": [
+          77,
+          80,
+          85,
+          87,
+          93,
+          104,
+          113,
+          121,
+          137,
+          145,
+          179,
+          181,
+          187,
+          223,
+          234,
+          254,
+          262,
+          281,
+          291,
+          297,
+          343,
+          347,
+          358,
+          366,
+          384,
+          397,
+          405
+        ],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/crk.py",
+      "bytes": 3326,
+      "sha256": "6b4d4a81fe2df9e36c232d127b58dab09c0ce11a546f426859a16e517eb9edc4",
+      "lines": 99,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "struct",
+        "zlib"
+      ],
+      "direct_module_call_lines": [
+        89,
+        95
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/crk2.py",
+      "bytes": 5104,
+      "sha256": "7087193a7d6621bf734cc8c0badc096fb860bca1169e794f4969687ef2e053f0",
+      "lines": 129,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "collections",
+        "struct",
+        "zlib"
+      ],
+      "direct_module_call_lines": [
+        5,
+        98,
+        115,
+        129
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/enable_one.py",
+      "bytes": 3227,
+      "sha256": "a5de15638e803a4f71a3103eb1c5aaac36addb5f869fe292e69f75779b82fc58",
+      "lines": 87,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "json",
+        "os",
+        "re",
+        "sys",
+        "time",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [
+        8
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          63
+        ],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          61,
+          80
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          4,
+          53,
+          55,
+          82
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/enc_handshake_test.py",
+      "bytes": 3797,
+      "sha256": "bd2df5e67011814096c5959bac89ffadd555d4795730efa51f76a322b57e300d",
+      "lines": 118,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "http.client",
+        "random",
+        "sys",
+        "time",
+        "urllib.parse"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [
+          3,
+          54,
+          55,
+          57,
+          61,
+          77,
+          78,
+          84,
+          87
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          80,
+          91,
+          114
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/enum_video_use.py",
+      "bytes": 3583,
+      "sha256": "2dcd34fd95a764f84bf0bed35ff90783b863a33266c7abf689f024842f5a3dc0",
+      "lines": 83,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "json",
+        "os",
+        "re",
+        "sys",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        8
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          59,
+          63
+        ],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          80
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/enum_videoquality.py",
+      "bytes": 6001,
+      "sha256": "ed4ee4969a647515c9824e868490970f4c2b2585f57b1d9e23dd9d2539e3526c",
+      "lines": 142,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "json",
+        "os",
+        "sys",
+        "time",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [
+        17,
+        24,
+        81,
+        95,
+        100,
+        123,
+        124,
+        127,
+        135,
+        136,
+        137,
+        141,
+        142
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          95,
+          104,
+          122
+        ],
+        "session_mutation": [
+          93
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          13,
+          14,
+          22,
+          43,
+          97,
+          100,
+          106,
+          121,
+          122,
+          123,
+          124,
+          127,
+          128,
+          133,
+          134,
+          136,
+          137
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/enum_vq2.py",
+      "bytes": 6384,
+      "sha256": "ff4cc270f91cb08116e69f1417c0e8b449102f3106935abe8a3188c05d3816fe",
+      "lines": 156,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "json",
+        "os",
+        "sys",
+        "time",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [
+        18,
+        25,
+        102,
+        109,
+        112,
+        148,
+        151,
+        155,
+        156
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          89,
+          109
+        ],
+        "session_mutation": [
+          107
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          7,
+          10,
+          11,
+          14,
+          15,
+          23,
+          93,
+          94,
+          96,
+          98,
+          111,
+          112,
+          116,
+          118,
+          127,
+          132,
+          135,
+          139,
+          150,
+          155
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/experiment_mov_shadow.py",
+      "bytes": 6990,
+      "sha256": "55b86d398dd7ad3aa4ba55dbf3de5ca679cb152027cc8a7c55787ea1dd43dded",
+      "lines": 170,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "glob",
+        "os",
+        "persist",
+        "sys",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        38
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          119,
+          148,
+          157
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          6
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/finalfix.py",
+      "bytes": 14185,
+      "sha256": "a1b77789e2fc962b8d4b5265861c53446b48d8bd51a7ef0720ed571812367772",
+      "lines": 285,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "argparse",
+        "common",
+        "time",
+        "upload",
+        "uuid"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [
+          98,
+          102,
+          109,
+          138,
+          149,
+          152,
+          175,
+          228,
+          243
+        ],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/find_checksum.py",
+      "bytes": 2282,
+      "sha256": "fb12503c6a300feee62456258ce522a71a3bddfe3fc7bae4290153c1c5aa0acc",
+      "lines": 47,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "binascii",
+        "struct",
+        "zlib"
+      ],
+      "direct_module_call_lines": [
+        11,
+        42
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/gate_probe.py",
+      "bytes": 3247,
+      "sha256": "eba1018e8369d342fdbd1ec1208ed592405d760d3d4925472e84b7f0499fcf65",
+      "lines": 98,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "http.client",
+        "random",
+        "sys",
+        "time",
+        "urllib.parse"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [
+          2,
+          4,
+          37,
+          39,
+          50,
+          54,
+          64,
+          70
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          46,
+          58
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/gate_test.py",
+      "bytes": 5017,
+      "sha256": "8c757ccd41d7f56a1ebfabd3f9d407cbf8b55d2c29c7a7e29492fbe1e4ec2f0c",
+      "lines": 136,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "json",
+        "os",
+        "re",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        10,
+        72,
+        74,
+        77,
+        78,
+        82,
+        83,
+        84,
+        85,
+        103,
+        105,
+        106,
+        107,
+        108,
+        126,
+        127,
+        129,
+        130,
+        132,
+        136
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          27
+        ],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          17
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          3,
+          4,
+          54,
+          58,
+          60,
+          62,
+          78,
+          87,
+          96,
+          101,
+          110,
+          119,
+          124,
+          126,
+          132
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/goahead_overflow.py",
+      "bytes": 3219,
+      "sha256": "5a779481a20a61489189fdbfcf95897e7d3b762253ecaa56a9ae0566ce73d039",
+      "lines": 88,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "socket",
+        "sys",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        9,
+        88
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          5,
+          63,
+          65
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/hidden_features.py",
+      "bytes": 5687,
+      "sha256": "61269ae47e00556eb04135091f9c337cf4547a0d07f90bb762be1f6a0efb4f18",
+      "lines": 138,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "os",
+        "re",
+        "sys",
+        "time",
+        "urllib.parse",
+        "urllib.request"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          72
+        ],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          34,
+          42,
+          121,
+          124,
+          125,
+          131
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/hidden_test.py",
+      "bytes": 3852,
+      "sha256": "de0c160750e79ac485dcc876324e35140541a9d5911d9a0e4317c5581e2776c6",
+      "lines": 98,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "json",
+        "os",
+        "time",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [
+        15
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          30
+        ],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          42
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          8,
+          9,
+          44,
+          50,
+          52,
+          72,
+          73,
+          75,
+          78,
+          87
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/hidden_test_hlg.py",
+      "bytes": 2945,
+      "sha256": "7305bae07e074ae6f2c143fe4bf308187ff4da4e0e67dd5dd4b419737d424f67",
+      "lines": 82,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "re",
+        "sys",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        6
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          23
+        ],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          38,
+          41
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          64
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/http_fingerprint.py",
+      "bytes": 9010,
+      "sha256": "44a93435d049cb98c7d615b41a125155e827a22366af6209577f8d5232760a49",
+      "lines": 259,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "re",
+        "socket",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        24
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          37
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          146,
+          147
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/http_primitives.py",
+      "bytes": 2489,
+      "sha256": "6541c8d38e06bbf8049e77204c4f0e66488af749a58abd9ca4ce27605c677e38",
+      "lines": 66,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "sys"
+      ],
+      "direct_module_call_lines": [
+        18,
+        39,
+        43,
+        46,
+        58,
+        61,
+        65,
+        66
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/isolate_videoquality.py",
+      "bytes": 4842,
+      "sha256": "2da76335361ef14b960536402d1035e97d36dc18338eb76db2f289e8b0f62fd9",
+      "lines": 135,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "json",
+        "os",
+        "sys",
+        "time",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [
+        12,
+        19,
+        77,
+        84,
+        125,
+        134,
+        135
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          69,
+          84
+        ],
+        "session_mutation": [
+          82
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          4,
+          5,
+          9,
+          17,
+          77,
+          88,
+          89,
+          94,
+          95,
+          100,
+          101,
+          104,
+          105,
+          108,
+          109,
+          114,
+          115,
+          127,
+          134
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/launch_daemon.py",
+      "bytes": 1435,
+      "sha256": "0be90c5929595a2d1c0bc0160ffb75753af66033acb93a247bfab5f863baf23f",
+      "lines": 45,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "os",
+        "sys"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          28
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/menu_map.py",
+      "bytes": 4288,
+      "sha256": "6afa3de8030ce5e9b2de2b9459e4995272903da922091e81a3b5a20b7c92404e",
+      "lines": 113,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "collections",
+        "json",
+        "os",
+        "re",
+        "xml.etree.ElementTree"
+      ],
+      "direct_module_call_lines": [
+        53,
+        54,
+        55,
+        56,
+        57,
+        64,
+        67,
+        90,
+        91,
+        109,
+        112,
+        113
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/menu_recon_live.py",
+      "bytes": 4258,
+      "sha256": "2d0e01d66d095ce8bc7ec1eeb22b193340a59119614a11753da8871cd0ad0efc",
+      "lines": 113,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "collections",
+        "common",
+        "hashlib",
+        "json",
+        "os",
+        "sys",
+        "time",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [
+        10,
+        15,
+        39,
+        45,
+        46,
+        50,
+        52,
+        54,
+        56,
+        60,
+        93,
+        108,
+        113
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          39,
+          50,
+          52,
+          54,
+          56
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/mutation_test.py",
+      "bytes": 2154,
+      "sha256": "2f3c8c929f52965379b529470b51bd2906b9ff251a811c1af89564a215c1bc84",
+      "lines": 56,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "overflow_fuzz",
+        "struct",
+        "sys",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        7,
+        56
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          23,
+          26,
+          27,
+          30
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/oob_read_probe.py",
+      "bytes": 5456,
+      "sha256": "4a9c386a5d3cc48a50643cd7e4f341e16d527c7883a4d2939b31228319c0559f",
+      "lines": 140,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "sys",
+        "time",
+        "usb1"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/opengate_recon.py",
+      "bytes": 5008,
+      "sha256": "abbca4e73be662ff8676112471881f69ebcbc139e98fc90ef32de20cca577963",
+      "lines": 140,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "hashlib",
+        "json",
+        "os",
+        "sys",
+        "time",
+        "urllib.parse",
+        "urllib.request",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [
+        19
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          36,
+          38
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/overflow_fuzz.py",
+      "bytes": 7574,
+      "sha256": "1749bb0834b76d4ce893cce2526c5b4116e86c1d9cd3ed8bb6e6f5efb4dbb6b5",
+      "lines": 184,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "struct",
+        "sys",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        24
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [
+          56,
+          58,
+          63,
+          75,
+          79,
+          82
+        ],
+        "usb_control_or_bulk_write": [
+          145
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          13,
+          15,
+          94,
+          167,
+          173
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/persist.py",
+      "bytes": 19384,
+      "sha256": "fa94bcdc7ac5feaf9bab4a592bd57dd184dc4cc73a5d772e0b9744d032ff6b87",
+      "lines": 478,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "re",
+        "sys",
+        "time",
+        "urllib.error",
+        "urllib.request",
+        "uuid",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [
+        30
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [
+          395,
+          406,
+          432,
+          446,
+          450,
+          461
+        ],
+        "usb_control_or_bulk_write": [
+          206,
+          284,
+          319,
+          342
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          244,
+          246,
+          248,
+          295,
+          296,
+          303,
+          317,
+          340,
+          344,
+          345
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/persist_quality.py",
+      "bytes": 5789,
+      "sha256": "9647f17f284456034b05d03d82cf59a59728f5dfdc74ce97e95bb31cb9c42dcc",
+      "lines": 153,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "os",
+        "persist",
+        "re",
+        "sys",
+        "time",
+        "urllib.parse",
+        "urllib.request"
+      ],
+      "direct_module_call_lines": [
+        37
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          60
+        ],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          138,
+          142
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          7,
+          103
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/portscan.py",
+      "bytes": 849,
+      "sha256": "4652d3954ea5de66ba3f6e3ddd2ea475ce3c1e9ae7fcd2b996b651ebf4d8d948",
+      "lines": 17,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "concurrent.futures",
+        "socket"
+      ],
+      "direct_module_call_lines": [
+        17
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/probe_final_chunk.py",
+      "bytes": 6490,
+      "sha256": "912f06ea26e48f33a9cd0510ff69111531fade0a8f872b077e0a667add08642c",
+      "lines": 164,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "sys",
+        "time",
+        "urllib.request"
+      ],
+      "direct_module_call_lines": [
+        23
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          58
+        ],
+        "session_mutation": [],
+        "upload_protocol": [
+          77,
+          81,
+          102,
+          120,
+          123
+        ],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/probe_format_slots.py",
+      "bytes": 6256,
+      "sha256": "7e88ab6c4d98b75f0b85e69458b6d52dc104956f75da7c5edbe54e42cc03d813",
+      "lines": 160,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "persist",
+        "re",
+        "sys",
+        "time",
+        "urllib.parse"
+      ],
+      "direct_module_call_lines": [
+        38
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          75
+        ],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          7,
+          21,
+          26,
+          92,
+          106,
+          111,
+          112,
+          133,
+          148,
+          149
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/probe_partial_final.py",
+      "bytes": 7884,
+      "sha256": "b0e4b6ed79641218daa4596d6f84896b564e78cc086d28b0b14187c636351fb3",
+      "lines": 192,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "sys",
+        "time",
+        "urllib.request",
+        "uuid"
+      ],
+      "direct_module_call_lines": [
+        29
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          64
+        ],
+        "session_mutation": [],
+        "upload_protocol": [
+          83,
+          88,
+          92,
+          114,
+          134,
+          141,
+          147
+        ],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/ptp_attack.py",
+      "bytes": 9408,
+      "sha256": "a0c2d5380df04a6d2977abac6aeb010f8d8e4c634daf3defacd8718f0c06c602",
+      "lines": 289,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "struct",
+        "sys",
+        "time",
+        "usb1"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          144,
+          145
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          11,
+          153,
+          210
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/rce_ldpreload.py",
+      "bytes": 4009,
+      "sha256": "c1ae09f9a97b3994743cd0e7b739ec8faa8f3a9e35d02513f58430ab82af7b8b",
+      "lines": 100,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "sys",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        18
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/rce_probe.py",
+      "bytes": 16201,
+      "sha256": "66c94b8f9a5a294966573e9c14651fecab9b48af213ba0fad4642920b8a7efe9",
+      "lines": 440,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "socket",
+        "struct",
+        "sys",
+        "threading",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        24
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [
+          70,
+          111,
+          123,
+          159,
+          170,
+          179,
+          221,
+          231,
+          252,
+          286,
+          294,
+          325,
+          333,
+          372,
+          377
+        ],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          15
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/rce_surface_probe.py",
+      "bytes": 4649,
+      "sha256": "1e42e8c908a8e22285c9be65fd2dddf569ffeb43f15d72bd9524ec291de52807",
+      "lines": 91,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "json",
+        "os",
+        "time",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [
+        13,
+        50,
+        76,
+        86,
+        89,
+        90,
+        91
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [
+          69
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          57,
+          83
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          73
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/read_values.py",
+      "bytes": 1286,
+      "sha256": "e500865cd356999a4b692deb1c49dfd062b7862859da586d339ef5a70b11844e",
+      "lines": 30,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "re",
+        "sys",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        3,
+        19
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/recon.py",
+      "bytes": 5639,
+      "sha256": "34f567d7676c31d4114347c3882a3ec1c0f32e6e36e9163238031cec1110582a",
+      "lines": 132,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "json",
+        "os",
+        "sys",
+        "time",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [
+        16,
+        23,
+        53,
+        61,
+        62,
+        64,
+        65,
+        67,
+        74,
+        85,
+        93,
+        103,
+        117,
+        128,
+        132
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          66
+        ],
+        "session_mutation": [
+          10,
+          60,
+          61,
+          63,
+          64
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          73,
+          83,
+          92
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/roundtrip_test.py",
+      "bytes": 5762,
+      "sha256": "77d6688a5fe37b7ab960f99cd71cfdcb5a6751b2c20a136053c8836e4d973170",
+      "lines": 151,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "sys",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        17
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [
+          56,
+          89,
+          92,
+          107,
+          110,
+          116,
+          122
+        ],
+        "usb_control_or_bulk_write": [
+          84,
+          146
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          3,
+          5,
+          13
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/run_recon_when_up.py",
+      "bytes": 4143,
+      "sha256": "e57edfd68881f8b59bcf0472a00a88d3bee2553e33c814dc58716d82e83bb9d6",
+      "lines": 105,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "concurrent.futures",
+        "os",
+        "subprocess",
+        "sys",
+        "time",
+        "urllib.request"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [
+          4,
+          9,
+          12
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          67
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          102
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/safe_handshake.py",
+      "bytes": 8313,
+      "sha256": "b9477ede70423c0e413fc84dea10e71c0eb8c4502152beea1ad16ec9b2d3a5bc",
+      "lines": 190,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "argparse",
+        "common",
+        "os",
+        "random",
+        "sys",
+        "time",
+        "urllib.parse"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [
+          6,
+          7,
+          12,
+          16,
+          19,
+          21,
+          53,
+          55,
+          63,
+          66,
+          87,
+          108,
+          111,
+          123,
+          138,
+          161,
+          162,
+          163,
+          174
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/session_gate_test.py",
+      "bytes": 7723,
+      "sha256": "9ceaf2055ed41cfaf6ca587be0c1bf09a14d21acf616a1116bb2dd2581f2d2e2",
+      "lines": 179,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "argparse",
+        "common",
+        "json",
+        "os",
+        "random",
+        "re",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        25
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          39
+        ],
+        "session_mutation": [
+          5,
+          7,
+          53,
+          68,
+          69,
+          146
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          31
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          12,
+          13,
+          93,
+          95,
+          97,
+          113,
+          114,
+          124,
+          127,
+          132,
+          145,
+          150,
+          160,
+          161,
+          165,
+          173,
+          174
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/startsend_test.py",
+      "bytes": 1589,
+      "sha256": "5425fa29f572b928fc2db119a6b6a7829b2b63babe9afe4918e7451617e0f8da",
+      "lines": 50,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "http.client",
+        "sys",
+        "time",
+        "urllib.parse"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [
+          2
+        ],
+        "upload_protocol": [
+          43
+        ],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/state_check.py",
+      "bytes": 2012,
+      "sha256": "fe1f92d3f3f0a6cbae8322bdfd4d56d4925ea733bc22cee81deda3436d612407",
+      "lines": 45,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "argparse",
+        "common",
+        "os",
+        "re",
+        "sys"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [
+          3
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/unlock_video.py",
+      "bytes": 3900,
+      "sha256": "356c1bedbc7ffa882e6b02bf68d3f9a5b8ac7f815c97f3c82727a2119a403445",
+      "lines": 95,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "json",
+        "os",
+        "re",
+        "sys",
+        "time",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [
+        9
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          69,
+          73
+        ],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/unlock_video2.py",
+      "bytes": 5919,
+      "sha256": "a50cb7d8c9cd19820054d5c29a5a0aaabc8550fc246156f135b9bc21178a8fcf",
+      "lines": 138,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "json",
+        "os",
+        "re",
+        "sys",
+        "time",
+        "xml.etree"
+      ],
+      "direct_module_call_lines": [
+        16,
+        22
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          102
+        ],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          112
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/upload.py",
+      "bytes": 38963,
+      "sha256": "b8964bdc7343e5b09f374b8c3cd0629909949a4bdcd1c8a5bf39bafca52064ec",
+      "lines": 767,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "argparse",
+        "common",
+        "random",
+        "re",
+        "socket",
+        "struct",
+        "time",
+        "urllib.request",
+        "uuid",
+        "zlib"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [
+          233
+        ],
+        "session_mutation": [
+          217,
+          221,
+          222,
+          223,
+          226,
+          248,
+          266
+        ],
+        "upload_protocol": [
+          335,
+          339,
+          363,
+          378,
+          381,
+          391,
+          470,
+          478,
+          498,
+          513
+        ],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          612,
+          640
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/upload_diag.py",
+      "bytes": 4339,
+      "sha256": "5292115fa32da76c3a3c1575069a73f0ade3320d7c601e5cf87580a9a8b3288d",
+      "lines": 103,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "common",
+        "os",
+        "sys",
+        "time"
+      ],
+      "direct_module_call_lines": [
+        17
+      ],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [
+          44,
+          75,
+          78,
+          84,
+          88,
+          91
+        ],
+        "usb_control_or_bulk_write": [
+          58
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": []
+      }
+    },
+    {
+      "path": "02_工具与脚本/cam_cgi/usb_oob.py",
+      "bytes": 7422,
+      "sha256": "d6e93050b39e925a50724d480028d4951347328b540e0f5cfbf56d1fe4be4414",
+      "lines": 211,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "sys",
+        "time",
+        "usb1"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          74,
+          77,
+          109
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          141
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/usb_ptp/s5_ptp_dump.m",
+      "bytes": 20601,
+      "sha256": "f3c1aff3cde067b56009547e87b52bf3d37dfdf05e332bef614e1fa68f412673",
+      "lines": 403,
+      "method": "static source inventory; not execution",
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [
+          7,
+          302,
+          326
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          3,
+          102
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/usb_ptp/s5_ptp_dump.py",
+      "bytes": 22935,
+      "sha256": "7bd7de80b9bffadc6a97fcee620cbd694335ae75b19d160e5d2ef600ea3591ea",
+      "lines": 574,
+      "method": "static source inventory; not execution",
+      "syntax_parsed": true,
+      "imports": [
+        "argparse",
+        "collections",
+        "os",
+        "struct",
+        "sys",
+        "time",
+        "usb.core",
+        "usb.util"
+      ],
+      "direct_module_call_lines": [],
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [
+          9,
+          38,
+          309,
+          329,
+          444,
+          445,
+          446
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          225,
+          229,
+          232,
+          279,
+          442,
+          460,
+          468,
+          482,
+          520
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          38,
+          71,
+          80,
+          433,
+          449,
+          453,
+          456,
+          458,
+          466,
+          480,
+          490,
+          517,
+          557
+        ]
+      }
+    },
+    {
+      "path": "02_工具与脚本/usb_ptp/s5_ptp_raw.c",
+      "bytes": 14404,
+      "sha256": "069fed5c9f31a1bdff6a35e91ef0a920618d711b87408902d9694e11c0811708",
+      "lines": 320,
+      "method": "static source inventory; not execution",
+      "effect_marker_lines": {
+        "setting_mutation": [],
+        "session_mutation": [
+          12,
+          293
+        ],
+        "upload_protocol": [],
+        "usb_control_or_bulk_write": [
+          89,
+          200,
+          206
+        ],
+        "ble_write": [],
+        "result_or_baseline_check": [
+          303
+        ]
+      }
+    }
+  ]
+}

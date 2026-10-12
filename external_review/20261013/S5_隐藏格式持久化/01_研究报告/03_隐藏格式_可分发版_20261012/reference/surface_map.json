@@ -1,0 +1,1271 @@
+{
+  "getinfo": {
+    "capability": {
+      "status": 200,
+      "result": "ok",
+      "interesting": true
+    },
+    "allmenu": {
+      "status": 200,
+      "result": "ok",
+      "interesting": true
+    },
+    "curmenu": {
+      "status": 200,
+      "result": "ok",
+      "interesting": true
+    },
+    "camsetting": {
+      "status": 200,
+      "result": "raw:200",
+      "interesting": true
+    },
+    "ver": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "version": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "firmware": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "fw": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "serial": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "serialno": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "sn": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "systeminfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "sysinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "netinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "network": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "wifi": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "card": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "sdcard": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "storage": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "battery": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "bat": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "menu": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "setting": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "settings": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "info": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "diagnostics": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "diag": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "debug": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "log": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "logs": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "versioninfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "modelinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "productinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "deviceinfo": {
+      "status": 200,
+      "result": "err_critical",
+      "interesting": false
+    },
+    "devinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "camera": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "self": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "status": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "state": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "config": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "configinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "cap": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "caps": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "features": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "featurelist": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "list": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "all": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "menuinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "menulist": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "camsetting2": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "settinginfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "userconfig": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "env": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "environment": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "kernel": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "os": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "cpu": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "soc": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "hw": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "hardware": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "sensor": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "memory": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "mem": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "uptime": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "time": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "date": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "ntp": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "ip": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "addr": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "mac": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "ssid": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "channel": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "firmwareinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "fwinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "build": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "buildinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "compile": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "patch": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "level": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "lv": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "mode": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "modes": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "profile": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "profiles": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "lang": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "language": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "region": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "timezone": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "tz": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "locale": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "owner": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "name": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "hostname": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "hostnameinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "dns": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "gateway": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "subnet": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "port": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "services": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "service": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "httpd": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "cgi": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "cgilist": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "cmd": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "cmdlist": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "command": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "cmdmode": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "modeinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "getall": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "dump": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "dumpall": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "show": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "showall": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "trace": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "traceinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "perf": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "stat": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "stats": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "counter": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "counters": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "event": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "events": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "loginfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "errlog": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "fault": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "faultinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "panic": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "core": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "cores": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "task": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "tasks": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "proc": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "process": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "pid": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "load": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "usage": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "free": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    }
+  },
+  "modes": {
+    "getstate": {
+      "status": 200,
+      "result": "ok",
+      "interesting": true
+    },
+    "getsetting": {
+      "status": 200,
+      "result": "err_critical",
+      "interesting": false
+    },
+    "setsetting": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "getinfo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "accctrl": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "camcmd": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "camctrl": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "getall": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "getconfig": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "setconfig": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "config": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "menu": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "getmenu": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "setmenu": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "version": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "ping": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "echo": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "cmd": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "command": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "exec": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "shell": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "system": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "sys": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "dbg": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "debug": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "diagnose": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "diag": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "test": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "selftest": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "self": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "init": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "setup": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "update": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "upgrade": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "fwupdate": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "firmware": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "flash": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "write": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "read": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "load": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "unload": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "download": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "upload": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "ftp": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "sftp": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "http": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "tcp": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "port": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "open": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "close": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "connect": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "connect2": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "open2": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "start": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "stop": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "begin": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "end": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "first": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "final": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "chunk": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "send": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "recv": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "ack": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "nack": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "req": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "reqacc": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "req_acc": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "handshake": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "pair": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "pairing": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "auth": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "login": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "logout": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "session": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "key": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "crypto": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "aes": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "enc": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "decode": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "encode": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "hash": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "sign": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "verify": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "check": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "checksum": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "md5": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "sha": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "sha1": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "sha256": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "reset": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "reboot": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "power": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "shutdown": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "off": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "on": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "sleep": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "wake": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "suspend": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "resume": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "halt": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "panic": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "crash": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "test2": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "fwd": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "backup": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "restore": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "export": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "import": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "save": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "load2": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "commit": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "apply": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "cancel": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "abort": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "abortall": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    },
+    "clear": {
+      "status": 200,
+      "result": "err_param",
+      "interesting": false
+    }
+  }
+}

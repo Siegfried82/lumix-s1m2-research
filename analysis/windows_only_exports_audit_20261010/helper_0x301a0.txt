@@ -1,0 +1,218 @@
+
+analysis/sources/tether_windows_2_12/Lmxptpif.dll:	file format coff-x86-64
+
+Disassembly of section .text:
+
+000000018002fe70 <LMX_func_api_SetupRangeSet_Set_Info>:
+1800301a0: 48 89 5c 24 10              	movq	%rbx, 0x10(%rsp)
+1800301a5: 55                          	pushq	%rbp
+1800301a6: 56                          	pushq	%rsi
+1800301a7: 57                          	pushq	%rdi
+1800301a8: 41 54                       	pushq	%r12
+1800301aa: 41 55                       	pushq	%r13
+1800301ac: 41 56                       	pushq	%r14
+1800301ae: 41 57                       	pushq	%r15
+1800301b0: 48 81 ec a0 00 00 00        	subq	$0xa0, %rsp
+1800301b7: 48 8b 05 b2 90 22 00        	movq	0x2290b2(%rip), %rax    # 0x180259270
+1800301be: 48 33 c4                    	xorq	%rsp, %rax
+1800301c1: 48 89 84 24 90 00 00 00     	movq	%rax, 0x90(%rsp)
+1800301c9: 45 33 ed                    	xorl	%r13d, %r13d
+1800301cc: 89 54 24 52                 	movl	%edx, 0x52(%rsp)
+1800301d0: 48 8b f9                    	movq	%rcx, %rdi
+1800301d3: 44 89 6c 24 44              	movl	%r13d, 0x44(%rsp)
+1800301d8: 0f 57 c0                    	xorps	%xmm0, %xmm0
+1800301db: 44 89 6c 24 40              	movl	%r13d, 0x40(%rsp)
+1800301e0: b8 0a 94 ff ff              	movl	$0xffff940a, %eax       # imm = 0xFFFF940A
+1800301e5: 44 88 6c 24 6e              	movb	%r13b, 0x6e(%rsp)
+1800301ea: b9 0a 94 00 00              	movl	$0x940a, %ecx           # imm = 0x940A
+1800301ef: 66 89 44 24 48              	movw	%ax, 0x48(%rsp)
+1800301f4: 48 8d 54 24 40              	leaq	0x40(%rsp), %rdx
+1800301f9: 4c 89 6c 24 4a              	movq	%r13, 0x4a(%rsp)
+1800301fe: 45 8b fd                    	movl	%r13d, %r15d
+180030201: c7 44 24 66 01 00 00 00     	movl	$0x1, 0x66(%rsp)
+180030209: f3 0f 7f 44 24 56           	movdqu	%xmm0, 0x56(%rsp)
+18003020f: 4d 8b e0                    	movq	%r8, %r12
+180030212: e8 79 71 00 00              	callq	0x180037390 <LMX_func_api_WB_Ctrl_WBSET+0xc10>
+180030217: 84 c0                       	testb	%al, %al
+180030219: 0f 84 e9 00 00 00           	je	0x180030308 <LMX_func_api_SetupRangeSet_Set_Info+0x498>
+18003021f: 8b 44 24 40                 	movl	0x40(%rsp), %eax
+180030223: 89 44 24 6a                 	movl	%eax, 0x6a(%rsp)
+180030227: 83 f8 03                    	cmpl	$0x3, %eax
+18003022a: 75 30                       	jne	0x18003025c <LMX_func_api_SetupRangeSet_Set_Info+0x3ec>
+18003022c: bd 38 00 00 00              	movl	$0x38, %ebp
+180030231: 8d 48 3f                    	leal	0x3f(%rax), %ecx
+180030234: 8b d5                       	movl	%ebp, %edx
+180030236: 41 8b f5                    	movl	%r13d, %esi
+180030239: 45 8b f5                    	movl	%r13d, %r14d
+18003023c: ff 15 ae 20 17 00           	callq	*0x1720ae(%rip)         # 0x1801a22f0
+180030242: 4c 8b f8                    	movq	%rax, %r15
+180030245: 48 85 c0                    	testq	%rax, %rax
+180030248: 0f 84 ba 00 00 00           	je	0x180030308 <LMX_func_api_SetupRangeSet_Set_Info+0x498>
+18003024e: 48 8b c8                    	movq	%rax, %rcx
+180030251: ff 15 89 20 17 00           	callq	*0x172089(%rip)         # 0x1801a22e0
+180030257: 48 8b d8                    	movq	%rax, %rbx
+18003025a: eb 3b                       	jmp	0x180030297 <LMX_func_api_SetupRangeSet_Set_Info+0x427>
+18003025c: 83 f8 05                    	cmpl	$0x5, %eax
+18003025f: 75 08                       	jne	0x180030269 <LMX_func_api_SetupRangeSet_Set_Info+0x3f9>
+180030261: 41 8b f5                    	movl	%r13d, %esi
+180030264: 4d 8b f5                    	movq	%r13, %r14
+180030267: eb 28                       	jmp	0x180030291 <LMX_func_api_SetupRangeSet_Set_Info+0x421>
+180030269: be 08 00 00 00              	movl	$0x8, %esi
+18003026e: 8b d6                       	movl	%esi, %edx
+180030270: 8d 4e 3a                    	leal	0x3a(%rsi), %ecx
+180030273: ff 15 77 20 17 00           	callq	*0x172077(%rip)         # 0x1801a22f0
+180030279: 4c 8b f8                    	movq	%rax, %r15
+18003027c: 48 85 c0                    	testq	%rax, %rax
+18003027f: 0f 84 83 00 00 00           	je	0x180030308 <LMX_func_api_SetupRangeSet_Set_Info+0x498>
+180030285: 48 8b c8                    	movq	%rax, %rcx
+180030288: ff 15 52 20 17 00           	callq	*0x172052(%rip)         # 0x1801a22e0
+18003028e: 4c 8b f0                    	movq	%rax, %r14
+180030291: 49 8b dd                    	movq	%r13, %rbx
+180030294: 41 8b ed                    	movl	%r13d, %ebp
+180030297: 33 c0                       	xorl	%eax, %eax
+180030299: 4c 89 64 24 38              	movq	%r12, 0x38(%rsp)
+18003029e: 48 89 84 24 80 00 00 00     	movq	%rax, 0x80(%rsp)
+1800302a6: 4c 8d 4c 24 70              	leaq	0x70(%rsp), %r9
+1800302ab: 89 84 24 88 00 00 00        	movl	%eax, 0x88(%rsp)
+1800302b2: 48 8d 4c 24 48              	leaq	0x48(%rsp), %rcx
+1800302b7: 66 89 84 24 8c 00 00 00     	movw	%ax, 0x8c(%rsp)
+1800302bf: 0f 57 c0                    	xorps	%xmm0, %xmm0
+1800302c2: 88 84 24 8e 00 00 00        	movb	%al, 0x8e(%rsp)
+1800302c9: 4d 8b c6                    	movq	%r14, %r8
+1800302cc: 48 8d 44 24 44              	leaq	0x44(%rsp), %rax
+1800302d1: 8b d6                       	movl	%esi, %edx
+1800302d3: 48 89 44 24 30              	movq	%rax, 0x30(%rsp)
+1800302d8: 48 89 5c 24 28              	movq	%rbx, 0x28(%rsp)
+1800302dd: 89 6c 24 20                 	movl	%ebp, 0x20(%rsp)
+1800302e1: 0f 11 44 24 70              	movups	%xmm0, 0x70(%rsp)
+1800302e6: e8 95 1c 02 00              	callq	0x180051f80 <LMX_func_api_ptpip_UpdateCer+0x44e0>
+1800302eb: 8b f0                       	movl	%eax, %esi
+1800302ed: 84 c0                       	testb	%al, %al
+1800302ef: 75 44                       	jne	0x180030335 <LMX_func_api_SetupRangeSet_Set_Info+0x4c5>
+1800302f1: 4d 85 ff                    	testq	%r15, %r15
+1800302f4: 74 12                       	je	0x180030308 <LMX_func_api_SetupRangeSet_Set_Info+0x498>
+1800302f6: 49 8b cf                    	movq	%r15, %rcx
+1800302f9: ff 15 d9 1f 17 00           	callq	*0x171fd9(%rip)         # 0x1801a22d8
+1800302ff: 49 8b cf                    	movq	%r15, %rcx
+180030302: ff 15 e0 1f 17 00           	callq	*0x171fe0(%rip)         # 0x1801a22e8
+180030308: 32 c0                       	xorb	%al, %al
+18003030a: 48 8b 8c 24 90 00 00 00     	movq	0x90(%rsp), %rcx
+180030312: 48 33 cc                    	xorq	%rsp, %rcx
+180030315: e8 e6 ae 16 00              	callq	0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>
+18003031a: 48 8b 9c 24 e8 00 00 00     	movq	0xe8(%rsp), %rbx
+180030322: 48 81 c4 a0 00 00 00        	addq	$0xa0, %rsp
+180030329: 41 5f                       	popq	%r15
+18003032b: 41 5e                       	popq	%r14
+18003032d: 41 5d                       	popq	%r13
+18003032f: 41 5c                       	popq	%r12
+180030331: 5f                          	popq	%rdi
+180030332: 5e                          	popq	%rsi
+180030333: 5d                          	popq	%rbp
+180030334: c3                          	retq
+180030335: 8b 54 24 44                 	movl	0x44(%rsp), %edx
+180030339: 85 d2                       	testl	%edx, %edx
+18003033b: 0f 84 e2 00 00 00           	je	0x180030423 <LMX_func_api_SetupRangeSet_Set_Info+0x5b3>
+180030341: 8b 0b                       	movl	(%rbx), %ecx
+180030343: 81 e9 b1 00 00 08           	subl	$0x80000b1, %ecx        # imm = 0x80000B1
+180030349: 0f 84 91 00 00 00           	je	0x1800303e0 <LMX_func_api_SetupRangeSet_Set_Info+0x570>
+18003034f: 83 e9 01                    	subl	$0x1, %ecx
+180030352: 74 78                       	je	0x1800303cc <LMX_func_api_SetupRangeSet_Set_Info+0x55c>
+180030354: 83 e9 01                    	subl	$0x1, %ecx
+180030357: 74 42                       	je	0x18003039b <LMX_func_api_SetupRangeSet_Set_Info+0x52b>
+180030359: 83 f9 01                    	cmpl	$0x1, %ecx
+18003035c: 0f 85 be 00 00 00           	jne	0x180030420 <LMX_func_api_SetupRangeSet_Set_Info+0x5b0>
+180030362: 48 8d 4f 28                 	leaq	0x28(%rdi), %rcx
+180030366: 41 8b c5                    	movl	%r13d, %eax
+180030369: 48 85 c9                    	testq	%rcx, %rcx
+18003036c: 0f 84 9d 00 00 00           	je	0x18003040f <LMX_func_api_SetupRangeSet_Set_Info+0x59f>
+180030372: c7 01 b4 00 00 08           	movl	$0x80000b4, (%rcx)      # imm = 0x80000B4
+180030378: 44 8b 4b 04                 	movl	0x4(%rbx), %r9d
+18003037c: 44 89 49 04                 	movl	%r9d, 0x4(%rcx)
+180030380: 45 85 c9                    	testl	%r9d, %r9d
+180030383: 0f 84 86 00 00 00           	je	0x18003040f <LMX_func_api_SetupRangeSet_Set_Info+0x59f>
+180030389: 8b 43 08                    	movl	0x8(%rbx), %eax
+18003038c: 89 41 08                    	movl	%eax, 0x8(%rcx)
+18003038f: 8b 43 0c                    	movl	0xc(%rbx), %eax
+180030392: 89 41 0c                    	movl	%eax, 0xc(%rcx)
+180030395: 41 8d 41 08                 	leal	0x8(%r9), %eax
+180030399: eb 70                       	jmp	0x18003040b <LMX_func_api_SetupRangeSet_Set_Info+0x59b>
+18003039b: 48 8d 4f 1c                 	leaq	0x1c(%rdi), %rcx
+18003039f: 41 8b c5                    	movl	%r13d, %eax
+1800303a2: 48 85 c9                    	testq	%rcx, %rcx
+1800303a5: 74 68                       	je	0x18003040f <LMX_func_api_SetupRangeSet_Set_Info+0x59f>
+1800303a7: c7 01 b3 00 00 08           	movl	$0x80000b3, (%rcx)      # imm = 0x80000B3
+1800303ad: 44 8b 43 04                 	movl	0x4(%rbx), %r8d
+1800303b1: 44 89 41 04                 	movl	%r8d, 0x4(%rcx)
+1800303b5: 45 85 c0                    	testl	%r8d, %r8d
+1800303b8: 74 55                       	je	0x18003040f <LMX_func_api_SetupRangeSet_Set_Info+0x59f>
+1800303ba: 0f b7 43 08                 	movzwl	0x8(%rbx), %eax
+1800303be: 66 89 41 08                 	movw	%ax, 0x8(%rcx)
+1800303c2: 0f b7 43 0a                 	movzwl	0xa(%rbx), %eax
+1800303c6: 66 89 41 0a                 	movw	%ax, 0xa(%rcx)
+1800303ca: eb 3b                       	jmp	0x180030407 <LMX_func_api_SetupRangeSet_Set_Info+0x597>
+1800303cc: 48 8d 4f 10                 	leaq	0x10(%rdi), %rcx
+1800303d0: 41 8b c5                    	movl	%r13d, %eax
+1800303d3: 48 85 c9                    	testq	%rcx, %rcx
+1800303d6: 74 37                       	je	0x18003040f <LMX_func_api_SetupRangeSet_Set_Info+0x59f>
+1800303d8: c7 01 b2 00 00 08           	movl	$0x80000b2, (%rcx)      # imm = 0x80000B2
+1800303de: eb cd                       	jmp	0x1800303ad <LMX_func_api_SetupRangeSet_Set_Info+0x53d>
+1800303e0: 41 8b c5                    	movl	%r13d, %eax
+1800303e3: 48 85 ff                    	testq	%rdi, %rdi
+1800303e6: 74 27                       	je	0x18003040f <LMX_func_api_SetupRangeSet_Set_Info+0x59f>
+1800303e8: c7 07 b1 00 00 08           	movl	$0x80000b1, (%rdi)      # imm = 0x80000B1
+1800303ee: 44 8b 43 04                 	movl	0x4(%rbx), %r8d
+1800303f2: 44 89 47 04                 	movl	%r8d, 0x4(%rdi)
+1800303f6: 45 85 c0                    	testl	%r8d, %r8d
+1800303f9: 74 14                       	je	0x18003040f <LMX_func_api_SetupRangeSet_Set_Info+0x59f>
+1800303fb: 8b 43 08                    	movl	0x8(%rbx), %eax
+1800303fe: 89 47 08                    	movl	%eax, 0x8(%rdi)
+180030401: 8b 43 0c                    	movl	0xc(%rbx), %eax
+180030404: 89 47 0c                    	movl	%eax, 0xc(%rdi)
+180030407: 41 8d 40 08                 	leal	0x8(%r8), %eax
+18003040b: 3b d0                       	cmpl	%eax, %edx
+18003040d: 72 11                       	jb	0x180030420 <LMX_func_api_SetupRangeSet_Set_Info+0x5b0>
+18003040f: 8b c8                       	movl	%eax, %ecx
+180030411: 2b d0                       	subl	%eax, %edx
+180030413: 48 03 d9                    	addq	%rcx, %rbx
+180030416: 85 d2                       	testl	%edx, %edx
+180030418: 0f 85 23 ff ff ff           	jne	0x180030341 <LMX_func_api_SetupRangeSet_Set_Info+0x4d1>
+18003041e: eb 03                       	jmp	0x180030423 <LMX_func_api_SetupRangeSet_Set_Info+0x5b3>
+180030420: 40 32 f6                    	xorb	%sil, %sil
+180030423: 49 8b cf                    	movq	%r15, %rcx
+180030426: ff 15 ac 1e 17 00           	callq	*0x171eac(%rip)         # 0x1801a22d8
+18003042c: 49 8b cf                    	movq	%r15, %rcx
+18003042f: ff 15 b3 1e 17 00           	callq	*0x171eb3(%rip)         # 0x1801a22e8
+180030435: 40 0f b6 c6                 	movzbl	%sil, %eax
+180030439: e9 cc fe ff ff              	jmp	0x18003030a <LMX_func_api_SetupRangeSet_Set_Info+0x49a>
+18003043e: cc                          	int3
+18003043f: cc                          	int3
+
+0000000180030440 <LMX_func_api_SS_GetCapability>:
+180030440: 4c 89 44 24 18              	movq	%r8, 0x18(%rsp)
+180030445: 48 89 54 24 10              	movq	%rdx, 0x10(%rsp)
+18003044a: 53                          	pushq	%rbx
+18003044b: 56                          	pushq	%rsi
+18003044c: 57                          	pushq	%rdi
+18003044d: 41 54                       	pushq	%r12
+18003044f: 41 55                       	pushq	%r13
+180030451: 41 56                       	pushq	%r14
+180030453: 41 57                       	pushq	%r15
+180030455: 48 81 ec 80 00 00 00        	subq	$0x80, %rsp
+18003045c: 49 8b f8                    	movq	%r8, %rdi
+18003045f: 4c 8b e2                    	movq	%rdx, %r12
+180030462: 48 8b f1                    	movq	%rcx, %rsi
+180030465: 45 33 ff                    	xorl	%r15d, %r15d
+180030468: 4d 85 c0                    	testq	%r8, %r8
+18003046b: 74 03                       	je	0x180030470 <LMX_func_api_SS_GetCapability+0x30>
+18003046d: 45 89 38                    	movl	%r15d, (%r8)
+180030470: 44 89 3d 8d e2 22 00        	movl	%r15d, 0x22e28d(%rip)   # 0x18025e704
+180030477: 0f 57 c0                    	xorps	%xmm0, %xmm0
+18003047a: 0f 11 44 24 48              	movups	%xmm0, 0x48(%rsp)
+18003047f: 0f 11 44 24 58              	movups	%xmm0, 0x58(%rsp)
+180030484: 0f 11 44 24 68              	movups	%xmm0, 0x68(%rsp)
+180030489: b3 01                       	movb	$0x1, %bl
+18003048b: 33 d2                       	xorl	%edx, %edx
+18003048d: 41 b8 28 10 00 00           	movl	$0x1028, %r8d           # imm = 0x1028
+180030493: e8 72 be 16 00              	callq	0x18019c30a <LMX_func_api_ptpip_UpdateCer+0x14e86a>
+180030498: b9 00 02 00 00              	movl	$0x200, %ecx            # imm = 0x200
+18003049d: ff 15 5d 21 17 00           	callq	*0x17215d(%rip)         # 0x1801a2600

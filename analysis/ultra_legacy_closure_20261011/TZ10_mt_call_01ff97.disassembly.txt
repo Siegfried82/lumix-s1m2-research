@@ -1,0 +1,123 @@
+
+<LOCAL_WORKSPACE>/analysis/method2_review_20261011/decoded/TZ10_V12.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+7789b947 <.data+0x1ff47>:
+7789b947:	70          	mov	(a0),d0
+7789b948:	88          	mov	d2,d0
+7789b949:	df b0 44    	ret	[d2,a2,a3],68
+7789b94c:	43 08       	mov	a0,(8,sp)
+7789b94e:	f1 e7       	mov	d1,a3
+7789b950:	f8 e1 03    	and	3,d1
+7789b953:	c9 37       	bne	0x7789b98a
+7789b955:	a0 00       	cmp	0,d0
+7789b957:	c8 3b       	beq	0x7789b992
+7789b959:	bf 20       	cmp	32,a3
+7789b95b:	c1 2f       	bgt	0x7789b98a
+7789b95d:	f1 dc       	mov	a3,d0
+7789b95f:	3c          	mov	sp,a0
+7789b960:	20 0c       	add	12,a0
+7789b962:	43 04       	mov	a0,(4,sp)
+7789b964:	a0 20       	cmp	32,d0
+7789b966:	c4 06       	bcs	0x7789b96c
+7789b968:	8a ff       	mov	-1,d2
+7789b96a:	ca 1c       	bra	0x7789b986
+7789b96c:	04          	clr	d1
+7789b96d:	a4          	cmp	d1,d0
+7789b96e:	c7 17       	bls	0x7789b985
+7789b970:	fc de 84 d5 	mov	2008798596,a2
+7789b974:	bb 77 
+7789b976:	db          	setlb	
+7789b977:	f0 49       	movbu	(a1),d2
+7789b979:	f0 4e       	movbu	(a2),d3
+7789b97b:	44          	inc	d1
+7789b97c:	f2 2e       	xor	d3,d2
+7789b97e:	f0 58       	movbu	d2,(a0)
+7789b980:	41          	inc	a0
+7789b981:	49          	inc	a2
+7789b982:	45          	inc	a1
+7789b983:	a1          	cmp	d0,d1
+7789b984:	d4          	lcs	
+7789b985:	08          	clr	d2
+7789b986:	aa 00       	cmp	0,d2
+7789b988:	c8 06       	beq	0x7789b98e
+7789b98a:	80 ff       	mov	-1,d0
+7789b98c:	ca 17       	bra	0x7789b9a3
+7789b98e:	5c 08       	mov	(8,sp),a0
+7789b990:	5d 04       	mov	(4,sp),a1
+7789b992:	f1 dc       	mov	a3,d0
+7789b994:	f8 c8 02    	asr	2,d0
+7789b997:	cd 4d 9d f0 	call	0x778956e4,[d2,d3,a2,a3],36
+7789b99b:	24 
+7789b99c:	5c 08       	mov	(8,sp),a0
+7789b99e:	00          	clr	d0
+7789b99f:	fa 10 c4 09 	mov	d0,(2500,a0)
+7789b9a3:	df f0 3c    	ret	[d2,d3,a2,a3],60
+7789b9a6:	42 0c       	mov	d0,(12,sp)
+7789b9a8:	f1 d0       	mov	a0,d0
+7789b9aa:	fa c0 c4 09 	add	2500,d0
+7789b9ae:	96          	mov	a1,a2
+7789b9af:	43 04       	mov	a0,(4,sp)
+7789b9b1:	42 10       	mov	d0,(16,sp)
+7789b9b3:	f1 e0       	mov	d0,a0
+7789b9b5:	58 0c       	mov	(12,sp),d0
+7789b9b7:	78          	mov	(a0),d2
+7789b9b8:	a0 00       	cmp	0,d0
+7789b9ba:	c1 07       	bgt	0x7789b9c1
+7789b9bc:	f8 ec 03    	btst	3,d0
+7789b9bf:	c9 09       	bne	0x7789b9c8
+7789b9c1:	f1 d4       	mov	a1,d0
+7789b9c3:	f8 ec 03    	btst	3,d0
+7789b9c6:	c8 05       	beq	0x7789b9cb
+7789b9c8:	00          	clr	d0
+7789b9c9:	ca 56       	bra	0x7789ba1f
+7789b9cb:	58 0c       	mov	(12,sp),d0
+7789b9cd:	0c          	clr	d3
+7789b9ce:	f8 c8 02    	asr	2,d0
+7789b9d1:	42 08       	mov	d0,(8,sp)
+7789b9d3:	ac          	cmp	d3,d0
+7789b9d4:	c3 46       	ble	0x7789ba1a
+7789b9d6:	f0 0e       	mov	(a2),a3
+7789b9d8:	04          	clr	d1
+7789b9d9:	db          	setlb	
+7789b9da:	80 01       	mov	1,d0
+7789b9dc:	f2 08       	and	d2,d0
+7789b9de:	e1          	add	d0,d1
+7789b9df:	f8 c6 01    	lsr	1,d2
+7789b9e2:	80 01       	mov	1,d0
+7789b9e4:	f2 08       	and	d2,d0
+7789b9e6:	e1          	add	d0,d1
+7789b9e7:	f8 c6 01    	lsr	1,d2
+7789b9ea:	80 01       	mov	1,d0
+7789b9ec:	f2 08       	and	d2,d0
+7789b9ee:	e1          	add	d0,d1
+7789b9ef:	f8 c6 01    	lsr	1,d2
+7789b9f2:	80 01       	mov	1,d0
+7789b9f4:	f2 08       	and	d2,d0
+7789b9f6:	e1          	add	d0,d1
+7789b9f7:	f8 c6 01    	lsr	1,d2
+7789b9fa:	d9          	lne	
+7789b9fb:	f8 ed 01    	btst	1,d1
+7789b9fe:	c8 09       	beq	0x7789ba07
+7789ba00:	5c 04       	mov	(4,sp),a0
+7789ba02:	cd d6 9d f0 	call	0x778957d8,[d2,d3,a2,a3],24
+7789ba06:	18 
+7789ba07:	5c 04       	mov	(4,sp),a0
+7789ba09:	cd cf 9d f0 	call	0x778957d8,[d2,d3,a2,a3],24
+7789ba0d:	18 
+7789ba0e:	f1 de       	mov	a3,d2
+7789ba10:	f2 22       	xor	d0,d2
+7789ba12:	6a          	mov	d2,(a2)
+7789ba13:	58 08       	mov	(8,sp),d0
+7789ba15:	52          	inc4	a2
+7789ba16:	4c          	inc	d3
+7789ba17:	a3          	cmp	d0,d3
+7789ba18:	c0 be       	blt	0x7789b9d6
+7789ba1a:	5c 10       	mov	(16,sp),a0
+7789ba1c:	68          	mov	d2,(a0)
+7789ba1d:	58 0c       	mov	(12,sp),d0
+7789ba1f:	df f0 24    	ret	[d2,d3,a2,a3],36
+7789ba22:	fc a6 d4 d5 	mov	(0x77bbd5d4),d2
+7789ba26:	bb  

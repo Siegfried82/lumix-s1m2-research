@@ -1,0 +1,34 @@
+{
+  "generated_utc": "2026-10-11T15:05:17.554152+00:00",
+  "source_url": "https://ftp.gnu.org/gnu/binutils/binutils-2.44.tar.xz",
+  "checksum_primary_source": "https://lists.gnu.org/archive/html/info-gnu/2025-02/msg00001.html",
+  "published_sha256": "ce2017e059d63e67ddb9240e9d4ec49c2893605035cd60e92ad53177f4377237",
+  "archive_sha256_matches": true,
+  "gpg_signature_verified": false,
+  "target": "mn10300-elf",
+  "supported_machine_options_verified": [
+    "mn10300",
+    "am33",
+    "am33-2"
+  ],
+  "host": "Darwin 27.0.0 arm64",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin",
+  "objdump_version": "GNU objdump (GNU Binutils) 2.44\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) any later version.\nThis program has absolutely no warranty.",
+  "objdump_formats": "BFD header file version (GNU Binutils) 2.44\nelf32-mn10300\n (header little endian, data little endian)\n  mn10300\nelf32-little\n (header little endian, data little endian)\n  mn10300\nelf32-big\n (header big endian, data big endian)\n  mn10300\nsrec\n (header endianness unknown, data endianness unknown)\n  mn10300\nsymbolsrec\n (header endianness unknown, data endianness unknown)\n  mn10300\nverilog\n (header endianness unknown, data endianness unknown)\n  mn10300\ntekhex\n (header endianness unknown, data endianness unknown)\n  mn10300\nbinary\n (header endianness unknown, data endianness unknown)\n  mn10300\nihex\n (header endianness unknown, data endianness unknown)\n  mn10300\nplugin\n (header little endian, data little endian)\n\n         elf32-mn10300 elf32-little elf32-big srec symbolsrec verilog tekhex \n mn10300 elf32-mn10300 elf32-little elf32-big srec symbolsrec verilog tekhex\n\n         binary ihex plugin \n mn10300 binary ihex ------",
+  "host_linkage": "<LOCAL_WORKSPACE>/analysis/ultra_mn10300_tool_20261011/build-system-zlib/binutils/objdump:\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)\n\t/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.12)",
+  "sha256": {
+    "binutils-2.44.tar.xz": "ce2017e059d63e67ddb9240e9d4ec49c2893605035cd60e92ad53177f4377237",
+    "binutils-2.44/bfd/cpu-m10300.c": "562b550c056e4df85ddbd16d0631780799918060f8ff811d638fbcd018c3e0f3",
+    "binutils-2.44/opcodes/m10300-opc.c": "1e1150db856998de8366870394297e37d51db464164190e6ed0f988b44910796",
+    "binutils-2.44/opcodes/m10300-dis.c": "0a7223538629ed43191fe527bd7d3ac09f658aa9dbcb2bae23a511023abbce2b",
+    "binutils-2.44/include/opcode/mn10300.h": "59f7515a00fb657ebd29dc258c10e05228ac0f2b40960ffa33635e8823c26f46",
+    "build-system-zlib/binutils/objdump": "a2d70ddcd641aa9f88b4b4b8896bf33b86677279dca21d6b5c74274d6e06d0da",
+    "build-system-zlib/binutils/objcopy": "c991b0544456579afc16612e13ae06b33e7057eabe47bd62b90235448eacc126",
+    "build-system-zlib/gas/as-new": "5bf6b448723825cde631afcab482a706b6b9718a228769c11ad3e6dfe689652c",
+    "validate_official.py": "081abc1a89e92d08f001451daea95b969399c42031973d011b7eaa4e7e928632"
+  },
+  "validation": "validation/official_fixture_results.json",
+  "system_installed": false,
+  "firmware_or_target_objects_executed": false,
+  "source_patches": []
+}

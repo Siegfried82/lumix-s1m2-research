@@ -1,0 +1,86 @@
+{
+  "positives": [
+    {
+      "file": "synth_pos_UPDATE.TXT",
+      "valid": true,
+      "errors": [],
+      "stats": {
+        "file_size_bytes": 1636,
+        "declared_words": 256,
+        "parsed_words": 256,
+        "raw_bytes_equivalent": 512,
+        "nonzero_word_ratio": 0.1133
+      }
+    },
+    {
+      "file": "synth_pos_ADJUST.TXT",
+      "valid": true,
+      "errors": [],
+      "stats": {
+        "file_size_bytes": 1641,
+        "declared_words": 256,
+        "parsed_words": 256,
+        "raw_bytes_equivalent": 512,
+        "nonzero_word_ratio": 0.0586
+      }
+    },
+    {
+      "file": "synth_pos_FIX.TXT",
+      "valid": true,
+      "errors": [],
+      "stats": {
+        "file_size_bytes": 1633,
+        "declared_words": 256,
+        "parsed_words": 256,
+        "raw_bytes_equivalent": 512,
+        "nonzero_word_ratio": 0.25
+      }
+    },
+    {
+      "file": "synth_pos_DSH.TXT",
+      "valid": true,
+      "errors": [],
+      "stats": {
+        "file_size_bytes": 1638,
+        "declared_words": 256,
+        "parsed_words": 256,
+        "raw_bytes_equivalent": 512,
+        "nonzero_word_ratio": 0.0
+      }
+    }
+  ],
+  "negatives": [
+    {
+      "test": "bad_magic",
+      "file": "synth_neg_bad_magic.TXT",
+      "rejected": true,
+      "errors": [
+        "Invalid header magic: '###### WRONG HEADER ######' (expected '###### EEPROM DATA INFORMATION ######')"
+      ]
+    },
+    {
+      "test": "short_lines",
+      "file": "synth_neg_short_lines.TXT",
+      "rejected": true,
+      "errors": [
+        "Data line count mismatch: found 1, expected 2 for 32 words"
+      ]
+    },
+    {
+      "test": "bad_offset",
+      "file": "synth_neg_bad_offset.TXT",
+      "rejected": true,
+      "errors": [
+        "Line 6: Offset mismatch: 0x20 != expected 0x10"
+      ]
+    },
+    {
+      "test": "bad_syntax",
+      "file": "synth_neg_bad_syntax.TXT",
+      "rejected": true,
+      "errors": [
+        "Line 5: Malformed data line: 'H0000 ZZZZ,ZZZZ,ZZZZ,ZZZZ,ZZZZ,ZZZZ,ZZZZ,ZZZZ,ZZZZ,ZZZZ,ZZZZ,ZZZZ,ZZZZ,ZZZZ,ZZZZ,ZZZZ,'"
+      ]
+    }
+  ]
+}

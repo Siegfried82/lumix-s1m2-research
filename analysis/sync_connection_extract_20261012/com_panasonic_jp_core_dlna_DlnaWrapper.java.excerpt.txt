@@ -1,0 +1,21 @@
+185:     public int e() {
+186:         return upnp_unregistSubscriber("Camera/event");
+187:     }
+188: 
+189:     public List<p134q5.a> f() {
+190:         List<p134q5.a> listU;
+191:         synchronized (f19320d) {
+192:             listU = u("urn:schemas-upnp-org:device:MediaServer:1", f19323g);
+193:         }
+194:         return listU;
+195:     }
+196: 
+197:     public List<p134q5.a> g(int i7, int i8, int i9) {
+198:         List<p134q5.a> listV;
+199:         synchronized (f19320d) {
+200:             listV = v("urn:schemas-upnp-org:device:MediaServer:1", i7, i8, i9);
+201:         }
+202:         return listV;
+203:     }
+204: 
+205:     public String h(String str, int i7, int i8, String str2, int[] iArr) {

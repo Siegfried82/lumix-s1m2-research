@@ -1,0 +1,535 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "workspace": "<LOCAL_WORKSPACE>",
+    "reviewed_on": "2026-10-12",
+    "mode": "read-only inspection; writes only this assigned review directory",
+    "antigravity": "disabled by current user instruction; no call",
+    "review_method": "Current AGENTS/status and targeted documentation/code reads; Markdown link existence scan excluding provenance groups; exact embedded-body and SHA comparison",
+    "not_claimed": [
+      "all project documents semantically audited",
+      "all runtime dependencies found",
+      "current camera connection or device behavior verified"
+    ]
+  },
+  "excluded_groups": [
+    {
+      "group": "third_party_sources_and_tools",
+      "paths": [
+        "analysis/sources/",
+        "analysis/tools/"
+      ],
+      "reason": "原厂内核/U-Boot、第三方Git源码、APK/原生程序/反编译材料及它们的README/LICENSE是输入；已确认libgphoto2/GMaster/LumixCSWrapper/LumixCameraAscomDriver有.git",
+      "action": "exclude from deletion or rewriting; retain original evidence and accompanying provenance"
+    },
+    {
+      "group": "public_git_snapshot",
+      "paths": [
+        "outputs/lumix-s1m2-research-public/",
+        "outputs/publication-tools/"
+      ],
+      "reason": "公开Git副本有.git；其文稿、证据清单和重放体系独立于工作区清理，不同步删除",
+      "action": "exclude from deletion or rewriting; retain original evidence and accompanying provenance"
+    },
+    {
+      "group": "imported_external_originals",
+      "paths": [
+        "analysis/external_lab_reports_20261012/originals/",
+        "analysis/external_lab_reports_20261012/manifest.json",
+        "analysis/external_qemu_sandbox_20261012/qemu_sandbox/",
+        "analysis/external_qemu_sandbox_20261012/使用说明_原稿.md",
+        "analysis/external_qemu_sandbox_20261012/manifest.json",
+        "analysis/s5_research_report_20261011/",
+        "analysis/s5_delivery_review_20261010/input/"
+      ],
+      "reason": "原稿存在错误仍需保留作者陈述、来源和修正对应关系；AGENTS明确要求保留外部原稿",
+      "action": "exclude from deletion or rewriting; retain original evidence and accompanying provenance"
+    },
+    {
+      "group": "raw_device_records",
+      "paths": [
+        "analysis/android_lab_live_20261012/",
+        "analysis/baseline_20261008_01/",
+        "analysis/device_inventory_20261008_06/",
+        "analysis/highres_20261008_02/",
+        "analysis/highres_firstnormal_off_20261008_03/",
+        "analysis/highres_firstnormal_off_fan_20261008_05/",
+        "analysis/highres_firstnormal_on_fan_20261008_04/",
+        "analysis/inventory_final_baseline_20261008_13/",
+        "analysis/lab_lut_backup_20261012/",
+        "analysis/lut_config_after_20261012/",
+        "analysis/lut_config_before_20261012/",
+        "analysis/lut_config_blank_20261012/",
+        "analysis/lut_config_delete_20261012/",
+        "analysis/lut_config_reboot_20261012/",
+        "analysis/lut_config_rename_20261012/",
+        "analysis/lut_identity_delete_camera_20261012/",
+        "analysis/lut_identity_import_20261012/",
+        "analysis/lut_import_after_wifi_20261012/",
+        "analysis/lut_upload_live_20261012_01/",
+        "analysis/object_inventory_live_20261010/",
+        "analysis/object_metadata_full_20261010/",
+        "analysis/object_metadata_sample_20261010/",
+        "analysis/standard_inventory_20261008_07/",
+        "analysis/storage_inventory_20261008_08/",
+        "analysis/usb_lut_direct_20261012/",
+        "analysis/usb_video_paired_20261012/",
+        "analysis/vendor_capability_inventory_20261008_10/",
+        "analysis/vendor_current_inventory_20261008_09/",
+        "analysis/vendor_extra_inventory_20261008_11/",
+        "analysis/vendor_storage_ids_20261008_14/",
+        "analysis/video_status_inventory_20261008_12/",
+        "outputs/S1M2_机身只读数据包_20261008.zip",
+        "outputs/S1M2_机身只读数据包_20261008.sha256"
+      ],
+      "reason": "原始设备响应、时点、日志、个人配置/LUT与散列，不能把文稿清理扩展为删原始证据",
+      "action": "exclude from deletion or rewriting; retain original evidence and accompanying provenance"
+    },
+    {
+      "group": "raw_firmware_and_decoded_inputs",
+      "paths": [
+        "S1m2_V14.bin",
+        "S1m2_V14.zip",
+        "analysis/unpacked/",
+        "analysis/encoded_components/",
+        "analysis/control_decrypted/",
+        "analysis/legacy_corpus_20261011/",
+        "analysis/transition_corpus_20261011/"
+      ],
+      "reason": "核心工具与差分重放依赖的输入；不是待删除文稿",
+      "action": "exclude from deletion or rewriting; retain original evidence and accompanying provenance"
+    },
+    {
+      "group": "original_media_models_and_virtual_guest_evidence",
+      "paths": [
+        "analysis/desktop_panasonic_review_20261012/original_media/",
+        "analysis/desktop_panasonic_review_20261012/offline_program_copy/",
+        "analysis/in_camera_hdr_reference/original_traces/",
+        "analysis/in_camera_hdr_reference/historical_evidence/",
+        "analysis/in_camera_hdr_reference/model_archive/",
+        "analysis/local_qemu_lab_20261012/runs/",
+        "analysis/local_qemu_lab_20261012/runtime/"
+      ],
+      "reason": "保留外部原媒体/程序副本、历史算法证据/权重及真实虚拟客体日志和RAM；虚拟客体证据不称设备采集",
+      "action": "exclude from deletion or rewriting; retain original evidence and accompanying provenance"
+    }
+  ],
+  "recommended_anchor_docs": [
+    {
+      "path": "AGENTS.md",
+      "exists": true,
+      "reason": "当前证据边界、原稿保留、AGY停用约束",
+      "recommended_action": "retain concise active explanation"
+    },
+    {
+      "path": "S1M2研究当前状态.md",
+      "exists": true,
+      "reason": "单一现状入口与经核验报告索引；可以由主线程压缩",
+      "recommended_action": "retain concise active explanation"
+    },
+    {
+      "path": "S1M2固件研究需求与交接.md",
+      "exists": true,
+      "reason": "原始用户需求与授权边界；标注当前目标已重设",
+      "recommended_action": "retain concise active explanation"
+    },
+    {
+      "path": "s1m2_firmware_project/README.md",
+      "exists": true,
+      "reason": "UPD/PTP/模拟工具能力与测试边界；链接旧进度须更新",
+      "recommended_action": "retain concise active explanation"
+    },
+    {
+      "path": "analysis/ptp_client/README.md",
+      "exists": true,
+      "reason": "USB会话副作用、查询限制、尚未实机验证部分",
+      "recommended_action": "retain concise active explanation"
+    },
+    {
+      "path": "analysis/local_qemu_lab_20261012/使用说明.md",
+      "exists": true,
+      "reason": "可运行沙箱、完整虚拟RAM与实机RAM的区别、证据路径",
+      "recommended_action": "retain concise active explanation"
+    },
+    {
+      "path": "analysis/external_qemu_sandbox_20261012/核验结论.md",
+      "exists": true,
+      "reason": "外部包来源、KASAN、构建缺口与使用边界",
+      "recommended_action": "retain concise active explanation"
+    },
+    {
+      "path": "analysis/external_lab_reports_20261012/核验与修正.md",
+      "exists": true,
+      "reason": "外部原稿中已撤回的协议与安全断言",
+      "recommended_action": "retain concise active explanation"
+    },
+    {
+      "path": "analysis/s1m2_lut_config_tool_20261012/工具说明与进度.md",
+      "exists": true,
+      "reason": "离线解析支持范围；不能把数值导出称原文/回写闭环",
+      "recommended_action": "retain concise active explanation"
+    },
+    {
+      "path": "analysis/lut_uploader_20261012/上传工具与实测接续.md",
+      "exists": true,
+      "reason": "独立工具固定范围、实时分支与认证限制；阶段状态须标历史",
+      "recommended_action": "retain concise active explanation"
+    },
+    {
+      "path": "analysis/in_camera_hdr_reference/README.md",
+      "exists": true,
+      "reason": "参考算法、原稿/权重来源、画质与机内部署未验证边界",
+      "recommended_action": "retain concise active explanation"
+    },
+    {
+      "path": "analysis/in_camera_hdr_reference/model_archive/README.md",
+      "exists": true,
+      "reason": "权重归档来源、结构/路径/散列说明",
+      "recommended_action": "preserve archive provenance"
+    },
+    {
+      "path": "analysis/system_reverse_mainline_20261012/主线重设.md",
+      "exists": true,
+      "reason": "当前系统完整逆向目标，禁止把候选/有限阴性升级事实",
+      "recommended_action": "retain concise active explanation"
+    },
+    {
+      "path": "analysis/desktop_panasonic_review_20261012/核验报告.md",
+      "exists": true,
+      "reason": "S1H/S5来源、修正与机型迁移边界",
+      "recommended_action": "retain concise active explanation"
+    },
+    {
+      "path": "analysis/desktop_panasonic_review_20261012/原视频独立验证.md",
+      "exists": true,
+      "reason": "已补齐原媒体后独立解码验证",
+      "recommended_action": "retain concise active explanation"
+    },
+    {
+      "path": "analysis/ultra_method0_consumer_verify_20261011/consumer_verification_report.md",
+      "exists": true,
+      "reason": "历史解码原稿方法错误的定点纠正",
+      "recommended_action": "retain concise active explanation"
+    }
+  ],
+  "large_root_reports": [
+    {
+      "path": "相机固件与协议研究完整汇总报告_20261012.md",
+      "bytes": 631047,
+      "lines": 4508,
+      "classification": "40-source compilation plus independently written executive summary",
+      "embedded_sources": 40,
+      "exact_current_body_and_declared_sha_matches": 38,
+      "later_changed_sources": [
+        "S1M2研究当前状态.md",
+        "AGENTS.md"
+      ],
+      "independent_content": "前139行独立汇总，不是纯拼接；其中绝对推论超出有限阴性/静态证据，应撤下活跃入口",
+      "examples": [
+        {
+          "line": 51,
+          "claim": "加密算法与密钥体系已彻底换代（非旧密钥变形）",
+          "problem": "有限旧key/模式阴性不能证明所有变形或整个算法体系"
+        },
+        {
+          "line": 54,
+          "claim": "所有公开可读文件里都没有解密者代码",
+          "problem": "输入扫描范围不等于全部公开文件"
+        },
+        {
+          "line": 57,
+          "claim": "Linux被硬件级隔离，碰不到主控和密钥",
+          "problem": "静态配置/缺主控明文不证明硬件隔离或密钥不可访问"
+        },
+        {
+          "line": 60,
+          "claim": "相机功能调用、隐藏规格验证与自定义配置100%闭环",
+          "problem": "应逐项限定实际格式能力与读回/量化转换；不证明通用配置回写或新增机内功能"
+        }
+      ],
+      "recommended_action": "主线程归档工作区外并删除，保持原报告与原稿"
+    },
+    {
+      "path": "项目当前进度_20261010.md",
+      "bytes": 591386,
+      "lines": 6890,
+      "classification": "dated handoff with original summaries, evidence table, script/metadata inventory; not verbatim source concatenation",
+      "unique_sections": [
+        "0-11 历史范围、授权、32路线/重放、隐私与脚本副作用、关键输入/62组件",
+        "13-16 删除记录、纠正、安全结论边界与交接检查"
+      ],
+      "metadata_bulk": {
+        "start_line": 372,
+        "end_before_line": 6838,
+        "ratio_of_lines": 0.938
+      },
+      "explicit_incoming_links_from_other_surviving_docs": 17,
+      "recommended_action": "主线程归档工作区外并删除，17条活跃链接改指当前状态，历史审计读取场景另行登记"
+    }
+  ],
+  "critical_dependencies": [
+    {
+      "reader": "analysis/agy_breakthrough_batch_20261011/16_adversarial/audit_premises.py",
+      "reference_lines": [
+        28,
+        46,
+        223,
+        304
+      ],
+      "input": "项目当前进度_20261010.md",
+      "usage": "main reads and hashes the original document; parses its 62-component table and historical route/report-grade tables",
+      "effect_of_deletion": "FileNotFoundError; replacing input with short status document destroys parser meaning",
+      "recommended_handling": "Preserve historical script/result; future rerun requires archived exact source via explicit input parameter or restoring into isolated replay workspace. Do not silently repoint to current state."
+    },
+    {
+      "reader": "analysis/agy_takeover_20261012/12_handoff/build_handoff_inventory.py",
+      "reference_lines": [
+        72,
+        73,
+        110,
+        259,
+        309
+      ],
+      "input": "项目当前进度_20261010.md",
+      "usage": "tracked historical status file; --verify-only validates size/SHA recorded in results.json; default build records missing inputs",
+      "effect_of_deletion": "--verify-only missing_on_disk; default rebuild all_tracked_files_present false",
+      "recommended_handling": "Keep original results and hash record; cleanup report must distinguish deliberate archiving from evidence corruption. Historical137 snapshot cannot be called unchanged/all-pass afterward."
+    },
+    {
+      "reader": "no literal-name match in scanned executable source files",
+      "input": "相机固件与协议研究完整汇总报告_20261012.md",
+      "usage": "none found",
+      "coverage": "workspace .py/.sh/.command/.js/.ts outside excluded source/vendor/public/original groups; exact filenames only",
+      "effect_of_deletion": "no core runtime dependency identified; dynamic/generated paths not ruled out"
+    },
+    {
+      "reader": "s1m2_firmware_project/tests/test_ptp_wire_parser.py",
+      "reference_lines": [
+        20,
+        21
+      ],
+      "inputs": [
+        "analysis/baseline_20261008_01/drive_before.bin",
+        "analysis/highres_20261008_02/drive_before.bin"
+      ],
+      "usage": "real property wire samples; preserve independent of doc edits"
+    },
+    {
+      "reader": "s1m2_firmware_project/tests/test_toolchain.py",
+      "reference_lines": [
+        22
+      ],
+      "inputs": [
+        "S1m2_V14.bin",
+        "analysis/unpacked/"
+      ],
+      "usage": "raw firmware unpack/repack validation"
+    },
+    {
+      "reader": "analysis/s1m2_lut_config_tool_20261012/validate.py",
+      "reference_lines": [
+        6,
+        8
+      ],
+      "inputs": [
+        "analysis/lut_config_before_20261012/raw/config_1.response.bin",
+        "analysis/lut_config_blank_20261012/raw/config_1.response.bin",
+        "analysis/lut_config_after_20261012/raw/config_1.response.bin",
+        "analysis/lut_config_reboot_20261012/raw/config_1.response.bin"
+      ],
+      "usage": "offline parser and quantized LUT validation"
+    },
+    {
+      "reader": "analysis/local_qemu_lab_20261012/verify_evidence.py",
+      "reference_lines": [
+        9,
+        21,
+        24,
+        28,
+        39
+      ],
+      "inputs": [
+        "analysis/external_qemu_sandbox_20261012/manifest.json",
+        "analysis/external_qemu_sandbox_20261012/qemu_sandbox/",
+        "analysis/local_qemu_lab_20261012/runs/"
+      ],
+      "usage": "checks original 13-file hashes, recorded guest execution, RAM and shutdown; verifier also overwrites verification.json and was not run"
+    }
+  ],
+  "link_audit": {
+    "script": "analysis/workspace_cleanup_20261012/reference_audit.py",
+    "workspace_baseline": "analysis/workspace_cleanup_20261012/reference_baseline.json",
+    "workspace_counts": {
+      "documents": 176,
+      "edges": 1614,
+      "preexisting_broken": 73
+    },
+    "public_baseline": "analysis/workspace_cleanup_20261012/public_reference_baseline.json",
+    "public_counts": {
+      "documents": 82,
+      "edges": 526,
+      "preexisting_broken": 38
+    },
+    "incoming_links_to_old_progress": [
+      {
+        "source": "S1M2研究当前状态.md",
+        "line": 53,
+        "raw": "项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "研究推进_20261011_Ultra.md",
+        "line": 119,
+        "raw": "项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "analysis/Gemini_PTP配置字段映射_20261008.md",
+        "line": 7,
+        "raw": "../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "analysis/Gemini_全维度逆向审计与终局可行性判定_20261008.md",
+        "line": 7,
+        "raw": "../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "analysis/Gemini_加载器锚点实验_20261008.md",
+        "line": 7,
+        "raw": "../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "analysis/Gemini_设置结构解析_20261008.md",
+        "line": 7,
+        "raw": "../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "analysis/Gemini_远程菜单路径_20261008.md",
+        "line": 7,
+        "raw": "../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "analysis/Gemini_首张保存字段与固件关联_20261008.md",
+        "line": 7,
+        "raw": "../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "analysis/S1M2_ROM_BACKUP与原厂维修协议逆向推导报告_20261009.md",
+        "line": 7,
+        "raw": "../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "analysis/S1M2_候选功能深度评估与技术边界终局报告_20261009.md",
+        "line": 7,
+        "raw": "../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "analysis/S1M2_固件全量解析与逆向工程终局报告.md",
+        "line": 7,
+        "raw": "../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "analysis/S1M2_机内系统架构与功能实现深度解析.md",
+        "line": 7,
+        "raw": "../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "analysis/S1M2固件存储拓扑与离线解码技术边界终局报告_20261008.md",
+        "line": 7,
+        "raw": "../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "analysis/subagent_full_report.md",
+        "line": 7,
+        "raw": "../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "analysis/parallel_routes_20261009/05_sources/report.md",
+        "line": 7,
+        "raw": "../../../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "analysis/parallel_routes_20261009/06_gaps/report.md",
+        "line": 7,
+        "raw": "../../../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      },
+      {
+        "source": "s1m2_firmware_project/README.md",
+        "line": 25,
+        "raw": "../项目当前进度_20261010.md",
+        "target": "项目当前进度_20261010.md",
+        "exists": true,
+        "within_workspace": true,
+        "kind": "inline"
+      }
+    ],
+    "limitations": [
+      "does not validate heading anchors",
+      "does not parse bare paths, code imports, or runtime data dependencies",
+      "external-original and source packages require separate review"
+    ],
+    "verification_command": "python3 analysis/workspace_cleanup_20261012/reference_audit.py --baseline analysis/workspace_cleanup_20261012/reference_baseline.json --compact"
+  }
+}

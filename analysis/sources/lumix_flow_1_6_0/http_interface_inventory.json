@@ -1,0 +1,160 @@
+{
+  "input": "analysis/sources/lumix_flow_1_6_0/decompiled/sources/com/panasonic/jp/flow/wireless/http/ApiService.java",
+  "annotations": [
+    {
+      "verb": "POST",
+      "path": "remote/camctrl",
+      "line": 27
+    },
+    {
+      "verb": "POST",
+      "path": "flow/device/number",
+      "line": 31
+    },
+    {
+      "verb": "GET",
+      "path": "app_version.json",
+      "line": 34
+    },
+    {
+      "verb": "POST",
+      "path": "lut/info",
+      "line": 38
+    },
+    {
+      "verb": "POST",
+      "path": "remote/get-lvport",
+      "line": 42
+    },
+    {
+      "verb": "POST",
+      "path": "remote/get-lvport",
+      "line": 46
+    },
+    {
+      "verb": "POST",
+      "path": "remote/get-setting",
+      "line": 50
+    },
+    {
+      "verb": "POST",
+      "path": "remote/get-setting",
+      "line": 54
+    },
+    {
+      "verb": "POST",
+      "path": "remote/get-state",
+      "line": 58
+    },
+    {
+      "verb": "POST",
+      "path": "auth",
+      "line": 62
+    },
+    {
+      "verb": "POST",
+      "path": "flow/lens/information",
+      "line": 66
+    },
+    {
+      "verb": "POST",
+      "path": "flow/liveView/control",
+      "line": 70
+    },
+    {
+      "verb": "POST",
+      "path": "flow/playback/ctrl",
+      "line": 74
+    },
+    {
+      "verb": "POST",
+      "path": "flow/playback/position",
+      "line": 78
+    },
+    {
+      "verb": "POST",
+      "path": "flow/playback/ready",
+      "line": 82
+    },
+    {
+      "verb": "POST",
+      "path": "flow/playback/start",
+      "line": 86
+    },
+    {
+      "verb": "POST",
+      "path": "flow/record/info",
+      "line": 90
+    },
+    {
+      "verb": "POST",
+      "path": "remote/camcmd",
+      "line": 94
+    },
+    {
+      "verb": "POST",
+      "path": "flow/sdCard/status",
+      "line": 98
+    },
+    {
+      "verb": "POST",
+      "path": "flow/xml/send",
+      "line": 102
+    },
+    {
+      "verb": "POST",
+      "path": "frame/ctrl-edit",
+      "line": 106
+    },
+    {
+      "verb": "POST",
+      "path": "frame/start-edit",
+      "line": 110
+    },
+    {
+      "verb": "POST",
+      "path": "remote/set-setting",
+      "line": 114
+    },
+    {
+      "verb": "POST",
+      "path": "remote/set-setting",
+      "line": 118
+    },
+    {
+      "verb": "POST",
+      "path": "flow/assist/setSwitch",
+      "line": 122
+    },
+    {
+      "verb": "POST",
+      "path": "remote/start-stream",
+      "line": 126
+    },
+    {
+      "verb": "POST",
+      "path": "flow/status/setValue",
+      "line": 130
+    },
+    {
+      "verb": "POST",
+      "path": "remote/stop-stream",
+      "line": 134
+    },
+    {
+      "verb": "POST",
+      "path": "flow/xml/control",
+      "line": 138
+    },
+    {
+      "verb": "POST",
+      "path": "flow/xml/start",
+      "line": 142
+    }
+  ],
+  "annotation_count": 30,
+  "distinct_path_count": 27,
+  "decompiler_exit_code": 3,
+  "decompiler_reported_errors": 169,
+  "coverage_boundary": "ApiService interface annotations are present; failed decompilation methods and other transports are not exhausted."
+}

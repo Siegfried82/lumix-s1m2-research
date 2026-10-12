@@ -1,0 +1,48 @@
+{
+  "command": [
+    "otool",
+    "-arch",
+    "arm64",
+    "-tvV",
+    "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/Frameworks/libLmxptpif.dylib"
+  ],
+  "library_sha256": "b767e5680676eefdc05d02a4772c4120a45916e246169b79393356499c07ec97",
+  "rows": [
+    {
+      "symbol": "__Z39Lmx_func_api_fwup_Get_FileData_FileSizePhPPvPS_PjS3_Pi",
+      "exact_disassembly_match": true,
+      "instructions_and_label_lines": 85,
+      "block_sha256": "0913c728ad8bbc45c16936e038cbce772600be4afd80e7fafbfa2a72740fb713"
+    },
+    {
+      "symbol": "__Z30LMX_func_api_FirmwareUpdate_ThPcPhjjhhPj",
+      "exact_disassembly_match": true,
+      "instructions_and_label_lines": 426,
+      "block_sha256": "fc682a2f625916cf84d5167427010205c552a3ca78bbbab360eab15f9f271883"
+    },
+    {
+      "symbol": "__Z32Lmx_func_api_fwup_Send_FWUP_DataPhjjjhPc",
+      "exact_disassembly_match": true,
+      "instructions_and_label_lines": 136,
+      "block_sha256": "1eefe91035b24930feb2c9be227cf4d0e9788b49dcc8d0a36773a12bbb876a26"
+    },
+    {
+      "symbol": "__Z32Lmx_func_api_fwup_Get_Event_InfojhPcPj",
+      "exact_disassembly_match": true,
+      "instructions_and_label_lines": 132,
+      "block_sha256": "833eef07996fac0a09b444d91a5ee34ee182ec4bb8c41b722e3bbbcce76360a5"
+    },
+    {
+      "symbol": "__Z35Lmx_lib_ptpif_LmxExt_Get_Event_InfoP36_tag_LMX_STRUCT_EVENT_INFO_FROM_INFOjhPc",
+      "exact_disassembly_match": true,
+      "instructions_and_label_lines": 187,
+      "block_sha256": "748968eee55b321584ebef4fe08e9669db77d504053f4406996337b82ad50de8"
+    },
+    {
+      "symbol": "__Z35Lmx_lib_ptpif_LmxExt_Send_Data_InfoPhjPc",
+      "exact_disassembly_match": true,
+      "instructions_and_label_lines": 131,
+      "block_sha256": "fd839ad1446fd1eb92a3584b3f16dcf95c318d75d0ae2b0705ae297db817d18a"
+    }
+  ]
+}

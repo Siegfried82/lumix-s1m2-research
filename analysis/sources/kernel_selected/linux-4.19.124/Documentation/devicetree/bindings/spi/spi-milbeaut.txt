@@ -1,0 +1,55 @@
+Milbeaut SPI
+
+Required properties:
+- compatible:        Must be "socionext,milbeaut-spi".
+- clocks:            Phandle to the clock used by the SPI module.
+- interrupts:        Shared peripheral interrupt number of the device's set.
+- reg:               Offset and length of the device's register set.
+- dmas:              DMA specifier, consisting of a phandle to DMA controller node.
+- dma-names:         DMA request names should include "tx" and "rx" if present.
+- fifo_size:         SPI module FIFO size. The size is fixed in module.
+                       spi@1e800000(CH0): 128 word
+                       spi@1e800100(CH1):  64 word
+                       spi@1e800200(CH2):  16 word
+- cs_nums:           Number of chip select signals that require gpio settings.
+- dma_mode:          Set to <1> to use DMA mode.
+                     Set to <0> to use SPI mode.
+- spi-max-frequency: Max frequency of spi bus.
+- ssout-cont:        Controls the slave select signal.
+                       <0>: Inactive per transfer.
+                       <1>: Inactive when FIFO is empty.
+                       <2>: Inactive after stopping SPI macro.
+- ss:                Number of SPI slave select <0-3>.
+
+Example:
+
+	sni_spi1: spi@1e800100 {
+		compatible = "socionext,milbeaut-spi";
+		clocks = <&spiclk>;
+		interrupts = <0 157 4>;
+		reg = <0x1e800100 0x100>;
+		#address-cells = <1>;
+		#size-cells = <0>;
+		dmas = <&hdmac1 22>, <&hdmac1 21>;
+		dma-names = "tx", "rx";
+		fifo_size = <64>;
+		cs-nums = <2>;
+		dma_mode = <1>;
+
+		spi0@0 {
+			compatible = "socionext,milbeaut-spidev";
+			reg = <0>;
+			spi-max-frequency = <10000000>;
+			ssout-cont = <2>;
+			ss = <0>;
+		};
+
+		spi1@1 {
+			compatible = "socionext,milbeaut-spidev";
+			reg = <1>;
+			spi-max-frequency = <10000000>;
+			ssout-cont = <2>;
+			ss = <1>;
+		};
+
+	};

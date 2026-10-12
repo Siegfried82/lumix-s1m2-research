@@ -1,0 +1,1439 @@
+{
+  "scope": "offline static inspection and recorded-response parsing only",
+  "camera_communication": false,
+  "vendor_binary_executed": false,
+  "inputs": [
+    {
+      "path": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/MacOS/LUMIX Tether",
+      "bytes": 23973680,
+      "sha256": "a20693256aeae33c93722cadb2e0ceaa760a98a48d9ebbfd2f697d3ad6420c3a"
+    },
+    {
+      "path": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/Frameworks/libLmxptpif.dylib",
+      "bytes": 6870784,
+      "sha256": "b767e5680676eefdc05d02a4772c4120a45916e246169b79393356499c07ec97"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/capture_log.json",
+      "bytes": 4845,
+      "sha256": "e936d713a56264516d528e284f4efc8ff6a48498c874ed092b1de4df30691fe1"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9408_06000010.bin",
+      "bytes": 2852,
+      "sha256": "7cb0309bd8238b5bfcfb0960af00764cdba81d098d5160faf488a8ba454cceea"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9408_06000010.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "c75c32c02d958ae2df768bcf613b721d1f4ba84832bb41f93a40fe1bd73dfe61"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9408_06000019.bin",
+      "bytes": 22,
+      "sha256": "5123f788db9ec7fb6dfae18f4421539056b6b30a3b48fd394d675d25a0695c97"
+    },
+    {
+      "path": "analysis/video_status_inventory_20261008_12/get_9408_06000019.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "177904f7d36bebd451b43dd8639ac9b3c1dfd6dcbe25b64986438624681eb831"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_06000010.bin",
+      "bytes": 924,
+      "sha256": "39beb1e6512ce3d1f46fff6e69a9b9b22b93833e31c9a329c14e6a5d0a911d48"
+    },
+    {
+      "path": "analysis/vendor_capability_inventory_20261008_10/capability_06000010.ptp_response.bin",
+      "bytes": 12,
+      "sha256": "9f6de7eb5eb8c903f3b7505b1438615ac9598ca41ff633c9b9d7ae240a3324af"
+    },
+    {
+      "path": "analysis/acquired_capabilities_decoded_20261008.json",
+      "bytes": 152652,
+      "sha256": "1367083d316f79cae6eaeae433fb5f319b780378fbed9f62b320c78caa47b947"
+    },
+    {
+      "path": "analysis/decode_acquired_capabilities.py",
+      "bytes": 4233,
+      "sha256": "fedcea38fa17815845c23deb9bc8f4dbb90d9c00ff7c9f32306f9167c2b99c9b"
+    },
+    {
+      "path": "analysis/curated_video_status_reads_20261008.json",
+      "bytes": 4312,
+      "sha256": "826cc71d1ea3a04e6c93cdb4740795740e10197d10ea3b6a3b56ea56e6271483"
+    },
+    {
+      "path": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "bytes": 17035468,
+      "sha256": "f0beab04bef63508de6492cf263f62199548bda97911ab5852b371474537af1d"
+    },
+    {
+      "path": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "bytes": 12276137,
+      "sha256": "ccdf024ece6c12440fb79b85174fe1e0c0ddbffa81302867a5e37313b8fd293e"
+    }
+  ],
+  "windows": [
+    {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "first_line": 56251,
+      "last_line": 56761,
+      "output": "ptp_56251_56761.source_window.txt"
+    },
+    {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "first_line": 56811,
+      "last_line": 56850,
+      "output": "ptp_56811_56850.source_window.txt"
+    },
+    {
+      "source": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "first_line": 57334,
+      "last_line": 57845,
+      "output": "ptp_57334_57845.source_window.txt"
+    },
+    {
+      "source": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "first_line": 50324,
+      "last_line": 50525,
+      "output": "app_50324_50525.source_window.txt"
+    },
+    {
+      "source": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "first_line": 70442,
+      "last_line": 70600,
+      "output": "app_70442_70600.source_window.txt"
+    },
+    {
+      "source": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "first_line": 72145,
+      "last_line": 72365,
+      "output": "app_72145_72365.source_window.txt"
+    },
+    {
+      "source": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "first_line": 76237,
+      "last_line": 76915,
+      "output": "app_76237_76915.source_window.txt"
+    }
+  ],
+  "app_arm64_slice_offset": 12009472,
+  "app_segments": [
+    {
+      "name": "__PAGEZERO",
+      "va": 0,
+      "virtual_size": 4294967296,
+      "slice_file_offset": 0,
+      "file_size": 0
+    },
+    {
+      "name": "__TEXT",
+      "va": 4294967296,
+      "virtual_size": 10371072,
+      "slice_file_offset": 0,
+      "file_size": 10371072
+    },
+    {
+      "name": "__DATA_CONST",
+      "va": 4305338368,
+      "virtual_size": 49152,
+      "slice_file_offset": 10371072,
+      "file_size": 49152
+    },
+    {
+      "name": "__DATA",
+      "va": 4305387520,
+      "virtual_size": 10534912,
+      "slice_file_offset": 10420224,
+      "file_size": 49152
+    },
+    {
+      "name": "__LINKEDIT",
+      "va": 4315922432,
+      "virtual_size": 1507328,
+      "slice_file_offset": 10469376,
+      "file_size": 1494832
+    }
+  ],
+  "library_arm64_slice_offset": 3489792,
+  "library_segments": [
+    {
+      "name": "__TEXT",
+      "va": 0,
+      "virtual_size": 2293760,
+      "slice_file_offset": 0,
+      "file_size": 2293760
+    },
+    {
+      "name": "__DATA_CONST",
+      "va": 2293760,
+      "virtual_size": 212992,
+      "slice_file_offset": 2293760,
+      "file_size": 212992
+    },
+    {
+      "name": "__DATA",
+      "va": 2506752,
+      "virtual_size": 2375680,
+      "slice_file_offset": 2506752,
+      "file_size": 49152
+    },
+    {
+      "name": "__LINKEDIT",
+      "va": 4882432,
+      "virtual_size": 835584,
+      "slice_file_offset": 2555904,
+      "file_size": 825088
+    }
+  ],
+  "qt_enums": {
+    "static_meta_object_va": "0x1009ec810",
+    "static_meta_object_file_offset": 22415376,
+    "pointers": [
+      "0x0",
+      "0x1009c8544",
+      "0x1009d0628",
+      "0x10011c22c",
+      "0x0",
+      "0x1009ec030"
+    ],
+    "header_words": [
+      10,
+      0,
+      0,
+      0,
+      126,
+      14,
+      0,
+      0,
+      119,
+      1146,
+      0,
+      0,
+      0,
+      5
+    ],
+    "enums": [
+      {
+        "name": "RecordingMode",
+        "entry_va": "0x1009d1838",
+        "entry_file_offset": 22304824,
+        "header_words": [
+          9,
+          9,
+          0,
+          22,
+          1761
+        ],
+        "values": [
+          {
+            "name": "RM_Unknown",
+            "value": 4294967295,
+            "va": "0x1009d21ac",
+            "file_offset": 22307244
+          },
+          {
+            "name": "RM_IntelligentAuto",
+            "value": 0,
+            "va": "0x1009d21b4",
+            "file_offset": 22307252
+          },
+          {
+            "name": "RM_ProgramAE",
+            "value": 1,
+            "va": "0x1009d21bc",
+            "file_offset": 22307260
+          },
+          {
+            "name": "RM_AperturePriorityAE",
+            "value": 2,
+            "va": "0x1009d21c4",
+            "file_offset": 22307268
+          },
+          {
+            "name": "RM_ShutterPriorityAE",
+            "value": 3,
+            "va": "0x1009d21cc",
+            "file_offset": 22307276
+          },
+          {
+            "name": "RM_ManualExposure",
+            "value": 4,
+            "va": "0x1009d21d4",
+            "file_offset": 22307284
+          },
+          {
+            "name": "RM_CreativeVideo",
+            "value": 5,
+            "va": "0x1009d21dc",
+            "file_offset": 22307292
+          },
+          {
+            "name": "RM_Custom1",
+            "value": 6,
+            "va": "0x1009d21e4",
+            "file_offset": 22307300
+          },
+          {
+            "name": "RM_Custom2",
+            "value": 7,
+            "va": "0x1009d21ec",
+            "file_offset": 22307308
+          },
+          {
+            "name": "RM_Custom3",
+            "value": 8,
+            "va": "0x1009d21f4",
+            "file_offset": 22307316
+          },
+          {
+            "name": "RM_CreativeControl",
+            "value": 9,
+            "va": "0x1009d21fc",
+            "file_offset": 22307324
+          },
+          {
+            "name": "RM_SQMotion",
+            "value": 10,
+            "va": "0x1009d2204",
+            "file_offset": 22307332
+          },
+          {
+            "name": "RM_Custom4",
+            "value": 11,
+            "va": "0x1009d220c",
+            "file_offset": 22307340
+          },
+          {
+            "name": "RM_Custom5",
+            "value": 12,
+            "va": "0x1009d2214",
+            "file_offset": 22307348
+          },
+          {
+            "name": "RM_Custom6",
+            "value": 13,
+            "va": "0x1009d221c",
+            "file_offset": 22307356
+          },
+          {
+            "name": "RM_Custom7",
+            "value": 14,
+            "va": "0x1009d2224",
+            "file_offset": 22307364
+          },
+          {
+            "name": "RM_Custom8",
+            "value": 15,
+            "va": "0x1009d222c",
+            "file_offset": 22307372
+          },
+          {
+            "name": "RM_Custom9",
+            "value": 16,
+            "va": "0x1009d2234",
+            "file_offset": 22307380
+          },
+          {
+            "name": "RM_Custom10",
+            "value": 17,
+            "va": "0x1009d223c",
+            "file_offset": 22307388
+          },
+          {
+            "name": "RM_Custom11",
+            "value": 18,
+            "va": "0x1009d2244",
+            "file_offset": 22307396
+          },
+          {
+            "name": "RM_Custom12",
+            "value": 19,
+            "va": "0x1009d224c",
+            "file_offset": 22307404
+          },
+          {
+            "name": "RM_Max",
+            "value": 20,
+            "va": "0x1009d2254",
+            "file_offset": 22307412
+          }
+        ]
+      },
+      {
+        "name": "MotionPictureFormat",
+        "entry_va": "0x1009d1bf8",
+        "entry_file_offset": 22305784,
+        "header_words": [
+          88,
+          88,
+          0,
+          9,
+          3029
+        ],
+        "values": [
+          {
+            "name": "MPF_Unknown",
+            "value": 4294967295,
+            "va": "0x1009d357c",
+            "file_offset": 22312316
+          },
+          {
+            "name": "MPF_AVCHD",
+            "value": 0,
+            "va": "0x1009d3584",
+            "file_offset": 22312324
+          },
+          {
+            "name": "MPF_MP4",
+            "value": 1,
+            "va": "0x1009d358c",
+            "file_offset": 22312332
+          },
+          {
+            "name": "MPF_MP4WithLPCM",
+            "value": 2,
+            "va": "0x1009d3594",
+            "file_offset": 22312340
+          },
+          {
+            "name": "MPF_MOV",
+            "value": 3,
+            "va": "0x1009d359c",
+            "file_offset": 22312348
+          },
+          {
+            "name": "MPF_MP4WithHEVC",
+            "value": 4,
+            "va": "0x1009d35a4",
+            "file_offset": 22312356
+          },
+          {
+            "name": "MPF_ProRes",
+            "value": 5,
+            "va": "0x1009d35ac",
+            "file_offset": 22312364
+          },
+          {
+            "name": "MPF_MP4LITE",
+            "value": 6,
+            "va": "0x1009d35b4",
+            "file_offset": 22312372
+          },
+          {
+            "name": "MPF_Max",
+            "value": 7,
+            "va": "0x1009d35bc",
+            "file_offset": 22312380
+          }
+        ]
+      },
+      {
+        "name": "SystemFrequency",
+        "entry_va": "0x1009d1c0c",
+        "entry_file_offset": 22305804,
+        "header_words": [
+          90,
+          90,
+          0,
+          5,
+          3047
+        ],
+        "values": [
+          {
+            "name": "SFQ_Unknown",
+            "value": 4294967295,
+            "va": "0x1009d35c4",
+            "file_offset": 22312388
+          },
+          {
+            "name": "SFQ_NTSC",
+            "value": 0,
+            "va": "0x1009d35cc",
+            "file_offset": 22312396
+          },
+          {
+            "name": "SFQ_PAL",
+            "value": 1,
+            "va": "0x1009d35d4",
+            "file_offset": 22312404
+          },
+          {
+            "name": "SFQ_CINEMA",
+            "value": 2,
+            "va": "0x1009d35dc",
+            "file_offset": 22312412
+          },
+          {
+            "name": "SFQ_Max",
+            "value": 3,
+            "va": "0x1009d35e4",
+            "file_offset": 22312420
+          }
+        ]
+      },
+      {
+        "name": "MovieDetailDisplay",
+        "entry_va": "0x1009d1c48",
+        "entry_file_offset": 22305864,
+        "header_words": [
+          906,
+          906,
+          0,
+          9,
+          3077
+        ],
+        "values": [
+          {
+            "name": "MVDD_Unknown",
+            "value": 4294967295,
+            "va": "0x1009d363c",
+            "file_offset": 22312508
+          },
+          {
+            "name": "MVDD_PIXELS",
+            "value": 0,
+            "va": "0x1009d3644",
+            "file_offset": 22312516
+          },
+          {
+            "name": "MVDD_FRAME_RATE",
+            "value": 1,
+            "va": "0x1009d364c",
+            "file_offset": 22312524
+          },
+          {
+            "name": "MVDD_COMPRESSION_METHOD",
+            "value": 2,
+            "va": "0x1009d3654",
+            "file_offset": 22312532
+          },
+          {
+            "name": "MVDD_BIT_RATE",
+            "value": 3,
+            "va": "0x1009d365c",
+            "file_offset": 22312540
+          },
+          {
+            "name": "MVDD_VFR",
+            "value": 4,
+            "va": "0x1009d3664",
+            "file_offset": 22312548
+          },
+          {
+            "name": "MVDD_HLG",
+            "value": 5,
+            "va": "0x1009d366c",
+            "file_offset": 22312556
+          },
+          {
+            "name": "MVDD_SQ",
+            "value": 6,
+            "va": "0x1009d3674",
+            "file_offset": 22312564
+          },
+          {
+            "name": "MVDD_Max",
+            "value": 7,
+            "va": "0x1009d367c",
+            "file_offset": 22312572
+          }
+        ]
+      },
+      {
+        "name": "MovieFrameRate",
+        "entry_va": "0x1009d1c5c",
+        "entry_file_offset": 22305884,
+        "header_words": [
+          916,
+          916,
+          0,
+          2,
+          3095
+        ],
+        "values": [
+          {
+            "name": "MFR_ALL",
+            "value": 4294967295,
+            "va": "0x1009d3684",
+            "file_offset": 22312580
+          },
+          {
+            "name": "MFR_Max",
+            "value": 0,
+            "va": "0x1009d368c",
+            "file_offset": 22312588
+          }
+        ]
+      },
+      {
+        "name": "MoviePixel",
+        "entry_va": "0x1009d1c70",
+        "entry_file_offset": 22305904,
+        "header_words": [
+          102,
+          102,
+          0,
+          50,
+          3099
+        ],
+        "values": [
+          {
+            "name": "MP_6K_3_2_5952_3968",
+            "value": 0,
+            "va": "0x1009d3694",
+            "file_offset": 22312596
+          },
+          {
+            "name": "MP_5_4K_3_2_5376_3584",
+            "value": 1,
+            "va": "0x1009d369c",
+            "file_offset": 22312604
+          },
+          {
+            "name": "MP_5_9K_16_9_5888_3312",
+            "value": 2,
+            "va": "0x1009d36a4",
+            "file_offset": 22312612
+          },
+          {
+            "name": "MP_C4K_17_9_4096_2160",
+            "value": 3,
+            "va": "0x1009d36ac",
+            "file_offset": 22312620
+          },
+          {
+            "name": "MP_4K_16_9_3840_2160",
+            "value": 4,
+            "va": "0x1009d36b4",
+            "file_offset": 22312628
+          },
+          {
+            "name": "MP_ANAMO6K_52_39_4992_3744",
+            "value": 5,
+            "va": "0x1009d36bc",
+            "file_offset": 22312636
+          },
+          {
+            "name": "MP_ANAMO4K_4_3_3328_2496",
+            "value": 6,
+            "va": "0x1009d36c4",
+            "file_offset": 22312644
+          },
+          {
+            "name": "MP_QFHD_16_9_3840_2160",
+            "value": 7,
+            "va": "0x1009d36cc",
+            "file_offset": 22312652
+          },
+          {
+            "name": "MP_FHD_16_9_1920_1080",
+            "value": 8,
+            "va": "0x1009d36d4",
+            "file_offset": 22312660
+          },
+          {
+            "name": "MP_HD_16_9_1280_720",
+            "value": 9,
+            "va": "0x1009d36dc",
+            "file_offset": 22312668
+          },
+          {
+            "name": "MP_WVGA_4_3_800_480",
+            "value": 10,
+            "va": "0x1009d36e4",
+            "file_offset": 22312676
+          },
+          {
+            "name": "MP_VGA_4_3_640_480",
+            "value": 11,
+            "va": "0x1009d36ec",
+            "file_offset": 22312684
+          },
+          {
+            "name": "MP_QVGA_4_3_320_240",
+            "value": 12,
+            "va": "0x1009d36f4",
+            "file_offset": 22312692
+          },
+          {
+            "name": "MP_5K_4_3_4992_3744",
+            "value": 13,
+            "va": "0x1009d36fc",
+            "file_offset": 22312700
+          },
+          {
+            "name": "MP_5_8K_4_3_5760_4320",
+            "value": 14,
+            "va": "0x1009d3704",
+            "file_offset": 22312708
+          },
+          {
+            "name": "MP_5_7K_17_9_5728_3024",
+            "value": 15,
+            "va": "0x1009d370c",
+            "file_offset": 22312716
+          },
+          {
+            "name": "MP_4_4K_4_3_4352_3264",
+            "value": 16,
+            "va": "0x1009d3714",
+            "file_offset": 22312724
+          },
+          {
+            "name": "MP_RAW4K_17_9_4096_2160",
+            "value": 17,
+            "va": "0x1009d371c",
+            "file_offset": 22312732
+          },
+          {
+            "name": "MP_RAW3_7K_4_3_3680_2760",
+            "value": 18,
+            "va": "0x1009d3724",
+            "file_offset": 22312740
+          },
+          {
+            "name": "MP_RAW3_5K_4_3_3536_2656",
+            "value": 19,
+            "va": "0x1009d372c",
+            "file_offset": 22312748
+          },
+          {
+            "name": "MP_RAW5_9K_16_9_5888_3312",
+            "value": 20,
+            "va": "0x1009d3734",
+            "file_offset": 22312756
+          },
+          {
+            "name": "MP_RAW4K_17_9_4128_2176",
+            "value": 21,
+            "va": "0x1009d373c",
+            "file_offset": 22312764
+          },
+          {
+            "name": "MP_RAW5_8K_4_3_5760_4320",
+            "value": 22,
+            "va": "0x1009d3744",
+            "file_offset": 22312772
+          },
+          {
+            "name": "MP_RAW5_7K_17_9_5728_3024",
+            "value": 23,
+            "va": "0x1009d374c",
+            "file_offset": 22312780
+          },
+          {
+            "name": "MP_RAW4_4K_4_3_4352_3264",
+            "value": 24,
+            "va": "0x1009d3754",
+            "file_offset": 22312788
+          },
+          {
+            "name": "MP_6K_17_9_5952_3136",
+            "value": 25,
+            "va": "0x1009d375c",
+            "file_offset": 22312796
+          },
+          {
+            "name": "MP_3_3K_4_3_3328_2496",
+            "value": 26,
+            "va": "0x1009d3764",
+            "file_offset": 22312804
+          },
+          {
+            "name": "MP_RAW4_1K_17_9_4128_2176",
+            "value": 27,
+            "va": "0x1009d376c",
+            "file_offset": 22312812
+          },
+          {
+            "name": "MP_5_8K_17_9_5776_3056",
+            "value": 28,
+            "va": "0x1009d3774",
+            "file_offset": 22312820
+          },
+          {
+            "name": "MP_3_8K_3_2_3840_2560",
+            "value": 29,
+            "va": "0x1009d377c",
+            "file_offset": 22312828
+          },
+          {
+            "name": "MP_RAW6K_3_2_6000_4000",
+            "value": 30,
+            "va": "0x1009d3784",
+            "file_offset": 22312836
+          },
+          {
+            "name": "MP_6K_24_1_1_5952_2512",
+            "value": 31,
+            "va": "0x1009d378c",
+            "file_offset": 22312844
+          },
+          {
+            "name": "MP_CS4K_24_1_1_4096_1728",
+            "value": 32,
+            "va": "0x1009d3794",
+            "file_offset": 22312852
+          },
+          {
+            "name": "MP_8_1K_3_2_8064_5376",
+            "value": 33,
+            "va": "0x1009d379c",
+            "file_offset": 22312860
+          },
+          {
+            "name": "MP_8_1K_17_9_8128_4288",
+            "value": 34,
+            "va": "0x1009d37a4",
+            "file_offset": 22312868
+          },
+          {
+            "name": "MP_8K_16_9_7680_4320",
+            "value": 35,
+            "va": "0x1009d37ac",
+            "file_offset": 22312876
+          },
+          {
+            "name": "MP_7_2K_3_2_7200_4800",
+            "value": 36,
+            "va": "0x1009d37b4",
+            "file_offset": 22312884
+          },
+          {
+            "name": "MP_4_7K_4_3_4736_3552",
+            "value": 37,
+            "va": "0x1009d37bc",
+            "file_offset": 22312892
+          },
+          {
+            "name": "MP_5_8K_17_9_5760_3040",
+            "value": 38,
+            "va": "0x1009d37c4",
+            "file_offset": 22312900
+          },
+          {
+            "name": "MP_3_8K_4_3_3840_2880",
+            "value": 39,
+            "va": "0x1009d37cc",
+            "file_offset": 22312908
+          },
+          {
+            "name": "MP_RAW4_8K_4_3_4800_3600",
+            "value": 40,
+            "va": "0x1009d37d4",
+            "file_offset": 22312916
+          },
+          {
+            "name": "MP_RAW8_1K_3_2_8128_5418",
+            "value": 41,
+            "va": "0x1009d37dc",
+            "file_offset": 22312924
+          },
+          {
+            "name": "MP_RAW8_1K_17_9_8128_4302",
+            "value": 42,
+            "va": "0x1009d37e4",
+            "file_offset": 22312932
+          },
+          {
+            "name": "MP_RAW7_2K_3_2_7232_4820",
+            "value": 43,
+            "va": "0x1009d37ec",
+            "file_offset": 22312940
+          },
+          {
+            "name": "MP_RAW4_8K_4_3_4752_3568",
+            "value": 44,
+            "va": "0x1009d37f4",
+            "file_offset": 22312948
+          },
+          {
+            "name": "MP_5_1K_3_2_5088_3392",
+            "value": 45,
+            "va": "0x1009d37fc",
+            "file_offset": 22312956
+          },
+          {
+            "name": "MP_4_8K_4_3_4800_3600",
+            "value": 46,
+            "va": "0x1009d3804",
+            "file_offset": 22312964
+          },
+          {
+            "name": "MP_6_4K_3_2_6432_4288",
+            "value": 47,
+            "va": "0x1009d380c",
+            "file_offset": 22312972
+          },
+          {
+            "name": "MP_ALL",
+            "value": 65535,
+            "va": "0x1009d3814",
+            "file_offset": 22312980
+          },
+          {
+            "name": "MP_Max",
+            "value": 65536,
+            "va": "0x1009d381c",
+            "file_offset": 22312988
+          }
+        ]
+      },
+      {
+        "name": "MovieCompressMethod",
+        "entry_va": "0x1009d1c84",
+        "entry_file_offset": 22305924,
+        "header_words": [
+          969,
+          969,
+          0,
+          13,
+          3199
+        ],
+        "values": [
+          {
+            "name": "MCPM_Unknown",
+            "value": 4294967295,
+            "va": "0x1009d3824",
+            "file_offset": 22312996
+          },
+          {
+            "name": "MCPM_422",
+            "value": 0,
+            "va": "0x1009d382c",
+            "file_offset": 22313004
+          },
+          {
+            "name": "MCPM_420",
+            "value": 1,
+            "va": "0x1009d3834",
+            "file_offset": 22313012
+          },
+          {
+            "name": "MCPM_10bit",
+            "value": 2,
+            "va": "0x1009d383c",
+            "file_offset": 22313020
+          },
+          {
+            "name": "MCPM_8bit",
+            "value": 3,
+            "va": "0x1009d3844",
+            "file_offset": 22313028
+          },
+          {
+            "name": "MCPM_LongGOP",
+            "value": 4,
+            "va": "0x1009d384c",
+            "file_offset": 22313036
+          },
+          {
+            "name": "MCPM_ALL_I",
+            "value": 5,
+            "va": "0x1009d3854",
+            "file_offset": 22313044
+          },
+          {
+            "name": "MCPM_RAW",
+            "value": 6,
+            "va": "0x1009d385c",
+            "file_offset": 22313052
+          },
+          {
+            "name": "MCPM_16bit",
+            "value": 7,
+            "va": "0x1009d3864",
+            "file_offset": 22313060
+          },
+          {
+            "name": "MCPM_RAWHQ",
+            "value": 8,
+            "va": "0x1009d386c",
+            "file_offset": 22313068
+          },
+          {
+            "name": "MCPM_422HQ",
+            "value": 9,
+            "va": "0x1009d3874",
+            "file_offset": 22313076
+          },
+          {
+            "name": "MCPM_ALL",
+            "value": 65535,
+            "va": "0x1009d387c",
+            "file_offset": 22313084
+          },
+          {
+            "name": "MCPM_Max",
+            "value": 65536,
+            "va": "0x1009d3884",
+            "file_offset": 22313092
+          }
+        ]
+      },
+      {
+        "name": "MovieBitRate",
+        "entry_va": "0x1009d1c98",
+        "entry_file_offset": 22305944,
+        "header_words": [
+          983,
+          983,
+          0,
+          2,
+          3225
+        ],
+        "values": [
+          {
+            "name": "MBR_ALL",
+            "value": 65535,
+            "va": "0x1009d388c",
+            "file_offset": 22313100
+          },
+          {
+            "name": "MBR_Max",
+            "value": 65536,
+            "va": "0x1009d3894",
+            "file_offset": 22313108
+          }
+        ]
+      },
+      {
+        "name": "MovieVFR",
+        "entry_va": "0x1009d1cac",
+        "entry_file_offset": 22305964,
+        "header_words": [
+          986,
+          986,
+          0,
+          4,
+          3229
+        ],
+        "values": [
+          {
+            "name": "MVFR_IMPOSSIBLE",
+            "value": 0,
+            "va": "0x1009d389c",
+            "file_offset": 22313116
+          },
+          {
+            "name": "MVFR_POSSIBLE",
+            "value": 1,
+            "va": "0x1009d38a4",
+            "file_offset": 22313124
+          },
+          {
+            "name": "MVFR_ALL",
+            "value": 65535,
+            "va": "0x1009d38ac",
+            "file_offset": 22313132
+          },
+          {
+            "name": "MVFR_Max",
+            "value": 65536,
+            "va": "0x1009d38b4",
+            "file_offset": 22313140
+          }
+        ]
+      },
+      {
+        "name": "MovieHLG",
+        "entry_va": "0x1009d1cc0",
+        "entry_file_offset": 22305984,
+        "header_words": [
+          991,
+          991,
+          0,
+          5,
+          3237
+        ],
+        "values": [
+          {
+            "name": "MHLG_IMPOSSIBLE",
+            "value": 0,
+            "va": "0x1009d38bc",
+            "file_offset": 22313148
+          },
+          {
+            "name": "MHLG_POSSIBLE",
+            "value": 1,
+            "va": "0x1009d38c4",
+            "file_offset": 22313156
+          },
+          {
+            "name": "MHLG_HDMI_ONLY_POSSIBLE",
+            "value": 2,
+            "va": "0x1009d38cc",
+            "file_offset": 22313164
+          },
+          {
+            "name": "MHLG_ALL",
+            "value": 65535,
+            "va": "0x1009d38d4",
+            "file_offset": 22313172
+          },
+          {
+            "name": "MHLG_Max",
+            "value": 65536,
+            "va": "0x1009d38dc",
+            "file_offset": 22313180
+          }
+        ]
+      },
+      {
+        "name": "MovieSQ",
+        "entry_va": "0x1009d1cd4",
+        "entry_file_offset": 22306004,
+        "header_words": [
+          997,
+          997,
+          0,
+          3,
+          3247
+        ],
+        "values": [
+          {
+            "name": "MSQ_IMPOSSIBLE",
+            "value": 0,
+            "va": "0x1009d38e4",
+            "file_offset": 22313188
+          },
+          {
+            "name": "MSQ_POSSIBLE",
+            "value": 1,
+            "va": "0x1009d38ec",
+            "file_offset": 22313196
+          },
+          {
+            "name": "MSQ_Max",
+            "value": 2,
+            "va": "0x1009d38f4",
+            "file_offset": 22313204
+          }
+        ]
+      },
+      {
+        "name": "MovieSSD",
+        "entry_va": "0x1009d1ce8",
+        "entry_file_offset": 22306024,
+        "header_words": [
+          1001,
+          1001,
+          0,
+          4,
+          3253
+        ],
+        "values": [
+          {
+            "name": "MSSD_IMPOSSIBLE",
+            "value": 0,
+            "va": "0x1009d38fc",
+            "file_offset": 22313212
+          },
+          {
+            "name": "MSSD_POSSIBLE",
+            "value": 1,
+            "va": "0x1009d3904",
+            "file_offset": 22313220
+          },
+          {
+            "name": "MSSD_NOTSUPPORT",
+            "value": 2,
+            "va": "0x1009d390c",
+            "file_offset": 22313228
+          },
+          {
+            "name": "MSSD_Max",
+            "value": 3,
+            "va": "0x1009d3914",
+            "file_offset": 22313236
+          }
+        ]
+      },
+      {
+        "name": "MovieSD",
+        "entry_va": "0x1009d1cfc",
+        "entry_file_offset": 22306044,
+        "header_words": [
+          1006,
+          1006,
+          0,
+          4,
+          3261
+        ],
+        "values": [
+          {
+            "name": "MSD_IMPOSSIBLE",
+            "value": 0,
+            "va": "0x1009d391c",
+            "file_offset": 22313244
+          },
+          {
+            "name": "MSD_POSSIBLE",
+            "value": 1,
+            "va": "0x1009d3924",
+            "file_offset": 22313252
+          },
+          {
+            "name": "MSD_NOTSUPPORT",
+            "value": 2,
+            "va": "0x1009d392c",
+            "file_offset": 22313260
+          },
+          {
+            "name": "MSD_Max",
+            "value": 3,
+            "va": "0x1009d3934",
+            "file_offset": 22313268
+          }
+        ]
+      },
+      {
+        "name": "MovieCFExpress",
+        "entry_va": "0x1009d1d10",
+        "entry_file_offset": 22306064,
+        "header_words": [
+          1011,
+          1011,
+          0,
+          4,
+          3269
+        ],
+        "values": [
+          {
+            "name": "MCFEXP_IMPOSSIBLE",
+            "value": 0,
+            "va": "0x1009d393c",
+            "file_offset": 22313276
+          },
+          {
+            "name": "MCFEXP_POSSIBLE",
+            "value": 1,
+            "va": "0x1009d3944",
+            "file_offset": 22313284
+          },
+          {
+            "name": "MCFEXP_NOTSUPPORT",
+            "value": 2,
+            "va": "0x1009d394c",
+            "file_offset": 22313292
+          },
+          {
+            "name": "MCFEXP_Max",
+            "value": 3,
+            "va": "0x1009d3954",
+            "file_offset": 22313300
+          }
+        ]
+      },
+      {
+        "name": "MovieFilterCtrl",
+        "entry_va": "0x1009d1d24",
+        "entry_file_offset": 22306084,
+        "header_words": [
+          1016,
+          1016,
+          0,
+          4,
+          3277
+        ],
+        "values": [
+          {
+            "name": "MFC_Unknown",
+            "value": 4294967295,
+            "va": "0x1009d395c",
+            "file_offset": 22313308
+          },
+          {
+            "name": "MFC_SUBMIT",
+            "value": 0,
+            "va": "0x1009d3964",
+            "file_offset": 22313316
+          },
+          {
+            "name": "MFC_CANCEL",
+            "value": 1,
+            "va": "0x1009d396c",
+            "file_offset": 22313324
+          },
+          {
+            "name": "MFC_Max",
+            "value": 2,
+            "va": "0x1009d3974",
+            "file_offset": 22313332
+          }
+        ]
+      },
+      {
+        "name": "Shot_Mode_Status",
+        "entry_va": "0x1009d20a8",
+        "entry_file_offset": 22306984,
+        "header_words": [
+          152,
+          152,
+          0,
+          5,
+          4033
+        ],
+        "values": [
+          {
+            "name": "Shot_Mode_Status_Unknown",
+            "value": 4294967295,
+            "va": "0x1009d452c",
+            "file_offset": 22316332
+          },
+          {
+            "name": "Shot_Mode_Status_Photo",
+            "value": 0,
+            "va": "0x1009d4534",
+            "file_offset": 22316340
+          },
+          {
+            "name": "Shot_Mode_Status_Movie",
+            "value": 1,
+            "va": "0x1009d453c",
+            "file_offset": 22316348
+          },
+          {
+            "name": "Shot_Mode_Status_Slow_Quick",
+            "value": 2,
+            "va": "0x1009d4544",
+            "file_offset": 22316356
+          },
+          {
+            "name": "Shot_Mode_Status_MAX",
+            "value": 3,
+            "va": "0x1009d454c",
+            "file_offset": 22316364
+          }
+        ]
+      }
+    ]
+  },
+  "compression_jump_table": {
+    "va": "0x100146152",
+    "file_offset": 13345106,
+    "hex": "000810182028",
+    "targets": [
+      {
+        "input_nibble": 0,
+        "branch_target_va": "0x1000531c8",
+        "output_enum_value": 5
+      },
+      {
+        "input_nibble": 1,
+        "branch_target_va": "0x1000531e8",
+        "output_enum_value": 4
+      },
+      {
+        "input_nibble": 2,
+        "branch_target_va": "0x100053208",
+        "output_enum_value": 8
+      },
+      {
+        "input_nibble": 3,
+        "branch_target_va": "0x100053228",
+        "output_enum_value": 6
+      },
+      {
+        "input_nibble": 4,
+        "branch_target_va": "0x100053248",
+        "output_enum_value": 9
+      },
+      {
+        "input_nibble": 5,
+        "branch_target_va": "0x100053268",
+        "output_enum_value": 0
+      }
+    ]
+  },
+  "mov_config_dispatch_table": {
+    "va": "0x1d08e8",
+    "file_offset": 5392616,
+    "hex": "000a131c252e2e313a4047",
+    "targets": [
+      {
+        "tag": "0x06000011",
+        "destination_va": "0x38d50"
+      },
+      {
+        "tag": "0x06000012",
+        "destination_va": "0x38d78"
+      },
+      {
+        "tag": "0x06000013",
+        "destination_va": "0x38d9c"
+      },
+      {
+        "tag": "0x06000014",
+        "destination_va": "0x38dc0"
+      },
+      {
+        "tag": "0x06000015",
+        "destination_va": "0x38de4"
+      },
+      {
+        "tag": "0x06000016",
+        "destination_va": "0x38e08"
+      },
+      {
+        "tag": "0x06000017",
+        "destination_va": "0x38e08"
+      },
+      {
+        "tag": "0x06000018",
+        "destination_va": "0x38e14"
+      },
+      {
+        "tag": "0x06000019",
+        "destination_va": "0x38e38"
+      },
+      {
+        "tag": "0x0600001a",
+        "destination_va": "0x38e50"
+      },
+      {
+        "tag": "0x0600001b",
+        "destination_va": "0x38e6c"
+      }
+    ]
+  },
+  "windows_qml": {
+    "input": {
+      "path": "analysis/sources/tether_windows_2_12/LUMIXTether.exe",
+      "bytes": 10276248,
+      "sha256": "2f41d019327b9aaa7a731fb385fd4ecba569490da96ddfeeca87b6ada751fa42"
+    },
+    "image_base": "0x140000000",
+    "resource_vas": {
+      "tree": "0x14040ec40",
+      "names": "0x14040dbb0",
+      "payload": "0x1403adcf0"
+    },
+    "node_stride": 22,
+    "directory_flag": 2,
+    "zlib_flag": 1,
+    "resources": [
+      {
+        "resource": "qml/LTMainMQComponentsProvider.qml",
+        "node_index": 71,
+        "node_file_offset": 4251738,
+        "payload_file_offset": 4228394,
+        "bytes": 220222,
+        "sha256": "589e3f3842c6daa420a8f48f6e5343efb9815fdb4e920e9ad1feeffef65315fd",
+        "old_copy_matches": true
+      },
+      {
+        "resource": "qml/LTMainMovieQualityPopup.qml",
+        "node_index": 82,
+        "node_file_offset": 4251980,
+        "payload_file_offset": 4220979,
+        "bytes": 41258,
+        "sha256": "a34f3e1d71269f962729f9148d40458606ae69e900264824404b0f088e7453d0",
+        "old_copy_matches": true
+      }
+    ],
+    "boundary": "Windows Tether 2.12 source, not a claimed extraction of macOS QML cache"
+  }
+}

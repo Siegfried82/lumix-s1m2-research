@@ -1,0 +1,48 @@
+
+<LOCAL_WORKSPACE>/analysis/method0_review_20261011/decoded/GH1__132.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+40001000 <.data+0x1000>:
+40001000:	fc dc 8c d8 	mov	1947392140,a0
+40001004:	12 74 
+40001006:	fc dd c0 15 	mov	1950553536,a1
+4000100a:	43 74 
+4000100c:	b1          	cmp	a0,a1
+4000100d:	c8 1f       	beq	0x4000102c
+4000100f:	00          	clr	d0
+40001010:	db          	setlb	
+40001011:	60          	mov	d0,(a0)
+40001012:	50          	inc4	a0
+40001013:	b4          	cmp	a1,a0
+40001014:	cb          	nop	
+40001015:	d4          	lcs	
+40001016:	fc dc 00 00 	mov	-1268842496,a0
+4000101a:	5f b4 
+4000101c:	fc dd 60 e4 	mov	-1268521888,a1
+40001020:	63 b4 
+40001022:	b1          	cmp	a0,a1
+40001023:	c8 09       	beq	0x4000102c
+40001025:	00          	clr	d0
+40001026:	db          	setlb	
+40001027:	60          	mov	d0,(a0)
+40001028:	50          	inc4	a0
+40001029:	b4          	cmp	a1,a0
+4000102a:	cb          	nop	
+4000102b:	d4          	lcs	
+4000102c:	fc dc f0 43 	mov	1078739952,a0
+40001030:	4c 40 
+40001032:	fc cd 20 04 	mov	1078789152,d1
+40001036:	4d 40 
+40001038:	f1 91       	cmp	a0,d1
+4000103a:	c8 10       	beq	0x4000104a
+4000103c:	fc dd 5c 18 	mov	1947342940,a1
+40001040:	12 74 
+40001042:	db          	setlb	
+40001043:	70          	mov	(a0),d0
+40001044:	61          	mov	d0,(a1)
+40001045:	50          	inc4	a0
+40001046:	51          	inc4	a1
+40001047:	f1 a4       	cmp	d1,a0
+40001049:	d4          	lcs	

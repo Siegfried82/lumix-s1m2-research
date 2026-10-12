@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "<string>", line 24, in <module>
+  File "<LOCAL_USER>/Library/Python/3.9/lib/python/site-packages/usb1/__init__.py", line 1406, in controlWrite
+    return self._controlTransfer(request_type, request, value, index, data,
+  File "<LOCAL_USER>/Library/Python/3.9/lib/python/site-packages/usb1/__init__.py", line 1383, in _controlTransfer
+    mayRaiseUSBError(result)
+  File "<LOCAL_USER>/Library/Python/3.9/lib/python/site-packages/usb1/__init__.py", line 129, in mayRaiseUSBError
+    __raiseUSBError(value)
+  File "<LOCAL_USER>/Library/Python/3.9/lib/python/site-packages/usb1/__init__.py", line 121, in raiseUSBError
+    raise __STATUS_TO_EXCEPTION_DICT.get(value, __USBError)(value)
+usb1.USBErrorIO: LIBUSB_ERROR_IO [-1]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 27, in <module>
+AttributeError: 'USBErrorIO' object has no attribute 'getErrorCode'
+Device: Panasonic DC-S5
+Interface 0 claimed
+
+=== OOB WRITE (SET_INTERFACE wIndex > 15) ===
+Normal: wIndex 0-5 are valid interfaces
+OOB: wIndex=0x100 writes 1KB past current_alt_setting[]

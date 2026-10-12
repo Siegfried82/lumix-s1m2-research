@@ -1,0 +1,13 @@
+# S5 firmware-upload oracle @ 2026-10-11 05:22:53 ip=192.168.1.131 phase=I
+  [healthupload-start] getstate=ok
+
+## Phase I @ 2026-10-11 05:22:53  VERSION-BUMP upload (LOW risk, recoverable). target=V3.00 field=outer
+  [I] opening gate then streaming V29 with the version bump...
+  [gate] opening firmware-update gate (gate_version=V3.00)
+- [UP] gate req_acc #1 -> ok_under_research_no_msg -> `ok_under_research_no_msg` (0.04s)  **<== req_acc ACCEPTED**
+- [UP] post-req_acc getstate (diagnostic) -> `err_reject` (0.03s)  **<== post-req_acc state=err_reject (app-connection gate)**
+- [UP] gate fw_update_mode(V3.00) #1 -> err_reject -> `err_reject` (0.03s)
+  [gate] FAILED: fw_update_mode returned err_reject (need ok). Try a higher gate version.
+  [I] gate not open — NOT uploading. (Confirm the connection prompt on the camera screen and re-run Phase I.)
+
+Results in out/campaign.md / out/campaign.jsonl

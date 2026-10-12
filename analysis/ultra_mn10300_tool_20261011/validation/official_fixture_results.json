@@ -1,0 +1,292 @@
+{
+  "base_am33_assembler_fixtures": [
+    {
+      "procedure": "do_add",
+      "source": "add.s",
+      "expected": 17,
+      "patterns": 17,
+      "matched": 17,
+      "pass": true
+    },
+    {
+      "procedure": "do_bcc",
+      "source": "bcc.s",
+      "expected": 15,
+      "patterns": 15,
+      "matched": 15,
+      "pass": true
+    },
+    {
+      "procedure": "do_bit",
+      "source": "bit.s",
+      "expected": 15,
+      "patterns": 15,
+      "matched": 15,
+      "pass": true
+    },
+    {
+      "procedure": "do_cmp",
+      "source": "cmp.s",
+      "expected": 12,
+      "patterns": 12,
+      "matched": 12,
+      "pass": true
+    },
+    {
+      "procedure": "do_ext",
+      "source": "ext.s",
+      "expected": 5,
+      "patterns": 5,
+      "matched": 5,
+      "pass": true
+    },
+    {
+      "procedure": "do_extend",
+      "source": "extend.s",
+      "expected": 15,
+      "patterns": 15,
+      "matched": 15,
+      "pass": true
+    },
+    {
+      "procedure": "do_logical",
+      "source": "logical.s",
+      "expected": 17,
+      "patterns": 17,
+      "matched": 17,
+      "pass": true
+    },
+    {
+      "procedure": "do_loop",
+      "source": "loop.s",
+      "expected": 12,
+      "patterns": 12,
+      "matched": 12,
+      "pass": true
+    },
+    {
+      "procedure": "do_mov1",
+      "source": "mov1.s",
+      "expected": 17,
+      "patterns": 17,
+      "matched": 17,
+      "pass": true
+    },
+    {
+      "procedure": "do_mov2",
+      "source": "mov2.s",
+      "expected": 20,
+      "patterns": 20,
+      "matched": 20,
+      "pass": true
+    },
+    {
+      "procedure": "do_mov3",
+      "source": "mov3.s",
+      "expected": 19,
+      "patterns": 19,
+      "matched": 19,
+      "pass": true
+    },
+    {
+      "procedure": "do_mov4",
+      "source": "mov4.s",
+      "expected": 16,
+      "patterns": 16,
+      "matched": 16,
+      "pass": true
+    },
+    {
+      "procedure": "do_mov5",
+      "source": "mov5.s",
+      "expected": 9,
+      "patterns": 9,
+      "matched": 9,
+      "pass": true
+    },
+    {
+      "procedure": "do_movbu",
+      "source": "movbu.s",
+      "expected": 26,
+      "patterns": 26,
+      "matched": 26,
+      "pass": true
+    },
+    {
+      "procedure": "do_movhu",
+      "source": "movhu.s",
+      "expected": 26,
+      "patterns": 26,
+      "matched": 26,
+      "pass": true
+    },
+    {
+      "procedure": "do_movm",
+      "source": "movm.s",
+      "expected": 4,
+      "patterns": 4,
+      "matched": 4,
+      "pass": true
+    },
+    {
+      "procedure": "do_muldiv",
+      "source": "muldiv.s",
+      "expected": 4,
+      "patterns": 4,
+      "matched": 4,
+      "pass": true
+    },
+    {
+      "procedure": "do_other",
+      "source": "other.s",
+      "expected": 23,
+      "patterns": 23,
+      "matched": 23,
+      "pass": true
+    },
+    {
+      "procedure": "do_shift",
+      "source": "shift.s",
+      "expected": 9,
+      "patterns": 9,
+      "matched": 9,
+      "pass": true
+    },
+    {
+      "procedure": "do_sub",
+      "source": "sub.s",
+      "expected": 9,
+      "patterns": 9,
+      "matched": 9,
+      "pass": true
+    },
+    {
+      "procedure": "do_udf",
+      "source": "udf.s",
+      "expected": 160,
+      "patterns": 160,
+      "matched": 160,
+      "pass": true
+    },
+    {
+      "procedure": "do_am33_1",
+      "source": "am33.s",
+      "expected": 54,
+      "patterns": 54,
+      "matched": 54,
+      "pass": true
+    },
+    {
+      "procedure": "do_am33_2",
+      "source": "am33_2.s",
+      "expected": 62,
+      "patterns": 62,
+      "matched": 62,
+      "pass": true
+    },
+    {
+      "procedure": "do_am33_3",
+      "source": "am33_3.s",
+      "expected": 41,
+      "patterns": 41,
+      "matched": 41,
+      "pass": true
+    },
+    {
+      "procedure": "do_am33_4",
+      "source": "am33_4.s",
+      "expected": 90,
+      "patterns": 90,
+      "matched": 90,
+      "pass": true
+    },
+    {
+      "procedure": "do_am33_5",
+      "source": "am33_5.s",
+      "expected": 124,
+      "patterns": 124,
+      "matched": 124,
+      "pass": true
+    },
+    {
+      "procedure": "do_am33_6",
+      "source": "am33_6.s",
+      "expected": 68,
+      "patterns": 68,
+      "matched": 68,
+      "pass": true
+    },
+    {
+      "procedure": "do_am33_7",
+      "source": "am33_7.s",
+      "expected": 68,
+      "patterns": 68,
+      "matched": 68,
+      "pass": true
+    },
+    {
+      "procedure": "do_am33_8",
+      "source": "am33_8.s",
+      "expected": 67,
+      "patterns": 67,
+      "matched": 67,
+      "pass": true
+    }
+  ],
+  "disassembler_fixtures": [
+    {
+      "source": "am33-2.s",
+      "expectation": "am33-2.d",
+      "expected_ordered_lines": 1310,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "source": "pr11973.s",
+      "expectation": "pr11973.d",
+      "expected_ordered_lines": 6,
+      "pass": true,
+      "failures": []
+    }
+  ],
+  "raw_binary_crosscheck": {
+    "instructions_elf": 1294,
+    "instructions_raw": 1294,
+    "pass": true,
+    "decoded_bytes": 5694,
+    "raw_bytes": 5694,
+    "raw_sha256": "08ca863a93afc683577179421b5de8343bbb4dd5089c199be7d6ec2331795a51"
+  },
+  "raw_variant_crosschecks": [
+    {
+      "variant": "mn10300",
+      "fixture": "add.s",
+      "instructions_elf": 14,
+      "instructions_raw": 14,
+      "decoded_bytes": 46,
+      "raw_bytes": 46,
+      "pass": true
+    },
+    {
+      "variant": "am33",
+      "fixture": "am33.s",
+      "instructions_elf": 44,
+      "instructions_raw": 44,
+      "decoded_bytes": 136,
+      "raw_bytes": 136,
+      "pass": true
+    }
+  ],
+  "am30_mulqu_table_positive_control": {
+    "source": "validation/am30_mulqu_alias.s",
+    "assembled_bytes": "fd 15 0d 66 19 00 fd 15 65 8b 58 5d",
+    "expected_bytes": "fd 15 0d 66 19 00 fd 15 65 8b 58 5d",
+    "pass": true
+  },
+  "tool_sha256": {
+    "build-system-zlib/gas/as-new": "5bf6b448723825cde631afcab482a706b6b9718a228769c11ad3e6dfe689652c",
+    "build-system-zlib/binutils/objdump": "a2d70ddcd641aa9f88b4b4b8896bf33b86677279dca21d6b5c74274d6e06d0da",
+    "build-system-zlib/binutils/objcopy": "c991b0544456579afc16612e13ae06b33e7057eabe47bd62b90235448eacc126"
+  },
+  "all_pass": true
+}

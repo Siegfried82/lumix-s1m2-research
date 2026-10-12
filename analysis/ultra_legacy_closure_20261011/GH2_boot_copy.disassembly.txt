@@ -1,0 +1,36 @@
+
+<LOCAL_WORKSPACE>/analysis/legacy_corpus_20261011/GH2__V11.bin.plaintext:     file format binary
+
+
+Disassembly of section .data:
+
+4000017f <.data+0x77f>:
+4000017f:	fc dc b4 16 	mov	1946162868,a0
+40000183:	00 74 
+40000185:	fc dd e0 61 	mov	1948803552,a1
+40000189:	28 74 
+4000018b:	b1          	cmp	a0,a1
+4000018c:	c8 09       	beq	0x40000195
+4000018e:	00          	clr	d0
+4000018f:	db          	setlb	
+40000190:	60          	mov	d0,(a0)
+40000191:	50          	inc4	a0
+40000192:	b4          	cmp	a1,a0
+40000193:	cb          	nop	
+40000194:	d4          	lcs	
+40000195:	fc dc d0 4c 	mov	1082084560,a0
+40000199:	7f 40 
+4000019b:	fc cd 84 63 	mov	1082090372,d1
+4000019f:	7f 40 
+400001a1:	f1 91       	cmp	a0,d1
+400001a3:	c8 10       	beq	0x400001b3
+400001a5:	fc dd 00 00 	mov	1946157056,a1
+400001a9:	00 74 
+400001ab:	db          	setlb	
+400001ac:	70          	mov	(a0),d0
+400001ad:	61          	mov	d0,(a1)
+400001ae:	50          	inc4	a0
+400001af:	51          	inc4	a1
+400001b0:	f1 a4       	cmp	d1,a0
+400001b2:	d4          	lcs	
+400001b3:	f0 f7       	jmp	(a3)

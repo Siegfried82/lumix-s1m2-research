@@ -1,0 +1,186 @@
+Milbeaut SoCs pin controller
+
+Required properties:
+- compatible: should be one of the following:
+    "socionext,milbeaut-m10v-pinctrl"  - for m10v SoC
+    "socionext,milbeaut-m20v-pinctrl"  - for TOP block on m20v SoC
+    "socionext,milbeaut-m20v-pmc-pinctrl"  - for PMC block on m20v SoC
+    "socionext,milbeaut-karine-pinctrl"  - for karine SoC
+- reg: offset and length of the register set.
+- reg-names: two sets are necessary, and those should be "pinctrl", "exiu".
+  But on karine SOC, the exiu need not to be defined here.
+- bank-offset: every bank's register's offset from the "pinctrl" address
+  must be defined here at karine SoC.
+- gpio-controller: marks the device node as a gpio controller.
+- gpio-cells: should be 2.
+- interrupt-controller: marks the device node as a interrupt controller.
+- interrupt-cells: should be 2.
+- clocks: phandle to the input clock.
+- interrupts: three interrupts specifer.
+- interrupt-names: corresponds "interrupts" factor.
+- io_pin_list: a pin No. list in which all pin with a IO function register.
+  It is used for karine SoC only.
+- io_pin_offset: an offset from an IO function register to the list
+  "pinctrl" address list in which all pin with a IO function register.
+  It is used for karine SoC only.
+- ranges: It must be defined if some children node is defined as following.
+- address-cells: it must be set to 2 if some children node is defined
+  as following.
+- size-cells: it must be set to 2 if some children node is defined
+  as following.
+- child node: a function can be defined as a child node. The name can be
+  set to anyone such as exiu0, exiu1 etc. There are following properties
+  at that node. Its only used for karine SoC.
+- reg: IO address and its length for the child node.
+- pin_list: a pin No. list which are used for this function.
+
+NOTE:
+This driver doesn't care EINTSEL register at MISC_TOP or MISC_PMC.
+The value corresponsing to the interrupt-names should be specified
+at the EINTSEL register.
+
+NOTE2:
+About External Interrupt with using EXIU, this driver can't support
+the setting across the pinctrl block.
+For examle, the pinctrl node for TOP can't control the one for PMC.
+This should be cared when EINTSEL register is set.
+
+
+Example for m10v SoC:
+	pinctrl: pinctrl@1d022000 {
+		compatible = "socionext,milbeaut-m10v-pinctrl";
+		reg = <0x1d022000 0x1000>,
+			<0x1c26f000 0x1000>;
+		reg-names = "pinctrl", "exiu";
+		gpio-controller;
+		#gpio-cells = <2>;
+		interrupt-controller;
+		#interrupt-cells = <2>;
+		clocks = <&clk 2>;
+		interrupts = <0 54 4>, <0 55 4>, <0 56 4>, <0 57 4>,
+				<0 58 4>, <0 59 4>, <0 60 4>, <0 61 4>,
+				<0 62 4>, <0 63 4>, <0 64 4>, <0 65 4>,
+				<0 66 4>, <0 67 4>, <0 68 4>, <0 69 4>;
+		interrupt-names = "pin-48", "pin-49", "pin-50", "pin-51",
+				"pin-52", "pin-53", "pin-54", "pin-55",
+				"pin-56", "pin-57", "pin-58", "pin-59",
+				"pin-60", "pin-61", "pin-62", "pin-63";
+	}
+
+Example for TOP block on m20v SoC:
+	pinctrl: pinctrl@0d151000 {
+		compatible = "socionext,milbeaut-m20v-pinctrl";
+		reg = <0x0d151000 0x1000>,
+			<0x0c86f000 0x1000>;
+		reg-names = "pinctrl", "exiu";
+		gpio-controller;
+		#gpio-cells = <2>;
+		interrupt-controller;
+		#interrupt-cells = <2>;
+		clocks = <&clk 2>;
+		interrupts = <0 59 4>, <0 60 4>, <0 61 4>, <0 62 4>,
+			     <0 63 4>, <0 64 4>, <0 65 4>, <0 66 4>,
+			     <0 67 4>, <0 68 4>, <0 69 4>, <0 70 4>,
+			     <0 71 4>, <0 72 4>, <0 73 4>, <0 74 4>;
+		interrupt-names = "pin-401", "pin-402", "pin-403", "pin-404",
+				"pin-405", "pin-406", "pin-407", "pin-408",
+				"pin-409", "pin-410", "pin-411", "pin-412",
+				"pin-413", "pin-414", "pin-415", "pin-416";
+	}
+
+Example for PMC block on m20v SoC:
+	pinctrl: pinctrl@0dffb000 {
+		compatible = "socionext,milbeaut-m10v-pinctrl";
+		reg = <0x0dffb000 0x1000>,
+			<0x0dff3000 0x1000>;
+		reg-names = "pinctrl", "exiu";
+		gpio-controller;
+		#gpio-cells = <2>;
+		interrupt-controller;
+		#interrupt-cells = <2>;
+		clocks = <&clk 2>;
+		interrupts = <0 364 4>, <0 365 4>, <0 366 4>, <0 367 4>,
+			     <0 368 4>, <0 369 4>, <0 370 4>, <0 371 4>,
+			     <0 372 4>, <0 373 4>, <0 374 4>, <0 375 4>,
+			     <0 376 4>, <0 377 4>, <0 378 4>, <0 379 4>;
+		interrupt-names = "pin-416", "pin-417", "pin-418", "pin-419",
+				"pin-420", "pin-421", "pin-422", "pin-423",
+				"pin-424", "pin-425", "pin-426", "pin-427",
+				"pin-428", "pin-429", "pin-430", "pin-431";
+	}
+
+Example for karine SoC:
+		gpio: pinctrl@d151000 {
+			compatible = "socionext,milbeaut-karine-pinctrl";
+			reg = <0x0 0xd151000 0x0 0x1000>;
+			reg-names = "pinctrl";
+			bank-offset = <0x000 0x020 0x060 0x080
+						  0x0A0 0x0C0 0x0D0 0x0E0
+						  0x100 0x150 0x170 0x200>;
+			gpio-controller;
+			#gpio-cells = <2>;
+			interrupt-controller;
+			#interrupt-cells = <2>;
+			interrupts =
+				<0 91 4>, <0 92 4>, <0 93 4>, <0 94 4>,
+				<0 95 4>, <0 96 4>, <0 97 4>, <0 98 4>,
+				<0 99 4>, <0 100 4>, <0 101 4>, <0 102 4>,
+				<0 103 4>, <0 104 4>, <0 105 4>, <0 106 4>,
+				<0 107 4>, <0 108 4>, <0 109 4>, <0 110 4>,
+				<0 111 4>, <0 112 4>, <0 113 4>, <0 114 4>,
+				<0 115 4>, <0 116 4>, <0 117 4>, <0 118 4>,
+				<0 119 4>, <0 120 4>, <0 121 4>, <0 122 4>;
+			interrupt-names =
+				"pin-91", "pin-92", "pin-93", "pin-94",
+				"pin-95", "pin-96", "pin-97", "pin-98",
+				"pin-99", "pin-100", "pin-101", "pin-102",
+				"pin-103", "pin-104", "pin-105", "pin-106",
+				"pin-107", "pin-108", "pin-109", "pin-110",
+				"pin-111", "pin-112", "pin-113", "pin-114",
+				"pin-115", "pin-116", "pin-117", "pin-118",
+				"pin-119", "pin-120", "pin-121", "pin-122";
+			/*
+			 *	     blacklist for GPIO4 to GPIOT
+			 */
+			blacklist =	<
+				0xFFC0 0xC0F0 0xC000 0x8000
+			    0x8000 0x8000 0xFFF0 0xE030
+			    0xF000 0xFF00 0xF000 0x0000
+			    0xF000 0xFC00 0x0000 0x0000
+			    0x0000 0x0000 0xFF00 0x0000
+				0x0000 0x0000>;
+			io_pin_list = <
+				0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+				16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+				48 49 50 51 54 55 56 57 58 59 64 65 66 67 68 69
+				70 71 72 73 74 75 76 112 113 122 123 124 128 129
+				130 131 132 133 134 135 136 137 138 139 157 158
+				159 168 169 170 171 184 185 186 187 188 189 190
+				191>;
+			io_pin_offset = <
+				0x8B8 0x8BC 0x8C0 0x8C4 0x8C8 0x8CC 0x8D0 0x8D4
+				0x8D8 0x8DC 0x8E0 0x8E4 0x8E8 0x8EC 0x8F0 0x8F4
+				0x8F8 0x8FC 0x900 0x904 0x908 0x90C 0x910 0x914
+				0x918 0x91C 0x920 0x924 0x928 0x92C 0x930 0x934
+				0x8A0 0x8A4 0x8A8 0x8AC 0x8B0 0x8B4 0x87C 0x880
+				0x884 0x888 0x800 0x804 0x808 0x80C 0x810 0x814
+				0x818 0x81C 0x858 0x85C 0x860 0x864 0x868 0x88C
+				0x890 0x894 0x898 0x89C 0x984 0x988 0x98C 0x990
+				0x994 0x998 0x99C 0x9A0 0x9A4 0x9A8 0x9AC 0x9B0
+				0x948 0x94C 0x950 0x938 0x93C 0x940 0x944 0xA44
+				0xA48 0xA4C 0xA50 0xA54 0xA58 0xA5C 0xA60>;
+			ranges;
+			#address-cells = <2>;
+			#size-cells = <2>;
+			exiu0: exiu0@c86e000 {
+				reg = <0x0 0xc86e000 0x0 0x100>;
+				pin_list = <0 1 2 3 4 5 6 7
+							 8 9 10 11 12 13 14 15>;
+			};
+			exiu1: exiu1@0xc86f000 {
+				reg = <0x0 0xc86f000 0x0 0x100>;
+				pin_list = <32 33 34 35 36 37 38 39
+						40 41 42 43 44 45 46 47>;
+			};
+		};
+

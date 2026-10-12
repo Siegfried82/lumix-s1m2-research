@@ -1,0 +1,219 @@
+{
+  "scope": "static disassembly and historical-data comparison, no vendor execution",
+  "functions": [
+    {
+      "binary": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/Frameworks/libLmxptpif.dylib",
+      "binary_sha256": "b767e5680676eefdc05d02a4772c4120a45916e246169b79393356499c07ec97",
+      "saved_disassembly": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "saved_disassembly_sha256": "f0beab04bef63508de6492cf263f62199548bda97911ab5852b371474537af1d",
+      "function": "__Z37Lmx_lib_ptpif_LmxExt_Get_Mov_Cfg_InfoP31_tag_LMX_STRUCT_MOV_CONFIG_INFOjPc",
+      "same_function_text": true,
+      "function_text_sha256": "f71f44fcb1a61a70be694f532a2a666990d4efaae86c27e908c85265865787d0"
+    },
+    {
+      "binary": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/Frameworks/libLmxptpif.dylib",
+      "binary_sha256": "b767e5680676eefdc05d02a4772c4120a45916e246169b79393356499c07ec97",
+      "saved_disassembly": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "saved_disassembly_sha256": "f0beab04bef63508de6492cf263f62199548bda97911ab5852b371474537af1d",
+      "function": "__Z46LMX_func_api_Mov_Config_Get_Quality_mode_ParamPjPcS_",
+      "same_function_text": true,
+      "function_text_sha256": "5e2c8f6cb931d4ca6af2f9a73bff60a71e7622ca1a18385dedd61064be623306"
+    },
+    {
+      "binary": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/Frameworks/libLmxptpif.dylib",
+      "binary_sha256": "b767e5680676eefdc05d02a4772c4120a45916e246169b79393356499c07ec97",
+      "saved_disassembly": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "saved_disassembly_sha256": "f0beab04bef63508de6492cf263f62199548bda97911ab5852b371474537af1d",
+      "function": "__Z55LmxExt_Get_Mov_Cfg_Info_Quality_Detail_Display_from_BufPhP47_tag_LMX_STRUCT_MOV_QUALITY_DETAIL_DISPLAY_INFOPj",
+      "same_function_text": true,
+      "function_text_sha256": "c931349150e51d42c48a4a3a16d2b0a2edee966423bab615a7f6faadaa029001"
+    },
+    {
+      "binary": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/Frameworks/libLmxptpif.dylib",
+      "binary_sha256": "b767e5680676eefdc05d02a4772c4120a45916e246169b79393356499c07ec97",
+      "saved_disassembly": "analysis/tether_2_12_ptp_arm64_disassembly.txt",
+      "saved_disassembly_sha256": "f0beab04bef63508de6492cf263f62199548bda97911ab5852b371474537af1d",
+      "function": "__Z52LmxExt_Get_Mov_Cfg_Info_Quality_Detail_List_from_BufPhP44_tag_LMX_STRUCT_MOV_QUALITY_DETAIL_LIST_INFOPj",
+      "same_function_text": true,
+      "function_text_sha256": "85efa20ea88bb9877c20ffaea252c85428f397352caa2dec7dad44bf55d7661b"
+    },
+    {
+      "binary": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/MacOS/LUMIX Tether",
+      "binary_sha256": "a20693256aeae33c93722cadb2e0ceaa760a98a48d9ebbfd2f697d3ad6420c3a",
+      "saved_disassembly": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "saved_disassembly_sha256": "ccdf024ece6c12440fb79b85174fe1e0c0ddbffa81302867a5e37313b8fd293e",
+      "function": "__ZN11lumixtether13DeviceAdapter32mov_quality_list_data_frame_rateEj",
+      "same_function_text": true,
+      "function_text_sha256": "6854ed18cd458a7f5fe2734055a0a204d5654ac28db2c52d8c15b6f960ce1a0e"
+    },
+    {
+      "binary": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/MacOS/LUMIX Tether",
+      "binary_sha256": "a20693256aeae33c93722cadb2e0ceaa760a98a48d9ebbfd2f697d3ad6420c3a",
+      "saved_disassembly": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "saved_disassembly_sha256": "ccdf024ece6c12440fb79b85174fe1e0c0ddbffa81302867a5e37313b8fd293e",
+      "function": "__ZN11lumixtether13DeviceAdapter40mov_quality_list_data_compression_methodEj",
+      "same_function_text": true,
+      "function_text_sha256": "0bc0ccd82ffb2d921e9c52c48c43cdacf60618a8aabbc2c041aa267dc8c23405"
+    },
+    {
+      "binary": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/MacOS/LUMIX Tether",
+      "binary_sha256": "a20693256aeae33c93722cadb2e0ceaa760a98a48d9ebbfd2f697d3ad6420c3a",
+      "saved_disassembly": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "saved_disassembly_sha256": "ccdf024ece6c12440fb79b85174fe1e0c0ddbffa81302867a5e37313b8fd293e",
+      "function": "__ZN11lumixtether13DeviceAdapter28mov_quality_list_data_pixelsEj",
+      "same_function_text": true,
+      "function_text_sha256": "fe13eba87be95577e012599849d9d5e3f06e73cf9e5a90579bb7119f51f5978f"
+    },
+    {
+      "binary": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/MacOS/LUMIX Tether",
+      "binary_sha256": "a20693256aeae33c93722cadb2e0ceaa760a98a48d9ebbfd2f697d3ad6420c3a",
+      "saved_disassembly": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "saved_disassembly_sha256": "ccdf024ece6c12440fb79b85174fe1e0c0ddbffa81302867a5e37313b8fd293e",
+      "function": "__ZN11lumixtether13DeviceAdapter30mov_quality_list_data_bit_rateEj",
+      "same_function_text": true,
+      "function_text_sha256": "27cf3e8d20c79cc7c8e5151ff8f27addbd3d02e05090ad728d719a34b95e63dc"
+    },
+    {
+      "binary": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/MacOS/LUMIX Tether",
+      "binary_sha256": "a20693256aeae33c93722cadb2e0ceaa760a98a48d9ebbfd2f697d3ad6420c3a",
+      "saved_disassembly": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "saved_disassembly_sha256": "ccdf024ece6c12440fb79b85174fe1e0c0ddbffa81302867a5e37313b8fd293e",
+      "function": "__ZN11lumixtether13DeviceAdapter25mov_quality_list_data_vfrEj",
+      "same_function_text": true,
+      "function_text_sha256": "54321da4c16dd09a5b1e957f74b5eebb64c5014991b3ea6dba959a77080f0c7b"
+    },
+    {
+      "binary": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/MacOS/LUMIX Tether",
+      "binary_sha256": "a20693256aeae33c93722cadb2e0ceaa760a98a48d9ebbfd2f697d3ad6420c3a",
+      "saved_disassembly": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "saved_disassembly_sha256": "ccdf024ece6c12440fb79b85174fe1e0c0ddbffa81302867a5e37313b8fd293e",
+      "function": "__ZN11lumixtether13DeviceAdapter25mov_quality_list_data_hlgEj",
+      "same_function_text": true,
+      "function_text_sha256": "fd3453d6f8d2b8dcb4cbcc26535714eb69de3c0e65b7c5c30ae31a7b96195dc5"
+    },
+    {
+      "binary": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/MacOS/LUMIX Tether",
+      "binary_sha256": "a20693256aeae33c93722cadb2e0ceaa760a98a48d9ebbfd2f697d3ad6420c3a",
+      "saved_disassembly": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "saved_disassembly_sha256": "ccdf024ece6c12440fb79b85174fe1e0c0ddbffa81302867a5e37313b8fd293e",
+      "function": "__ZN11lumixtether13DeviceAdapter24mov_quality_list_data_sqEj",
+      "same_function_text": true,
+      "function_text_sha256": "1da79c69511c5855c7a049d30283018e58cd8edf73871d63bbc355836b192e7b"
+    },
+    {
+      "binary": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/MacOS/LUMIX Tether",
+      "binary_sha256": "a20693256aeae33c93722cadb2e0ceaa760a98a48d9ebbfd2f697d3ad6420c3a",
+      "saved_disassembly": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "saved_disassembly_sha256": "ccdf024ece6c12440fb79b85174fe1e0c0ddbffa81302867a5e37313b8fd293e",
+      "function": "__ZN11lumixtether13DeviceAdapter25mov_quality_list_data_ssdEj",
+      "same_function_text": true,
+      "function_text_sha256": "be7de6199db0ce17e3ccc0ef87cf4a167e3c3dc46125371e44649ec2ea48df03"
+    },
+    {
+      "binary": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/MacOS/LUMIX Tether",
+      "binary_sha256": "a20693256aeae33c93722cadb2e0ceaa760a98a48d9ebbfd2f697d3ad6420c3a",
+      "saved_disassembly": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "saved_disassembly_sha256": "ccdf024ece6c12440fb79b85174fe1e0c0ddbffa81302867a5e37313b8fd293e",
+      "function": "__ZN11lumixtether13DeviceAdapter24mov_quality_list_data_sdEj",
+      "same_function_text": true,
+      "function_text_sha256": "c4249965f6e660e75f1ddad6055e31e220c7e68408e5a6ada323409986daf819"
+    },
+    {
+      "binary": "analysis/sources/tether_2_12_expanded/LUMIXTether.pkg/Payload/LUMIX Tether.app/Contents/MacOS/LUMIX Tether",
+      "binary_sha256": "a20693256aeae33c93722cadb2e0ceaa760a98a48d9ebbfd2f697d3ad6420c3a",
+      "saved_disassembly": "analysis/tether_2_12_app_arm64_disassembly.txt",
+      "saved_disassembly_sha256": "ccdf024ece6c12440fb79b85174fe1e0c0ddbffa81302867a5e37313b8fd293e",
+      "function": "__ZN11lumixtether13DeviceAdapter31mov_quality_list_data_cfexpressEj",
+      "same_function_text": true,
+      "function_text_sha256": "b6411e6ee06844e880a8c47d68ef7cf3ae55e4e5f8b762c135e53db075e05578"
+    }
+  ],
+  "quality_crosscheck": {
+    "decoded_input_sha256": "ea168b5b7946b038c6774750fd62f2f4e4111ed2e0d48d321376a49146d94ff6",
+    "captures": [
+      {
+        "log": "analysis/vendor_capability_inventory_20261008_10/capture_log.json",
+        "sha256": "8df4b21aee6e2d629f383c2faacddf6e954b644d5ee865124e824947faccd5e4",
+        "model_events": [
+          {
+            "event": "device_found",
+            "model": "DC-S1M2",
+            "time_utc": "2026-10-08T18:26:35Z"
+          }
+        ],
+        "read_events": [
+          {
+            "opcode": "0x9108",
+            "params": [
+              100663312,
+              0,
+              0
+            ],
+            "data_bytes": 924,
+            "ok": 1,
+            "event": "plan_read_response",
+            "time_utc": "2026-10-08T18:26:35Z",
+            "transport_ok": true,
+            "response_code": "0x2001",
+            "error": "",
+            "name": "capability_06000010",
+            "index": 23
+          }
+        ]
+      },
+      {
+        "log": "analysis/video_status_inventory_20261008_12/capture_log.json",
+        "sha256": "e936d713a56264516d528e284f4efc8ff6a48498c874ed092b1de4df30691fe1",
+        "model_events": [
+          {
+            "event": "device_found",
+            "model": "DC-S1M2",
+            "time_utc": "2026-10-08T18:28:30Z"
+          }
+        ],
+        "read_events": [
+          {
+            "opcode": "0x9408",
+            "params": [
+              100663312
+            ],
+            "data_bytes": 2852,
+            "ok": 1,
+            "event": "plan_read_response",
+            "time_utc": "2026-10-08T18:28:30Z",
+            "transport_ok": true,
+            "response_code": "0x2001",
+            "error": "",
+            "name": "get_9408_06000010",
+            "index": 11
+          }
+        ]
+      }
+    ],
+    "all_detail_records": 114,
+    "all_detail_passing_media_gate": 114,
+    "extra_records": 34,
+    "extra_passing_media_gate": 34,
+    "extra_sq_sd_cfexpress_flags": [
+      {
+        "sq": 0,
+        "sd": 0,
+        "cfexpress": 1,
+        "count": 1
+      },
+      {
+        "sq": 0,
+        "sd": 1,
+        "cfexpress": 1,
+        "count": 25
+      },
+      {
+        "sq": 1,
+        "sd": 1,
+        "cfexpress": 1,
+        "count": 8
+      }
+    ],
+    "boundary": "Different capture times do not prove identical camera states; media gate does not explain this set difference."
+  }
+}

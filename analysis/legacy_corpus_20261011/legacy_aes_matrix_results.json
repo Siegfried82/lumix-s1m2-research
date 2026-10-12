@@ -1,0 +1,162 @@
+{
+  "key_sources": [
+    "G3___V12.bin",
+    "GF2__V11.bin",
+    "GF3__V12.bin",
+    "GH2__V11.bin",
+    "GX1__V11.bin"
+  ],
+  "unique_keys": 5,
+  "tests": [
+    {
+      "target": "G3___V12.bin",
+      "key_source": "G3___V12.bin",
+      "stored_body_md5_matches": true
+    },
+    {
+      "target": "G3___V12.bin",
+      "key_source": "GF2__V11.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "G3___V12.bin",
+      "key_source": "GF3__V12.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "G3___V12.bin",
+      "key_source": "GH2__V11.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "G3___V12.bin",
+      "key_source": "GX1__V11.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GF2__V11.bin",
+      "key_source": "G3___V12.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GF2__V11.bin",
+      "key_source": "GF2__V11.bin",
+      "stored_body_md5_matches": true
+    },
+    {
+      "target": "GF2__V11.bin",
+      "key_source": "GF3__V12.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GF2__V11.bin",
+      "key_source": "GH2__V11.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GF2__V11.bin",
+      "key_source": "GX1__V11.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GF3__V12.bin",
+      "key_source": "G3___V12.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GF3__V12.bin",
+      "key_source": "GF2__V11.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GF3__V12.bin",
+      "key_source": "GF3__V12.bin",
+      "stored_body_md5_matches": true
+    },
+    {
+      "target": "GF3__V12.bin",
+      "key_source": "GH2__V11.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GF3__V12.bin",
+      "key_source": "GX1__V11.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GH2__V11.bin",
+      "key_source": "G3___V12.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GH2__V11.bin",
+      "key_source": "GF2__V11.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GH2__V11.bin",
+      "key_source": "GF3__V12.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GH2__V11.bin",
+      "key_source": "GH2__V11.bin",
+      "stored_body_md5_matches": true
+    },
+    {
+      "target": "GH2__V11.bin",
+      "key_source": "GX1__V11.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GH2__V12.bin",
+      "key_source": "G3___V12.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GH2__V12.bin",
+      "key_source": "GF2__V11.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GH2__V12.bin",
+      "key_source": "GF3__V12.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GH2__V12.bin",
+      "key_source": "GH2__V11.bin",
+      "stored_body_md5_matches": true
+    },
+    {
+      "target": "GH2__V12.bin",
+      "key_source": "GX1__V11.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GX1__V11.bin",
+      "key_source": "G3___V12.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GX1__V11.bin",
+      "key_source": "GF2__V11.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GX1__V11.bin",
+      "key_source": "GF3__V12.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GX1__V11.bin",
+      "key_source": "GH2__V11.bin",
+      "stored_body_md5_matches": false
+    },
+    {
+      "target": "GX1__V11.bin",
+      "key_source": "GX1__V11.bin",
+      "stored_body_md5_matches": true
+    }
+  ]
+}

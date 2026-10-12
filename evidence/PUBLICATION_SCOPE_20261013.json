@@ -1,0 +1,1080 @@
+{
+  "date": "2026-10-13",
+  "inventory_scope": "workspace project and analysis, excluding VCS, publication staging and duplicate outputs",
+  "input_files": 127738,
+  "statuses": {
+    "excluded": 119238,
+    "published": 7085,
+    "sanitized": 411,
+    "external": 1004
+  },
+  "by_area": {
+    ".DS_Store": {
+      "excluded": 1
+    },
+    "AGENTS.md": {
+      "published": 1
+    },
+    "README.md": {
+      "published": 1
+    },
+    "S1M2固件研究需求与交接.md": {
+      "published": 1
+    },
+    "S1M2固件逆向_阶段结果汇总.md": {
+      "sanitized": 1
+    },
+    "S1M2研究当前状态.md": {
+      "published": 1
+    },
+    "S1m2_V14.bin": {
+      "excluded": 1
+    },
+    "S1m2_V14.zip": {
+      "excluded": 1
+    },
+    "a.out": {
+      "excluded": 1
+    },
+    "analysis/.DS_Store": {
+      "excluded": 1
+    },
+    "analysis/051f结构_Codex核验_20261009.md": {
+      "published": 1
+    },
+    "analysis/9421_structure_crosscheck_20261009.json": {
+      "published": 1
+    },
+    "analysis/9421载荷_Codex核验_20261009.md": {
+      "published": 1
+    },
+    "analysis/Antigravity复核_核验结果.md": {
+      "published": 1
+    },
+    "analysis/Gemini_CAM公开资料检索_20261008.md": {
+      "published": 1
+    },
+    "analysis/Gemini_CAM静态审计_20261008.md": {
+      "published": 1
+    },
+    "analysis/Gemini_PTP配置字段映射_20261008.md": {
+      "published": 1
+    },
+    "analysis/Gemini_加载器锚点实验_20261008.md": {
+      "published": 1
+    },
+    "analysis/Gemini_原厂软件深查_纠错_20261008.md": {
+      "sanitized": 1
+    },
+    "analysis/Gemini_设置结构解析_20261008.md": {
+      "published": 1
+    },
+    "analysis/Gemini_远程菜单路径_20261008.md": {
+      "published": 1
+    },
+    "analysis/Gemini_采集清单_Codex核验_20261008.md": {
+      "published": 1
+    },
+    "analysis/Gemini_首张保存字段与固件关联_20261008.md": {
+      "published": 1
+    },
+    "analysis/LUMIX_Lab更新路径_Codex核验_20261008.md": {
+      "published": 1
+    },
+    "analysis/LUMIX_Lab读取入口_Codex核验_20261008.md": {
+      "published": 1
+    },
+    "analysis/ROMBACKUP_SD路径_证据边界_20261009.md": {
+      "published": 1
+    },
+    "analysis/S1M2_LIVE_EXTRACTED.DAT": {
+      "published": 1
+    },
+    "analysis/S1M2_LIVE_HIGHRES.DAT": {
+      "published": 1
+    },
+    "analysis/S1M2_RAM读取入口_核查结果_20261008.md": {
+      "published": 1
+    },
+    "analysis/S1M2_V1.4_初步分析.md": {
+      "sanitized": 1
+    },
+    "analysis/S1M2_公开入口核查与下一步.md": {
+      "published": 1
+    },
+    "analysis/S1M2_机身数据采集结果_20261008.md": {
+      "published": 1
+    },
+    "analysis/S1M2_解码突破记录.md": {
+      "sanitized": 1
+    },
+    "analysis/S1M2_逆向进度与隐藏功能调查.md": {
+      "sanitized": 1
+    },
+    "analysis/S1M2存储布局_Codex核验_20261009.md": {
+      "published": 1
+    },
+    "analysis/S1M2电路图检索_20261010.md": {
+      "published": 1
+    },
+    "analysis/S1M2维修手册_Codex核验_20261009.md": {
+      "published": 1
+    },
+    "analysis/S1M2调整软件获取_Codex核验_20261009.md": {
+      "published": 1
+    },
+    "analysis/Tether应用维护审计_Codex核验_20261008.md": {
+      "published": 1
+    },
+    "analysis/Windows_Tether初步_Codex核验_20261009.md": {
+      "published": 1
+    },
+    "analysis/acquired_capabilities_decoded_20261008.json": {
+      "sanitized": 1
+    },
+    "analysis/acquired_capabilities_roundtrip_20261008.json": {
+      "sanitized": 1
+    },
+    "analysis/agy_breakthrough_batch_20261011": {
+      "sanitized": 2,
+      "published": 21,
+      "excluded": 1
+    },
+    "analysis/agy_flash_mapping_20261011.json": {
+      "sanitized": 1
+    },
+    "analysis/agy_ipcufs_review_20261011.json": {
+      "sanitized": 1
+    },
+    "analysis/agy_legacy_key_route_audit_20261011.json": {
+      "sanitized": 1
+    },
+    "analysis/agy_legacy_samples_sources_20261011.json": {
+      "sanitized": 1
+    },
+    "analysis/agy_loader_review_20261011.json": {
+      "published": 1
+    },
+    "analysis/agy_method0_review_20261011.json": {
+      "published": 1
+    },
+    "analysis/agy_method2_review_20261011.json": {
+      "sanitized": 1
+    },
+    "analysis/agy_method2_transfer_review_20261011.json": {
+      "sanitized": 1
+    },
+    "analysis/agy_newer_known_keys_20261011.json": {
+      "sanitized": 1
+    },
+    "analysis/agy_pasted_research_audit_20261011.json": {
+      "sanitized": 1
+    },
+    "analysis/agy_rootfs_mapping_20261011.json": {
+      "sanitized": 1
+    },
+    "analysis/agy_takeover_20261012": {
+      "sanitized": 72,
+      "published": 14
+    },
+    "analysis/agy_transition_crypto_review_20261011.json": {
+      "published": 1
+    },
+    "analysis/agy_ultra_old_image_20261011.json": {
+      "sanitized": 1
+    },
+    "analysis/ai_handoff_20261010": {
+      "published": 6,
+      "sanitized": 2
+    },
+    "analysis/android_connection_tools": {
+      "excluded": 11,
+      "sanitized": 1,
+      "published": 1
+    },
+    "analysis/android_lab_live_20261012": {
+      "published": 14
+    },
+    "analysis/antigravity_051f_structure_20261009.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_051f_vendor_parser_20261009.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_9421_payload_audit_20261009.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_adjustment_sample_20261009.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_aw_tether_review.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_aw_update_path_review.json": {
+      "published": 1
+    },
+    "analysis/antigravity_burst_speed_mapping_20261008.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_cfb_rombackup_20261009.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_contributor_branch_plan_20261009.json": {
+      "published": 1
+    },
+    "analysis/antigravity_firmware_loader_next_experiment_20261008.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_github_pr_check_20261009.json": {
+      "published": 1
+    },
+    "analysis/antigravity_github_pr_review_20261009.json": {
+      "published": 1
+    },
+    "analysis/antigravity_lumix_lab_acquisition_20261008.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_lumix_lab_ptp_audit_20261008.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_oss_refresh_20261009.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_pr_accept_comments_20261009.json": {
+      "published": 1
+    },
+    "analysis/antigravity_pr_intake_plan_20261009.json": {
+      "published": 1
+    },
+    "analysis/antigravity_pr_reference_value_20261009.json": {
+      "published": 1
+    },
+    "analysis/antigravity_ptp_entry_review.json": {
+      "published": 1
+    },
+    "analysis/antigravity_ptp_live_followup.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_ram_entry_review_20261008.json": {
+      "published": 1
+    },
+    "analysis/antigravity_readme_branch_links_20261009.json": {
+      "published": 1
+    },
+    "analysis/antigravity_registration_requirements_20261009.json": {
+      "published": 1
+    },
+    "analysis/antigravity_review_prompt.txt": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_rombackup_sd_audit_20261009.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_s1m2_adjustment_acquisition_20261009.json": {
+      "published": 1
+    },
+    "analysis/antigravity_s1m2_manual_audit_20261009.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_s1m2_manual_audit_collected_20261009.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_service_alternatives_20261009.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_service_search_20261008.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_sl3_review.json": {
+      "published": 1
+    },
+    "analysis/antigravity_sl3_review_followup.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_storage_layout_20261009.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_tether_app_maintenance_20261008.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_tether_windows_exports_20261009.json": {
+      "sanitized": 1
+    },
+    "analysis/antigravity_tether_windows_inventory_20261009.json": {
+      "sanitized": 1
+    },
+    "analysis/audit_bootloader_anchors.py": {
+      "published": 1
+    },
+    "analysis/audit_buffer_interface.py": {
+      "published": 1
+    },
+    "analysis/audit_lumix_sdk_binary.py": {
+      "published": 1
+    },
+    "analysis/audit_public_decoder.py": {
+      "published": 1
+    },
+    "analysis/audit_tether_aw_update_path.py": {
+      "published": 1
+    },
+    "analysis/audit_tether_client_transport.py": {
+      "published": 1
+    },
+    "analysis/backup_request_audit_20261010": {
+      "published": 2
+    },
+    "analysis/baseline_20261008_01": {
+      "published": 9
+    },
+    "analysis/bootloader_anchor_results.json": {
+      "published": 1
+    },
+    "analysis/buffer_interface_evidence.json": {
+      "published": 1
+    },
+    "analysis/capa_drivemode.bin": {
+      "published": 1
+    },
+    "analysis/capa_imagequality.bin": {
+      "published": 1
+    },
+    "analysis/capture_s1m2_baseline.m": {
+      "published": 1
+    },
+    "analysis/cbc_without_iv_probes.json": {
+      "published": 1
+    },
+    "analysis/cleanup_20261010": {
+      "sanitized": 1,
+      "published": 1
+    },
+    "analysis/compare_maintenance_functions.py": {
+      "published": 1
+    },
+    "analysis/compare_sl3_payloads.py": {
+      "published": 1
+    },
+    "analysis/compare_tether_update_paths.py": {
+      "published": 1
+    },
+    "analysis/compare_versions.py": {
+      "published": 1
+    },
+    "analysis/config_review_20261010": {
+      "published": 5
+    },
+    "analysis/contributor_refresh_20261010.json": {
+      "published": 1
+    },
+    "analysis/control_decrypted": {
+      "excluded": 2,
+      "published": 1
+    },
+    "analysis/curated_vendor_capabilities_20261008.json": {
+      "published": 1
+    },
+    "analysis/curated_vendor_extra_reads_20261008.json": {
+      "published": 1
+    },
+    "analysis/curated_vendor_reads_20261008.json": {
+      "published": 1
+    },
+    "analysis/curated_video_status_reads_20261008.json": {
+      "published": 1
+    },
+    "analysis/decode_acquired_capabilities.py": {
+      "published": 1
+    },
+    "analysis/desktop_panasonic_review_20261012": {
+      "sanitized": 12,
+      "published": 26,
+      "excluded": 9
+    },
+    "analysis/device_inventory_20261008_06": {
+      "published": 8,
+      "sanitized": 2
+    },
+    "analysis/diff_s1m2_modes.py": {
+      "sanitized": 1
+    },
+    "analysis/encoded_components": {
+      "excluded": 6
+    },
+    "analysis/encoding_probes.json": {
+      "published": 1
+    },
+    "analysis/external_lab_reports_20261012": {
+      "published": 4,
+      "sanitized": 1
+    },
+    "analysis/external_qemu_sandbox_20261012": {
+      "published": 20
+    },
+    "analysis/extract_gh2_control.py": {
+      "published": 1
+    },
+    "analysis/firmware_goal_blocker_audit.json": {
+      "published": 1
+    },
+    "analysis/format_transition_audit_20261011": {
+      "published": 5
+    },
+    "analysis/fwup_ready_address_audit_20261010": {
+      "published": 4
+    },
+    "analysis/github_pr_review_input_20261009.txt": {
+      "published": 1
+    },
+    "analysis/guest_dump_feasibility_20261012": {
+      "sanitized": 1
+    },
+    "analysis/highres_20261008_02": {
+      "published": 8
+    },
+    "analysis/highres_firstnormal_off_20261008_03": {
+      "published": 9
+    },
+    "analysis/highres_firstnormal_off_fan_20261008_05": {
+      "published": 9
+    },
+    "analysis/highres_firstnormal_on_fan_20261008_04": {
+      "published": 9
+    },
+    "analysis/in_camera_hdr_reference": {
+      "published": 99,
+      "sanitized": 2,
+      "excluded": 29
+    },
+    "analysis/inspect_firmware.py": {
+      "published": 1
+    },
+    "analysis/inspect_leica_oss.py": {
+      "published": 1
+    },
+    "analysis/inspect_lumix_settings.py": {
+      "published": 1
+    },
+    "analysis/inspect_oss_sources.py": {
+      "published": 1
+    },
+    "analysis/inventory.json": {
+      "published": 1
+    },
+    "analysis/inventory_final_baseline_20261008_13": {
+      "published": 8
+    },
+    "analysis/lab_connection_20261012": {
+      "published": 7,
+      "sanitized": 1
+    },
+    "analysis/lab_crypto_callsite_audit_20261010": {
+      "published": 4
+    },
+    "analysis/lab_lut_backup_20261012": {
+      "published": 42
+    },
+    "analysis/lab_lut_protocol_20261010": {
+      "published": 10,
+      "sanitized": 5,
+      "excluded": 2
+    },
+    "analysis/lab_read_baseline_20261012": {
+      "published": 11
+    },
+    "analysis/lab_roundtrip_preparation_20261012": {
+      "published": 5
+    },
+    "analysis/lab_session_chain_20261012": {
+      "published": 2,
+      "sanitized": 1
+    },
+    "analysis/later_legacy_consumers_20261011": {
+      "sanitized": 26,
+      "published": 3
+    },
+    "analysis/legacy_corpus_20261011": {
+      "excluded": 31,
+      "published": 17
+    },
+    "analysis/live_drivemode_current.bin": {
+      "published": 1
+    },
+    "analysis/live_drivemode_highres.bin": {
+      "published": 1
+    },
+    "analysis/loader_ipcufs_review_20261011": {
+      "published": 4,
+      "sanitized": 3
+    },
+    "analysis/local_qemu_lab_20261012": {
+      "excluded": 16485,
+      "sanitized": 11,
+      "published": 56
+    },
+    "analysis/lumix_ascom_source_inventory.json": {
+      "published": 1
+    },
+    "analysis/lumix_lab_acquisition_gemini_20261008.json": {
+      "sanitized": 1
+    },
+    "analysis/lumix_lab_acquisition_gemini_20261008.md": {
+      "sanitized": 1
+    },
+    "analysis/lumix_lab_code_strings_codex_20261008.json": {
+      "published": 1
+    },
+    "analysis/lumix_lab_fallback_20261008.log": {
+      "sanitized": 1
+    },
+    "analysis/lumix_lab_jadx_20261008.log": {
+      "published": 1
+    },
+    "analysis/lumix_lab_native_llc_symbols_20261008.json": {
+      "published": 1
+    },
+    "analysis/lumix_lab_ptp_read_audit_gemini_20261008.json": {
+      "sanitized": 1
+    },
+    "analysis/lumix_lab_ptp_read_audit_gemini_20261008.md": {
+      "published": 1
+    },
+    "analysis/lumix_lab_update_evidence_manifest_20261008.json": {
+      "sanitized": 1
+    },
+    "analysis/lumix_ptp_settings_map.json": {
+      "published": 1
+    },
+    "analysis/lumix_remote_menu_map.json": {
+      "published": 1
+    },
+    "analysis/lumix_sdk_binary_inventory.json": {
+      "published": 1
+    },
+    "analysis/lumix_sdk_classifier_callers.json": {
+      "published": 1
+    },
+    "analysis/lumix_sdk_command_classes.json": {
+      "published": 1
+    },
+    "analysis/lumix_sdk_command_classifier.json": {
+      "published": 1
+    },
+    "analysis/lumix_sdk_getproperty_trace.json": {
+      "published": 1
+    },
+    "analysis/lumix_sdk_getproperty_transport_trace.json": {
+      "published": 1
+    },
+    "analysis/lumix_sdk_phase_dispatch_trace.json": {
+      "published": 1
+    },
+    "analysis/lumix_sdk_transport_trace.json": {
+      "published": 1
+    },
+    "analysis/lumix_settings_structure.json": {
+      "published": 1
+    },
+    "analysis/lut_config_after_20261012": {
+      "published": 12
+    },
+    "analysis/lut_config_before_20261012": {
+      "excluded": 1,
+      "published": 7
+    },
+    "analysis/lut_config_blank_20261012": {
+      "published": 7
+    },
+    "analysis/lut_config_delete_20261012": {
+      "published": 9
+    },
+    "analysis/lut_config_reboot_20261012": {
+      "published": 7
+    },
+    "analysis/lut_config_rename_20261012": {
+      "published": 7
+    },
+    "analysis/lut_identity_delete_camera_20261012": {
+      "published": 8
+    },
+    "analysis/lut_identity_import_20261012": {
+      "published": 15
+    },
+    "analysis/lut_import_after_wifi_20261012": {
+      "published": 7
+    },
+    "analysis/lut_numeric_review_20261010": {
+      "published": 14
+    },
+    "analysis/lut_slot_mapping_20261012": {
+      "published": 44
+    },
+    "analysis/lut_upload_live_20261012_01": {
+      "published": 57
+    },
+    "analysis/lut_uploader_20261012": {
+      "published": 5
+    },
+    "analysis/maintenance_aw_standard_comparison_20261008.json": {
+      "published": 1
+    },
+    "analysis/maintenance_aw_standard_normalized_20261008.json": {
+      "sanitized": 1
+    },
+    "analysis/maintenance_literal_check_20261008.json": {
+      "published": 1
+    },
+    "analysis/menu_request_audit_20261010": {
+      "published": 2
+    },
+    "analysis/metadata_key_probes.json": {
+      "published": 1
+    },
+    "analysis/method0_codex_verify_20261011": {
+      "published": 3
+    },
+    "analysis/method0_review_20261011": {
+      "sanitized": 2,
+      "published": 2,
+      "excluded": 6
+    },
+    "analysis/method2_codex_verify_20261011": {
+      "published": 3
+    },
+    "analysis/method2_review_20261011": {
+      "sanitized": 2,
+      "published": 1,
+      "excluded": 1
+    },
+    "analysis/method2_transfer_20261011": {
+      "published": 5
+    },
+    "analysis/multimodel_diff_20261012": {
+      "published": 6
+    },
+    "analysis/new_pr_review_20261010": {
+      "published": 8,
+      "sanitized": 3
+    },
+    "analysis/nikon_xor_model_check_20261010": {
+      "published": 3
+    },
+    "analysis/object_inventory_live_20261010": {
+      "published": 6
+    },
+    "analysis/object_metadata_full_20261010": {
+      "published": 5181
+    },
+    "analysis/object_metadata_sample_20261010": {
+      "published": 63
+    },
+    "analysis/object_route_preparation_20261009": {
+      "excluded": 2,
+      "published": 10
+    },
+    "analysis/oss_nt_linux_content_comparison_codex_20261009.json": {
+      "published": 1
+    },
+    "analysis/oss_nt_linux_diff_codex_20261009.txt": {
+      "sanitized": 1
+    },
+    "analysis/oss_nt_uboot_content_comparison_codex_20261009.json": {
+      "published": 1
+    },
+    "analysis/oss_refresh_gemini_20261009.json": {
+      "published": 1
+    },
+    "analysis/oss_refresh_gemini_20261009.md": {
+      "published": 1
+    },
+    "analysis/parallel_routes_20261009": {
+      "published": 134,
+      "sanitized": 34,
+      "excluded": 8
+    },
+    "analysis/parse_ptp_device_info.py": {
+      "published": 1
+    },
+    "analysis/parse_s1m2_live.py": {
+      "sanitized": 1
+    },
+    "analysis/partial_object_host_audit_20261010": {
+      "published": 3
+    },
+    "analysis/pastebin_mHG1T5Ph_20261011": {
+      "sanitized": 3,
+      "published": 5
+    },
+    "analysis/pasted_research_audit_20261011": {
+      "published": 2
+    },
+    "analysis/plaintext_region_audit_20261010": {
+      "published": 2
+    },
+    "analysis/probe_cbc_without_iv.py": {
+      "published": 1
+    },
+    "analysis/probe_encoding.py": {
+      "published": 1
+    },
+    "analysis/probe_metadata_keys.py": {
+      "published": 1
+    },
+    "analysis/probe_sl3_cross_header.py": {
+      "published": 1
+    },
+    "analysis/ptool_crypto_results.json": {
+      "sanitized": 1
+    },
+    "analysis/ptp_client": {
+      "published": 4
+    },
+    "analysis/ptp_parameter_api_20261010": {
+      "published": 5
+    },
+    "analysis/ptp_verification_pack_review_20261010": {
+      "published": 4
+    },
+    "analysis/public_decoder_structural_check.json": {
+      "published": 1
+    },
+    "analysis/public_source_followup_20261009.json": {
+      "published": 1
+    },
+    "analysis/ram_dump_routes_codex_evidence_20261008.json": {
+      "published": 1
+    },
+    "analysis/ram_route_opcode_inventory_20261008.json": {
+      "published": 1
+    },
+    "analysis/ram_route_update_address_xrefs_20261008.json": {
+      "published": 1
+    },
+    "analysis/read_s1m2_known_setting.py": {
+      "sanitized": 1
+    },
+    "analysis/recover_ptool_crypto.py": {
+      "published": 1
+    },
+    "analysis/registration_email_verification_20261009.jpg": {
+      "excluded": 1
+    },
+    "analysis/registration_filled_20261009.jpg": {
+      "excluded": 1
+    },
+    "analysis/registration_login_error_20261009.jpg": {
+      "excluded": 1
+    },
+    "analysis/registration_password_error_20261009.jpg": {
+      "excluded": 1
+    },
+    "analysis/registration_password_focus_20261009.jpg": {
+      "excluded": 1
+    },
+    "analysis/registration_short_profile_20261009.jpg": {
+      "excluded": 1
+    },
+    "analysis/registration_terms_20261009.jpg": {
+      "excluded": 1
+    },
+    "analysis/registration_test2_progress_20261009.jpg": {
+      "excluded": 1
+    },
+    "analysis/registration_test_stalled_20261009.jpg": {
+      "excluded": 1
+    },
+    "analysis/s1m2_config_0x9421.bin": {
+      "published": 1
+    },
+    "analysis/s1m2_config_highres.bin": {
+      "published": 1
+    },
+    "analysis/s1m2_download_consent_20261009.jpg": {
+      "excluded": 1
+    },
+    "analysis/s1m2_firstnormal_field_evidence.json": {
+      "published": 1
+    },
+    "analysis/s1m2_hidden_format_inspect_20261012": {
+      "published": 1
+    },
+    "analysis/s1m2_http_precheck_20261012": {
+      "published": 7
+    },
+    "analysis/s1m2_inventory_manifest_20261008.json": {
+      "published": 1
+    },
+    "analysis/s1m2_live_records_catalog.json": {
+      "published": 1
+    },
+    "analysis/s1m2_lut_config_tool_20261012": {
+      "published": 44
+    },
+    "analysis/s1m2_manual_downloaded_20261009.jpg": {
+      "excluded": 1
+    },
+    "analysis/s1m2_readonly_acquisition_plan.json": {
+      "published": 1
+    },
+    "analysis/s1m2_single_vs_highres_diff.json": {
+      "published": 1
+    },
+    "analysis/s5_delivery_review_20261010": {
+      "published": 38,
+      "sanitized": 6,
+      "excluded": 6
+    },
+    "analysis/s5_research_report_20261011": {
+      "published": 79,
+      "sanitized": 12,
+      "excluded": 127
+    },
+    "analysis/s5_toolbox_review_20261013": {
+      "sanitized": 9,
+      "published": 10,
+      "external": 1004,
+      "excluded": 2
+    },
+    "analysis/service_alternatives_gemini_20261009.json": {
+      "published": 1
+    },
+    "analysis/service_alternatives_gemini_20261009.md": {
+      "published": 1
+    },
+    "analysis/service_materials_codex_20261008.json": {
+      "sanitized": 1
+    },
+    "analysis/service_materials_gemini_20261008.json": {
+      "published": 1
+    },
+    "analysis/service_materials_gemini_20261008.md": {
+      "published": 1
+    },
+    "analysis/sl3_cross_header_probes.json": {
+      "published": 1
+    },
+    "analysis/sl3_loader_observations.json": {
+      "published": 1
+    },
+    "analysis/sl3_payload_comparison.json": {
+      "published": 1
+    },
+    "analysis/sl3_s1m2_header_comparison.json": {
+      "published": 1
+    },
+    "analysis/sources": {
+      "excluded": 72447,
+      "published": 290,
+      "sanitized": 58
+    },
+    "analysis/standard_inventory_20261008_07": {
+      "published": 7
+    },
+    "analysis/standard_read_plan_20261008.json": {
+      "published": 1
+    },
+    "analysis/storage_inventory_20261008_08": {
+      "published": 3
+    },
+    "analysis/storage_read_plan_20261008.json": {
+      "published": 1
+    },
+    "analysis/sync_connection_extract_20261012": {
+      "published": 10
+    },
+    "analysis/system_reverse_mainline_20261012": {
+      "sanitized": 1,
+      "published": 1
+    },
+    "analysis/tether_2_12_app_arm64_disassembly.txt": {
+      "published": 1
+    },
+    "analysis/tether_2_12_binary_inventory.json": {
+      "published": 1
+    },
+    "analysis/tether_2_12_ptp_arm64_disassembly.txt": {
+      "sanitized": 1
+    },
+    "analysis/tether_app_maintenance_audit_gemini_20261008.json": {
+      "published": 1
+    },
+    "analysis/tether_app_maintenance_audit_gemini_20261008.md": {
+      "published": 1
+    },
+    "analysis/tether_aw_binary_inventory.json": {
+      "published": 1
+    },
+    "analysis/tether_aw_ptp_arm64_disassembly.txt": {
+      "published": 1
+    },
+    "analysis/tether_aw_update_path.json": {
+      "published": 1
+    },
+    "analysis/tether_client_transport_paths.json": {
+      "published": 1
+    },
+    "analysis/tether_opcode_inventory_20261010": {
+      "published": 4
+    },
+    "analysis/tether_update_path_comparison.json": {
+      "published": 1
+    },
+    "analysis/tether_windows_review_20261009": {
+      "published": 4
+    },
+    "analysis/tools": {
+      "excluded": 7,
+      "published": 1
+    },
+    "analysis/transition_corpus_20261011": {
+      "excluded": 7,
+      "published": 10
+    },
+    "analysis/ultra_agy_old_image_20261011": {
+      "published": 2,
+      "sanitized": 2
+    },
+    "analysis/ultra_container_check_20261011": {
+      "published": 7
+    },
+    "analysis/ultra_crypto_audit_20261011": {
+      "published": 3
+    },
+    "analysis/ultra_key_claim_audit_20261011": {
+      "published": 3
+    },
+    "analysis/ultra_legacy_closure_20261011": {
+      "sanitized": 45,
+      "published": 6
+    },
+    "analysis/ultra_legacy_loader_20261011": {
+      "sanitized": 10,
+      "published": 11
+    },
+    "analysis/ultra_method0_consumer_verify_20261011": {
+      "published": 3,
+      "sanitized": 13,
+      "excluded": 1
+    },
+    "analysis/ultra_mn10300_tool_20261011": {
+      "published": 4,
+      "sanitized": 2,
+      "excluded": 29959
+    },
+    "analysis/ultra_tether_update_consumer_20261011": {
+      "published": 10
+    },
+    "analysis/unpack_all.py": {
+      "published": 1
+    },
+    "analysis/unpacked": {
+      "published": 3,
+      "excluded": 67
+    },
+    "analysis/unpacked_verification.json": {
+      "published": 1
+    },
+    "analysis/usb_lut_direct_20261012": {
+      "published": 29,
+      "excluded": 1
+    },
+    "analysis/usb_video_paired_20261012": {
+      "published": 21,
+      "excluded": 1,
+      "sanitized": 2
+    },
+    "analysis/vendor_capability_inventory_20261008_10": {
+      "published": 55
+    },
+    "analysis/vendor_current_inventory_20261008_09": {
+      "published": 65
+    },
+    "analysis/vendor_extra_inventory_20261008_11": {
+      "published": 6
+    },
+    "analysis/vendor_storage_ids_20261008_14": {
+      "published": 2
+    },
+    "analysis/vendor_storage_ids_plan_20261008.json": {
+      "published": 1
+    },
+    "analysis/verify_s1m2_baseline.py": {
+      "published": 1
+    },
+    "analysis/version_comparison.json": {
+      "published": 1
+    },
+    "analysis/video_quality_consumer_20261011": {
+      "published": 16
+    },
+    "analysis/video_status_inventory_20261008_12": {
+      "published": 28
+    },
+    "analysis/vuln_hunt_20261010": {
+      "published": 1
+    },
+    "analysis/windows_only_exports_audit_20261010": {
+      "published": 26
+    },
+    "analysis/workspace_cleanup_20261012": {
+      "excluded": 1,
+      "sanitized": 10,
+      "published": 7
+    },
+    "analysis/保存首张普通照片_初步差分_20261008.md": {
+      "sanitized": 1
+    },
+    "analysis/加载器源码审查_Codex核验_20261009.md": {
+      "published": 1
+    },
+    "analysis/单张高分辨率_受控对照_20261008.md": {
+      "published": 1
+    },
+    "analysis/固件解码审计_Codex核验_20261008.md": {
+      "published": 1
+    },
+    "analysis/官方源码刷新_Codex核验_20261009.md": {
+      "published": 1
+    },
+    "analysis/机身有限时间_采集清单.md": {
+      "published": 1
+    },
+    "analysis/机身能力数据解码_20261008.md": {
+      "published": 1
+    },
+    "analysis/维修样本请求草稿_20261010.md": {
+      "published": 1
+    },
+    "analysis/维修资料搜索结果_20261008.md": {
+      "published": 1
+    },
+    "analysis/维修资料替代入口_Codex核验_20261009.md": {
+      "published": 1
+    },
+    "analysis/维护接口跨版本比较_20261008.md": {
+      "published": 1
+    },
+    "docs": {
+      "published": 1
+    },
+    "main": {
+      "excluded": 1
+    },
+    "s1m2_firmware_project": {
+      "excluded": 1,
+      "published": 15
+    },
+    "研究恢复进度_20261010.md": {
+      "published": 1
+    },
+    "研究推进_20261011_Ultra.md": {
+      "published": 1
+    },
+    "研究暂停交接_20261010.md": {
+      "published": 1
+    }
+  },
+  "published_bytes": 811677185,
+  "external_inputs": "separately annotated under external_review/20261013",
+  "execution": "Only this data-copy sanitizer ran; no archived research tool or device request ran."
+}

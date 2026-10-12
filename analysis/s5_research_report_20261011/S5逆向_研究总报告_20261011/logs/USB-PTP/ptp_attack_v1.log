@@ -1,0 +1,50 @@
+============================================================
+S5 PTP Attack - Phase 1
+============================================================
+Connected: Panasonic DC-S5
+Interface claimed, alt 0 set
+
+--- Phase 1: Valid PTP GetDeviceInfo ---
+  Sending 14 bytes: 00010e0000000100000001000110
+  Send: ret=-1
+
+--- Phase 2: PTP Length Manipulation ---
+  Testing: bLength > actual data (claiming more bytes than sent)
+
+  [Normal] packet=14 bytes
+    Send ret=-1
+
+  [Length=1000 (actual=14)] packet=14 bytes
+    Send ret=-1
+
+  [Length=65535 (actual=14)] packet=14 bytes
+    Send ret=-1
+
+  [Length=4294967295 (actual=14)] packet=14 bytes
+    Send ret=-1
+
+  [Length=8 (undersized)] packet=14 bytes
+    Send ret=-1
+
+--- Phase 3: Unknown PTP Opcodes ---
+  OP=0x0000: send ret=-1
+  OP=0xFFFF: send ret=-1
+  OP=0x10FF: send ret=-1
+  OP=0x2000: send ret=-1
+  OP=0xFFFF: send ret=-1
+  OP=0x1000: send ret=-1
+  OP=0x1014: send ret=-1
+  OP=0x1015: send ret=-1
+  OP=0x9999: send ret=-1
+  OP=0xDEAD: send ret=-1
+
+--- Phase 4: Bulk OUT Overflow ---
+  Sending data larger than wMaxPacketSize (512)
+  1024 bytes: ret=-1
+  4096 bytes: ret=-1
+  65536 bytes: ret=-1
+
+--- Final Device Status ---
+  Device still connected
+
+Done.

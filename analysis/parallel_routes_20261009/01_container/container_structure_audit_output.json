@@ -1,0 +1,54 @@
+{
+  "total_file_size": 171867648,
+  "outer_crc32": {
+    "stored": "0x5d6f7ff7",
+    "calculated": "0x5d6f7ff7",
+    "matches": true,
+    "coverage": "[0x200, EOF)"
+  },
+  "outer_header": {
+    "magic": "UPD\u0000",
+    "platform": "MC8243",
+    "version_raw": "46014601"
+  },
+  "vendor_gap": {
+    "vendor_tag": "panasonic",
+    "signature_64b_hex": "b8ea64728c5d08ff99e17dbe865f46a0ddcd39b268eeb6ab7aef9f5165414f7e5058a04ced706275216bd90d7ba564e0b3eff637d1734b23685b412a1a48299a",
+    "zero_pad_clean": true
+  },
+  "inner_header": {
+    "magic": "UPD\u0000",
+    "platform": "MC8243",
+    "version_raw": "46014601",
+    "date_raw": "40130403",
+    "container_rel_size": 171867136,
+    "payload_start_rel": 6144,
+    "payload_total_size": 171860992,
+    "component_count": 62
+  },
+  "toc_extents": {
+    "start": "0x02ec",
+    "end": "0x1934",
+    "post_toc_gap_len": 204,
+    "post_toc_gap_all_zero": true
+  },
+  "payload_extents": {
+    "first_payload_offset": "0x1a00",
+    "last_payload_end": "0x0a3e7e00",
+    "is_contiguous": true,
+    "ends_at_eof": true
+  },
+  "flash_destination_layout": {
+    "partition_count": 62,
+    "aligned_to_64kb_blocks": true,
+    "aligned_to_128kb_blocks": false,
+    "exceptions_128k": [
+      "dsp_kizu_d",
+      "dsp_eisldc_",
+      "dsp_fstack_",
+      "raw_kizu_d"
+    ],
+    "max_flash_extent": "0x0a4e0000",
+    "semantic": "Physical block offsets for 256 MiB NAND flash, not runtime RAM addresses."
+  }
+}

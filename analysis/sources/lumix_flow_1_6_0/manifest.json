@@ -1,0 +1,64 @@
+{
+  "xapk_version": 2,
+  "package_name": "com.panasonic.jp.lumixflow",
+  "name": "LUMIX Flow",
+  "version_code": "15",
+  "version_name": "1.6.0",
+  "min_sdk_version": "30",
+  "target_sdk_version": "35",
+  "permissions": [
+    "android.permission.INTERNET",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.RECORD_AUDIO",
+    "android.permission.CAMERA",
+    "android.permission.WRITE_EXTERNA",
+    "android.permission.READ_MEDIA_AUDIO",
+    "android.permission.READ_MEDIA_VIDEO",
+    "android.permission.READ_MEDIA_IMAGES",
+    "android.permission.BLUETOOTH",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.CHANGE_NETWORK_STATE",
+    "android.permission.CHANGE_WIFI_MULTICAST_STATE",
+    "android.permission.ACCESS_WIFI_STATE",
+    "android.permission.CHANGE_WIFI_STATE",
+    "android.permission.NEARBY_WIFI_DEVICES",
+    "android.permission.BLUETOOTH_ADMIN",
+    "android.permission.BLUETOOTH_SCAN",
+    "android.permission.BLUETOOTH_ADVERTISE",
+    "android.permission.BLUETOOTH_CONNECT",
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_COARSE_LOCATION",
+    "android.permission.MODIFY_AUDIO_SETTINGS",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.USB_PERMISSION",
+    "android.permission.WAKE_LOCK",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.panasonic.jp.lumixflow.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.android.vending.CHECK_LICENSE"
+  ],
+  "split_configs": [
+    "config.arm64_v8a",
+    "config.en",
+    "config.xxhdpi"
+  ],
+  "total_size": 101038620,
+  "icon": "icon.png",
+  "split_apks": [
+    {
+      "file": "com.panasonic.jp.lumixflow.apk",
+      "id": "base"
+    },
+    {
+      "file": "config.arm64_v8a.apk",
+      "id": "config.arm64_v8a"
+    },
+    {
+      "file": "config.en.apk",
+      "id": "config.en"
+    },
+    {
+      "file": "config.xxhdpi.apk",
+      "id": "config.xxhdpi"
+    }
+  ]
+}

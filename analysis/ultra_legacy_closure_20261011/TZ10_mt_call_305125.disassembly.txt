@@ -1,0 +1,112 @@
+
+<LOCAL_WORKSPACE>/analysis/method2_review_20261011/decoded/TZ10_V12.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+77b80ad5 <.data+0x3050d5>:
+77b80ad5:	74          	mov	(a0),d1
+77b80ad6:	de 00 00    	retf	[],0
+77b80ad9:	fc 82 8d 11 	movbu	d0,(0x7431118d)
+77b80add:	31 74 
+77b80adf:	de 00 00    	retf	[],0
+77b80ae2:	fc 81 ac f0 	mov	d0,(0x744ef0ac)
+77b80ae6:	4e 74 
+77b80ae8:	8a 01       	mov	1,d2
+77b80aea:	db          	setlb	
+77b80aeb:	88          	mov	d2,d0
+77b80aec:	54          	asl2	d0
+77b80aed:	fc dd ac f0 	mov	1951330476,a1
+77b80af1:	4e 74 
+77b80af3:	f1 61       	add	d0,a1
+77b80af5:	fc dc fc ff 	mov	-4,a0
+77b80af9:	ff ff 
+77b80afb:	f1 74       	add	a1,a0
+77b80afd:	74          	mov	(a0),d1
+77b80afe:	70          	mov	(a0),d0
+77b80aff:	f8 c4 1e    	lsr	30,d0
+77b80b02:	f2 21       	xor	d0,d1
+77b80b04:	fd 15 65 89 	udfu01	1812433253,d1
+77b80b08:	07 6c 
+77b80b0a:	e9          	add	d2,d1
+77b80b0b:	65          	mov	d1,(a1)
+77b80b0c:	48          	inc	d2
+77b80b0d:	fc 89 90 11 	mov	d2,(0x74311190)
+77b80b11:	31 74 
+77b80b13:	fa ca 70 02 	cmp	624,d2
+77b80b17:	d0          	llt	
+77b80b18:	de a0 08    	retf	[d2,a2],8
+77b80b1b:	43 0c       	mov	a0,(12,sp)
+77b80b1d:	42 08       	mov	d0,(8,sp)
+77b80b1f:	fc cc aa d6 	mov	19650218,d0
+77b80b23:	2b 01 
+77b80b25:	cd bd ff a0 	call	0x77b80ae2,[d2,a2],8
+77b80b29:	08 
+77b80b2a:	58 08       	mov	(8,sp),d0
+77b80b2c:	95 01       	mov	1,a1
+77b80b2e:	9a 00       	mov	0,a2
+77b80b30:	2f 70 02    	mov	624,d3
+77b80b33:	a3          	cmp	d0,d3
+77b80b34:	c1 03       	bgt	0x77b80b37
+77b80b36:	83          	mov	d0,d3
+77b80b37:	4e 04       	mov	d3,(4,sp)
+77b80b39:	af 00       	cmp	0,d3
+77b80b3b:	c8 57       	beq	0x77b80b92
+77b80b3d:	db          	setlb	
+77b80b3e:	f1 d4       	mov	a1,d0
+77b80b40:	54          	asl2	d0
+77b80b41:	f1 e3       	mov	d0,a3
+77b80b43:	fc d3 ac f0 	add	1951330476,a3
+77b80b47:	4e 74 
+77b80b49:	fc dc fc ff 	mov	-4,a0
+77b80b4d:	ff ff 
+77b80b4f:	f1 7c       	add	a3,a0
+77b80b51:	74          	mov	(a0),d1
+77b80b52:	78          	mov	(a0),d2
+77b80b53:	5c 0c       	mov	(12,sp),a0
+77b80b55:	7f          	mov	(a3),d3
+77b80b56:	f1 d8       	mov	a2,d0
+77b80b58:	54          	asl2	d0
+77b80b59:	f3 80       	mov	(d0,a0),a0
+77b80b5b:	f8 c6 1e    	lsr	30,d2
+77b80b5e:	f2 29       	xor	d2,d1
+77b80b60:	fd 15 0d 66 	udfu01	1664525,d1
+77b80b64:	19 00 
+77b80b66:	f2 2d       	xor	d3,d1
+77b80b68:	f1 59       	add	a2,d1
+77b80b6a:	f1 51       	add	a0,d1
+77b80b6c:	67          	mov	d1,(a3)
+77b80b6d:	45          	inc	a1
+77b80b6e:	49          	inc	a2
+77b80b6f:	fa d9 70 02 	cmp	624,a1
+77b80b73:	c0 10       	blt	0x77b80b83
+77b80b75:	fc a4 68 fa 	mov	(0x744efa68),d0
+77b80b79:	4e 74 
+77b80b7b:	95 01       	mov	1,a1
+77b80b7d:	fc 81 ac f0 	mov	d0,(0x744ef0ac)
+77b80b81:	4e 74 
+77b80b83:	58 08       	mov	(8,sp),d0
+77b80b85:	f1 a2       	cmp	d0,a2
+77b80b87:	c0 04       	blt	0x77b80b8b
+77b80b89:	9a 00       	mov	0,a2
+77b80b8b:	58 04       	mov	(4,sp),d0
+77b80b8d:	28 ff       	add	-1,d0
+77b80b8f:	42 04       	mov	d0,(4,sp)
+77b80b91:	d9          	lne	
+77b80b92:	2f 6f 02    	mov	623,d3
+77b80b95:	db          	setlb	
+77b80b96:	f1 d4       	mov	a1,d0
+77b80b98:	54          	asl2	d0
+77b80b99:	f1 e2       	mov	d0,a2
+77b80b9b:	fc d2 ac f0 	add	1951330476,a2
+77b80b9f:	4e 74 
+77b80ba1:	fc dc fc ff 	mov	-4,a0
+77b80ba5:	ff ff 
+77b80ba7:	f1 78       	add	a2,a0
+77b80ba9:	74          	mov	(a0),d1
+77b80baa:	70          	mov	(a0),d0
+77b80bab:	7a          	mov	(a2),d2
+77b80bac:	f8 c4 1e    	lsr	30,d0
+77b80baf:	f2 21       	xor	d0,d1
+77b80bb1:	fd 15 65 8b 	udfu01	1566083941,d1
+77b80bb5:	  

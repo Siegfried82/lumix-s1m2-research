@@ -1,0 +1,769 @@
+{
+  "date": "2026-10-13",
+  "scope": "Publication documentation static review. No archived research script or guest run by this subtask. No AGY.",
+  "primary_goal": "Complete reverse of S1M2 firmware, not feature unlocks.",
+  "draft_destination": "docs/gaps.json",
+  "source_input_inventory": [
+    {
+      "path": "s1m2_firmware_project/tools/unpack_upd.py",
+      "sha256": "e880ec65fd098722293a85ae0ce75d9aa047f0fc11d6c050bccae75816ec5e0d",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "argparse",
+        "collections",
+        "csv",
+        "hashlib",
+        "json",
+        "math",
+        "pathlib",
+        "struct",
+        "sys",
+        "zlib"
+      ],
+      "cli_static": [
+        {
+          "line": 139,
+          "kind": "add_argument",
+          "arguments": [
+            "input"
+          ],
+          "options": {
+            "type": "Path",
+            "help": "'Path to input UPD binary (e.g. S1m2_V14.bin)'"
+          }
+        },
+        {
+          "line": 140,
+          "kind": "add_argument",
+          "arguments": [
+            "-o",
+            "--output"
+          ],
+          "options": {
+            "type": "Path",
+            "default": "Path('unpacked_output')",
+            "help": "'Output directory'"
+          }
+        }
+      ],
+      "input_conditions": "Exact V1.4 BIN",
+      "expected_output": "headers, components, manifest in -o directory",
+      "scope_and_effects": "CLI; offline bytes",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "s1m2_firmware_project/tools/verify_components.py",
+      "sha256": "b6514c198d978e0a25625ad186c9afd13a2bd49bd149c2510c69037fd6d3906e",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "argparse",
+        "hashlib",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "cli_static": [
+        {
+          "line": 128,
+          "kind": "add_argument",
+          "arguments": [
+            "directory"
+          ],
+          "options": {
+            "type": "Path",
+            "help": "'Directory containing manifest.json and components/'"
+          }
+        },
+        {
+          "line": 129,
+          "kind": "add_argument",
+          "arguments": [
+            "-q",
+            "--quiet"
+          ],
+          "options": {
+            "action": "'store_true'",
+            "help": "'Quiet output'"
+          }
+        }
+      ],
+      "input_conditions": "unpacked manifest/components",
+      "expected_output": "console checks",
+      "scope_and_effects": "CLI; offline bytes",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "s1m2_firmware_project/tools/repack_upd.py",
+      "sha256": "20ac983b1ff87a70247a504358a4a98b98fdd5bb60f376b88042cb9be8b317bc",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "argparse",
+        "hashlib",
+        "json",
+        "pathlib",
+        "struct",
+        "sys",
+        "zlib"
+      ],
+      "cli_static": [
+        {
+          "line": 117,
+          "kind": "add_argument",
+          "arguments": [
+            "source"
+          ],
+          "options": {
+            "type": "Path",
+            "help": "'Directory containing unpacked headers, manifest.json, and components/'"
+          }
+        },
+        {
+          "line": 118,
+          "kind": "add_argument",
+          "arguments": [
+            "-o",
+            "--output"
+          ],
+          "options": {
+            "type": "Path",
+            "required": "True",
+            "help": "'Destination UPD binary path'"
+          }
+        },
+        {
+          "line": 119,
+          "kind": "add_argument",
+          "arguments": [
+            "--no-recompute-hash"
+          ],
+          "options": {
+            "action": "'store_true'",
+            "help": "'Preserve stored hashes instead of recomputing'"
+          }
+        }
+      ],
+      "input_conditions": "unpacked headers/manifest/components",
+      "expected_output": "-o BIN; recomputes outer CRC",
+      "scope_and_effects": "CLI; offline bytes; fixed-layout sample assumptions",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/ultra_mn10300_tool_20261011/validate_official.py",
+      "sha256": "081abc1a89e92d08f001451daea95b969399c42031973d011b7eaa4e7e928632",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "hashlib",
+        "json",
+        "pathlib",
+        "re",
+        "subprocess"
+      ],
+      "cli_static": [],
+      "input_conditions": "GNU2.44 source fixtures; built as/objcopy/objdump",
+      "expected_output": "validation fixtures/results",
+      "scope_and_effects": "No CLI; executes reviewed host tools, never target objects",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/ultra_legacy_closure_20261011/verify_closure.py",
+      "sha256": "72329bc29789e10f7c1e2b155c64b61b7904300d525186e18bc19d4d8c340bdf",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "array",
+        "hashlib",
+        "json",
+        "pathlib",
+        "runpy",
+        "struct",
+        "subprocess"
+      ],
+      "cli_static": [],
+      "input_conditions": "GH2 original+plaintext versions; TZ10 original+decoded; ptool tables; earlier manifests and MT source",
+      "expected_output": "verification.json/disassembly_manifest/text windows",
+      "scope_and_effects": "No CLI; local OpenSSL and objdump; overwrites own stage",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/later_legacy_consumers_20261011/verify_consumers.py",
+      "sha256": "92bc316f076f392d27bee9bb59fc0797c07eb1b35169bae6c445c1a447519dd0",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "hashlib",
+        "json",
+        "pathlib",
+        "struct",
+        "subprocess"
+      ],
+      "cli_static": [],
+      "input_conditions": "G3/GF2/GF3/GX1 originals+plaintext; GNU tool",
+      "expected_output": "verification.json/commands.json/disassembly_manifest/text",
+      "scope_and_effects": "No CLI; local OpenSSL and objdump; overwrites own stage",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/ultra_method0_consumer_verify_20261011/verify_consumers.py",
+      "sha256": "b351b03352f7178779b2001f547e13f1b0fa22632532decaa67ba9c5ac14bcdc",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "hashlib",
+        "json",
+        "pathlib",
+        "re",
+        "struct",
+        "subprocess"
+      ],
+      "cli_static": [],
+      "input_conditions": "GH1 input/plaintext and matching source/build controls",
+      "expected_output": "verification_evidence.json/text/object fixture",
+      "scope_and_effects": "No CLI; historical fixed root requires mapping; writes own stage",
+      "historical_absolute_path_lines": [
+        10
+      ]
+    },
+    {
+      "path": "analysis/ultra_container_check_20261011/check_feedback_modes.py",
+      "sha256": "311358f5ba54455e09b79f7da4dceab56774ddfb234eff97c9833d3210680c8f",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "Crypto.Cipher",
+        "hashlib",
+        "json",
+        "pathlib"
+      ],
+      "cli_static": [],
+      "input_conditions": "five legacy raw-key control sources; ptool table; seven instance evidence; modern raw inputs",
+      "expected_output": "feedback_mode_results.json",
+      "scope_and_effects": "No CLI; PyCryptodome; sampled128B modes; overwrites own stage",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/ultra_crypto_audit_20261011/audit.py",
+      "sha256": "169273b2026ebdd9d3cd01a40df9c32887635bdc34275bc4cf2d7ccaa7645233",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "Crypto.Cipher",
+        "ast",
+        "hashlib",
+        "json",
+        "pathlib",
+        "random",
+        "struct",
+        "types"
+      ],
+      "cli_static": [],
+      "input_conditions": "method2/MT/IV scripts; prior JSONs; exact legacy and transition input files",
+      "expected_output": "results.json",
+      "scope_and_effects": "No CLI; AST-selected function execution and PyCryptodome; overwrites own stage",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/multimodel_diff_20261012/compare.py",
+      "sha256": "cc234fef7650727d436cc62daa1fbfdf1aca0a38df0fc50cf6d0d25c28433444",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "Crypto.Cipher",
+        "collections",
+        "hashlib",
+        "itertools",
+        "json",
+        "pathlib",
+        "struct",
+        "sys",
+        "zipfile"
+      ],
+      "cli_static": [],
+      "input_conditions": "13 legacy originals;9 modern BIN/ZIP; ptool table",
+      "expected_output": "results.json",
+      "scope_and_effects": "No CLI; PyCryptodome; hardcoded root-relative input set; writes own stage",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/multimodel_diff_20261012/followup.py",
+      "sha256": "3eb51f0e9e14daf109cb8069a4229deb53c5de3ab9786a58b78abdab34c9892d",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "Crypto.Cipher",
+        "Crypto.Util",
+        "collections",
+        "hashlib",
+        "json",
+        "pathlib",
+        "struct",
+        "zipfile"
+      ],
+      "cli_static": [],
+      "input_conditions": "compare results; legacy key sources; S1 raw member",
+      "expected_output": "followup.json",
+      "scope_and_effects": "No CLI; compare first; PyCryptodome; writes own stage",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/local_qemu_lab_20261012/sandbox.py",
+      "sha256": "f7c84e611ec4355520094d277061b525082397bf94625487addf3711ff5f124d",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "argparse",
+        "fcntl",
+        "gzip",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "re",
+        "select",
+        "shlex",
+        "shutil",
+        "socket",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "termios",
+        "time",
+        "tty",
+        "uuid"
+      ],
+      "cli_static": [
+        {
+          "line": 401,
+          "kind": "add_parser",
+          "arguments": [
+            "start"
+          ],
+          "options": {}
+        },
+        {
+          "line": 402,
+          "kind": "add_parser",
+          "arguments": [
+            "status"
+          ],
+          "options": {}
+        },
+        {
+          "line": 403,
+          "kind": "add_parser",
+          "arguments": [
+            "stop"
+          ],
+          "options": {}
+        },
+        {
+          "line": 404,
+          "kind": "add_parser",
+          "arguments": [
+            "console"
+          ],
+          "options": {}
+        },
+        {
+          "line": 405,
+          "kind": "add_parser",
+          "arguments": [
+            "demo"
+          ],
+          "options": {}
+        },
+        {
+          "line": 406,
+          "kind": "add_parser",
+          "arguments": [
+            "menu"
+          ],
+          "options": {}
+        },
+        {
+          "line": 407,
+          "kind": "add_parser",
+          "arguments": [
+            "exec"
+          ],
+          "options": {}
+        },
+        {
+          "line": 408,
+          "kind": "add_argument",
+          "arguments": [
+            "command"
+          ],
+          "options": {}
+        },
+        {
+          "line": 409,
+          "kind": "add_argument",
+          "arguments": [
+            "--timeout"
+          ],
+          "options": {
+            "type": "float",
+            "default": "30"
+          }
+        },
+        {
+          "line": 410,
+          "kind": "add_parser",
+          "arguments": [
+            "dump"
+          ],
+          "options": {}
+        },
+        {
+          "line": 411,
+          "kind": "add_argument",
+          "arguments": [
+            "--address"
+          ],
+          "options": {
+            "type": "number",
+            "default": "RAM_BASE"
+          }
+        },
+        {
+          "line": 412,
+          "kind": "add_argument",
+          "arguments": [
+            "--size"
+          ],
+          "options": {
+            "type": "number",
+            "default": "16 * 1024 ** 2"
+          }
+        },
+        {
+          "line": 413,
+          "kind": "add_argument",
+          "arguments": [
+            "--all"
+          ],
+          "options": {
+            "action": "'store_true'"
+          }
+        },
+        {
+          "line": 414,
+          "kind": "add_argument",
+          "arguments": [
+            "--gzip"
+          ],
+          "options": {
+            "action": "'store_true'"
+          }
+        }
+      ],
+      "input_conditions": "checked custom Image/initramfs/source manifest; host runtime.json/binary",
+      "expected_output": "active.json; runs/session/serial/commands/ram metadata",
+      "scope_and_effects": "CLI; starts guest and executes chosen guest commands; no camera authorized",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/local_qemu_lab_20261012/verify_evidence.py",
+      "sha256": "ddd7bcbb461f6b1363fd3b10244c4206f1902c035d745f6a18d293868abfad01",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "gzip",
+        "hashlib",
+        "json",
+        "pathlib"
+      ],
+      "cli_static": [],
+      "input_conditions": "original13-file package; latest paired RAM gzip/json and run evidence",
+      "expected_output": "verification.json",
+      "scope_and_effects": "No CLI; offline historical bytes; metadata path mapping and full RAM required",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/local_qemu_lab_20261012/runtime/prepare_runtime.py",
+      "sha256": "95f9c1876f698ff214b999d754bc2c6c5e5f23d3239490737f309e71cbb617d6",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "subprocess"
+      ],
+      "cli_static": [],
+      "input_conditions": "restored host bottle dependency closure/cellar",
+      "expected_output": "runtime.json/version/machine/accel checks",
+      "scope_and_effects": "No CLI; runs host QEMU capability queries; host-specific",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/local_qemu_lab_20261012/runtime/fetch_bottles.py",
+      "sha256": "9dd0264c015486aedd592f3b4349368730f017263660462b99bbe553be370393",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "concurrent.futures",
+        "hashlib",
+        "json",
+        "pathlib",
+        "subprocess"
+      ],
+      "cli_static": [],
+      "input_conditions": "cached metadata or current online Homebrew stable API",
+      "expected_output": "downloads/cellar/bottle_sources.json",
+      "scope_and_effects": "No CLI; network and tar extraction; not default offline replay, not version-pinned without archive metadata",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/s5_toolbox_review_20261013/verify_configuration_evidence.py",
+      "sha256": "09cec4eba8aa0d663fb1554750c48ea36423ead73d156fc3170929df96b1dca7",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "hashlib",
+        "json",
+        "pathlib",
+        "struct"
+      ],
+      "cli_static": [],
+      "input_conditions": "saved four-input originals layout; exact S5 config files",
+      "expected_output": "configuration_evidence.json",
+      "scope_and_effects": "No CLI; package layout differs from external_review layout and requires mapping",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/s5_toolbox_review_20261013/verify_crypto_container.py",
+      "sha256": "f289967e90d96df54debf88c0730f03452b50d666515f2c5eea9f4cc5ce07b48",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "collections",
+        "hashlib",
+        "json",
+        "pathlib",
+        "struct",
+        "zlib"
+      ],
+      "cli_static": [],
+      "input_conditions": "exact S5 V2.9/S1M2V1.4; old input manifest JSON",
+      "expected_output": "crypto_container_verification.json",
+      "scope_and_effects": "No CLI; original relative layout requires mapping",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/lut_uploader_20261012/test_offline.py",
+      "sha256": "eca1a4542c012b379f83422ca72a238a69fdfebac60ac857dcd0d332d762b2d1",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "json",
+        "pathlib",
+        "tempfile",
+        "upload"
+      ],
+      "cli_static": [],
+      "input_conditions": "reviewed project upload.py and precise synthetic cube",
+      "expected_output": "offline_validation.json",
+      "scope_and_effects": "No CLI; calls mock request only; no real upload",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/usb_video_paired_20261012/analyze_capture.py",
+      "sha256": "e8440699d12f0e377756fab5e96c44a438f786d83d55c853951e79553a68d750",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "analyze",
+        "decode_acquired_capabilities",
+        "hashlib",
+        "json",
+        "parse_ptp_device_info",
+        "pathlib",
+        "sys"
+      ],
+      "cli_static": [],
+      "input_conditions": "paired raw samples; parse_ptp_device_info/decode_acquired_capabilities and video analyze module",
+      "expected_output": "results.json/采集报告.md",
+      "scope_and_effects": "No CLI; project-root cwd; reads historical files",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/video_quality_consumer_20261011/analyze.py",
+      "sha256": "3e14e9b42128c558631a9af4a99bc0b999ab2ef4db0379358edb05e75bf1d58e",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "hashlib",
+        "importlib.util",
+        "json",
+        "pathlib",
+        "struct",
+        "sys",
+        "zlib"
+      ],
+      "cli_static": [],
+      "input_conditions": "wire samples; exact Tether App/dylib and originalWindows resource source",
+      "expected_output": "decoded.json/evidence.json/validation.json/QML outputs",
+      "scope_and_effects": "No CLI; reads original vendor binaries as data; not complete without inputs",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/video_quality_consumer_20261011/verify_current_disassembly.py",
+      "sha256": "e7169c2435d6ff4da031e55a18b10d30e0e9d55a8e42429d5f10fb3f2e1a47ae",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "collections",
+        "hashlib",
+        "json",
+        "pathlib",
+        "re",
+        "subprocess"
+      ],
+      "cli_static": [],
+      "input_conditions": "analyze outputs; exact current vendor binaries; macOS disassembly tools",
+      "expected_output": "parent_current_disassembly_check.json/window texts",
+      "scope_and_effects": "No CLI; run analyze first; host-tool and vendor-input requirements",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/lut_upload_live_20261012_01/verify_usb.py",
+      "sha256": "66b11c5c9fcb9a343e163232591b570f30aa696ddd33eab19640073e6416ff40",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "hashlib",
+        "json",
+        "lut_config",
+        "pathlib",
+        "struct",
+        "sys",
+        "upload"
+      ],
+      "cli_static": [],
+      "input_conditions": "full original USB config; HTTPS readback; sourcecube; mapping/numeric modules",
+      "expected_output": "usb_verification.json",
+      "scope_and_effects": "No CLI; original private-input exclusion may limit independent byte recheck",
+      "historical_absolute_path_lines": []
+    },
+    {
+      "path": "analysis/lut_upload_live_20261012_01/verify_cleanup_final.py",
+      "sha256": "6d54a9c12b8bbe55e501331585c8de5568343377578168d3cd8e29601183e1ac",
+      "syntax": "AST parsed; not executed in publication documentation task",
+      "imports_static": [
+        "json",
+        "lut_config",
+        "pathlib",
+        "sys"
+      ],
+      "cli_static": [],
+      "input_conditions": "full cleanup configs and baseline configs; LUT mapping/numeric modules",
+      "expected_output": "cleanup_final_verification.json",
+      "scope_and_effects": "No CLI; original private-input exclusion may limit independent byte recheck",
+      "historical_absolute_path_lines": []
+    }
+  ],
+  "gaps": [
+    {
+      "id": "G01",
+      "stage": "modern_decode_consumer",
+      "status": "missing",
+      "need": "Actual accepted revision0x200/selector3 path,92-byte directory consumer,auth/decode/decompress order and validated output",
+      "blocks": "S1M2 proprietary plaintext and complete reverse"
+    },
+    {
+      "id": "G02",
+      "stage": "payload_coverage",
+      "status": "missing",
+      "need": "Validated plaintext for49flags3 entries, real arch/entry and structural format checks",
+      "blocks": "Executable semantics, call graph and communication reconstruction"
+    },
+    {
+      "id": "G03",
+      "stage": "boot_loading",
+      "status": "missing",
+      "need": "Actual producer placing each image in RAM; bootargs/copy/relocation/decompression evidence tied to exact device/version",
+      "blocks": "Precise rootfs/component physical mappings"
+    },
+    {
+      "id": "G04",
+      "stage": "FunctionFS_runtime",
+      "status": "missing",
+      "need": "Running kernel/config hash and realUSB function binding; proprietary daemon local descriptor flags/IOCTL/AIO and pointer provenance",
+      "blocks": "USBhost arbitrary physical memory consumer claim"
+    },
+    {
+      "id": "G05",
+      "stage": "AIO_claim",
+      "status": "contradicted_for_checked_iter_path",
+      "need": "Checked iter buffer is zero; claimed selected-address experiment needs supplied exact modified source/config/image/logs",
+      "blocks": "Arbitrary-address kfree and successful physical-byte readback claims"
+    },
+    {
+      "id": "G06",
+      "stage": "S5_transfer",
+      "status": "not_independently_reproduced",
+      "need": "Exact3.18 tree and reproducible limited compare; runningS5 kernel evidence",
+      "blocks": "AllF1-F5 absent in device and JTAG-exclusive conclusions"
+    },
+    {
+      "id": "G07",
+      "stage": "QEMU_build",
+      "status": "partial",
+      "need": "Matching vmlinux/debug info; full virtual-driver build wiring; full BusyBox/initramfs construction inputs",
+      "blocks": "From-source exact guest rebuild and full source-level debug"
+    },
+    {
+      "id": "G08",
+      "stage": "QEMU_host_runtime",
+      "status": "excluded_dependency",
+      "need": "Restore precise recorded30-bottle closure; original11.1.2 versions/tags/hashes",
+      "blocks": "Clean-clone run; currentstable fetching is different provenance"
+    },
+    {
+      "id": "G09",
+      "stage": "raw_firmware_and_vendor_binaries",
+      "status": "not_redistributed",
+      "need": "Obtain exact original firmware,legacy plaintext-generating inputs,APK/EXE/dylib and original source packages as recorded",
+      "blocks": "Independent full byte checks; samefilename insufficient"
+    },
+    {
+      "id": "G10",
+      "stage": "S1_V24_source",
+      "status": "provenance_not_verified_in_20261012_run",
+      "need": "Independent source/acquisition provenance for recorded exact input",
+      "blocks": "Stronger source-authority claim; currentbyte comparison remains bounded"
+    },
+    {
+      "id": "G11",
+      "stage": "historical_fixed_paths_and_outputs",
+      "status": "requires_replay_copy",
+      "need": "Prepare isolated copy; map root/external placeholders; restore exactrelative inputs; do not overwrite published history",
+      "blocks": "Direct execution in clonedarchive as-is"
+    },
+    {
+      "id": "G12",
+      "stage": "external_package_layout",
+      "status": "requires_mapping",
+      "need": "Map archivedexternal_review packages back tooriginals layout expected by review scripts,without executing archive scripts",
+      "blocks": "Independent configuration/crypto review script replay"
+    },
+    {
+      "id": "G13",
+      "stage": "LUT_full_originals",
+      "status": "private_input_boundary",
+      "need": "Check finalpublication exclusions; fullprivate config/network captures not assumedpublic; noauthenticationcredentials inrelease",
+      "blocks": "Recomputation of originalprivate hashes and fullconfig comparison"
+    },
+    {
+      "id": "G14",
+      "stage": "recording_claims",
+      "status": "missing_actual_media",
+      "need": "Actual matching recordingfiles and decoded stream properties; originalmode/filter/device state",
+      "blocks": "Hiddenmode recording and fullS5 persistence claims"
+    },
+    {
+      "id": "G15",
+      "stage": "publication_reexecution",
+      "status": "not_run_by_documentation_subtask",
+      "need": "Parentrecords actualpublishing verifiers/smoke tests separately",
+      "blocks": "Claim allhistoric experiments reran inthispublication"
+    },
+    {
+      "id": "G16",
+      "stage": "external_author_experiments",
+      "status": "missing_artifacts",
+      "need": "Newtest_phys and partner modifiedimage/daemon/source,readback/log/status metadata fromclaimed experiment",
+      "blocks": "Independentnewphysicalread/write orrootfs dump verification"
+    }
+  ],
+  "notes": [
+    "Source SHA identifies private prepublication script bytes; public sanitizer may legitimately change textpaths. Release manifest must record public SHA separately.",
+    "Imports/CLI captured statically; list is selected stage-entry inventory, not proof all transitive dependencies are installed or complete.",
+    "Historical actual passes are cited in stage JSON. Artifact existence alone is not successful replay.",
+    "Thirdparty raw firmware/vendor binaries/runtime dependencies and privatecredentials are not assumed included."
+  ]
+}

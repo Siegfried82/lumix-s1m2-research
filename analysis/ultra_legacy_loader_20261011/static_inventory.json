@@ -1,0 +1,1323 @@
+{
+  "warning": "Signatures and strings are candidate data, not confirmed crypto/update call chains. Addresses are file offsets unless stated otherwise.",
+  "signature_lengths": {
+    "aes_sbox": 256,
+    "aes_inverse_sbox": 256,
+    "aes_rcon_bytes": 10,
+    "aes_encrypt_T0_<": 1024,
+    "aes_encrypt_T1_<": 1024,
+    "aes_encrypt_T2_<": 1024,
+    "aes_encrypt_T3_<": 1024,
+    "aes_encrypt_T0_>": 1024,
+    "aes_encrypt_T1_>": 1024,
+    "aes_encrypt_T2_>": 1024,
+    "aes_encrypt_T3_>": 1024,
+    "aes_decrypt_T0_<": 1024,
+    "aes_decrypt_T1_<": 1024,
+    "aes_decrypt_T2_<": 1024,
+    "aes_decrypt_T3_<": 1024,
+    "aes_decrypt_T0_>": 1024,
+    "aes_decrypt_T1_>": 1024,
+    "aes_decrypt_T2_>": 1024,
+    "aes_decrypt_T3_>": 1024,
+    "md5_K64_<": 256,
+    "md5_initial_<": 16,
+    "sha1_initial_<": 20,
+    "sha256_initial_<": 32,
+    "sha256_first4_K_<": 16,
+    "sha1_round_K_<": 16,
+    "md5_K64_>": 256,
+    "md5_initial_>": 16,
+    "sha1_initial_>": 20,
+    "sha256_initial_>": 32,
+    "sha256_first4_K_>": 16,
+    "sha1_round_K_>": 16
+  },
+  "samples": [
+    {
+      "file": "analysis/legacy_corpus_20261011/G3___V12.bin.plaintext",
+      "size": 15599104,
+      "sha256": "b8912ea28230567dc3982aa373f6d0594cc17250802bf46b38b92bb3f60659f7",
+      "header_body_md5": "07a55d1b05011d0b4f92b57d1718b662",
+      "computed_body_md5": "07a55d1b05011d0b4f92b57d1718b662",
+      "body_md5_matches": true,
+      "header_hex": "5550440000020000010100004733000000000000000000000000000020012001040000005010071000000000020000000000000002000000000200000004ee0007a55d1b05011d0b4f92b57d1718b66200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000090a1e8660b028f2c2d04f25bf63ea44a00000000000000000000000000000000",
+      "nested_header_hex": "47330000000000000000000000000000200120010400000050100710000000000002000000020000000400000000ee0000000000000000000000000000000000",
+      "directory_count": 2,
+      "directory_entries": [
+        {
+          "record_offset": 1028,
+          "name": "program",
+          "relative_start": 1024,
+          "size": 15204352,
+          "field_addr": 0,
+          "absolute_start": 1536,
+          "end": 15205888,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1052,
+          "name": "eep",
+          "relative_start": 15205376,
+          "size": 393216,
+          "field_addr": 16384000,
+          "absolute_start": 15205888,
+          "end": 15599104,
+          "in_bounds": true
+        }
+      ],
+      "signatures": {
+        "aes_sbox": [
+          2233964
+        ],
+        "aes_inverse_sbox": [
+          2234220
+        ],
+        "aes_encrypt_T0_>": [
+          2234476
+        ],
+        "aes_encrypt_T1_>": [
+          2235500
+        ],
+        "aes_encrypt_T2_>": [
+          2236524
+        ],
+        "aes_encrypt_T3_>": [
+          2237548
+        ],
+        "aes_decrypt_T0_>": [
+          2238572
+        ],
+        "aes_decrypt_T1_>": [
+          2239596
+        ],
+        "aes_decrypt_T2_>": [
+          2240620
+        ],
+        "aes_decrypt_T3_>": [
+          2241644
+        ]
+      },
+      "single_constants": {
+        "mt_twist_<": [
+          6220996
+        ],
+        "mt_temper_2_>": [
+          5621098,
+          10577548
+        ],
+        "sha1_K0_<": [
+          10830524
+        ],
+        "md5_K0_<": [
+          17197
+        ],
+        "md5_K1_<": [
+          17238
+        ],
+        "md5_K2_<": [
+          17274
+        ],
+        "md5_K3_<": [
+          17323
+        ]
+      },
+      "verified_aes_key_exact_hits": {
+        "G3___V12.bin": [
+          6102488
+        ],
+        "GF2__V11.bin": [],
+        "GF3__V12.bin": [],
+        "GH2__V11.bin": [],
+        "GX1__V11.bin": []
+      },
+      "candidate_strings": [
+        {
+          "offset": 1028,
+          "length": 7,
+          "text": "program"
+        },
+        {
+          "offset": 2388862,
+          "length": 15,
+          "text": "B:\\FIRMWARE.BIN"
+        },
+        {
+          "offset": 2388878,
+          "length": 15,
+          "text": "A:\\FIRMWARE.BIN"
+        },
+        {
+          "offset": 5963996,
+          "length": 36,
+          "text": "#@1:10     : AREA          : UPDATE "
+        },
+        {
+          "offset": 10685513,
+          "length": 7,
+          "text": "program"
+        },
+        {
+          "offset": 12314493,
+          "length": 35,
+          "text": "|uslY\\g]SUPDP\\V[gbYVY[ZVY_ZYhvrjq|~"
+        },
+        {
+          "offset": 13178018,
+          "length": 14,
+          "text": "o_dhbWMB@AESfz"
+        },
+        {
+          "offset": 14487434,
+          "length": 33,
+          "text": "`<2@EXN\\V+(,2?=9T?5AESXFF`knfg[q{"
+        },
+        {
+          "offset": 14718140,
+          "length": 74,
+          "text": "~y{hXed[jq|yrrsYCLGCROFV[IAAESRHB<52<GLRKLcrwucblbWnaQOFBQW]thiqhQ\\QSnynru"
+        },
+        {
+          "offset": 14848461,
+          "length": 34,
+          "text": "aYUONERWUVQUUPDH80?;HO]J^Rlswqmrkj"
+        }
+      ]
+    },
+    {
+      "file": "analysis/legacy_corpus_20261011/GF2__V11.bin.plaintext",
+      "size": 15599104,
+      "sha256": "51f3889063c68e6d42b7295af9a98d374c8ee2484f785ad908101b5bf4f29a8d",
+      "header_body_md5": "1e5bca8e4f1120c1f779d7f3ad450311",
+      "computed_body_md5": "1e5bca8e4f1120c1f779d7f3ad450311",
+      "body_md5_matches": true,
+      "header_hex": "5550440000020000010100004746320000000000000000000000000012011201040000000420080900000000020000000000000002000000000200000004ee001e5bca8e4f1120c1f779d7f3ad45031100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000048723afb120da732126991a8805d78dc00000000000000000000000000000000",
+      "nested_header_hex": "47463200000000000000000000000000120112010400000004200809000000000002000000020000000400000000ee0000000000000000000000000000000000",
+      "directory_count": 2,
+      "directory_entries": [
+        {
+          "record_offset": 1028,
+          "name": "program",
+          "relative_start": 1024,
+          "size": 15204352,
+          "field_addr": 0,
+          "absolute_start": 1536,
+          "end": 15205888,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1052,
+          "name": "eep",
+          "relative_start": 15205376,
+          "size": 393216,
+          "field_addr": 16384000,
+          "absolute_start": 15205888,
+          "end": 15599104,
+          "in_bounds": true
+        }
+      ],
+      "signatures": {
+        "aes_sbox": [
+          2153236
+        ],
+        "aes_inverse_sbox": [
+          2153492
+        ],
+        "aes_encrypt_T0_>": [
+          2153748
+        ],
+        "aes_encrypt_T1_>": [
+          2154772
+        ],
+        "aes_encrypt_T2_>": [
+          2155796
+        ],
+        "aes_encrypt_T3_>": [
+          2156820
+        ],
+        "aes_decrypt_T0_>": [
+          2157844
+        ],
+        "aes_decrypt_T1_>": [
+          2158868
+        ],
+        "aes_decrypt_T2_>": [
+          2159892
+        ],
+        "aes_decrypt_T3_>": [
+          2160916
+        ]
+      },
+      "single_constants": {
+        "mt_twist_<": [
+          5667968
+        ],
+        "mt_temper_2_>": [
+          5191846
+        ],
+        "sha1_K0_<": [
+          10830524
+        ],
+        "md5_K0_<": [
+          17182
+        ],
+        "md5_K1_<": [
+          17223
+        ],
+        "md5_K2_<": [
+          17259
+        ],
+        "md5_K3_<": [
+          17308
+        ]
+      },
+      "verified_aes_key_exact_hits": {
+        "G3___V12.bin": [],
+        "GF2__V11.bin": [
+          5570280
+        ],
+        "GF3__V12.bin": [],
+        "GH2__V11.bin": [],
+        "GX1__V11.bin": []
+      },
+      "candidate_strings": [
+        {
+          "offset": 1028,
+          "length": 7,
+          "text": "program"
+        },
+        {
+          "offset": 2305154,
+          "length": 15,
+          "text": "B:\\FIRMWARE.BIN"
+        },
+        {
+          "offset": 2305170,
+          "length": 15,
+          "text": "A:\\FIRMWARE.BIN"
+        },
+        {
+          "offset": 4010365,
+          "length": 7,
+          "text": "ES@AES@"
+        },
+        {
+          "offset": 5500492,
+          "length": 36,
+          "text": "#@1:10     : AREA          : UPDATE "
+        },
+        {
+          "offset": 10667081,
+          "length": 7,
+          "text": "program"
+        },
+        {
+          "offset": 12314493,
+          "length": 35,
+          "text": "|uslY\\g]SUPDP\\V[gbYVY[ZVY_ZYhvrjq|~"
+        },
+        {
+          "offset": 13178018,
+          "length": 14,
+          "text": "o_dhbWMB@AESfz"
+        },
+        {
+          "offset": 14487434,
+          "length": 33,
+          "text": "`<2@EXN\\V+(,2?=9T?5AESXFF`knfg[q{"
+        },
+        {
+          "offset": 14718140,
+          "length": 74,
+          "text": "~y{hXed[jq|yrrsYCLGCROFV[IAAESRHB<52<GLRKLcrwucblbWnaQOFBQW]thiqhQ\\QSnynru"
+        },
+        {
+          "offset": 14848461,
+          "length": 34,
+          "text": "aYUONERWUVQUUPDH80?;HO]J^Rlswqmrkj"
+        }
+      ]
+    },
+    {
+      "file": "analysis/legacy_corpus_20261011/GF3__V12.bin.plaintext",
+      "size": 15599104,
+      "sha256": "a0ef6af599f7557606b1c9cbe5324d496f84273c09617eb3e6cd875390e66ec0",
+      "header_body_md5": "a3b958bf338888db5ef2beacd399c5ef",
+      "computed_body_md5": "a3b958bf338888db5ef2beacd399c5ef",
+      "body_md5_matches": true,
+      "header_hex": "5550440000020000010100004746330000000000000000000000000020012001040000005010071000000000020000000000000002000000000200000004ee00a3b958bf338888db5ef2beacd399c5ef0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006005ceea93a02c063593ed449ab799d200000000000000000000000000000000",
+      "nested_header_hex": "47463300000000000000000000000000200120010400000050100710000000000002000000020000000400000000ee0000000000000000000000000000000000",
+      "directory_count": 2,
+      "directory_entries": [
+        {
+          "record_offset": 1028,
+          "name": "program",
+          "relative_start": 1024,
+          "size": 15204352,
+          "field_addr": 0,
+          "absolute_start": 1536,
+          "end": 15205888,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1052,
+          "name": "eep",
+          "relative_start": 15205376,
+          "size": 393216,
+          "field_addr": 16384000,
+          "absolute_start": 15205888,
+          "end": 15599104,
+          "in_bounds": true
+        }
+      ],
+      "signatures": {
+        "aes_sbox": [
+          2206328
+        ],
+        "aes_inverse_sbox": [
+          2206584
+        ],
+        "aes_encrypt_T0_>": [
+          2206840
+        ],
+        "aes_encrypt_T1_>": [
+          2207864
+        ],
+        "aes_encrypt_T2_>": [
+          2208888
+        ],
+        "aes_encrypt_T3_>": [
+          2209912
+        ],
+        "aes_decrypt_T0_>": [
+          2210936
+        ],
+        "aes_decrypt_T1_>": [
+          2211960
+        ],
+        "aes_decrypt_T2_>": [
+          2212984
+        ],
+        "aes_decrypt_T3_>": [
+          2214008
+        ]
+      },
+      "single_constants": {
+        "mt_twist_<": [
+          6005968
+        ],
+        "mt_temper_2_<": [
+          2193426,
+          2193474,
+          2193610,
+          2193618,
+          2193634,
+          2193642
+        ],
+        "mt_temper_2_>": [
+          5452906
+        ],
+        "sha1_K0_<": [
+          10830524
+        ],
+        "md5_K0_<": [
+          17699
+        ],
+        "md5_K1_<": [
+          17740
+        ],
+        "md5_K2_<": [
+          17776
+        ],
+        "md5_K3_<": [
+          17825
+        ]
+      },
+      "verified_aes_key_exact_hits": {
+        "G3___V12.bin": [],
+        "GF2__V11.bin": [],
+        "GF3__V12.bin": [
+          5887752
+        ],
+        "GH2__V11.bin": [],
+        "GX1__V11.bin": []
+      },
+      "candidate_strings": [
+        {
+          "offset": 1028,
+          "length": 7,
+          "text": "program"
+        },
+        {
+          "offset": 2362618,
+          "length": 15,
+          "text": "B:\\FIRMWARE.BIN"
+        },
+        {
+          "offset": 2362634,
+          "length": 15,
+          "text": "A:\\FIRMWARE.BIN"
+        },
+        {
+          "offset": 5793992,
+          "length": 36,
+          "text": "#@1:10     : AREA          : UPDATE "
+        },
+        {
+          "offset": 10666541,
+          "length": 7,
+          "text": "program"
+        },
+        {
+          "offset": 12314493,
+          "length": 35,
+          "text": "|uslY\\g]SUPDP\\V[gbYVY[ZVY_ZYhvrjq|~"
+        },
+        {
+          "offset": 13178018,
+          "length": 14,
+          "text": "o_dhbWMB@AESfz"
+        },
+        {
+          "offset": 14487434,
+          "length": 33,
+          "text": "`<2@EXN\\V+(,2?=9T?5AESXFF`knfg[q{"
+        },
+        {
+          "offset": 14718140,
+          "length": 74,
+          "text": "~y{hXed[jq|yrrsYCLGCROFV[IAAESRHB<52<GLRKLcrwucblbWnaQOFBQW]thiqhQ\\QSnynru"
+        },
+        {
+          "offset": 14848461,
+          "length": 34,
+          "text": "aYUONERWUVQUUPDH80?;HO]J^Rlswqmrkj"
+        }
+      ]
+    },
+    {
+      "file": "analysis/legacy_corpus_20261011/GH2__V11.bin.plaintext",
+      "size": 15599104,
+      "sha256": "7d34331dda3d40798084c80b5052dc8a307079facf53f1b7d17e2e39f4a8f36b",
+      "header_body_md5": "d88f4506546ce8e2ab264a7548c3dee0",
+      "computed_body_md5": "d88f4506546ce8e2ab264a7548c3dee0",
+      "body_md5_matches": true,
+      "header_hex": "5550440000020000010100004748320000000000000000000000000011011101040000003519291100000000020000000000000002000000000200000004ee00d88f4506546ce8e2ab264a7548c3dee0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000905ea095470c2977cb5f8dcf7622881c00000000000000000000000000000000",
+      "nested_header_hex": "47483200000000000000000000000000110111010400000035192911000000000002000000020000000400000000ee0000000000000000000000000000000000",
+      "directory_count": 2,
+      "directory_entries": [
+        {
+          "record_offset": 1028,
+          "name": "program",
+          "relative_start": 1024,
+          "size": 15204352,
+          "field_addr": 0,
+          "absolute_start": 1536,
+          "end": 15205888,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1052,
+          "name": "eep",
+          "relative_start": 15205376,
+          "size": 393216,
+          "field_addr": 16384000,
+          "absolute_start": 15205888,
+          "end": 15599104,
+          "in_bounds": true
+        }
+      ],
+      "signatures": {
+        "aes_sbox": [
+          2143624
+        ],
+        "aes_inverse_sbox": [
+          2143880
+        ],
+        "aes_encrypt_T0_>": [
+          2144136
+        ],
+        "aes_encrypt_T1_>": [
+          2145160
+        ],
+        "aes_encrypt_T2_>": [
+          2146184
+        ],
+        "aes_encrypt_T3_>": [
+          2147208
+        ],
+        "aes_decrypt_T0_>": [
+          2148232
+        ],
+        "aes_decrypt_T1_>": [
+          2149256
+        ],
+        "aes_decrypt_T2_>": [
+          2150280
+        ],
+        "aes_decrypt_T3_>": [
+          2151304
+        ]
+      },
+      "single_constants": {
+        "mt_twist_<": [
+          8442012
+        ],
+        "mt_temper_2_>": [
+          8012978
+        ],
+        "sha1_K0_<": [
+          10838716
+        ],
+        "md5_K0_<": [
+          17335
+        ],
+        "md5_K1_<": [
+          17376
+        ],
+        "md5_K2_<": [
+          17412
+        ],
+        "md5_K3_<": [
+          17461
+        ]
+      },
+      "verified_aes_key_exact_hits": {
+        "G3___V12.bin": [],
+        "GF2__V11.bin": [],
+        "GF3__V12.bin": [],
+        "GH2__V11.bin": [
+          8344312
+        ],
+        "GX1__V11.bin": []
+      },
+      "candidate_strings": [
+        {
+          "offset": 1028,
+          "length": 7,
+          "text": "program"
+        },
+        {
+          "offset": 2295498,
+          "length": 15,
+          "text": "B:\\FIRMWARE.BIN"
+        },
+        {
+          "offset": 2295514,
+          "length": 15,
+          "text": "A:\\FIRMWARE.BIN"
+        },
+        {
+          "offset": 8299884,
+          "length": 36,
+          "text": "#@1:10     : AREA          : UPDATE "
+        },
+        {
+          "offset": 10697541,
+          "length": 7,
+          "text": "program"
+        },
+        {
+          "offset": 12314493,
+          "length": 35,
+          "text": "|uslY\\g]SUPDP\\V[gbYVY[ZVY_ZYhvrjq|~"
+        },
+        {
+          "offset": 13178018,
+          "length": 14,
+          "text": "o_dhbWMB@AESfz"
+        },
+        {
+          "offset": 14487434,
+          "length": 33,
+          "text": "`<2@EXN\\V+(,2?=9T?5AESXFF`knfg[q{"
+        },
+        {
+          "offset": 14718140,
+          "length": 74,
+          "text": "~y{hXed[jq|yrrsYCLGCROFV[IAAESRHB<52<GLRKLcrwucblbWnaQOFBQW]thiqhQ\\QSnynru"
+        },
+        {
+          "offset": 14848461,
+          "length": 34,
+          "text": "aYUONERWUVQUUPDH80?;HO]J^Rlswqmrkj"
+        }
+      ]
+    },
+    {
+      "file": "analysis/legacy_corpus_20261011/GH2__V12.bin.plaintext",
+      "size": 15599104,
+      "sha256": "bb54434ababd855b659cab51b8c6931cdba628edf794bf56a3a6143655faf785",
+      "header_body_md5": "35cb77e2ef08df9ef334ff1e496b0b02",
+      "computed_body_md5": "35cb77e2ef08df9ef334ff1e496b0b02",
+      "body_md5_matches": true,
+      "header_hex": "5550440000020000010100004748320000000000000000000000000020012001040000003817230800000000020000000000000002000000000200000004ee0035cb77e2ef08df9ef334ff1e496b0b02000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000eaefe7eee29547706360c431f8452b5000000000000000000000000000000000",
+      "nested_header_hex": "47483200000000000000000000000000200120010400000038172308000000000002000000020000000400000000ee0000000000000000000000000000000000",
+      "directory_count": 2,
+      "directory_entries": [
+        {
+          "record_offset": 1028,
+          "name": "program",
+          "relative_start": 1024,
+          "size": 15204352,
+          "field_addr": 0,
+          "absolute_start": 1536,
+          "end": 15205888,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1052,
+          "name": "eep",
+          "relative_start": 15205376,
+          "size": 393216,
+          "field_addr": 16384000,
+          "absolute_start": 15205888,
+          "end": 15599104,
+          "in_bounds": true
+        }
+      ],
+      "signatures": {
+        "aes_sbox": [
+          2143624
+        ],
+        "aes_inverse_sbox": [
+          2143880
+        ],
+        "aes_encrypt_T0_>": [
+          2144136
+        ],
+        "aes_encrypt_T1_>": [
+          2145160
+        ],
+        "aes_encrypt_T2_>": [
+          2146184
+        ],
+        "aes_encrypt_T3_>": [
+          2147208
+        ],
+        "aes_decrypt_T0_>": [
+          2148232
+        ],
+        "aes_decrypt_T1_>": [
+          2149256
+        ],
+        "aes_decrypt_T2_>": [
+          2150280
+        ],
+        "aes_decrypt_T3_>": [
+          2151304
+        ]
+      },
+      "single_constants": {
+        "mt_twist_<": [
+          8442012
+        ],
+        "mt_temper_2_>": [
+          8012978
+        ],
+        "sha1_K0_<": [
+          10838716
+        ],
+        "md5_K0_<": [
+          17335
+        ],
+        "md5_K1_<": [
+          17376
+        ],
+        "md5_K2_<": [
+          17412
+        ],
+        "md5_K3_<": [
+          17461
+        ]
+      },
+      "verified_aes_key_exact_hits": {
+        "G3___V12.bin": [],
+        "GF2__V11.bin": [],
+        "GF3__V12.bin": [],
+        "GH2__V11.bin": [
+          8344312
+        ],
+        "GX1__V11.bin": []
+      },
+      "candidate_strings": [
+        {
+          "offset": 1028,
+          "length": 7,
+          "text": "program"
+        },
+        {
+          "offset": 2295498,
+          "length": 15,
+          "text": "B:\\FIRMWARE.BIN"
+        },
+        {
+          "offset": 2295514,
+          "length": 15,
+          "text": "A:\\FIRMWARE.BIN"
+        },
+        {
+          "offset": 8299884,
+          "length": 36,
+          "text": "#@1:10     : AREA          : UPDATE "
+        },
+        {
+          "offset": 10697541,
+          "length": 7,
+          "text": "program"
+        },
+        {
+          "offset": 12314493,
+          "length": 35,
+          "text": "|uslY\\g]SUPDP\\V[gbYVY[ZVY_ZYhvrjq|~"
+        },
+        {
+          "offset": 13178018,
+          "length": 14,
+          "text": "o_dhbWMB@AESfz"
+        },
+        {
+          "offset": 14487434,
+          "length": 33,
+          "text": "`<2@EXN\\V+(,2?=9T?5AESXFF`knfg[q{"
+        },
+        {
+          "offset": 14718140,
+          "length": 74,
+          "text": "~y{hXed[jq|yrrsYCLGCROFV[IAAESRHB<52<GLRKLcrwucblbWnaQOFBQW]thiqhQ\\QSnynru"
+        },
+        {
+          "offset": 14848461,
+          "length": 34,
+          "text": "aYUONERWUVQUUPDH80?;HO]J^Rlswqmrkj"
+        }
+      ]
+    },
+    {
+      "file": "analysis/legacy_corpus_20261011/GX1__V11.bin.plaintext",
+      "size": 15599104,
+      "sha256": "ec99c8d15f723e8688afabe39c4e45207e3a16bc90baa5c043c28b412ee937fb",
+      "header_body_md5": "0bef550abc474660ce2d9e962aa0585a",
+      "computed_body_md5": "0bef550abc474660ce2d9e962aa0585a",
+      "body_md5_matches": true,
+      "header_hex": "5550440000020000010100004758310000000000000000000000000010011001040000000117160100000000020000000000000002000000000200000004ee000bef550abc474660ce2d9e962aa0585a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060f66b38bef3c4773acb2053e826befd00000000000000000000000000000000",
+      "nested_header_hex": "47583100000000000000000000000000100110010400000001171601000000000002000000020000000400000000ee0000000000000000000000000000000000",
+      "directory_count": 2,
+      "directory_entries": [
+        {
+          "record_offset": 1028,
+          "name": "program",
+          "relative_start": 1024,
+          "size": 15204352,
+          "field_addr": 0,
+          "absolute_start": 1536,
+          "end": 15205888,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1052,
+          "name": "eep",
+          "relative_start": 15205376,
+          "size": 393216,
+          "field_addr": 16384000,
+          "absolute_start": 15205888,
+          "end": 15599104,
+          "in_bounds": true
+        }
+      ],
+      "signatures": {
+        "aes_sbox": [
+          2287556
+        ],
+        "aes_inverse_sbox": [
+          2287812
+        ],
+        "aes_encrypt_T0_>": [
+          2288068
+        ],
+        "aes_encrypt_T1_>": [
+          2289092
+        ],
+        "aes_encrypt_T2_>": [
+          2290116
+        ],
+        "aes_encrypt_T3_>": [
+          2291140
+        ],
+        "aes_decrypt_T0_>": [
+          2292164
+        ],
+        "aes_decrypt_T1_>": [
+          2293188
+        ],
+        "aes_decrypt_T2_>": [
+          2294212
+        ],
+        "aes_decrypt_T3_>": [
+          2295236
+        ]
+      },
+      "single_constants": {
+        "mt_twist_<": [
+          6651336
+        ],
+        "mt_temper_2_>": [
+          6015838,
+          10478418
+        ],
+        "sha1_K0_<": [
+          10822382,
+          10822558,
+          10897820
+        ],
+        "sha1_K1_<": [
+          10975024
+        ],
+        "md5_K0_<": [
+          17927
+        ],
+        "md5_K1_<": [
+          17968
+        ],
+        "md5_K2_<": [
+          18004
+        ],
+        "md5_K3_<": [
+          18053
+        ]
+      },
+      "verified_aes_key_exact_hits": {
+        "G3___V12.bin": [],
+        "GF2__V11.bin": [],
+        "GF3__V12.bin": [],
+        "GH2__V11.bin": [],
+        "GX1__V11.bin": [
+          6528804
+        ]
+      },
+      "candidate_strings": [
+        {
+          "offset": 1028,
+          "length": 7,
+          "text": "program"
+        },
+        {
+          "offset": 2445106,
+          "length": 15,
+          "text": "B:\\FIRMWARE.BIN"
+        },
+        {
+          "offset": 2445122,
+          "length": 15,
+          "text": "A:\\FIRMWARE.BIN"
+        },
+        {
+          "offset": 6375212,
+          "length": 36,
+          "text": "#@1:10     : AREA          : UPDATE "
+        },
+        {
+          "offset": 10604709,
+          "length": 7,
+          "text": "program"
+        },
+        {
+          "offset": 12314493,
+          "length": 35,
+          "text": "|uslY\\g]SUPDP\\V[gbYVY[ZVY_ZYhvrjq|~"
+        },
+        {
+          "offset": 13178018,
+          "length": 14,
+          "text": "o_dhbWMB@AESfz"
+        },
+        {
+          "offset": 14487434,
+          "length": 33,
+          "text": "`<2@EXN\\V+(,2?=9T?5AESXFF`knfg[q{"
+        },
+        {
+          "offset": 14718140,
+          "length": 74,
+          "text": "~y{hXed[jq|yrrsYCLGCROFV[IAAESRHB<52<GLRKLcrwucblbWnaQOFBQW]thiqhQ\\QSnynru"
+        },
+        {
+          "offset": 14848461,
+          "length": 34,
+          "text": "aYUONERWUVQUUPDH80?;HO]J^Rlswqmrkj"
+        }
+      ]
+    },
+    {
+      "file": "analysis/method2_review_20261011/decoded/TZ10_V12.bin.decoded",
+      "size": 16592384,
+      "sha256": "c4128ef8c4a7f9576a35423e6d806d6a047b17ad649bab93b7362c1e7849c032",
+      "header_body_md5": "7125ec82bbc118824b0a41d9d86a8716",
+      "computed_body_md5": "7125ec82bbc118824b0a41d9d86a8716",
+      "body_md5_matches": true,
+      "header_hex": "555044000002000001010000545a31300000000000000000000000002201220104000000201408090000000002000000000000000100000000020000002cfd007125ec82bbc118824b0a41d9d86a87160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "nested_header_hex": "545a3130000000000000000000000000220122010400000020140809000000000002000000020000000400000028fd0000000000000000000000000000000000",
+      "directory_count": 16,
+      "directory_entries": [
+        {
+          "record_offset": 1028,
+          "name": "boot",
+          "relative_start": 1024,
+          "size": 16384,
+          "field_addr": 0,
+          "absolute_start": 1536,
+          "end": 17920,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1052,
+          "name": "program",
+          "relative_start": 17408,
+          "size": 5603328,
+          "field_addr": 65536,
+          "absolute_start": 17920,
+          "end": 5621248,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1076,
+          "name": "storage",
+          "relative_start": 5620736,
+          "size": 0,
+          "field_addr": 6291456,
+          "absolute_start": 5621248,
+          "end": 5621248,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1100,
+          "name": "eep_ow_a",
+          "relative_start": 5620736,
+          "size": 8192,
+          "field_addr": 6291456,
+          "absolute_start": 5621248,
+          "end": 5629440,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1124,
+          "name": "eep_ow_b",
+          "relative_start": 5628928,
+          "size": 8192,
+          "field_addr": 6307840,
+          "absolute_start": 5629440,
+          "end": 5637632,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1148,
+          "name": "eep_adj",
+          "relative_start": 5637120,
+          "size": 12288,
+          "field_addr": 6324224,
+          "absolute_start": 5637632,
+          "end": 5649920,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1172,
+          "name": "eep_fix",
+          "relative_start": 5649408,
+          "size": 20480,
+          "field_addr": 6336512,
+          "absolute_start": 5649920,
+          "end": 5670400,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1196,
+          "name": "history",
+          "relative_start": 5669888,
+          "size": 65536,
+          "field_addr": 6356992,
+          "absolute_start": 5670400,
+          "end": 5735936,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1220,
+          "name": "opedata",
+          "relative_start": 5735424,
+          "size": 163840,
+          "field_addr": 6422528,
+          "absolute_start": 5735936,
+          "end": 5899776,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1244,
+          "name": "osdover",
+          "relative_start": 5899264,
+          "size": 2359296,
+          "field_addr": 6586368,
+          "absolute_start": 5899776,
+          "end": 8259072,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1268,
+          "name": "osddata",
+          "relative_start": 8258560,
+          "size": 2097152,
+          "field_addr": 8945664,
+          "absolute_start": 8259072,
+          "end": 10356224,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1292,
+          "name": "packfile",
+          "relative_start": 10355712,
+          "size": 5767168,
+          "field_addr": 11157504,
+          "absolute_start": 10356224,
+          "end": 16123392,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1316,
+          "name": "ninsho_fc1",
+          "relative_start": 16122880,
+          "size": 16384,
+          "field_addr": 18563072,
+          "absolute_start": 16123392,
+          "end": 16139776,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1340,
+          "name": "ninsho_fc2",
+          "relative_start": 16139264,
+          "size": 114688,
+          "field_addr": 18579456,
+          "absolute_start": 16139776,
+          "end": 16254464,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1364,
+          "name": "frame_pack",
+          "relative_start": 16253952,
+          "size": 327680,
+          "field_addr": 18694144,
+          "absolute_start": 16254464,
+          "end": 16582144,
+          "in_bounds": true
+        },
+        {
+          "record_offset": 1388,
+          "name": "avchd_info",
+          "relative_start": 16581632,
+          "size": 10240,
+          "field_addr": 19021824,
+          "absolute_start": 16582144,
+          "end": 16592384,
+          "in_bounds": true
+        }
+      ],
+      "signatures": {
+        "sha1_round_K_<": [
+          3404176
+        ]
+      },
+      "single_constants": {
+        "mt_init_multiplier_<": [
+          105924,
+          3166470
+        ],
+        "mt_init_array_1_<": [
+          105769,
+          3166562
+        ],
+        "mt_init_array_2_<": [
+          105841,
+          3166643
+        ],
+        "mt_twist_<": [
+          105890,
+          4248324
+        ],
+        "mt_temper_1_<": [
+          106157,
+          3166944
+        ],
+        "mt_temper_2_<": [
+          106169,
+          3166956
+        ],
+        "mt_temper_2_>": [
+          9470094
+        ],
+        "sha1_K0_<": [
+          3404176,
+          5046424
+        ],
+        "sha1_K1_<": [
+          3404180
+        ],
+        "sha1_K2_<": [
+          3404184
+        ],
+        "sha1_K3_<": [
+          3404188
+        ],
+        "md5_K0_<": [
+          103348
+        ],
+        "md5_K1_<": [
+          103389
+        ],
+        "md5_K2_<": [
+          103425
+        ],
+        "md5_K3_<": [
+          103474
+        ]
+      },
+      "verified_aes_key_exact_hits": {
+        "G3___V12.bin": [],
+        "GF2__V11.bin": [],
+        "GF3__V12.bin": [],
+        "GH2__V11.bin": [],
+        "GX1__V11.bin": []
+      },
+      "candidate_strings": [
+        {
+          "offset": 1052,
+          "length": 7,
+          "text": "program"
+        },
+        {
+          "offset": 1076,
+          "length": 7,
+          "text": "storage"
+        },
+        {
+          "offset": 3693562,
+          "length": 15,
+          "text": "B:\\FIRMWARE.BIN"
+        },
+        {
+          "offset": 3693578,
+          "length": 15,
+          "text": "A:\\FIRMWARE.BIN"
+        },
+        {
+          "offset": 3720905,
+          "length": 36,
+          "text": "#@1:10     : AREA          : UPDATE "
+        },
+        {
+          "offset": 4094374,
+          "length": 6,
+          "text": "1tboot"
+        },
+        {
+          "offset": 4094381,
+          "length": 7,
+          "text": "program"
+        },
+        {
+          "offset": 4094389,
+          "length": 7,
+          "text": "storage"
+        },
+        {
+          "offset": 5065820,
+          "length": 102,
+          "text": "%5lu BEP: SwtUpdate: valid:%d prev:%lu cur:%lu sft:%lu fAcq:%lu dacq:%lu TowDT:%.6lf cb:%.6lf cd:%.6lf"
+        },
+        {
+          "offset": 5066224,
+          "length": 70,
+          "text": "%5lu BEP: ClockDrift not updated: sv%2d cno:%d HPos:%.0lf ClockPos:%lf"
+        },
+        {
+          "offset": 5069648,
+          "length": 43,
+          "text": "%5lu main thread: tracker_reboot failure %d"
+        },
+        {
+          "offset": 5085668,
+          "length": 8,
+          "text": "BootMode"
+        },
+        {
+          "offset": 5100936,
+          "length": 34,
+          "text": "NL: failed NL_KF_Update_NavState()"
+        },
+        {
+          "offset": 5101084,
+          "length": 28,
+          "text": "NL: failed NL_UpdateSmooth()"
+        },
+        {
+          "offset": 5103788,
+          "length": 50,
+          "text": "%5lu SSS: NULL SSP numSSPs:%d index:%d (pp update)"
+        },
+        {
+          "offset": 5109220,
+          "length": 34,
+          "text": "%5lu ATXBG: ML Prepos update %x %d"
+        },
+        {
+          "offset": 5143824,
+          "length": 34,
+          "text": "ARMEX Undefined instruction at %0x"
+        },
+        {
+          "offset": 5143860,
+          "length": 27,
+          "text": "ARMEX Prefetch abort at %0x"
+        },
+        {
+          "offset": 5143888,
+          "length": 23,
+          "text": "ARMEX Data abort at %0x"
+        },
+        {
+          "offset": 5143912,
+          "length": 15,
+          "text": "ARMEX %d at %0x"
+        },
+        {
+          "offset": 5145012,
+          "length": 52,
+          "text": "%5lu ATX: NULL SSP numSSPs:%d index:%d (update meas)"
+        },
+        {
+          "offset": 12470242,
+          "length": 14,
+          "text": "o_dhbWMB@AESfz"
+        },
+        {
+          "offset": 13646794,
+          "length": 33,
+          "text": "`<2@EXN\\V+(,2?=9T?5AESXFF`knfg[q{"
+        },
+        {
+          "offset": 13877500,
+          "length": 74,
+          "text": "~y{hXed[jq|yrrsYCLGCROFV[IAAESRHB<52<GLRKLcrwucblbWnaQOFBQW]thiqhQ\\QSnynru"
+        },
+        {
+          "offset": 14007821,
+          "length": 34,
+          "text": "aYUONERWUVQUUPDH80?;HO]J^Rlswqmrkj"
+        },
+        {
+          "offset": 14991293,
+          "length": 35,
+          "text": "|uslY\\g]SUPDP\\V[gbYVY[ZVY_ZYhvrjq|~"
+        }
+      ]
+    }
+  ]
+}

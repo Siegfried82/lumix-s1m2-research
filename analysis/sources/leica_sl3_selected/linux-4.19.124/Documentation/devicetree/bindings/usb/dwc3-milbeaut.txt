@@ -1,0 +1,72 @@
+SNI Milbeaut DWC3 glue logic
+
+This file documents the parameters for the dwc3-milbeaut driver.
+This driver controls the glue logic and subsystem used to configure 
+the dwc3 core on SNI Milbaut platforms.
+
+Required properties:
+ - compatible	: "socionext,f_usb31dr_m20v"
+                  "socionext,f_usb30dr_fp_m10v"
+ - reg		: USB subsystem register offset (only for "socionext,f_usb31dr_m20v")
+ - reg-names	: should be "reg-subsys" (only for "socionext,f_usb31dr_m20v")
+ - #address-cells, #size-cells : should be '1' if the device has sub-nodes
+   with 'reg' property
+ - clocks	: set clock to access registers
+ - clock-names	: should be "apb_bus"
+ - ranges	: allows valid 1:1 translation between child's address space and
+		  parent's address space
+ - resets : reset controller entries core and hif.
+ - reset-names : should be "reset" and "hif"
+
+Sub-nodes:
+The dwc3 core should be added as subnode to SNI DWC3 glue as shown in the
+example below. The DT binding details of dwc3 can be found in:
+Documentation/devicetree/bindings/usb/dwc3.txt
+
+NB: The dr_mode property described in [1] is NOT optional for this driver, as the default value
+is "otg", which isn't supported by this SoC. Valid dr_mode values for dwc3-sn are either "host"
+or "peripheral".
+
+[1] Documentation/devicetree/bindings/usb/generic.txt
+
+Example 1:
+
+usb30: usb30@19c00000 {
+	compatible = "socionext,f_usb30dr_fp_m10v";
+	#address-cells	= <1>;
+	#size-cells	= <1>;
+	ranges;
+	resets = <&reset 5>, <&reset 6>;
+	reset-names = "reset", "hif";
+	dwc3: dwc3@19c00000 {
+		compatible = "snps,dwc3";
+		reg = <0x19c00000 0x100000>;
+		interrupts = <0 264 0x4>;
+		clocks = <&uclk40xi>, <&dummy_clk>, <&dummy_clk>;
+		clock-names = "ref", "bus_early", "suspend";
+		snps,has-lpm-erratum = <1>;
+		dr_mode = "peripheral";	/* or host */
+	};
+};
+
+Example 2:
+
+usb31: usb31@19880000 {
+	compatible = "socionext,f_usb31dr_m20v";
+	reg = <0x1ba60000 0x20000>;
+	reg-names = "reg-subsys";
+	#address-cells	= <1>;
+	#size-cells	= <1>;
+	ranges;
+	resets = <&rst M20V_USB_RESET>, <&rst M20V_USB_HIF>;
+	reset-names = "reset", "hif";
+	dwc3: dwc3@19c00000 {
+		compatible = "snps,dwc3";
+		reg = <0x19880000 0x10000>;
+		interrupts = <0 185 0x4>;
+		clocks = <&uclk40xi>, <&clk M20V_ACLK_USB_ID>, <&uclk48xi_div2>;
+		clock-names = "ref", "bus_early", "suspend";
+		snps,has-lpm-erratum = <1>;
+		dr_mode = "peripheral";	/* or host */
+	};
+};

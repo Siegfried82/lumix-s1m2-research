@@ -1,0 +1,64 @@
+
+<LOCAL_WORKSPACE>/analysis/sources/tether_windows_2_12/Lmxptpif.dll:	file format coff-x86-64
+
+Disassembly of section .text:
+
+000000018001a7a0 <LMX_func_api_Mnt_GetInfo_Get_UsbMode>:
+18001a7a0: 48 89 5c 24 20              	movq	%rbx, 0x20(%rsp)
+18001a7a5: 55                          	pushq	%rbp
+18001a7a6: 56                          	pushq	%rsi
+18001a7a7: 57                          	pushq	%rdi
+18001a7a8: 48 81 ec 60 08 00 00        	subq	$0x860, %rsp            # imm = 0x860
+18001a7af: 48 8b 05 ba ea 23 00        	movq	0x23eaba(%rip), %rax    # 0x180259270
+18001a7b6: 48 33 c4                    	xorq	%rsp, %rax
+18001a7b9: 48 89 84 24 50 08 00 00     	movq	%rax, 0x850(%rsp)
+18001a7c1: 33 ed                       	xorl	%ebp, %ebp
+18001a7c3: 49 8b d8                    	movq	%r8, %rbx
+18001a7c6: 48 8b f2                    	movq	%rdx, %rsi
+18001a7c9: 48 8b f9                    	movq	%rcx, %rdi
+18001a7cc: 4d 85 c0                    	testq	%r8, %r8
+18001a7cf: 74 03                       	je	0x18001a7d4 <LMX_func_api_Mnt_GetInfo_Get_UsbMode+0x34>
+18001a7d1: 41 89 28                    	movl	%ebp, (%r8)
+18001a7d4: 33 d2                       	xorl	%edx, %edx
+18001a7d6: 89 2d 28 3f 24 00           	movl	%ebp, 0x243f28(%rip)    # 0x18025e704
+18001a7dc: 41 b8 06 08 00 00           	movl	$0x806, %r8d            # imm = 0x806
+18001a7e2: 89 6c 24 30                 	movl	%ebp, 0x30(%rsp)
+18001a7e6: 48 8d 4c 24 46              	leaq	0x46(%rsp), %rcx
+18001a7eb: 89 6c 24 34                 	movl	%ebp, 0x34(%rsp)
+18001a7ef: e8 16 1b 18 00              	callq	0x18019c30a <LMX_func_api_ptpip_UpdateCer+0x14e86a>
+18001a7f4: 48 85 ff                    	testq	%rdi, %rdi
+18001a7f7: 75 19                       	jne	0x18001a812 <LMX_func_api_Mnt_GetInfo_Get_UsbMode+0x72>
+18001a7f9: 48 85 db                    	testq	%rbx, %rbx
+18001a7fc: 74 06                       	je	0x18001a804 <LMX_func_api_Mnt_GetInfo_Get_UsbMode+0x64>
+18001a7fe: c7 03 00 00 01 00           	movl	$0x10000, (%rbx)        # imm = 0x10000
+18001a804: c7 05 f6 3e 24 00 00 00 01 00       	movl	$0x10000, 0x243ef6(%rip) # imm = 0x10000
+                                                                        # 0x18025e704
+18001a80e: 32 c0                       	xorb	%al, %al
+18001a810: eb 35                       	jmp	0x18001a847 <LMX_func_api_Mnt_GetInfo_Get_UsbMode+0xa7>
+18001a812: 48 8d 44 24 34              	leaq	0x34(%rsp), %rax
+18001a817: 48 89 74 24 28              	movq	%rsi, 0x28(%rsp)
+18001a81c: 4c 8d 44 24 30              	leaq	0x30(%rsp), %r8
+18001a821: 48 89 44 24 20              	movq	%rax, 0x20(%rsp)
+18001a826: 48 8d 54 24 40              	leaq	0x40(%rsp), %rdx
+18001a82b: c7 44 24 40 02 00 03 80     	movl	$0x80030002, 0x40(%rsp) # imm = 0x80030002
+18001a833: 66 89 6c 24 44              	movw	%bp, 0x44(%rsp)
+18001a838: e8 33 00 00 00              	callq	0x18001a870 <LMX_func_api_Mnt_GetInfo_Get_UsbMode+0xd0>
+18001a83d: 84 c0                       	testb	%al, %al
+18001a83f: 74 06                       	je	0x18001a847 <LMX_func_api_Mnt_GetInfo_Get_UsbMode+0xa7>
+18001a841: 8b 4c 24 30                 	movl	0x30(%rsp), %ecx
+18001a845: 89 0f                       	movl	%ecx, (%rdi)
+18001a847: 48 8b 8c 24 50 08 00 00     	movq	0x850(%rsp), %rcx
+18001a84f: 48 33 cc                    	xorq	%rsp, %rcx
+18001a852: e8 a9 09 18 00              	callq	0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>
+18001a857: 48 8b 9c 24 98 08 00 00     	movq	0x898(%rsp), %rbx
+18001a85f: 48 81 c4 60 08 00 00        	addq	$0x860, %rsp            # imm = 0x860
+18001a866: 5f                          	popq	%rdi
+18001a867: 5e                          	popq	%rsi
+18001a868: 5d                          	popq	%rbp
+18001a869: c3                          	retq
+18001a86a: cc                          	int3
+18001a86b: cc                          	int3
+18001a86c: cc                          	int3
+18001a86d: cc                          	int3
+18001a86e: cc                          	int3
+18001a86f: cc                          	int3

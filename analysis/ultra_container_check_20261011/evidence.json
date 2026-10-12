@@ -1,0 +1,179 @@
+[
+  {
+    "file": "S1m2_V14.bin",
+    "sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+    "identifier": "MC8243",
+    "crc32_stored": "0x5d6f7ff7",
+    "crc32_computed_over_raw_inner": "0x5d6f7ff7",
+    "entries": [
+      {
+        "index": 8,
+        "name": "postboot2_r",
+        "offset": 70785536,
+        "size": 131072,
+        "flag": 3,
+        "uniform_candidate_byte": 255,
+        "block_count": 8192,
+        "unique_16byte_blocks": 8192,
+        "max_block_multiplicity": 1,
+        "ECB_uniform_model_all_blocks_equal": false,
+        "blocks_in_sample_equal_at_periods": {
+          "512": 0,
+          "2048": 0,
+          "4096": 0,
+          "65536": 0
+        }
+      },
+      {
+        "index": 10,
+        "name": "postboot4_r",
+        "offset": 79174144,
+        "size": 131072,
+        "flag": 3,
+        "uniform_candidate_byte": 255,
+        "block_count": 8192,
+        "unique_16byte_blocks": 8192,
+        "max_block_multiplicity": 1,
+        "ECB_uniform_model_all_blocks_equal": false,
+        "blocks_in_sample_equal_at_periods": {
+          "512": 0,
+          "2048": 0,
+          "4096": 0,
+          "65536": 0
+        }
+      }
+    ]
+  },
+  {
+    "file": "analysis/sources/S1m2_V13.bin",
+    "sha256": "cc512f22374005ec99cbe458809b996f3d9ee441b2a8034330708463739c9c66",
+    "identifier": "MC8243",
+    "crc32_stored": "0xb1e1c7d0",
+    "crc32_computed_over_raw_inner": "0xb1e1c7d0",
+    "entries": [
+      {
+        "index": 8,
+        "name": "postboot2_r",
+        "offset": 70785536,
+        "size": 131072,
+        "flag": 3,
+        "uniform_candidate_byte": 255,
+        "block_count": 8192,
+        "unique_16byte_blocks": 8192,
+        "max_block_multiplicity": 1,
+        "ECB_uniform_model_all_blocks_equal": false,
+        "blocks_in_sample_equal_at_periods": {
+          "512": 0,
+          "2048": 0,
+          "4096": 0,
+          "65536": 0
+        }
+      },
+      {
+        "index": 10,
+        "name": "postboot4_r",
+        "offset": 79174144,
+        "size": 131072,
+        "flag": 3,
+        "uniform_candidate_byte": 255,
+        "block_count": 8192,
+        "unique_16byte_blocks": 8192,
+        "max_block_multiplicity": 1,
+        "ECB_uniform_model_all_blocks_equal": false,
+        "blocks_in_sample_equal_at_periods": {
+          "512": 0,
+          "2048": 0,
+          "4096": 0,
+          "65536": 0
+        }
+      }
+    ]
+  },
+  {
+    "file": "analysis/transition_corpus_20261011/GH3__V12.bin",
+    "sha256": "74bbf6129350a636bcfbf3319ade22fa6860f709570ae6365ba19064ad6488f4",
+    "identifier": "GH3",
+    "crc32_stored": "0x1094710e",
+    "crc32_computed_over_raw_inner": "0x1094710e",
+    "entries": []
+  },
+  {
+    "file": "analysis/transition_corpus_20261011/GH4__V27.bin",
+    "sha256": "e75fb8237ff2de4d1e8d970de8eb8e563e9756939b3320849f1c9017f4d956c0",
+    "identifier": "GH4",
+    "crc32_stored": "0x676c01be",
+    "crc32_computed_over_raw_inner": "0x676c01be",
+    "entries": []
+  },
+  {
+    "file": "analysis/transition_corpus_20261011/GH5__V28.bin",
+    "sha256": "1c7e7538aea0a0009f17be56374b92ab1f77a29d271446ddd771bd5b14bc4442",
+    "identifier": "MC561",
+    "crc32_stored": "0xe0b542ed",
+    "crc32_computed_over_raw_inner": "0xe0b542ed",
+    "entries": [
+      {
+        "index": 31,
+        "name": "apu0_code_e",
+        "offset": 57965056,
+        "size": 65536,
+        "flag": 3,
+        "uniform_candidate_byte": 255,
+        "block_count": 4096,
+        "unique_16byte_blocks": 4096,
+        "max_block_multiplicity": 1,
+        "ECB_uniform_model_all_blocks_equal": false,
+        "blocks_in_sample_equal_at_periods": {
+          "512": 0,
+          "2048": 0,
+          "4096": 0
+        }
+      },
+      {
+        "index": 32,
+        "name": "ipu_data",
+        "offset": 58030592,
+        "size": 262144,
+        "flag": 3,
+        "uniform_candidate_byte": 0,
+        "block_count": 16384,
+        "unique_16byte_blocks": 16384,
+        "max_block_multiplicity": 1,
+        "ECB_uniform_model_all_blocks_equal": false,
+        "blocks_in_sample_equal_at_periods": {
+          "512": 0,
+          "2048": 0,
+          "4096": 0,
+          "65536": 0
+        }
+      }
+    ]
+  },
+  {
+    "file": "analysis/transition_corpus_20261011/S5___V28.bin",
+    "sha256": "44944f9bd0fc72b2d612f1acb714f735ca70cea58c2265ac60ec7fca08131939",
+    "identifier": "MC801",
+    "crc32_stored": "0x6a0b11c8",
+    "crc32_computed_over_raw_inner": "0x6a0b11c8",
+    "entries": [
+      {
+        "index": 33,
+        "name": "ipu_data",
+        "offset": 75492864,
+        "size": 262144,
+        "flag": 3,
+        "uniform_candidate_byte": 0,
+        "block_count": 16384,
+        "unique_16byte_blocks": 16384,
+        "max_block_multiplicity": 1,
+        "ECB_uniform_model_all_blocks_equal": false,
+        "blocks_in_sample_equal_at_periods": {
+          "512": 0,
+          "2048": 0,
+          "4096": 0,
+          "65536": 0
+        }
+      }
+    ]
+  }
+]

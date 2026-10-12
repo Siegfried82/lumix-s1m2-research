@@ -17,7 +17,7 @@ def main():
             checked+=1
     if errors:
         raise SystemExit('Archive mismatch: '+', '.join(errors))
-    print(f'PASS: {checked} original experiment files match public SHA-256')
+    print(f'PASS: {checked} archived files match public SHA-256')
     tests=ROOT/'s1m2_firmware_project/tests'
     for name in ['test_dump_parser.py','test_ptp_wire_parser.py']:
         subprocess.run([sys.executable,str(tests/name)],cwd=ROOT,check=True)

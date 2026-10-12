@@ -1,0 +1,81 @@
+
+<LOCAL_WORKSPACE>/analysis/sources/tether_windows_2_12/Lmxptpif.dll:	file format coff-x86-64
+
+Disassembly of section .text:
+
+000000018001a690 <LMX_func_api_Mnt_GetInfo_Get_Version>:
+18001a690: 40 53                       	pushq	%rbx
+18001a692: 55                          	pushq	%rbp
+18001a693: 56                          	pushq	%rsi
+18001a694: 57                          	pushq	%rdi
+18001a695: 41 56                       	pushq	%r14
+18001a697: 41 57                       	pushq	%r15
+18001a699: 48 81 ec 68 08 00 00        	subq	$0x868, %rsp            # imm = 0x868
+18001a6a0: 48 8b 05 c9 eb 23 00        	movq	0x23ebc9(%rip), %rax    # 0x180259270
+18001a6a7: 48 33 c4                    	xorq	%rsp, %rax
+18001a6aa: 48 89 84 24 50 08 00 00     	movq	%rax, 0x850(%rsp)
+18001a6b2: 45 33 ff                    	xorl	%r15d, %r15d
+18001a6b5: 49 8b d9                    	movq	%r9, %rbx
+18001a6b8: 49 8b e8                    	movq	%r8, %rbp
+18001a6bb: 48 8b f2                    	movq	%rdx, %rsi
+18001a6be: 4c 8b f1                    	movq	%rcx, %r14
+18001a6c1: 4d 85 c9                    	testq	%r9, %r9
+18001a6c4: 74 03                       	je	0x18001a6c9 <LMX_func_api_Mnt_GetInfo_Get_Version+0x39>
+18001a6c6: 45 89 39                    	movl	%r15d, (%r9)
+18001a6c9: 33 d2                       	xorl	%edx, %edx
+18001a6cb: 44 89 3d 32 40 24 00        	movl	%r15d, 0x244032(%rip)   # 0x18025e704
+18001a6d2: 41 b8 06 08 00 00           	movl	$0x806, %r8d            # imm = 0x806
+18001a6d8: 44 89 7c 24 30              	movl	%r15d, 0x30(%rsp)
+18001a6dd: 48 8d 4c 24 46              	leaq	0x46(%rsp), %rcx
+18001a6e2: 44 89 7c 24 34              	movl	%r15d, 0x34(%rsp)
+18001a6e7: 40 32 ff                    	xorb	%dil, %dil
+18001a6ea: e8 1b 1c 18 00              	callq	0x18019c30a <LMX_func_api_ptpip_UpdateCer+0x14e86a>
+18001a6ef: 48 8d 0d da a1 20 00        	leaq	0x20a1da(%rip), %rcx    # 0x1802248d0
+18001a6f6: e8 e5 c1 01 00              	callq	0x1800368e0 <LMX_func_api_WB_Ctrl_WBSET+0x160>
+18001a6fb: 4d 85 f6                    	testq	%r14, %r14
+18001a6fe: 74 47                       	je	0x18001a747 <LMX_func_api_Mnt_GetInfo_Get_Version+0xb7>
+18001a700: 48 85 f6                    	testq	%rsi, %rsi
+18001a703: 74 42                       	je	0x18001a747 <LMX_func_api_Mnt_GetInfo_Get_Version+0xb7>
+18001a705: 48 8d 44 24 34              	leaq	0x34(%rsp), %rax
+18001a70a: 48 89 6c 24 28              	movq	%rbp, 0x28(%rsp)
+18001a70f: 4c 8d 44 24 30              	leaq	0x30(%rsp), %r8
+18001a714: 48 89 44 24 20              	movq	%rax, 0x20(%rsp)
+18001a719: 48 8d 54 24 40              	leaq	0x40(%rsp), %rdx
+18001a71e: 41 c7 06 01 00 02 00        	movl	$0x20001, (%r14)        # imm = 0x20001
+18001a725: c7 44 24 40 01 00 03 80     	movl	$0x80030001, 0x40(%rsp) # imm = 0x80030001
+18001a72d: 66 44 89 7c 24 44           	movw	%r15w, 0x44(%rsp)
+18001a733: e8 38 01 00 00              	callq	0x18001a870 <LMX_func_api_Mnt_GetInfo_Get_UsbMode+0xd0>
+18001a738: 0f b6 f8                    	movzbl	%al, %edi
+18001a73b: 84 c0                       	testb	%al, %al
+18001a73d: 74 1d                       	je	0x18001a75c <LMX_func_api_Mnt_GetInfo_Get_Version+0xcc>
+18001a73f: 8b 4c 24 30                 	movl	0x30(%rsp), %ecx
+18001a743: 89 0e                       	movl	%ecx, (%rsi)
+18001a745: eb 15                       	jmp	0x18001a75c <LMX_func_api_Mnt_GetInfo_Get_Version+0xcc>
+18001a747: 48 85 db                    	testq	%rbx, %rbx
+18001a74a: 74 06                       	je	0x18001a752 <LMX_func_api_Mnt_GetInfo_Get_Version+0xc2>
+18001a74c: c7 03 00 00 01 00           	movl	$0x10000, (%rbx)        # imm = 0x10000
+18001a752: c7 05 a8 3f 24 00 00 00 01 00       	movl	$0x10000, 0x243fa8(%rip) # imm = 0x10000
+                                                                        # 0x18025e704
+18001a75c: 40 84 ff                    	testb	%dil, %dil
+18001a75f: 48 8d 05 ca a1 20 00        	leaq	0x20a1ca(%rip), %rax    # 0x180224930
+18001a766: 48 8d 0d 93 a1 20 00        	leaq	0x20a193(%rip), %rcx    # 0x180224900
+18001a76d: 48 0f 44 c8                 	cmoveq	%rax, %rcx
+18001a771: e8 6a c1 01 00              	callq	0x1800368e0 <LMX_func_api_WB_Ctrl_WBSET+0x160>
+18001a776: 40 0f b6 c7                 	movzbl	%dil, %eax
+18001a77a: 48 8b 8c 24 50 08 00 00     	movq	0x850(%rsp), %rcx
+18001a782: 48 33 cc                    	xorq	%rsp, %rcx
+18001a785: e8 76 0a 18 00              	callq	0x18019b200 <LMX_func_api_ptpip_UpdateCer+0x14d760>
+18001a78a: 48 81 c4 68 08 00 00        	addq	$0x868, %rsp            # imm = 0x868
+18001a791: 41 5f                       	popq	%r15
+18001a793: 41 5e                       	popq	%r14
+18001a795: 5f                          	popq	%rdi
+18001a796: 5e                          	popq	%rsi
+18001a797: 5d                          	popq	%rbp
+18001a798: 5b                          	popq	%rbx
+18001a799: c3                          	retq
+18001a79a: cc                          	int3
+18001a79b: cc                          	int3
+18001a79c: cc                          	int3
+18001a79d: cc                          	int3
+18001a79e: cc                          	int3
+18001a79f: cc                          	int3

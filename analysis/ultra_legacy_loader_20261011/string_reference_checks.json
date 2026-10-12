@@ -1,0 +1,444 @@
+[
+  {
+    "file": "analysis/legacy_corpus_20261011/G3___V12.bin.plaintext",
+    "mapping_delta": 1073740288,
+    "references": [
+      {
+        "pattern": "B:\\FIRMWARE.BIN",
+        "string_offset": 2388862,
+        "candidate_virtual_address": 1076129150,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "A:\\FIRMWARE.BIN",
+        "string_offset": 2388878,
+        "candidate_virtual_address": 1076129166,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "UPD\u0000",
+        "string_offset": 0,
+        "candidate_virtual_address": 1073740288,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "program\u0000",
+        "string_offset": 1028,
+        "candidate_virtual_address": 1073741316,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "program\u0000",
+        "string_offset": 10685513,
+        "candidate_virtual_address": 1084425801,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "eep\u0000",
+        "string_offset": 1052,
+        "candidate_virtual_address": 1073741340,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "eep\u0000",
+        "string_offset": 10685504,
+        "candidate_virtual_address": 1084425792,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "boot\u0000",
+        "string_offset": 10685508,
+        "candidate_virtual_address": 1084425796,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "#@1:10     : AREA          : UPDATE ",
+        "string_offset": 5963996,
+        "candidate_virtual_address": 1079704284,
+        "direct_le32_refs": [
+          2051556
+        ]
+      }
+    ]
+  },
+  {
+    "file": "analysis/legacy_corpus_20261011/GF2__V11.bin.plaintext",
+    "mapping_delta": 1073740288,
+    "references": [
+      {
+        "pattern": "B:\\FIRMWARE.BIN",
+        "string_offset": 2305154,
+        "candidate_virtual_address": 1076045442,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "A:\\FIRMWARE.BIN",
+        "string_offset": 2305170,
+        "candidate_virtual_address": 1076045458,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "UPD\u0000",
+        "string_offset": 0,
+        "candidate_virtual_address": 1073740288,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "program\u0000",
+        "string_offset": 1028,
+        "candidate_virtual_address": 1073741316,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "program\u0000",
+        "string_offset": 10667081,
+        "candidate_virtual_address": 1084407369,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "eep\u0000",
+        "string_offset": 1052,
+        "candidate_virtual_address": 1073741340,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "eep\u0000",
+        "string_offset": 10667072,
+        "candidate_virtual_address": 1084407360,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "boot\u0000",
+        "string_offset": 10667076,
+        "candidate_virtual_address": 1084407364,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "#@1:10     : AREA          : UPDATE ",
+        "string_offset": 5500492,
+        "candidate_virtual_address": 1079240780,
+        "direct_le32_refs": [
+          1963858
+        ]
+      }
+    ]
+  },
+  {
+    "file": "analysis/legacy_corpus_20261011/GF3__V12.bin.plaintext",
+    "mapping_delta": 1073740288,
+    "references": [
+      {
+        "pattern": "B:\\FIRMWARE.BIN",
+        "string_offset": 2362618,
+        "candidate_virtual_address": 1076102906,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "A:\\FIRMWARE.BIN",
+        "string_offset": 2362634,
+        "candidate_virtual_address": 1076102922,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "UPD\u0000",
+        "string_offset": 0,
+        "candidate_virtual_address": 1073740288,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "program\u0000",
+        "string_offset": 1028,
+        "candidate_virtual_address": 1073741316,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "program\u0000",
+        "string_offset": 10666541,
+        "candidate_virtual_address": 1084406829,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "eep\u0000",
+        "string_offset": 1052,
+        "candidate_virtual_address": 1073741340,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "eep\u0000",
+        "string_offset": 10666532,
+        "candidate_virtual_address": 1084406820,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "boot\u0000",
+        "string_offset": 10666536,
+        "candidate_virtual_address": 1084406824,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "#@1:10     : AREA          : UPDATE ",
+        "string_offset": 5793992,
+        "candidate_virtual_address": 1079534280,
+        "direct_le32_refs": [
+          2018364
+        ]
+      }
+    ]
+  },
+  {
+    "file": "analysis/legacy_corpus_20261011/GH2__V11.bin.plaintext",
+    "mapping_delta": 1073740288,
+    "references": [
+      {
+        "pattern": "B:\\FIRMWARE.BIN",
+        "string_offset": 2295498,
+        "candidate_virtual_address": 1076035786,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "A:\\FIRMWARE.BIN",
+        "string_offset": 2295514,
+        "candidate_virtual_address": 1076035802,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "UPD\u0000",
+        "string_offset": 0,
+        "candidate_virtual_address": 1073740288,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "program\u0000",
+        "string_offset": 1028,
+        "candidate_virtual_address": 1073741316,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "program\u0000",
+        "string_offset": 10697541,
+        "candidate_virtual_address": 1084437829,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "eep\u0000",
+        "string_offset": 1052,
+        "candidate_virtual_address": 1073741340,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "eep\u0000",
+        "string_offset": 10697532,
+        "candidate_virtual_address": 1084437820,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "boot\u0000",
+        "string_offset": 10697536,
+        "candidate_virtual_address": 1084437824,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "#@1:10     : AREA          : UPDATE ",
+        "string_offset": 8299884,
+        "candidate_virtual_address": 1082040172,
+        "direct_le32_refs": [
+          1965519
+        ]
+      }
+    ]
+  },
+  {
+    "file": "analysis/legacy_corpus_20261011/GH2__V12.bin.plaintext",
+    "mapping_delta": 1073740288,
+    "references": [
+      {
+        "pattern": "B:\\FIRMWARE.BIN",
+        "string_offset": 2295498,
+        "candidate_virtual_address": 1076035786,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "A:\\FIRMWARE.BIN",
+        "string_offset": 2295514,
+        "candidate_virtual_address": 1076035802,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "UPD\u0000",
+        "string_offset": 0,
+        "candidate_virtual_address": 1073740288,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "program\u0000",
+        "string_offset": 1028,
+        "candidate_virtual_address": 1073741316,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "program\u0000",
+        "string_offset": 10697541,
+        "candidate_virtual_address": 1084437829,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "eep\u0000",
+        "string_offset": 1052,
+        "candidate_virtual_address": 1073741340,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "eep\u0000",
+        "string_offset": 10697532,
+        "candidate_virtual_address": 1084437820,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "boot\u0000",
+        "string_offset": 10697536,
+        "candidate_virtual_address": 1084437824,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "#@1:10     : AREA          : UPDATE ",
+        "string_offset": 8299884,
+        "candidate_virtual_address": 1082040172,
+        "direct_le32_refs": [
+          1965519
+        ]
+      }
+    ]
+  },
+  {
+    "file": "analysis/legacy_corpus_20261011/GX1__V11.bin.plaintext",
+    "mapping_delta": 1073740288,
+    "references": [
+      {
+        "pattern": "B:\\FIRMWARE.BIN",
+        "string_offset": 2445106,
+        "candidate_virtual_address": 1076185394,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "A:\\FIRMWARE.BIN",
+        "string_offset": 2445122,
+        "candidate_virtual_address": 1076185410,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "UPD\u0000",
+        "string_offset": 0,
+        "candidate_virtual_address": 1073740288,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "program\u0000",
+        "string_offset": 1028,
+        "candidate_virtual_address": 1073741316,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "program\u0000",
+        "string_offset": 10604709,
+        "candidate_virtual_address": 1084344997,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "eep\u0000",
+        "string_offset": 1052,
+        "candidate_virtual_address": 1073741340,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "eep\u0000",
+        "string_offset": 10604700,
+        "candidate_virtual_address": 1084344988,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "boot\u0000",
+        "string_offset": 10604704,
+        "candidate_virtual_address": 1084344992,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "#@1:10     : AREA          : UPDATE ",
+        "string_offset": 6375212,
+        "candidate_virtual_address": 1080115500,
+        "direct_le32_refs": [
+          2095901
+        ]
+      }
+    ]
+  },
+  {
+    "file": "analysis/method2_review_20261011/decoded/TZ10_V12.bin.decoded",
+    "mapping_delta": 2005383680,
+    "references": [
+      {
+        "pattern": "B:\\FIRMWARE.BIN",
+        "string_offset": 3693562,
+        "candidate_virtual_address": 2009077242,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "A:\\FIRMWARE.BIN",
+        "string_offset": 3693578,
+        "candidate_virtual_address": 2009077258,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "UPD\u0000",
+        "string_offset": 0,
+        "candidate_virtual_address": 2005383680,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "UPD\u0000",
+        "string_offset": 4094456,
+        "candidate_virtual_address": 2009478136,
+        "direct_le32_refs": [
+          3214418
+        ]
+      },
+      {
+        "pattern": "program\u0000",
+        "string_offset": 1052,
+        "candidate_virtual_address": 2005384732,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "program\u0000",
+        "string_offset": 4094381,
+        "candidate_virtual_address": 2009478061,
+        "direct_le32_refs": [
+          3212880,
+          3213275
+        ]
+      },
+      {
+        "pattern": "boot\u0000",
+        "string_offset": 1028,
+        "candidate_virtual_address": 2005384708,
+        "direct_le32_refs": []
+      },
+      {
+        "pattern": "boot\u0000",
+        "string_offset": 4094376,
+        "candidate_virtual_address": 2009478056,
+        "direct_le32_refs": [
+          3212832,
+          3213254
+        ]
+      },
+      {
+        "pattern": "#@1:10     : AREA          : UPDATE ",
+        "string_offset": 3720905,
+        "candidate_virtual_address": 2009104585,
+        "direct_le32_refs": [
+          2004661
+        ]
+      }
+    ]
+  }
+]

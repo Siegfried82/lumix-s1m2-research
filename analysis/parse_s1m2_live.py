@@ -1,10 +1,9 @@
-from pathlib import Path
 import json
 import sys
 from inspect_lumix_settings import parse_lumix_settings
 
 def main():
-    filepath = str(Path(__file__).resolve().parents[1] / 'analysis/S1M2_LIVE_EXTRACTED.DAT')
+    filepath = "<LOCAL_WORKSPACE>/analysis/S1M2_LIVE_EXTRACTED.DAT"
     print(f"[*] Parsing {filepath}...")
     res = parse_lumix_settings(filepath)
     
@@ -16,7 +15,7 @@ def main():
     print(f"Coverage ratio: {res.get('coverage_ratio')}")
     
     # Save parsed records catalog
-    out_json = str(Path(__file__).resolve().parents[1] / 'analysis/s1m2_live_records_catalog.json')
+    out_json = "<LOCAL_WORKSPACE>/analysis/s1m2_live_records_catalog.json"
     with open(out_json, "w", encoding="utf-8") as f:
         json.dump(records, f, indent=2)
     print(f"[+] Saved records catalog to {out_json}")

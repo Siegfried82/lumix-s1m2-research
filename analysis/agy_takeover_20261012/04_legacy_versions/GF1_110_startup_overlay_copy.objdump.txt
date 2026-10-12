@@ -1,0 +1,46 @@
+
+<LOCAL_WORKSPACE>/analysis/method0_review_20261011/decoded/GF1__110.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+400010e4 <.data+0x10e4>:
+400010e4:	fc dd 00 00 	mov	1079050240,a1
+400010e8:	51 40 
+400010ea:	fc cd 00 00 	mov	2076180480,d1
+400010ee:	c0 7b 
+400010f0:	fc c1 00 00 	add	-1946157056,d1
+400010f4:	00 8c 
+400010f6:	fc c1 00 00 	add	-1275068416,d1
+400010fa:	00 b4 
+400010fc:	f1 e6       	mov	d1,a2
+400010fe:	98          	mov	a2,a0
+400010ff:	db          	setlb	
+40001100:	71          	mov	(a1),d0
+40001101:	51          	inc4	a1
+40001102:	60          	mov	d0,(a0)
+40001103:	71          	mov	(a1),d0
+40001104:	50          	inc4	a0
+40001105:	60          	mov	d0,(a0)
+40001106:	51          	inc4	a1
+40001107:	71          	mov	(a1),d0
+40001108:	50          	inc4	a0
+40001109:	60          	mov	d0,(a0)
+4000110a:	51          	inc4	a1
+4000110b:	71          	mov	(a1),d0
+4000110c:	50          	inc4	a0
+4000110d:	60          	mov	d0,(a0)
+4000110e:	51          	inc4	a1
+4000110f:	50          	inc4	a0
+40001110:	fc d9 00 b9 	cmp	1080736000,a1
+40001114:	6a 40 
+40001116:	d4          	lcs	
+40001117:	72          	mov	(a2),d0
+40001118:	42 00       	mov	d0,(sp)
+4000111a:	f8 02 20    	mov	(32,a2),d0
+4000111d:	42 00       	mov	d0,(sp)
+4000111f:	f8 02 40    	mov	(64,a2),d0
+40001122:	42 00       	mov	d0,(sp)
+40001124:	f8 02 60    	mov	(96,a2),d0
+40001127:	42 00       	mov	d0,(sp)
+40001129:	de 20 08    	retf	[a2],8

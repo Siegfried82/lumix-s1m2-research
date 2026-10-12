@@ -1,0 +1,41 @@
+UUID: 4D454930-0100-1000-8001-6135b037ea66
+=== req_acc_g (get key) ===
+  req_acc_g -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+  key = 0x00000000
+  encoded value  = 194c76a41c4b0ba41c4902bd1c491fa0145502a0014902a0194b03a61b4b02f21a4e53f5
+  encoded value2 = 653567dc552b12c8d38751fe
+=== req_acc_e (poll to ok) ===
+[1] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[2] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[3] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[4] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[5] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[6] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[7] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[8] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[9] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[10] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[11] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[12] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[13] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[14] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[15] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[16] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[17] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[18] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[19] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[20] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[21] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[22] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[23] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+[24] req_acc_e -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_param</result></camrply>'
+
+=== post-accept getstate (same conn) ===
+<?xml version="1.0" encoding="UTF-8"?>
+<camrply><result>ok</result><state><batt>3/5</batt><batt_per>-1</batt_per><cammode>play</cammode><sdcardstatus>write_enable</sdcardstatus><sd_memory>unset</sd_memory><version>VD4.30</version><play>stop</play><temperature>low</temperature><sd_access>off</sd_access><lens>normal</lens><add_location_data>off</add_location_data><sd2_cardstatus>write_enable</sd2_cardstatus><sd2_memory>set</sd2_memory><sd2_access>off</sd2_access><current_sd>sd2</current_sd><batt_grip>-1/0</batt_grip><batt_per_grip>-1</batt_per_grip><sd_full>false</sd_full><sd2_full>false</sd2_full></state></camrply>
+
+=== fw_update_mode sweep (with X-SESSION_ID if token) ===
+  fw_update_mode(V2.90) -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>err_fw_same</result></camrply>'
+  fw_update_mode(V3.00) -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>ok</result></camrply>'
+  fw_update_mode(V9.99) -> '<?xml version="1.0" encoding="UTF-8"?>\r\n<camrply><result>ok</result></camrply>'
+done. accepted=False token=None

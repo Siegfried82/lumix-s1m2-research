@@ -1,0 +1,31 @@
+{
+  "checks": [
+    {
+      "case": "truncated_tag_header",
+      "rejected": true
+    },
+    {
+      "case": "truncated_final_field",
+      "rejected": true
+    },
+    {
+      "case": "truncated_quality_record",
+      "rejected": true
+    },
+    {
+      "case": "wrong_quality_count",
+      "rejected": true
+    },
+    {
+      "case": "unsupported_stride",
+      "rejected": true
+    },
+    {
+      "case": "short_record_missing_fields",
+      "preserved_as_null": true
+    }
+  ],
+  "entire_status_bytes_consumed": 2852,
+  "list_bytes": 2742,
+  "current_ids_agree": true
+}

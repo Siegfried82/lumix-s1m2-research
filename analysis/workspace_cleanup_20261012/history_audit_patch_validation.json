@@ -1,0 +1,51 @@
+{
+  "script": "analysis/agy_breakthrough_batch_20261011/16_adversarial/audit_premises.py",
+  "script_sha256": "7766749b90d7f3b4397367f7d90149ae578616ee5a7986b74eb83f2c366d1894",
+  "archived_input": "<LOCAL_BACKUP>/相机文稿清理-20261012-212031/项目当前进度_20261010.md",
+  "archived_input_sha256": "8d8a8317e6a27f6e84a7272b0198f7eda5ad64520bda8b4857ce553219d32b3e",
+  "output": "analysis/workspace_cleanup_20261012/history_audit_replay/machine_audit_metrics.json",
+  "run_exit_code": 0,
+  "run_stdout": "Wrote <LOCAL_WORKSPACE>/analysis/workspace_cleanup_20261012/history_audit_replay/machine_audit_metrics.json successfully.",
+  "old_result_sha256_before": "29837f71ad2ee39f773fcde542aa13646f9d24047068ae66ad7c87090a2bb589",
+  "old_result_sha256_after": "29837f71ad2ee39f773fcde542aa13646f9d24047068ae66ad7c87090a2bb589",
+  "old_result_unchanged": true,
+  "repeat_output_refused": true,
+  "new_result_unchanged_after_repeat": true,
+  "missing_input_refused": true,
+  "missing_input_did_not_create_output_dir": true,
+  "device_or_dispatcher_execution": false,
+  "result_top_level_keys": [
+    "script",
+    "strictly_read_files",
+    "progress_input",
+    "v14_directory_structural_audit",
+    "project_routes_and_tasks_audit"
+  ],
+  "v14_directory_structural_audit_summary": {
+    "total_entries": 62,
+    "flags_3_count": 49,
+    "flags_2_count": 13,
+    "flags_2_nonzero_count": 9,
+    "computed_eof_offset_bytes": 171867648,
+    "computed_eof_offset_hex": "0xa3e7e00",
+    "matches_s1m2_v14_bin_size_171867648": true,
+    "destination_field_monotonic_non_decreasing": true,
+    "destination_field_exact_contiguous_transitions": 54,
+    "computed_flash_end_hex": "0xa4e0000",
+    "computed_flash_end_bytes": 172883968
+  },
+  "project_routes_summary": {
+    "routes_20261010_count": 32,
+    "ultra_20261011_works_count": 12,
+    "parallel_batch_tasks_count": 16
+  },
+  "external_provenance_record": {
+    "path": "<LOCAL_BACKUP>/相机文稿清理-20261012-212031/项目当前进度_20261010.md",
+    "absolute_path": "<LOCAL_BACKUP>/相机文稿清理-20261012-212031/项目当前进度_20261010.md",
+    "source_scope": "external_progress_input",
+    "size_bytes": 591386,
+    "sha256": "8d8a8317e6a27f6e84a7272b0198f7eda5ad64520bda8b4857ce553219d32b3e",
+    "total_lines": 6890
+  },
+  "all_requested_checks_passed": true
+}

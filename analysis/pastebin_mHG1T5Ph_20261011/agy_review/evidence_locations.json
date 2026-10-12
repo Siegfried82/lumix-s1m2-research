@@ -1,0 +1,145 @@
+{
+  "scope": "bounded offline audit of analysis/pastebin_mHG1T5Ph_20261011/source.txt against local Lumix Sync 2.0.17 static code, S5 menu audit, and PTP capabilities; no network requests, no binary execution, no modifications outside agy_review",
+  "source_input": {
+    "path": "analysis/pastebin_mHG1T5Ph_20261011/source.txt",
+    "sha256": "74a293fa97fd0bf14c5673991773d620f7d386e4742abea0f77ecdd25a1b285a",
+    "bytes": 4347,
+    "lines": 109,
+    "claimed_model": "Lumix GX9",
+    "claimed_firmware": "FW 1.5",
+    "claimed_commands": [
+      {
+        "lines": [60, 62],
+        "mode": "accctrl",
+        "type": "req_acc",
+        "value": "4D454930-0100-1000-8001-020000025AD6",
+        "value2": "iPhone"
+      },
+      {
+        "lines": [64],
+        "mode": "camcmd",
+        "type": null,
+        "value": "recmode",
+        "value2": null
+      },
+      {
+        "lines": [82, 83, 84, 85, 87, 88, 89, 90],
+        "mode": "setsetting",
+        "type": "videoquality",
+        "values": [
+          "mov_25p_100mbps_4k",
+          "mov_50p_50mbps",
+          "mov_50p_100mbps",
+          "mov_50p_200mbps",
+          "mov_24p_100mbps_4k",
+          "mov_60p_50mbps",
+          "mov_60p_100mbps",
+          "mov_60p_200mbps"
+        ]
+      }
+    ]
+  },
+  "client_code_locations": {
+    "parsers_only": [
+      {
+        "file": "analysis/sources/lumix_sync_static/decompiled/sources/B5/o.java",
+        "role": "XML response parser (<camrply> -> <settingvalue>)",
+        "field_declaration_line": 35,
+        "field_init_lines": [181, 790],
+        "parse_method": "private void U(XmlPullParser)",
+        "parse_method_lines": [371, 412],
+        "videoformat_attr_line": 381,
+        "videoquality_attr_line": 382,
+        "caller_in_file": "private void q(XmlPullParser) at lines 530-531",
+        "getter_methods_range": [667, 756],
+        "has_getter_or_external_reader": false
+      },
+      {
+        "file": "analysis/sources/lumix_sync_static/decompiled/sources/p188x5/o.java",
+        "role": "XML capability parser (<camrply> -> <stopmotiontset> -> <stopmotionlist> -> <videoquality>)",
+        "parse_method": "private M P(XmlPullParser)",
+        "parse_method_lines": [347, 366],
+        "videoquality_tag_line": 353,
+        "item_parser_method": "private L R(XmlPullParser) at lines 390-414",
+        "parent_method": "private void Q(XmlPullParser) at lines 368-388 (called at lines 749-750)",
+        "dictionary_key": "stopMotionDirInfo (line 377)",
+        "wrapper_class": "analysis/sources/lumix_sync_static/decompiled/sources/p188x5/C2211j.java (lines 1-360)",
+        "item_class": "analysis/sources/lumix_sync_static/decompiled/sources/p188x5/L.java (f30085c at lines 16, 20)",
+        "has_getter_or_external_reader": false
+      }
+    ],
+    "cgi_senders": [
+      {
+        "file": "analysis/sources/lumix_sync_static/decompiled/sources/B5/n.java",
+        "method": "public static String c(String, String, String, String)",
+        "lines": [15, 30],
+        "role": "formats /cam.cgi?mode=%s&type=%s&value=%s&value2=%s"
+      },
+      {
+        "file": "analysis/sources/lumix_sync_static/decompiled/sources/B5/a.java",
+        "method": "public o L(String, String, String)",
+        "lines": [582, 606],
+        "role": "direct setsetting sender; 20 call sites in dex_cgi_references.jsonl (lines 93, 94, 102, 107, 108, 115, 123, 124, 138-142, 151-153, 160, 163, 241, 258); zero calls pass 'videoquality'"
+      },
+      {
+        "file": "analysis/sources/lumix_sync_static/decompiled/sources/B5/a.java",
+        "method": "public o K(String, String, String, String)",
+        "lines": [555, 580],
+        "role": "generic menu value sender (SetMenuValue); 5 call sites in dex_cgi_references.jsonl (lines 62-66) inside G5/a$a.run (G5/a.java:82, 84, 106, 108), driven by allmenu items parsed in p188x5/C2203b.java:47-63 and dispatched in com/panasonic/jp/view/setting/c.java:734-755"
+      },
+      {
+        "file": "analysis/sources/lumix_sync_static/decompiled/sources/B5/a.java",
+        "method": "public o m(...) / public o n(...) / public String A() / public byte[] w()",
+        "lines": [976, 1041, 297, 1416],
+        "role": "accctrl handshake (:976-1014), camcmd recmode (:1016-1041, :1192), getinfo curmenu (:297-324), getinfo camsetting binary config readback (:1416-1436)"
+      }
+    ],
+    "native_libraries": {
+      "inventory_file": "analysis/sources/lumix_sync_static/native_inventory.json",
+      "methods_file": "analysis/sources/lumix_sync_static/native_methods.jsonl",
+      "declared_native_methods": 42,
+      "has_cgi_videoquality_sender": false
+    }
+  },
+  "s5_menu_comparison": {
+    "audit_file": "analysis/parallel_routes_20261009/02_host/codex_pr1_document_audit.json",
+    "model_label": "S5 (lines 388-399; not S1M2)",
+    "videoformat_lines": [2907, 2923],
+    "videoquality_lines": [2925, 3187],
+    "videoquality_tuple_count": 44,
+    "matched_gx9_values_in_s5_allmenu": [
+      {
+        "value": "mov_24p_100mbps_4k",
+        "audit_json_lines": [2937, 2941],
+        "source_txt_line": 87
+      },
+      {
+        "value": "mov_25p_100mbps_4k",
+        "audit_json_lines": [2979, 2983],
+        "source_txt_line": 82
+      },
+      {
+        "value": "mov_50p_100mbps",
+        "audit_json_lines": [3051, 3055],
+        "source_txt_line": 84
+      },
+      {
+        "value": "mov_60p_100mbps",
+        "audit_json_lines": [3081, 3085],
+        "source_txt_line": 89
+      }
+    ],
+    "unmatched_gx9_values_in_s5_allmenu": [
+      "mov_50p_50mbps",
+      "mov_50p_200mbps",
+      "mov_60p_50mbps",
+      "mov_60p_200mbps"
+    ]
+  },
+  "ptp_capability_boundary": {
+    "decoded_file": "analysis/acquired_capabilities_decoded_20261008.json",
+    "curated_file": "analysis/curated_vendor_capabilities_20261008.json",
+    "protocol": "USB/PTP opcode 0x9108 (37128) integer capability tags and raw unsigned 32-bit enum values",
+    "proves_http_cgi_videoquality_strings": false
+  }
+}

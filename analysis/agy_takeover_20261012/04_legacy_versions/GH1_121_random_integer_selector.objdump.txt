@@ -1,0 +1,75 @@
+
+<LOCAL_WORKSPACE>/analysis/method0_review_20261011/decoded/GH1__121.bin.decoded:     file format binary
+
+
+Disassembly of section .data:
+
+4012bea1 <.data+0x12bea1>:
+4012bea1:	14          	extbu	d0
+4012bea2:	a0 01       	cmp	1,d0
+4012bea4:	c2 05       	bge	0x4012bea9
+4012bea6:	cc 8c 00    	jmp	0x4012bf32
+4012bea9:	a0 0a       	cmp	10,d0
+4012beab:	c3 05       	ble	0x4012beb0
+4012bead:	cc 85 00    	jmp	0x4012bf32
+4012beb0:	28 ff       	add	-1,d0
+4012beb2:	54          	asl2	d0
+4012beb3:	fc dc 1c 7e 	mov	1078689308,a0
+4012beb7:	4b 40 
+4012beb9:	f3 80       	mov	(d0,a0),a0
+4012bebb:	f0 f4       	jmp	(a0)
+4012bebd:	00          	clr	d0
+4012bebe:	df 80 08    	ret	[d2],8
+4012bec1:	80 01       	mov	1,d0
+4012bec3:	df 80 08    	ret	[d2],8
+4012bec6:	80 05       	mov	5,d0
+4012bec8:	ca 6c       	bra	0x4012bf34
+4012beca:	80 06       	mov	6,d0
+4012becc:	ca 68       	bra	0x4012bf34
+4012bece:	dd 60 67 f8 	call	0x400b262e,[d2,d3,a2],16
+4012bed2:	ff e0 10 
+4012bed5:	85 06       	mov	6,d1
+4012bed7:	08          	clr	d2
+4012bed8:	f2 fa       	mov	d2,mdr
+4012beda:	f2 74       	divu	d1,d0
+4012bedc:	f2 e0       	mov	mdr,d0
+4012bede:	28 07       	add	7,d0
+4012bee0:	ca 54       	bra	0x4012bf34
+4012bee2:	dd 4c 67 f8 	call	0x400b262e,[d2,d3,a2],16
+4012bee6:	ff e0 10 
+4012bee9:	85 06       	mov	6,d1
+4012beeb:	08          	clr	d2
+4012beec:	f2 fa       	mov	d2,mdr
+4012beee:	f2 74       	divu	d1,d0
+4012bef0:	f2 e0       	mov	mdr,d0
+4012bef2:	28 0d       	add	13,d0
+4012bef4:	ca 40       	bra	0x4012bf34
+4012bef6:	dd 38 67 f8 	call	0x400b262e,[d2,d3,a2],16
+4012befa:	ff e0 10 
+4012befd:	85 06       	mov	6,d1
+4012beff:	08          	clr	d2
+4012bf00:	f2 fa       	mov	d2,mdr
+4012bf02:	f2 74       	divu	d1,d0
+4012bf04:	f2 e0       	mov	mdr,d0
+4012bf06:	28 0e       	add	14,d0
+4012bf08:	ca 2c       	bra	0x4012bf34
+4012bf0a:	dd 24 67 f8 	call	0x400b262e,[d2,d3,a2],16
+4012bf0e:	ff e0 10 
+4012bf11:	85 03       	mov	3,d1
+4012bf13:	08          	clr	d2
+4012bf14:	f2 fa       	mov	d2,mdr
+4012bf16:	f2 74       	divu	d1,d0
+4012bf18:	f2 e0       	mov	mdr,d0
+4012bf1a:	28 14       	add	20,d0
+4012bf1c:	ca 18       	bra	0x4012bf34
+4012bf1e:	dd 10 67 f8 	call	0x400b262e,[d2,d3,a2],16
+4012bf22:	ff e0 10 
+4012bf25:	85 07       	mov	7,d1
+4012bf27:	08          	clr	d2
+4012bf28:	f2 fa       	mov	d2,mdr
+4012bf2a:	f2 74       	divu	d1,d0
+4012bf2c:	f2 e0       	mov	mdr,d0
+4012bf2e:	28 17       	add	23,d0
+4012bf30:	ca 04       	bra	0x4012bf34
+4012bf32:	80 1e       	mov	30,d0
+4012bf34:	df 80 08    	ret	[d2],8

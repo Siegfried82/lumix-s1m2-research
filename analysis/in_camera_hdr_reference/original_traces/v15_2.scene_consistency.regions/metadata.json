@@ -1,0 +1,102 @@
+{
+  "module": "v15_2.scene_consistency.regions",
+  "filename": "v15_2\\scene_consistency\\regions.py",
+  "sha256": "05a25f617c6adce2d05633a3938acf94be318134e2ab474236199ea52c0b0776",
+  "functions": [
+    {
+      "scope": "v15_2.scene_consistency.regions",
+      "name": "<module>",
+      "line": 1,
+      "args": [],
+      "names": [
+        "__doc__",
+        "scene_policy_wgpu",
+        "ScenePolicyWGPU",
+        "PairPolicy"
+      ],
+      "imports": [
+        "scene_policy_wgpu"
+      ]
+    },
+    {
+      "scope": "v15_2.scene_consistency.regions.PairPolicy",
+      "name": "PairPolicy",
+      "line": 4,
+      "args": [],
+      "names": [
+        "__name__",
+        "__module__",
+        "__qualname__",
+        "__init__",
+        "decide",
+        "_continue_existing",
+        "__classcell__"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.regions.PairPolicy.__init__",
+      "name": "__init__",
+      "line": 5,
+      "args": [
+        "self",
+        "runtime"
+      ],
+      "names": [
+        "super",
+        "__init__"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.regions.PairPolicy.decide",
+      "name": "decide",
+      "line": 8,
+      "args": [
+        "self",
+        "base",
+        "band",
+        "budget",
+        "ok"
+      ],
+      "names": [
+        "super",
+        "decide",
+        "pop",
+        "spec",
+        "shape",
+        "_continue_existing"
+      ],
+      "imports": []
+    },
+    {
+      "scope": "v15_2.scene_consistency.regions.PairPolicy._continue_existing",
+      "name": "_continue_existing",
+      "line": 15,
+      "args": [
+        "self",
+        "result",
+        "base",
+        "k",
+        "h",
+        "w"
+      ],
+      "names": [
+        "_u32",
+        "_dispatch",
+        "buffer",
+        "_complete_components",
+        "rt",
+        "release_external"
+      ],
+      "imports": []
+    }
+  ],
+  "imports": [
+    "scene_policy_wgpu"
+  ],
+  "shaders": [
+    "carchive/jsr_backend/trace/v15_2.scene_consistency.regions/shader_000.wgsl",
+    "carchive/jsr_backend/trace/v15_2.scene_consistency.regions/shader_001.wgsl"
+  ]
+}

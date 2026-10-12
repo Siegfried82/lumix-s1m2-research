@@ -1,0 +1,28 @@
+50:     public static String b(String str, int i7) {
+51:         if (i7 == 0) {
+52:             i7 = -1875740628;
+53:         }
+54:         StringBuilder sb = new StringBuilder();
+55:         sb.append(str);
+56:         while (sb.length() % 4 != 0) {
+57:             sb.append((char) 255);
+58:         }
+59:         StringBuilder sb2 = new StringBuilder();
+60:         char[] cArr = new char[4];
+61:         int i8 = 0;
+62:         while (i8 < sb.length()) {
+63:             int i9 = i8 + 4;
+64:             sb.getChars(i8, i9, cArr, 0);
+65:             long j7 = (((long) cArr[0]) << 24) | (((long) cArr[1]) << 16) | (((long) cArr[2]) << 8) | ((long) cArr[3]);
+66:             long j8 = i7;
+67:             if (i7 < 0) {
+68:                 j8 += 4294967296L;
+69:             }
+70:             long j9 = j7 ^ j8;
+71:             sb2.append(String.format("%08x", Long.valueOf(((j9 >> 24) & 255) | ((j9 << 24) & 4278190080L) | ((j9 << 8) & 16711680) | ((j9 >> 8) & 65280))));
+72:             i8 = i9;
+73:         }
+74:         return sb2.toString();
+75:     }
+76: 
+77:     public static byte[] c(String str, long j7, int i7) {
