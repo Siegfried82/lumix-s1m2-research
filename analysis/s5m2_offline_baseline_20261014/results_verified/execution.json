@@ -1,0 +1,83 @@
+{
+  "source_commit": "86cb4e819f2fb86b6e4a83d168853be40acf1dc6",
+  "steps": [
+    {
+      "step": "01_unit_tests",
+      "started_at_utc": "2026-10-13T17:58:32.954313+00:00",
+      "returncode": 0,
+      "arguments": [
+        "-m",
+        "unittest",
+        "-v",
+        "test_baseline"
+      ],
+      "log": "01_unit_tests.log",
+      "log_sha256": "58d33d4689c2181ad6d37867a96d14cd6b8fb9b7b04fb49445b725c6f1d7d0a7"
+    },
+    {
+      "step": "02_real_baseline",
+      "started_at_utc": "2026-10-13T17:58:33.326313+00:00",
+      "returncode": 0,
+      "arguments": [
+        "<REPOSITORY>\\analysis\\s5m2_offline_baseline_20261014\\upd_baseline.py",
+        "--firmware",
+        "<INPUTS>\\S5m2_V31.bin",
+        "--reference-inventory",
+        "<REPOSITORY>\\analysis\\sources\\lumix_sync_static\\official_firmware_list\\S5M2_full_inventory.json",
+        "--output",
+        "<REPOSITORY>\\analysis\\s5m2_offline_baseline_20261014\\results_verified\\baseline.json"
+      ],
+      "log": "02_real_baseline.log",
+      "log_sha256": "7b18253b36cbc854ed8bf0b22ebd6ccbcd26ef0050311bb1dfb229f439c2d6c0"
+    },
+    {
+      "step": "03_existing_extractor",
+      "started_at_utc": "2026-10-13T17:58:33.768619+00:00",
+      "returncode": 0,
+      "arguments": [
+        "<REPOSITORY>\\s1m2_firmware_project\\tools\\unpack_upd.py",
+        "<INPUTS>\\S5m2_V31.bin",
+        "-o",
+        "<INPUTS>\\s5m2_extracted_results_verified"
+      ],
+      "log": "03_existing_extractor.log",
+      "log_sha256": "2031ba72163df3e6b0629fe7358363db8725b7d25f0b5f3b4578efcc2ea0737e"
+    },
+    {
+      "step": "04_bounded_cipher_replay",
+      "started_at_utc": "2026-10-13T17:58:35.663740+00:00",
+      "returncode": 0,
+      "arguments": [
+        "<REPOSITORY>\\analysis\\s5m2_offline_baseline_20261014\\cipher_replay.py",
+        "--firmware",
+        "<INPUTS>\\S5m2_V31.bin",
+        "--output",
+        "<REPOSITORY>\\analysis\\s5m2_offline_baseline_20261014\\results_verified\\cipher_replay.json"
+      ],
+      "log": "04_bounded_cipher_replay.log",
+      "log_sha256": "9aa83b3e6ed78ff87d02f1caa5f5d326dc2e6cfb1289f8c5ad2fec064dbad66b"
+    },
+    {
+      "step": "05_archive_integrity",
+      "started_at_utc": "2026-10-13T17:58:36.366408+00:00",
+      "returncode": 0,
+      "arguments": [
+        "<REPOSITORY>\\evidence\\verify_public.py"
+      ],
+      "log": "05_archive_integrity.log",
+      "log_sha256": "5171b9626b608e8929d7522384716b22a0df24e4f3c2910ea36e33e31d278dc2"
+    }
+  ],
+  "extraction_rows": 54,
+  "all_steps_success": true,
+  "archive": {
+    "bytes": 186598983,
+    "sha256": "2e3a5ce15e71079a3cba6acf412393fba30270389409bf637f8d285fef7b518a"
+  },
+  "device_communication": false,
+  "unpublished_inputs": [
+    "S5m2_V31.zip",
+    "S5m2_V31.bin",
+    "s5m2_extracted/"
+  ]
+}

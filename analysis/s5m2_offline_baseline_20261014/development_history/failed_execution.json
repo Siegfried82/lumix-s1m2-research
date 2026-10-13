@@ -1,0 +1,72 @@
+{
+  "steps": [
+    {
+      "step": "01_unit_tests",
+      "started_at_utc": "2026-10-13T17:56:39.769396+00:00",
+      "returncode": 0,
+      "arguments": [
+        "-m",
+        "unittest",
+        "-v",
+        "test_baseline"
+      ],
+      "log": "01_unit_tests.log",
+      "log_sha256": "fe8019c60d24b8e794b3e70653c351a66540acf1445c9dd2ee6035b2ffb9cda7"
+    },
+    {
+      "step": "02_real_baseline",
+      "started_at_utc": "2026-10-13T17:56:39.988712+00:00",
+      "returncode": 0,
+      "arguments": [
+        "<REPOSITORY>\\analysis\\s5m2_offline_baseline_20261014\\upd_baseline.py",
+        "--archive",
+        "<INPUTS>\\S5m2_V31.zip",
+        "--extract-to",
+        "<INPUTS>\\S5m2_V31.bin",
+        "--reference-inventory",
+        "<REPOSITORY>\\analysis\\sources\\lumix_sync_static\\official_firmware_list\\S5M2_full_inventory.json",
+        "--output",
+        "<REPOSITORY>\\analysis\\s5m2_offline_baseline_20261014\\results\\baseline.json"
+      ],
+      "log": "02_real_baseline.log",
+      "log_sha256": "6f45d6dbb0295c1f2559d64b13d44a50b98baeb3849a4f96c00ad3ea9e831ffa"
+    },
+    {
+      "step": "03_existing_extractor",
+      "started_at_utc": "2026-10-13T17:56:41.909915+00:00",
+      "returncode": 0,
+      "arguments": [
+        "<REPOSITORY>\\s1m2_firmware_project\\tools\\unpack_upd.py",
+        "<INPUTS>\\S5m2_V31.bin",
+        "-o",
+        "<INPUTS>\\s5m2_extracted"
+      ],
+      "log": "03_existing_extractor.log",
+      "log_sha256": "9d5dcbd7699bd184ace71a04d009f4e4467eebd2fcb07f56e3c85352f00b2835"
+    },
+    {
+      "step": "04_bounded_cipher_replay",
+      "started_at_utc": "2026-10-13T17:56:42.879897+00:00",
+      "returncode": 0,
+      "arguments": [
+        "<REPOSITORY>\\analysis\\s5m2_offline_baseline_20261014\\cipher_replay.py",
+        "--firmware",
+        "<INPUTS>\\S5m2_V31.bin",
+        "--output",
+        "<REPOSITORY>\\analysis\\s5m2_offline_baseline_20261014\\results\\cipher_replay.json"
+      ],
+      "log": "04_bounded_cipher_replay.log",
+      "log_sha256": "8af97c60fcecd025a17d99922834a24c3f6090bbb0de0b9edc06741693470bda"
+    },
+    {
+      "step": "05_archive_integrity",
+      "started_at_utc": "2026-10-13T17:56:43.591145+00:00",
+      "returncode": 1,
+      "arguments": [
+        "<REPOSITORY>\\evidence\\verify_public.py"
+      ],
+      "log": "05_archive_integrity.log",
+      "log_sha256": "087ab61cff000954d9df2fef90998f0b2b567b92d4a0804f9100fedbae40eb82"
+    }
+  ]
+}

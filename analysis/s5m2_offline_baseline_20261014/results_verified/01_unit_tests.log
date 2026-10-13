@@ -1,0 +1,30 @@
+
+--- STDERR ---
+test_correct_offset_positive_old_offset_negative (test_baseline.CipherTests.test_correct_offset_positive_old_offset_negative) ... ok
+test_digest_checks_entire_plaintext_not_first_block (test_baseline.CipherTests.test_digest_checks_entire_plaintext_not_first_block) ... ok
+test_invalid_key_is_error_not_mismatch (test_baseline.CipherTests.test_invalid_key_is_error_not_mismatch) ... ok
+test_key_sizes_roundtrip_are_synthetic (test_baseline.CipherTests.test_key_sizes_roundtrip_are_synthetic) ... ok
+test_legacy_ctr_error_separate_from_trials (test_baseline.CipherTests.test_legacy_ctr_error_separate_from_trials) ... ok
+test_misaligned_cbc_is_error (test_baseline.CipherTests.test_misaligned_cbc_is_error) ... ok
+test_partial_ctr_no_padding (test_baseline.CipherTests.test_partial_ctr_no_padding) ... ok
+test_published_cbc_vector (test_baseline.CipherTests.test_published_cbc_vector) ... ok
+test_published_ctr_vector (test_baseline.CipherTests.test_published_ctr_vector) ... ok
+test_published_ecb_vector (test_baseline.CipherTests.test_published_ecb_vector) ... ok
+test_wrong_key_is_completed_mismatch (test_baseline.CipherTests.test_wrong_key_is_completed_mismatch) ... ok
+test_absolute_base_and_complete_hash (test_baseline.UPDTests.test_absolute_base_and_complete_hash) ... ok
+test_bad_inner_magic_rejected (test_baseline.UPDTests.test_bad_inner_magic_rejected) ... ok
+test_crc_corruption_rejected (test_baseline.UPDTests.test_crc_corruption_rejected) ... ok
+test_nonempty_overlap_rejected (test_baseline.UPDTests.test_nonempty_overlap_rejected) ... ok
+test_payload_in_directory_rejected (test_baseline.UPDTests.test_payload_in_directory_rejected) ... ok
+test_payload_overrun_rejected (test_baseline.UPDTests.test_payload_overrun_rejected) ... ok
+test_reference_comparison_checks_all_rows (test_baseline.UPDTests.test_reference_comparison_checks_all_rows) ... ok
+test_repeated_names_preserve_indices (test_baseline.UPDTests.test_repeated_names_preserve_indices) ... ok
+test_truncated_directory_rejected (test_baseline.UPDTests.test_truncated_directory_rejected) ... ok
+test_truncated_header_rejected (test_baseline.UPDTests.test_truncated_header_rejected) ... ok
+test_wrong_profile_stops_real_replay (test_baseline.UPDTests.test_wrong_profile_stops_real_replay) ... ok
+test_zero_size_digest_is_actual_empty_digest (test_baseline.UPDTests.test_zero_size_digest_is_actual_empty_digest) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.005s
+
+OK
