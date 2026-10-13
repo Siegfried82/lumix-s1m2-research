@@ -1,0 +1,53 @@
+{
+  "python_system": "3.9.6",
+  "verification_run_exit_code": 0,
+  "s1m2_synthetic_run_exit_code": 0,
+  "dependencies_synthetic_only": {
+    "cryptography": "50.0.2"
+  },
+  "artifacts": {
+    "analysis/s5_pair_review_20261013/verify_pairs_against_firmware.py": {
+      "bytes": 10362,
+      "sha256": "dbc846a435a38be6bff551c5e561d9cf9f1226ac60d41b163b3f8952eb44616a"
+    },
+    "analysis/s5_pair_review_20261013/actual_verification/verification.json": {
+      "bytes": 83941,
+      "sha256": "5828ee2ce32bf66130b4d579b9f0dd81e15b29ae1caf22016101641668452cba"
+    },
+    "analysis/s5_pair_review_20261013/actual_verification/corrected_v29_comparisons.json": {
+      "bytes": 6043,
+      "sha256": "04369c367c99a09b35bbfe7f616206826b04a440a06fd102660d1d0263d1a26a"
+    },
+    "analysis/s1r2_crypto_review_20261013/verify_claim_boundaries.py": {
+      "bytes": 8289,
+      "sha256": "5a9cfe909e5bc62abc2d6dac6339eb5f32988807c8fef2eb81cd5b97b757ed06"
+    },
+    "analysis/s1r2_crypto_review_20261013/s1m2_and_synthetic_verification.json": {
+      "bytes": 50301,
+      "sha256": "5ac769b487b7fe7f100ec76626b4d3f6433fcbbbc4143c0ea525b53b16d514a8"
+    },
+    "analysis/s5_pair_review_20261013/binary_check.py": {
+      "bytes": 6645,
+      "sha256": "9678137678f4898bd240c119bfb084df488c9c16f5d51cd257eeec7cc2eb223e"
+    },
+    "analysis/s5_pair_review_20261013/binary_check.json": {
+      "bytes": 18005,
+      "sha256": "700c7c571bfb16726d431e7e27cce647f15a294d42acd5e6bdfe70243d74b6a3"
+    },
+    "analysis/s5_pair_review_20261013/logic_review.md": {
+      "bytes": 7887,
+      "sha256": "75765015b540984f11c27d5c56e23510b84d7a1aff8a292416cda8733aa450dc"
+    },
+    "analysis/s5_pair_review_20261013/固件配对核验与纠正.md": {
+      "bytes": 10155,
+      "sha256": "1693182dfe1bdc8090b75a6c7177686375b5c5c185b02e718015978ec3ae0c6f"
+    },
+    "S1M2研究当前状态.md": {
+      "bytes": 7842,
+      "sha256": "5ae6af406d82279e7e79dc4745f8fa909bb0b056578658af404f92f48aed2d54"
+    }
+  },
+  "link_check_missing": [],
+  "scope": "Two actual read-only checks, no vendor code execution or device operation",
+  "publication_note": "Historical artifacts fields record original local bytes before publication sanitization and comments. They are not the hashes of public modified copies. Use evidence/FILE_MANIFEST.csv for public bytes and evidence/FOLLOWUP_INPUTS_20261013.csv for original-to-public mapping. Fresh public-tool execution is recorded separately in evidence/FOLLOWUP_VALIDATION_20261013.json."
+}

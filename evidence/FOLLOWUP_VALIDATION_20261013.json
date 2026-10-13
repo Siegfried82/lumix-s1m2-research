@@ -1,0 +1,86 @@
+{
+  "record_created_utc": "2026-10-13T16:23:27.334454+00:00",
+  "scope": "Five actually executed public independent offline checkers; no external research tool execution, key search, native firmware execution or device operation.",
+  "python_system": "3.9.6",
+  "python_synthetic": "3.12.14",
+  "synthetic_dependency": {
+    "cryptography": "50.0.2",
+    "use": "synthetic AES controls only"
+  },
+  "executions": [
+    {
+      "name": "pair_format",
+      "exit_code": 0,
+      "script": "analysis/s5_pair_review_20261013/binary_check.py",
+      "script_sha256": "9678137678f4898bd240c119bfb084df488c9c16f5d51cd257eeec7cc2eb223e",
+      "result": "evidence/followup_replay_20261013/pair_format.json",
+      "public_result_sha256": "92d0490397f71d1d87846de8947cd731600ed41e2fac83ab3882521e9d551039",
+      "result_file_mtime_utc": "2026-10-13T16:18:41.675329+00:00"
+    },
+    {
+      "name": "pairs_actual",
+      "exit_code": 0,
+      "script": "analysis/s5_pair_review_20261013/verify_pairs_against_firmware.py",
+      "script_sha256": "dbc846a435a38be6bff551c5e561d9cf9f1226ac60d41b163b3f8952eb44616a",
+      "result": "evidence/followup_replay_20261013/pairs_actual.json",
+      "public_result_sha256": "319ad68c5bb1c0bba3c3591677c5cc46467f0f8e1bc0c73505c0df21a6c0d217",
+      "result_file_mtime_utc": "2026-10-13T16:18:41.958466+00:00"
+    },
+    {
+      "name": "s1m2_synthetic",
+      "exit_code": 0,
+      "script": "analysis/s1r2_crypto_review_20261013/verify_claim_boundaries.py",
+      "script_sha256": "5a9cfe909e5bc62abc2d6dac6339eb5f32988807c8fef2eb81cd5b97b757ed06",
+      "result": "evidence/followup_replay_20261013/s1m2_synthetic.json",
+      "public_result_sha256": "25c43649161813bd1cc8eceb4d6b314f5fa73279df053d10b3cd64350facbb26",
+      "result_file_mtime_utc": "2026-10-13T16:18:42.172845+00:00"
+    },
+    {
+      "name": "rom",
+      "exit_code": 0,
+      "script": "analysis/s5_github_review_20261013/rom_backup_review/verify_rombackup.py",
+      "script_sha256": "9b92b96dc1bd7b3006089d41b8f5fbdf84849ef8c859fb47c0144f7346a23e47",
+      "result": "evidence/followup_replay_20261013/rom.json",
+      "public_result_sha256": "0bd56c84ca97589d41df7e771c706c92699403586ec4e8944c16aebbe07ada1f",
+      "result_file_mtime_utc": "2026-10-13T16:18:41.815069+00:00"
+    },
+    {
+      "name": "exfat",
+      "exit_code": 0,
+      "script": "analysis/s5_github_review_20261013/exfat_review/verify_exfat_evidence.py",
+      "script_sha256": "e305244be357474d77e8520791c1175a3570806ab05d022244b96d31585b62cd",
+      "result": "evidence/followup_replay_20261013/exfat.json",
+      "public_result_sha256": "35a445df2b09735f24f72786385a6853cac892c33c779dca94b6a16c6aae36e7",
+      "result_file_mtime_utc": "2026-10-13T16:18:41.989161+00:00"
+    }
+  ],
+  "observed": {
+    "pair_records": 35,
+    "pair_record_bytes": 82,
+    "bin_json_serialized_fields_match": true,
+    "v29_verified_sides": 38,
+    "first_blocks_match_omitted_base": 38,
+    "first_blocks_match_correct_start": 0,
+    "s1m2_directory_records": 62,
+    "s1m2_crc_matches": true,
+    "synthetic_controls": {
+      "source": "https://csrc.nist.gov/pubs/sp/800/38/a/final",
+      "nist_cbc_aes128_first_block_matches": true,
+      "same_plaintext_correct_cbc_key_passes": true,
+      "different_full_plaintexts_sharing_first_block_also_pass": true,
+      "correct_ctr_key_rejected_by_cbc_hypothesis": true,
+      "scope": "synthetic mechanism checks; no proof of camera cipher or IV meaning"
+    },
+    "exfat_original_identities_match": 20,
+    "exfat_same_generation_inference_allowed": false,
+    "exfat_report22_state_matches": false
+  },
+  "input_gaps": [
+    "S5 V2.4 absent; 32 sides not independently checked",
+    "S1R2 report v1.1/v1.5, author tools and enumeration logs absent",
+    "Identity-bearing original ROM TXT/BIN excluded from republication; exact source hashes retained",
+    "Original exFAT source-identity checker needs exact upstream originals, not modified public reports"
+  ],
+  "reproduction": "docs/REPRODUCE_20261013.md, section 10",
+  "acceptance": "exit codes and observed byte assertions; none of these checks establish successful modern firmware decryption or device exploitation"
+}

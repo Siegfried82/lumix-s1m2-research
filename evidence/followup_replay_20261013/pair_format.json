@@ -1,0 +1,792 @@
+{
+  "inputs": [
+    {
+      "name": "pairs_s5.json",
+      "bytes": 12042,
+      "sha256": "50e253c96dc338ba895cc6c50df0bd645e87e6346fd4014b3f6ca81a4d671c49"
+    },
+    {
+      "name": "pairs_s5.bin",
+      "bytes": 2870,
+      "sha256": "054bbcffa1cafe2c8c50c6ad07a9ff7524af0c976f3e883004371d99e3265332"
+    },
+    {
+      "name": "29_S1R2报告启示与S5对称密钥分析_20261014.md",
+      "bytes": 11060,
+      "sha256": "5d709c6d175a29fb7c1dd6bde9be3a1bf511ff232435bf4180021893d3d59baf"
+    }
+  ],
+  "external_code_executed": false,
+  "device_access": false,
+  "firmware_parsed": false,
+  "key_search_performed": false,
+  "json_records": 35,
+  "tag_counts": {
+    "intra-V29": 3,
+    "cross-V29-V24": 32
+  },
+  "type_pair_counts": {
+    "3,3": 34,
+    "2,3": 1
+  },
+  "actual_format": "<16s16s16s16sIBB12s",
+  "actual_record_bytes": 82,
+  "layout": {
+    "iv_a": [
+      0,
+      16
+    ],
+    "iv_b": [
+      16,
+      32
+    ],
+    "c1_a": [
+      32,
+      48
+    ],
+    "c1_b": [
+      48,
+      64
+    ],
+    "size_u32_le": [
+      64,
+      68
+    ],
+    "typ_a": [
+      68,
+      69
+    ],
+    "typ_b": [
+      69,
+      70
+    ],
+    "a_name12": [
+      70,
+      82
+    ]
+  },
+  "file_has_exact_record_length": true,
+  "all_records_match_json": true,
+  "declared_sha_bytes_counts": {
+    "16": 35
+  },
+  "all_full_sha256_fields_present": false,
+  "claimed80_byte_record_remainder": 70,
+  "reported32_plus3_plus1": {
+    "would_count": 36,
+    "actual_count": 35,
+    "plaintext_cipher_pair_already_in_intra3": true
+  },
+  "declared_cross_payload_size_sum": {
+    "bytes": 30304256,
+    "decimal_MB": 30.304256,
+    "binary_MiB": 28.900390625,
+    "not_bytes_carried_in_pair_file": true
+  },
+  "mixed_plaintext_cipher_records": [
+    {
+      "json_index": 2,
+      "a": "history",
+      "b": "ipu_data",
+      "declared_types": [
+        2,
+        3
+      ],
+      "reason": "Two-ciphertext CBC predicate does not accept a declared plaintext side."
+    }
+  ],
+  "structurally_impossible_same_key_same_P1_CBC_records": [
+    {
+      "json_index": 14,
+      "a": "music",
+      "b": "music",
+      "reason": "D_K(C) xor D_K(C)=0 but IV_a xor IV_b !=0; rejects every key under proposed same-key/same-P1 CBC relation."
+    },
+    {
+      "json_index": 16,
+      "a": "koutei_kao",
+      "b": "koutei_kao",
+      "reason": "D_K(C) xor D_K(C)=0 but IV_a xor IV_b !=0; rejects every key under proposed same-key/same-P1 CBC relation."
+    },
+    {
+      "json_index": 17,
+      "a": "zboot",
+      "b": "zboot",
+      "reason": "D_K(C) xor D_K(C)=0 but IV_a xor IV_b !=0; rejects every key under proposed same-key/same-P1 CBC relation."
+    }
+  ],
+  "records": [
+    {
+      "json_index": 0,
+      "tag": "intra-V29",
+      "a": "eep_ow_a",
+      "b": "eep_ow_b",
+      "size": 131072,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 0,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 1,
+      "tag": "intra-V29",
+      "a": "eep_act_a",
+      "b": "eep_act_b",
+      "size": 2048,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 82,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 2,
+      "tag": "intra-V29",
+      "a": "history",
+      "b": "ipu_data",
+      "size": 262144,
+      "types": [
+        2,
+        3
+      ],
+      "binary_offset": 164,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 3,
+      "tag": "cross-V29-V24",
+      "a": "loader1",
+      "b": "loader1",
+      "size": 4096,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 246,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 4,
+      "tag": "cross-V29-V24",
+      "a": "loader2",
+      "b": "loader2",
+      "size": 38912,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 328,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 5,
+      "tag": "cross-V29-V24",
+      "a": "loader3",
+      "b": "loader3",
+      "size": 49152,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 410,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 6,
+      "tag": "cross-V29-V24",
+      "a": "postboot2",
+      "b": "postboot2",
+      "size": 131072,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 492,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 7,
+      "tag": "cross-V29-V24",
+      "a": "postboot4",
+      "b": "postboot4",
+      "size": 131072,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 574,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 8,
+      "tag": "cross-V29-V24",
+      "a": "dram_sleep",
+      "b": "dram_sleep",
+      "size": 6144,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 656,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 9,
+      "tag": "cross-V29-V24",
+      "a": "eep_ow_a",
+      "b": "eep_ow_a",
+      "size": 131072,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 738,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 10,
+      "tag": "cross-V29-V24",
+      "a": "eep_ow_b",
+      "b": "eep_ow_b",
+      "size": 131072,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 820,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 11,
+      "tag": "cross-V29-V24",
+      "a": "eep_adj",
+      "b": "eep_adj",
+      "size": 131072,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 902,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 12,
+      "tag": "cross-V29-V24",
+      "a": "eep_act_a",
+      "b": "eep_act_a",
+      "size": 2048,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 984,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 13,
+      "tag": "cross-V29-V24",
+      "a": "eep_act_b",
+      "b": "eep_act_b",
+      "size": 2048,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 1066,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 14,
+      "tag": "cross-V29-V24",
+      "a": "music",
+      "b": "music",
+      "size": 3538944,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 1148,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": true,
+      "same_iv": false
+    },
+    {
+      "json_index": 15,
+      "tag": "cross-V29-V24",
+      "a": "osddata",
+      "b": "osddata",
+      "size": 11010048,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 1230,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 16,
+      "tag": "cross-V29-V24",
+      "a": "koutei_kao",
+      "b": "koutei_kao",
+      "size": 114688,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 1312,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": true,
+      "same_iv": false
+    },
+    {
+      "json_index": 17,
+      "tag": "cross-V29-V24",
+      "a": "zboot",
+      "b": "zboot",
+      "size": 2048,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 1394,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": true,
+      "same_iv": false
+    },
+    {
+      "json_index": 18,
+      "tag": "cross-V29-V24",
+      "a": "dtb",
+      "b": "dtb",
+      "size": 4096,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 1476,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 19,
+      "tag": "cross-V29-V24",
+      "a": "usbcharge",
+      "b": "usbcharge",
+      "size": 131072,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 1558,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 20,
+      "tag": "cross-V29-V24",
+      "a": "ipu_data",
+      "b": "ipu_data",
+      "size": 262144,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 1640,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 21,
+      "tag": "cross-V29-V24",
+      "a": "ipu_code",
+      "b": "ipu_code",
+      "size": 65536,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 1722,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 22,
+      "tag": "cross-V29-V24",
+      "a": "rc_data",
+      "b": "rc_data",
+      "size": 262144,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 1804,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 23,
+      "tag": "cross-V29-V24",
+      "a": "rc_code",
+      "b": "rc_code",
+      "size": 65536,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 1886,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 24,
+      "tag": "cross-V29-V24",
+      "a": "nr_data",
+      "b": "nr_data",
+      "size": 262144,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 1968,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 25,
+      "tag": "cross-V29-V24",
+      "a": "nr_code",
+      "b": "nr_code",
+      "size": 65536,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 2050,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 26,
+      "tag": "cross-V29-V24",
+      "a": "hm_c_prog",
+      "b": "hm_c_prog",
+      "size": 65536,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 2132,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 27,
+      "tag": "cross-V29-V24",
+      "a": "hm_d_prog",
+      "b": "hm_d_prog",
+      "size": 262144,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 2214,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 28,
+      "tag": "cross-V29-V24",
+      "a": "hm_c_ddr",
+      "b": "hm_c_ddr",
+      "size": 3145728,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 2296,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 29,
+      "tag": "cross-V29-V24",
+      "a": "hm_d_ddr",
+      "b": "hm_d_ddr",
+      "size": 1048576,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 2378,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 30,
+      "tag": "cross-V29-V24",
+      "a": "hm_d_nw",
+      "b": "hm_d_nw",
+      "size": 4194304,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 2460,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 31,
+      "tag": "cross-V29-V24",
+      "a": "hm_d_nw_sng",
+      "b": "hm_d_nw_sng",
+      "size": 4194304,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 2542,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 32,
+      "tag": "cross-V29-V24",
+      "a": "hr_c_prog",
+      "b": "hr_c_prog",
+      "size": 65536,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 2624,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 33,
+      "tag": "cross-V29-V24",
+      "a": "hr_d_prog",
+      "b": "hr_d_prog",
+      "size": 262144,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 2706,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    },
+    {
+      "json_index": 34,
+      "tag": "cross-V29-V24",
+      "a": "hr_c_ddr",
+      "b": "hr_c_ddr",
+      "size": 524288,
+      "types": [
+        3,
+        3
+      ],
+      "binary_offset": 2788,
+      "binary_record_matches_json": true,
+      "all_iv_c1_widths16": true,
+      "declared_sha_bytes": 16,
+      "full_sha256_width32": false,
+      "same_c1": false,
+      "same_iv": false
+    }
+  ],
+  "throughput_math_only": [
+    {
+      "keyspace_bits": 32,
+      "candidates_per_second_assumed": 600000000,
+      "seconds": 7.158278826666667,
+      "days": 8.285044938271605e-05
+    },
+    {
+      "keyspace_bits": 40,
+      "candidates_per_second_assumed": 600000000,
+      "seconds": 1832.5193796266667,
+      "days": 0.02120971504197531
+    },
+    {
+      "keyspace_bits": 48,
+      "candidates_per_second_assumed": 600000000,
+      "seconds": 469124.9611844267,
+      "days": 5.429687050745679
+    },
+    {
+      "keyspace_bits": 128,
+      "candidates_per_second_assumed": 600000000,
+      "seconds": 5.671372782015641e+29,
+      "days": 6.564088868073659e+24
+    }
+  ],
+  "throughput_measured": false,
+  "zero_chain_report_math": {
+    "total_blocks_claimed": 16384,
+    "zero_blocks_claimed": 16353,
+    "nonzero_implied_by_total_minus_zero": 31,
+    "nonzero_claimed_as_first_plus31": 32,
+    "header_bytes_claimed": 64,
+    "AES_block_bytes": 16,
+    "header_spans_blocks": 4,
+    "all16383_edges_not_implied": true
+  },
+  "limits": [
+    "BIN/JSON agreement does not verify firmware origins, correct offsets, IV/digest semantics or CBC mode.",
+    "No original or decrypted firmware byte is read by this script.",
+    "No identity string or report excerpt is stored in results; report is hashed only."
+  ]
+}

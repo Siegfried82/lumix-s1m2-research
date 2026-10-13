@@ -1,0 +1,64 @@
+{
+  "archive_local": "analysis/sources/linux-4.19.124.tar.gz",
+  "archive_sha256": "2067822653621ff9f3e1acdad99d7777812d0dc1036007921014da18fc9c6fce",
+  "scope": "Published source snapshot; no deployed camera equivalence established",
+  "files": [
+    {
+      "tar_entry": "linux-4.19.124/drivers/staging/exfat/exfat_super.c",
+      "bytes": 99550,
+      "sha256": "4572e0fe9b5a19fee8de7bacb0c7e41a6fb4f52ccb481d009e00409e7304a992",
+      "local_name": "exfat_super.c"
+    },
+    {
+      "tar_entry": "linux-4.19.124/drivers/staging/exfat/exfat.h",
+      "bytes": 31415,
+      "sha256": "9379510c8786c8486d57ee09e91c02bbc1cc68dae47873b79b8cc57999526bd8",
+      "local_name": "exfat.h"
+    },
+    {
+      "tar_entry": "linux-4.19.124/drivers/staging/exfat/exfat_core.c",
+      "bytes": 90431,
+      "sha256": "84907205c728f97774d591e16e6cf33baadeecf227622967680dc24032decb63",
+      "local_name": "exfat_core.c"
+    }
+  ],
+  "publisher_pages": [
+    {
+      "page": "https://ospo.panasonic.com/oss/dsc/DC-S1M2ES.html",
+      "linux_links": [
+        {
+          "href": "https://ospo.panasonic.com/oss/source/dsc/DC-S1M2ES/linux-4.19.124.tar.gz",
+          "label": "linux-4.19.124"
+        },
+        {
+          "href": "https://ospo.panasonic.com/oss/source/dsc/DC-S1M2ES/util-linux-2.32.tar.bz2",
+          "label": "util-linux-2.32"
+        }
+      ],
+      "saved": "DC-S1M2ES.html",
+      "sha256": "97f86c7c06a906d1a1d5c3755fbf9b2df88928548d5819e4a7cc864ae542da3d",
+      "publication_status": "not-distributed; saved name and SHA record historical local capture; consult page URL"
+    },
+    {
+      "page": "https://ospo.panasonic.com/oss/dsc/DC-FZ1K2.html",
+      "linux_links": [
+        {
+          "href": "https://ospo.panasonic.com/oss/source/dsc/DC-FZ1K2/linux-3.18.18.tar.gz",
+          "label": "linux"
+        },
+        {
+          "href": "https://ospo.panasonic.com/oss/source/dsc/DC-FZ1K2/util-linux.tar.gz",
+          "label": "util-linux"
+        }
+      ],
+      "saved": "DC-FZ1K2.html",
+      "sha256": "2def952b36b5f228eebcef98da07ac9d4d0b3edf631d9c0eefd3eb2ea39d4b24",
+      "publication_status": "not-distributed; saved name and SHA record historical local capture; consult page URL"
+    }
+  ],
+  "archive_source_url": "https://ospo.panasonic.com/oss/source/dsc/DC-S1M2ES/linux-4.19.124.tar.gz",
+  "publisher_page": "https://ospo.panasonic.com/oss/dsc/DC-S1M2ES.html",
+  "model_scope": "Panasonic published S1M2/S1M2ES source snapshot; no deployed S1M2/S1R2/S5 image/configuration/hash match established",
+  "provenance_record": "analysis/sources/download_manifest.json",
+  "archive_publication_status": "not-distributed; obtain exact archive from source URL and verify complete SHA-256"
+}

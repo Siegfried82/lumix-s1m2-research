@@ -1,0 +1,160 @@
+{
+  "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+  "method": "Independent owned offline parser; all H000-HFFF rows, both word byte orders, complete binary equality, newline reconstruction. No supplied code executed; no decoded bytes or identities emitted.",
+  "data_checks": [
+    {
+      "text_file": "S5A.TXT",
+      "public_text_bytes": 352570,
+      "public_text_sha256": "c5ac3785f3cf6c639c5339b10e008643701076371e61ab4116c527003582db68",
+      "reported_text_bytes": 356673,
+      "reported_text_sha256": "849bcb306aa0e4e2c5973d231e5fff0c8baff05cbfa6f000558e582942ca71d8",
+      "text_line_count": 4103,
+      "lf_count": 4103,
+      "crlf_count": 0,
+      "reconstructed_crlf_bytes": 356673,
+      "reconstructed_crlf_sha256": "849bcb306aa0e4e2c5973d231e5fff0c8baff05cbfa6f000558e582942ca71d8",
+      "report_matches_after_lf_to_crlf": true,
+      "numeric_headers": {
+        "area_id": 33,
+        "type_id": 0,
+        "start_address": 0,
+        "data_size": 65536
+      },
+      "data_rows": 4096,
+      "row_word_counts": [
+        16
+      ],
+      "indexes_contiguous": true,
+      "first_data_line": 8,
+      "last_data_line": 4103,
+      "parse_errors": [],
+      "words": 65536,
+      "decoded_bytes": 131072,
+      "header_data_size_equals_words": true,
+      "big_endian_words_matches_binary": true,
+      "little_endian_words_matches_binary": false,
+      "binary_file": "ADJUST.bin",
+      "binary_bytes": 131072,
+      "binary_sha256": "6c808c676f79d3626c21bb7ba93b81d5d6447eb36e7fd7cac94512fd1201c183",
+      "entropy_bits_per_byte": 1.625000855073676,
+      "nonzero_bytes": 19064,
+      "nonzero_fraction": 0.14544677734375,
+      "ff_bytes": 439,
+      "validated_code_format_or_update_consumer": false,
+      "format_and_binary_check_passed": true
+    },
+    {
+      "text_file": "S5F.TXT",
+      "public_text_bytes": 352567,
+      "public_text_sha256": "f526a654efac7aab31588e8aba6298a4ffd0ef96b3386b32503d339f85ff458e",
+      "reported_text_bytes": 356670,
+      "reported_text_sha256": "593143338f9b0341986607bfeec82ef2873e0a55c297488945c25e74bf321f01",
+      "text_line_count": 4103,
+      "lf_count": 4103,
+      "crlf_count": 0,
+      "reconstructed_crlf_bytes": 356670,
+      "reconstructed_crlf_sha256": "593143338f9b0341986607bfeec82ef2873e0a55c297488945c25e74bf321f01",
+      "report_matches_after_lf_to_crlf": true,
+      "numeric_headers": {
+        "area_id": 34,
+        "type_id": 0,
+        "start_address": 0,
+        "data_size": 65536
+      },
+      "data_rows": 4096,
+      "row_word_counts": [
+        16
+      ],
+      "indexes_contiguous": true,
+      "first_data_line": 8,
+      "last_data_line": 4103,
+      "parse_errors": [],
+      "words": 65536,
+      "decoded_bytes": 131072,
+      "header_data_size_equals_words": true,
+      "big_endian_words_matches_binary": true,
+      "little_endian_words_matches_binary": false,
+      "binary_file": "FIX.bin",
+      "binary_bytes": 131072,
+      "binary_sha256": "cf49c6336e6d487c11831aee568ad1ba8a5bde799b74deba03b95dd516c592d5",
+      "entropy_bits_per_byte": 2.2980101948005474,
+      "nonzero_bytes": 32017,
+      "nonzero_fraction": 0.24427032470703125,
+      "ff_bytes": 1158,
+      "validated_code_format_or_update_consumer": false,
+      "format_and_binary_check_passed": true
+    },
+    {
+      "text_file": "S5U.TXT",
+      "public_text_bytes": 352565,
+      "public_text_sha256": "312891a99298863893a155e61f01bc4abb9c6fddc8a4484483d5c5f7f3879eb6",
+      "reported_text_bytes": 356668,
+      "reported_text_sha256": "6ef6656bd1f92d224f79f1f2309eb395bb4dd03bcf95e6502e755f5d60625f67",
+      "text_line_count": 4103,
+      "lf_count": 4103,
+      "crlf_count": 0,
+      "reconstructed_crlf_bytes": 356668,
+      "reconstructed_crlf_sha256": "6ef6656bd1f92d224f79f1f2309eb395bb4dd03bcf95e6502e755f5d60625f67",
+      "report_matches_after_lf_to_crlf": true,
+      "numeric_headers": {
+        "area_id": 16,
+        "type_id": 0,
+        "start_address": 0,
+        "data_size": 65536
+      },
+      "data_rows": 4096,
+      "row_word_counts": [
+        16
+      ],
+      "indexes_contiguous": true,
+      "first_data_line": 8,
+      "last_data_line": 4103,
+      "parse_errors": [],
+      "words": 65536,
+      "decoded_bytes": 131072,
+      "header_data_size_equals_words": true,
+      "big_endian_words_matches_binary": true,
+      "little_endian_words_matches_binary": false,
+      "binary_file": "UPDATE.bin",
+      "binary_bytes": 131072,
+      "binary_sha256": "b3817352f31d344284cd6ba9fc5b3fedd01e57becdf1b008c0fd08e62dae4538",
+      "entropy_bits_per_byte": 0.9165283277356282,
+      "nonzero_bytes": 11163,
+      "nonzero_fraction": 0.08516693115234375,
+      "ff_bytes": 1496,
+      "validated_code_format_or_update_consumer": false,
+      "format_and_binary_check_passed": true
+    }
+  ],
+  "pairwise_relations": [
+    {
+      "a": "ADJUST.bin",
+      "b": "FIX.bin",
+      "same_bytes": 88584,
+      "different_bytes": 42488,
+      "equal_sha": false,
+      "nonzero_in_both": 8439,
+      "equal_length": true
+    },
+    {
+      "a": "ADJUST.bin",
+      "b": "UPDATE.bin",
+      "same_bytes": 104892,
+      "different_bytes": 26180,
+      "equal_sha": false,
+      "nonzero_in_both": 4008,
+      "equal_length": true
+    },
+    {
+      "a": "FIX.bin",
+      "b": "UPDATE.bin",
+      "same_bytes": 92414,
+      "different_bytes": 38658,
+      "equal_sha": false,
+      "nonzero_in_both": 4427,
+      "equal_length": true
+    }
+  ],
+  "coverage": "Three textual and three corresponding binary objects only; no camera acquisition, physical map, code consumer or full RAM validation.",
+  "interpretation": "DATA SIZE is checked against word count. Rendering byte order does not establish CPU endianness; entropy does not establish semantics."
+}

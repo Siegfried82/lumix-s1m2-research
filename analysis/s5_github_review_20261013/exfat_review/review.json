@@ -1,0 +1,229 @@
+{
+  "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+  "findings": [
+    {
+      "id": "EX01",
+      "classification": "verified_author_retraction",
+      "claim": "S5 actual out-of-bounds memory write / successful heap placement",
+      "result": "Latest report and both package READMEs retract these conclusions. Retained old sections and CLI messages continue making the rejected inference.",
+      "references": [
+        {
+          "path": "01_研究报告/23_S5_exFAT越界写实机确认_20261013.md",
+          "lines": [
+            3,
+            5,
+            14,
+            18,
+            173,
+            174
+          ]
+        },
+        {
+          "path": "04_工具与脚本/campaign2/exfat_patch.py",
+          "lines": [
+            534,
+            535
+          ]
+        },
+        {
+          "path": "04_工具与脚本/campaign2/s5_exfat_test.sh",
+          "lines": [
+            17,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EX02",
+      "classification": "verified_published_source",
+      "claim": "Specific consumer relevant to S1M2 published source",
+      "result": "exfat_free_cluster FAT-chain branch calls clr_alloc_bitmap before obtaining next FAT link. clr_alloc_bitmap computes i then dereferences vol_amap[i] without local range/NULL guard. Source evidence is conditional; running-camera equivalence and controlled read/write/code execution are absent.",
+      "references": [
+        {
+          "path": "source_evidence/exfat_core.c",
+          "lines": [
+            344,
+            398,
+            609,
+            628
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EX03",
+      "classification": "unsupported_mechanism_claim",
+      "claim": "No crash proves exact NULL early-return check, and kmalloc padding must be zero",
+      "result": "Screen observation does not locate a specific check or executed path. Published 4.19.124 function has no such check; kmalloc_array GFP_KERNEL has no zero flag and initializes only valid entries. S5 uses a separately published source group, not this verified runtime.",
+      "references": [
+        {
+          "path": "01_研究报告/23_S5_exFAT越界写实机确认_20261013.md",
+          "lines": [
+            22,
+            28
+          ]
+        },
+        {
+          "path": "01_研究报告/26_本次运行日志_20261013.md",
+          "lines": [
+            81,
+            85
+          ]
+        },
+        {
+          "path": "source_evidence/exfat_core.c",
+          "lines": [
+            543,
+            553,
+            621,
+            628
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EX04",
+      "classification": "verified_archive_data_mismatch",
+      "claim": "Original same-card before/after 78-cluster release can be replayed",
+      "result": "Archived before199/after112 gives87 raw bit removals; fingerprints0x26620077/0x2668bb77 differ, before19:08 follows after18:02. State has tail115/injected491522/L2, not report22 tail111/injected4. No same-generation deletion attribution allowed.",
+      "references": [
+        {
+          "path": "01_研究报告/22_S5_exFAT越界写前置条件确认_20261013.md",
+          "lines": [
+            39,
+            56
+          ]
+        },
+        {
+          "path": "06_数据与证据/exfat/bm_before.bin.meta.json",
+          "lines": [
+            1
+          ]
+        },
+        {
+          "path": "06_数据与证据/exfat/bm_after.bin.meta.json",
+          "lines": [
+            1
+          ]
+        },
+        {
+          "path": "06_数据与证据/exfat/s5_go1_state.json",
+          "lines": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EX05",
+      "classification": "verified_tool_provenance_gap",
+      "claim": "Card-fingerprint guard and deterministic attribution throughout tools",
+      "result": "verdict checks metadata but skips guard on exception; go1check checks length only, without boot fingerprint/time/mode or injected-cluster ownership verification. Current archived state isL2 and shared /tmp paths are overwritten. Fingerprint pair is not full-card identity even if equal.",
+      "references": [
+        {
+          "path": "04_工具与脚本/campaign2/exfat_patch.py",
+          "lines": [
+            568,
+            581,
+            628,
+            675
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EX06",
+      "classification": "author_observation_unconfirmed_mechanism",
+      "claim": "Long-name crash establishes fixed-buffer overflow and pure directory-only trigger",
+      "result": "Reported A/B matrix is narrative, not original terminal/kernel trace or matched full SD images. mkentries actually allocates one data cluster and writes204B invalid JPEG data. A-row241*576B implies4338 entries, not2169. Character totals are not verified internal byte counts or a demonstrated buffer threshold.",
+      "references": [
+        {
+          "path": "01_研究报告/24_相机长文件名崩溃_定因_20261013.md",
+          "lines": [
+            23,
+            50,
+            55,
+            57
+          ]
+        },
+        {
+          "path": "04_工具与脚本/campaign2/exfat_patch.py",
+          "lines": [
+            1081,
+            1114
+          ]
+        },
+        {
+          "path": "01_研究报告/26_本次运行日志_20261013.md",
+          "lines": [
+            134,
+            150
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EX07",
+      "classification": "verified_side_effects_limited_restore",
+      "claim": "Safe/read-only/recoverable tooling",
+      "result": "Dev opensr+b, FAT/bitmap/directory/file data writes occur; shell force-unmounts even inspection paths. sync swallows fsync failures. Shared backup records one FAT original value, not whole-card recovery; cannot guarantee no hardware damage or complete recovery.",
+      "references": [
+        {
+          "path": "04_工具与脚本/campaign2/exfat_patch.py",
+          "lines": [
+            82,
+            123,
+            143,
+            513,
+            514,
+            1356,
+            1365
+          ]
+        },
+        {
+          "path": "04_工具与脚本/campaign2/s5_exfat_test.sh",
+          "lines": [
+            48,
+            58
+          ]
+        },
+        {
+          "path": "00_项目总结/04_定因与工具链成果_20261013.md",
+          "lines": [
+            152,
+            153
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EX08",
+      "classification": "unsupported_crypto_and_transfer_claim",
+      "claim": "OTP AES blockIV, root guarantees decrypted mtd/rootfs, only real-device trial can decide",
+      "result": "No key consumer/modern UPD decode/verified root/kernel/rootfs or real camera RAM artifact accompanies this claim. grep-negative and names do not prove encryption/key storage; mtd can still hold encoded storage. Official S5 Linux3.18.18 and S1M2 Linux4.19.124 published source allow offline comparison; S1R2 GDB/heap-stability report is referenced but not supplied as a raw exFAT debug artifact in this scoped set.",
+      "references": [
+        {
+          "path": "01_研究报告/21_S1R2_exFAT越界写对S5的意义_20261013.md",
+          "lines": [
+            30,
+            51,
+            85,
+            86
+          ]
+        },
+        {
+          "path": "01_研究报告/22_S5_exFAT越界写前置条件确认_20261013.md",
+          "lines": [
+            130,
+            132
+          ]
+        }
+      ]
+    }
+  ],
+  "covered_remote_files": 20,
+  "external_execution": false,
+  "device_access": false,
+  "firmware_chain_increment": "Published filesystem metadata consumer candidate only; modern UPD0x200/selector3 consumer and49 protected plaintexts unchanged"
+}

@@ -1,0 +1,91 @@
+{
+  "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+  "selected_source_files": 11,
+  "main_conclusion": "Three complete text/binary region-object pairs independently verified. New S5 backup-format positive control, no S1M2 protected plaintext or modern decoder increment.",
+  "verified": {
+    "three_regions_each_bytes": 131072,
+    "rows_each": 4096,
+    "words_per_row": 16,
+    "text_bin_exact_matches": 3,
+    "crlf_reconstruction_matches_reported_hashes_and_sizes": 3,
+    "binary_hashes": {
+      "ADJUST.bin": "6c808c676f79d3626c21bb7ba93b81d5d6447eb36e7fd7cac94512fd1201c183",
+      "FIX.bin": "cf49c6336e6d487c11831aee568ad1ba8a5bde799b74deba03b95dd516c592d5",
+      "UPDATE.bin": "b3817352f31d344284cd6ba9fc5b3fedd01e57becdf1b008c0fd08e62dae4538"
+    }
+  },
+  "not_established": [
+    "Whole physical EEPROM coverage",
+    "Proprietary code/rootfs/full RAM",
+    "All key material absence or OTP location",
+    "Arbitrary accepted editable backup writes or safe recovery",
+    "S1M2 menu/runtime/region equivalence",
+    "Modern UPD decode/boot-image producer"
+  ],
+  "missing_evidence": [
+    "Camera-side acquisition/log/state provenance independent of author report",
+    "Export/import program consumers, map and complete storage range",
+    "Pre/post state hashes after reported menu writes",
+    "Actual firmware version/runtime code and fault trace for filename crash"
+  ],
+  "s1m2_value": [
+    "Full-format positive control and units/endian checks",
+    "Static export formatter/area-ID anchors for future verified code",
+    "Bounded same-origin field/region comparisons with cross-model limits"
+  ],
+  "citations": [
+    {
+      "path": "01_研究报告/27_ROM_BACKUP导出成功与数据解析_20261013.md",
+      "lines": [
+        56,
+        87
+      ],
+      "claim": "Export formats and author hashes; newline restoration independently verified"
+    },
+    {
+      "path": "01_研究报告/27_ROM_BACKUP导出成功与数据解析_20261013.md",
+      "lines": [
+        154,
+        158
+      ],
+      "claim": "Unsupported key/OTP/global scope conclusions"
+    },
+    {
+      "path": "01_研究报告/27_ROM_BACKUP导出成功与数据解析_20261013.md",
+      "lines": [
+        162,
+        175
+      ],
+      "claim": "Reported menu writes and absent precise restoration baseline"
+    },
+    {
+      "path": "00_项目总结/04_定因与工具链成果_20261013.md",
+      "lines": [
+        34,
+        44
+      ],
+      "claim": "Author retracts earlier memory-write attribution"
+    },
+    {
+      "path": "01_研究报告/26_本次运行日志_20261013.md",
+      "lines": [
+        179,
+        186
+      ],
+      "claim": "Old stage remains with unresolved mechanism/backup"
+    }
+  ],
+  "scope": "Only own independent file parser executed; downloaded vendor/external programs never executed; no camera/network-device operations or AGY.",
+  "independent_replay": {
+    "script": "verify_rombackup.py",
+    "script_sha256": "9b92b96dc1bd7b3006089d41b8f5fbdf84849ef8c859fb47c0144f7346a23e47",
+    "result": "script_replay/verification.json",
+    "actual_exit_code": 0,
+    "all_three_binary_comparisons_passed": true,
+    "all_three_reported_crlf_hashes_matched": true,
+    "shared_fields_match_earlier_verification": true,
+    "input_mutation": false,
+    "decoded_binary_output": false,
+    "identity_bytes_output": false
+  }
+}

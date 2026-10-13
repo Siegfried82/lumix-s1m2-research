@@ -1,0 +1,76 @@
+{
+  "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+  "scope": "Static data-only review; no execution of external tools or camera communication",
+  "content_comparison": {
+    "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+    "comparison": "Git blob SHA-1 of complete bytes, retaining all duplicate prior paths",
+    "local_files_hashed": 1229,
+    "remote_files": 864,
+    "classifications": {
+      "no_exact_prior_match": 219,
+      "exact_prior_content": 645
+    },
+    "unmatched_by_root": {
+      ".gitignore": 1,
+      "00_项目总结": 2,
+      "01_研究报告": 66,
+      "04_工具与脚本": 35,
+      "05_源码": 59,
+      "06_数据与证据": 50,
+      "08_总结与工具箱_20261013": 1,
+      "09_exFAT越界写成果包_20261013": 1,
+      "10_定因与工具链成果包（有风险，非专业人员请勿轻易尝试）_20261013": 1,
+      "MANIFEST.sha256": 1,
+      "README.md": 1,
+      "REPO_CONTENTS.md": 1
+    },
+    "remote_unique_contents": 583,
+    "exact_prior_unique_contents": 408,
+    "unmatched_unique_contents": 175,
+    "warning": "No exact match is not proof of new scientific result: redaction, reformatting, metadata, and relocation can change hashes."
+  },
+  "crypto_tool_delta": {
+    "13_firmware_crypto_scripts": "byte-identical to prior originals",
+    "decrypt_attempt_scripts": 2,
+    "unchanged_known_issues": [
+      "missing 0x200 payload base in raw offsets",
+      "invalid CTR iv keyword with exceptions swallowed",
+      "unproven OTP/offline-impossible conclusion"
+    ],
+    "references": {
+      "04_工具与脚本/firmware_crypto/parse_upd.py": [
+        22,
+        26
+      ],
+      "04_工具与脚本/firmware_crypto/keyhunt.py": [
+        87,
+        98
+      ],
+      "README.md": [
+        28,
+        30
+      ]
+    }
+  },
+  "s1r2_handoff_delta": {
+    "documents": 3,
+    "classification": "All complete bytes identical to previously reviewed originals"
+  },
+  "ble_wifi_delta": {
+    "classification": "new compared with exact old archive content",
+    "verified_static_increment": [
+      "SoftAP logs record three reachable TCP ports and rejected CGI requests",
+      "implementation of write-identity before read-initialization protocol",
+      "fix distinguishing ok_under_research from successful authorization"
+    ],
+    "not_independently_verified": [
+      "successful credential extraction run: cited raw log missing",
+      "all arbitrary identities accepted",
+      "BLE bonding necessary",
+      "relation to actual S1M2 firmware handlers"
+    ],
+    "missing_log": "04_工具与脚本/campaign2/out/ble_pair_evidence/ble_cred_read.log",
+    "available_other_run": "04_工具与脚本/campaign2/out/ble_pair_evidence.txt:19-24 reports incomplete disconnect, zero key, no credential values"
+  },
+  "use_for_s1m2": "Protocol state mapping and candidate consumer inputs; not an actual firmware decode or S1M2 RAM dump"
+}

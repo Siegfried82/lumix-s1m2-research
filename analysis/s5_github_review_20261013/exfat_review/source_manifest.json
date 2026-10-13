@@ -1,0 +1,188 @@
+{
+  "repository": "https://github.com/williamwu1234/S5-reverse-engineering",
+  "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+  "fetched_utc": "2026-10-13T15:15:58.670598+00:00",
+  "files": [
+    {
+      "path": "00_项目总结/04_定因与工具链成果_20261013.md",
+      "bytes": 8824,
+      "git_blob_sha1": "828926baa4a25546736909d3b715968070d78c58",
+      "sha256": "c10ad9856bb2ec99c616f9dd9b689f1aee609087a38f8ac9900d3bde0767a464",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/00_%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/04_%E5%AE%9A%E5%9B%A0%E4%B8%8E%E5%B7%A5%E5%85%B7%E9%93%BE%E6%88%90%E6%9E%9C_20261013.md",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "01_研究报告/21_S1R2_exFAT越界写对S5的意义_20261013.md",
+      "bytes": 5613,
+      "git_blob_sha1": "85f97f018a539c8c465dd4decf4ccf198a1c51dc",
+      "sha256": "c60a8aa697b04b40aa6d53c80f8aabb6c3dd22d129b7a77f7313c20e6fdc03ec",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/01_%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A/21_S1R2_exFAT%E8%B6%8A%E7%95%8C%E5%86%99%E5%AF%B9S5%E7%9A%84%E6%84%8F%E4%B9%89_20261013.md",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "01_研究报告/22_S5_exFAT越界写前置条件确认_20261013.md",
+      "bytes": 6517,
+      "git_blob_sha1": "756b75fe8b1aac4087dcc08fca8fef9a3c5bf0f0",
+      "sha256": "a5f5d81a6f3eb053dc8932bfa08e3f7452e72565db6318c684bbaa96c4cf785a",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/01_%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A/22_S5_exFAT%E8%B6%8A%E7%95%8C%E5%86%99%E5%89%8D%E7%BD%AE%E6%9D%A1%E4%BB%B6%E7%A1%AE%E8%AE%A4_20261013.md",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "01_研究报告/23_S5_exFAT越界写实机确认_20261013.md",
+      "bytes": 10228,
+      "git_blob_sha1": "c730f7a7b217a1babed84822ebb7b2c7840bc9a5",
+      "sha256": "f8921b633f6d9ee88c228d69d20cd7d63f2059c9b445a965be3bfc7a965eb4ad",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/01_%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A/23_S5_exFAT%E8%B6%8A%E7%95%8C%E5%86%99%E5%AE%9E%E6%9C%BA%E7%A1%AE%E8%AE%A4_20261013.md",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "04_工具与脚本/campaign2/exfat_patch.py",
+      "bytes": 59943,
+      "git_blob_sha1": "47fbd8fab46eeb1765bb50e0930a2c8dd4790399",
+      "sha256": "15df47853d786aaf30b022c55c7a291d0f7ba836d3b426ac385caba907f2d01f",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/04_%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%84%9A%E6%9C%AC/campaign2/exfat_patch.py",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "04_工具与脚本/campaign2/exfat_spray.py",
+      "bytes": 5842,
+      "git_blob_sha1": "7699a70a6805c6e60b47d8d3a5daac83030a7acb",
+      "sha256": "c77ddd13eb0d1f6d14d973332fb73537064989826ee76c0352912087a0585c55",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/04_%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%84%9A%E6%9C%AC/campaign2/exfat_spray.py",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "04_工具与脚本/campaign2/s5_exfat_test.sh",
+      "bytes": 9529,
+      "git_blob_sha1": "6129170f40ab0b496a9177baa9a10f801373d1c4",
+      "sha256": "f37bf3b6bdcbbcadbd073e465aa768684a85851c46916185f775d87526d17f3d",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/04_%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%84%9A%E6%9C%AC/campaign2/s5_exfat_test.sh",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "06_数据与证据/exfat/.exfat_patch_backup.json",
+      "bytes": 19,
+      "git_blob_sha1": "beca1ece54aeb3a73f6b0d8221d7233030b9aea4",
+      "sha256": "534d4b898f98a93eae37098b503711cd9daf8c49f608a30d1b596948cb531187",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/06_%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%AF%81%E6%8D%AE/exfat/.exfat_patch_backup.json",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "06_数据与证据/exfat/bm_after.bin",
+      "bytes": 61036,
+      "git_blob_sha1": "0c5230dce4e777c49d3a8ec985b87f5894d459d5",
+      "sha256": "0c75e4e929db8b0b0d17de58b2ef44cfd727836171caabbffcf539a3417fd290",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/06_%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%AF%81%E6%8D%AE/exfat/bm_after.bin",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "06_数据与证据/exfat/bm_after.bin.meta.json",
+      "bytes": 122,
+      "git_blob_sha1": "91209e60f0016c5eee3aff458239281cbb2c30d9",
+      "sha256": "aeb04d48bc54b1157c8e3bc0ddec1d9be2f46c880063189feecac7168f4a309a",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/06_%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%AF%81%E6%8D%AE/exfat/bm_after.bin.meta.json",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "06_数据与证据/exfat/bm_before.bin",
+      "bytes": 61036,
+      "git_blob_sha1": "7c98ab1bcf63f4b486c5b4402917210908e5b42a",
+      "sha256": "a1da5e505bf51ccdb415bbff16dad4bd2334c05035e57142df24b28641efc12b",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/06_%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%AF%81%E6%8D%AE/exfat/bm_before.bin",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "06_数据与证据/exfat/bm_before.bin.meta.json",
+      "bytes": 123,
+      "git_blob_sha1": "7da9af29175e5b03f1a17e9fbc1c3b350eff0993",
+      "sha256": "647a285e216c6700df34bac85945894de8a5baf5922b079af8e9da86920b0f27",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/06_%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%AF%81%E6%8D%AE/exfat/bm_before.bin.meta.json",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "06_数据与证据/exfat/bm_now.bin",
+      "bytes": 61036,
+      "git_blob_sha1": "932ec7a417c918555e2d9d8054900631a439adf0",
+      "sha256": "4f98c07abb27f68e34e2b5cc7d82e5e99db3e33c44e97e6f5da8238669d15e5f",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/06_%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%AF%81%E6%8D%AE/exfat/bm_now.bin",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "06_数据与证据/exfat/bm_now.bin.meta.json",
+      "bytes": 120,
+      "git_blob_sha1": "1822f93262a22e109a9a6ef2c679295cf26c9f1d",
+      "sha256": "4ea528a4ca09507e829911e2e3dac7bced07b8613f317b53bf0b6f6b6db85eab",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/06_%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%AF%81%E6%8D%AE/exfat/bm_now.bin.meta.json",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "06_数据与证据/exfat/s5_go1_state.json",
+      "bytes": 467,
+      "git_blob_sha1": "0c1b7dd604a7d785cd6f6b0203934ca738ce239e",
+      "sha256": "daf7820de7e946c862923b8dece01a670f879b99cf016e2cbd1c87083e78dcff",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/06_%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%AF%81%E6%8D%AE/exfat/s5_go1_state.json",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "09_exFAT越界写成果包_20261013/README.md",
+      "bytes": 2045,
+      "git_blob_sha1": "aec03ea0f2409ca9b764722f7aa7422012652069",
+      "sha256": "6e6706ec7b116a9b47b39c4d91e52423a1e738d987342577c6e74b17913450ed",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/09_exFAT%E8%B6%8A%E7%95%8C%E5%86%99%E6%88%90%E6%9E%9C%E5%8C%85_20261013/README.md",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "10_定因与工具链成果包（有风险，非专业人员请勿轻易尝试）_20261013/README.md",
+      "bytes": 2697,
+      "git_blob_sha1": "c7ca886466fdfdb1e7cc0b1df02900a03b46b3a4",
+      "sha256": "d5c5c8654f6677598088d35d118d285804bf05ebd4bd05076b8eaefe3492c7bf",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/10_%E5%AE%9A%E5%9B%A0%E4%B8%8E%E5%B7%A5%E5%85%B7%E9%93%BE%E6%88%90%E6%9E%9C%E5%8C%85%EF%BC%88%E6%9C%89%E9%A3%8E%E9%99%A9%EF%BC%8C%E9%9D%9E%E4%B8%93%E4%B8%9A%E4%BA%BA%E5%91%98%E8%AF%B7%E5%8B%BF%E8%BD%BB%E6%98%93%E5%B0%9D%E8%AF%95%EF%BC%89_20261013/README.md",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "01_研究报告/24_相机长文件名崩溃_定因_20261013.md",
+      "bytes": 5520,
+      "git_blob_sha1": "180fe12b32089b2b70eabd1f78380b04f2744aba",
+      "sha256": "547a5999eda9d96de00cee2e35ad0452959b3bda128d04b3db24a591d3ae57ae",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/01_%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A/24_%E7%9B%B8%E6%9C%BA%E9%95%BF%E6%96%87%E4%BB%B6%E5%90%8D%E5%B4%A9%E6%BA%83_%E5%AE%9A%E5%9B%A0_20261013.md",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "01_研究报告/25_操作记录与风险手册_20261013.md",
+      "bytes": 12909,
+      "git_blob_sha1": "f35bbf2d56e8987e4e73b7e8a543fd06370cc6e5",
+      "sha256": "fd0a7df1f8caad36e2f290ca9a84478028613e0f71737174310ba4efcec46182",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/01_%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A/25_%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95%E4%B8%8E%E9%A3%8E%E9%99%A9%E6%89%8B%E5%86%8C_20261013.md",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    },
+    {
+      "path": "01_研究报告/26_本次运行日志_20261013.md",
+      "bytes": 8647,
+      "git_blob_sha1": "6622e19464a646a66cd8e921a8fd601dccff7bbb",
+      "sha256": "501414b78bdf4d694daff967e06681a0b511c178da33c18fea93b6dc4f609028",
+      "source": "https://raw.githubusercontent.com/williamwu1234/S5-reverse-engineering/872b9bc83e1f2ba8e291c07fe28da6f1de8382cb/01_%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A/26_%E6%9C%AC%E6%AC%A1%E8%BF%90%E8%A1%8C%E6%97%A5%E5%BF%97_20261013.md",
+      "commit": "872b9bc83e1f2ba8e291c07fe28da6f1de8382cb",
+      "blob_verified": true
+    }
+  ],
+  "scope": "download/read only; no supplied code or disk image executed or triggered"
+}

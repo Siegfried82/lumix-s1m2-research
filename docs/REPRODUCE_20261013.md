@@ -1,8 +1,8 @@
 # 复现步骤、实际输入与缺口（2026-10-13）
 
-本指南补充[原公开复现指南](REPRODUCE.md)，覆盖10月10日后的真实旧消费者、多机型、QEMU及外部四份材料核验。它不提供已经成功的S1M2专有载荷解码流程。
+本指南补充[原公开复现指南](REPRODUCE.md)，覆盖10月10日后的真实旧消费者、多机型、QEMU、既有外部材料及本轮S5仓库/S1R2报告/配对实物核验。它不提供已经成功的S1M2专有载荷解码流程。
 
-**本次文稿整理静态检查了入口、参数、导入和写回位置，并核对历史机器结果，没有重新运行全部历史矩阵、设备实验或QEMU。** 各阶段下的“已有通过”指保存的实际实验，不表示这次新克隆全部自动通过。依赖/发布排除项须与清单一起读。
+**本轮新增目录、配对、ROM转换、exFAT字节和合成密码机制检查已有实际执行记录；没有重新运行全部历史密码矩阵、设备实验或QEMU。** 各阶段下的“已有通过”指保存的实际实验，不表示新克隆全部自动通过。依赖/发布排除项须与清单一起读。
 
 ## 1. 准备公开档案与独立重放副本
 
@@ -159,7 +159,75 @@ python3 analysis/usb_video_paired_20261012/analyze_capture.py
 
 LUT `verify_usb.py`、`verify_cleanup_final.py`需完整配置与读回字节以及本项目数值/布局工具；缺少私有原输入时只能复核公开结果/脱敏范围，不能重算原摘要。历史真实上传支持20块、107811通道精确读回和最终配置恢复空槽基线。**不运行upload.py的--live、采集器、外部set/restore、USB异常探针、配对或刷写程序。** 当前授权为离线，历史授权不自动扩展到读者设备。
 
-## 10. 复现遇到缺失时如何记录
+## 10. 本轮接续材料的离线字节与机制检查
+
+审查源仓库固定提交为 `872b9bc83e1f2ba8e291c07fe28da6f1de8382cb`，随后收到的S1R2报告和S5配对JSON/BIN是独立输入。来源、评论和公开范围见[S5仓库接续入口](../external_review/20261013/S5_仓库接续/README.md)。本节仅运行本项目自行编写的解析器，不运行旧 `parse_upd.py`、枚举器、配对工具、相机/蓝牙请求或介质修改程序。
+
+### 10.1 随库JSON/BIN内在检查
+
+```sh
+python3 analysis/s5_pair_review_20261013/binary_check.py --output ../s5-pair-bytes-check.json
+```
+
+可用 `--json`、`--bin`、`--report` 指定其它保存副本。只需Python3标准库；默认输入是本阶段originals中的三份公开副本，原稿已脱敏时报告散列须与公开清单核对。这个入口只检查字段/序列化并散列报告，不读取固件或枚举key。
+
+应得到35条、每条82字节、BIN与JSON逐项相符；摘要仅16字节前缀，存在1个混合类型对和3条相同C1/不同候选IV的必失败元组。它不是“配对可用于密码筛选”的验收。[已有实际输出](../analysis/s5_pair_review_20261013/binary_check.json)。
+
+### 10.2 用精确S5 V2.9检查真实切片
+
+自行取得90,238,464字节S5 V2.9，先核完整SHA-256：`b2ec4aeec209693b874df8dfdf11fc85b38fa4675b44ec554b7a167f430827e1`。
+
+```sh
+python3 analysis/s5_pair_review_20261013/verify_pairs_against_firmware.py \
+  --pairs analysis/s5_pair_review_20261013/originals/pairs_s5.json \
+  --v29 /path/to/S5___V29.bin \
+  --output-dir ../s5-pair-firmware-check
+```
+
+Python3标准库即可。输出目录必须不存在；程序不改输入、不运行固件，输出verification.json和仅V2.9版内已核范围的corrected_v29_comparisons.json。预期48条目录、CRC匹配、38个侧元数据相符且全部首块匹配漏加0x200的错误起点，0个匹配正确起点；正确history完整262,144字节全00且完整摘要匹配。[已执行结果](../analysis/s5_pair_review_20261013/actual_verification/verification.json)。
+
+`--v24`只在另行取得并核定精确V2.4来源及完整散列时填写；本轮没有该输入，32个V2.4侧未复验，不能换成其他版本。不要把仅纠正V2.9的JSON当完整跨版本密码枚举输入。
+
+可选 `--rom-base /path/to/rombackup_20261013` 读取同源ADJUST.bin和FIX.bin并与V2.9 eep_adj/eep_fix目录摘要比对。含设备身份的原数据未随库分发，必须按[来源清单](../analysis/s5_github_review_20261013/rom_backup_review/sources.json)先核对应完整散列。本轮实际两份均不匹配相应固件候选摘要；这不是更新镜像明文验收。
+
+### 10.3 S1M2目录对照和合成CBC/CTR机制
+
+该实现除了标准库还需 `cryptography`，实际执行记录版本为50.0.2。这个库只对源码中的合成输入/公开NIST向量运行AES，不用于解密相机或枚举密钥；环境应与现有历史PyCryptodome阶段区分。
+
+```sh
+python3 analysis/s1r2_crypto_review_20261013/verify_claim_boundaries.py \
+  --input /path/to/S1m2_V14.bin \
+  --output ../s1m2-cbc-boundary-check.json
+```
+
+先核第2节V1.4完整散列；输出文件必须不存在且与输入分开。预期62条目录、CRC匹配、7个非空同候选摘要配对，其中6个flags=3、1个flags=2原始相同，三对象形成的3个两两配对不能视为独立。合成检查通过NIST CBC向量、展示后续明文不同仍通过首块条件及正确CTR key被CBC假设拒绝。[实际结果](../analysis/s1r2_crypto_review_20261013/s1m2_and_synthetic_verification.json)、[环境与执行记录](../analysis/s5_pair_review_20261013/execution_record.json)。
+
+该输入是S1M2 v1.4，不是S1R2报告未附的v1.1/v1.5；不能称原报告算法/工具/枚举已复验。
+
+### 10.4 ROM文本转换与exFAT档案检查
+
+ROM转换解析器只需Python3标准库。按固定源提交和sources.json自行取得S5A.TXT/S5F.TXT/S5U.TXT及对应ADJUST.bin/FIX.bin/UPDATE.bin，再运行：
+
+```sh
+python3 analysis/s5_github_review_20261013/rom_backup_review/verify_rombackup.py \
+  --source-base /path/to/rombackup_20261013 \
+  --output-dir ../s5-rom-format-check
+```
+
+输出目录必须不存在且不能位于输入目录内；只写verification.json，不导出二进制或身份内容，不改原输入。检查全部H000–HFFF行、word数、两种字节转换和LF/CRLF摘要；预期三个对象各131,072字节，高字节在前转换与BIN完整一致，重建CRLF后匹配原报告所列摘要。[已执行结果](../analysis/s5_github_review_20261013/rom_backup_review/script_replay/verification.json)。
+
+exFAT静态资料复核仅检查归档位图、JSON、选取源文件及来源散列。公开版解析器要求显式输入/输出路径；按source_manifest.json取得20份精确原稿，并保留清单中的相对目录后执行：
+
+```sh
+python3 analysis/s5_github_review_20261013/exfat_review/verify_exfat_evidence.py \
+  --source-base /path/to/s5-exfat-originals \
+  --source-manifest analysis/s5_github_review_20261013/exfat_review/source_manifest.json \
+  --output ../s5-exfat-evidence-check.json
+```
+
+只需Python3标准库。`--source-base`与`--output`必填，`--source-manifest`默认本阶段source_manifest.json；输出必须不存在且不能位于输入目录内。源文件若只提供脱敏公开版，其散列不再等于原稿，不能拿它们验证原始Git blob；本入口要求来源清单中的完整原始SHA。预期20份归档字节身份匹配、两个候选位图对指纹不匹配、报告22所述状态与现存状态不匹配；这不复现相机越界写或长文件名重启。源码消费者需按[源码来源清单](../analysis/s5_github_review_20261013/exfat_review/source_evidence/manifest.json)取得精确4.19.124证据，不借它替代S5 3.18实际内核。
+
+## 11. 复现遇到缺失时如何记录
 
 记录缺的精确相对路径、来源、预期SHA、所属阶段及是否为公开排除项；不要制造零文件或从别的版本填补。脚本存在、AST解析、报告有数字、模型会话启动均不是实验通过。
 
