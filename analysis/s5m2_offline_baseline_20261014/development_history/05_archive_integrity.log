@@ -1,0 +1,15 @@
+
+--- STDERR ---
+Traceback (most recent call last):
+  File "<REPOSITORY>\evidence\verify_public.py", line 28, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "<REPOSITORY>\evidence\verify_public.py", line 12, in main
+    for row in csv.DictReader(f):
+               ^^^^^^^^^^^^^^^^^
+  File "<PYTHON_RUNTIME>\Lib\csv.py", line 115, in __next__
+    self.fieldnames
+  File "<PYTHON_RUNTIME>\Lib\csv.py", line 102, in fieldnames
+    self._fieldnames = next(self.reader)
+                       ^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'cp950' codec can't decode byte 0xe5 in position 1092: illegal multibyte sequence
