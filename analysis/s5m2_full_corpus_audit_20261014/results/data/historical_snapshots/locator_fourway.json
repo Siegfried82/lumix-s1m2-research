@@ -1,0 +1,2377 @@
+{
+  "format": "s5m2-fourway-generation-compare-v1",
+  "roles": [
+    "s5m2_before",
+    "s5m2_after",
+    "s5m2x_before",
+    "s5m2x_after"
+  ],
+  "images": [
+    {
+      "path": "C:\\Users\\KUO\\Desktop\\軟體捷徑\\Plady’s Luts\\Magic LUT\\新固件1020\\S5m2_V34.bin",
+      "model": "MC8223",
+      "size": 179207168,
+      "sha256": "1561eeeedf19f584af52920dba5370cc1fe1caab9fa38c62608e1e53156e9570"
+    },
+    {
+      "path": "work\\firmware\\V37\\S5m2_V37.bin",
+      "model": "MC8223",
+      "size": 179207168,
+      "sha256": "99180a1738d74d0d0062e146dd0f239f65cb5bca6b49a8d2a1a94a8018d93ffa"
+    },
+    {
+      "path": "C:\\Users\\KUO\\Desktop\\軟體捷徑\\Plady’s Luts\\Magic LUT\\新固件1020\\S5m2XV24.bin",
+      "model": "MC8223X",
+      "size": 179207168,
+      "sha256": "f98af181743dbd971bdcbd8afa779d5598dcebb99767be2182431f857daebfb7"
+    },
+    {
+      "path": "work\\firmware\\local\\zip_4\\S5m2XV27.bin",
+      "model": "MC8223X",
+      "size": 179207168,
+      "sha256": "58603257c06c35da637af82f4a433faeaf82aaefc58021658d23ceb81721474a"
+    }
+  ],
+  "common_partition_count": 58,
+  "digest_change_pattern_mismatches": [],
+  "nonce_change_pattern_mismatches": [],
+  "cross_model_digest_differences_before": [
+    "compress_pr#0",
+    "eep_fix#0",
+    "osdover#0",
+    "postboot1_r#0",
+    "postboot1_r#1",
+    "postboot3_r#0",
+    "postboot3_r#1",
+    "postboot5_r#0",
+    "postboot5_r#1",
+    "program#0"
+  ],
+  "cross_model_digest_differences_after": [
+    "compress_pr#0",
+    "eep_fix#0",
+    "osdover#0",
+    "postboot1_r#0",
+    "postboot1_r#1",
+    "postboot3_r#0",
+    "postboot3_r#1",
+    "postboot5_r#0",
+    "postboot5_r#1",
+    "program#0"
+  ],
+  "aggregate_delta": {
+    "active_delta_bytes": 156602166,
+    "equal_delta_bytes_within_active": 608396,
+    "equal_delta_ratio_within_active": 0.0038849781937243446,
+    "partitions_with_active_delta": 35,
+    "partitions_with_any_exact_equal_delta_block": []
+  },
+  "partitions": [
+    {
+      "identity": "boot#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        5632,
+        5632,
+        5632,
+        5632
+      ],
+      "offsets": [
+        179201024,
+        179201024,
+        179201024,
+        179201024
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 5632,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "compress_pr#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        16777216,
+        16777216,
+        16777216,
+        16777216
+      ],
+      "offsets": [
+        47448064,
+        47448064,
+        47448064,
+        47448064
+      ],
+      "digest_equal_cross_model_before": false,
+      "digest_equal_cross_model_after": false,
+      "digest_changed_s5m2": true,
+      "digest_changed_s5m2x": true,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 16777216,
+        "active_delta_bytes": 16776962,
+        "equal_delta_bytes_within_active": 65340,
+        "equal_delta_ratio_within_active": 0.003894626452631889,
+        "active_64k_blocks": 256,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "dsp_eisldc_#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        65536,
+        65536,
+        65536,
+        65536
+      ],
+      "offsets": [
+        167378944,
+        167378944,
+        167378944,
+        167378944
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 65536,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "dsp_eisldc_#1",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        65536,
+        65536,
+        65536,
+        65536
+      ],
+      "offsets": [
+        167444480,
+        167444480,
+        167444480,
+        167444480
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 65536,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "dsp_kizu_c#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        65536,
+        65536,
+        65536,
+        65536
+      ],
+      "offsets": [
+        167247872,
+        167247872,
+        167247872,
+        167247872
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 65536,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "dsp_kizu_d#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        65536,
+        65536,
+        65536,
+        65536
+      ],
+      "offsets": [
+        167313408,
+        167313408,
+        167313408,
+        167313408
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 65536,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "eep_act_a#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "offsets": [
+        103415808,
+        103415808,
+        103415808,
+        103415808
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 512,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "eep_act_b#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "offsets": [
+        103546880,
+        103546880,
+        103546880,
+        103546880
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 512,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "eep_adj#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        131072,
+        131072,
+        131072,
+        131072
+      ],
+      "offsets": [
+        103153664,
+        103153664,
+        103153664,
+        103153664
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 131072,
+        "active_delta_bytes": 131071,
+        "equal_delta_bytes_within_active": 481,
+        "equal_delta_ratio_within_active": 0.003669766767629758,
+        "active_64k_blocks": 2,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "eep_exp_a#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        12288,
+        12288,
+        12288,
+        12288
+      ],
+      "offsets": [
+        103677952,
+        103677952,
+        103677952,
+        103677952
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 12288,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "eep_exp_b#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        12288,
+        12288,
+        12288,
+        12288
+      ],
+      "offsets": [
+        103809024,
+        103809024,
+        103809024,
+        103809024
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 12288,
+        "active_delta_bytes": 12288,
+        "equal_delta_bytes_within_active": 40,
+        "equal_delta_ratio_within_active": 0.0032552083333333335,
+        "active_64k_blocks": 1,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "eep_fix#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        131072,
+        131072,
+        131072,
+        131072
+      ],
+      "offsets": [
+        103284736,
+        103284736,
+        103284736,
+        103284736
+      ],
+      "digest_equal_cross_model_before": false,
+      "digest_equal_cross_model_after": false,
+      "digest_changed_s5m2": true,
+      "digest_changed_s5m2x": true,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 131072,
+        "active_delta_bytes": 31743,
+        "equal_delta_bytes_within_active": 136,
+        "equal_delta_ratio_within_active": 0.004284409161074883,
+        "active_64k_blocks": 1,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "eep_ow_a#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        131072,
+        131072,
+        131072,
+        131072
+      ],
+      "offsets": [
+        102891520,
+        102891520,
+        102891520,
+        102891520
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 131072,
+        "active_delta_bytes": 131071,
+        "equal_delta_bytes_within_active": 515,
+        "equal_delta_ratio_within_active": 0.003929168160767828,
+        "active_64k_blocks": 2,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "eep_ow_b#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        131072,
+        131072,
+        131072,
+        131072
+      ],
+      "offsets": [
+        103022592,
+        103022592,
+        103022592,
+        103022592
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 131072,
+        "active_delta_bytes": 131070,
+        "equal_delta_bytes_within_active": 484,
+        "equal_delta_ratio_within_active": 0.003692683299000534,
+        "active_64k_blocks": 2,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "grid_data#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        2359296,
+        2359296,
+        2359296,
+        2359296
+      ],
+      "offsets": [
+        167641088,
+        167641088,
+        167641088,
+        167641088
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 2359296,
+        "active_delta_bytes": 1016817,
+        "equal_delta_bytes_within_active": 3963,
+        "equal_delta_ratio_within_active": 0.003897456474468857,
+        "active_64k_blocks": 16,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "history#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        262144,
+        262144,
+        262144,
+        262144
+      ],
+      "offsets": [
+        103940096,
+        103940096,
+        103940096,
+        103940096
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 262144,
+        "active_delta_bytes": 262139,
+        "equal_delta_bytes_within_active": 1007,
+        "equal_delta_ratio_within_active": 0.0038414734167750695,
+        "active_64k_blocks": 4,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "hm_c_ddr#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        3145728,
+        3145728,
+        3145728,
+        3145728
+      ],
+      "offsets": [
+        150601728,
+        150601728,
+        150601728,
+        150601728
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 3145728,
+        "active_delta_bytes": 3145674,
+        "equal_delta_bytes_within_active": 12353,
+        "equal_delta_ratio_within_active": 0.00392698035460763,
+        "active_64k_blocks": 48,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "hm_d_ddr#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        1048576,
+        1048576,
+        1048576,
+        1048576
+      ],
+      "offsets": [
+        153747456,
+        153747456,
+        153747456,
+        153747456
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 1048576,
+        "active_delta_bytes": 1048562,
+        "equal_delta_bytes_within_active": 4051,
+        "equal_delta_ratio_within_active": 0.003863386237532926,
+        "active_64k_blocks": 16,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "hm_d_nw_1st#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        1441792,
+        1441792,
+        1441792,
+        1441792
+      ],
+      "offsets": [
+        170000384,
+        170000384,
+        170000384,
+        170000384
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 1441792,
+        "active_delta_bytes": 1441770,
+        "equal_delta_bytes_within_active": 5574,
+        "equal_delta_ratio_within_active": 0.003866081275099357,
+        "active_64k_blocks": 22,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "hm_d_nw_2nd#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        1441792,
+        1441792,
+        1441792,
+        1441792
+      ],
+      "offsets": [
+        171442176,
+        171442176,
+        171442176,
+        171442176
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 1441792,
+        "active_delta_bytes": 1441776,
+        "equal_delta_bytes_within_active": 5633,
+        "equal_delta_ratio_within_active": 0.003906986938331613,
+        "active_64k_blocks": 22,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "hm_d_nw_3rd#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        1441792,
+        1441792,
+        1441792,
+        1441792
+      ],
+      "offsets": [
+        172883968,
+        172883968,
+        172883968,
+        172883968
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 1441792,
+        "active_delta_bytes": 1441765,
+        "equal_delta_bytes_within_active": 5492,
+        "equal_delta_ratio_within_active": 0.003809219949159537,
+        "active_64k_blocks": 22,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "hm_d_nw_4th#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        1441792,
+        1441792,
+        1441792,
+        1441792
+      ],
+      "offsets": [
+        174325760,
+        174325760,
+        174325760,
+        174325760
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 1441792,
+        "active_delta_bytes": 1441772,
+        "equal_delta_bytes_within_active": 5656,
+        "equal_delta_ratio_within_active": 0.0039229503694065354,
+        "active_64k_blocks": 22,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "hm_d_nw_5th#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        1441792,
+        1441792,
+        1441792,
+        1441792
+      ],
+      "offsets": [
+        175767552,
+        175767552,
+        175767552,
+        175767552
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 1441792,
+        "active_delta_bytes": 1441765,
+        "equal_delta_bytes_within_active": 5497,
+        "equal_delta_ratio_within_active": 0.0038126879207082986,
+        "active_64k_blocks": 22,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "hm_d_nw_6th#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        1441792,
+        1441792,
+        1441792,
+        1441792
+      ],
+      "offsets": [
+        177209344,
+        177209344,
+        177209344,
+        177209344
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 1441792,
+        "active_delta_bytes": 1441768,
+        "equal_delta_bytes_within_active": 5535,
+        "equal_delta_ratio_within_active": 0.003839036516277237,
+        "active_64k_blocks": 22,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "hm_d_nw_7th#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        1441792,
+        1441792,
+        1441792,
+        1441792
+      ],
+      "offsets": [
+        178651136,
+        178651136,
+        178651136,
+        178651136
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": false,
+      "delta_stats": null
+    },
+    {
+      "identity": "hr_c_ddr#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        524288,
+        524288,
+        524288,
+        524288
+      ],
+      "offsets": [
+        155451392,
+        155451392,
+        155451392,
+        155451392
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 524288,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "hr_c_prog#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        65536,
+        65536,
+        65536,
+        65536
+      ],
+      "offsets": [
+        154796032,
+        154796032,
+        154796032,
+        154796032
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 65536,
+        "active_delta_bytes": 65536,
+        "equal_delta_bytes_within_active": 234,
+        "equal_delta_ratio_within_active": 0.003570556640625,
+        "active_64k_blocks": 1,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "hr_d_prog#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        524288,
+        524288,
+        524288,
+        524288
+      ],
+      "offsets": [
+        154927104,
+        154927104,
+        154927104,
+        154927104
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 524288,
+        "active_delta_bytes": 162816,
+        "equal_delta_bytes_within_active": 625,
+        "equal_delta_ratio_within_active": 0.003838689072327044,
+        "active_64k_blocks": 3,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "kizu_data#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        524288,
+        524288,
+        524288,
+        524288
+      ],
+      "offsets": [
+        143654912,
+        143654912,
+        143654912,
+        143654912
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 524288,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "lens_hist#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        393216,
+        393216,
+        393216,
+        393216
+      ],
+      "offsets": [
+        104202240,
+        104202240,
+        104202240,
+        104202240
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 393216,
+        "active_delta_bytes": 393213,
+        "equal_delta_bytes_within_active": 1555,
+        "equal_delta_ratio_within_active": 0.003954599669899012,
+        "active_64k_blocks": 6,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "loader1#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        131072,
+        131072,
+        131072,
+        131072
+      ],
+      "offsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": true,
+      "digest_changed_s5m2x": true,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 131072,
+        "active_delta_bytes": 126077,
+        "equal_delta_bytes_within_active": 561,
+        "equal_delta_ratio_within_active": 0.004449661714666434,
+        "active_64k_blocks": 2,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "loader2#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offsets": [
+        131072,
+        131072,
+        131072,
+        131072
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 0,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "loader3#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offsets": [
+        131072,
+        131072,
+        131072,
+        131072
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 0,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "lut2_data#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        8781824,
+        8781824,
+        8781824,
+        8781824
+      ],
+      "offsets": [
+        158466048,
+        158466048,
+        158466048,
+        158466048
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 8781824,
+        "active_delta_bytes": 393212,
+        "equal_delta_bytes_within_active": 1477,
+        "equal_delta_ratio_within_active": 0.0037562434513697444,
+        "active_64k_blocks": 7,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "lut_data#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        2228224,
+        2228224,
+        2228224,
+        2228224
+      ],
+      "offsets": [
+        156237824,
+        156237824,
+        156237824,
+        156237824
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 2228224,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "mbr_dummy_d#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        131072,
+        131072,
+        131072,
+        131072
+      ],
+      "offsets": [
+        180092928,
+        180092928,
+        180092928,
+        180092928
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": false,
+      "delta_stats": null
+    },
+    {
+      "identity": "menu_save#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        262144,
+        262144,
+        262144,
+        262144
+      ],
+      "offsets": [
+        143392768,
+        143392768,
+        143392768,
+        143392768
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 262144,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "music#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        3538944,
+        3538944,
+        3538944,
+        3538944
+      ],
+      "offsets": [
+        104595456,
+        104595456,
+        104595456,
+        104595456
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 3538944,
+        "active_delta_bytes": 3538888,
+        "equal_delta_bytes_within_active": 13519,
+        "equal_delta_ratio_within_active": 0.0038201265482264487,
+        "active_64k_blocks": 54,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "osddata#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        18612224,
+        18612224,
+        18612224,
+        18612224
+      ],
+      "offsets": [
+        124387328,
+        124387328,
+        124387328,
+        124387328
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": true,
+      "digest_changed_s5m2x": true,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 18612224,
+        "active_delta_bytes": 17726219,
+        "equal_delta_bytes_within_active": 68908,
+        "equal_delta_ratio_within_active": 0.003887349016730528,
+        "active_64k_blocks": 271,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "osdover#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        16252928,
+        16252928,
+        16252928,
+        16252928
+      ],
+      "offsets": [
+        108134400,
+        108134400,
+        108134400,
+        108134400
+      ],
+      "digest_equal_cross_model_before": false,
+      "digest_equal_cross_model_after": false,
+      "digest_changed_s5m2": true,
+      "digest_changed_s5m2x": true,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 16252928,
+        "active_delta_bytes": 16252679,
+        "equal_delta_bytes_within_active": 63186,
+        "equal_delta_ratio_within_active": 0.0038877282939015776,
+        "active_64k_blocks": 248,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "postboot1_r#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        6553600,
+        6553600,
+        6553600,
+        6553600
+      ],
+      "offsets": [
+        64225280,
+        64225280,
+        64225280,
+        64225280
+      ],
+      "digest_equal_cross_model_before": false,
+      "digest_equal_cross_model_after": false,
+      "digest_changed_s5m2": true,
+      "digest_changed_s5m2x": true,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 6553600,
+        "active_delta_bytes": 6553501,
+        "equal_delta_bytes_within_active": 25288,
+        "equal_delta_ratio_within_active": 0.0038587008684365805,
+        "active_64k_blocks": 100,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "postboot1_r#1",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        6160384,
+        6160384,
+        6160384,
+        6160384
+      ],
+      "offsets": [
+        81133568,
+        81133568,
+        81133568,
+        81133568
+      ],
+      "digest_equal_cross_model_before": false,
+      "digest_equal_cross_model_after": false,
+      "digest_changed_s5m2": true,
+      "digest_changed_s5m2x": true,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 6160384,
+        "active_delta_bytes": 6160280,
+        "equal_delta_bytes_within_active": 23973,
+        "equal_delta_ratio_within_active": 0.0038915438908621036,
+        "active_64k_blocks": 94,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "postboot2_r#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        131072,
+        131072,
+        131072,
+        131072
+      ],
+      "offsets": [
+        70778880,
+        70778880,
+        70778880,
+        70778880
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 131072,
+        "active_delta_bytes": 131071,
+        "equal_delta_bytes_within_active": 506,
+        "equal_delta_ratio_within_active": 0.003860503086113633,
+        "active_64k_blocks": 2,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "postboot3_r#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        8257536,
+        8257536,
+        8257536,
+        8257536
+      ],
+      "offsets": [
+        70909952,
+        70909952,
+        70909952,
+        70909952
+      ],
+      "digest_equal_cross_model_before": false,
+      "digest_equal_cross_model_after": false,
+      "digest_changed_s5m2": true,
+      "digest_changed_s5m2x": true,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 8257536,
+        "active_delta_bytes": 8257405,
+        "equal_delta_bytes_within_active": 31983,
+        "equal_delta_ratio_within_active": 0.003873250736762942,
+        "active_64k_blocks": 126,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "postboot3_r#1",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        13893632,
+        13893632,
+        13893632,
+        13893632
+      ],
+      "offsets": [
+        87293952,
+        87293952,
+        87293952,
+        87293952
+      ],
+      "digest_equal_cross_model_before": false,
+      "digest_equal_cross_model_after": false,
+      "digest_changed_s5m2": true,
+      "digest_changed_s5m2x": true,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 13893632,
+        "active_delta_bytes": 13893409,
+        "equal_delta_bytes_within_active": 53812,
+        "equal_delta_ratio_within_active": 0.0038732034736758993,
+        "active_64k_blocks": 212,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "postboot4_r#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        131072,
+        131072,
+        131072,
+        131072
+      ],
+      "offsets": [
+        79167488,
+        79167488,
+        79167488,
+        79167488
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 131072,
+        "active_delta_bytes": 131071,
+        "equal_delta_bytes_within_active": 480,
+        "equal_delta_ratio_within_active": 0.003662137314890403,
+        "active_64k_blocks": 2,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "postboot5_r#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        1835008,
+        1835008,
+        1835008,
+        1835008
+      ],
+      "offsets": [
+        79298560,
+        79298560,
+        79298560,
+        79298560
+      ],
+      "digest_equal_cross_model_before": false,
+      "digest_equal_cross_model_after": false,
+      "digest_changed_s5m2": true,
+      "digest_changed_s5m2x": true,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 1835008,
+        "active_delta_bytes": 1834993,
+        "equal_delta_bytes_within_active": 7240,
+        "equal_delta_ratio_within_active": 0.003945519138220146,
+        "active_64k_blocks": 28,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "postboot5_r#1",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        1703936,
+        1703936,
+        1703936,
+        1703936
+      ],
+      "offsets": [
+        101187584,
+        101187584,
+        101187584,
+        101187584
+      ],
+      "digest_equal_cross_model_before": false,
+      "digest_equal_cross_model_after": false,
+      "digest_changed_s5m2": true,
+      "digest_changed_s5m2x": true,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 1703936,
+        "active_delta_bytes": 1703913,
+        "equal_delta_bytes_within_active": 6667,
+        "equal_delta_ratio_within_active": 0.00391275845656439,
+        "active_64k_blocks": 26,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "program#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        46923776,
+        46923776,
+        46923776,
+        46923776
+      ],
+      "offsets": [
+        524288,
+        524288,
+        524288,
+        524288
+      ],
+      "digest_equal_cross_model_before": false,
+      "digest_equal_cross_model_after": false,
+      "digest_changed_s5m2": true,
+      "digest_changed_s5m2x": true,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 46923776,
+        "active_delta_bytes": 46923051,
+        "equal_delta_bytes_within_active": 182621,
+        "equal_delta_ratio_within_active": 0.0038919251009487854,
+        "active_64k_blocks": 716,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "pzm_data#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        65536,
+        65536,
+        65536,
+        65536
+      ],
+      "offsets": [
+        155975680,
+        155975680,
+        155975680,
+        155975680
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 65536,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "raw_kizu_c#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        65536,
+        65536,
+        65536,
+        65536
+      ],
+      "offsets": [
+        167510016,
+        167510016,
+        167510016,
+        167510016
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 65536,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "raw_kizu_d#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        65536,
+        65536,
+        65536,
+        65536
+      ],
+      "offsets": [
+        167575552,
+        167575552,
+        167575552,
+        167575552
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 65536,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "storage#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offsets": [
+        524288,
+        524288,
+        524288,
+        524288
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 0,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "usbcharge#0",
+      "flags": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "sizes": [
+        131072,
+        131072,
+        131072,
+        131072
+      ],
+      "offsets": [
+        150470656,
+        150470656,
+        150470656,
+        150470656
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": true,
+      "nonce_changed_s5m2x": true,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": false,
+      "nonce_equal_cross_model_after": false,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 131072,
+        "active_delta_bytes": 131071,
+        "equal_delta_bytes_within_active": 520,
+        "equal_delta_ratio_within_active": 0.003967315424464603,
+        "active_64k_blocks": 2,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "vkizu_data#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        6291456,
+        6291456,
+        6291456,
+        6291456
+      ],
+      "offsets": [
+        144179200,
+        144179200,
+        144179200,
+        144179200
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 6291456,
+        "active_delta_bytes": 885748,
+        "equal_delta_bytes_within_active": 3484,
+        "equal_delta_ratio_within_active": 0.00393339866417988,
+        "active_64k_blocks": 14,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "wifi2_info#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        262144,
+        262144,
+        262144,
+        262144
+      ],
+      "offsets": [
+        143130624,
+        143130624,
+        143130624,
+        143130624
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 262144,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "wifi_info#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        131072,
+        131072,
+        131072,
+        131072
+      ],
+      "offsets": [
+        142999552,
+        142999552,
+        142999552,
+        142999552
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 131072,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    },
+    {
+      "identity": "xtk#0",
+      "flags": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sizes": [
+        131072,
+        131072,
+        131072,
+        131072
+      ],
+      "offsets": [
+        156106752,
+        156106752,
+        156106752,
+        156106752
+      ],
+      "digest_equal_cross_model_before": true,
+      "digest_equal_cross_model_after": true,
+      "digest_changed_s5m2": false,
+      "digest_changed_s5m2x": false,
+      "digest_change_pattern_matches": true,
+      "nonce_changed_s5m2": false,
+      "nonce_changed_s5m2x": false,
+      "nonce_change_pattern_matches": true,
+      "nonce_equal_cross_model_before": true,
+      "nonce_equal_cross_model_after": true,
+      "in_all_files": true,
+      "delta_stats": {
+        "bytes": 131072,
+        "active_delta_bytes": 0,
+        "equal_delta_bytes_within_active": 0,
+        "equal_delta_ratio_within_active": null,
+        "active_64k_blocks": 0,
+        "exactly_equal_delta_64k_blocks": 0
+      }
+    }
+  ]
+}
