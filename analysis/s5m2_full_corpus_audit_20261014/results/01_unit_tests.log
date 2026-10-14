@@ -1,0 +1,38 @@
+STDOUT
+
+STDERR
+test_byte_count_multiblock (test_corpus.DifferenceTests.test_byte_count_multiblock) ... ok
+test_fourway_active_and_equal (test_corpus.DifferenceTests.test_fourway_active_and_equal) ... ok
+test_fourway_zero_equal_mismatched_sizes (test_corpus.DifferenceTests.test_fourway_zero_equal_mismatched_sizes) ... ok
+test_insertion_and_duplicate_pairing (test_corpus.DifferenceTests.test_insertion_and_duplicate_pairing) ... ok
+test_integer_delta_matches_independent_byte_loop (test_corpus.DifferenceTests.test_integer_delta_matches_independent_byte_loop) ... ok
+test_same_digest_is_not_same_raw (test_corpus.DifferenceTests.test_same_digest_is_not_same_raw) ... ok
+test_size_change_and_layout (test_corpus.DifferenceTests.test_size_change_and_layout) ... ok
+test_tail_last_four_only_change (test_corpus.DifferenceTests.test_tail_last_four_only_change) ... ok
+test_name_model_and_duplicates (test_corpus.InventoryTests.test_name_model_and_duplicates) ... ok
+test_zip_mismatch_unsafe_and_duplicate (test_corpus.InventoryTests.test_zip_mismatch_unsafe_and_duplicate) ... C:\Users\KUO\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\zipfile\__init__.py:1625: UserWarning: Duplicate name: 'S5m2_V11.bin'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+ok
+test_zip_payload_dedup_and_profile_guard (test_corpus.InventoryTests.test_zip_payload_dedup_and_profile_guard) ... ok
+test_bad_payload_range (test_corpus.ParserTests.test_bad_payload_range) ... ok
+test_constant_controls (test_corpus.ParserTests.test_constant_controls) ... ok
+test_count_and_truncation (test_corpus.ParserTests.test_count_and_truncation) ... ok
+test_crc_rejected (test_corpus.ParserTests.test_crc_rejected) ... ok
+test_declared_length_rejected (test_corpus.ParserTests.test_declared_length_rejected) ... ok
+test_duplicate_names_and_empty (test_corpus.ParserTests.test_duplicate_names_and_empty) ... ok
+test_header_size_rejected (test_corpus.ParserTests.test_header_size_rejected) ... ok
+test_inner_magic_rejected (test_corpus.ParserTests.test_inner_magic_rejected) ... ok
+test_invalid_name (test_corpus.ParserTests.test_invalid_name) ... ok
+test_magic_rejected (test_corpus.ParserTests.test_magic_rejected) ... ok
+test_offset_positive_and_legacy_negative (test_corpus.ParserTests.test_offset_positive_and_legacy_negative) ... ok
+test_overlap (test_corpus.ParserTests.test_overlap) ... ok
+test_profile_rejection (test_corpus.ParserTests.test_profile_rejection) ... ok
+test_revision_selector_rejected (test_corpus.ParserTests.test_revision_selector_rejected) ... ok
+test_tail_preserved_32_bytes (test_corpus.ParserTests.test_tail_preserved_32_bytes) ... ok
+test_target_not_used_for_file_range (test_corpus.ParserTests.test_target_not_used_for_file_range) ... ok
+test_unknown_flags (test_corpus.ParserTests.test_unknown_flags) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.039s
+
+OK

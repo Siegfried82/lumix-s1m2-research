@@ -1,0 +1,41 @@
+{
+  "python": "3.12.14",
+  "steps": [
+    {
+      "name": "01_unit_tests",
+      "started_utc": "2026-10-14T02:59:51.411870+00:00",
+      "finished_utc": "2026-10-14T02:59:51.624229+00:00",
+      "exit_code": 0,
+      "log": "01_unit_tests.log",
+      "log_sha256": "86a411b3100b2d08f5bd0ce9b455055bed12bfe1127100eca8130f75be6d5f1f"
+    },
+    {
+      "name": "02_corpus",
+      "started_utc": "2026-10-14T02:59:51.625229+00:00",
+      "finished_utc": "2026-10-14T03:00:13.193450+00:00",
+      "exit_code": 0,
+      "log": "02_corpus.log",
+      "log_sha256": "cc90907eeea3d316d56b4fceec52c1cc2895ea01cb39995529fd6a239dde9f49"
+    },
+    {
+      "name": "03_result_verification",
+      "started_utc": "2026-10-14T03:00:13.193450+00:00",
+      "finished_utc": "2026-10-14T03:00:16.575093+00:00",
+      "exit_code": 0,
+      "log": "03_result_verification.log",
+      "log_sha256": "2f98f57c4f42b3472b5001c7d2a6679cb956e959e2d3ee7f3ddd2fb77843d476"
+    },
+    {
+      "name": "04_existing_archive",
+      "started_utc": "2026-10-14T03:00:16.575093+00:00",
+      "finished_utc": "2026-10-14T03:00:20.879659+00:00",
+      "exit_code": 0,
+      "log": "04_existing_archive.log",
+      "log_sha256": "7cf6091e30f477da81a35acd40393e1b23101bf1fa71ecb48d144e051e815bad"
+    }
+  ],
+  "all_passed": true,
+  "device_communication": false,
+  "firmware_executed": false,
+  "github_write": false
+}
