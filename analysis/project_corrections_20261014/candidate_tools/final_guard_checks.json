@@ -1,0 +1,91 @@
+{
+  "real_legacy_complete_body_control": {
+    "table_input": {
+      "path": "<LOCAL_WORKSPACE>/analysis/ptool_crypto_results.json",
+      "sha256": "f0e43355a1f920f984ea1a5f3ccff77ff7a17721aa662a52cee4192afbb56bee"
+    },
+    "control": [
+      {
+        "sample": "GH2__V11",
+        "input_sha256": "5756a37304b2453982b977d250806e1056cd9dfc5acf9de07a53fa3e2973400d",
+        "bytes": 15599104,
+        "md5": "0be86add14ebb1bca79a9c6222a1d617",
+        "body_md5_matches": true,
+        "matching_records": 1,
+        "derived_key_bytes": 16
+      },
+      {
+        "sample": "G3___V12",
+        "input_sha256": "470a2e7facb75985e2a1a993096f18aafc1fb043792dbea4c9d94b66fe27ec9a",
+        "bytes": 15599104,
+        "md5": "7cf563a3b11f99e3a0f2893b6cb59411",
+        "body_md5_matches": true,
+        "matching_records": 1,
+        "derived_key_bytes": 16
+      },
+      {
+        "sample": "GF2__V11",
+        "input_sha256": "39403bcf70db42549ac6a29622c768f3c7f6e1e3fa0f769c2ed690ae2ab148c1",
+        "bytes": 15599104,
+        "md5": "6fd8205db6b57f0786208eded27cd50b",
+        "body_md5_matches": true,
+        "matching_records": 1,
+        "derived_key_bytes": 16
+      },
+      {
+        "sample": "GF3__V12",
+        "input_sha256": "5c7b235d5b55c95d8e6a6db1b24dd2f4013bc46e611aa1bf38b60ee45b875124",
+        "bytes": 15599104,
+        "md5": "45e76ee3ada7e4c850b07a2b86aa8cd7",
+        "body_md5_matches": true,
+        "matching_records": 1,
+        "derived_key_bytes": 16
+      },
+      {
+        "sample": "GX1__V11",
+        "input_sha256": "75725a6876702909dbd6396527113f5a6e40187a34369624be30844cdeb302cf",
+        "bytes": 15599104,
+        "md5": "88703276ae63afd2f915811bd0694305",
+        "body_md5_matches": true,
+        "matching_records": 1,
+        "derived_key_bytes": 16
+      }
+    ],
+    "keys": {
+      "GH2__V11": "90b43b5ce34c6e667fb28376b5fa5c27",
+      "G3___V12": "e686c04a4336f0bf23fd56f925ee553e",
+      "GF2__V11": "4b8ba02b85110dcec98b591f5528fbc2",
+      "GF3__V12": "3f7e85394912a4d81247c9af4e20ce81",
+      "GX1__V11": "e4252eb939691d4af1084995691e6151"
+    },
+    "unique_keys": 5,
+    "boundary": "These legacy controls do not establish the modern flags=3 cipher, digest or IV semantics."
+  },
+  "key_sweep_performed": false,
+  "final_code_sha256": {
+    "<LOCAL_WORKSPACE>/analysis/knownplaintext_oracle_20261014/oracle_scan.py": "90b20df5315db787ba7bfa6509be219387788205a9483041eff63b2ec7ccad80",
+    "<LOCAL_WORKSPACE>/analysis/s1m2_acquisition_plan_20261014/public_artifact_match.py": "9a4bf87e0daa6e532d390ba224b3345a148486a746a6ab7011f8bc2600ca235e"
+  },
+  "missing_firmware_output_path_rejected": true,
+  "guard_exit_code": 2,
+  "final_boundary_guard_checks": {
+    "missing_tree_output_equal": true,
+    "missing_tree_output_descendant": true,
+    "empty_corpus_cannot_pass": true,
+    "no_public_contents_hashed_cannot_pass": true,
+    "zero_targets_cannot_pass": true,
+    "empty_oracle_sweep_not_performed": true
+  },
+  "empty_oracle_sweep": {
+    "performed": false,
+    "reason": "no_applicable_candidates",
+    "candidate_count": 0,
+    "first_block_tests": 0,
+    "aes_key_bits_actually_tested": [],
+    "conditional_first_block_matches": 0,
+    "full_candidate_digest_matches": 0,
+    "hits": [],
+    "parameters_by_component": [],
+    "boundary": "Only enumerated key material and IVs; actual key widths are listed separately. ECB/CBC and three explicit CTR layouts. First-block filtering plus complete aligned-payload digest checks on matches. No compression, reordering, wrapping, derived runtime keys or additional transforms tested. A negative excludes only these conditional parameters and does not close acquisition or decoding routes."
+  }
+}

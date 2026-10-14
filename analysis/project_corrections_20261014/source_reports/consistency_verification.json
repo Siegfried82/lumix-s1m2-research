@@ -1,0 +1,107 @@
+{
+  "scope": "Offline consistency/source/known-input controls only; no new S1M2 plaintext or live device check",
+  "checks": [
+    {
+      "check": "03_small_loader syntax and JSON parse",
+      "passed": true
+    },
+    {
+      "check": "03_small_loader refuses existing output without changing bytes",
+      "passed": true,
+      "returncode": 2
+    },
+    {
+      "check": "05_boot_producer syntax and JSON parse",
+      "passed": true
+    },
+    {
+      "check": "05_boot_producer result cites exact current generator",
+      "passed": true
+    },
+    {
+      "check": "05_boot_producer refuses existing output without changing bytes",
+      "passed": true,
+      "returncode": 2
+    },
+    {
+      "check": "06_lab_control syntax and JSON parse",
+      "passed": true
+    },
+    {
+      "check": "06_lab_control result cites exact current generator",
+      "passed": true
+    },
+    {
+      "check": "06_lab_control refuses existing output without changing bytes",
+      "passed": true,
+      "returncode": 2
+    },
+    {
+      "check": "03 all actual input/comparison/control records preserved exactly",
+      "passed": true
+    },
+    {
+      "check": "03 cipher/parser/helper implementations unchanged",
+      "passed": true
+    },
+    {
+      "check": "05 actual nodes, mailbox values, IRQs and absence of invented macros",
+      "passed": true
+    },
+    {
+      "check": "06 59 actual declarations, corrected firmware paths, media POST and seven fixed frame vectors",
+      "passed": true
+    },
+    {
+      "check": "Five legacy full-body controls and actual modern GH4 header/directory",
+      "passed": true
+    }
+  ],
+  "modified_files": [
+    {
+      "path": "analysis/agy_takeover_20261012/03_small_loader/report.md",
+      "bytes": 21172,
+      "sha256": "ccd96138f7bc734299efe07bb3cd8c84bcdb621b9aed6891974d459423a16f10"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/03_small_loader/results.json",
+      "bytes": 74236,
+      "sha256": "864335e91e694491706ec67551502baf24761be95c79c2f09a8ec95fe0cc8723"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/03_small_loader/verify_small_loader.py",
+      "bytes": 56697,
+      "sha256": "4d02ce7d8756bbdd22de08cdce5063eaa2782a0b26e7c968fffb968bacd29b87"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/05_boot_producer/report.md",
+      "bytes": 14179,
+      "sha256": "e83e9979f750aa1ea66735debaf289f40a93598cfd1f845ff35e2b7c89faccb8"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/05_boot_producer/results.json",
+      "bytes": 182902,
+      "sha256": "52cdb769f90c2103cdf3407fbf355292d654d63c56b8cdbfa0477e64e3a4f179"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/05_boot_producer/verify_boot_producer.py",
+      "bytes": 13173,
+      "sha256": "91f40acca94d217c511dbb8b1218abaa28a613534e2b7b1f1f15dfa647b3d7a7"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/06_lab_control/report.md",
+      "bytes": 8019,
+      "sha256": "4ae9583f9fe74309109795b6a1d73dcb07b1878f8ebcf2160c52a8b2c50f1d64"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/06_lab_control/results.json",
+      "bytes": 55726,
+      "sha256": "e99dbdfdd586ce363b574c35ef422b4fb0cd4fc8844d0d0000160611a390b8e6"
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/06_lab_control/verify_lab_control_codec.py",
+      "bytes": 16568,
+      "sha256": "c8fa0e6305eac0464ed805918fa11230a5691046b059b8699fe3d175aa17ad4d"
+    }
+  ]
+}

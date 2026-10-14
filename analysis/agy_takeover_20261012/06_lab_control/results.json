@@ -1,7 +1,8 @@
 {
   "task_id": "06_lab_control",
-  "title": "LUMIX Lab 蓝牙开启 Wi-Fi 后的主控制通道、网络绑定与会话认证全链路分析",
-  "analysis_mode": "offline_static_decompilation_and_codec_verification",
+  "schema_version": 2,
+  "title": "LUMIX Lab client handoff/auth declarations and offline codec verification",
+  "analysis_mode": "offline_static_client_source_and_synthetic_codec_vectors",
   "apk_and_manifest_inputs": [
     {
       "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/com.panasonic.jp.lumixlab.apk",
@@ -304,300 +305,1024 @@
       "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/com/panasonic/jp/lumixlab/util/M.java",
       "size_bytes": 4562,
       "sha256": "782eeebf30ff84da906cbff116a32c6ab05210c5af034f174f028960b89c2278"
+    },
+    "sa/o.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/sa/o.java",
+      "size_bytes": 232,
+      "sha256": "26a312aed726d58ffed2d3b0f8d27f7f78fb08004886df9fea3936223f768c0e"
+    },
+    "sa/f.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/sa/f.java",
+      "size_bytes": 232,
+      "sha256": "5c62b31956c0859829d76969181acf6e4ec76e15ed58e3f3ff1a933fc6bd9c93"
+    },
+    "oa/w0.java": {
+      "path": "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources/oa/w0.java",
+      "size_bytes": 42847,
+      "sha256": "e4a7bde9bd0bca03cf6dd73851c263b00eb47c13c6e3526630b9efc204cacabc"
     }
   },
   "verification_script": {
     "path": "<LOCAL_WORKSPACE>/analysis/agy_takeover_20261012/06_lab_control/verify_lab_control_codec.py",
-    "size_bytes": 32053,
-    "sha256": "29bda33729cc0993f71c582c3833ada89b0bc8c55c0df529f122460d90fd4344",
+    "size_bytes": 16568,
+    "sha256": "c8fa0e6305eac0464ed805918fa11230a5691046b059b8699fe3d175aa17ad4d",
     "self_test_result": {
       "status": "PASS",
+      "fixed_frame_vectors": [
+        {
+          "raw_hex": "",
+          "expected_hex": "00ffffff"
+        },
+        {
+          "raw_hex": "41",
+          "expected_hex": "0141000000ffffff"
+        },
+        {
+          "raw_hex": "414243",
+          "expected_hex": "0341424300ffffff"
+        },
+        {
+          "raw_hex": "41424344",
+          "expected_hex": "0441424344ffffff"
+        },
+        {
+          "raw_hex": "4c756d6978506173733132",
+          "expected_hex": "0b4c756d697850617373313200ffffff"
+        },
+        {
+          "raw_hex": "4c756d697850617373313233",
+          "expected_hex": "0c4c756d697850617373313233ffffff"
+        },
+        {
+          "raw_hex": "000102030405060708090a0b0c0d0e0f",
+          "expected_hex": "10000102030405060708090a0b0c0d0e0fffffff"
+        }
+      ],
+      "scope": "Synthetic client-code vectors; no camera/BLE/TLS runtime test",
       "test_vectors": {
         "initial_inform_key_hex": "a1b2c3d4",
         "sample_wifi_password": "LumixPass123",
-        "framed_wifi_password_hex": "0c4c756d69785061737331323300ffff",
-        "obfuscated_wifi_password_hex": "ccc78fd8c0e2bbbd9383b0a75e4dc3e7",
+        "framed_wifi_password_hex": "0c4c756d697850617373313233ffffff",
+        "obfuscated_wifi_password_hex": "ccc78fd8c0e2bbbd9383b0a75e4d3ce7",
         "recovered_wifi_password": "LumixPass123",
         "uuid_hex": "00112233445566778899aabbccddeeff",
-        "framed_uuid_hex": "1000112233445566778899aabbccddeeff00ffff",
-        "obfuscated_uuid_hex": "83a3c3c4c7e787e70b2b4ba34f6f0f6f5e4dc32b",
+        "framed_uuid_hex": "1000112233445566778899aabbccddeeffffffff",
+        "obfuscated_uuid_hex": "83a3c3c4c7e787e70b2b4ba34f6f0f6f5e4d3c2b",
         "app_info_ble_hex": "4c554d4958204c55542043726561746f72732041505020332e312e3000000000",
         "dhcp_gateway_0x0136A8C0": "192.168.54.1",
         "auth_header_sample": "'Bearer 0123456789abcdef'"
       }
     }
   },
-  "findings": {
-    "ble_to_wifi_handoff": {
-      "status": "确认",
-      "scan_filter_service_uuid": "054ac620-3214-11e6-ac0d-0002a5d5c51b",
-      "gatt_service_uuid": "1fe71b85-8344-4e6a-bf1a-ac7acdb3f8af",
-      "sequential_registration_and_read_chain": [
+  "source_evidence": {
+    "retrofit_http_annotation_consumers": {
+      "source": "oa/w0.java",
+      "matched_lines": [
         {
-          "step": 1,
-          "characteristic_field": "H5.d.f6993g (INITIAL_INFORM)",
-          "uuid": "239c7203-922f-43e9-bdf1-6d1fedf6f43f",
-          "direction": "BLE Read",
-          "caller": "p281z5/RunnableC2616s1.java:29 -> p281z5/S1.java:27",
-          "consumer": "p281z5/M1.java:200-209",
-          "purpose": "读取至少4字节的会话混淆密钥存入 C0643o.f8323d，供后续 BLE 写入(APP_UUID/FRIENDLY_NAME)与读取(WIFI_PASSWORD)按4字节块逆序异或加解密。"
+          "line": 552,
+          "text": "            } else if (annotation2 instanceof sa.f) {"
         },
         {
-          "step": 2,
-          "characteristic_field": "H5.d.f6985c (APP_UUID)",
-          "uuid": "bff12e7f-5944-4eb6-a90f-48d8786157ea",
-          "direction": "BLE Write",
-          "caller": "p281z5/C2468d2.java:34-70",
-          "consumer": "Camera GATT Server -> paired with POST /auth Uuid",
-          "purpose": "生成或从 DataStore 读取 32位无连字符十六进制字符串 DATA_STORE_UUID (C1410v.C0())，经 I5.d.d() 解码为 16 字节，通过 C2538k2.d() 封装为 20 字节 ([0x10] + 16字节UUID + [0x00, 0xFF, 0xFF])，再用 C2538k2.e(f8323d, ...) 混淆后写入相机。"
+          "line": 553,
+          "text": "                q0Var.b(HttpMethods.GET, ((sa.f) annotation2).value(), false);"
         },
         {
-          "step": 3,
-          "characteristic_field": "H5.d.f6983b (APP_INFO)",
-          "uuid": "ed8b1352-5aa7-4155-b7c9-521292dd1932",
-          "direction": "BLE Write",
-          "caller": "p281z5/C2458c2.java:29-51",
-          "consumer": "Camera GATT Server -> paired with POST /auth AppInfo",
-          "purpose": "将明文 ASCII 字符串 'LUMIX LUT Creators APP ' + versionName (如 'LUMIX LUT Creators APP 3.1.0') 零填充至 32 字节直接写入相机（不经过 XOR 混淆）。"
+          "line": 558,
+          "text": "            } else if (annotation2 instanceof sa.o) {"
         },
         {
-          "step": 4,
-          "characteristic_field": "H5.d.f6987d (FRIENDLY_NAME)",
-          "uuid": "05a797b6-9c2f-4d18-99a7-fa61a3880bfe",
-          "direction": "BLE Write",
-          "caller": "p281z5/C2478e2.java:33-65",
-          "consumer": "Camera GATT Server -> paired with POST /auth FriendlyName",
-          "purpose": "将 Build.MODEL (M.f17921z) 的 UTF-8 字节经过 C2538k2.d() 长度前缀封装与 C2538k2.e(f8323d, ...) 逆序异或混淆后写入相机。"
-        },
-        {
-          "step": 5,
-          "characteristic_field": "H5.d.f7022z (WIFI_WPA_DOWNGRADE)",
-          "uuid": "36f99090-e79b-4060-9ac7-89f3f8bf88d5",
-          "direction": "BLE Conditional Write",
-          "caller": "p281z5/C2666x1.java:24 -> p281z5/C2518i2.java:26-31",
-          "consumer": "Camera Wi-Fi AP Security Config",
-          "purpose": "若手机为 HarmonyOS (C1410v.R0()) 或不支持 WPA3 SAE (!I5.c.f())，写入单字节 new byte[]{2} 指示相机将 AP 降级为 WPA2；否则保持默认 WPA3。"
-        },
-        {
-          "step": 6,
-          "characteristic_field": "H5.d.f6989e (WIFI_SSID)",
-          "uuid": "657edba2-5bc8-42dd-974f-21871d7dbcd1",
-          "direction": "BLE Read",
-          "caller": "p281z5/C2656w1.java:30 -> p281z5/C2438a2.java:28",
-          "consumer": "p281z5/M1.java:421-432 -> C0643o.f8321b -> CameraWifiConnectFragment.f17574e0",
-          "purpose": "读取 UTF-8 明文 Wi-Fi SSID。"
-        },
-        {
-          "step": 7,
-          "characteristic_field": "H5.d.f6991f (WIFI_PASSWORD)",
-          "uuid": "42d509f7-f122-4816-92d1-5e402d9453cb",
-          "direction": "BLE Read",
-          "caller": "p281z5/Z1.java:27",
-          "consumer": "p281z5/M1.java:389-419 -> C0643o.f8322c -> CameraWifiConnectFragment.f17575f0",
-          "purpose": "读取混淆后的 Wi-Fi 密码字节流，按4字节块逆序并与 f8323d[3..0] 异或还原后，取首字节 length，截取 plain[1..length] 作为 ASCII 密码。"
-        },
-        {
-          "step": 8,
-          "characteristic_field": "H5.d.f7021y (CER_FINGER_PRINT)",
-          "uuid": "1be8a9e3-178b-46c4-b6b3-43d4a5311fc1",
-          "direction": "BLE Read",
-          "caller": "p281z5/N1.java:27",
-          "consumer": "p281z5/M1.java:130-142 -> LlcApplication.setCerFingerPrint() -> p084h6/d.java:30-35",
-          "purpose": "读取冒号分隔的 ASCII 十六进制 SHA-256 证书指纹，去除冒号并解码为 32 字节存入 LlcApplication.cerFingerPrint，供 HTTPS HostnameVerifier 校验相机 TLS 证书。"
-        },
-        {
-          "step": 9,
-          "characteristic_field": "H5.d.f6995h (ACTION_MODE) & f6999j (AP_STATE) & f7001k (ACTION_MODE_RESULT)",
-          "uuid": "7644371c-1ddc-4b16-832f-f07c322e311b / dcba3a74-80bc-4919-8ef4-0c9f99cc20dd / 6c875728-7636-425e-818a-f1d93a39e075",
-          "direction": "BLE Write + Notification",
-          "caller": "CameraWifiConnectFragment.java:536-545 -> H5/d.java:1968",
-          "consumer": "H5/d.java:781-913 -> CameraWifiConnectFragment.I() -> RunnableC2627t2",
-          "purpose": "向 ACTION_MODE 写入 1 字节模式值 (1=常规远程控制/LUT/固件/相册, 5=自动传输, 6=相机侧发起传图)，监听 AP_STATE 变为 1 且 isWifiInfoReadComplete 为 true 后触发 Wi-Fi 连接。"
+          "line": 559,
+          "text": "                q0Var.b(HttpMethods.POST, ((sa.o) annotation2).value(), true);"
         }
       ]
     },
-    "wifi_network_binding": {
-      "status": "确认",
-      "caller": "CameraWifiConnectFragment.I() (CameraWifiConnectFragment.java:220-239) -> RunnableC2627t2.run() (p281z5/RunnableC2627t2.java:31-52)",
-      "standard_path": {
-        "method": "I5.c.b(String ssid, String password, ConnectivityManager.NetworkCallback)",
-        "file_lines": "I5/c.java:47-97",
-        "mechanism": "构造 WifiNetworkSpecifier (HarmonyOS 或 !isWpa3SaeSupported() 用 setWpa2Passphrase，否则 setWpa3Passphrase)，构建 NetworkRequest (addTransportType(TRANSPORT_WIFI=1), removeCapability(NET_CAPABILITY_INTERNET=12))，调用 ConnectivityManager.requestNetwork(request, C2617s2)。",
-        "binding_call": "在 p281z5/C2617s2.java:41 的 onAvailable(Network) 回调中，调用 I5.c.f7221a.bindProcessToNetwork(network) 将整个 App 进程绑定至相机 Wi-Fi 网络。"
-      },
-      "oppo_android13_fallback_path": {
-        "method": "I5.e.b(Context, C2607r2)",
-        "file_lines": "I5/e.java:27-43, p281z5/C2607r2.java:42-83",
-        "mechanism": "当 Build.MANUFACTURER 为 OPPO 且 SDK_INT == 33 时，跳转系统 Settings.ACTION_PICK_WIFI_NETWORK 并通过 registerDefaultNetworkCallback 监听 SSID 匹配。"
-      }
-    },
-    "control_channel_address_and_port": {
-      "status": "确认",
-      "protocol": "HTTPS (HTTP/1.1 or HTTP/2 via OkHttp3 + Retrofit2 over TLS)",
-      "port": 443,
-      "port_evidence": "p084h6/b.java:7 与 CameraWifiConnectFragment.java:328 拼接 URL 为 'https://' + strD + '/'，未指定显式端口，因此主控制通道固定使用 HTTPS 默认 TCP 443 端口。",
-      "address_sources": {
-        "default_fallback": {
-          "value": "https://192.168.54.1/",
-          "location": "p084h6/b.java:7 (public static String f22722a = \"https://192.168.54.1/\";)"
+    "ble_frame_and_xor": {
+      "source": "p281z5/C2538k2.java",
+      "matched_lines": [
+        {
+          "line": 351,
+          "text": "    public static byte[] d(C2538k2 c2538k2, byte[] bArr) {"
         },
-        "dynamic_dhcp_gateway": {
-          "method": "I5.c.d()",
-          "location": "I5/c.java:119-128",
-          "derivation": "读取 WifiManager.getDhcpInfo().gateway (int)，转为 4 字节后按 byteArray[3..0] 逆序拼成点分十进制 IPv4 字符串。",
-          "callers_updating_base_url": [
-            "com/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment.java:325-329 (M() 中更新 b.f22722a = \"https://\" + strD + \"/\")",
-            "com/panasonic/jp/lumixlab/controller/fragment/FirmwareUpdateDetailFragment.java:1530-1532",
-            "R5/h.java:70-72",
-            "Y5/h.java:250-252"
-          ]
+        {
+          "line": 354,
+          "text": "        int length2 = bArr.length + length + 1;"
         },
-        "hardcoded_exceptions_outside_https": [
-          {
-            "usage": "RemoteShooting UDP LiveView socket",
-            "location": "p062f5/Q2.java:68",
-            "code": "new InetSocketAddress(\"192.168.54.1\", i10) where i10 is LvPort from POST /remote/get-lvport, and local DatagramSocket binds to C1410v.f18185d (1234..2048)"
-          },
-          {
-            "usage": "RemotePhotostyle UDP LiveView socket",
-            "location": "p062f5/RunnableC1743t1.java:72",
-            "code": "new InetSocketAddress(\"192.168.54.1\", i10) where local DatagramSocket binds to C1410v.f18185d"
-          }
-        ]
-      },
-      "tls_verification": {
-        "trust_manager": "p084h6/f.java:10-23 (X509TrustManager 空实现，接受相机自签名证书链)",
-        "hostname_verifier_pinning": "p084h6/d.java:22-41 (HostnameVerifier.verify 取 sSLSession.getPeerCertificates()[0].getEncoded() 计算 SHA-256，与 BLE CER_FINGER_PRINT 特征读取的 LlcApplication.getContext().getCerFingerPrint() 执行 MessageDigest.isEqual 比对)",
-        "unpinned_client_variant": "p084h6/h.java:93-105 (h.g() 仅设置 TrustManager f 与 SSLSocketFactory g，未设置 HostnameVerifier d，仅在 LlcService.java:536 下载媒体文件时使用)"
-      }
-    },
-    "session_authentication": {
-      "status": "确认",
-      "endpoint": "POST /auth",
-      "retrofit_declaration": "p084h6/a.java:73-75 (@o(\"auth\") InterfaceC1962d<AuthResponseBean> F(@oa.x0.a AuthRequestBean))",
-      "caller_chain": "C2617s2.onAvailable (p281z5/C2617s2.java:42) -> CameraWifiConnectFragment.M() (CameraWifiConnectFragment.java:318-334) -> RunnableC2667x2.run() (p281z5/RunnableC2667x2.java:28-42)",
-      "request_json_schema": {
-        "bean_class": "com/panasonic/jp/lumixlab/bean/AuthRequestBean.java:10-25",
-        "fields": {
-          "AppInfo": "\"LUMIX LUT Creators APP \" + AppVersionName (AuthRequestBean 构造函数自动拼接空格与版本号，与 BLE APP_INFO 前缀一致)",
-          "Uuid": "32位十六进制无连字符字符串 (DataStore DATA_STORE_UUID，与 BLE APP_UUID 原始16字节对应)",
-          "FriendlyName": "Build.MODEL (M.f17921z，与 BLE FRIENDLY_NAME 明文一致)"
+        {
+          "line": 355,
+          "text": "        int i10 = length2 % 4;"
+        },
+        {
+          "line": 356,
+          "text": "        byte[] bArr2 = new byte[length2 + (i10 == 0 ? 0 : 4 - i10)];"
+        },
+        {
+          "line": 358,
+          "text": "        Arrays.fill(bArr3, (byte) 0);"
+        },
+        {
+          "line": 359,
+          "text": "        Arrays.fill(bArr2, (byte) -1);"
+        },
+        {
+          "line": 361,
+          "text": "        System.arraycopy(bArr, 0, bArr2, 1, bArr.length);"
+        },
+        {
+          "line": 362,
+          "text": "        System.arraycopy(bArr3, 0, bArr2, bArr.length + 1, length);"
+        },
+        {
+          "line": 366,
+          "text": "    public static byte[] e(C2538k2 c2538k2, byte[] bArr, byte[] bArr2) {"
+        },
+        {
+          "line": 379,
+          "text": "            bArr3[i11] = (byte) (bArr2[i12] ^ bArr[0]);"
+        },
+        {
+          "line": 382,
+          "text": "            bArr3[i13] = (byte) (bArr2[i14] ^ bArr[1]);"
+        },
+        {
+          "line": 383,
+          "text": "            bArr3[i14] = (byte) (bArr2[i13] ^ bArr[2]);"
+        },
+        {
+          "line": 384,
+          "text": "            bArr3[i12] = (byte) (bArr2[i11] ^ bArr[3]);"
+        },
+        {
+          "line": 449,
+          "text": "            length += bArr3[i10].length;"
+        },
+        {
+          "line": 452,
+          "text": "        int length2 = 0;"
+        },
+        {
+          "line": 454,
+          "text": "            byte[] bArr5 = bArr3[i11];"
+        },
+        {
+          "line": 455,
+          "text": "            System.arraycopy(bArr5, 0, bArr4, length2, bArr5.length);"
+        },
+        {
+          "line": 456,
+          "text": "            length2 += bArr5.length;"
+        },
+        {
+          "line": 493,
+          "text": "        System.arraycopy(bArrArray, 0, bArr, 0, 4);"
+        },
+        {
+          "line": 494,
+          "text": "        System.arraycopy(bArrArray2, 0, bArr, 8 - bArrArray2.length, bArrArray2.length);"
+        },
+        {
+          "line": 495,
+          "text": "        System.arraycopy(bArrArray3, 0, bArr, 12 - bArrArray3.length, bArrArray3.length);"
+        },
+        {
+          "line": 496,
+          "text": "        System.arraycopy(bArrArray4, 0, bArr, 12, bArrArray4.length);"
         }
-      },
-      "response_json_schema": {
-        "bean_class": "com/panasonic/jp/lumixlab/bean/AuthResponseBean.java:8-52",
-        "fields": {
-          "Header.ResponseCode": "int (200 表示成功)",
-          "Header.Messages": "String",
-          "Data.AuthToken": "String (会话 Bearer Token)"
+      ]
+    },
+    "dhcp_gateway": {
+      "source": "I5/c.java",
+      "matched_lines": [
+        {
+          "line": 17,
+          "text": "import java.math.BigInteger;"
+        },
+        {
+          "line": 18,
+          "text": "import java.net.InetAddress;"
+        },
+        {
+          "line": 119,
+          "text": "    public static String d() {"
+        },
+        {
+          "line": 121,
+          "text": "            byte[] byteArray = BigInteger.valueOf(((WifiManager) LlcApplication.getContext().getSystemService(\"wifi\")).getDhcpInfo().gateway).toByteArray();"
+        },
+        {
+          "line": 122,
+          "text": "            return byteArray.length < 4 ? YouTube.DEFAULT_SERVICE_PATH : InetAddress.getByAddress(new byte[]{byteArray[3], byteArray[2], byteArray[1], byteArray[0]}).getHostAddress();"
         }
-      },
-      "response_consumer_and_retry": {
-        "primary_consumer": "p281z5/C2657w2.java:84-97 (校验 ResponseCode == 200 且 AuthToken 非空后调用 LlcApplication.getContext().setAuthToken(authToken))",
-        "retry_mechanism": "p281z5/C2657w2.java:123-135 (若首次响应 Data 为空，onComplete 休眠 5000ms 后重发一次 POST /auth，由 p281z5/C2647v2.java:36-47 处理)",
-        "post_auth_ble_gate": "CameraWifiConnectFragment.F() (CameraWifiConnectFragment.java:149-195)：当 f17569Z == 1 且 f17595y == \"camera\" 时，若 BLE 特征 f7003l (CAMERA_OPERATE_NOTIFICATION, 16726c35-52ef-4d00-868d-099549a90d9b) 尚未通知值 2 (f31592l == true)，则启动 30s 定时器等待用户或相机侧确认后再进入功能页。"
-      },
-      "authenticated_header_format": {
-        "formatter": "com/panasonic/jp/lumixlab/util/C1410v.java:300-302 -> B9/AbstractC0105t.java:88-90",
-        "header_name": "Authorization",
-        "header_value_template": "'Bearer <AuthToken>' (注意两端包含字面量单引号 ')",
-        "token_invalidation": "当任意受保护接口返回 Header.ResponseCode == 401 或 HTTP 错误体解析出 401 (p084h6/h.java:53-70) 时，清空 LlcApplication.authToken。"
-      }
+      ]
     },
-    "downstream_control_endpoints": {
-      "status": "确认",
-      "declaration_file": "p084h6/a.java:1-225",
-      "categories": {
-        "session": [
-          "POST /auth",
-          "POST /connect-cancel"
-        ],
-        "remote_shooting": [
-          "POST /remote/mode",
-          "POST /remote/get-lvport",
-          "POST /remote/start-stream",
-          "POST /remote/stop-stream",
-          "POST /remote/OnePushAf",
-          "POST /remote/TouchAf",
-          "POST /remote/TouchAe",
-          "POST /remote/Info",
-          "POST /remote/GetCapability",
-          "POST /remote/SetSetting",
-          "POST /remote/SettingInfo",
-          "POST /remote/Capture",
-          "POST /remote/CaptureCancel",
-          "POST /remote/RecStart",
-          "POST /remote/RecStop",
-          "POST /remote/StreamSendStop",
-          "POST /remote/StreamSendRestart",
-          "POST /remote/Polling"
-        ],
-        "photostyle": [
-          "POST /photostyle/mode",
-          "POST /photostyle/get-lvport",
-          "POST /photostyle/start-stream",
-          "POST /photostyle/stop-stream",
-          "POST /photostyle/OnePushAf",
-          "POST /photostyle/TouchAf",
-          "POST /photostyle/TouchAe",
-          "POST /photostyle/Info",
-          "POST /photostyle/GetCapability",
-          "POST /photostyle/SetSetting",
-          "POST /photostyle/SettingInfo",
-          "POST /photostyle/Capture",
-          "POST /photostyle/CaptureCancel",
-          "POST /photostyle/RecStart",
-          "POST /photostyle/RecStop",
-          "POST /photostyle/StreamSendStop",
-          "POST /photostyle/StreamSendRestart",
-          "POST /photostyle/Polling"
-        ],
-        "lut": [
-          "POST /lut/camera",
-          "POST /lut/upload",
-          "POST /lut/delete",
-          "POST /lut/order",
-          "POST /lut/update"
-        ],
-        "media": [
-          "POST /media/Status",
-          "POST /media/list",
-          "POST /media/Rating",
-          "GET /media/image (supports Range header)"
-        ],
-        "auto_transfer": [
-          "POST /auto-transfer/get-list",
-          "POST /auto-transfer/NotifyTranferStatus"
-        ],
-        "firmware": [
-          "POST /firmware/SetDataInfo",
-          "POST /firmware/SendData (multipart/form-data)"
-        ]
-      },
-      "liveview_stream_bootstrap_chain": {
-        "remote_shooting": "RemoteShootingActivity.java:2870-2886 -> P2.java:193-246: (1) POST /remote/Polling -> (2) POST /remote/mode {\"Command\":\"recmode\"} -> (3) 递增本地 UDP 端口 C1410v.f18185d (1234..2048) 并调用 POST /remote/start-stream {\"UDPPortNumber\": port} -> (4) v0(5) 调用 p052e6.c.a() 发送 POST /remote/get-lvport 获取相机端 LvPort -> (5) 启动线程 Q2 (p062f5/Q2.java:66-84) 绑定本地 UDP 端口 C1410v.f18185d，连接 192.168.54.1:LvPort，在其上建立 DTLS (ea.C1637v.b + C1661c3 PSK/TLS handler) 接收实时取景流。"
-      }
+    "authorization_header": {
+      "source": "com/panasonic/jp/lumixlab/util/C1410v.java",
+      "matched_lines": [
+        {
+          "line": 300,
+          "text": "    public static String J(String str) {"
+        },
+        {
+          "line": 301,
+          "text": "        return AbstractC0105t.o(\"'Bearer \", str, \"'\");"
+        }
+      ]
     },
-    "epistemic_classification": {
-      "confirmed": [
-        "BLE GATT 服务 (1fe71b85-8344-4e6a-bf1a-ac7acdb3f8af) 在开启 Wi-Fi 前完成的完整配对写入与读取序列：INITIAL_INFORM -> APP_UUID -> APP_INFO -> FRIENDLY_NAME -> 条件降级 WPA2 -> WIFI_SSID -> WIFI_PASSWORD -> CER_FINGER_PRINT。",
-        "BLE 数据帧封装算法 (C2538k2.d) 与 4 字节逆序异或混淆算法 (C2538k2.e / M1.onCharacteristicRead)，已通过独立离线脚本 verify_lab_control_codec.py 自测验证。",
-        "BLE 开启相机 AP 的触发特征 (ACTION_MODE 7644371c-1ddc-4b16-832f-f07c322e311b) 及状态监听特征 (AP_STATE dcba3a74-80bc-4919-8ef4-0c9f99cc20dd)。",
-        "Android 端通过 WifiNetworkSpecifier + ConnectivityManager.requestNetwork 连接相机 AP，并在 C2617s2.onAvailable 中调用 bindProcessToNetwork(network) 绑定进程路由。",
-        "主控制通道并非只用硬编码 192.168.54.1：默认回退值为 https://192.168.54.1/ (p084h6/b.java:7)，但在连接建立后由 I5.c.d() 从 WifiManager.getDhcpInfo().gateway 动态解析网关 IP 并覆写 b.f22722a；端口固定为 HTTPS 默认 443。与此同时，UDP 实时取景 (Q2.java:68, RunnableC1743t1.java:72) 仍硬编码连接 192.168.54.1:LvPort。",
-        "HTTPS 通道的 TLS 校验机制：TrustManager (p084h6/f.java) 放行自签名证书链，HostnameVerifier (p084h6/d.java) 强制比对服务端叶证书 SHA-256 与 BLE CER_FINGER_PRINT 特征读取的 32 字节指纹。",
-        "会话认证接口 POST /auth 的请求体 (AppInfo, Uuid, FriendlyName) 与 BLE 写入特征严格对应，响应体 Data.AuthToken 被提取并由 C1410v.J() 格式化为带单引号的 'Bearer <token>' 用于全部后续控制请求。"
-      ],
-      "inferred": [
-        "相机侧 HTTPS 服务在收到 POST /auth 时，会将请求 JSON 中的 AppInfo、Uuid、FriendlyName 与此前 BLE 阶段写入 APP_INFO、APP_UUID、FRIENDLY_NAME 特征的值进行比对校验，一致后才签发 AuthToken。",
-        "当 f17569Z == 1 且首次连接相机时，BLE 特征 CAMERA_OPERATE_NOTIFICATION (16726c35-52ef-4d00-868d-099549a90d9b) 返回值 2 代表机身侧完成了连接确认/模式切换就绪。"
-      ],
-      "unknown_or_runtime_dependent": [
-        "INITIAL_INFORM (239c7203-922f-43e9-bdf1-6d1fedf6f43f) 每次连接由相机生成的 4 字节密钥在机身固件内部的随机数/派生源（需结合机身固件 BLE 栈分析）。",
-        "CER_FINGER_PRINT 对应的相机端 TLS 自签名证书是出厂固定、首次配对生成还是每次启动 AP 动态生成（App 端每次 BLE 连接均重新读取 CER_FINGER_PRINT）。",
-        "相机端签发的 AuthToken 的具体字符串长度、字符集与机身侧超时时间（App 端作为不透明字符串处理，仅在收到 ResponseCode == 401 时清空）。",
-        "各具体机型（如 S1M2 / S5M2 / G9M2 等）在 POST /remote/GetCapability 与 POST /remote/SettingInfo 下返回的能力全集差异（由相机运行时动态返回 JSON，App 根据 J0/L 枚举做交集渲染）。"
+    "tls_pinning": {
+      "source": "p084h6/d.java",
+      "matched_lines": [
+        {
+          "line": 26,
+          "text": "                    MessageDigest messageDigest = MessageDigest.getInstance(\"SHA-256\");"
+        },
+        {
+          "line": 27,
+          "text": "                    messageDigest.update(sSLSession.getPeerCertificates()[0].getEncoded());"
+        },
+        {
+          "line": 28,
+          "text": "                    return MessageDigest.isEqual(LlcApplication.getContext().getCerFingerPrint(), messageDigest.digest());"
+        },
+        {
+          "line": 34,
+          "text": "                    MessageDigest messageDigest2 = MessageDigest.getInstance(\"SHA-256\");"
+        },
+        {
+          "line": 35,
+          "text": "                    messageDigest2.update(sSLSession.getPeerCertificates()[0].getEncoded());"
+        },
+        {
+          "line": 36,
+          "text": "                    return MessageDigest.isEqual(LlcApplication.getContext().getCerFingerPrint(), messageDigest2.digest());"
+        }
+      ]
+    },
+    "firmware_client_calls": {
+      "source": "com/panasonic/jp/lumixlab/controller/fragment/FirmwareUpdateDetailFragment.java",
+      "matched_lines": [
+        {
+          "line": 1222,
+          "text": "        d.a(requireContext()).b(c.g(\"BROADCAST_ACTION_SD_CARD_STATUS\"), this.f17645H0);"
+        },
+        {
+          "line": 1307,
+          "text": "        d.a(LlcApplication.getContext()).b(c.g(\"BROADCAST_ACTION_FIRMWARE_GO_DOWNLOAD\"), this.f17654r0);"
+        },
+        {
+          "line": 1532,
+          "text": "            ((p084h6.a) p084h6.h.l().b()).g(C1410v.J(authToken)).z(new g(hVar, this));"
+        },
+        {
+          "line": 1621,
+          "text": "        String strA = C1368b0.A(\"camera_image\", updateDeviceThumbnailPath, \".jpg\");"
+        },
+        {
+          "line": 1641,
+          "text": "        String strG = C1410v.g(updateInfoEntity.getUpdateDate());"
+        },
+        {
+          "line": 1660,
+          "text": "                if (C1367b.g()) {"
+        },
+        {
+          "line": 1697,
+          "text": "                if (C1367b.g()) {"
+        }
       ]
     }
+  },
+  "downstream_control_endpoints": {
+    "source": "p084h6/a.java",
+    "source_lines": 289,
+    "declaration_count": 59,
+    "fixed_relative_declarations": 57,
+    "dynamic_url_declarations": 2,
+    "records": [
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "firmware/send",
+        "normalized_path": "/firmware/send",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 55,
+        "declaration_line": 56,
+        "java_method": "A",
+        "declaration": "InterfaceC2118h<LutDataBean> A(@i(\"Authorization\") String str, @i(\"Content-Length\") String str2, @i(\"transID\") String str3, @sa.a A0 a8);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "firmware/send-prepare",
+        "normalized_path": "/firmware/send-prepare",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 59,
+        "declaration_line": 60,
+        "java_method": "B",
+        "declaration": "InterfaceC2118h<LutDataBean> B(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "media/gallery/count",
+        "normalized_path": "/media/gallery/count",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 63,
+        "declaration_line": 64,
+        "java_method": "C",
+        "declaration": "l<GalleryCountResponseBean> C(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "photostyle/get-setting",
+        "normalized_path": "/photostyle/get-setting",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 67,
+        "declaration_line": 68,
+        "java_method": "D",
+        "declaration": "InterfaceC2118h<C0624e0> D(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "lut/send",
+        "normalized_path": "/lut/send",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 70,
+        "declaration_line": 71,
+        "java_method": "E",
+        "declaration": "InterfaceC2118h<LutDataBean> E(@i(\"Authorization\") String str, @i(\"Content-Length\") String str2, @i(\"transID\") String str3, @i(\"Content-Type\") String str4, @sa.a A0 a8);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "auth",
+        "normalized_path": "/auth",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 74,
+        "declaration_line": 75,
+        "java_method": "F",
+        "declaration": "l<AuthResponseBean> F(@sa.a AuthRequestBean authRequestBean);",
+        "authorization_parameter": false
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "photostyle/start-stream",
+        "normalized_path": "/photostyle/start-stream",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 78,
+        "declaration_line": 79,
+        "java_method": "G",
+        "declaration": "InterfaceC2118h<T0> G(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "remote/get-state",
+        "normalized_path": "/remote/get-state",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 82,
+        "declaration_line": 83,
+        "java_method": "H",
+        "declaration": "InterfaceC2118h<C0630h0> H(@i(\"Authorization\") String str);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "community/lut",
+        "normalized_path": "/community/lut",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 86,
+        "declaration_line": 87,
+        "java_method": "I",
+        "declaration": "InterfaceC2118h<CommunityDownloadBean> I(@sa.a CommunityGenresPostBean communityGenresPostBean);",
+        "authorization_parameter": false
+      },
+      {
+        "annotation": "f",
+        "http_method": "GET",
+        "declared_path": "app_version.json",
+        "normalized_path": "/app_version.json",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 89,
+        "declaration_line": 90,
+        "java_method": "J",
+        "declaration": "l<AppVersionResponseBean> J();",
+        "authorization_parameter": false
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "photostyle/set-myphotostyle-setting",
+        "normalized_path": "/photostyle/set-myphotostyle-setting",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 93,
+        "declaration_line": 94,
+        "java_method": "K",
+        "declaration": "InterfaceC2118h<T0> K(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "lut/delete",
+        "normalized_path": "/lut/delete",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 97,
+        "declaration_line": 98,
+        "java_method": "L",
+        "declaration": "InterfaceC2118h<LutDataBean> L(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "remote/get-setting",
+        "normalized_path": "/remote/get-setting",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 101,
+        "declaration_line": 102,
+        "java_method": "M",
+        "declaration": "InterfaceC2118h<C0624e0> M(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "lut/rename",
+        "normalized_path": "/lut/rename",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 105,
+        "declaration_line": 106,
+        "java_method": "N",
+        "declaration": "InterfaceC2118h<LutDataBean> N(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "photostyle/get-myphotostyle-setting",
+        "normalized_path": "/photostyle/get-myphotostyle-setting",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 109,
+        "declaration_line": 110,
+        "java_method": "O",
+        "declaration": "InterfaceC2118h<E> O(@i(\"Authorization\") String str);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "community/creators",
+        "normalized_path": "/community/creators",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 113,
+        "declaration_line": 114,
+        "java_method": "P",
+        "declaration": "InterfaceC2118h<CommunityCreatorListBean> P(@sa.a CommunityCreatorsPostBean communityCreatorsPostBean);",
+        "authorization_parameter": false
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "media/gallery/current-sd",
+        "normalized_path": "/media/gallery/current-sd",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 117,
+        "declaration_line": 118,
+        "java_method": "Q",
+        "declaration": "l<GalleryCurrentSdResponseBean> Q(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "photostyle/restore-to-default",
+        "normalized_path": "/photostyle/restore-to-default",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 121,
+        "declaration_line": 122,
+        "java_method": "R",
+        "declaration": "InterfaceC2118h<T0> R(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "remote/get-lvport",
+        "normalized_path": "/remote/get-lvport",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 125,
+        "declaration_line": 126,
+        "java_method": "S",
+        "declaration": "InterfaceC2118h<B> S(@i(\"Authorization\") String str);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "remote/set-setting",
+        "normalized_path": "/remote/set-setting",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 129,
+        "declaration_line": 130,
+        "java_method": "T",
+        "declaration": "InterfaceC2118h<T0> T(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "remote/camctrl",
+        "normalized_path": "/remote/camctrl",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 133,
+        "declaration_line": 134,
+        "java_method": "U",
+        "declaration": "InterfaceC2118h<C0625f> U(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "f",
+        "http_method": "GET",
+        "declared_path": null,
+        "normalized_path": null,
+        "url_kind": "dynamic_Url_parameter",
+        "annotation_line": 136,
+        "declaration_line": 137,
+        "java_method": "V",
+        "declaration": "l<FirmResponseBean> V(@y String str);",
+        "authorization_parameter": false
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "lut/info",
+        "normalized_path": "/lut/info",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 140,
+        "declaration_line": 141,
+        "java_method": "W",
+        "declaration": "InterfaceC2118h<LutCameraBean> W(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "lut/file",
+        "normalized_path": "/lut/file",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 144,
+        "declaration_line": 145,
+        "java_method": "X",
+        "declaration": "l<G0> X(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "lut/set-display-setting",
+        "normalized_path": "/lut/set-display-setting",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 148,
+        "declaration_line": 149,
+        "java_method": "Y",
+        "declaration": "InterfaceC2118h<LutDataBean> Y(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "media/transfer/count",
+        "normalized_path": "/media/transfer/count",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 152,
+        "declaration_line": 153,
+        "java_method": "Z",
+        "declaration": "InterfaceC2118h<CameraImageTransferCountResponseBean> Z(@i(\"Authorization\") String str);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "auto-transfer/get-content-info",
+        "normalized_path": "/auto-transfer/get-content-info",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 156,
+        "declaration_line": 157,
+        "java_method": "a",
+        "declaration": "l<G0> a(@i(\"Authorization\") String str);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "community/luts/top",
+        "normalized_path": "/community/luts/top",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 160,
+        "declaration_line": 161,
+        "java_method": "a0",
+        "declaration": "InterfaceC2118h<CommunityLutsTopBean> a0(@sa.a CommunityLutTopPostBean communityLutTopPostBean);",
+        "authorization_parameter": false
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "remote/camcmd",
+        "normalized_path": "/remote/camcmd",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 164,
+        "declaration_line": 165,
+        "java_method": "b",
+        "declaration": "l<C0619c> b(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "community/genres",
+        "normalized_path": "/community/genres",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 168,
+        "declaration_line": 169,
+        "java_method": "b0",
+        "declaration": "InterfaceC2118h<CommunityGenresBean> b0();",
+        "authorization_parameter": false
+      },
+      {
+        "annotation": "f",
+        "http_method": "GET",
+        "declared_path": null,
+        "normalized_path": null,
+        "url_kind": "dynamic_Url_parameter",
+        "annotation_line": 172,
+        "declaration_line": 173,
+        "java_method": "c",
+        "declaration": "l<G0> c(@y String str);",
+        "authorization_parameter": false
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "media/gallery/count",
+        "normalized_path": "/media/gallery/count",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 176,
+        "declaration_line": 177,
+        "java_method": "c0",
+        "declaration": "l<GalleryCountResponseBean> c0(@i(\"Authorization\") String str);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "media/image",
+        "normalized_path": "/media/image",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 180,
+        "declaration_line": 182,
+        "java_method": "d",
+        "declaration": "InterfaceC2118h<G0> d(@i(\"Authorization\") String str, @i(\"Range\") String str2, @sa.a String str3);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "media/transfer/info",
+        "normalized_path": "/media/transfer/info",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 185,
+        "declaration_line": 186,
+        "java_method": "d0",
+        "declaration": "InterfaceC2118h<CameraImageTransferInfoResponseBean> d0(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "remote/camcmd",
+        "normalized_path": "/remote/camcmd",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 189,
+        "declaration_line": 190,
+        "java_method": "e",
+        "declaration": "InterfaceC2118h<C0619c> e(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "lut/rearrange",
+        "normalized_path": "/lut/rearrange",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 193,
+        "declaration_line": 194,
+        "java_method": "e0",
+        "declaration": "InterfaceC2118h<LutDataBean> e0(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "remote/stop-stream",
+        "normalized_path": "/remote/stop-stream",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 197,
+        "declaration_line": 198,
+        "java_method": "f",
+        "declaration": "InterfaceC2118h<Z0> f(@i(\"Authorization\") String str);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "photostyle/change",
+        "normalized_path": "/photostyle/change",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 201,
+        "declaration_line": 202,
+        "java_method": "f0",
+        "declaration": "InterfaceC2118h<T0> f0(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "firmware/abort-send",
+        "normalized_path": "/firmware/abort-send",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 205,
+        "declaration_line": 206,
+        "java_method": "g",
+        "declaration": "InterfaceC2118h<LutDataBean> g(@i(\"Authorization\") String str);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "photostyle/rename",
+        "normalized_path": "/photostyle/rename",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 209,
+        "declaration_line": 210,
+        "java_method": "g0",
+        "declaration": "InterfaceC2118h<T0> g0(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "media/gallery/thumbnail",
+        "normalized_path": "/media/gallery/thumbnail",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 213,
+        "declaration_line": 215,
+        "java_method": "h",
+        "declaration": "l<G0> h(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "f",
+        "http_method": "GET",
+        "declared_path": "firmware_list.json",
+        "normalized_path": "/firmware_list.json",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 217,
+        "declaration_line": 218,
+        "java_method": "i",
+        "declaration": "l<FirmListResponseBean> i();",
+        "authorization_parameter": false
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "photostyle/save-current-setting",
+        "normalized_path": "/photostyle/save-current-setting",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 221,
+        "declaration_line": 222,
+        "java_method": "j",
+        "declaration": "InterfaceC2118h<T0> j(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "photostyle/get-display-setting",
+        "normalized_path": "/photostyle/get-display-setting",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 225,
+        "declaration_line": 226,
+        "java_method": "k",
+        "declaration": "InterfaceC2118h<C0662y> k(@i(\"Authorization\") String str);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "lut/send-prepare",
+        "normalized_path": "/lut/send-prepare",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 229,
+        "declaration_line": 230,
+        "java_method": "l",
+        "declaration": "InterfaceC2118h<LutDataBean> l(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "community/luts/download",
+        "normalized_path": "/community/luts/download",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 233,
+        "declaration_line": 235,
+        "java_method": "m",
+        "declaration": "l<G0> m(@sa.a CommunityDownloadPostBean communityDownloadPostBean);",
+        "authorization_parameter": false
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "lut/abort-send",
+        "normalized_path": "/lut/abort-send",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 238,
+        "declaration_line": 239,
+        "java_method": "n",
+        "declaration": "InterfaceC2118h<LutDataBean> n(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "media/image",
+        "normalized_path": "/media/image",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 242,
+        "declaration_line": 244,
+        "java_method": "o",
+        "declaration": "InterfaceC2118h<G0> o(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "auth",
+        "normalized_path": "/auth",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 247,
+        "declaration_line": 248,
+        "java_method": "p",
+        "declaration": "InterfaceC2118h<AuthResponseBean> p(@sa.a AuthRequestBean authRequestBean);",
+        "authorization_parameter": false
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "media/burst/info",
+        "normalized_path": "/media/burst/info",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 251,
+        "declaration_line": 252,
+        "java_method": "q",
+        "declaration": "l<BurstInfoResponseBean> q(@i(\"Authorization\") String str, @sa.a BurstInfoRequestBean burstInfoRequestBean);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "photostyle/set-display-setting",
+        "normalized_path": "/photostyle/set-display-setting",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 255,
+        "declaration_line": 256,
+        "java_method": "r",
+        "declaration": "InterfaceC2118h<T0> r(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "media/gallery/info",
+        "normalized_path": "/media/gallery/info",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 259,
+        "declaration_line": 260,
+        "java_method": "s",
+        "declaration": "l<GalleryInfoResponseBean> s(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "photostyle/rearrange",
+        "normalized_path": "/photostyle/rearrange",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 263,
+        "declaration_line": 264,
+        "java_method": "t",
+        "declaration": "InterfaceC2118h<T0> t(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "photostyle/load-preset-setting",
+        "normalized_path": "/photostyle/load-preset-setting",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 267,
+        "declaration_line": 268,
+        "java_method": "u",
+        "declaration": "InterfaceC2118h<T0> u(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "community/luts/filter",
+        "normalized_path": "/community/luts/filter",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 271,
+        "declaration_line": 272,
+        "java_method": "v",
+        "declaration": "InterfaceC2118h<CommunityFilterBean> v(@sa.a CommunityListPostBean communityListPostBean);",
+        "authorization_parameter": false
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "community/creator",
+        "normalized_path": "/community/creator",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 275,
+        "declaration_line": 276,
+        "java_method": "w",
+        "declaration": "l<CommunityCreatorResponseBean> w(@sa.a CommunityGenresPostBean communityGenresPostBean);",
+        "authorization_parameter": false
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "community/creators/countries",
+        "normalized_path": "/community/creators/countries",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 279,
+        "declaration_line": 280,
+        "java_method": "x",
+        "declaration": "InterfaceC2118h<CommunityCreatorsCountriesBean> x(@sa.a CommunityCreatorsCountriesPostBean communityCreatorsCountriesPostBean);",
+        "authorization_parameter": false
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "remote/start-stream",
+        "normalized_path": "/remote/start-stream",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 283,
+        "declaration_line": 284,
+        "java_method": "y",
+        "declaration": "InterfaceC2118h<W0> y(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      },
+      {
+        "annotation": "o",
+        "http_method": "POST",
+        "declared_path": "media/transfer/notify",
+        "normalized_path": "/media/transfer/notify",
+        "url_kind": "fixed_relative_annotation",
+        "annotation_line": 287,
+        "declaration_line": 288,
+        "java_method": "z",
+        "declaration": "InterfaceC2118h<G0> z(@i(\"Authorization\") String str, @sa.a String str2);",
+        "authorization_parameter": true
+      }
+    ],
+    "scope": "Actual Retrofit client declarations; authority/base URL is selected by caller. This is not a camera daemon route map."
+  },
+  "epistemic_classification": {
+    "confirmed_client_source_only": [
+      "C2538k2.d pads raw data with 0..3 zeros before length prefix/FF frame alignment. A 16-byte UUID frame ends in FFFFFF, not 00FFFF.",
+      "sa.o and sa.f are consumed as POST and GET by oa/w0.java; paths/methods are parsed from actual a.java, preserving duplicate declarations and dynamic URLs.",
+      "Actual firmware client declarations are POST firmware/send-prepare, firmware/send and firmware/abort-send; no SetDataInfo/SendData path occurs in a.java.",
+      "Client authorization formatter emits literal quotes around Bearer text. Pinning code compares the certificate hash with a stored fingerprint."
+    ],
+    "conditional_inference": [
+      "The shared BLE/auth values may allow server cross-checking, but the client's construction does not reveal whether the server checks them.",
+      "These client inputs can guide a later recovered firmware parser/handler comparison; they do not locate that handler now."
+    ],
+    "unknown": [
+      "Actual S1M2 HTTPS daemon route table, authentication validator, native update handler and IPCU/ipcufs calls.",
+      "Whether these declared routes are exposed on any particular camera/firmware and with what side effects.",
+      "Runtime certificate/token generation, expiry, encryption and flash update chain; no OTA-to-ipcufs chain has been closed."
+    ]
   }
 }

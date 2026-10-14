@@ -1,0 +1,87 @@
+{
+  "scope": "Root recheck of exact backups, live source/code digests, corrected result identity, current navigation, and independent synthetic BLE/DHCP vectors",
+  "checks": {
+    "all_exact_backups_match": true,
+    "removed_paths_absent": true,
+    "source_13_checks_pass": true,
+    "source_nine_final_files_match": true,
+    "candidate_final_code_digests_match": true,
+    "candidate_final_guards_pass": true,
+    "empty_sweep_not_performed": true,
+    "dump_21_controls_pass": true,
+    "dump_final_code_digest_match": true,
+    "current_structure_matches_actual_record": true,
+    "current_public_scan_matches_actual_record": true,
+    "current_selftest_matches_actual_record": true,
+    "root_ble_fixed_uuid_and_one_byte": true,
+    "root_dhcp_short_bigint_boundary": true,
+    "historical_control_and_literals": true,
+    "modified_python_syntax_pass": true,
+    "modified_document_links_exist": true
+  },
+  "all_checks_passed": true,
+  "mutation_count": 43,
+  "removed_file_count": 16,
+  "python_syntax_files": [
+    "analysis/agy_takeover_20261012/03_small_loader/verify_small_loader.py",
+    "analysis/agy_takeover_20261012/05_boot_producer/verify_boot_producer.py",
+    "analysis/agy_takeover_20261012/06_lab_control/verify_lab_control_codec.py",
+    "analysis/correction_status_review_20261013/verify_documents.py",
+    "analysis/hardware_errata_review_20261013/verify_errata.py",
+    "analysis/knownplaintext_oracle_20261014/oracle_scan.py",
+    "analysis/s1m2_acquisition_plan_20261014/public_artifact_match.py",
+    "analysis/s1m2_acquisition_plan_20261014/verify_plaintext_dump.py"
+  ],
+  "markdown_links_checked": 85,
+  "broken_links": [],
+  "ble_synthetic_result": {
+    "status": "PASS",
+    "fixed_frame_vectors": [
+      {
+        "raw_hex": "",
+        "expected_hex": "00ffffff"
+      },
+      {
+        "raw_hex": "41",
+        "expected_hex": "0141000000ffffff"
+      },
+      {
+        "raw_hex": "414243",
+        "expected_hex": "0341424300ffffff"
+      },
+      {
+        "raw_hex": "41424344",
+        "expected_hex": "0441424344ffffff"
+      },
+      {
+        "raw_hex": "4c756d6978506173733132",
+        "expected_hex": "0b4c756d697850617373313200ffffff"
+      },
+      {
+        "raw_hex": "4c756d697850617373313233",
+        "expected_hex": "0c4c756d697850617373313233ffffff"
+      },
+      {
+        "raw_hex": "000102030405060708090a0b0c0d0e0f",
+        "expected_hex": "10000102030405060708090a0b0c0d0e0fffffff"
+      }
+    ],
+    "scope": "Synthetic client-code vectors; no camera/BLE/TLS runtime test",
+    "test_vectors": {
+      "initial_inform_key_hex": "a1b2c3d4",
+      "sample_wifi_password": "LumixPass123",
+      "framed_wifi_password_hex": "0c4c756d697850617373313233ffffff",
+      "obfuscated_wifi_password_hex": "ccc78fd8c0e2bbbd9383b0a75e4d3ce7",
+      "recovered_wifi_password": "LumixPass123",
+      "uuid_hex": "00112233445566778899aabbccddeeff",
+      "framed_uuid_hex": "1000112233445566778899aabbccddeeffffffff",
+      "obfuscated_uuid_hex": "83a3c3c4c7e787e70b2b4ba34f6f0f6f5e4d3c2b",
+      "app_info_ble_hex": "4c554d4958204c55542043726561746f72732041505020332e312e3000000000",
+      "dhcp_gateway_0x0136A8C0": "192.168.54.1",
+      "auth_header_sample": "'Bearer 0123456789abcdef'"
+    }
+  },
+  "mutations_sha256": "30ff84b0580848f5258c132f4e847282ab2b67e5287a6a6c21eba0b85431c536",
+  "plaintext_recovery_verified": false,
+  "no_device_operation": true
+}

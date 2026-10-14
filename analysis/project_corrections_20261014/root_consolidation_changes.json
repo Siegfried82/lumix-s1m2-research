@@ -1,0 +1,109 @@
+[
+  {
+    "path": "analysis/knownplaintext_oracle_20261014/historical_sweep_record.json",
+    "action": "create",
+    "step_before_sha256": null,
+    "after_sha256": "9f9445643a573fa24cf7a069517613f8dc455f9b04b0761e169f509f77302edb",
+    "reason": "Separate historical enumeration from fresh structural results; withdraw unconditional semantics"
+  },
+  {
+    "path": "analysis/knownplaintext_oracle_20261014/results.json",
+    "action": "replace",
+    "step_before_sha256": "f717606e0dae2c647bf2dbef61254c763ab1a81248320a5252ec42d07b23779b",
+    "after_sha256": "7cc8b3e32ef97ebc296ef9c87a437c7bfc41b5ddfff7f01485b95969233caa2f",
+    "reason": "Current canonical result is the actual corrected nine-input structural audit, not a fresh key sweep"
+  },
+  {
+    "path": "analysis/s1m2_acquisition_plan_20261014/public_artifact_match.json",
+    "action": "replace",
+    "step_before_sha256": "7a72a13e6a309a9ee79565253b6e642b8be40cb0ef3b5345895228bb79408551",
+    "after_sha256": "95e42fe7b81b8fae0ea6f121767f58c0744344a4a89d02bd6a7000abd1d5b6d9",
+    "reason": "Replace global-route closure with actual 76-content finite scan and explicit input/coverage records"
+  },
+  {
+    "path": "analysis/s1m2_acquisition_plan_20261014/selftest.json",
+    "action": "replace",
+    "step_before_sha256": "376145d29c78e685ae5c2227021b6e7b425350e6548f0a677157c2fac5b4b31a",
+    "after_sha256": "475fef59e2a5e47c199f42af19473f93de63ff96e2280ee2b65fee75e1d45422",
+    "reason": "Replace periodic data mislabeled random and unconditional plaintext success with os.urandom/range/mapping controls"
+  },
+  {
+    "path": "analysis/hardware_errata_review_20261013/final_verification/report_original.md",
+    "action": "remove",
+    "step_before_sha256": "54fd199e16f6f1ca56654b107cd4048a6ce3a6f01e30e9e7d1c2d39130db3f50",
+    "reason": "Withdrawn draft duplicate kept only in exact external backup"
+  },
+  {
+    "path": "analysis/hardware_errata_review_20261013/actual_verification/report_original.md",
+    "action": "remove",
+    "step_before_sha256": "54fd199e16f6f1ca56654b107cd4048a6ce3a6f01e30e9e7d1c2d39130db3f50",
+    "reason": "Withdrawn draft duplicate kept only in exact external backup"
+  },
+  {
+    "path": "analysis/hardware_errata_review_20261013/verified_snapshot/report_original.md",
+    "action": "remove",
+    "step_before_sha256": "54fd199e16f6f1ca56654b107cd4048a6ce3a6f01e30e9e7d1c2d39130db3f50",
+    "reason": "Withdrawn draft duplicate kept only in exact external backup"
+  },
+  {
+    "path": "analysis/project_corrections_20261014/post_cleanup_report_replay/纠正说明_原稿.md",
+    "action": "remove",
+    "step_before_sha256": "fff27b499df302896eb83a55bd87a2cc8e9d6c598ed8d2c47917505a361e45b5",
+    "reason": "Withdrawn draft duplicate kept only in exact external backup"
+  },
+  {
+    "path": "analysis/project_corrections_20261014/post_cleanup_report_replay/当前状态_核验前快照.md",
+    "action": "remove",
+    "step_before_sha256": "dc32da07d39b97433e48bc241178a069332b9607d4f2ca68220f8511579916fb",
+    "reason": "Withdrawn draft duplicate kept only in exact external backup"
+  },
+  {
+    "path": "analysis/agy_takeover_20261012/03_small_loader/report.md.CODEX_REVIEW.md",
+    "action": "remove",
+    "step_before_sha256": "5ca9da02ef8fa82717f63651dfe06fb3f7f57e0d1d980cbd384d539400ba0faf",
+    "reason": "Old sidecar described an unmodified erroneous original; correction now applied directly to source/report/results"
+  },
+  {
+    "path": "analysis/agy_takeover_20261012/05_boot_producer/report.md.CODEX_REVIEW.md",
+    "action": "remove",
+    "step_before_sha256": "3449d0b285c906f2330a21f6e34663c0bf84ada42ac72a6b851e3e5e0684d31f",
+    "reason": "Old sidecar described an unmodified erroneous original; correction now applied directly to source/report/results"
+  },
+  {
+    "path": "analysis/agy_takeover_20261012/06_lab_control/report.md.CODEX_REVIEW.md",
+    "action": "remove",
+    "step_before_sha256": "20dcf8f964937a1faf661c0c9580d80bc9f9e2de557cb83db41975fd94a12168",
+    "reason": "Old sidecar described an unmodified erroneous original; correction now applied directly to source/report/results"
+  },
+  {
+    "path": "analysis/knownplaintext_oracle_20261014/报告.md.CODEX_REVIEW.md",
+    "action": "remove",
+    "step_before_sha256": "b310458da349ff1cdc599f45c2424072fbd29f2e94cbb906906e1825debc4e79",
+    "reason": "Old sidecar described an unmodified erroneous original; correction now applied directly to source/report/results"
+  },
+  {
+    "path": "analysis/s1m2_acquisition_plan_20261014/零风险路径结论.md.CODEX_REVIEW.md",
+    "action": "remove",
+    "step_before_sha256": "d4e3f014009a99a246059372b3708824c49fe7b613105fc5c652c3f3a25d70ae",
+    "reason": "Old sidecar described an unmodified erroneous original; correction now applied directly to source/report/results"
+  },
+  {
+    "path": "analysis/s1m2_acquisition_plan_20261014/verify_plaintext_dump.py.CODEX_REVIEW.md",
+    "action": "remove",
+    "step_before_sha256": "597f5139a5e5aaafeef3bf774976ab6205f75c09f99ebc1e76e41b2678f6b5a3",
+    "reason": "Old sidecar described an unmodified erroneous original; correction now applied directly to source/report/results"
+  },
+  {
+    "path": "analysis/external_material_20261014/同族平台对照_Milbeaut_GoPro.md.CODEX_REVIEW.md",
+    "action": "remove",
+    "step_before_sha256": "e1e02c5e3db0a4a18aab9243c056753e8f6f1ecaab45da3746db39943dabe20d",
+    "reason": "Old sidecar described an unmodified erroneous original; correction now applied directly to source/report/results"
+  },
+  {
+    "path": "analysis/hardware_errata_review_20261013/核验与二次勘误.md",
+    "action": "replace",
+    "step_before_sha256": "9e99a7d8cddba41d86d15508d91230dbe64de202625c1ed5d6ae0353c638fa4a",
+    "after_sha256": "f081f8b609805d1144fb945aa0fa95fd2221fdcbafd39713055afd0978ccae3f",
+    "reason": "Update historical review provenance and links after direct correction and cleanup"
+  }
+]

@@ -1,0 +1,20 @@
+--- analysis/sources/kernel_selected/linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241.dts
+
++++ analysis/sources/oss_refresh_20261009/linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8266.dts
+
+@@ -15,9 +15,9 @@
+
+ /dts-v1/;
+-#include "pvc04v-MC8241.dtsi"
+-#include "pvc04v-MC8241-rtos.h"
+-#include "pvc04v-MC8241-gpio.h"
++#include "pvc04v-MC8266.dtsi"
++#include "pvc04v-MC8266-rtos.h"
++#include "pvc04v-MC8266-gpio.h"
+ 
+ / {
+-	model = "Socionext pvc04v MC8241";
+-	compatible = "socionext,pvc04v-MC8241-2ND", "socionext,sc2006";
++	model = "Socionext pvc04v MC8266";
++	compatible = "socionext,pvc04v-MC8266-2ND", "socionext,sc2006";
+ 

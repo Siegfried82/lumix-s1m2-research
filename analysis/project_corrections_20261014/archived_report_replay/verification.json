@@ -1,0 +1,649 @@
+{
+  "scope": "Actual read-only documents/source/firmware checks; ten specified legacy full-body decryptions, no enumeration or device operation",
+  "inputs": [
+    {
+      "path": "<LOCAL_USER>/相机研究归档备份/project-corrections-20261014-20261013-212849/S1M2假线索与伪造引用纠正说明_20261013.md",
+      "bytes": 19728,
+      "sha256": "fff27b499df302896eb83a55bd87a2cc8e9d6c598ed8d2c47917505a361e45b5",
+      "source_role": "explicit-archived-report-input"
+    },
+    {
+      "path": "S1M2研究当前状态.md",
+      "bytes": 5642,
+      "sha256": "dc32da07d39b97433e48bc241178a069332b9607d4f2ca68220f8511579916fb"
+    },
+    {
+      "path": "<LOCAL_USER>/相机研究归档备份/project-corrections-20261014-20261013-212849/analysis/agy_takeover_20261012/05_boot_producer/report.md",
+      "bytes": 36043,
+      "sha256": "797e1c653f4212818fe41a00d002d0cf77a82ca142a6476b17433ad5bc436274",
+      "source_role": "explicit-archived-boot-report-input"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241-rtos.h",
+      "bytes": 1992,
+      "sha256": "8c9952944da3b65eacb6354ec995b19c9ab287ea50e78db4cbfce17ed81ead61"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241.dts",
+      "bytes": 17255,
+      "sha256": "170b51a3057efdb72caac696a9a7530d780187b5af13b6710518f1390092a33a"
+    },
+    {
+      "path": "analysis/sources/kernel_selected/linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241.dtsi",
+      "bytes": 27422,
+      "sha256": "796ed66d3c14edb6077afe49833433107cef828f0528f2926f7975fcfe4d6462"
+    },
+    {
+      "path": "analysis/sources/lumix_lab_codex_static/decompiled/sources/p084h6/a.java",
+      "bytes": 12701,
+      "sha256": "53f9f8ec61d95915512a03a3cd5fcabe5ab5a75dd7ac6a19987f15576e3a5104"
+    },
+    {
+      "path": "analysis/ptool_crypto_results.json",
+      "bytes": 28421,
+      "sha256": "f0e43355a1f920f984ea1a5f3ccff77ff7a17721aa662a52cee4192afbb56bee"
+    },
+    {
+      "path": "analysis/legacy_corpus_20261011/G3___V12.bin",
+      "bytes": 15599104,
+      "sha256": "470a2e7facb75985e2a1a993096f18aafc1fb043792dbea4c9d94b66fe27ec9a"
+    },
+    {
+      "path": "analysis/legacy_corpus_20261011/GF2__V11.bin",
+      "bytes": 15599104,
+      "sha256": "39403bcf70db42549ac6a29622c768f3c7f6e1e3fa0f769c2ed690ae2ab148c1"
+    },
+    {
+      "path": "analysis/legacy_corpus_20261011/GF3__V12.bin",
+      "bytes": 15599104,
+      "sha256": "5c7b235d5b55c95d8e6a6db1b24dd2f4013bc46e611aa1bf38b60ee45b875124"
+    },
+    {
+      "path": "analysis/legacy_corpus_20261011/GH2__V11.bin",
+      "bytes": 15599104,
+      "sha256": "5756a37304b2453982b977d250806e1056cd9dfc5acf9de07a53fa3e2973400d"
+    },
+    {
+      "path": "analysis/legacy_corpus_20261011/GX1__V11.bin",
+      "bytes": 15599104,
+      "sha256": "75725a6876702909dbd6396527113f5a6e40187a34369624be30844cdeb302cf"
+    },
+    {
+      "path": "S1m2_V14.bin",
+      "bytes": 171867648,
+      "sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f"
+    },
+    {
+      "path": "analysis/transition_corpus_20261011/GH4__V27.bin",
+      "bytes": 37099008,
+      "sha256": "e75fb8237ff2de4d1e8d970de8eb8e563e9756939b3320849f1c9017f4d956c0"
+    }
+  ],
+  "source_line_counts": {
+    "rtos_header": 47,
+    "dts": 760,
+    "dtsi": 997,
+    "retrofit": 289
+  },
+  "old_report_macro_quote_checks": [
+    {
+      "name": "_MEM_ORIGIN_",
+      "report_quoted_value": "0x00180000",
+      "actual_old_report_value": "0x00000000",
+      "exact_literal_match": false
+    },
+    {
+      "name": "_RTOS_STEP_OFFSET_",
+      "report_quoted_value": "0x06100000",
+      "actual_old_report_value": "0x00180000",
+      "exact_literal_match": false
+    },
+    {
+      "name": "_UBOOT_OFFSET_",
+      "report_quoted_value": "0x00000000",
+      "actual_old_report_value": "(_MEM_ORIGIN_       + _RTOS_STEP_OFFSET_)  /* 0x00180000 -> 0x400180000 */",
+      "exact_literal_match": false
+    },
+    {
+      "name": "_ZKERNEL_OFFSET_",
+      "report_quoted_value": "0x00080000",
+      "actual_old_report_value": "(_UBOOT_OFFSET_     + 0x00080000)          /* 0x00200000 -> 0x400200000 */",
+      "exact_literal_match": false
+    },
+    {
+      "name": "_DTB_OFFSET_",
+      "report_quoted_value": "0x01110000",
+      "actual_old_report_value": "(_ZKERNEL_OFFSET_   + 0x01090000)          /* 0x01290000 -> 0x401290000 */",
+      "exact_literal_match": false
+    },
+    {
+      "name": "_SLRAM0_OFFSET_",
+      "report_quoted_value": "0x01120000",
+      "actual_old_report_value": "(_DTB_OFFSET_       + 0x00010000)          /* 0x012A0000 -> 0x4012A0000 */",
+      "exact_literal_match": false
+    },
+    {
+      "name": "_SLRAM1_OFFSET_",
+      "report_quoted_value": "0x01520000",
+      "actual_old_report_value": "(_SLRAM0_OFFSET_    + 0x00400000)          /* 0x016A0000 -> 0x4016A0000 */",
+      "exact_literal_match": false
+    },
+    {
+      "name": "_KERNEL_OFFSET_",
+      "report_quoted_value": "0x03580000",
+      "actual_old_report_value": null,
+      "exact_literal_match": false
+    },
+    {
+      "name": "_IPCU_OFFSET_",
+      "report_quoted_value": "0xabd00000",
+      "actual_old_report_value": null,
+      "exact_literal_match": false
+    }
+  ],
+  "real_source_macro_quote_checks": [
+    {
+      "name": "SHMEM_TOP_ADDRU",
+      "reported_definition": "0x4",
+      "actual_source_definition": "0x00000004",
+      "source_macro_exists": true
+    },
+    {
+      "name": "SHMEM_TOP_ADDRL",
+      "reported_definition": "0xac000000",
+      "actual_source_definition": "0xAC000000",
+      "source_macro_exists": true
+    },
+    {
+      "name": "IPCU_BUFF_OFFSET",
+      "reported_definition": "0x00000008",
+      "actual_source_definition": null,
+      "source_macro_exists": false
+    },
+    {
+      "name": "IPCU_SYNC_OFFSET",
+      "reported_definition": "0x00000018",
+      "actual_source_definition": null,
+      "source_macro_exists": false
+    },
+    {
+      "name": "MOVIE_BUFF_OFFSET",
+      "reported_definition": "0x00000028",
+      "actual_source_definition": null,
+      "source_macro_exists": false
+    },
+    {
+      "name": "AUDIO_BUFF_OFFSET",
+      "reported_definition": "0x00000038",
+      "actual_source_definition": null,
+      "source_macro_exists": false
+    }
+  ],
+  "legacy_key_checks": [
+    {
+      "model": "G3___V12",
+      "table_index": 10,
+      "derived_key_hex": "e686c04a4336f0bf23fd56f925ee553e",
+      "report_key_hex": "9b3a75f66d68c7b6a9226b9f114b3e5d",
+      "key_literal_matches": false,
+      "expected_complete_body_md5": "07a55d1b05011d0b4f92b57d1718b662",
+      "derived_key_complete_body_md5": "07a55d1b05011d0b4f92b57d1718b662",
+      "report_key_complete_body_md5": "554ff703f717d85e61aaa7c614bd2193",
+      "derived_key_full_digest_pass": true,
+      "report_key_full_digest_pass": false,
+      "scope": "Specified legacy input and AES128 CBC only; not a modern S1M2 key test"
+    },
+    {
+      "model": "GF2__V11",
+      "table_index": 8,
+      "derived_key_hex": "4b8ba02b85110dcec98b591f5528fbc2",
+      "report_key_hex": "73c906e861b9a24153c2017b09f2a4c7",
+      "key_literal_matches": false,
+      "expected_complete_body_md5": "1e5bca8e4f1120c1f779d7f3ad450311",
+      "derived_key_complete_body_md5": "1e5bca8e4f1120c1f779d7f3ad450311",
+      "report_key_complete_body_md5": "7402c5cf31bb6b33e749ab61150595c4",
+      "derived_key_full_digest_pass": true,
+      "report_key_full_digest_pass": false,
+      "scope": "Specified legacy input and AES128 CBC only; not a modern S1M2 key test"
+    },
+    {
+      "model": "GF3__V12",
+      "table_index": 9,
+      "derived_key_hex": "3f7e85394912a4d81247c9af4e20ce81",
+      "report_key_hex": "536718193a4d3f2213b67960a149c1a2",
+      "key_literal_matches": false,
+      "expected_complete_body_md5": "a3b958bf338888db5ef2beacd399c5ef",
+      "derived_key_complete_body_md5": "a3b958bf338888db5ef2beacd399c5ef",
+      "report_key_complete_body_md5": "24cafef58317c050a5854d08ffa944d5",
+      "derived_key_full_digest_pass": true,
+      "report_key_full_digest_pass": false,
+      "scope": "Specified legacy input and AES128 CBC only; not a modern S1M2 key test"
+    },
+    {
+      "model": "GH2__V11",
+      "table_index": 7,
+      "derived_key_hex": "90b43b5ce34c6e667fb28376b5fa5c27",
+      "report_key_hex": "90b43b5ce34c6e667fb28376b5fa5c27",
+      "key_literal_matches": true,
+      "expected_complete_body_md5": "d88f4506546ce8e2ab264a7548c3dee0",
+      "derived_key_complete_body_md5": "d88f4506546ce8e2ab264a7548c3dee0",
+      "report_key_complete_body_md5": "d88f4506546ce8e2ab264a7548c3dee0",
+      "derived_key_full_digest_pass": true,
+      "report_key_full_digest_pass": true,
+      "scope": "Specified legacy input and AES128 CBC only; not a modern S1M2 key test"
+    },
+    {
+      "model": "GX1__V11",
+      "table_index": 11,
+      "derived_key_hex": "e4252eb939691d4af1084995691e6151",
+      "report_key_hex": "a3f28e7971a45d0194885c1b8532a65f",
+      "key_literal_matches": false,
+      "expected_complete_body_md5": "0bef550abc474660ce2d9e962aa0585a",
+      "derived_key_complete_body_md5": "0bef550abc474660ce2d9e962aa0585a",
+      "report_key_complete_body_md5": "60a29892ff2d1927f7ac68f999da37a6",
+      "derived_key_full_digest_pass": true,
+      "report_key_full_digest_pass": false,
+      "scope": "Specified legacy input and AES128 CBC only; not a modern S1M2 key test"
+    }
+  ],
+  "s1m2": {
+    "input_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+    "count": 62,
+    "crc_matches": true,
+    "index18": {
+      "index": 18,
+      "name": "eep_fix",
+      "occurrence": 0,
+      "size": 131072,
+      "flags": 3,
+      "relative_offset": 89004032,
+      "absolute_offset": 89004544,
+      "destination_raw": 89391104
+    },
+    "first_two_rows": [
+      {
+        "index": 0,
+        "name": "boot",
+        "occurrence": 0,
+        "size": 0,
+        "flags": 2,
+        "relative_offset": 6144,
+        "absolute_offset": 6656,
+        "destination_raw": 0
+      },
+      {
+        "index": 1,
+        "name": "loader1",
+        "occurrence": 0,
+        "size": 131072,
+        "flags": 3,
+        "relative_offset": 6144,
+        "absolute_offset": 6656,
+        "destination_raw": 0
+      }
+    ],
+    "aligned_128KiB": 58,
+    "no_rtos_named_entry": true
+  },
+  "gh4": {
+    "count": 18,
+    "revision": 512,
+    "selector": 3,
+    "flag_counts": {
+      "3": 18
+    },
+    "crc_matches": true
+  },
+  "retrofit_endpoints": [
+    {
+      "annotation": "o",
+      "path": "firmware/send",
+      "annotation_line": 55,
+      "declaration": "InterfaceC2118h<LutDataBean> A(@i(\"Authorization\") String str, @i(\"Content-Length\") String str2, @i(\"transID\") String str3, @sa.a A0 a8)"
+    },
+    {
+      "annotation": "o",
+      "path": "firmware/send-prepare",
+      "annotation_line": 59,
+      "declaration": "InterfaceC2118h<LutDataBean> B(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "media/gallery/count",
+      "annotation_line": 63,
+      "declaration": "l<GalleryCountResponseBean> C(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "photostyle/get-setting",
+      "annotation_line": 67,
+      "declaration": "InterfaceC2118h<C0624e0> D(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "lut/send",
+      "annotation_line": 70,
+      "declaration": "InterfaceC2118h<LutDataBean> E(@i(\"Authorization\") String str, @i(\"Content-Length\") String str2, @i(\"transID\") String str3, @i(\"Content-Type\") String str4, @sa.a A0 a8)"
+    },
+    {
+      "annotation": "o",
+      "path": "auth",
+      "annotation_line": 74,
+      "declaration": "l<AuthResponseBean> F(@sa.a AuthRequestBean authRequestBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "photostyle/start-stream",
+      "annotation_line": 78,
+      "declaration": "InterfaceC2118h<T0> G(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "remote/get-state",
+      "annotation_line": 82,
+      "declaration": "InterfaceC2118h<C0630h0> H(@i(\"Authorization\") String str)"
+    },
+    {
+      "annotation": "o",
+      "path": "community/lut",
+      "annotation_line": 86,
+      "declaration": "InterfaceC2118h<CommunityDownloadBean> I(@sa.a CommunityGenresPostBean communityGenresPostBean)"
+    },
+    {
+      "annotation": "f",
+      "path": "app_version.json",
+      "annotation_line": 89,
+      "declaration": "l<AppVersionResponseBean> J()"
+    },
+    {
+      "annotation": "o",
+      "path": "photostyle/set-myphotostyle-setting",
+      "annotation_line": 93,
+      "declaration": "InterfaceC2118h<T0> K(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "lut/delete",
+      "annotation_line": 97,
+      "declaration": "InterfaceC2118h<LutDataBean> L(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "remote/get-setting",
+      "annotation_line": 101,
+      "declaration": "InterfaceC2118h<C0624e0> M(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "lut/rename",
+      "annotation_line": 105,
+      "declaration": "InterfaceC2118h<LutDataBean> N(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "photostyle/get-myphotostyle-setting",
+      "annotation_line": 109,
+      "declaration": "InterfaceC2118h<E> O(@i(\"Authorization\") String str)"
+    },
+    {
+      "annotation": "o",
+      "path": "community/creators",
+      "annotation_line": 113,
+      "declaration": "InterfaceC2118h<CommunityCreatorListBean> P(@sa.a CommunityCreatorsPostBean communityCreatorsPostBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "media/gallery/current-sd",
+      "annotation_line": 117,
+      "declaration": "l<GalleryCurrentSdResponseBean> Q(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "photostyle/restore-to-default",
+      "annotation_line": 121,
+      "declaration": "InterfaceC2118h<T0> R(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "remote/get-lvport",
+      "annotation_line": 125,
+      "declaration": "InterfaceC2118h<B> S(@i(\"Authorization\") String str)"
+    },
+    {
+      "annotation": "o",
+      "path": "remote/set-setting",
+      "annotation_line": 129,
+      "declaration": "InterfaceC2118h<T0> T(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "remote/camctrl",
+      "annotation_line": 133,
+      "declaration": "InterfaceC2118h<C0625f> U(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "lut/info",
+      "annotation_line": 140,
+      "declaration": "InterfaceC2118h<LutCameraBean> W(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "lut/file",
+      "annotation_line": 144,
+      "declaration": "l<G0> X(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "lut/set-display-setting",
+      "annotation_line": 148,
+      "declaration": "InterfaceC2118h<LutDataBean> Y(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "media/transfer/count",
+      "annotation_line": 152,
+      "declaration": "InterfaceC2118h<CameraImageTransferCountResponseBean> Z(@i(\"Authorization\") String str)"
+    },
+    {
+      "annotation": "o",
+      "path": "auto-transfer/get-content-info",
+      "annotation_line": 156,
+      "declaration": "l<G0> a(@i(\"Authorization\") String str)"
+    },
+    {
+      "annotation": "o",
+      "path": "community/luts/top",
+      "annotation_line": 160,
+      "declaration": "InterfaceC2118h<CommunityLutsTopBean> a0(@sa.a CommunityLutTopPostBean communityLutTopPostBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "remote/camcmd",
+      "annotation_line": 164,
+      "declaration": "l<C0619c> b(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "community/genres",
+      "annotation_line": 168,
+      "declaration": "InterfaceC2118h<CommunityGenresBean> b0()"
+    },
+    {
+      "annotation": "o",
+      "path": "media/gallery/count",
+      "annotation_line": 176,
+      "declaration": "l<GalleryCountResponseBean> c0(@i(\"Authorization\") String str)"
+    },
+    {
+      "annotation": "o",
+      "path": "media/image",
+      "annotation_line": 180,
+      "declaration": "@w\n    InterfaceC2118h<G0> d(@i(\"Authorization\") String str, @i(\"Range\") String str2, @sa.a String str3)"
+    },
+    {
+      "annotation": "o",
+      "path": "media/transfer/info",
+      "annotation_line": 185,
+      "declaration": "InterfaceC2118h<CameraImageTransferInfoResponseBean> d0(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "remote/camcmd",
+      "annotation_line": 189,
+      "declaration": "InterfaceC2118h<C0619c> e(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "lut/rearrange",
+      "annotation_line": 193,
+      "declaration": "InterfaceC2118h<LutDataBean> e0(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "remote/stop-stream",
+      "annotation_line": 197,
+      "declaration": "InterfaceC2118h<Z0> f(@i(\"Authorization\") String str)"
+    },
+    {
+      "annotation": "o",
+      "path": "photostyle/change",
+      "annotation_line": 201,
+      "declaration": "InterfaceC2118h<T0> f0(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "firmware/abort-send",
+      "annotation_line": 205,
+      "declaration": "InterfaceC2118h<LutDataBean> g(@i(\"Authorization\") String str)"
+    },
+    {
+      "annotation": "o",
+      "path": "photostyle/rename",
+      "annotation_line": 209,
+      "declaration": "InterfaceC2118h<T0> g0(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "media/gallery/thumbnail",
+      "annotation_line": 213,
+      "declaration": "@w\n    l<G0> h(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "f",
+      "path": "firmware_list.json",
+      "annotation_line": 217,
+      "declaration": "l<FirmListResponseBean> i()"
+    },
+    {
+      "annotation": "o",
+      "path": "photostyle/save-current-setting",
+      "annotation_line": 221,
+      "declaration": "InterfaceC2118h<T0> j(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "photostyle/get-display-setting",
+      "annotation_line": 225,
+      "declaration": "InterfaceC2118h<C0662y> k(@i(\"Authorization\") String str)"
+    },
+    {
+      "annotation": "o",
+      "path": "lut/send-prepare",
+      "annotation_line": 229,
+      "declaration": "InterfaceC2118h<LutDataBean> l(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "community/luts/download",
+      "annotation_line": 233,
+      "declaration": "@w\n    l<G0> m(@sa.a CommunityDownloadPostBean communityDownloadPostBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "lut/abort-send",
+      "annotation_line": 238,
+      "declaration": "InterfaceC2118h<LutDataBean> n(@i(\"Authorization\") String str, @sa.a LutCameraPostBean lutCameraPostBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "media/image",
+      "annotation_line": 242,
+      "declaration": "@w\n    InterfaceC2118h<G0> o(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "auth",
+      "annotation_line": 247,
+      "declaration": "InterfaceC2118h<AuthResponseBean> p(@sa.a AuthRequestBean authRequestBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "media/burst/info",
+      "annotation_line": 251,
+      "declaration": "l<BurstInfoResponseBean> q(@i(\"Authorization\") String str, @sa.a BurstInfoRequestBean burstInfoRequestBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "photostyle/set-display-setting",
+      "annotation_line": 255,
+      "declaration": "InterfaceC2118h<T0> r(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "media/gallery/info",
+      "annotation_line": 259,
+      "declaration": "l<GalleryInfoResponseBean> s(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "photostyle/rearrange",
+      "annotation_line": 263,
+      "declaration": "InterfaceC2118h<T0> t(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "photostyle/load-preset-setting",
+      "annotation_line": 267,
+      "declaration": "InterfaceC2118h<T0> u(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "community/luts/filter",
+      "annotation_line": 271,
+      "declaration": "InterfaceC2118h<CommunityFilterBean> v(@sa.a CommunityListPostBean communityListPostBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "community/creator",
+      "annotation_line": 275,
+      "declaration": "l<CommunityCreatorResponseBean> w(@sa.a CommunityGenresPostBean communityGenresPostBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "community/creators/countries",
+      "annotation_line": 279,
+      "declaration": "InterfaceC2118h<CommunityCreatorsCountriesBean> x(@sa.a CommunityCreatorsCountriesPostBean communityCreatorsCountriesPostBean)"
+    },
+    {
+      "annotation": "o",
+      "path": "remote/start-stream",
+      "annotation_line": 283,
+      "declaration": "InterfaceC2118h<W0> y(@i(\"Authorization\") String str, @sa.a String str2)"
+    },
+    {
+      "annotation": "o",
+      "path": "media/transfer/notify",
+      "annotation_line": 287,
+      "declaration": "InterfaceC2118h<G0> z(@i(\"Authorization\") String str, @sa.a String str2)"
+    }
+  ],
+  "get_annotation_count": 2,
+  "limits": [
+    "Literal quote checks do not reconstruct the author/model motive",
+    "Static Java annotations do not prove every path is exposed by the camera HTTPS daemon",
+    "Legacy key validation does not support a modern camera key or algorithm",
+    "Flags2 digest agreement does not establish all flags3 plaintext digest/IV semantics",
+    "Destination numbers and finite search negatives do not establish physical mappings or route exhaustion"
+  ]
+}

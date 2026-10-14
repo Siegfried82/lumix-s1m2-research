@@ -1,0 +1,44 @@
+{
+  "firmware_sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+  "crc_matches": true,
+  "directory_count": 62,
+  "component_table_rows": 29,
+  "table_name_mismatches": 5,
+  "table_destination_mismatches": 21,
+  "aligned_destinations": 58,
+  "actual_gap_count": 7,
+  "header_value_mismatches": [
+    "0x1c",
+    "0x3c",
+    "0x40",
+    "0x2e4"
+  ],
+  "gh4": {
+    "identifier": "GH4",
+    "revision": 512,
+    "selector": 3,
+    "count": 18,
+    "crc_matches": true
+  },
+  "missing_claimed_macros": 9,
+  "gic_not_blacklisted": [
+    185,
+    186,
+    189,
+    192,
+    194,
+    197,
+    306,
+    312,
+    315,
+    321,
+    385,
+    386,
+    387
+  ],
+  "actual_firmware_endpoints": [
+    "firmware/send",
+    "firmware/send-prepare",
+    "firmware/abort-send"
+  ]
+}

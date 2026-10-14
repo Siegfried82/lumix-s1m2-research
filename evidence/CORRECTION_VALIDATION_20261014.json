@@ -1,0 +1,92 @@
+{
+  "scope": "Selected public-copy byte integrity, JSON/Python syntax, registered identity/path redaction, eight CLI help checks and offline synthetic BLE/DHCP vectors only",
+  "selected_ledger_rows": 85,
+  "python_files_parsed": 13,
+  "cli_help_checks": [
+    {
+      "path": "analysis/agy_takeover_20261012/05_boot_producer/verify_boot_producer.py",
+      "exit_code": 0
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/06_lab_control/verify_lab_control_codec.py",
+      "exit_code": 0
+    },
+    {
+      "path": "analysis/knownplaintext_oracle_20261014/oracle_scan.py",
+      "exit_code": 0
+    },
+    {
+      "path": "analysis/s1m2_acquisition_plan_20261014/public_artifact_match.py",
+      "exit_code": 0
+    },
+    {
+      "path": "analysis/s1m2_acquisition_plan_20261014/verify_plaintext_dump.py",
+      "exit_code": 0
+    },
+    {
+      "path": "analysis/correction_status_review_20261013/verify_documents.py",
+      "exit_code": 0
+    },
+    {
+      "path": "analysis/hardware_errata_review_20261013/verify_errata.py",
+      "exit_code": 0
+    },
+    {
+      "path": "analysis/agy_takeover_20261012/03_small_loader/verify_small_loader.py",
+      "exit_code": 0,
+      "runtime_role": "historical PyCryptodome environment"
+    }
+  ],
+  "synthetic_client_result": {
+    "status": "PASS",
+    "fixed_frame_vectors": [
+      {
+        "raw_hex": "",
+        "expected_hex": "00ffffff"
+      },
+      {
+        "raw_hex": "41",
+        "expected_hex": "0141000000ffffff"
+      },
+      {
+        "raw_hex": "414243",
+        "expected_hex": "0341424300ffffff"
+      },
+      {
+        "raw_hex": "41424344",
+        "expected_hex": "0441424344ffffff"
+      },
+      {
+        "raw_hex": "4c756d6978506173733132",
+        "expected_hex": "0b4c756d697850617373313200ffffff"
+      },
+      {
+        "raw_hex": "4c756d697850617373313233",
+        "expected_hex": "0c4c756d697850617373313233ffffff"
+      },
+      {
+        "raw_hex": "000102030405060708090a0b0c0d0e0f",
+        "expected_hex": "10000102030405060708090a0b0c0d0e0fffffff"
+      }
+    ],
+    "scope": "Synthetic client-code vectors; no camera/BLE/TLS runtime test",
+    "test_vectors": {
+      "initial_inform_key_hex": "a1b2c3d4",
+      "sample_wifi_password": "LumixPass123",
+      "framed_wifi_password_hex": "0c4c756d697850617373313233ffffff",
+      "obfuscated_wifi_password_hex": "ccc78fd8c0e2bbbd9383b0a75e4d3ce7",
+      "recovered_wifi_password": "LumixPass123",
+      "uuid_hex": "00112233445566778899aabbccddeeff",
+      "framed_uuid_hex": "1000112233445566778899aabbccddeeffffffff",
+      "obfuscated_uuid_hex": "83a3c3c4c7e787e70b2b4ba34f6f0f6f5e4d3c2b",
+      "app_info_ble_hex": "4c554d4958204c55542043726561746f72732041505020332e312e3000000000",
+      "dhcp_gateway_0x0136A8C0": "192.168.54.1",
+      "auth_header_sample": "'Bearer 0123456789abcdef'"
+    }
+  },
+  "known_identity_files_with_hits": 0,
+  "missing_links": [],
+  "errors": [],
+  "all_checks_passed": true,
+  "boundary": "Source evidence hashes refer to original local bytes; public bytes have their own CSV hashes. No device, firmware, sweep or source-tree scan ran."
+}

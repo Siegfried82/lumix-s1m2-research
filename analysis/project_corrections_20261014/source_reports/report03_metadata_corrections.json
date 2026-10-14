@@ -1,0 +1,69 @@
+{
+  "scope": "Metadata and generator wording/destination correction; no new crypto calculations",
+  "before_sha256": {
+    "script": "b46303deb55eb7b86df6c71f215b35600fa98dd9f3436c4f482ece3dfdb67b18",
+    "results": "0f39969093e92c810bd5898a278d08a9326577d931fae123bd87d5841b86ca42"
+  },
+  "after_sha256": {
+    "script": "4d02ce7d8756bbdd22de08cdce5063eaa2782a0b26e7c968fffb968bacd29b87",
+    "results": "864335e91e694491706ec67551502baf24761be95c79c2f09a8ec95fe0cc8723"
+  },
+  "corrected_coverage": {
+    "actual_legacy_key_models": [
+      "G3___V12.bin",
+      "GF2__V11.bin",
+      "GF3__V12.bin",
+      "GH2__V11.bin",
+      "GX1__V11.bin"
+    ],
+    "aes_mode_or_layouts": [
+      "CBC",
+      "CFB128",
+      "CFB8",
+      "OFB",
+      "CTR_full128_be",
+      "CTR_full128_le",
+      "CTR_be32_off0",
+      "CTR_le32_off12",
+      "CTR_le64_off8"
+    ],
+    "key_count": 5,
+    "pair_count": 2,
+    "key_pair_mode_layout_tests": 90,
+    "cross_index_modes": [
+      "CBC",
+      "CFB128",
+      "OFB",
+      "CTR_full128_be",
+      "CTR_full128_le",
+      "CTR_be32_off0",
+      "CTR_le32_off12",
+      "CTR_le64_off8"
+    ],
+    "no_separate_ecb_pair_test": true,
+    "cfb8_cross_index_tested": false,
+    "parity_seed_endianness": "LE only",
+    "parity_pair_tests": 6,
+    "parity_single_output_hashes": 12,
+    "parity_cross_index_tested": false,
+    "mt_model_boundary": "Common plaintext, same word alignment/phase and standard no-feedback recurrence; other transformations untested"
+  },
+  "pre_edit_byte_backups": [
+    {
+      "backup_path": "<LOCAL_USER>/相机研究归档备份/project-corrections-20261014-20261013-212849/analysis/agy_takeover_20261012/03_small_loader/results.json",
+      "sha256": "0f39969093e92c810bd5898a278d08a9326577d931fae123bd87d5841b86ca42",
+      "source": "outputs/lumix-s1m2-research-public/analysis/agy_takeover_20261012/03_small_loader/results.json",
+      "source_sha256": "0f39969093e92c810bd5898a278d08a9326577d931fae123bd87d5841b86ca42",
+      "recovery": "Copied exact bytes from existing public checkout",
+      "matches_pre_edit_record": true
+    },
+    {
+      "backup_path": "<LOCAL_USER>/相机研究归档备份/project-corrections-20261014-20261013-212849/analysis/agy_takeover_20261012/03_small_loader/verify_small_loader.py",
+      "sha256": "b46303deb55eb7b86df6c71f215b35600fa98dd9f3436c4f482ece3dfdb67b18",
+      "source": "outputs/lumix-s1m2-research-public/analysis/agy_takeover_20261012/03_small_loader/verify_small_loader.py",
+      "source_sha256": "5251094b7dea313f037fcf0c129847ed55a6559eefdf81620470aa4880d218c7",
+      "recovery": "Replaced sole publication placeholder with original workspace path; full digest confirms exact pre-edit bytes",
+      "matches_pre_edit_record": true
+    }
+  ]
+}

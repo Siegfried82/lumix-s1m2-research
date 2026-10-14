@@ -1,0 +1,47 @@
+{
+  "scope": "Offline correction verification; no device contact, firmware execution or key sweep",
+  "structure_run": {
+    "inputs": 9,
+    "flags2_nonempty": 49,
+    "flags2_raw_digest_matches": 49,
+    "flags3_nonempty": 326,
+    "flags3_raw_digest_matches": 0,
+    "conditional_filling_candidates": 11,
+    "key_sweep_performed": false
+  },
+  "artifact_run": {
+    "firmware_inputs": 9,
+    "target_components": 326,
+    "target_sizes": 61,
+    "archives": 7,
+    "trees": 2,
+    "regular_public_entries_seen": 92538,
+    "public_entries_hashed": 76,
+    "candidate_digest_matches": 0,
+    "errors": [],
+    "boundary": "Only unchanged uncompressed archive members/regular tree files of exact target sizes are hashed. Size-skipped contents, symlinks, other public files, concatenation, stripping, compression variants and additional transforms are not tested. Flags=3 digest/plaintext consumer semantics remain unverified. Neither a candidate match nor a negative closes firmware decoding or acquisition routes."
+  },
+  "reproduction_commands": [
+    "PYTHON analysis/knownplaintext_oracle_20261014/oracle_scan.py --mode structure --output NEW_STRUCTURE_JSON",
+    "PYTHON analysis/s1m2_acquisition_plan_20261014/public_artifact_match.py --mode scan --output NEW_ARTIFACT_JSON",
+    "PYTHON analysis/s1m2_acquisition_plan_20261014/public_artifact_match.py --mode audit --sample S1m2_V14 --archive analysis/sources/u-boot.tar.gz --no-trees --output NEW_AUDIT_JSON"
+  ],
+  "runtime": "<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "dependency_boundary": "Structure/artifact modes use standard library only. Explicit sweep requires cryptography; installed 50.0.2.",
+  "code_sha256": {
+    "<LOCAL_WORKSPACE>/analysis/knownplaintext_oracle_20261014/oracle_scan.py": "90b20df5315db787ba7bfa6509be219387788205a9483041eff63b2ec7ccad80",
+    "<LOCAL_WORKSPACE>/analysis/s1m2_acquisition_plan_20261014/public_artifact_match.py": "9a4bf87e0daa6e532d390ba224b3345a148486a746a6ab7011f8bc2600ca235e"
+  },
+  "record_boundary": "Structure/content scan results precede guard-only refinements; actual 76-content scope is unchanged. Final guards independently reject missing-tree output aliases/descendants, empty corpus, zero targets and zero actual content hashes. No complete modern key sweep ran.",
+  "final_safety_record": "final_guard_checks.json",
+  "safety_record": "verification.json",
+  "legacy_actual_control_note": "Real ptool table-derived keys pass complete-body MD5 for all five legacy inputs; this differs from the four incorrect hand-transcribed keys in the withdrawn draft and does not establish modern flags=3 cipher semantics.",
+  "final_boundary_guard_checks": {
+    "missing_tree_output_equal": true,
+    "missing_tree_output_descendant": true,
+    "empty_corpus_cannot_pass": true,
+    "no_public_contents_hashed_cannot_pass": true,
+    "zero_targets_cannot_pass": true,
+    "empty_oracle_sweep_not_performed": true
+  }
+}

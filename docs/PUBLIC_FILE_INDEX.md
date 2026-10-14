@@ -454,6 +454,15 @@
 
 - [analysis/control_decrypted/GH2_selected_strings.json](../analysis/control_decrypted/GH2_selected_strings.json)
 
+## analysis/correction_status_review_20261013
+
+- [analysis/correction_status_review_20261013/actual_verification/summary.json](../analysis/correction_status_review_20261013/actual_verification/summary.json)
+- [analysis/correction_status_review_20261013/actual_verification/verification.json](../analysis/correction_status_review_20261013/actual_verification/verification.json)
+- [analysis/correction_status_review_20261013/execution_record.json](../analysis/correction_status_review_20261013/execution_record.json)
+- [analysis/correction_status_review_20261013/review_context_manifest.json](../analysis/correction_status_review_20261013/review_context_manifest.json)
+- [analysis/correction_status_review_20261013/verify_documents.py](../analysis/correction_status_review_20261013/verify_documents.py)
+- [analysis/correction_status_review_20261013/两份文件复核.md](../analysis/correction_status_review_20261013/%E4%B8%A4%E4%BB%BD%E6%96%87%E4%BB%B6%E5%A4%8D%E6%A0%B8.md)
+
 ## analysis/desktop_panasonic_review_20261012
 
 - [analysis/desktop_panasonic_review_20261012/S5分发版文件索引.md](../analysis/desktop_panasonic_review_20261012/S5%E5%88%86%E5%8F%91%E7%89%88%E6%96%87%E4%BB%B6%E7%B4%A2%E5%BC%95.md)
@@ -516,6 +525,12 @@
 - [analysis/external_lab_reports_20261012/originals/松下LUMIX相机WiFiAPI完整协议.md](../analysis/external_lab_reports_20261012/originals/%E6%9D%BE%E4%B8%8BLUMIX%E7%9B%B8%E6%9C%BAWiFiAPI%E5%AE%8C%E6%95%B4%E5%8D%8F%E8%AE%AE.md)
 - [analysis/external_lab_reports_20261012/核验与修正.md](../analysis/external_lab_reports_20261012/%E6%A0%B8%E9%AA%8C%E4%B8%8E%E4%BF%AE%E6%AD%A3.md)
 
+## analysis/external_material_20261014
+
+- [analysis/external_material_20261014/raw/gopro_milbeaut_sc2000.patch](../analysis/external_material_20261014/raw/gopro_milbeaut_sc2000.patch)
+- [analysis/external_material_20261014/source_manifest.json](../analysis/external_material_20261014/source_manifest.json)
+- [analysis/external_material_20261014/同族平台对照_Milbeaut_GoPro.md](../analysis/external_material_20261014/%E5%90%8C%E6%97%8F%E5%B9%B3%E5%8F%B0%E5%AF%B9%E7%85%A7_Milbeaut_GoPro.md)
+
 ## analysis/external_qemu_sandbox_20261012
 
 - [analysis/external_qemu_sandbox_20261012/composite.c.diff](../analysis/external_qemu_sandbox_20261012/composite.c.diff)
@@ -557,6 +572,22 @@
 ## analysis/guest_dump_feasibility_20261012
 
 - [analysis/guest_dump_feasibility_20261012/components_current.json](../analysis/guest_dump_feasibility_20261012/components_current.json)
+
+## analysis/hardware_errata_review_20261013
+
+- [analysis/hardware_errata_review_20261013/dts_diff_DC1231.txt](../analysis/hardware_errata_review_20261013/dts_diff_DC1231.txt)
+- [analysis/hardware_errata_review_20261013/dts_diff_DC1232.txt](../analysis/hardware_errata_review_20261013/dts_diff_DC1232.txt)
+- [analysis/hardware_errata_review_20261013/dts_diff_MC8266.txt](../analysis/hardware_errata_review_20261013/dts_diff_MC8266.txt)
+- [analysis/hardware_errata_review_20261013/execution_record.json](../analysis/hardware_errata_review_20261013/execution_record.json)
+- [analysis/hardware_errata_review_20261013/final_verification/dts_diff_DC1231.txt](../analysis/hardware_errata_review_20261013/final_verification/dts_diff_DC1231.txt)
+- [analysis/hardware_errata_review_20261013/final_verification/dts_diff_DC1232.txt](../analysis/hardware_errata_review_20261013/final_verification/dts_diff_DC1232.txt)
+- [analysis/hardware_errata_review_20261013/final_verification/dts_diff_MC8266.txt](../analysis/hardware_errata_review_20261013/final_verification/dts_diff_MC8266.txt)
+- [analysis/hardware_errata_review_20261013/final_verification/summary.json](../analysis/hardware_errata_review_20261013/final_verification/summary.json)
+- [analysis/hardware_errata_review_20261013/final_verification/verification.json](../analysis/hardware_errata_review_20261013/final_verification/verification.json)
+- [analysis/hardware_errata_review_20261013/review_input_manifest.json](../analysis/hardware_errata_review_20261013/review_input_manifest.json)
+- [analysis/hardware_errata_review_20261013/verify_errata.py](../analysis/hardware_errata_review_20261013/verify_errata.py)
+- [analysis/hardware_errata_review_20261013/实际目录与候选边界.md](../analysis/hardware_errata_review_20261013/%E5%AE%9E%E9%99%85%E7%9B%AE%E5%BD%95%E4%B8%8E%E5%80%99%E9%80%89%E8%BE%B9%E7%95%8C.md)
+- [analysis/hardware_errata_review_20261013/核验与二次勘误.md](../analysis/hardware_errata_review_20261013/%E6%A0%B8%E9%AA%8C%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%8B%98%E8%AF%AF.md)
 
 ## analysis/highres_20261008_02
 
@@ -719,6 +750,13 @@
 - [analysis/inventory_final_baseline_20261008_13/drive_after.bin](../analysis/inventory_final_baseline_20261008_13/drive_after.bin)
 - [analysis/inventory_final_baseline_20261008_13/drive_before.bin](../analysis/inventory_final_baseline_20261008_13/drive_before.bin)
 - [analysis/inventory_final_baseline_20261008_13/verification.json](../analysis/inventory_final_baseline_20261008_13/verification.json)
+
+## analysis/knownplaintext_oracle_20261014
+
+- [analysis/knownplaintext_oracle_20261014/historical_sweep_record.json](../analysis/knownplaintext_oracle_20261014/historical_sweep_record.json)
+- [analysis/knownplaintext_oracle_20261014/oracle_scan.py](../analysis/knownplaintext_oracle_20261014/oracle_scan.py)
+- [analysis/knownplaintext_oracle_20261014/results.json](../analysis/knownplaintext_oracle_20261014/results.json)
+- [analysis/knownplaintext_oracle_20261014/报告.md](../analysis/knownplaintext_oracle_20261014/%E6%8A%A5%E5%91%8A.md)
 
 ## analysis/lab_connection_20261012
 
@@ -6736,6 +6774,43 @@
 - [analysis/plaintext_region_audit_20261010/evidence.json](../analysis/plaintext_region_audit_20261010/evidence.json)
 - [analysis/plaintext_region_audit_20261010/findings.md](../analysis/plaintext_region_audit_20261010/findings.md)
 
+## analysis/project_corrections_20261014
+
+- [analysis/project_corrections_20261014/archived_report_replay/summary.json](../analysis/project_corrections_20261014/archived_report_replay/summary.json)
+- [analysis/project_corrections_20261014/archived_report_replay/verification.json](../analysis/project_corrections_20261014/archived_report_replay/verification.json)
+- [analysis/project_corrections_20261014/before_manifest.json](../analysis/project_corrections_20261014/before_manifest.json)
+- [analysis/project_corrections_20261014/candidate_tools/artifact_input_audit.json](../analysis/project_corrections_20261014/candidate_tools/artifact_input_audit.json)
+- [analysis/project_corrections_20261014/candidate_tools/artifact_scan_actual.json](../analysis/project_corrections_20261014/candidate_tools/artifact_scan_actual.json)
+- [analysis/project_corrections_20261014/candidate_tools/final_guard_checks.json](../analysis/project_corrections_20261014/candidate_tools/final_guard_checks.json)
+- [analysis/project_corrections_20261014/candidate_tools/structure_actual.json](../analysis/project_corrections_20261014/candidate_tools/structure_actual.json)
+- [analysis/project_corrections_20261014/candidate_tools/summary.json](../analysis/project_corrections_20261014/candidate_tools/summary.json)
+- [analysis/project_corrections_20261014/candidate_tools/verification.json](../analysis/project_corrections_20261014/candidate_tools/verification.json)
+- [analysis/project_corrections_20261014/candidate_tools/verify_candidate_tools.py](../analysis/project_corrections_20261014/candidate_tools/verify_candidate_tools.py)
+- [analysis/project_corrections_20261014/dump_verifier/README.md](../analysis/project_corrections_20261014/dump_verifier/README.md)
+- [analysis/project_corrections_20261014/dump_verifier/actual_file_offsets.json](../analysis/project_corrections_20261014/dump_verifier/actual_file_offsets.json)
+- [analysis/project_corrections_20261014/dump_verifier/recheck_01/actual_file_offsets.json](../analysis/project_corrections_20261014/dump_verifier/recheck_01/actual_file_offsets.json)
+- [analysis/project_corrections_20261014/dump_verifier/recheck_01/regenerated_targets.json](../analysis/project_corrections_20261014/dump_verifier/recheck_01/regenerated_targets.json)
+- [analysis/project_corrections_20261014/dump_verifier/recheck_01/selftest.json](../analysis/project_corrections_20261014/dump_verifier/recheck_01/selftest.json)
+- [analysis/project_corrections_20261014/dump_verifier/recheck_01/validation.json](../analysis/project_corrections_20261014/dump_verifier/recheck_01/validation.json)
+- [analysis/project_corrections_20261014/dump_verifier/regenerated_targets.json](../analysis/project_corrections_20261014/dump_verifier/regenerated_targets.json)
+- [analysis/project_corrections_20261014/dump_verifier/run_validation.py](../analysis/project_corrections_20261014/dump_verifier/run_validation.py)
+- [analysis/project_corrections_20261014/dump_verifier/selftest.json](../analysis/project_corrections_20261014/dump_verifier/selftest.json)
+- [analysis/project_corrections_20261014/dump_verifier/validation.json](../analysis/project_corrections_20261014/dump_verifier/validation.json)
+- [analysis/project_corrections_20261014/mutations.json](../analysis/project_corrections_20261014/mutations.json)
+- [analysis/project_corrections_20261014/post_cleanup_report_replay/summary.json](../analysis/project_corrections_20261014/post_cleanup_report_replay/summary.json)
+- [analysis/project_corrections_20261014/post_cleanup_report_replay/verification.json](../analysis/project_corrections_20261014/post_cleanup_report_replay/verification.json)
+- [analysis/project_corrections_20261014/root_consolidation_changes.json](../analysis/project_corrections_20261014/root_consolidation_changes.json)
+- [analysis/project_corrections_20261014/root_document_changes.json](../analysis/project_corrections_20261014/root_document_changes.json)
+- [analysis/project_corrections_20261014/source_reports/boot_source_verification_final.json](../analysis/project_corrections_20261014/source_reports/boot_source_verification_final.json)
+- [analysis/project_corrections_20261014/source_reports/consistency_verification.json](../analysis/project_corrections_20261014/source_reports/consistency_verification.json)
+- [analysis/project_corrections_20261014/source_reports/lab_client_verification_final.json](../analysis/project_corrections_20261014/source_reports/lab_client_verification_final.json)
+- [analysis/project_corrections_20261014/source_reports/report03_control_verification.json](../analysis/project_corrections_20261014/source_reports/report03_control_verification.json)
+- [analysis/project_corrections_20261014/source_reports/report03_metadata_corrections.json](../analysis/project_corrections_20261014/source_reports/report03_metadata_corrections.json)
+- [analysis/project_corrections_20261014/source_reports/verify_corrections_consistency.py](../analysis/project_corrections_20261014/source_reports/verify_corrections_consistency.py)
+- [analysis/project_corrections_20261014/source_reports/verify_report03_facts.py](../analysis/project_corrections_20261014/source_reports/verify_report03_facts.py)
+- [analysis/project_corrections_20261014/validation.json](../analysis/project_corrections_20261014/validation.json)
+- [analysis/project_corrections_20261014/验证与改动.md](../analysis/project_corrections_20261014/%E9%AA%8C%E8%AF%81%E4%B8%8E%E6%94%B9%E5%8A%A8.md)
+
 ## analysis/ptp_client
 
 - [analysis/ptp_client/README.md](../analysis/ptp_client/README.md)
@@ -6757,6 +6832,18 @@
 - [analysis/ptp_verification_pack_review_20261010/logs_rigorous_clock_log_20261011_031440.txt](../analysis/ptp_verification_pack_review_20261010/logs_rigorous_clock_log_20261011_031440.txt)
 - [analysis/ptp_verification_pack_review_20261010/logs_rigorous_config_log_20261011_031517.txt](../analysis/ptp_verification_pack_review_20261010/logs_rigorous_config_log_20261011_031517.txt)
 - [analysis/ptp_verification_pack_review_20261010/review.md](../analysis/ptp_verification_pack_review_20261010/review.md)
+
+## analysis/s1m2_acquisition_plan_20261014
+
+- [analysis/s1m2_acquisition_plan_20261014/blob_0x220_results.json](../analysis/s1m2_acquisition_plan_20261014/blob_0x220_results.json)
+- [analysis/s1m2_acquisition_plan_20261014/probe_blob_0x220.py](../analysis/s1m2_acquisition_plan_20261014/probe_blob_0x220.py)
+- [analysis/s1m2_acquisition_plan_20261014/public_artifact_match.json](../analysis/s1m2_acquisition_plan_20261014/public_artifact_match.json)
+- [analysis/s1m2_acquisition_plan_20261014/public_artifact_match.py](../analysis/s1m2_acquisition_plan_20261014/public_artifact_match.py)
+- [analysis/s1m2_acquisition_plan_20261014/selftest.json](../analysis/s1m2_acquisition_plan_20261014/selftest.json)
+- [analysis/s1m2_acquisition_plan_20261014/targets.json](../analysis/s1m2_acquisition_plan_20261014/targets.json)
+- [analysis/s1m2_acquisition_plan_20261014/verify_plaintext_dump.py](../analysis/s1m2_acquisition_plan_20261014/verify_plaintext_dump.py)
+- [analysis/s1m2_acquisition_plan_20261014/方案.md](../analysis/s1m2_acquisition_plan_20261014/%E6%96%B9%E6%A1%88.md)
+- [analysis/s1m2_acquisition_plan_20261014/零风险路径结论.md](../analysis/s1m2_acquisition_plan_20261014/%E9%9B%B6%E9%A3%8E%E9%99%A9%E8%B7%AF%E5%BE%84%E7%BB%93%E8%AE%BA.md)
 
 ## analysis/s1m2_hidden_format_inspect_20261012
 
@@ -6855,6 +6942,8 @@
 - [analysis/s5_delivery_review_20261010/input/data/captures/ptp_fwup_idle/fwup_ev_0x41000015.resp.bin](../analysis/s5_delivery_review_20261010/input/data/captures/ptp_fwup_idle/fwup_ev_0x41000015.resp.bin)
 - [analysis/s5_delivery_review_20261010/input/data/captures/ptp_fwup_idle/fwup_ev_0x41000016.resp.bin](../analysis/s5_delivery_review_20261010/input/data/captures/ptp_fwup_idle/fwup_ev_0x41000016.resp.bin)
 - [analysis/s5_delivery_review_20261010/input/data/captures/ptp_fwup_idle/fwup_ev_0x41000017.resp.bin](../analysis/s5_delivery_review_20261010/input/data/captures/ptp_fwup_idle/fwup_ev_0x41000017.resp.bin)
+- [analysis/s5_delivery_review_20261010/input/data/reference/S1H__V28.bin.parts.json](../analysis/s5_delivery_review_20261010/input/data/reference/S1H__V28.bin.parts.json)
+- [analysis/s5_delivery_review_20261010/input/data/reference/S1___V24.bin.parts.json](../analysis/s5_delivery_review_20261010/input/data/reference/S1___V24.bin.parts.json)
 - [analysis/s5_delivery_review_20261010/input/data/s5_config_0x9421_DC-S5_v2.9.bin](../analysis/s5_delivery_review_20261010/input/data/s5_config_0x9421_DC-S5_v2.9.bin)
 - [analysis/s5_delivery_review_20261010/input/data/s5_device_info_DC-S5.bin](../analysis/s5_delivery_review_20261010/input/data/s5_device_info_DC-S5.bin)
 - [analysis/s5_delivery_review_20261010/input/data/s5_dl.html](../analysis/s5_delivery_review_20261010/input/data/s5_dl.html)
@@ -7961,6 +8050,7 @@
 - [docs/LUMIX_LAB_S5M2_APK_ANALYSIS.md](../docs/LUMIX_LAB_S5M2_APK_ANALYSIS.md)
 - [docs/PRINCIPLES_AND_DERIVATIONS_20261013.md](../docs/PRINCIPLES_AND_DERIVATIONS_20261013.md)
 - [docs/PROGRESS_20261010.md](../docs/PROGRESS_20261010.md)
+- [docs/PROJECT_CORRECTIONS_20261014.md](../docs/PROJECT_CORRECTIONS_20261014.md)
 - [docs/PUBLICATION.md](../docs/PUBLICATION.md)
 - [docs/PUBLIC_FILE_INDEX.md](../docs/PUBLIC_FILE_INDEX.md)
 - [docs/RELEASE_VALIDATION_20261010.md](../docs/RELEASE_VALIDATION_20261010.md)
@@ -7980,6 +8070,8 @@
 
 - [evidence/ADDITIONAL_INPUTS_20261013.csv](../evidence/ADDITIONAL_INPUTS_20261013.csv)
 - [evidence/CONTRIBUTORS_20261010.json](../evidence/CONTRIBUTORS_20261010.json)
+- [evidence/CORRECTION_INPUTS_20261014.csv](../evidence/CORRECTION_INPUTS_20261014.csv)
+- [evidence/CORRECTION_VALIDATION_20261014.json](../evidence/CORRECTION_VALIDATION_20261014.json)
 - [evidence/DELEGATE_REVIEW_20261010.json](../evidence/DELEGATE_REVIEW_20261010.json)
 - [evidence/EXPORT_SUMMARY.json](../evidence/EXPORT_SUMMARY.json)
 - [evidence/EXTERNAL_CONFIGURATION_REPLAY_20261013.json](../evidence/EXTERNAL_CONFIGURATION_REPLAY_20261013.json)
@@ -9331,6 +9423,7 @@
 - [S1M2固件研究需求与交接.md](../S1M2%E5%9B%BA%E4%BB%B6%E7%A0%94%E7%A9%B6%E9%9C%80%E6%B1%82%E4%B8%8E%E4%BA%A4%E6%8E%A5.md)
 - [S1M2固件逆向_阶段结果汇总.md](../S1M2%E5%9B%BA%E4%BB%B6%E9%80%86%E5%90%91_%E9%98%B6%E6%AE%B5%E7%BB%93%E6%9E%9C%E6%B1%87%E6%80%BB.md)
 - [S1M2研究当前状态.md](../S1M2%E7%A0%94%E7%A9%B6%E5%BD%93%E5%89%8D%E7%8A%B6%E6%80%81.md)
+- [S1M2硬件映射与报告勘误突破_20261013.md](../S1M2%E7%A1%AC%E4%BB%B6%E6%98%A0%E5%B0%84%E4%B8%8E%E6%8A%A5%E5%91%8A%E5%8B%98%E8%AF%AF%E7%AA%81%E7%A0%B4_20261013.md)
 - [研究恢复进度_20261010.md](../%E7%A0%94%E7%A9%B6%E6%81%A2%E5%A4%8D%E8%BF%9B%E5%BA%A6_20261010.md)
 - [研究推进_20261011_Ultra.md](../%E7%A0%94%E7%A9%B6%E6%8E%A8%E8%BF%9B_20261011_Ultra.md)
 - [研究暂停交接_20261010.md](../%E7%A0%94%E7%A9%B6%E6%9A%82%E5%81%9C%E4%BA%A4%E6%8E%A5_20261010.md)

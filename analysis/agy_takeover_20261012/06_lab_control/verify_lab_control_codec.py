@@ -7,7 +7,10 @@ and HTTPS /auth + Bearer control channel logic.
 Strictly offline: does NOT perform any network, Bluetooth, or device I/O.
 """
 
+import argparse
 import hashlib
+import re
+from pathlib import Path
 import json
 import os
 import sys
@@ -16,20 +19,20 @@ import sys
 def frame_ble_payload(raw_bytes: bytes) -> bytes:
     """
     Port of p281z5.C2538k2.d(byte[] bArr) (C2538k2.java:351-364).
-    Prepends 1-byte length, appends 0x00, and pads with 0xFF to a multiple of 4 bytes.
+    Pads raw length to a multiple of 4 with zero bytes; prepends its original
+    length, then pads the whole frame to a multiple of 4 with 0xFF.
+    A raw length already divisible by 4 has no zero suffix.
     """
     length = len(raw_bytes)
-    pad_len = 4 - ((length + 1) % 4)
-    total_len = length + 1 + pad_len
-    out = bytearray(total_len)
-    out[0] = length & 0xFF
-    out[1 : 1 + length] = raw_bytes
-    for idx in range(length + 1, total_len):
-        if idx == length + 1:
-            out[idx] = 0x00
-        else:
-            out[idx] = 0xFF
+    zero_padding = (-length) % 4
+    intermediate = length + zero_padding + 1
+    total = intermediate + ((-intermediate) % 4)
+    out = bytearray(b"\xff" * total)
+    out[0] = length & 0xff
+    out[1:1+length] = raw_bytes
+    out[1+length:1+length+zero_padding] = b"\x00" * zero_padding
     return bytes(out)
+
 
 
 def xor_obfuscate_ble_blocks(key_4bytes: bytes, framed_bytes: bytes) -> bytes:
@@ -107,9 +110,17 @@ def dhcp_gateway_int_to_ip(gateway_le_int: int) -> str:
     produces big-endian bytes [0x01, 0x36, 0xA8, 0xC0], which I5.c.d() reverses
     to [0xC0, 0xA8, 0x36, 0x01] -> "192.168.54.1".
     """
-    b = gateway_le_int.to_bytes(4, byteorder="big", signed=True)
-    rev = b[::-1]
-    return ".".join(str(x) for x in rev)
+    if not -(1 << 31) <= gateway_le_int < (1 << 31):
+        raise ValueError("Android gateway must be a signed 32-bit int")
+    length = 1
+    while not -(1 << (8*length-1)) <= gateway_le_int < (1 << (8*length-1)):
+        length += 1
+    # BigInteger.toByteArray() uses the minimal two's-complement representation.
+    java_bytes = gateway_le_int.to_bytes(length, 'big', signed=True)
+    if len(java_bytes) < 4:
+        return ""
+    return ".".join(str(java_bytes[i]) for i in (3,2,1,0))
+
 
 
 def format_auth_header(auth_token: str) -> str:
@@ -136,9 +147,25 @@ def run_self_tests() -> dict:
     assert len(framed_uuid) == 20
     assert framed_uuid[0] == 16
     assert framed_uuid[1:17] == uuid_bytes
-    assert framed_uuid[17:] == b"\x00\xff\xff"
+    assert framed_uuid[17:] == b"\xff\xff\xff"
     obf_uuid = xor_obfuscate_ble_blocks(key, framed_uuid)
     assert len(obf_uuid) == 20
+
+    # Fixed expected bytes derive directly from the Java source, independently
+    # of the round-trip pair (which alone cannot catch matching mistakes).
+    fixed_frames = {
+        b"": "00ffffff",
+        b"A": "0141000000ffffff",
+        b"ABC": "0341424300ffffff",
+        b"ABCD": "0441424344ffffff",
+        b"LumixPass12": "0b4c756d697850617373313200ffffff",
+        b"LumixPass123": "0c4c756d697850617373313233ffffff",
+        bytes(range(16)): "10000102030405060708090a0b0c0d0e0fffffff",
+    }
+    for raw, expected in fixed_frames.items():
+        assert frame_ble_payload(raw).hex() == expected
+    assert dhcp_gateway_int_to_ip(0x00000101) == ""
+    assert dhcp_gateway_int_to_ip(-1062731775) == "1.0.168.192"
 
     # 3. Test APP_INFO 32-byte zero-padded format
     app_info_ble = format_app_info("3.1.0")
@@ -155,6 +182,8 @@ def run_self_tests() -> dict:
 
     return {
         "status": "PASS",
+        "fixed_frame_vectors": [{"raw_hex": raw.hex(), "expected_hex": expected} for raw, expected in fixed_frames.items()],
+        "scope": "Synthetic client-code vectors; no camera/BLE/TLS runtime test",
         "test_vectors": {
             "initial_inform_key_hex": key.hex(),
             "sample_wifi_password": sample_pw,
@@ -171,393 +200,108 @@ def run_self_tests() -> dict:
     }
 
 
-def generate_results_json(out_path: str) -> None:
-    base = "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/sources"
-    files = [
-        "H5/d.java",
-        "H5/j.java",
-        "I5/c.java",
-        "I5/d.java",
-        "I5/e.java",
-        "K5/C0643o.java",
-        "K5/B.java",
-        "K5/C0664z.java",
-        "K5/W0.java",
-        "K5/U0.java",
-        "K5/V0.java",
-        "R5/h.java",
-        "Y5/h.java",
-        "p041d6/c.java",
-        "p052e6/c.java",
-        "p062f5/P2.java",
-        "p062f5/Q2.java",
-        "p062f5/RunnableC1743t1.java",
-        "p084h6/a.java",
-        "p084h6/b.java",
-        "p084h6/c.java",
-        "p084h6/d.java",
-        "p084h6/e.java",
-        "p084h6/f.java",
-        "p084h6/g.java",
-        "p084h6/h.java",
-        "p281z5/C2438a2.java",
-        "p281z5/C2458c2.java",
-        "p281z5/C2468d2.java",
-        "p281z5/C2478e2.java",
-        "p281z5/C2518i2.java",
-        "p281z5/C2538k2.java",
-        "p281z5/C2607r2.java",
-        "p281z5/C2617s2.java",
-        "p281z5/C2646v1.java",
-        "p281z5/C2647v2.java",
-        "p281z5/C2656w1.java",
-        "p281z5/C2657w2.java",
-        "p281z5/C2666x1.java",
-        "p281z5/M1.java",
-        "p281z5/N1.java",
-        "p281z5/RunnableC2548l2.java",
-        "p281z5/RunnableC2616s1.java",
-        "p281z5/RunnableC2627t2.java",
-        "p281z5/RunnableC2667x2.java",
-        "p281z5/S1.java",
-        "p281z5/Z1.java",
-        "com/panasonic/jp/lumixlab/LlcApplication.java",
-        "com/panasonic/jp/lumixlab/bean/AuthRequestBean.java",
-        "com/panasonic/jp/lumixlab/bean/AuthResponseBean.java",
-        "com/panasonic/jp/lumixlab/controller/activity/RemotePhotostyleActivity.java",
-        "com/panasonic/jp/lumixlab/controller/activity/RemoteShootingActivity.java",
-        "com/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment.java",
-        "com/panasonic/jp/lumixlab/controller/fragment/FirmwareUpdateDetailFragment.java",
-        "com/panasonic/jp/lumixlab/controller/fragment/LutFragment.java",
-        "com/panasonic/jp/lumixlab/service/LlcService.java",
-        "com/panasonic/jp/lumixlab/util/C1410v.java",
-        "com/panasonic/jp/lumixlab/util/M.java",
-    ]
 
+
+def parse_retrofit_endpoints(base: Path) -> dict:
+    path = base / "p084h6/a.java"
+    text = path.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    records = []
+    for i, line in enumerate(lines):
+        match = re.fullmatch(r'\s*@(o|f)(?:\("([^"\n]*)"\))?\s*', line)
+        if not match:
+            continue
+        decl_index = i+1
+        while decl_index < len(lines) and lines[decl_index].lstrip().startswith('@'):
+            decl_index += 1
+        declaration = lines[decl_index].strip()
+        method = re.search(r'\b(\w+)\s*\(', declaration)
+        if method is None or not declaration.endswith(';'):
+            raise ValueError(f"Unrecognized declaration after line {i+1}")
+        declared_path = match[2]
+        records.append({
+            "annotation": match[1], "http_method": {"o":"POST", "f":"GET"}[match[1]],
+            "declared_path": declared_path,
+            "normalized_path": '/'+declared_path if declared_path is not None else None,
+            "url_kind": "fixed_relative_annotation" if declared_path is not None else "dynamic_Url_parameter",
+            "annotation_line": i+1, "declaration_line": decl_index+1,
+            "java_method": method[1], "declaration": declaration,
+            "authorization_parameter": '@i("Authorization")' in declaration,
+        })
+    return {"source": "p084h6/a.java", "source_lines": len(lines), "declaration_count": len(records),
+            "fixed_relative_declarations": sum(r['declared_path'] is not None for r in records),
+            "dynamic_url_declarations": sum(r['declared_path'] is None for r in records),
+            "records": records,
+            "scope": "Actual Retrofit client declarations; authority/base URL is selected by caller. This is not a camera daemon route map."}
+
+
+def generate_results_json(out_path: Path, base: Path) -> None:
+    files = ['H5/d.java', 'H5/j.java', 'I5/c.java', 'I5/d.java', 'I5/e.java', 'K5/C0643o.java', 'K5/B.java', 'K5/C0664z.java', 'K5/W0.java', 'K5/U0.java', 'K5/V0.java', 'R5/h.java', 'Y5/h.java', 'p041d6/c.java', 'p052e6/c.java', 'p062f5/P2.java', 'p062f5/Q2.java', 'p062f5/RunnableC1743t1.java', 'p084h6/a.java', 'p084h6/b.java', 'p084h6/c.java', 'p084h6/d.java', 'p084h6/e.java', 'p084h6/f.java', 'p084h6/g.java', 'p084h6/h.java', 'p281z5/C2438a2.java', 'p281z5/C2458c2.java', 'p281z5/C2468d2.java', 'p281z5/C2478e2.java', 'p281z5/C2518i2.java', 'p281z5/C2538k2.java', 'p281z5/C2607r2.java', 'p281z5/C2617s2.java', 'p281z5/C2646v1.java', 'p281z5/C2647v2.java', 'p281z5/C2656w1.java', 'p281z5/C2657w2.java', 'p281z5/C2666x1.java', 'p281z5/M1.java', 'p281z5/N1.java', 'p281z5/RunnableC2548l2.java', 'p281z5/RunnableC2616s1.java', 'p281z5/RunnableC2627t2.java', 'p281z5/RunnableC2667x2.java', 'p281z5/S1.java', 'p281z5/Z1.java', 'com/panasonic/jp/lumixlab/LlcApplication.java', 'com/panasonic/jp/lumixlab/bean/AuthRequestBean.java', 'com/panasonic/jp/lumixlab/bean/AuthResponseBean.java', 'com/panasonic/jp/lumixlab/controller/activity/RemotePhotostyleActivity.java', 'com/panasonic/jp/lumixlab/controller/activity/RemoteShootingActivity.java', 'com/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment.java', 'com/panasonic/jp/lumixlab/controller/fragment/FirmwareUpdateDetailFragment.java', 'com/panasonic/jp/lumixlab/controller/fragment/LutFragment.java', 'com/panasonic/jp/lumixlab/service/LlcService.java', 'com/panasonic/jp/lumixlab/util/C1410v.java', 'com/panasonic/jp/lumixlab/util/M.java', 'sa/o.java', 'sa/f.java', 'oa/w0.java']
     source_hashes = {}
-    for f in files:
-        p = os.path.join(base, f)
-        with open(p, "rb") as fp:
-            data = fp.read()
-        source_hashes[f] = {
-            "path": p,
-            "size_bytes": len(data),
-            "sha256": hashlib.sha256(data).hexdigest(),
-        }
-
+    for name in files:
+        path = base / name
+        data = path.read_bytes()
+        source_hashes[name] = {"path":str(path), "size_bytes":len(data), "sha256":hashlib.sha256(data).hexdigest()}
     apk_inputs = []
-    for apk_path in [
-        "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/com.panasonic.jp.lumixlab.apk",
-        "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/config.arm64_v8a.apk",
-        "<LOCAL_WORKSPACE>/analysis/sources/lumix_lab_codex_static/decompiled/resources/AndroidManifest.xml",
-    ]:
-        if os.path.exists(apk_path):
-            with open(apk_path, "rb") as fp:
-                data = fp.read()
-            apk_inputs.append(
-                {
-                    "path": apk_path,
-                    "size_bytes": len(data),
-                    "sha256": hashlib.sha256(data).hexdigest(),
-                }
-            )
-
-    codec_path = os.path.abspath(__file__)
-    with open(codec_path, "rb") as fp:
-        codec_data = fp.read()
-
-    results = {
-        "task_id": "06_lab_control",
-        "title": "LUMIX Lab 蓝牙开启 Wi-Fi 后的主控制通道、网络绑定与会话认证全链路分析",
-        "analysis_mode": "offline_static_decompilation_and_codec_verification",
-        "apk_and_manifest_inputs": apk_inputs,
-        "cited_source_files": source_hashes,
-        "verification_script": {
-            "path": codec_path,
-            "size_bytes": len(codec_data),
-            "sha256": hashlib.sha256(codec_data).hexdigest(),
-            "self_test_result": run_self_tests(),
-        },
-        "findings": {
-            "ble_to_wifi_handoff": {
-                "status": "确认",
-                "scan_filter_service_uuid": "054ac620-3214-11e6-ac0d-0002a5d5c51b",
-                "gatt_service_uuid": "1fe71b85-8344-4e6a-bf1a-ac7acdb3f8af",
-                "sequential_registration_and_read_chain": [
-                    {
-                        "step": 1,
-                        "characteristic_field": "H5.d.f6993g (INITIAL_INFORM)",
-                        "uuid": "239c7203-922f-43e9-bdf1-6d1fedf6f43f",
-                        "direction": "BLE Read",
-                        "caller": "p281z5/RunnableC2616s1.java:29 -> p281z5/S1.java:27",
-                        "consumer": "p281z5/M1.java:200-209",
-                        "purpose": "读取至少4字节的会话混淆密钥存入 C0643o.f8323d，供后续 BLE 写入(APP_UUID/FRIENDLY_NAME)与读取(WIFI_PASSWORD)按4字节块逆序异或加解密。",
-                    },
-                    {
-                        "step": 2,
-                        "characteristic_field": "H5.d.f6985c (APP_UUID)",
-                        "uuid": "bff12e7f-5944-4eb6-a90f-48d8786157ea",
-                        "direction": "BLE Write",
-                        "caller": "p281z5/C2468d2.java:34-70",
-                        "consumer": "Camera GATT Server -> paired with POST /auth Uuid",
-                        "purpose": "生成或从 DataStore 读取 32位无连字符十六进制字符串 DATA_STORE_UUID (C1410v.C0())，经 I5.d.d() 解码为 16 字节，通过 C2538k2.d() 封装为 20 字节 ([0x10] + 16字节UUID + [0x00, 0xFF, 0xFF])，再用 C2538k2.e(f8323d, ...) 混淆后写入相机。",
-                    },
-                    {
-                        "step": 3,
-                        "characteristic_field": "H5.d.f6983b (APP_INFO)",
-                        "uuid": "ed8b1352-5aa7-4155-b7c9-521292dd1932",
-                        "direction": "BLE Write",
-                        "caller": "p281z5/C2458c2.java:29-51",
-                        "consumer": "Camera GATT Server -> paired with POST /auth AppInfo",
-                        "purpose": "将明文 ASCII 字符串 'LUMIX LUT Creators APP ' + versionName (如 'LUMIX LUT Creators APP 3.1.0') 零填充至 32 字节直接写入相机（不经过 XOR 混淆）。",
-                    },
-                    {
-                        "step": 4,
-                        "characteristic_field": "H5.d.f6987d (FRIENDLY_NAME)",
-                        "uuid": "05a797b6-9c2f-4d18-99a7-fa61a3880bfe",
-                        "direction": "BLE Write",
-                        "caller": "p281z5/C2478e2.java:33-65",
-                        "consumer": "Camera GATT Server -> paired with POST /auth FriendlyName",
-                        "purpose": "将 Build.MODEL (M.f17921z) 的 UTF-8 字节经过 C2538k2.d() 长度前缀封装与 C2538k2.e(f8323d, ...) 逆序异或混淆后写入相机。",
-                    },
-                    {
-                        "step": 5,
-                        "characteristic_field": "H5.d.f7022z (WIFI_WPA_DOWNGRADE)",
-                        "uuid": "36f99090-e79b-4060-9ac7-89f3f8bf88d5",
-                        "direction": "BLE Conditional Write",
-                        "caller": "p281z5/C2666x1.java:24 -> p281z5/C2518i2.java:26-31",
-                        "consumer": "Camera Wi-Fi AP Security Config",
-                        "purpose": "若手机为 HarmonyOS (C1410v.R0()) 或不支持 WPA3 SAE (!I5.c.f())，写入单字节 new byte[]{2} 指示相机将 AP 降级为 WPA2；否则保持默认 WPA3。",
-                    },
-                    {
-                        "step": 6,
-                        "characteristic_field": "H5.d.f6989e (WIFI_SSID)",
-                        "uuid": "657edba2-5bc8-42dd-974f-21871d7dbcd1",
-                        "direction": "BLE Read",
-                        "caller": "p281z5/C2656w1.java:30 -> p281z5/C2438a2.java:28",
-                        "consumer": "p281z5/M1.java:421-432 -> C0643o.f8321b -> CameraWifiConnectFragment.f17574e0",
-                        "purpose": "读取 UTF-8 明文 Wi-Fi SSID。",
-                    },
-                    {
-                        "step": 7,
-                        "characteristic_field": "H5.d.f6991f (WIFI_PASSWORD)",
-                        "uuid": "42d509f7-f122-4816-92d1-5e402d9453cb",
-                        "direction": "BLE Read",
-                        "caller": "p281z5/Z1.java:27",
-                        "consumer": "p281z5/M1.java:389-419 -> C0643o.f8322c -> CameraWifiConnectFragment.f17575f0",
-                        "purpose": "读取混淆后的 Wi-Fi 密码字节流，按4字节块逆序并与 f8323d[3..0] 异或还原后，取首字节 length，截取 plain[1..length] 作为 ASCII 密码。",
-                    },
-                    {
-                        "step": 8,
-                        "characteristic_field": "H5.d.f7021y (CER_FINGER_PRINT)",
-                        "uuid": "1be8a9e3-178b-46c4-b6b3-43d4a5311fc1",
-                        "direction": "BLE Read",
-                        "caller": "p281z5/N1.java:27",
-                        "consumer": "p281z5/M1.java:130-142 -> LlcApplication.setCerFingerPrint() -> p084h6/d.java:30-35",
-                        "purpose": "读取冒号分隔的 ASCII 十六进制 SHA-256 证书指纹，去除冒号并解码为 32 字节存入 LlcApplication.cerFingerPrint，供 HTTPS HostnameVerifier 校验相机 TLS 证书。",
-                    },
-                    {
-                        "step": 9,
-                        "characteristic_field": "H5.d.f6995h (ACTION_MODE) & f6999j (AP_STATE) & f7001k (ACTION_MODE_RESULT)",
-                        "uuid": "7644371c-1ddc-4b16-832f-f07c322e311b / dcba3a74-80bc-4919-8ef4-0c9f99cc20dd / 6c875728-7636-425e-818a-f1d93a39e075",
-                        "direction": "BLE Write + Notification",
-                        "caller": "CameraWifiConnectFragment.java:536-545 -> H5/d.java:1968",
-                        "consumer": "H5/d.java:781-913 -> CameraWifiConnectFragment.I() -> RunnableC2627t2",
-                        "purpose": "向 ACTION_MODE 写入 1 字节模式值 (1=常规远程控制/LUT/固件/相册, 5=自动传输, 6=相机侧发起传图)，监听 AP_STATE 变为 1 且 isWifiInfoReadComplete 为 true 后触发 Wi-Fi 连接。",
-                    },
-                ],
-            },
-            "wifi_network_binding": {
-                "status": "确认",
-                "caller": "CameraWifiConnectFragment.I() (CameraWifiConnectFragment.java:220-239) -> RunnableC2627t2.run() (p281z5/RunnableC2627t2.java:31-52)",
-                "standard_path": {
-                    "method": "I5.c.b(String ssid, String password, ConnectivityManager.NetworkCallback)",
-                    "file_lines": "I5/c.java:47-97",
-                    "mechanism": "构造 WifiNetworkSpecifier (HarmonyOS 或 !isWpa3SaeSupported() 用 setWpa2Passphrase，否则 setWpa3Passphrase)，构建 NetworkRequest (addTransportType(TRANSPORT_WIFI=1), removeCapability(NET_CAPABILITY_INTERNET=12))，调用 ConnectivityManager.requestNetwork(request, C2617s2)。",
-                    "binding_call": "在 p281z5/C2617s2.java:41 的 onAvailable(Network) 回调中，调用 I5.c.f7221a.bindProcessToNetwork(network) 将整个 App 进程绑定至相机 Wi-Fi 网络。",
-                },
-                "oppo_android13_fallback_path": {
-                    "method": "I5.e.b(Context, C2607r2)",
-                    "file_lines": "I5/e.java:27-43, p281z5/C2607r2.java:42-83",
-                    "mechanism": "当 Build.MANUFACTURER 为 OPPO 且 SDK_INT == 33 时，跳转系统 Settings.ACTION_PICK_WIFI_NETWORK 并通过 registerDefaultNetworkCallback 监听 SSID 匹配。",
-                },
-            },
-            "control_channel_address_and_port": {
-                "status": "确认",
-                "protocol": "HTTPS (HTTP/1.1 or HTTP/2 via OkHttp3 + Retrofit2 over TLS)",
-                "port": 443,
-                "port_evidence": "p084h6/b.java:7 与 CameraWifiConnectFragment.java:328 拼接 URL 为 'https://' + strD + '/'，未指定显式端口，因此主控制通道固定使用 HTTPS 默认 TCP 443 端口。",
-                "address_sources": {
-                    "default_fallback": {
-                        "value": "https://192.168.54.1/",
-                        "location": "p084h6/b.java:7 (public static String f22722a = \"https://192.168.54.1/\";)",
-                    },
-                    "dynamic_dhcp_gateway": {
-                        "method": "I5.c.d()",
-                        "location": "I5/c.java:119-128",
-                        "derivation": "读取 WifiManager.getDhcpInfo().gateway (int)，转为 4 字节后按 byteArray[3..0] 逆序拼成点分十进制 IPv4 字符串。",
-                        "callers_updating_base_url": [
-                            "com/panasonic/jp/lumixlab/controller/fragment/CameraWifiConnectFragment.java:325-329 (M() 中更新 b.f22722a = \"https://\" + strD + \"/\")",
-                            "com/panasonic/jp/lumixlab/controller/fragment/FirmwareUpdateDetailFragment.java:1530-1532",
-                            "R5/h.java:70-72",
-                            "Y5/h.java:250-252",
-                        ],
-                    },
-                    "hardcoded_exceptions_outside_https": [
-                        {
-                            "usage": "RemoteShooting UDP LiveView socket",
-                            "location": "p062f5/Q2.java:68",
-                            "code": "new InetSocketAddress(\"192.168.54.1\", i10) where i10 is LvPort from POST /remote/get-lvport, and local DatagramSocket binds to C1410v.f18185d (1234..2048)",
-                        },
-                        {
-                            "usage": "RemotePhotostyle UDP LiveView socket",
-                            "location": "p062f5/RunnableC1743t1.java:72",
-                            "code": "new InetSocketAddress(\"192.168.54.1\", i10) where local DatagramSocket binds to C1410v.f18185d",
-                        },
-                    ],
-                },
-                "tls_verification": {
-                    "trust_manager": "p084h6/f.java:10-23 (X509TrustManager 空实现，接受相机自签名证书链)",
-                    "hostname_verifier_pinning": "p084h6/d.java:22-41 (HostnameVerifier.verify 取 sSLSession.getPeerCertificates()[0].getEncoded() 计算 SHA-256，与 BLE CER_FINGER_PRINT 特征读取的 LlcApplication.getContext().getCerFingerPrint() 执行 MessageDigest.isEqual 比对)",
-                    "unpinned_client_variant": "p084h6/h.java:93-105 (h.g() 仅设置 TrustManager f 与 SSLSocketFactory g，未设置 HostnameVerifier d，仅在 LlcService.java:536 下载媒体文件时使用)",
-                },
-            },
-            "session_authentication": {
-                "status": "确认",
-                "endpoint": "POST /auth",
-                "retrofit_declaration": "p084h6/a.java:73-75 (@o(\"auth\") InterfaceC1962d<AuthResponseBean> F(@oa.x0.a AuthRequestBean))",
-                "caller_chain": "C2617s2.onAvailable (p281z5/C2617s2.java:42) -> CameraWifiConnectFragment.M() (CameraWifiConnectFragment.java:318-334) -> RunnableC2667x2.run() (p281z5/RunnableC2667x2.java:28-42)",
-                "request_json_schema": {
-                    "bean_class": "com/panasonic/jp/lumixlab/bean/AuthRequestBean.java:10-25",
-                    "fields": {
-                        "AppInfo": "\"LUMIX LUT Creators APP \" + AppVersionName (AuthRequestBean 构造函数自动拼接空格与版本号，与 BLE APP_INFO 前缀一致)",
-                        "Uuid": "32位十六进制无连字符字符串 (DataStore DATA_STORE_UUID，与 BLE APP_UUID 原始16字节对应)",
-                        "FriendlyName": "Build.MODEL (M.f17921z，与 BLE FRIENDLY_NAME 明文一致)",
-                    },
-                },
-                "response_json_schema": {
-                    "bean_class": "com/panasonic/jp/lumixlab/bean/AuthResponseBean.java:8-52",
-                    "fields": {
-                        "Header.ResponseCode": "int (200 表示成功)",
-                        "Header.Messages": "String",
-                        "Data.AuthToken": "String (会话 Bearer Token)",
-                    },
-                },
-                "response_consumer_and_retry": {
-                    "primary_consumer": "p281z5/C2657w2.java:84-97 (校验 ResponseCode == 200 且 AuthToken 非空后调用 LlcApplication.getContext().setAuthToken(authToken))",
-                    "retry_mechanism": "p281z5/C2657w2.java:123-135 (若首次响应 Data 为空，onComplete 休眠 5000ms 后重发一次 POST /auth，由 p281z5/C2647v2.java:36-47 处理)",
-                    "post_auth_ble_gate": "CameraWifiConnectFragment.F() (CameraWifiConnectFragment.java:149-195)：当 f17569Z == 1 且 f17595y == \"camera\" 时，若 BLE 特征 f7003l (CAMERA_OPERATE_NOTIFICATION, 16726c35-52ef-4d00-868d-099549a90d9b) 尚未通知值 2 (f31592l == true)，则启动 30s 定时器等待用户或相机侧确认后再进入功能页。",
-                },
-                "authenticated_header_format": {
-                    "formatter": "com/panasonic/jp/lumixlab/util/C1410v.java:300-302 -> B9/AbstractC0105t.java:88-90",
-                    "header_name": "Authorization",
-                    "header_value_template": "'Bearer <AuthToken>' (注意两端包含字面量单引号 ')",
-                    "token_invalidation": "当任意受保护接口返回 Header.ResponseCode == 401 或 HTTP 错误体解析出 401 (p084h6/h.java:53-70) 时，清空 LlcApplication.authToken。",
-                },
-            },
-            "downstream_control_endpoints": {
-                "status": "确认",
-                "declaration_file": "p084h6/a.java:1-225",
-                "categories": {
-                    "session": ["POST /auth", "POST /connect-cancel"],
-                    "remote_shooting": [
-                        "POST /remote/mode",
-                        "POST /remote/get-lvport",
-                        "POST /remote/start-stream",
-                        "POST /remote/stop-stream",
-                        "POST /remote/OnePushAf",
-                        "POST /remote/TouchAf",
-                        "POST /remote/TouchAe",
-                        "POST /remote/Info",
-                        "POST /remote/GetCapability",
-                        "POST /remote/SetSetting",
-                        "POST /remote/SettingInfo",
-                        "POST /remote/Capture",
-                        "POST /remote/CaptureCancel",
-                        "POST /remote/RecStart",
-                        "POST /remote/RecStop",
-                        "POST /remote/StreamSendStop",
-                        "POST /remote/StreamSendRestart",
-                        "POST /remote/Polling",
-                    ],
-                    "photostyle": [
-                        "POST /photostyle/mode",
-                        "POST /photostyle/get-lvport",
-                        "POST /photostyle/start-stream",
-                        "POST /photostyle/stop-stream",
-                        "POST /photostyle/OnePushAf",
-                        "POST /photostyle/TouchAf",
-                        "POST /photostyle/TouchAe",
-                        "POST /photostyle/Info",
-                        "POST /photostyle/GetCapability",
-                        "POST /photostyle/SetSetting",
-                        "POST /photostyle/SettingInfo",
-                        "POST /photostyle/Capture",
-                        "POST /photostyle/CaptureCancel",
-                        "POST /photostyle/RecStart",
-                        "POST /photostyle/RecStop",
-                        "POST /photostyle/StreamSendStop",
-                        "POST /photostyle/StreamSendRestart",
-                        "POST /photostyle/Polling",
-                    ],
-                    "lut": [
-                        "POST /lut/camera",
-                        "POST /lut/upload",
-                        "POST /lut/delete",
-                        "POST /lut/order",
-                        "POST /lut/update",
-                    ],
-                    "media": [
-                        "POST /media/Status",
-                        "POST /media/list",
-                        "POST /media/Rating",
-                        "GET /media/image (supports Range header)",
-                    ],
-                    "auto_transfer": [
-                        "POST /auto-transfer/get-list",
-                        "POST /auto-transfer/NotifyTranferStatus",
-                    ],
-                    "firmware": [
-                        "POST /firmware/SetDataInfo",
-                        "POST /firmware/SendData (multipart/form-data)",
-                    ],
-                },
-                "liveview_stream_bootstrap_chain": {
-                    "remote_shooting": "RemoteShootingActivity.java:2870-2886 -> P2.java:193-246: (1) POST /remote/Polling -> (2) POST /remote/mode {\"Command\":\"recmode\"} -> (3) 递增本地 UDP 端口 C1410v.f18185d (1234..2048) 并调用 POST /remote/start-stream {\"UDPPortNumber\": port} -> (4) v0(5) 调用 p052e6.c.a() 发送 POST /remote/get-lvport 获取相机端 LvPort -> (5) 启动线程 Q2 (p062f5/Q2.java:66-84) 绑定本地 UDP 端口 C1410v.f18185d，连接 192.168.54.1:LvPort，在其上建立 DTLS (ea.C1637v.b + C1661c3 PSK/TLS handler) 接收实时取景流。"
-                },
-            },
-            "epistemic_classification": {
-                "confirmed": [
-                    "BLE GATT 服务 (1fe71b85-8344-4e6a-bf1a-ac7acdb3f8af) 在开启 Wi-Fi 前完成的完整配对写入与读取序列：INITIAL_INFORM -> APP_UUID -> APP_INFO -> FRIENDLY_NAME -> 条件降级 WPA2 -> WIFI_SSID -> WIFI_PASSWORD -> CER_FINGER_PRINT。",
-                    "BLE 数据帧封装算法 (C2538k2.d) 与 4 字节逆序异或混淆算法 (C2538k2.e / M1.onCharacteristicRead)，已通过独立离线脚本 verify_lab_control_codec.py 自测验证。",
-                    "BLE 开启相机 AP 的触发特征 (ACTION_MODE 7644371c-1ddc-4b16-832f-f07c322e311b) 及状态监听特征 (AP_STATE dcba3a74-80bc-4919-8ef4-0c9f99cc20dd)。",
-                    "Android 端通过 WifiNetworkSpecifier + ConnectivityManager.requestNetwork 连接相机 AP，并在 C2617s2.onAvailable 中调用 bindProcessToNetwork(network) 绑定进程路由。",
-                    "主控制通道并非只用硬编码 192.168.54.1：默认回退值为 https://192.168.54.1/ (p084h6/b.java:7)，但在连接建立后由 I5.c.d() 从 WifiManager.getDhcpInfo().gateway 动态解析网关 IP 并覆写 b.f22722a；端口固定为 HTTPS 默认 443。与此同时，UDP 实时取景 (Q2.java:68, RunnableC1743t1.java:72) 仍硬编码连接 192.168.54.1:LvPort。",
-                    "HTTPS 通道的 TLS 校验机制：TrustManager (p084h6/f.java) 放行自签名证书链，HostnameVerifier (p084h6/d.java) 强制比对服务端叶证书 SHA-256 与 BLE CER_FINGER_PRINT 特征读取的 32 字节指纹。",
-                    "会话认证接口 POST /auth 的请求体 (AppInfo, Uuid, FriendlyName) 与 BLE 写入特征严格对应，响应体 Data.AuthToken 被提取并由 C1410v.J() 格式化为带单引号的 'Bearer <token>' 用于全部后续控制请求。",
-                ],
-                "inferred": [
-                    "相机侧 HTTPS 服务在收到 POST /auth 时，会将请求 JSON 中的 AppInfo、Uuid、FriendlyName 与此前 BLE 阶段写入 APP_INFO、APP_UUID、FRIENDLY_NAME 特征的值进行比对校验，一致后才签发 AuthToken。",
-                    "当 f17569Z == 1 且首次连接相机时，BLE 特征 CAMERA_OPERATE_NOTIFICATION (16726c35-52ef-4d00-868d-099549a90d9b) 返回值 2 代表机身侧完成了连接确认/模式切换就绪。",
-                ],
-                "unknown_or_runtime_dependent": [
-                    "INITIAL_INFORM (239c7203-922f-43e9-bdf1-6d1fedf6f43f) 每次连接由相机生成的 4 字节密钥在机身固件内部的随机数/派生源（需结合机身固件 BLE 栈分析）。",
-                    "CER_FINGER_PRINT 对应的相机端 TLS 自签名证书是出厂固定、首次配对生成还是每次启动 AP 动态生成（App 端每次 BLE 连接均重新读取 CER_FINGER_PRINT）。",
-                    "相机端签发的 AuthToken 的具体字符串长度、字符集与机身侧超时时间（App 端作为不透明字符串处理，仅在收到 ResponseCode == 401 时清空）。",
-                    "各具体机型（如 S1M2 / S5M2 / G9M2 等）在 POST /remote/GetCapability 与 POST /remote/SettingInfo 下返回的能力全集差异（由相机运行时动态返回 JSON，App 根据 J0/L 枚举做交集渲染）。",
-                ],
-            },
-        },
+    for path in [base.parents[1]/"com.panasonic.jp.lumixlab.apk", base.parents[1]/"config.arm64_v8a.apk",
+                 base.parent/"resources/AndroidManifest.xml"]:
+        if path.is_file():
+            data=path.read_bytes()
+            apk_inputs.append({"path":str(path),"size_bytes":len(data),"sha256":hashlib.sha256(data).hexdigest()})
+    refs = {
+        "retrofit_http_annotation_consumers": ("oa/w0.java", r'annotation2 instanceof sa\.[fo]|q0Var\.b\(HttpMethods\.(GET|POST)'),
+        "ble_frame_and_xor": ("p281z5/C2538k2.java", r'public static byte\[\] [de]\(|length2|Arrays\.fill|System\.arraycopy|bArr3\[i'),
+        "dhcp_gateway": ("I5/c.java", r'public static String d\(|BigInteger|byteArray\.length|InetAddress'),
+        "authorization_header": ("com/panasonic/jp/lumixlab/util/C1410v.java", r'public static String J\(|Bearer '),
+        "tls_pinning": ("p084h6/d.java", r'getPeerCertificates|getEncoded|SHA-256|getCerFingerPrint|MessageDigest\.isEqual'),
+        "firmware_client_calls": ("com/panasonic/jp/lumixlab/controller/fragment/FirmwareUpdateDetailFragment.java", r'\.A\(|\.B\(|\.g\(|transID|SendData|SetDataInfo'),
     }
-
-    with open(out_path, "w", encoding="utf-8") as fp:
-        json.dump(results, fp, ensure_ascii=False, indent=2)
+    evidence={}
+    for label,(name,pattern) in refs.items():
+        lines=(base/name).read_text(encoding="utf-8").splitlines()
+        evidence[label]={"source":name,"matched_lines":[{"line":i,"text":line} for i,line in enumerate(lines,1) if re.search(pattern,line)]}
+    script = Path(__file__)
+    result={
+        "task_id":"06_lab_control", "schema_version":2,
+        "title":"LUMIX Lab client handoff/auth declarations and offline codec verification",
+        "analysis_mode":"offline_static_client_source_and_synthetic_codec_vectors",
+        "apk_and_manifest_inputs":apk_inputs, "cited_source_files":source_hashes,
+        "verification_script":{"path":str(script),"size_bytes":script.stat().st_size,"sha256":hashlib.sha256(script.read_bytes()).hexdigest(),"self_test_result":run_self_tests()},
+        "source_evidence":evidence,
+        "downstream_control_endpoints":parse_retrofit_endpoints(base),
+        "epistemic_classification":{
+            "confirmed_client_source_only":[
+                "C2538k2.d pads raw data with 0..3 zeros before length prefix/FF frame alignment. A 16-byte UUID frame ends in FFFFFF, not 00FFFF.",
+                "sa.o and sa.f are consumed as POST and GET by oa/w0.java; paths/methods are parsed from actual a.java, preserving duplicate declarations and dynamic URLs.",
+                "Actual firmware client declarations are POST firmware/send-prepare, firmware/send and firmware/abort-send; no SetDataInfo/SendData path occurs in a.java.",
+                "Client authorization formatter emits literal quotes around Bearer text. Pinning code compares the certificate hash with a stored fingerprint.",
+            ],
+            "conditional_inference":[
+                "The shared BLE/auth values may allow server cross-checking, but the client's construction does not reveal whether the server checks them.",
+                "These client inputs can guide a later recovered firmware parser/handler comparison; they do not locate that handler now.",
+            ],
+            "unknown":[
+                "Actual S1M2 HTTPS daemon route table, authentication validator, native update handler and IPCU/ipcufs calls.",
+                "Whether these declared routes are exposed on any particular camera/firmware and with what side effects.",
+                "Runtime certificate/token generation, expiry, encryption and flash update chain; no OTA-to-ipcufs chain has been closed.",
+            ]
+        }
+    }
+    with out_path.open('x',encoding='utf-8') as fp:
+        json.dump(result,fp,ensure_ascii=False,indent=2); fp.write('\n')
+    print(json.dumps({"output":str(out_path),"source_file_count":len(source_hashes),"endpoint_declarations":result['downstream_control_endpoints']['declaration_count'],"codec_test":result['verification_script']['self_test_result']['status']},ensure_ascii=False))
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "--write-results":
-        target = "<LOCAL_WORKSPACE>/analysis/agy_takeover_20261012/06_lab_control/results.json"
-        generate_results_json(target)
-        print(f"Wrote {target} ({os.path.getsize(target)} bytes)")
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output',type=Path,help='New JSON output path; omitted runs synthetic codec vectors only')
+    parser.add_argument('--source-base',type=Path,default=Path(__file__).resolve().parents[3]/'analysis/sources/lumix_lab_codex_static/decompiled/sources')
+    args=parser.parse_args()
+    if args.output:
+        out=args.output.resolve(); base=args.source_base.resolve()
+        if out.exists() or out.is_relative_to(base):
+            parser.error('output must be a new file outside source inputs')
+        out.parent.mkdir(parents=True,exist_ok=True)
+        generate_results_json(out,base)
     else:
-        print(json.dumps(run_self_tests(), indent=2))
+        print(json.dumps(run_self_tests(),indent=2))

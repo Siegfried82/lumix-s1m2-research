@@ -1,0 +1,46 @@
+{
+  "applicable": true,
+  "source_directory_input": {
+    "path": "<LOCAL_WORKSPACE>/S1m2_V14.bin",
+    "bytes": 171867648,
+    "sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+    "data_base": 512,
+    "revision": 512,
+    "directory_count": 62,
+    "identifier": "MC8243",
+    "stored_crc": "0x5d6f7ff7",
+    "calculated_crc": "0x5d6f7ff7",
+    "crc_matches": true
+  },
+  "synthetic_candidate_row": {
+    "index": 8,
+    "name": "postboot2_r",
+    "occurrence_zero_based": 0,
+    "size": 131072,
+    "flags_raw": 3,
+    "destination_raw": "0x43e0000",
+    "candidate_directory_digest": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260"
+  },
+  "synthetic_positive_input": {
+    "bytes": 131136,
+    "sha256": "e07f98f80e18429aad960164adc5814bab6f9abdaa46d7582e69423e82e720b2"
+  },
+  "negative_input": {
+    "generator": "os.urandom",
+    "bytes": 131136,
+    "sha256": "2c9edf5295fb5915db20f8d80649e1f30b47addeea6e47399f3a04f9604b4dd9"
+  },
+  "checks": {
+    "explicit_offset_candidate_match": true,
+    "wrong_offset_rejected": true,
+    "missing_range_skipped": true,
+    "default_has_no_comparisons": true,
+    "urandom_negative_has_no_match": true,
+    "dump_base_subtraction_matches_fixture": true,
+    "legacy_shift_has_explicit_addition_semantics": true,
+    "duplicate_name_occurrences_preserved": true
+  },
+  "all_controls_passed": true,
+  "plaintext_recovery_verified": false,
+  "scope": "synthetic offset/range/digest controls; no camera plaintext or address mapping validated"
+}

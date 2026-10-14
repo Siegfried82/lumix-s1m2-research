@@ -3,10 +3,11 @@
 Independent verification and twin-differential analysis of GH5 V2.8 and S1 V2.4 index 0 loader1 (4096B).
 Scope: Offline static file analysis and bounded, control-backed tests only.
 No device communication, no network requests, no blind key enumeration.
-Outputs only to <LOCAL_WORKSPACE>/analysis/agy_takeover_20261012/03_small_loader.
+Output destination is explicit (--output), must be new, and is never an input.
 """
 from pathlib import Path
 from collections import Counter
+import argparse
 import array
 import hashlib
 import json
@@ -325,6 +326,12 @@ def run_twin_aes_suite(key: bytes, blob_a: bytes, tail_a: bytes, hdr80_a: bytes,
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, required=True, help='New JSON output path; existing files are never overwritten')
+    args = parser.parse_args()
+    destination = args.output.resolve()
+    if destination.exists() or destination.is_relative_to(ROOT/'analysis/sources') or destination.is_relative_to(ROOT/'analysis/legacy_corpus_20261011') or destination.is_relative_to(ROOT/'analysis/transition_corpus_20261011'):
+        parser.error('output must be a new file outside inputs')
     # 1. Load GH5__V28.bin, S1___V24.zip, S5___V28.bin, S5___V29.bin
     gh5_path = ROOT / "analysis/transition_corpus_20261011/GH5__V28.bin"
     s1_zip_path = ROOT / "analysis/agy_breakthrough_batch_20261011/03_cross_model/S1___V24.zip"
@@ -914,6 +921,7 @@ def main():
             "raw_payload_and_metadata_sha256_combinations": raw_metadata_hash_checks,
         },
         "executed_experiments": {
+            "coverage": {'actual_legacy_key_models': ['G3___V12.bin', 'GF2__V11.bin', 'GF3__V12.bin', 'GH2__V11.bin', 'GX1__V11.bin'], 'aes_mode_or_layouts': ['CBC', 'CFB128', 'CFB8', 'OFB', 'CTR_full128_be', 'CTR_full128_le', 'CTR_be32_off0', 'CTR_le32_off12', 'CTR_le64_off8'], 'key_count': 5, 'pair_count': 2, 'key_pair_mode_layout_tests': 90, 'cross_index_modes': ['CBC', 'CFB128', 'OFB', 'CTR_full128_be', 'CTR_full128_le', 'CTR_be32_off0', 'CTR_le32_off12', 'CTR_le64_off8'], 'no_separate_ecb_pair_test': True, 'cfb8_cross_index_tested': False, 'parity_seed_endianness': 'LE only', 'parity_pair_tests': 6, 'parity_single_output_hashes': 12, 'parity_cross_index_tested': False, 'mt_model_boundary': 'Common plaintext, same word alignment/phase and standard no-feedback recurrence; other transformations untested'},
             "experiment_1_twin_aes_differential_digest_independent": {
                 "description": "Tests whether GH5 and S1 loader1 (or S5 V2.8 and V2.9 loader1) decrypt to any matching 16B plaintext blocks under the 5 verified legacy AES-128 keys across CBC (interior IV-independent + block 0 IV candidates), CFB128 (interior IV-independent + block 0), CFB8 (interior IV-independent), OFB (tail[:16]), and 5 CTR counter layouts (tail[:16]). Does not assume candidate_digest == SHA256(plaintext).",
                 "legacy_key_positive_controls": legacy_key_controls,
@@ -934,7 +942,7 @@ def main():
                 "results": mt_twin_results,
             },
             "experiment_3_tz10_parity_feedback_mt_with_tail16_seed": {
-                "description": "Tests tail[:16] (16 bytes = 4 x u32) and tail[:16] ^ tz10_resident_seed as the 4-word init_by_array seed for the verified TZ10 parity-feedback MT19937 stream cipher, checking both candidate_digest and twin plaintext equality.",
+                "description": "Tests three LE four-u32 seed rules: tail[:16] directly, tail[:16] XOR the TZ10 resident seed, and the fixed resident seed. Two pairs produce six pair tests/twelve candidate hashes. Only same-index 4B/16B comparisons are recorded; no BE-seed or cross-index tests were executed.",
                 "controls": {
                     "tz10_v12_prefix_4096B_exact_match": True,
                     "synthetic_4096B_twin_roundtrip_passed": True,
@@ -949,7 +957,7 @@ def main():
             },
             {
                 "status": "confirmed",
-                "claim": "The +0x200 payload base offset is verified in-file by all flags==2 entries (4/4 in GH5 V2.8 and 7/7 in S1 V2.4 match SHA-256 with +0x200, 0/9 non-empty match without +0x200). The external reference S1___V24.bin.parts.json recorded unshifted relative offsets (off=5120=0x1400), which overlap the last 504B of the 53-entry directory table [0x1400, 0x15f8) and 8B zero padding [0x15f8, 0x1600).",
+                "claim": "The +0x200 payload base offset is verified in-file by all flags==2 entries (4/4 in GH5 V2.8 and 7/7 in S1 V2.4 match SHA-256 with +0x200, 2/9 non-empty match without +0x200 (1/3 GH5 and 1/6 S1, coincidental filler matches)). The external reference S1___V24.bin.parts.json recorded unshifted relative offsets (off=5120=0x1400), which overlap the last 504B of the 53-entry directory table [0x1400, 0x15f8) and 8B zero padding [0x15f8, 0x1600).",
             },
             {
                 "status": "confirmed",
@@ -957,7 +965,7 @@ def main():
             },
             {
                 "status": "confirmed",
-                "claim": "Under the 5 verified legacy AES-128 keys, digest-independent twin-plaintext differential checks (requiring only that GH5 and S1 loader1, or S5 V2.8 and V2.9 loader1, share at least one 16B plaintext block) produce 0/255 interior block matches in CBC/CFB128/CFB8 and 0/256 block matches in OFB and 5 CTR layouts seeded by tail[:16]. Likewise, seed-independent MT19937 GF(2)-linearity checks on C_A ^ C_B and tail[:16]-seeded TZ10 parity-feedback MT19937 checks produce 0 matches.",
+                "claim": "Under the five actual legacy keys (G3 V1.2, GF2 V1.1, GF3 V1.2, GH2 V1.1 and GX1 V1.1), the implemented nine AES mode/counter layouts yield zero same-index blocks; CBC/CFB128/OFB/CTR also yield zero cross-index blocks, while CFB8 has no cross-index statistic. This bounds a common-plaintext model under the listed parameters, not all AES or KDF possibilities. The MT19937 result assumes common plaintext and common word alignment/phase. TZ10 parity tests use three LE seed rules on two pairs (six pair tests/twelve hashes), with no BE-seed or cross-index coverage.",
             },
             {
                 "status": "inferred",
@@ -981,12 +989,15 @@ def main():
             },
             {
                 "priority": 2,
-                "experiment": "Once any candidate key/KDF or consumer transform is identified from readable code or hardware dumps, use the 4KiB (GH5__V28, S1___V24) and (S5___V28, S5___V29) loader1 twin pairs as the primary fast discriminator: a valid transform must simultaneously map both 4096B ciphertexts (with their distinct tail[:16] values) to outputs that satisfy the same candidate_digest (4913f493... for GH5/S1; e009d688... for S5 V2.8/V2.9).",
+                "experiment": "After a candidate key/KDF or consumer transform has actual readable-code or verified dump evidence, test both 4KiB loader1 pairs with full output hashes and format/consumer checks. Equality to the candidate digest is a conditional check until its plaintext coverage is established; metadata alone does not prove identical plaintext or a shared key.",
             },
         ],
     }
 
-    (OUT / "results.json").write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n")
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    with destination.open("x", encoding="utf-8") as fp:
+        json.dump(output, fp, ensure_ascii=False, indent=2)
+        fp.write("\n")
     print(
         json.dumps(
             {
@@ -996,7 +1007,11 @@ def main():
                 "gh5_s1_loader1_unaligned_16B_matches": gh5_s1_stats["unaligned_16B_sliding_window_matches"],
                 "s5_v28_v29_loader1_unaligned_16B_matches": s5_v28_v29_stats["unaligned_16B_sliding_window_matches"],
                 "shared_gh5_s1_components_count": len(shared_gh5_s1_components),
-                "twin_aes_matches": 0,
+                "twin_same_index_block_matches_total": sum(
+                    vals["CBC_interior_255_blocks_same_index"] + vals["CFB128_interior_255_blocks_same_index"]
+                    + vals["CFB8_interior_255_blocks_same_index"] + vals["OFB_tail_first16_256_blocks_same_index"]
+                    + sum(layout["same_index_16B_blocks"] for layout in vals["CTR_tail_first16_layouts"].values())
+                    for collection in (twin_aes_gh5_s1, twin_aes_s5_v28_v29) for vals in collection.values()),
                 "mt_twin_phase0_matches_le": mt_twin_results["GH5_S1_loader1_xor_le"]["phase0_predicted_word_matches"],
                 "mt_twin_single_step_matches_le": mt_twin_results["GH5_S1_loader1_xor_le"]["phase_invariant_single_step_matches"],
             },

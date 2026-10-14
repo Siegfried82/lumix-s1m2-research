@@ -1,0 +1,532 @@
+[
+ {
+  "i": 0,
+  "name": "loader1",
+  "off": 5120,
+  "sz": 4096,
+  "la": 0,
+  "ty": 3,
+  "sha": "4913f493636ed435d185ca3e5bea7a49eec28195606c99845d38ec68d91ccc5b",
+  "iv": "bd51543305122cbd7340f38067855345"
+ },
+ {
+  "i": 1,
+  "name": "loader2",
+  "off": 9216,
+  "sz": 38912,
+  "la": 4096,
+  "ty": 3,
+  "sha": "e07145ab4ed2b74447ea461b19ce2a7febb664473cdf2337034ff3baeb694e70",
+  "iv": "b63fdbb0d3cabf1395d46766369216df"
+ },
+ {
+  "i": 2,
+  "name": "loader3",
+  "off": 48128,
+  "sz": 49152,
+  "la": 43008,
+  "ty": 3,
+  "sha": "8f231a90a0e4d120b0ed6de4092bf1d2e8e70eb7916568588da2f82d03557fbf",
+  "iv": "2bd9edd8ae48253ce904e373cbf2d8e7"
+ },
+ {
+  "i": 3,
+  "name": "program",
+  "off": 97280,
+  "sz": 14811136,
+  "la": 524288,
+  "ty": 3,
+  "sha": "1fd2db11a58b265755a019dd4df6f0183f6d59a61c16485408d589393cca0f06",
+  "iv": "4d877e0b665c1fbdfb976f662ee67642"
+ },
+ {
+  "i": 4,
+  "name": "storage",
+  "off": 14908416,
+  "sz": 0,
+  "la": 19136512,
+  "ty": 2,
+  "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "iv": "00000000000000000000000000000000"
+ },
+ {
+  "i": 5,
+  "name": "postboot1",
+  "off": 14908416,
+  "sz": 4718592,
+  "la": 19136512,
+  "ty": 3,
+  "sha": "c1878db5c769bb21db449193d1758815fd21f050e253386ec5e33c1af68bcfe7",
+  "iv": "e9988698e39171ef9c990975ca9f89be"
+ },
+ {
+  "i": 6,
+  "name": "postboot2",
+  "off": 19627008,
+  "sz": 131072,
+  "la": 23855104,
+  "ty": 3,
+  "sha": "17e0410137d228d5f072d748b79ca1bce68e281910dbb4935f8ba6572fad80fa",
+  "iv": "52e88cd58fcdb99c9ec8e232f4ad6834"
+ },
+ {
+  "i": 7,
+  "name": "postboot3",
+  "off": 19758080,
+  "sz": 8257536,
+  "la": 23986176,
+  "ty": 3,
+  "sha": "ab09130916a852fd88667911c69bf794d2d13929ff67ab8c19104224c99096b8",
+  "iv": "db1a3a6e65d5c70f52a3973583c713ef"
+ },
+ {
+  "i": 8,
+  "name": "postboot4",
+  "off": 28015616,
+  "sz": 131072,
+  "la": 32243712,
+  "ty": 3,
+  "sha": "2a2fe4bd02ad0b58a3643e252b6e3eec513447be1f37178c5a09c51049a50c91",
+  "iv": "85aba9e327a5db2a164cd9878109bbaf"
+ },
+ {
+  "i": 9,
+  "name": "postboot5",
+  "off": 28146688,
+  "sz": 917504,
+  "la": 32374784,
+  "ty": 3,
+  "sha": "8d54c74c4eaf5551aad10aa341bca756e1818899ae431e6ccde194d50c09b063",
+  "iv": "86fa1509968abf6dc9a03319bc8ae1ce"
+ },
+ {
+  "i": 10,
+  "name": "dram_sleep",
+  "off": 29064192,
+  "sz": 6144,
+  "la": 33292288,
+  "ty": 3,
+  "sha": "d5c37c55ea995f6d41cab827990e87196b90954451d4b81ccb2f70cc711a8c2b",
+  "iv": "42d0e70352c547c9edb1ae78cea1b65d"
+ },
+ {
+  "i": 11,
+  "name": "eep_ow_a",
+  "off": 29070336,
+  "sz": 131072,
+  "la": 33423360,
+  "ty": 3,
+  "sha": "b02b48369ab0b316dd2f614e2e68f52002aebcddc7ae22b37f38b794470873f8",
+  "iv": "97a7129eb037e8690ee71f39f479edf0"
+ },
+ {
+  "i": 12,
+  "name": "eep_ow_b",
+  "off": 29201408,
+  "sz": 131072,
+  "la": 33554432,
+  "ty": 3,
+  "sha": "b02b48369ab0b316dd2f614e2e68f52002aebcddc7ae22b37f38b794470873f8",
+  "iv": "dcbdd8ac692d729165e89df79410600c"
+ },
+ {
+  "i": 13,
+  "name": "eep_adj",
+  "off": 29332480,
+  "sz": 131072,
+  "la": 33685504,
+  "ty": 3,
+  "sha": "875a5e0429a04c6af4f55f468d3fe04bc3c340bb23832374d72c763100e95da6",
+  "iv": "e580e86249ca7fa6f60785a87c4cd6cc"
+ },
+ {
+  "i": 14,
+  "name": "eep_fix",
+  "off": 29463552,
+  "sz": 131072,
+  "la": 33816576,
+  "ty": 3,
+  "sha": "2604bad63d67d46e95e1093bf787e41ebee4c0eb0e81681ad3e60931acd9bef5",
+  "iv": "3af8dbf02640cd3c618bceb8c5d9855a"
+ },
+ {
+  "i": 15,
+  "name": "eep_act_a",
+  "off": 29594624,
+  "sz": 2048,
+  "la": 33947648,
+  "ty": 3,
+  "sha": "59aa79d1fdaa9ed58e3eb53b3bad24ca7301ad21fd2f967af4ec8a7c518ecf4a",
+  "iv": "983740458efd4b57f1038952c93c95f1"
+ },
+ {
+  "i": 16,
+  "name": "eep_act_b",
+  "off": 29596672,
+  "sz": 2048,
+  "la": 34078720,
+  "ty": 3,
+  "sha": "59aa79d1fdaa9ed58e3eb53b3bad24ca7301ad21fd2f967af4ec8a7c518ecf4a",
+  "iv": "809e683547678aa7f13e198aa6d664c7"
+ },
+ {
+  "i": 17,
+  "name": "history",
+  "off": 29598720,
+  "sz": 262144,
+  "la": 34209792,
+  "ty": 2,
+  "sha": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+  "iv": "00000000000000000000000000000000"
+ },
+ {
+  "i": 18,
+  "name": "music",
+  "off": 29860864,
+  "sz": 3538944,
+  "la": 34471936,
+  "ty": 3,
+  "sha": "5dcc34ae10f9d7be2150752d7fbf4e7bae58d585ea3b3eeff93e985cf557c723",
+  "iv": "37652d729f4012c7110677f88f9f3269"
+ },
+ {
+  "i": 19,
+  "name": "osdover",
+  "off": 33399808,
+  "sz": 9961472,
+  "la": 38010880,
+  "ty": 3,
+  "sha": "931b59ec0792d120e48cdaae3bd62e5e4bf2dbcc8db02f9d559919182f2ff11d",
+  "iv": "9a1cf785e8ae2098a0e54bb05637910d"
+ },
+ {
+  "i": 20,
+  "name": "osddata",
+  "off": 43361280,
+  "sz": 10354688,
+  "la": 47972352,
+  "ty": 3,
+  "sha": "0610f1ab5ef3086fbd48aaf8c03470ae2c1e00e3e734b29f113d3f72a7d10f2b",
+  "iv": "bb12f615ba83e7360f81329cbb22fda5"
+ },
+ {
+  "i": 21,
+  "name": "fileinfo",
+  "off": 53715968,
+  "sz": 917504,
+  "la": 58327040,
+  "ty": 2,
+  "sha": "03cdeacb6a286652f8b3a2e4a6d6a3f81d4952762eb12b1659338722c7ab4a5b",
+  "iv": "00000000000000000000000000000000"
+ },
+ {
+  "i": 22,
+  "name": "ninsho_db",
+  "off": 54633472,
+  "sz": 655360,
+  "la": 59244544,
+  "ty": 2,
+  "sha": "ff6335069b6e140eb47149d847aea80bf7e2b06bd80ae9708aa382efb3ae21ee",
+  "iv": "00000000000000000000000000000000"
+ },
+ {
+  "i": 23,
+  "name": "koutei_kao",
+  "off": 55288832,
+  "sz": 114688,
+  "la": 59899904,
+  "ty": 3,
+  "sha": "0fb19aef2e26fbb568abce93c300cb41b2754c6e309726c880fd11c2a1f7776d",
+  "iv": "e8dc21d48c7e7d8c11efd3e60859c56f"
+ },
+ {
+  "i": 24,
+  "name": "avchd_info",
+  "off": 55403520,
+  "sz": 16384,
+  "la": 60030976,
+  "ty": 2,
+  "sha": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+  "iv": "00000000000000000000000000000000"
+ },
+ {
+  "i": 25,
+  "name": "wifi_info",
+  "off": 55419904,
+  "sz": 131072,
+  "la": 60162048,
+  "ty": 2,
+  "sha": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+  "iv": "00000000000000000000000000000000"
+ },
+ {
+  "i": 26,
+  "name": "menu_save",
+  "off": 55550976,
+  "sz": 131072,
+  "la": 60293120,
+  "ty": 2,
+  "sha": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+  "iv": "00000000000000000000000000000000"
+ },
+ {
+  "i": 27,
+  "name": "zboot",
+  "off": 55682048,
+  "sz": 2048,
+  "la": 60424192,
+  "ty": 3,
+  "sha": "e1115337f32801d64072065a30b5fdb9f876f6263f2e0c0f2b9aac8d3f7c4352",
+  "iv": "d6e23bcf2e8a85bf3343c84ba23dc55b"
+ },
+ {
+  "i": 28,
+  "name": "dtb",
+  "off": 55684096,
+  "sz": 4096,
+  "la": 60426240,
+  "ty": 3,
+  "sha": "d70a6ba5647d982e006c342f5079a79b89375675bc633f4a17ded3803a9b59f2",
+  "iv": "2fd5e9cab7373411bb7f4101b29e53d9"
+ },
+ {
+  "i": 29,
+  "name": "zimage",
+  "off": 55688192,
+  "sz": 2621440,
+  "la": 60555264,
+  "ty": 3,
+  "sha": "33bcd3d059f1344a545a35d324b33f8be083a6b12f6b0df02b0f41d0387ac529",
+  "iv": "1df9c7cafb62d7e3772ba53aeda0e815"
+ },
+ {
+  "i": 30,
+  "name": "rootfs1",
+  "off": 58309632,
+  "sz": 4194304,
+  "la": 63176704,
+  "ty": 3,
+  "sha": "96f849f84d4774a1e5c4c69f27125aab93829ec8fe9a06edb8688e43b29d08c7",
+  "iv": "912e627195144ae62d4b84f5239a3e37"
+ },
+ {
+  "i": 31,
+  "name": "rootfs2",
+  "off": 62503936,
+  "sz": 12582912,
+  "la": 67371008,
+  "ty": 3,
+  "sha": "8a34bbf275711ee531d03c8a879150378bec950e8b2859e6147163cbc4edbdb1",
+  "iv": "e851a4eadc2a374a87bff426a6b443bb"
+ },
+ {
+  "i": 32,
+  "name": "apu0_data_i",
+  "off": 75086848,
+  "sz": 131072,
+  "la": 79953920,
+  "ty": 3,
+  "sha": "81fa123c11a1a79594af02181d45e988e10aa1aa4297e8cd65bdcbaecff7b324",
+  "iv": "5c446018f4936a103074d8aaa33e2a7f"
+ },
+ {
+  "i": 33,
+  "name": "apu0_data_e",
+  "off": 75217920,
+  "sz": 131072,
+  "la": 80084992,
+  "ty": 3,
+  "sha": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260",
+  "iv": "267d3f4b02d3e636d7e0a3a367865421"
+ },
+ {
+  "i": 34,
+  "name": "apu0_code_i",
+  "off": 75348992,
+  "sz": 65536,
+  "la": 80216064,
+  "ty": 3,
+  "sha": "14320a9f0d89a641788055d6bdbdc2a944561f96219ba02fa6e6b9cb99a6ea99",
+  "iv": "f5782191ac5d9a030e0288f501a2e960"
+ },
+ {
+  "i": 35,
+  "name": "apu0_code_e",
+  "off": 75414528,
+  "sz": 65536,
+  "la": 80281600,
+  "ty": 3,
+  "sha": "71189f7fb6aed638640078fba3a35fda6c39c8962e74dcc75935aac948da9063",
+  "iv": "96c3b9f2c577bbfcf95b430456cfd3e3"
+ },
+ {
+  "i": 36,
+  "name": "lns_fpga",
+  "off": 75480064,
+  "sz": 131072,
+  "la": 80347136,
+  "ty": 3,
+  "sha": "22e28ecefb9c0f3671f225ac593a9d55b0db01b4b5bf480a325232e54d801191",
+  "iv": "d55b5e342653a5a324cc9af61e115454"
+ },
+ {
+  "i": 37,
+  "name": "usbcharge",
+  "off": 75611136,
+  "sz": 131072,
+  "la": 80478208,
+  "ty": 3,
+  "sha": "03ef6315ba2b981032d1b63d2d8746d53af87f37042bbac4f09a8274b34ba4ac",
+  "iv": "65862764952198012a9676e9decf9536"
+ },
+ {
+  "i": 38,
+  "name": "ipu_data",
+  "off": 75742208,
+  "sz": 262144,
+  "la": 80609280,
+  "ty": 3,
+  "sha": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+  "iv": "a897bfe9aa3793e9492cac4221487b50"
+ },
+ {
+  "i": 39,
+  "name": "ipu_code",
+  "off": 76004352,
+  "sz": 65536,
+  "la": 80871424,
+  "ty": 3,
+  "sha": "c8958782feff19752e0b81122b79f742d06d102343f08a2101fa4e8b1e2f572c",
+  "iv": "fd3eeafdc87283296f2d2bdefe811d34"
+ },
+ {
+  "i": 40,
+  "name": "rc_data",
+  "off": 76069888,
+  "sz": 262144,
+  "la": 81002496,
+  "ty": 3,
+  "sha": "736424438c98bbe9fde213cc237c09aff94003fa1b62bf39d80bf7a854eda718",
+  "iv": "ab22e41477d1652bb27ee5fd5e106ba7"
+ },
+ {
+  "i": 41,
+  "name": "rc_code",
+  "off": 76332032,
+  "sz": 65536,
+  "la": 81264640,
+  "ty": 3,
+  "sha": "fc306a4463c9784a2f8f7f16f473bacc6f75ae0f49a69357c8d6c2cd805918c2",
+  "iv": "892c2b24ae080909bba6bcb16a2f06eb"
+ },
+ {
+  "i": 42,
+  "name": "nr_data",
+  "off": 76397568,
+  "sz": 262144,
+  "la": 81395712,
+  "ty": 3,
+  "sha": "e235e38856489970ba0cff0a6128391b7e56aa0f13f65ca06d2f2ce9b96ac76a",
+  "iv": "8b1db580669c21665539b39205052874"
+ },
+ {
+  "i": 43,
+  "name": "nr_code",
+  "off": 76659712,
+  "sz": 65536,
+  "la": 81657856,
+  "ty": 3,
+  "sha": "2553aa1d7cc21e0750d81b0c671abbf361acd35d69d96b9d2f6ba47c52c434cf",
+  "iv": "23c58078e3a14bbb869d58af239abb34"
+ },
+ {
+  "i": 44,
+  "name": "hm_c_prog",
+  "off": 76725248,
+  "sz": 65536,
+  "la": 81788928,
+  "ty": 3,
+  "sha": "06e44fbb2c38f7b389ff71a85dd66ebf06ad1138e2fd8f4aebf3bfc6a97a0d47",
+  "iv": "eec01e56bb02bf25650fa71c98861bb2"
+ },
+ {
+  "i": 45,
+  "name": "hm_d_prog",
+  "off": 76790784,
+  "sz": 262144,
+  "la": 81920000,
+  "ty": 3,
+  "sha": "dc4064303a8eab1bd7f374aa8d8df52834ace9873dce1f1087458ff2ff75beaf",
+  "iv": "31975b63b96b83a56d2bde7610bbb242"
+ },
+ {
+  "i": 46,
+  "name": "hm_c_ddr",
+  "off": 77052928,
+  "sz": 3145728,
+  "la": 82182144,
+  "ty": 3,
+  "sha": "b26f3b3d07c411f1b7e641b03aec415f8ae2068edd8746b8ac71d50db143415f",
+  "iv": "6f814ea634a825be5ced06a51a1cb786"
+ },
+ {
+  "i": 47,
+  "name": "hm_d_ddr",
+  "off": 80198656,
+  "sz": 1048576,
+  "la": 85327872,
+  "ty": 3,
+  "sha": "e9688a52f4371814874321f244516d809d36d8fa16f1895b26a6e0224de734e2",
+  "iv": "17335da52c9f560eb04259e423d2c737"
+ },
+ {
+  "i": 48,
+  "name": "hm_d_nw",
+  "off": 81247232,
+  "sz": 4194304,
+  "la": 86376448,
+  "ty": 3,
+  "sha": "d74e1f38fa7ce7a40ed49e6ffc3fd65bae70ae77eb9d37add2f896abc52897d6",
+  "iv": "290e75ec9f7a5cea7d80b799f1554e68"
+ },
+ {
+  "i": 49,
+  "name": "hm_d_nw_sng",
+  "off": 85441536,
+  "sz": 4194304,
+  "la": 90570752,
+  "ty": 3,
+  "sha": "b510989f1e12fd1e6a2efbc5306b125289cb796c48e5ffefe7e4d4ce26390a50",
+  "iv": "ee1085fc84d5269d590cbfe1c45f7056"
+ },
+ {
+  "i": 50,
+  "name": "hr_c_prog",
+  "off": 89635840,
+  "sz": 65536,
+  "la": 94765056,
+  "ty": 3,
+  "sha": "780d317dc3b04aef90b89b0b83db4e7df6cf82e1a59a76d6bcedae654958b780",
+  "iv": "2239e3ee2d4ac8cab536dd8491a70bb2"
+ },
+ {
+  "i": 51,
+  "name": "hr_d_prog",
+  "off": 89701376,
+  "sz": 262144,
+  "la": 94896128,
+  "ty": 3,
+  "sha": "0471b300bb0c1cb634e92cf36b315c4f8456d14fef98a0d014cf9acab61bb3a4",
+  "iv": "b7e70233d3d3adbe2d91907530852a6c"
+ },
+ {
+  "i": 52,
+  "name": "hr_c_ddr",
+  "off": 89963520,
+  "sz": 262144,
+  "la": 95158272,
+  "ty": 3,
+  "sha": "dda4ddd09b98d6f8d7d87181fcbb2d7694deedab6ec51ef9f0e4a82744dddc20",
+  "iv": "2dc646f4774841d2935bc1e015f5ebdd"
+ }
+]

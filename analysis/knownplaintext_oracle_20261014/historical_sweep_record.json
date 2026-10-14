@@ -1,0 +1,68 @@
+{
+  "record_status": "historical-not-rerun-with-corrected-script",
+  "original_result_sha256": "f717606e0dae2c647bf2dbef61254c763ab1a81248320a5252ec42d07b23779b",
+  "original_script_sha256": "bafda39912489cde9509e3a3f72b00b9ca95d3fc502e87ad28a39fc44abc9449",
+  "original_result_restore_location": "<LOCAL_USER>/相机研究归档备份/project-corrections-20261014-20261013-212849/analysis/knownplaintext_oracle_20261014/results.json",
+  "historical_hypothesis_sweep_record": {
+    "targets": 11,
+    "candidate_keys": 33,
+    "iv_candidates": 5,
+    "modes": 5,
+    "first_block_tests": 9075,
+    "first_block_matches": 0,
+    "confirmed_full_component_hits": 0,
+    "hits": [],
+    "boundary": "candidate list is explicitly enumerated from the legacy derivation pattern and public container fields only; the ciphertext covers AES-128/192/256 ECB/CBC and three CTR counter layouts. A negative result excludes this list, not 'all derivation schemes'."
+  },
+  "historical_legacy_positive_control_record": {
+    "control": [
+      {
+        "sample": "GH2__V11",
+        "md5": "0be86add14ebb1bca79a9c6222a1d617",
+        "matching_records": 1,
+        "key_len": 16,
+        "body_md5_matches": true
+      },
+      {
+        "sample": "G3___V12",
+        "md5": "7cf563a3b11f99e3a0f2893b6cb59411",
+        "matching_records": 1,
+        "key_len": 16,
+        "body_md5_matches": true
+      },
+      {
+        "sample": "GF2__V11",
+        "md5": "6fd8205db6b57f0786208eded27cd50b",
+        "matching_records": 1,
+        "key_len": 16,
+        "body_md5_matches": true
+      },
+      {
+        "sample": "GF3__V12",
+        "md5": "45e76ee3ada7e4c850b07a2b86aa8cd7",
+        "matching_records": 1,
+        "key_len": 16,
+        "body_md5_matches": true
+      },
+      {
+        "sample": "GX1__V11",
+        "md5": "88703276ae63afd2f915811bd0694305",
+        "matching_records": 1,
+        "key_len": 16,
+        "body_md5_matches": true
+      }
+    ],
+    "keys": {
+      "GH2__V11": "90b43b5ce34c6e667fb28376b5fa5c27",
+      "G3___V12": "e686c04a4336f0bf23fd56f925ee553e",
+      "GF2__V11": "4b8ba02b85110dcec98b591f5528fbc2",
+      "GF3__V12": "3f7e85394912a4d81247c9af4e20ce81",
+      "GX1__V11": "e4252eb939691d4af1084995691e6151"
+    },
+    "unique_keys": 5
+  },
+  "plaintext_verified": false,
+  "cipher_validated_for_modern_flags3": false,
+  "consumer_verified": false,
+  "boundary": "9075 is a historical first-block test count, not a new run. Candidate plaintext/digest and IV semantics are conditional. The negative covers only recorded input/key/mode/IV/ranges; extra transforms and real consumers remain unknown."
+}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-13",
+  "accepted_output": "final_verification",
+  "accepted_exit_code": 0,
+  "script_sha256": "5d4256738680357010b932cfddbb3369305faf021a8a750f8bd607bd18adb337",
+  "report_sha256": "54fd199e16f6f1ca56654b107cd4048a6ce3a6f01e30e9e7d1c2d39130db3f50",
+  "live_report_sha256": "54fd199e16f6f1ca56654b107cd4048a6ce3a6f01e30e9e7d1c2d39130db3f50",
+  "live_report_still_matches_snapshot": true,
+  "covered_component_rows": 29,
+  "covered_complete_directory_rows": 62,
+  "relative_links_checked": 12,
+  "missing_links": [],
+  "rejected_debug_runs": [
+    "actual_verification: initial component table coverage was zero; not accepted",
+    "verified_snapshot: intermediate scalar-field filtering and macro selection; not final acceptance"
+  ],
+  "agents": [
+    {
+      "task": "hardware_source_audit",
+      "status": "failed-usage-limit",
+      "completed_result": false
+    },
+    {
+      "task": "errata_claim_audit",
+      "status": "failed-usage-limit",
+      "completed_result": false
+    }
+  ],
+  "primary_validation": "All key reported conclusions checked directly by root; failed agent outputs are not accepted evidence"
+}

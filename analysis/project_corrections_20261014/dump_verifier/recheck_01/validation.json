@@ -1,0 +1,106 @@
+{
+  "scope": "actual S1M2 V1.4 directory and raw file-offset controls plus synthetic CLI fixtures; no device/RAM/decryption evidence",
+  "python_executable": "<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "image_input": {
+    "path": "<LOCAL_WORKSPACE>/S1m2_V14.bin",
+    "bytes": 171867648,
+    "sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+    "data_base": 512,
+    "revision": 512,
+    "directory_count": 62,
+    "identifier": "MC8243",
+    "stored_crc": "0x5d6f7ff7",
+    "calculated_crc": "0x5d6f7ff7",
+    "crc_matches": true
+  },
+  "tool_sha256": "057f8189132eccc8fdbec1abf8e1dc234f3dc756d9991c192a1625e953600dfa",
+  "checks": {
+    "static_import_has_no_writes": true,
+    "synthetic_controls": true,
+    "synthetic_fill_never_asserts_plaintext": true,
+    "full_input_hashes_reported": true,
+    "actual_raw_component_hashes_match_parser": true,
+    "actual_raw_comparisons_never_assert_plaintext": true,
+    "all_rows_covered_or_explicitly_skipped": true,
+    "duplicate_occurrences_and_indexes_preserved": true,
+    "cli_default_no_mapped_comparisons": true,
+    "cli_explicit_fill_match_is_only_candidate": true,
+    "cli_wrong_offset_no_match": true,
+    "report_cannot_overwrite_image": true,
+    "report_cannot_overwrite_dump": true,
+    "targets_cannot_overwrite_image": true,
+    "unknown_index_rejected": true,
+    "duplicate_index_rejected": true,
+    "rejected_output_inputs_unchanged": true,
+    "existing_output_rejected": true,
+    "targets_cover_exact_flag3_rows": true,
+    "targets_have_no_false_load_or_iv_fields": true,
+    "targets_preserve_all_raw_directory_values": true
+  },
+  "all_checks_passed": true,
+  "selftest": {
+    "applicable": true,
+    "source_directory_input": {
+      "path": "<LOCAL_WORKSPACE>/S1m2_V14.bin",
+      "bytes": 171867648,
+      "sha256": "e91620854dd435131e03178076b486767cf9a3d2cfd62d173c537cb2afe9ea0f",
+      "data_base": 512,
+      "revision": 512,
+      "directory_count": 62,
+      "identifier": "MC8243",
+      "stored_crc": "0x5d6f7ff7",
+      "calculated_crc": "0x5d6f7ff7",
+      "crc_matches": true
+    },
+    "synthetic_candidate_row": {
+      "index": 8,
+      "name": "postboot2_r",
+      "occurrence_zero_based": 0,
+      "size": 131072,
+      "flags_raw": 3,
+      "destination_raw": "0x43e0000",
+      "candidate_directory_digest": "b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260"
+    },
+    "synthetic_positive_input": {
+      "bytes": 131136,
+      "sha256": "e07f98f80e18429aad960164adc5814bab6f9abdaa46d7582e69423e82e720b2"
+    },
+    "negative_input": {
+      "generator": "os.urandom",
+      "bytes": 131136,
+      "sha256": "b4f85ff6a1f3e10b6f1ec0b59e59a68557675a61756f234c4673ea41be1a00dc"
+    },
+    "checks": {
+      "explicit_offset_candidate_match": true,
+      "wrong_offset_rejected": true,
+      "missing_range_skipped": true,
+      "default_has_no_comparisons": true,
+      "urandom_negative_has_no_match": true,
+      "dump_base_subtraction_matches_fixture": true,
+      "legacy_shift_has_explicit_addition_semantics": true,
+      "duplicate_name_occurrences_preserved": true
+    },
+    "all_controls_passed": true,
+    "plaintext_recovery_verified": false,
+    "scope": "synthetic offset/range/digest controls; no camera plaintext or address mapping validated"
+  },
+  "actual_file_offset_comparison": {
+    "checked_range_count": 58,
+    "skipped_range_count": 4,
+    "candidate_match_count": 9,
+    "matching_indexes": [
+      24,
+      27,
+      28,
+      29,
+      30,
+      38,
+      39,
+      49,
+      61
+    ],
+    "protected_flag3_matching_indexes": [],
+    "plaintext_recovery_verified": false
+  }
+}

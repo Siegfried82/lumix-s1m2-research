@@ -1,0 +1,94 @@
+{
+  "safe_import_both_tools": true,
+  "source_sha256": {
+    "<LOCAL_WORKSPACE>/analysis/knownplaintext_oracle_20261014/oracle_scan.py": "29651d2388281d3c5affb8572fddad9ca7cb6a897feba9211249c071c6e2bb27",
+    "<LOCAL_WORKSPACE>/analysis/s1m2_acquisition_plan_20261014/public_artifact_match.py": "228bb0111c2bfa5b3ad2bff5304acf2e290d88b9968bb87788820a4657ba508a"
+  },
+  "historical_results_before": {
+    "<LOCAL_WORKSPACE>/analysis/knownplaintext_oracle_20261014/results.json": "f717606e0dae2c647bf2dbef61254c763ab1a81248320a5252ec42d07b23779b",
+    "<LOCAL_WORKSPACE>/analysis/s1m2_acquisition_plan_20261014/public_artifact_match.json": "7a72a13e6a309a9ee79565253b6e642b8be40cb0ef3b5345895228bb79408551"
+  },
+  "cli_checks": [
+    {
+      "command": [
+        "<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "<LOCAL_WORKSPACE>/analysis/knownplaintext_oracle_20261014/oracle_scan.py",
+        "--modern",
+        "synthetic=/var/folders/lz/f84g6tx13n7fyq_cxr7pl56c0000gn/T/candidate_tool_verification_ndgiynxk/synthetic.bin",
+        "--output",
+        "/var/folders/lz/f84g6tx13n7fyq_cxr7pl56c0000gn/T/candidate_tool_verification_ndgiynxk/structure.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"completed_requested_checks\", \"mode\": \"structure\", \"inputs\": 1, \"filling_candidates\": 1, \"errors\": 0, \"sweep_performed\": false}",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "<LOCAL_WORKSPACE>/analysis/knownplaintext_oracle_20261014/oracle_scan.py",
+        "--modern",
+        "synthetic=/var/folders/lz/f84g6tx13n7fyq_cxr7pl56c0000gn/T/candidate_tool_verification_ndgiynxk/synthetic.bin",
+        "--output",
+        "/var/folders/lz/f84g6tx13n7fyq_cxr7pl56c0000gn/T/candidate_tool_verification_ndgiynxk/structure.json"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: oracle_scan.py [-h] [--modern SAMPLE=PATH] [--mode {structure,sweep}]\n                      --output OUTPUT [--legacy-table LEGACY_TABLE]\noracle_scan.py: error: output must be new and distinct from every input"
+    },
+    {
+      "command": [
+        "<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "<LOCAL_WORKSPACE>/analysis/knownplaintext_oracle_20261014/oracle_scan.py",
+        "--modern",
+        "synthetic=/var/folders/lz/f84g6tx13n7fyq_cxr7pl56c0000gn/T/candidate_tool_verification_ndgiynxk/synthetic.bin",
+        "--output",
+        "/var/folders/lz/f84g6tx13n7fyq_cxr7pl56c0000gn/T/candidate_tool_verification_ndgiynxk/synthetic.bin"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: oracle_scan.py [-h] [--modern SAMPLE=PATH] [--mode {structure,sweep}]\n                      --output OUTPUT [--legacy-table LEGACY_TABLE]\noracle_scan.py: error: output must be new and distinct from every input"
+    },
+    {
+      "command": [
+        "<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "<LOCAL_WORKSPACE>/analysis/s1m2_acquisition_plan_20261014/public_artifact_match.py",
+        "--mode",
+        "scan",
+        "--sample",
+        "S1m2_V14",
+        "--archive",
+        "/var/folders/lz/f84g6tx13n7fyq_cxr7pl56c0000gn/T/candidate_tool_verification_ndgiynxk/missing.zip",
+        "--no-trees",
+        "--output",
+        "/var/folders/lz/f84g6tx13n7fyq_cxr7pl56c0000gn/T/candidate_tool_verification_ndgiynxk/missing.json"
+      ],
+      "exit_code": 2,
+      "stdout": "{\"status\": \"incomplete_input_or_execution\", \"mode\": \"scan\", \"target_components\": 49, \"size_matched_public_entries\": 0, \"scan_performed\": false, \"verdict\": \"Incomplete input/scan; no complete negative conclusion.\"}",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "<LOCAL_WORKSPACE>/analysis/s1m2_acquisition_plan_20261014/public_artifact_match.py",
+        "--mode",
+        "audit",
+        "--output",
+        "/var/folders/lz/f84g6tx13n7fyq_cxr7pl56c0000gn/T/candidate_tool_verification_ndgiynxk/structure.json"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: public_artifact_match.py [-h] [--corpus CORPUS] [--root ROOT]\n                                [--sample SAMPLE] [--archive ARCHIVE]\n                                [--tree TREE] [--no-trees]\n                                [--mode {audit,scan}] --output OUTPUT\npublic_artifact_match.py: error: output must be a new file distinct from inputs and historical results"
+    }
+  ],
+  "duplicate_occurrences_and_conditional_candidate": true,
+  "zip_read_no_extraction": true,
+  "missing_archive_cannot_pass": true,
+  "output_guards": true,
+  "nist_aes128_ecb_backend_control": true,
+  "historical_results_after": {
+    "<LOCAL_WORKSPACE>/analysis/knownplaintext_oracle_20261014/results.json": "f717606e0dae2c647bf2dbef61254c763ab1a81248320a5252ec42d07b23779b",
+    "<LOCAL_WORKSPACE>/analysis/s1m2_acquisition_plan_20261014/public_artifact_match.json": "7a72a13e6a309a9ee79565253b6e642b8be40cb0ef3b5345895228bb79408551"
+  },
+  "historical_results_unchanged": true,
+  "status": "all_requested_safety_and_boundary_checks_passed"
+}

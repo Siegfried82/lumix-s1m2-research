@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-13",
+  "accepted_exit_code": 0,
+  "python": "3.12.14",
+  "cryptography": "50.0.2",
+  "old_positive_controls": 5,
+  "new_report_key_positive_controls": 1,
+  "old_quote_coverage": 9,
+  "real_macro_quote_coverage": 6,
+  "script_sha256": "e1e51a4d0330475ec309ac56cc6ac1cc64d58e81e9d6d0f158795ba1b8d22a5c",
+  "verification_sha256": "dfa6f3347fa82c87a203407d483437548aa938ee99e2e635f00cc417d6aa1e4e",
+  "corrected_status_sha256": "3e1b97957ed0491a64a71e17b1097d4ab2a405ce03b0c5749ddd48f4a9684434",
+  "original_correction_report_unchanged": true,
+  "relative_links_checked": 8,
+  "missing_links": [],
+  "agents": [
+    {
+      "name": "status_claim_check",
+      "status": "complete",
+      "nonempty_final": true,
+      "model_record": "inherited; API did not return independently verifiable model identifier"
+    },
+    {
+      "name": "correction_history_check",
+      "status": "complete",
+      "nonempty_final": true,
+      "model_record": "inherited; API did not return independently verifiable model identifier"
+    }
+  ],
+  "primary_verification": "Root directly rechecked key/quote/source facts and representative history code. Agent output is not a runtime or model identity proof."
+}

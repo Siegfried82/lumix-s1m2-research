@@ -1,0 +1,31 @@
+--- analysis/sources/kernel_selected/linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-MC8241.dts
+
++++ analysis/sources/leica_sl3_selected/linux-4.19.124/arch/arm64/boot/dts/socionext/pvc04v-DC1232.dts
+
+@@ -15,9 +15,9 @@
+
+ /dts-v1/;
+-#include "pvc04v-MC8241.dtsi"
+-#include "pvc04v-MC8241-rtos.h"
+-#include "pvc04v-MC8241-gpio.h"
++#include "pvc04v-DC1232.dtsi"
++#include "pvc04v-DC1232-rtos.h"
++#include "pvc04v-DC1232-gpio.h"
+ 
+ / {
+-	model = "Socionext pvc04v MC8241";
+-	compatible = "socionext,pvc04v-MC8241-2ND", "socionext,sc2006";
++	model = "Socionext pvc04v DC1232";
++	compatible = "socionext,pvc04v-DC1232-2ND", "socionext,sc2006";
+ 
+@@ -201,7 +201,5 @@
+
+ //				sd-uhs-sdr104;
+-				sd-uhs-sdr50;
+-//				sd-uhs-sdr25;
+-//				sd-uhs-sdr12;
++//				sd-uhs-sdr50;
++				sd-uhs-sdr25;
+ 				max-clock-with-jitter;
+-				sdr50-jitter-clock-66mhz;
+ 			};
