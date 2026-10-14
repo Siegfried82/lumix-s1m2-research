@@ -1,0 +1,17 @@
+STDOUT
+
+STDERR
+test_function_lexical_mask (test_audit.AuditTests.test_function_lexical_mask) ... ok
+test_missing_and_unclosed_functions (test_audit.AuditTests.test_missing_and_unclosed_functions) ... ok
+test_nested_calls_not_definitions (test_audit.AuditTests.test_nested_calls_not_definitions) ... ok
+test_nonutf8_scan (test_audit.AuditTests.test_nonutf8_scan) ... ok
+test_positive_scanners (test_audit.AuditTests.test_positive_scanners) ... ok
+test_real_tar_and_hash_rejection (test_audit.AuditTests.test_real_tar_and_hash_rejection) ... ok
+test_safety_and_diff (test_audit.AuditTests.test_safety_and_diff) ... ok
+test_vendor_positive_and_negative (test_audit.AuditTests.test_vendor_positive_and_negative) ... ok
+test_word_boundaries (test_audit.AuditTests.test_word_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.010s
+
+OK
