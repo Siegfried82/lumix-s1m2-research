@@ -1,0 +1,492 @@
+10a11,21
+>  *
+>  * Copyright (c) 2020 Panasonic Corporation
+>  * 2020-07-16 Modified
+>  *
+>  * This file may be used subject to the terms and conditions of the
+>  * GNU General Public License Version 2, or any later version
+>  * at your option, as published by the Free Software Foundation.
+>  * This program is distributed in the hope that it will be useful,
+>  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+>  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+>  * GNU General Public License for more details.
+33a45,46
+> #include <../../dwc3/gadget.h>
+> 
+72a86,94
+> 
+> 	unsigned				interface;
+> 	unsigned 				alt;
+> 
+> 	unsigned				current_alt_setting[MAX_CONFIG_INTERFACES];
+> 
+> #if 1	// for Middle
+> 	bool					set_config_completed;
+> #endif
+90,91c112,113
+< static void ffs_func_eps_disable(struct ffs_function *func);
+< static int __must_check ffs_func_eps_enable(struct ffs_function *func);
+---
+> static void ffs_func_eps_disable(struct ffs_function *func, unsigned interface, unsigned alt);
+> static int __must_check ffs_func_eps_enable(struct ffs_function *func, unsigned interface, unsigned alt);
+121a144,146
+> 
+> 	unsigned				interface;
+> 	unsigned 				alt;
+705a731,732
+> 
+> 		pr_vdebug("$$ status=%d\n", ep->status);
+801a829,831
+> 
+> 	ENTER();
+> 
+884a915
+> 	char *paddr1 = NULL, *paddr2 = NULL;
+951,959c982,984
+< 		data = kmalloc(data_len, GFP_KERNEL);
+< 		if (unlikely(!data)) {
+< 			ret = -ENOMEM;
+< 			goto error_mutex;
+< 		}
+< 		if (!io_data->read &&
+< 		    !copy_from_iter_full(data, data_len, &io_data->data)) {
+< 			ret = -EFAULT;
+< 			goto error_mutex;
+---
+> 		if		(epfile->ffs->user_flags & FUNCTIONFS_PHYSICAL_ADDR) {	// kmalloc area by usb_mem driver
+> 			paddr1 = (void*)io_data->buf;
+> 			data = phys_to_virt((dma_addr_t)paddr1);
+960a986,1005
+> 		else if (epfile->ffs->user_flags & FUNCTIONFS_PHYADDR_REMAP) {	// Non-caching area not managed by Linux
+> 			paddr2 = (void*)io_data->buf;
+> 			data = ioremap_wc((dma_addr_t)paddr2, data_len);
+> 		}
+> 		else {
+> 			data = kmalloc(data_len, GFP_KERNEL);
+> 			if (unlikely(!data)) {
+> 				ret = -ENOMEM;
+> 				goto error_mutex;
+> 			}
+> 		}
+> 
+> 		if (!io_data->read) {
+> 			if (!paddr1 && !paddr2) {
+> 				if (!copy_from_iter_full(data, data_len, &io_data->data)) {
+> 					ret = -EFAULT;
+> 					goto error_mutex;
+> 				}
+> 			}
+> 		}
+1015c1060
+< 		if (interrupted)
+---
+> 		if (interrupted) {
+1017,1021c1062,1075
+< 		else if (io_data->read && ep->status > 0)
+< 			ret = __ffs_epfile_read_data(epfile, data, ep->status,
+< 						     &io_data->data);
+< 		else
+< 			ret = ep->status;
+---
+> 		}
+> 		else {
+> 			if (io_data->read && ep->status > 0) {
+> 				if (!paddr1 && !paddr2) {
+> 					ret = __ffs_epfile_read_data(epfile, data, ep->status, &io_data->data);
+> 				}
+> 				else {
+> 					ret = ep->status;
+> 				}
+> 			}
+> 			else {
+> 				ret = ep->status;
+> 			}
+> 		}
+1057c1111,1112
+< 	kfree(data);
+---
+> 	if		( paddr2) iounmap(data);
+> 	else if (!paddr1) kfree(data);
+1058a1114,1146
+> }
+> 
+> static ssize_t
+> ffs_epfile_write(struct file *file, const char __user *buf, size_t len,
+> 		 loff_t *ptr)
+> {
+> 	struct ffs_io_data io_data;
+> 	struct iovec iov = { .iov_base = (void*)buf, .iov_len = len };
+> 
+> 	ENTER();
+> 
+> 	io_data.aio = false;
+> 	io_data.read = false;
+> 	io_data.buf = (char * __user)buf;
+> 	iov_iter_init(&io_data.data, WRITE, &iov, 1, len);
+> 
+> 	return ffs_epfile_io(file, &io_data);
+> }
+> 
+> static ssize_t
+> ffs_epfile_read(struct file *file, char __user *buf, size_t len, loff_t *ptr)
+> {
+> 	struct ffs_io_data io_data;
+> 	struct iovec iov = { .iov_base = buf, .iov_len = len };
+> 
+> 	ENTER();
+> 
+> 	io_data.aio = false;
+> 	io_data.read = true;
+> 	io_data.buf = buf;
+> 	iov_iter_init(&io_data.data, READ, &iov, 1, len);
+> 
+> 	return ffs_epfile_io(file, &io_data);
+1204c1292
+< 	ENTER();
+---
+> 	pr_vdebug("%s name=%s code=0x%04x value=0x%lx\n", __func__, epfile->name, code, value);
+1213a1302,1309
+> 		
+> 		switch(code) {
+> 			case FUNCTIONFS_FIFO_STATUS:
+> 			case FUNCTIONFS_FIFO_FLUSH:
+> 				return -ENODEV;
+> 			default:
+> 				break;
+> 		}
+1228a1325,1331
+> #if 1	// for Middle
+> 	{
+> 		struct ffs_function *func = epfile->ffs->func;
+> 		func->set_config_completed = true;
+> 	}
+> #endif
+> 
+1249a1353
+> 		case USB_SPEED_SUPER_PLUS:
+1264a1369,1388
+> 	}
+> 	case FUNCTIONFS_IO_READ:
+> 	{	
+> 		struct usb_functionfs_io_buf io_buf;
+> 		if (unlikely(copy_from_user(&io_buf, (const void __user *)value, sizeof(struct usb_functionfs_io_buf)))) {
+> 			spin_unlock_irq(&epfile->ffs->eps_lock);
+> 			return -EFAULT;
+> 		}			
+> 		spin_unlock_irq(&epfile->ffs->eps_lock);
+> 		return ffs_epfile_read(file, io_buf.addr, io_buf.len, NULL);
+> 	}
+> 	case FUNCTIONFS_IO_WRITE:
+> 	{	
+> 		struct usb_functionfs_io_buf io_buf;
+> 		if (unlikely(copy_from_user(&io_buf, (const void __user *)value, sizeof(struct usb_functionfs_io_buf)))) {
+> 			spin_unlock_irq(&epfile->ffs->eps_lock);
+> 			return -EFAULT;
+> 		}
+> 		spin_unlock_irq(&epfile->ffs->eps_lock);
+> 		return ffs_epfile_write(file, io_buf.addr, io_buf.len, NULL);
+1847c1971,1972
+< static void ffs_func_eps_disable(struct ffs_function *func)
+---
+> #if 1	// for Middle
+> static void ffs_func_ep_connection_reset(struct ffs_epfile *epfile)
+1848a1974,1998
+> 	ENTER();
+> 
+> 	if (epfile->ep) {
+> 		struct usb_ep		*ep  = epfile->ep->ep;
+> 		struct usb_request	*req = epfile->ep->req;
+> 
+> 		if (ep) {
+> 			struct dwc3_request	*d_req = to_dwc3_request(req);
+> 			struct dwc3_request	*d_r   = NULL;
+> 			struct dwc3_ep		*d_ep  = to_dwc3_ep(ep);
+> 
+> 			list_for_each_entry(d_r, &d_ep->started_list, list) {
+> 				if (d_r == d_req) {
+> 					usb_ep_dequeue(ep, req);
+> 					break;
+> 				}
+> 			}
+> 		}
+> 	}
+> }
+> #endif
+> 
+> static void ffs_func_eps_disable(struct ffs_function *func, unsigned interface, unsigned alt)
+> {
+> 	struct ffs_data *ffs      = func->ffs;
+1850,1851c2000,2001
+< 	struct ffs_epfile *epfile = func->ffs->epfiles;
+< 	unsigned count            = func->ffs->eps_count;
+---
+> 	struct ffs_epfile *epfile = ffs->epfiles;
+> 	unsigned count            = ffs->eps_count;
+1853a2004,2005
+> 	pr_vdebug("%s intr=%d alt=%d\n", __func__, interface, alt);
+> 
+1856,1859c2008,2009
+< 		/* pending requests get nuked */
+< 		if (likely(ep->ep))
+< 			usb_ep_disable(ep->ep);
+< 		++ep;
+---
+> 		if ((ep->interface == interface) || (alt == (unsigned)-1)) {
+> 			pr_vdebug("<< disabled (%02x)\n", ffs->eps_addrmap[ffs->eps_count-count-1]);
+1861,1864c2011,2020
+< 		if (epfile) {
+< 			epfile->ep = NULL;
+< 			__ffs_epfile_read_buffer_free(epfile);
+< 			++epfile;
+---
+> 			/* pending requests get nuked */
+> 			if (likely(ep->ep))
+> 				usb_ep_disable(ep->ep);
+> 			++ep;
+> 
+> 			if (epfile) {
+> 				epfile->ep = NULL;
+> 				__ffs_epfile_read_buffer_free(epfile);
+> 				++epfile;
+> 			}
+1865a2022,2033
+> #if 1	// for Middle
+> 		else {
+> 			pr_vdebug("## connection reset (%02x) intf=%d alt=%d\n", ffs->eps_addrmap[ffs->eps_count-count-1], ep->interface, ep->alt);
+> 
+> 			++ep;
+> 
+> 			if (epfile) {
+> 				ffs_func_ep_connection_reset(epfile);
+> 				++epfile;
+> 			}
+> 		}
+> #endif
+1870c2038
+< static int ffs_func_eps_enable(struct ffs_function *func)
+---
+> static int ffs_func_eps_enable(struct ffs_function *func, unsigned interface, unsigned alt)
+1878a2047,2048
+> 	pr_vdebug("%s intr=%d alt=%d\n", __func__, interface, alt);
+> 
+1881,1888c2051,2052
+< 		ep->ep->driver_data = ep;
+< 
+< 		ret = config_ep_by_speed(func->gadget, &func->function, ep->ep);
+< 		if (ret) {
+< 			pr_err("%s: config_ep_by_speed(%s) returned %d\n",
+< 					__func__, ep->ep->name, ret);
+< 			break;
+< 		}
+---
+> 		if ((ep->interface == interface) && (ep->alt == alt)) {
+> 			pr_vdebug(">> enabled  (%02x)\n", ffs->eps_addrmap[ffs->eps_count-count-1]);
+1890,1896c2054,2070
+< 		ret = usb_ep_enable(ep->ep);
+< 		if (likely(!ret)) {
+< 			epfile->ep = ep;
+< 			epfile->in = usb_endpoint_dir_in(ep->ep->desc);
+< 			epfile->isoc = usb_endpoint_xfer_isoc(ep->ep->desc);
+< 		} else {
+< 			break;
+---
+> 			ep->ep->driver_data = ep;
+> 
+> 			ret = config_ep_by_speed(func->gadget, &func->function, ep->ep);
+> 			if (ret) {
+> 				pr_err("%s: config_ep_by_speed(%s) returned %d\n",
+> 						__func__, ep->ep->name, ret);
+> 				break;
+> 			}
+> 
+> 			ret = usb_ep_enable(ep->ep);
+> 			if (likely(!ret)) {
+> 				epfile->ep = ep;
+> 				epfile->in = usb_endpoint_dir_in(ep->ep->desc);
+> 				epfile->isoc = usb_endpoint_xfer_isoc(ep->ep->desc);
+> 			} else {
+> 				break;
+> 			}
+2374a2549,2550
+> 			      FUNCTIONFS_PHYSICAL_ADDR |
+> 			      FUNCTIONFS_PHYADDR_REMAP |
+2713a2890,2893
+> 
+> 	static unsigned interface, alt;
+> 
+> 	ENTER();
+2717a2898,2905
+> 	if (desc && (desc->bDescriptorType == USB_DT_INTERFACE)) {
+> 		struct usb_interface_descriptor *intfd = (void *)desc;
+> 		interface = intfd->bInterfaceNumber ;
+> 		alt       = intfd->bAlternateSetting;
+> 
+> 		pr_vdebug("%s intf=%d alt=%d\n", __func__, interface, alt);
+> 	}
+> 
+2780a2969,2972
+> 
+> 		ffs_ep->interface = interface;
+> 		ffs_ep->alt       = alt;
+> 
+2800a2993,2997
+> 	struct usb_interface_descriptor *ds = (struct usb_interface_descriptor *)desc;
+> 	int id;
+> 
+> 	ENTER();
+> 
+2810,2813c3007,3015
+< 			int id = usb_interface_id(func->conf, &func->function);
+< 			if (unlikely(id < 0))
+< 				return id;
+< 			func->interfaces_nums[idx] = id;
+---
+> 			if (ds->bAlternateSetting == 0) {
+> 				id = usb_interface_id(func->conf, &func->function);
+> 				if (unlikely(id < 0))
+> 					return id;
+> 				func->interfaces_nums[idx] = id;
+> 			}
+> 			else {
+> 				return -EINVAL;
+> 			}
+2814a3017
+> 
+2854a3058,3059
+> 	ENTER();
+> 
+3043a3249,3259
+> 	func->interface = (unsigned)-1;
+> 	func->alt       = (unsigned)-1;
+> 
+> 	for (i = 0; i < MAX_CONFIG_INTERFACES; i++) {
+> 		func->current_alt_setting[i] = (unsigned)-1;
+> 	}
+> 
+> #if 1	// for Middle
+> 	func->set_config_completed = false;
+> #endif
+> 
+3078c3294,3295
+< 		func->function.ss_descriptors = vla_ptr(vlabuf, d, ss_descs);
+---
+> 		func->function.ss_descriptors = func->function.ssp_descriptors =
+> 			vla_ptr(vlabuf, d, ss_descs);
+3156d3372
+< 
+3163a3380,3394
+> static int ffs_func_get_alt(struct usb_function *f,
+> 			unsigned int interface)
+> {
+> 	struct ffs_function *func = ffs_func_from_usb(f);
+> 	int intf;
+> 
+> 	pr_vdebug("%s intf=%d alt=%d\n", __func__, interface, func->current_alt_setting[interface]);
+> 
+> 	intf = ffs_func_revmap_intf(func, interface);
+> 	if (unlikely(intf < 0))
+> 		return intf;
+> 
+> 	return func->current_alt_setting[interface];
+> }
+> 
+3169c3400
+< 	int ret = 0, intf;
+---
+> 	int ret = 0, intf = -1;
+3170a3402,3403
+> 	pr_vdebug("%s intf=%d alt=%d\n", __func__, interface, alt);
+> 
+3178c3411
+< 		ffs_func_eps_disable(ffs->func);
+---
+> 		ffs_func_eps_disable(ffs->func, interface, alt);
+3197,3198c3430,3448
+< 	ret = ffs_func_eps_enable(func);
+< 	if (likely(ret >= 0))
+---
+> 	ret = ffs_func_eps_enable(func, interface, alt);
+> 
+> 	if (likely(ret >= 0)) {
+> 		func->current_alt_setting[interface] = alt;
+> 
+> #if 1	// for Middle
+> 		if (func->set_config_completed) {
+> 			func->interface = interface;
+> 			func->alt       = alt;
+> 		}
+> 		else {
+> 			func->interface = 0;
+> 			func->alt       = 0;
+> 		}
+> #else
+> 		func->interface = interface;
+> 		func->alt       = alt;
+> #endif
+> 
+3199a3450
+> 	}
+3204a3456
+> 	ENTER();
+3251a3504,3507
+> 	case USB_RECIP_DEVICE:
+> 	        ret = le16_to_cpu(creq->wIndex);
+> 		break;
+> 
+3392a3649,3679
+> static ssize_t ffs_interface_show(struct config_item *item, char *page)
+> {
+> 	struct ffs_function *func = to_ffs_opts(item)->dev->ffs_data->func;
+> 	if (func) {
+> 		return sprintf(page, "%u\n", func->interface);
+> 	}
+> 	else {
+> 		return sprintf(page, "%u\n", (unsigned)-1);
+> 	}
+> }
+> 
+> static ssize_t ffs_alt_show(struct config_item *item, char *page)
+> {
+> 	struct ffs_function *func = to_ffs_opts(item)->dev->ffs_data->func;
+> 	if (func) {
+> 		return sprintf(page, "%u\n", func->alt);
+> 	}
+> 	else {
+> 		return sprintf(page, "%u\n", (unsigned)-1);
+> 	}
+> }
+> 
+> CONFIGFS_ATTR_RO(ffs_, interface);
+> CONFIGFS_ATTR_RO(ffs_, alt);
+> 
+> static struct configfs_attribute *ffs_attrs[] = {
+> 	&ffs_attr_interface,
+> 	&ffs_attr_alt,
+> 	NULL,
+> };
+> 
+3394a3682
+> 	.ct_attrs	= ffs_attrs,
+3459a3748
+> 	int i;
+3463c3752
+< 		ffs_func_eps_disable(func);
+---
+> 		ffs_func_eps_disable(func, 0, -1);
+3487a3777
+> 	func->function.ssp_descriptors = NULL;
+3488a3779,3785
+> 
+> 	func->interface = (unsigned)-1;
+> 	func->alt       = (unsigned)-1;
+> 
+> 	for (i = 0; i < MAX_CONFIG_INTERFACES; i++) {
+> 		func->current_alt_setting[i] = (unsigned)-1;
+> 	}
+3489a3787,3790
+> #if 1	// for Middle
+> 	func->set_config_completed = false;
+> #endif
+> 
+3507a3809
+> 	func->function.get_alt = ffs_func_get_alt;
