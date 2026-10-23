@@ -1,0 +1,52 @@
+#!/bin/sh
+export PATH=/bin
+UPT() { cut -d' ' -f1 /proc/uptime; }
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+mkdir -p /mnt
+echo "T=$(UPT) BOOTED $(uname -r)"
+# 文件系统类型由 run_tests.sh 经内核参数传入（exfat 突变 vs fat32 突变）
+FST=exfat
+grep -q 'fstype=vfat' /proc/cmdline && FST=vfat
+# 设备选择：sector0 首字节是 0xEB 跳转 => superfloppy 模板（引导扇区即 sector0）挂 vda；
+# 否则是 MBR 分区盘（相机模板，分区@32768，MBR 首字节=0x00）=> 挂 vda1
+DEV=/dev/vda
+JMP=$(head -c 1 /dev/vda)
+[ "$JMP" = "$(printf '\353')" ] || DEV=/dev/vda1
+mount -o ro -t "$FST" "$DEV" /mnt &
+MPID=$!
+RES=""
+i=0
+while [ $i -lt 20 ]; do
+  grep -q ' /mnt ' /proc/mounts && { RES=MOUNTED; break; }
+  # 挂载进程已死（僵尸态或已回收）=> 快速失败
+  [ -d /proc/$MPID ] || { RES=MOUNT_FAILED; break; }
+  grep -q '^State:.*Z' /proc/$MPID/status 2>/dev/null && { RES=MOUNT_FAILED; break; }
+  sleep 1; i=$((i+1))
+done
+[ $i -ge 20 ] && RES=MOUNT_HANG
+echo "T=$(UPT) RESULT=$RES"
+if [ "$RES" = MOUNTED ]; then
+  # 挂载成功但 readdir 可能挂（D 态不可中断）→ 限时 8s
+  echo "=== LS /mnt ==="
+  ls -la /mnt > /tmp/ls.out 2>&1 &
+  LPID=$!
+  i=0
+  while kill -0 $LPID 2>/dev/null && [ $i -lt 8 ]; do sleep 1; i=$((i+1)); done
+  if kill -0 $LPID 2>/dev/null; then echo "LS_DONE=TIMEOUT"; LSOK=no; else echo "LS_DONE=yes"; LSOK=yes; fi
+  head -25 /tmp/ls.out 2>/dev/null
+  # f00 类突变：文件 FAT 链环只在读内容时触发 → 同样限时
+  if [ "$LSOK" = yes ] && [ -s /tmp/ls.out ]; then
+    echo "=== CAT TESTFILE ==="
+    cat /mnt/TESTFILE.BIN > /tmp/cat.out 2>&1 &
+    CPID=$!
+    i=0
+    while kill -0 $CPID 2>/dev/null && [ $i -lt 8 ]; do sleep 1; i=$((i+1)); done
+    if kill -0 $CPID 2>/dev/null; then echo "CAT_DONE=TIMEOUT"; else echo "CAT_DONE=yes"; fi
+    head -c 60 /tmp/cat.out 2>/dev/null; echo
+  fi
+fi
+echo "=== DMESG TAIL ==="
+dmesg | tail -60
+poweroff -f
