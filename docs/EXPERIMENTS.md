@@ -75,6 +75,11 @@
 
 - [analysis/S1M2_LIVE_HIGHRES.DAT](../analysis/S1M2_LIVE_HIGHRES.DAT) — published
 
+## analysis/S1M2服务模式USB探测_20261123.md
+
+- [analysis/S1M2服务模式USB探测_20261123.md](../analysis/S1M2%E6%9C%8D%E5%8A%A1%E6%A8%A1%E5%BC%8FUSB%E6%8E%A2%E6%B5%8B_20261123.md) — published
+- 只读客户端源码：[analysis/service_usb_probe_20261123/](../analysis/service_usb_probe_20261123/) — published
+
 ## analysis/S1M2_RAM读取入口_核查结果_20261008.md
 
 - [analysis/S1M2_RAM读取入口_核查结果_20261008.md](../analysis/S1M2_RAM%E8%AF%BB%E5%8F%96%E5%85%A5%E5%8F%A3_%E6%A0%B8%E6%9F%A5%E7%BB%93%E6%9E%9C_20261008.md) — scope-edited
